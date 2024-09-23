@@ -1,5 +1,5 @@
 /** Status ailment types */
-export enum Status {
+export enum StatusType {
   POISON = "poison",
   PARALYSIS = "paralysis",
   SLEEP = "sleep",
@@ -8,7 +8,7 @@ export enum Status {
 }
 
 /** Element types */
-export type Element = "FIRE" | "WATER" | "THUNDER" | "ICE" | "DRAGON";
+export type ElementType = "FIRE" | "WATER" | "THUNDER" | "ICE" | "DRAGON";
 
 /** Levels of item/equipment rarity */
 export type Rarity = 1 | 2 | 3 | 4 | 4 | 5 | 6 | 7;

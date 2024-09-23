@@ -1,5 +1,4 @@
-import { LargeMonsterRecord, MonsterRecord, MonsterType } from "./types";
-import { Status } from "../common";
+import { MonsterRecord, MonsterType } from "./types";
 
 /**
  * Collection of Small Monsters keyed by the monster's ID

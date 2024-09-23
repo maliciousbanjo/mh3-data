@@ -1,5 +1,5 @@
 import { LargeMonsterRecord, MonsterType } from "./types";
-import { Status } from "../common";
+import { CommonTypes } from "../common";
 
 export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
   17: {
@@ -45,28 +45,28 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
       },
     ],
     status: {
-      [Status.POISON]: {
+      [CommonTypes.StatusType.POISON]: {
         duration: 15,
         damage: { initial: 5, total: 75 },
         tolerance: { initial: 90, max: 210 },
         recovery: { amount: 5, wait: 5 },
       },
-      [Status.PARALYSIS]: {
+      [CommonTypes.StatusType.PARALYSIS]: {
         duration: 10,
         tolerance: { initial: 150, max: 230 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.SLEEP]: {
+      [CommonTypes.StatusType.SLEEP]: {
         duration: 30,
         tolerance: { initial: 150, max: 210 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.STUN]: {
+      [CommonTypes.StatusType.STUN]: {
         duration: 10,
         tolerance: { initial: 120, max: 210 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.EXHAUST]: {
+      [CommonTypes.StatusType.EXHAUST]: {
         tolerance: { initial: 150, max: 350 },
         recovery: { amount: 5, wait: 10 },
       },
@@ -171,28 +171,28 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
       },
     ],
     status: {
-      [Status.POISON]: {
+      [CommonTypes.StatusType.POISON]: {
         duration: 15,
         damage: { initial: 5, total: 75 },
         tolerance: { initial: 90, max: 210 },
         recovery: { amount: 5, wait: 5 },
       },
-      [Status.PARALYSIS]: {
+      [CommonTypes.StatusType.PARALYSIS]: {
         duration: 10,
         tolerance: { initial: 150, max: 230 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.SLEEP]: {
+      [CommonTypes.StatusType.SLEEP]: {
         duration: 30,
         tolerance: { initial: 300, max: 500 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.STUN]: {
+      [CommonTypes.StatusType.STUN]: {
         duration: 10,
         tolerance: { initial: 250, max: 450 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.EXHAUST]: {
+      [CommonTypes.StatusType.EXHAUST]: {
         tolerance: { initial: 200, max: 400 },
         recovery: { amount: 5, wait: 10 },
       },
@@ -413,28 +413,28 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
       },
     ],
     status: {
-      [Status.POISON]: {
+      [CommonTypes.StatusType.POISON]: {
         duration: 40,
         damage: { initial: 10, total: 200 },
         tolerance: { initial: 150, max: 750 },
         recovery: { amount: 10, wait: 10 },
       },
-      [Status.PARALYSIS]: {
+      [CommonTypes.StatusType.PARALYSIS]: {
         duration: 10,
         tolerance: { initial: 200, max: 600 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.SLEEP]: {
+      [CommonTypes.StatusType.SLEEP]: {
         duration: 30,
         tolerance: { initial: 150, max: 550 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.STUN]: {
+      [CommonTypes.StatusType.STUN]: {
         duration: 10,
         tolerance: { initial: 90, max: 490 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.EXHAUST]: {
+      [CommonTypes.StatusType.EXHAUST]: {
         tolerance: { initial: 150, max: 550 },
         recovery: { amount: 5, wait: 10 },
       },
@@ -627,28 +627,28 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
       },
     ],
     status: {
-      [Status.POISON]: {
+      [CommonTypes.StatusType.POISON]: {
         duration: 30,
         damage: { initial: 10, total: 300 },
         tolerance: { initial: 150, max: 450 },
         recovery: { amount: 10, wait: 10 },
       },
-      [Status.PARALYSIS]: {
+      [CommonTypes.StatusType.PARALYSIS]: {
         duration: 15,
         tolerance: { initial: 250, max: 650 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.SLEEP]: {
+      [CommonTypes.StatusType.SLEEP]: {
         duration: 30,
         tolerance: { initial: 250, max: 650 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.STUN]: {
+      [CommonTypes.StatusType.STUN]: {
         duration: 15,
         tolerance: { initial: 150, max: 450 },
         recovery: { amount: 10, wait: 15 },
       },
-      [Status.EXHAUST]: {
+      [CommonTypes.StatusType.EXHAUST]: {
         tolerance: { initial: 300, max: 700 },
         recovery: { amount: 10, wait: 10 },
       },
@@ -834,28 +834,28 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
       },
     ],
     status: {
-      [Status.POISON]: {
+      [CommonTypes.StatusType.POISON]: {
         duration: 60,
         damage: { initial: 5, total: 150 },
         tolerance: { initial: 150, max: 550 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.PARALYSIS]: {
+      [CommonTypes.StatusType.PARALYSIS]: {
         duration: 10,
         tolerance: { initial: 150, max: 550 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.SLEEP]: {
+      [CommonTypes.StatusType.SLEEP]: {
         duration: 30,
         tolerance: { initial: 150, max: 550 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.STUN]: {
+      [CommonTypes.StatusType.STUN]: {
         duration: 10,
         tolerance: { initial: 130, max: 530 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.EXHAUST]: {
+      [CommonTypes.StatusType.EXHAUST]: {
         tolerance: { initial: 150, max: 450 },
         recovery: { amount: 5, wait: 10 },
       },
@@ -946,7 +946,7 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
     type: MonsterType.FlyWyv,
     threat: 4,
     description:
-      'Fire-breathing female wyverns, also known as "Queens of the Land". With powerful legs and [Status.POISON]-secreting tails, they hunt mainly on the ground. Sometimes seen preying as a couple, Rathian cooperate well with Rathalos.',
+      'Fire-breathing female wyverns, also known as "Queens of the Land". With powerful legs and [CommonTypes.Status.POISON]-secreting tails, they hunt mainly on the ground. Sometimes seen preying as a couple, Rathian cooperate well with Rathalos.',
     quests: {
       "0": { "4": [6, 8], "6": [0] },
       "1": {
@@ -1045,28 +1045,28 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
       },
     ],
     status: {
-      [Status.POISON]: {
+      [CommonTypes.StatusType.POISON]: {
         duration: 60,
         damage: { initial: 5, total: 150 },
         tolerance: { initial: 180, max: 580 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.PARALYSIS]: {
+      [CommonTypes.StatusType.PARALYSIS]: {
         duration: 10,
         tolerance: { initial: 180, max: 620 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.SLEEP]: {
+      [CommonTypes.StatusType.SLEEP]: {
         duration: 30,
         tolerance: { initial: 180, max: 580 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.STUN]: {
+      [CommonTypes.StatusType.STUN]: {
         duration: 10,
         tolerance: { initial: 150, max: 550 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.EXHAUST]: {
+      [CommonTypes.StatusType.EXHAUST]: {
         tolerance: { initial: 180, max: 480 },
         recovery: { amount: 5, wait: 10 },
       },
@@ -1176,7 +1176,7 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
     type: MonsterType.FlyWyv,
     threat: 5,
     description:
-      'Terrible wyverns called the "Kings of the Skies". Together with Rathian, they stake wide territories centered around their nests. Rathalos descend on invaders from the sky, attacking with [Status.POISON] claws and breath of fire.',
+      'Terrible wyverns called the "Kings of the Skies". Together with Rathian, they stake wide territories centered around their nests. Rathalos descend on invaders from the sky, attacking with [CommonTypes.Status.POISON] claws and breath of fire.',
     quests: {
       "0": { "5": [4, 7], "6": [0, 4] },
       "1": {
@@ -1273,28 +1273,28 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
       },
     ],
     status: {
-      [Status.POISON]: {
+      [CommonTypes.StatusType.POISON]: {
         duration: 60,
         damage: { initial: 5, total: 150 },
         tolerance: { initial: 180, max: 580 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.PARALYSIS]: {
+      [CommonTypes.StatusType.PARALYSIS]: {
         duration: 10,
         tolerance: { initial: 180, max: 620 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.SLEEP]: {
+      [CommonTypes.StatusType.SLEEP]: {
         duration: 30,
         tolerance: { initial: 180, max: 580 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.STUN]: {
+      [CommonTypes.StatusType.STUN]: {
         duration: 10,
         tolerance: { initial: 150, max: 550 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.EXHAUST]: {
+      [CommonTypes.StatusType.EXHAUST]: {
         tolerance: { initial: 180, max: 480 },
         recovery: { amount: 5, wait: 10 },
       },
@@ -1505,28 +1505,28 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
       },
     ],
     status: {
-      [Status.POISON]: {
+      [CommonTypes.StatusType.POISON]: {
         duration: 50,
         damage: { initial: 5, total: 250 },
         tolerance: { initial: 200, max: 400 },
         recovery: { amount: 10, wait: 5 },
       },
-      [Status.PARALYSIS]: {
+      [CommonTypes.StatusType.PARALYSIS]: {
         duration: 15,
         tolerance: { initial: 200, max: 600 },
         recovery: { amount: 5, wait: 15 },
       },
-      [Status.SLEEP]: {
+      [CommonTypes.StatusType.SLEEP]: {
         duration: 40,
         tolerance: { initial: 150, max: 350 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.STUN]: {
+      [CommonTypes.StatusType.STUN]: {
         duration: 10,
         tolerance: { initial: 150, max: 550 },
         recovery: { amount: 5, wait: 15 },
       },
-      [Status.EXHAUST]: {
+      [CommonTypes.StatusType.EXHAUST]: {
         tolerance: { initial: 300, max: 700 },
         recovery: { amount: 5, wait: 10 },
       },
@@ -1615,7 +1615,7 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
     type: MonsterType.FlyWyv,
     threat: 4,
     description:
-      "Wyverns that inhabit the Tundra. Known to stun prey with [Status.POISON], then freeze the meat in caves. Gigginox live in darkness and thus have degraded vision; they detect prey through body heat. Extremely fertile, laying innumerable eggs.",
+      "Wyverns that inhabit the Tundra. Known to stun prey with [CommonTypes.Status.POISON], then freeze the meat in caves. Gigginox live in darkness and thus have degraded vision; they detect prey through body heat. Extremely fertile, laying innumerable eggs.",
     quests: {
       "0": { "4": [7] },
       "1": { "3": [6, 14], "5": [6, 7], Arena: [], Events: [] },
@@ -1706,28 +1706,28 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
       },
     ],
     status: {
-      [Status.POISON]: {
+      [CommonTypes.StatusType.POISON]: {
         duration: 30,
         damage: { initial: 5, total: 75 },
         tolerance: { initial: 240, max: 800 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.PARALYSIS]: {
+      [CommonTypes.StatusType.PARALYSIS]: {
         duration: 10,
         tolerance: { initial: 180, max: 660 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.SLEEP]: {
+      [CommonTypes.StatusType.SLEEP]: {
         duration: 40,
         tolerance: { initial: 200, max: 680 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.STUN]: {
+      [CommonTypes.StatusType.STUN]: {
         duration: 10,
         tolerance: { initial: 180, max: 580 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.EXHAUST]: {
+      [CommonTypes.StatusType.EXHAUST]: {
         tolerance: { initial: 180, max: 580 },
         recovery: { amount: 10, wait: 10 },
       },
@@ -1912,28 +1912,28 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
       },
     ],
     status: {
-      [Status.POISON]: {
+      [CommonTypes.StatusType.POISON]: {
         duration: 60,
         damage: { initial: 5, total: 150 },
         tolerance: { initial: 180, max: 780 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.PARALYSIS]: {
+      [CommonTypes.StatusType.PARALYSIS]: {
         duration: 10,
         tolerance: { initial: 180, max: 780 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.SLEEP]: {
+      [CommonTypes.StatusType.SLEEP]: {
         duration: 30,
         tolerance: { initial: 180, max: 780 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.STUN]: {
+      [CommonTypes.StatusType.STUN]: {
         duration: 10,
         tolerance: { initial: 130, max: 650 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.EXHAUST]: {
+      [CommonTypes.StatusType.EXHAUST]: {
         tolerance: { initial: 180, max: 480 },
         recovery: { amount: 5, wait: 10 },
       },
@@ -2129,28 +2129,28 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
       },
     ],
     status: {
-      [Status.POISON]: {
+      [CommonTypes.StatusType.POISON]: {
         duration: 60,
         damage: { initial: 5, total: 150 },
         tolerance: { initial: 180, max: 660 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.PARALYSIS]: {
+      [CommonTypes.StatusType.PARALYSIS]: {
         duration: 10,
         tolerance: { initial: 180, max: 780 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.SLEEP]: {
+      [CommonTypes.StatusType.SLEEP]: {
         duration: 60,
         tolerance: { initial: 180, max: 660 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.STUN]: {
+      [CommonTypes.StatusType.STUN]: {
         duration: 10,
         tolerance: { initial: 200, max: 600 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.EXHAUST]: {
+      [CommonTypes.StatusType.EXHAUST]: {
         tolerance: { initial: 180, max: 780 },
         recovery: { amount: 5, wait: 10 },
       },
@@ -2355,28 +2355,28 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
       },
     ],
     status: {
-      [Status.POISON]: {
+      [CommonTypes.StatusType.POISON]: {
         duration: 120,
         damage: { initial: 5, total: 150 },
         tolerance: { initial: 180, max: 620 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.PARALYSIS]: {
+      [CommonTypes.StatusType.PARALYSIS]: {
         duration: 10,
         tolerance: { initial: 200, max: 840 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.SLEEP]: {
+      [CommonTypes.StatusType.SLEEP]: {
         duration: 30,
         tolerance: { initial: 180, max: 660 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.STUN]: {
+      [CommonTypes.StatusType.STUN]: {
         duration: 10,
         tolerance: { initial: 200, max: 600 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.EXHAUST]: {
+      [CommonTypes.StatusType.EXHAUST]: {
         tolerance: { initial: 180, max: 580 },
         recovery: { amount: 5, wait: 10 },
       },
@@ -2546,28 +2546,28 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
       },
     ],
     status: {
-      [Status.POISON]: {
+      [CommonTypes.StatusType.POISON]: {
         duration: 60,
         damage: { initial: 5, total: 150 },
         tolerance: { initial: 180, max: 700 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.PARALYSIS]: {
+      [CommonTypes.StatusType.PARALYSIS]: {
         duration: 10,
         tolerance: { initial: 180, max: 780 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.SLEEP]: {
+      [CommonTypes.StatusType.SLEEP]: {
         duration: 30,
         tolerance: { initial: 180, max: 700 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.STUN]: {
+      [CommonTypes.StatusType.STUN]: {
         duration: 10,
         tolerance: { initial: 150, max: 750 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.EXHAUST]: {
+      [CommonTypes.StatusType.EXHAUST]: {
         tolerance: { initial: 180, max: 660 },
         recovery: { amount: 5, wait: 10 },
       },
@@ -2892,28 +2892,28 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
       },
     ],
     status: {
-      [Status.POISON]: {
+      [CommonTypes.StatusType.POISON]: {
         duration: 60,
         damage: { initial: 5, total: 150 },
         tolerance: { initial: 180, max: 660 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.PARALYSIS]: {
+      [CommonTypes.StatusType.PARALYSIS]: {
         duration: 10,
         tolerance: { initial: 200, max: 600 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.SLEEP]: {
+      [CommonTypes.StatusType.SLEEP]: {
         duration: 30,
         tolerance: { initial: 180, max: 660 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.STUN]: {
+      [CommonTypes.StatusType.STUN]: {
         duration: 10,
         tolerance: { initial: 200, max: 600 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.EXHAUST]: {
+      [CommonTypes.StatusType.EXHAUST]: {
         tolerance: { initial: 180, max: 480 },
         recovery: { amount: 5, wait: 10 },
       },
@@ -3360,28 +3360,28 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
       },
     ],
     status: {
-      [Status.POISON]: {
+      [CommonTypes.StatusType.POISON]: {
         duration: 10,
         damage: { initial: 5, total: 50 },
         tolerance: { initial: 180, max: 980 },
         recovery: { amount: 10, wait: 10 },
       },
-      [Status.PARALYSIS]: {
+      [CommonTypes.StatusType.PARALYSIS]: {
         duration: 10,
         tolerance: { initial: 180, max: 980 },
         recovery: { amount: 10, wait: 10 },
       },
-      [Status.SLEEP]: {
+      [CommonTypes.StatusType.SLEEP]: {
         duration: 60,
         tolerance: { initial: 180, max: 980 },
         recovery: { amount: 10, wait: 10 },
       },
-      [Status.STUN]: {
+      [CommonTypes.StatusType.STUN]: {
         duration: 10,
         tolerance: { initial: 180, max: 780 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.EXHAUST]: {
+      [CommonTypes.StatusType.EXHAUST]: {
         tolerance: { initial: 180, max: 780 },
         recovery: { amount: 5, wait: 10 },
       },
@@ -3784,23 +3784,23 @@ export const LargeMonsterData = Object.freeze<LargeMonsterRecord>({
       },
     ],
     status: {
-      [Status.POISON]: {
+      [CommonTypes.StatusType.POISON]: {
         duration: 10,
         damage: { initial: 5, total: 55 },
         tolerance: { initial: 180, max: 780 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.PARALYSIS]: {
+      [CommonTypes.StatusType.PARALYSIS]: {
         duration: 10,
         tolerance: { initial: 200, max: 1800 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.SLEEP]: {
+      [CommonTypes.StatusType.SLEEP]: {
         duration: 60,
         tolerance: { initial: 180, max: 860 },
         recovery: { amount: 5, wait: 10 },
       },
-      [Status.STUN]: {
+      [CommonTypes.StatusType.STUN]: {
         duration: 15,
         tolerance: { initial: 120, max: 600 },
         recovery: { amount: 5, wait: 10 },

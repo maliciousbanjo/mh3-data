@@ -1,5 +1,5 @@
-import { Status } from "../common";
-import { QuestReward, ItemResult } from "../items";
+import { CommonTypes } from "../common";
+import { ItemTypes } from "../items";
 
 export enum MonsterType {
   Herbvr = "herbivore",
@@ -50,9 +50,9 @@ export interface HitzoneGroup {
 export interface Breakable {
   name: string;
   /** Low rank break rewards */
-  low?: QuestReward[];
+  low?: ItemTypes.QuestReward[];
   /** High rank break rewards */
-  high?: QuestReward[];
+  high?: ItemTypes.QuestReward[];
 }
 
 /**
@@ -62,9 +62,9 @@ export interface CaptureInfo {
   /** Health percentage threshold for a monster to be capture-ready */
   health: number;
   /** Low rank capture rewards */
-  low?: ItemResult[];
+  low?: ItemTypes.ItemResult[];
   /** High rank capture rewards */
-  high?: ItemResult[];
+  high?: ItemTypes.ItemResult[];
 }
 
 /**
@@ -97,9 +97,9 @@ export interface CarveZone {
   /** Number of possible carves */
   count: number;
   /** Low rank carve */
-  low?: ItemResult[];
+  low?: ItemTypes.ItemResult[];
   /** High rank carve */
-  high?: ItemResult[];
+  high?: ItemTypes.ItemResult[];
 }
 
 /**
@@ -118,9 +118,9 @@ export interface ShinyDrop {
   /** Action required to cause the shiny to drop */
   action: string;
   /** Low rank result */
-  low?: ItemResult[];
+  low?: ItemTypes.ItemResult[];
   /** High rank result */
-  high?: ItemResult[];
+  high?: ItemTypes.ItemResult[];
 }
 
 /**
@@ -164,17 +164,17 @@ export interface LargeMonster
   carves: CarveZone[];
   breakables: Breakable[];
   status?: {
-    [Status.POISON]: StatusValues & {
+    [CommonTypes.StatusType.POISON]: StatusValues & {
       /** Damage taken by poison per interval */
       damage: {
         initial: number;
         total: number;
       };
     };
-    [Status.PARALYSIS]: StatusValues;
-    [Status.SLEEP]: StatusValues;
-    [Status.STUN]: StatusValues;
-    [Status.EXHAUST]?: Omit<StatusValues, "duration">;
+    [CommonTypes.StatusType.PARALYSIS]: StatusValues;
+    [CommonTypes.StatusType.SLEEP]: StatusValues;
+    [CommonTypes.StatusType.STUN]: StatusValues;
+    [CommonTypes.StatusType.EXHAUST]?: Omit<StatusValues, "duration">;
   };
   /** {@link MonsterType.EldDrg} cannot be captured */
   capture?: CaptureInfo;

@@ -1,6 +1,6 @@
-import { Item, QuestReward } from "../items";
-import { Monster } from "../monsters";
-import { MonsterLevel } from "../monster-levels";
+import { ItemTypes } from "../items";
+import { MonsterTypes } from "../monsters";
+import { MonsterLevelTypes } from "../monster-levels";
 
 export type QuestType =
   | "gather"
@@ -42,11 +42,11 @@ export enum Location {
  * The values are incorrect/flawed. ZeSpyro
  */
 interface BossInfo {
-  type1: Monster["id"];
+  type1: MonsterTypes.Monster["id"];
   /** Starting area? */
   type2: 0 | 1 | 2;
   /** TODO: Unidentified monster levels: 30, 55, 59, 60 */
-  level: MonsterLevel | 30 | 55 | 59 | 60;
+  level: MonsterLevelTypes.MonsterLevel | 30 | 55 | 59 | 60;
 
   size: number;
   /** controls random distribution of monster's HP */
@@ -80,7 +80,7 @@ interface Quest {
   ko: number;
   /** Hunter Rank Points received for quest completion */
   hrp: number;
-  secondaryRewards: QuestReward[];
+  secondaryRewards: ItemTypes.QuestReward[];
   /** Key will be an ID for an item or monster depending on the {@link QuestType} */
   targets: Record<number, number>;
   /** Large monsters that can spawn in this quest */
@@ -94,7 +94,7 @@ type NumberRequired = number;
 export interface GatheringQuest extends Quest {
   type: "gather";
   goal: "gathering";
-  targets: Record<Item["id"], NumberRequired>;
+  targets: Record<ItemTypes.Item["id"], NumberRequired>;
 }
 
 export interface HarvestQuest extends Quest {
@@ -109,33 +109,33 @@ export interface HarvestQuest extends Quest {
 export interface HuntQuest extends Quest {
   type: "hunt";
   goal: "hunt" | "slay";
-  targets: Record<Monster["id"], NumberRequired>;
+  targets: Record<MonsterTypes.Monster["id"], NumberRequired>;
   bosses: BossInfo[];
 }
 
 export interface MultiHuntQuest extends Quest {
   type: "multihunt";
   goal: "hunt";
-  targets: Record<Monster["id"], NumberRequired>;
+  targets: Record<MonsterTypes.Monster["id"], NumberRequired>;
 }
 
 export interface CaptureQuest extends Quest {
   type: "capture";
   goal: "capture";
-  targets: Record<Monster["id"], NumberRequired>;
+  targets: Record<MonsterTypes.Monster["id"], NumberRequired>;
   bosses: BossInfo[];
 }
 
 export interface EscortQuest extends Quest {
   type: "escort";
   goal: "slay";
-  targets: Record<Monster["id"], NumberRequired>;
+  targets: Record<MonsterTypes.Monster["id"], NumberRequired>;
 }
 
 export interface ArenaQuest extends Omit<Quest, "secondaryRewards"> {
   type: "slay";
   goal: "hunt";
-  targets: Record<Monster["id"], NumberRequired>;
+  targets: Record<MonsterTypes.Monster["id"], NumberRequired>;
   bosses: BossInfo[];
 }
 

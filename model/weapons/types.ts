@@ -1,5 +1,5 @@
-import { Element, Rarity, Slots, Status } from "../common";
-import { ItemRequirement } from "../items";
+import { CommonTypes } from "../common";
+import { ItemTypes } from "../items";
 
 export enum WeaponType {
   GREAT_SWORD = "Great Sword",
@@ -65,7 +65,7 @@ export interface Weapon<T extends WeaponType> {
   name: string;
   description: string;
   attack: number;
-  element: Element | keyof typeof Status;
+  element: CommonTypes.ElementType | keyof typeof CommonTypes.StatusType;
   elemAttack: number;
   /** If true requires armor skill 'Awaken' for element properties to take effect */
   awaken: boolean;
@@ -74,16 +74,16 @@ export interface Weapon<T extends WeaponType> {
   /** Sharpness levels with armor skill 'Sharpness+1' */
   sharpnessUp: number[];
   affinity: number;
-  slots: Slots;
-  rarity: Rarity;
+  slots: CommonTypes.Slots;
+  rarity: CommonTypes.Rarity;
   /** In zenny */
   price: number;
   /** Optionally improves hunter defense */
   defense?: number;
   /** ID of previous weapon in path and what is required to upgrade it */
-  upgradesFrom?: { weaponId: Weapon<WeaponType.GREAT_SWORD>['id'][]; materials: ItemRequirement[] };
+  upgradesFrom?: { weaponId: Weapon<WeaponType.GREAT_SWORD>['id'][]; materials: ItemTypes.ItemRequirement[] };
   /** ID of next weapon in upgrade path */
   upgradesTo?: Weapon<WeaponType.GREAT_SWORD>['id'][];
   /** List of required items to create this weapon */
-  create?: ItemRequirement[];
+  create?: ItemTypes.ItemRequirement[];
 }
