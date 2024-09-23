@@ -1,5 +1,5 @@
-import { Weapon, WeaponDamageProperties, WeaponType } from "../types";
-import { GreatSwordAttack } from "./types";
+import { WeaponDamageProperties, WeaponType } from "../types";
+import { GreatSword, GreatSwordAttack } from "./types";
 
 export const GreatSwordDamageProperties = Object.freeze<
   WeaponDamageProperties<GreatSwordAttack>
@@ -71,7 +71,7 @@ export const GreatSwordDamageProperties = Object.freeze<
   ],
 });
 
-export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
+export const GreatSwords: GreatSword[] = [
   {
     id: 0,
     type: WeaponType.GREAT_SWORD,

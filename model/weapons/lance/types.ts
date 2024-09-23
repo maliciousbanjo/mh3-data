@@ -1,3 +1,5 @@
+import { Weapon, WeaponType } from "../types";
+
 export type LanceAttack =
   | "Unsheathe Attack"
   | "Low Stab Combo"
@@ -9,3 +11,5 @@ export type LanceAttack =
   | "Charge Finisher"
   | "Guard Attack"
   | "Shield Bash";
+
+export type Lance = Weapon<WeaponType.LANCE>;

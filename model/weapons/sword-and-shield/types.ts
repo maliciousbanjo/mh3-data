@@ -1,3 +1,5 @@
+import { Weapon, WeaponType } from "../types";
+
 export type SwordAndShieldAttack =
   // land attacks
   | "Unsheathe Attack"
@@ -19,3 +21,5 @@ export type SwordAndShieldAttack =
   | "Rising Slice"
   | "Revolving Slice"
   | "Guard Slice";
+
+  export type SwordAndShield = Weapon<WeaponType.SWORD_AND_SHIELD>;

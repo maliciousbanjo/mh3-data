@@ -1,5 +1,5 @@
-import { Weapon, WeaponDamageProperties, WeaponType } from "../types";
-import { HammerAttack } from "./types";
+import { WeaponDamageProperties, WeaponType } from "../types";
+import { Hammer, HammerAttack } from "./types";
 
 export const HammerDamageProperties = Object.freeze<
   WeaponDamageProperties<HammerAttack>
@@ -66,7 +66,7 @@ export const HammerDamageProperties = Object.freeze<
   ],
 });
 
-export const Hammers: Weapon<WeaponType.HAMMER>[] = [
+export const Hammers: Hammer[] = [
   {
     id: 0,
     type: WeaponType.HAMMER,

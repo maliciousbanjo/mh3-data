@@ -1,5 +1,5 @@
-import { Weapon, WeaponDamageProperties, WeaponType } from "../types";
-import { LanceAttack } from "./types";
+import { WeaponDamageProperties, WeaponType } from "../types";
+import { Lance, LanceAttack } from "./types";
 
 export const LanceDamageProperties = Object.freeze<
   WeaponDamageProperties<LanceAttack>
@@ -45,7 +45,7 @@ export const LanceDamageProperties = Object.freeze<
   ],
 });
 
-export const Lances: Weapon<WeaponType.LANCE>[] = [
+export const Lances: Lance[] = [
   {
     id: 0,
     type: WeaponType.LANCE,

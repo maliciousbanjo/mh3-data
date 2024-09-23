@@ -1,3 +1,5 @@
+import { Weapon, WeaponType } from "../types";
+
 export type GreatSwordAttack =
   | "Unsheathe Attack"
   | "Regular Slice"
@@ -13,3 +15,5 @@ export type GreatSwordAttack =
   | "L2 Smash Charge"
   | "L3 Smash Charge"
   | "Smash Overcharge";
+
+  export type GreatSword = Weapon<WeaponType.GREAT_SWORD>;
