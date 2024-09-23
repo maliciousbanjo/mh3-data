@@ -1,5 +1,5 @@
 import { Element, Rarity, Slots, Status } from "../common";
-import { ItemRequirement } from "../items/";
+import { ItemRequirement } from "../items";
 
 export enum WeaponType {
   GREAT_SWORD = "Great Sword",
@@ -11,42 +11,49 @@ export enum WeaponType {
 }
 
 /**
- * Base type for an attack
- */
-interface BaseAttack<T = string> {
-  /** Human-readable attack name */
-  name: T;
+ * Properties specific to a hit with damage type 'cut'
+*/
+export interface CutHit {
+  type: "cut";
+  /** Multiplier used in damage calculations */
+  power: number;}
+
+/**
+ * Properties specific to a hit with damage type 'impact'
+*/
+export interface ImpactHit {
+  type: "impact";
   /** Multiplier used in damage calculations */
   power: number;
-}
-
-/**
- * Properties specific to an attack with damage type 'cut'
- */
-interface CutAttack<T> extends BaseAttack<T> {
-  type: "cut";
-}
-
-/**
- * Properties specific to an attack with damage type 'impact'
- */
-interface ImpactAttack<T> extends BaseAttack<T> {
-  type: "impact";
   /** Amount of KO damage dealt */
   ko: number;
 }
 
-export type Attack<T> = CutAttack<T> | ImpactAttack<T>;
+export type Hit = CutHit | ImpactHit;
 
 /**
- * TODO: TypeDoc
+ * Base type for an attack
+ */
+export interface Attack<T = string> {
+  /** Human-readable attack name */
+  name: T;
+  hits: Hit[];
+}
+
+export interface AttackGroup<T> {
+  /** Usage scenario @example default, underwater, axe mode */
+  name: string;
+  attacks: Attack<T>[];
+}
+
+/**
+ * Collection of attacks and values used for determining wepaon damage
  */
 export interface WeaponDamageProperties<T> {
   type: WeaponType;
   /** Used in the damage/item buff calculations */
   classModifier: number;
-  /** Keyed on usage scenario ie; default, underwater, "axe mode", etc */
-  attacks: Record<string, Record<string, Attack<T>>>;
+  attackGroups: AttackGroup<T>[];
 }
 
 /**

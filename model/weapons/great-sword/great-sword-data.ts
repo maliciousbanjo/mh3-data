@@ -1,59 +1,75 @@
-import { Weapon, WeaponDamageProperties, WeaponType } from "../type";
+import { Weapon, WeaponDamageProperties, WeaponType } from "../types";
 import { GreatSwordAttack } from "./types";
 
-  /** 
-   * TODO: Come back to this
-   */
-  export const GreatSword = Object.freeze<WeaponDamageProperties<GreatSwordAttack>>({
-    type: WeaponType.GREAT_SWORD,
-    classModifier: 4.8,
-    attacks: {
-      hits: {
-        unsheath: {
-          name: "Unsheathe Attack", type: "cut", power: 0.48
+export const GreatSwordDamageProperties = Object.freeze<
+  WeaponDamageProperties<GreatSwordAttack>
+>({
+  type: WeaponType.GREAT_SWORD,
+  classModifier: 4.8,
+  attackGroups: [
+    {
+      name: "default",
+      attacks: [
+        {
+          name: "Unsheathe Attack",
+          hits: [{ type: "cut", power: 0.48 }],
         },
-        regularSlice: {
-          name: "Regular Slice", type: "cut", power: 0.48
+        {
+          name: "Regular Slice",
+          hits: [{ type: "cut", power: 0.48 }],
         },
-        sidewaysSlash: {
-          name: "Sideways Slash", type: "cut", power: 0.36
+        {
+          name: "Sideways Slash",
+          hits: [{ type: "cut", power: 0.36 }],
         },
-        upswing: {
-          name: 'Upswing', type: "cut", power: 0.46
+        {
+          name: "Upswing",
+          hits: [{ type: "cut", power: 0.46 }],
         },
-        levelOneCharge: {
-          name: "L1 Charge", type: "cut", power: 0.65
+        {
+          name: "L1 Charge",
+          hits: [{ type: "cut", power: 0.65 }],
         },
-        levelTwoCharge: {
-          name: "L2 Charge", type: "cut", power: 0.8
+        {
+          name: "L2 Charge",
+          hits: [{ type: "cut", power: 0.8 }],
         },
-        levelThreeCharge: {
-          name: "L3 Charge", type: "cut", power: 1.1
+        {
+          name: "L3 Charge",
+          hits: [{ type: "cut", power: 1.1 }],
         },
-        overcharge: {
-          name: 'Overcharge', type: "cut", power: 0.8
+        {
+          name: "Overcharge",
+          hits: [{ type: "cut", power: 0.8 }],
         },
-        slap: {
-          name: "Slap", type: "impact", power: 0.18, ko: 27
+        {
+          name: "Slap",
+          hits: [{ type: "impact", power: 0.18, ko: 27 }],
         },
-        overheadSmash: {
-          name: "Overhead Smash", type: "cut", power: 0.52
+        {
+          name: "Overhead Smash",
+          hits: [{ type: "cut", power: 0.52 }],
         },
-        levelOneSmashCharge: {
-          name: "L1 Smash Charge", type: "cut", power: 0.72
+        {
+          name: "L1 Smash Charge",
+          hits: [{ type: "cut", power: 0.72 }],
         },
-        levelTwoSmashCharge: {
-          name: "L2 Smash Charge", type: "cut", power: 0.9
+        {
+          name: "L2 Smash Charge",
+          hits: [{ type: "cut", power: 0.9 }],
         },
-        levelThreeSmashCharge: {
-          name: "L3 Smash Charge", type: "cut", power: 1.15
+        {
+          name: "L3 Smash Charge",
+          hits: [{ type: "cut", power: 1.15 }],
         },
-        smashOvercharge: {
-          name: "Smash Overcharge", type: "cut", power: 0.9
+        {
+          name: "Smash Overcharge",
+          hits: [{ type: "cut", power: 0.9 }],
         },
-      }
+      ],
     },
-  });
+  ],
+});
 
 export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
   {
@@ -91,7 +107,7 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 1,
     price: 1950,
-    upgradesFrom: { weaponId: [0], materials: [ { itemId: 97, amount: 5} ] },
+    upgradesFrom: { weaponId: [0], materials: [{ itemId: 97, amount: 5 }] },
     upgradesTo: [2, 11],
   },
   {
@@ -110,7 +126,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 1,
     price: 3030,
-    upgradesFrom: { weaponId: [1], materials: [ { itemId: 99, amount: 2}, { itemId: 98, amount: 3}, { itemId: 97, amount: 8} ] },
+    upgradesFrom: {
+      weaponId: [1],
+      materials: [
+        { itemId: 99, amount: 2 },
+        { itemId: 98, amount: 3 },
+        { itemId: 97, amount: 8 },
+      ],
+    },
     upgradesTo: [3],
   },
   {
@@ -129,7 +152,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 2,
     price: 7870,
-    upgradesFrom: { weaponId: [2], materials: [ { itemId: 102, amount: 3}, { itemId: 99, amount: 5}, { itemId: 97, amount: 15} ] },
+    upgradesFrom: {
+      weaponId: [2],
+      materials: [
+        { itemId: 102, amount: 3 },
+        { itemId: 99, amount: 5 },
+        { itemId: 97, amount: 15 },
+      ],
+    },
     upgradesTo: [4],
   },
   {
@@ -148,7 +178,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 1,
     rarity: 2,
     price: 10450,
-    upgradesFrom: { weaponId: [3], materials: [ { itemId: 110, amount: 6}, { itemId: 102, amount: 5}, { itemId: 98, amount: 15} ] },
+    upgradesFrom: {
+      weaponId: [3],
+      materials: [
+        { itemId: 110, amount: 6 },
+        { itemId: 102, amount: 5 },
+        { itemId: 98, amount: 15 },
+      ],
+    },
     upgradesTo: [5],
   },
   {
@@ -168,7 +205,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 1,
     rarity: 3,
     price: 20170,
-    upgradesFrom: { weaponId: [4], materials: [ { itemId: 100, amount: 10}, { itemId: 99, amount: 20}, { itemId: 394, amount: 1} ] },
+    upgradesFrom: {
+      weaponId: [4],
+      materials: [
+        { itemId: 100, amount: 10 },
+        { itemId: 99, amount: 20 },
+        { itemId: 394, amount: 1 },
+      ],
+    },
     upgradesTo: [6],
   },
   {
@@ -188,7 +232,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 1,
     rarity: 4,
     price: 29470,
-    upgradesFrom: { weaponId: [5], materials: [ { itemId: 101, amount: 10}, { itemId: 100, amount: 15}, { itemId: 102, amount: 10} ] },
+    upgradesFrom: {
+      weaponId: [5],
+      materials: [
+        { itemId: 101, amount: 10 },
+        { itemId: 100, amount: 15 },
+        { itemId: 102, amount: 10 },
+      ],
+    },
     upgradesTo: [7, 9],
   },
   {
@@ -208,7 +259,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 2,
     rarity: 4,
     price: 34100,
-    upgradesFrom: { weaponId: [6], materials: [ { itemId: 103, amount: 10}, { itemId: 101, amount: 15}, { itemId: 443, amount: 3} ] },
+    upgradesFrom: {
+      weaponId: [6],
+      materials: [
+        { itemId: 103, amount: 10 },
+        { itemId: 101, amount: 15 },
+        { itemId: 443, amount: 3 },
+      ],
+    },
     upgradesTo: [8],
   },
   {
@@ -228,7 +286,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 2,
     rarity: 5,
     price: 49000,
-    upgradesFrom: { weaponId: [7], materials: [ { itemId: 111, amount: 5}, { itemId: 101, amount: 20}, { itemId: 420, amount: 2} ] },
+    upgradesFrom: {
+      weaponId: [7],
+      materials: [
+        { itemId: 111, amount: 5 },
+        { itemId: 101, amount: 20 },
+        { itemId: 420, amount: 2 },
+      ],
+    },
   },
   {
     id: 9,
@@ -247,7 +312,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 4,
     price: 35200,
-    upgradesFrom: { weaponId: [6], materials: [ { itemId: 101, amount: 10}, { itemId: 379, amount: 5}, { itemId: 378, amount: 10} ] },
+    upgradesFrom: {
+      weaponId: [6],
+      materials: [
+        { itemId: 101, amount: 10 },
+        { itemId: 379, amount: 5 },
+        { itemId: 378, amount: 10 },
+      ],
+    },
     upgradesTo: [10],
   },
   {
@@ -267,7 +339,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 6,
     price: 54100,
-    upgradesFrom: { weaponId: [9], materials: [ { itemId: 448, amount: 8}, { itemId: 447, amount: 2}, { itemId: 475, amount: 5} ] },
+    upgradesFrom: {
+      weaponId: [9],
+      materials: [
+        { itemId: 448, amount: 8 },
+        { itemId: 447, amount: 2 },
+        { itemId: 475, amount: 5 },
+      ],
+    },
   },
   {
     id: 11,
@@ -290,7 +369,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
       { itemId: 281, amount: 3 },
       { itemId: 99, amount: 6 },
     ],
-    upgradesFrom: { weaponId: [1], materials: [ { itemId: 280, amount: 4}, { itemId: 278, amount: 8}, { itemId: 99, amount: 3} ] },
+    upgradesFrom: {
+      weaponId: [1],
+      materials: [
+        { itemId: 280, amount: 4 },
+        { itemId: 278, amount: 8 },
+        { itemId: 99, amount: 3 },
+      ],
+    },
     upgradesTo: [12, 21],
   },
   {
@@ -309,7 +395,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 2,
     rarity: 2,
     price: 10240,
-    upgradesFrom: { weaponId: [11], materials: [ { itemId: 507, amount: 4}, { itemId: 281, amount: 5}, { itemId: 110, amount: 2} ] },
+    upgradesFrom: {
+      weaponId: [11],
+      materials: [
+        { itemId: 507, amount: 4 },
+        { itemId: 281, amount: 5 },
+        { itemId: 110, amount: 2 },
+      ],
+    },
     upgradesTo: [13, 14],
   },
   {
@@ -328,7 +421,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 3,
     rarity: 4,
     price: 35400,
-    upgradesFrom: { weaponId: [12], materials: [ { itemId: 532, amount: 10}, { itemId: 505, amount: 10}, { itemId: 522, amount: 5} ] },
+    upgradesFrom: {
+      weaponId: [12],
+      materials: [
+        { itemId: 532, amount: 10 },
+        { itemId: 505, amount: 10 },
+        { itemId: 522, amount: 5 },
+      ],
+    },
   },
   {
     id: 14,
@@ -346,7 +446,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 2,
     price: 17200,
-    upgradesFrom: { weaponId: [12], materials: [ { itemId: 287, amount: 2}, { itemId: 285, amount: 2}, { itemId: 284, amount: 4} ] },
+    upgradesFrom: {
+      weaponId: [12],
+      materials: [
+        { itemId: 287, amount: 2 },
+        { itemId: 285, amount: 2 },
+        { itemId: 284, amount: 4 },
+      ],
+    },
     upgradesTo: [15, 17, 19],
   },
   {
@@ -365,7 +472,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 1,
     rarity: 3,
     price: 23300,
-    upgradesFrom: { weaponId: [14], materials: [ { itemId: 391, amount: 3}, { itemId: 285, amount: 8}, { itemId: 429, amount: 1} ] },
+    upgradesFrom: {
+      weaponId: [14],
+      materials: [
+        { itemId: 391, amount: 3 },
+        { itemId: 285, amount: 8 },
+        { itemId: 429, amount: 1 },
+      ],
+    },
     upgradesTo: [16],
   },
   {
@@ -384,7 +498,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 2,
     rarity: 5,
     price: 51100,
-    upgradesFrom: { weaponId: [15], materials: [ { itemId: 468, amount: 3}, { itemId: 561, amount: 10}, { itemId: 466, amount: 7} ] },
+    upgradesFrom: {
+      weaponId: [15],
+      materials: [
+        { itemId: 468, amount: 3 },
+        { itemId: 561, amount: 10 },
+        { itemId: 466, amount: 7 },
+      ],
+    },
   },
   {
     id: 17,
@@ -402,7 +523,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 1,
     rarity: 3,
     price: 23300,
-    upgradesFrom: { weaponId: [14], materials: [ { itemId: 288, amount: 1}, { itemId: 392, amount: 5}, { itemId: 470, amount: 2} ] },
+    upgradesFrom: {
+      weaponId: [14],
+      materials: [
+        { itemId: 288, amount: 1 },
+        { itemId: 392, amount: 5 },
+        { itemId: 470, amount: 2 },
+      ],
+    },
     upgradesTo: [18],
   },
   {
@@ -421,7 +549,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 2,
     rarity: 5,
     price: 51100,
-    upgradesFrom: { weaponId: [17], materials: [ { itemId: 468, amount: 3}, { itemId: 561, amount: 10}, { itemId: 465, amount: 7} ] },
+    upgradesFrom: {
+      weaponId: [17],
+      materials: [
+        { itemId: 468, amount: 3 },
+        { itemId: 561, amount: 10 },
+        { itemId: 465, amount: 7 },
+      ],
+    },
   },
   {
     id: 19,
@@ -439,7 +574,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 4,
     price: 31700,
-    upgradesFrom: { weaponId: [14], materials: [ { itemId: 288, amount: 1}, { itemId: 392, amount: 5}, { itemId: 459, amount: 3} ] },
+    upgradesFrom: {
+      weaponId: [14],
+      materials: [
+        { itemId: 288, amount: 1 },
+        { itemId: 392, amount: 5 },
+        { itemId: 459, amount: 3 },
+      ],
+    },
     upgradesTo: [20],
   },
   {
@@ -458,7 +600,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 1,
     rarity: 6,
     price: 54400,
-    upgradesFrom: { weaponId: [19], materials: [ { itemId: 286, amount: 3}, { itemId: 467, amount: 3}, { itemId: 469, amount: 1} ] },
+    upgradesFrom: {
+      weaponId: [19],
+      materials: [
+        { itemId: 286, amount: 3 },
+        { itemId: 467, amount: 3 },
+        { itemId: 469, amount: 1 },
+      ],
+    },
   },
   {
     id: 21,
@@ -476,7 +625,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 2,
     price: 8900,
-    upgradesFrom: { weaponId: [11], materials: [ { itemId: 274, amount: 2}, { itemId: 273, amount: 3}, { itemId: 117, amount: 5} ] },
+    upgradesFrom: {
+      weaponId: [11],
+      materials: [
+        { itemId: 274, amount: 2 },
+        { itemId: 273, amount: 3 },
+        { itemId: 117, amount: 5 },
+      ],
+    },
     upgradesTo: [22],
   },
   {
@@ -495,7 +651,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 3,
     price: 19800,
-    upgradesFrom: { weaponId: [21], materials: [ { itemId: 276, amount: 2}, { itemId: 275, amount: 3}, { itemId: 378, amount: 3} ] },
+    upgradesFrom: {
+      weaponId: [21],
+      materials: [
+        { itemId: 276, amount: 2 },
+        { itemId: 275, amount: 3 },
+        { itemId: 378, amount: 3 },
+      ],
+    },
     upgradesTo: [23],
   },
   {
@@ -514,7 +677,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 4,
     price: 32900,
-    upgradesFrom: { weaponId: [22], materials: [ { itemId: 442, amount: 5}, { itemId: 444, amount: 5}, { itemId: 169, amount: 2} ] },
+    upgradesFrom: {
+      weaponId: [22],
+      materials: [
+        { itemId: 442, amount: 5 },
+        { itemId: 444, amount: 5 },
+        { itemId: 169, amount: 2 },
+      ],
+    },
     upgradesTo: [24],
   },
   {
@@ -533,7 +703,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 6,
     price: 51000,
-    upgradesFrom: { weaponId: [23], materials: [ { itemId: 443, amount: 8}, { itemId: 380, amount: 5}, { itemId: 447, amount: 1} ] },
+    upgradesFrom: {
+      weaponId: [23],
+      materials: [
+        { itemId: 443, amount: 8 },
+        { itemId: 380, amount: 5 },
+        { itemId: 447, amount: 1 },
+      ],
+    },
   },
   {
     id: 25,
@@ -570,7 +747,13 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 1,
     price: 1660,
-    upgradesFrom: { weaponId: [25], materials: [ { itemId: 149, amount: 2}, { itemId: 277, amount: 3} ] },
+    upgradesFrom: {
+      weaponId: [25],
+      materials: [
+        { itemId: 149, amount: 2 },
+        { itemId: 277, amount: 3 },
+      ],
+    },
     upgradesTo: [27, 44],
   },
   {
@@ -589,7 +772,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 1,
     rarity: 1,
     price: 2980,
-    upgradesFrom: { weaponId: [26], materials: [ { itemId: 149, amount: 5}, { itemId: 526, amount: 3}, { itemId: 311, amount: 3} ] },
+    upgradesFrom: {
+      weaponId: [26],
+      materials: [
+        { itemId: 149, amount: 5 },
+        { itemId: 526, amount: 3 },
+        { itemId: 311, amount: 3 },
+      ],
+    },
     upgradesTo: [28],
   },
   {
@@ -613,7 +803,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
       { itemId: 272, amount: 3 },
       { itemId: 510, amount: 8 },
     ],
-    upgradesFrom: { weaponId: [27], materials: [ { itemId: 150, amount: 3}, { itemId: 263, amount: 2}, { itemId: 510, amount: 5} ] },
+    upgradesFrom: {
+      weaponId: [27],
+      materials: [
+        { itemId: 150, amount: 3 },
+        { itemId: 263, amount: 2 },
+        { itemId: 510, amount: 5 },
+      ],
+    },
     upgradesTo: [29, 38, 41],
   },
   {
@@ -632,7 +829,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 1,
     rarity: 2,
     price: 10500,
-    upgradesFrom: { weaponId: [28], materials: [ { itemId: 151, amount: 1}, { itemId: 511, amount: 3}, { itemId: 297, amount: 3} ] },
+    upgradesFrom: {
+      weaponId: [28],
+      materials: [
+        { itemId: 151, amount: 1 },
+        { itemId: 511, amount: 3 },
+        { itemId: 297, amount: 3 },
+      ],
+    },
     upgradesTo: [30, 32],
   },
   {
@@ -651,7 +855,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 2,
     rarity: 3,
     price: 19450,
-    upgradesFrom: { weaponId: [29], materials: [ { itemId: 268, amount: 2}, { itemId: 354, amount: 1}, { itemId: 314, amount: 5} ] },
+    upgradesFrom: {
+      weaponId: [29],
+      materials: [
+        { itemId: 268, amount: 2 },
+        { itemId: 354, amount: 1 },
+        { itemId: 314, amount: 5 },
+      ],
+    },
     upgradesTo: [31],
   },
   {
@@ -670,7 +881,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 2,
     rarity: 5,
     price: 33000,
-    upgradesFrom: { weaponId: [30], materials: [ { itemId: 434, amount: 3}, { itemId: 169, amount: 5}, { itemId: 561, amount: 5} ] },
+    upgradesFrom: {
+      weaponId: [30],
+      materials: [
+        { itemId: 434, amount: 3 },
+        { itemId: 169, amount: 5 },
+        { itemId: 561, amount: 5 },
+      ],
+    },
   },
   {
     id: 32,
@@ -688,7 +906,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 2,
     price: 11950,
-    upgradesFrom: { weaponId: [29], materials: [ { itemId: 247, amount: 6}, { itemId: 248, amount: 5}, { itemId: 249, amount: 1} ] },
+    upgradesFrom: {
+      weaponId: [29],
+      materials: [
+        { itemId: 247, amount: 6 },
+        { itemId: 248, amount: 5 },
+        { itemId: 249, amount: 1 },
+      ],
+    },
     upgradesTo: [33, 36],
   },
   {
@@ -707,7 +932,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 1,
     rarity: 3,
     price: 22100,
-    upgradesFrom: { weaponId: [32], materials: [ { itemId: 251, amount: 1}, { itemId: 250, amount: 2}, { itemId: 118, amount: 5} ] },
+    upgradesFrom: {
+      weaponId: [32],
+      materials: [
+        { itemId: 251, amount: 1 },
+        { itemId: 250, amount: 2 },
+        { itemId: 118, amount: 5 },
+      ],
+    },
     upgradesTo: [34, 35],
   },
   {
@@ -726,7 +958,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 2,
     rarity: 5,
     price: 41400,
-    upgradesFrom: { weaponId: [33], materials: [ { itemId: 159, amount: 4}, { itemId: 160, amount: 1}, { itemId: 156, amount: 5} ] },
+    upgradesFrom: {
+      weaponId: [33],
+      materials: [
+        { itemId: 159, amount: 4 },
+        { itemId: 160, amount: 1 },
+        { itemId: 156, amount: 5 },
+      ],
+    },
   },
   {
     id: 35,
@@ -744,7 +983,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 2,
     rarity: 5,
     price: 41400,
-    upgradesFrom: { weaponId: [33], materials: [ { itemId: 159, amount: 4}, { itemId: 160, amount: 1}, { itemId: 157, amount: 5} ] },
+    upgradesFrom: {
+      weaponId: [33],
+      materials: [
+        { itemId: 159, amount: 4 },
+        { itemId: 160, amount: 1 },
+        { itemId: 157, amount: 5 },
+      ],
+    },
   },
   {
     id: 36,
@@ -762,7 +1008,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 1,
     rarity: 3,
     price: 24000,
-    upgradesFrom: { weaponId: [32], materials: [ { itemId: 258, amount: 1}, { itemId: 270, amount: 3}, { itemId: 18, amount: 3} ] },
+    upgradesFrom: {
+      weaponId: [32],
+      materials: [
+        { itemId: 258, amount: 1 },
+        { itemId: 270, amount: 3 },
+        { itemId: 18, amount: 3 },
+      ],
+    },
     upgradesTo: [37],
   },
   {
@@ -781,7 +1034,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 1,
     rarity: 6,
     price: 63000,
-    upgradesFrom: { weaponId: [36], materials: [ { itemId: 164, amount: 5}, { itemId: 161, amount: 2}, { itemId: 423, amount: 3} ] },
+    upgradesFrom: {
+      weaponId: [36],
+      materials: [
+        { itemId: 164, amount: 5 },
+        { itemId: 161, amount: 2 },
+        { itemId: 423, amount: 3 },
+      ],
+    },
   },
   {
     id: 38,
@@ -799,7 +1059,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 2,
     price: 14600,
-    upgradesFrom: { weaponId: [28], materials: [ { itemId: 254, amount: 3}, { itemId: 353, amount: 3}, { itemId: 252, amount: 2} ] },
+    upgradesFrom: {
+      weaponId: [28],
+      materials: [
+        { itemId: 254, amount: 3 },
+        { itemId: 353, amount: 3 },
+        { itemId: 252, amount: 2 },
+      ],
+    },
     upgradesTo: [39],
   },
   {
@@ -818,7 +1085,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 1,
     rarity: 3,
     price: 22400,
-    upgradesFrom: { weaponId: [38], materials: [ { itemId: 255, amount: 8}, { itemId: 257, amount: 2}, { itemId: 259, amount: 3} ] },
+    upgradesFrom: {
+      weaponId: [38],
+      materials: [
+        { itemId: 255, amount: 8 },
+        { itemId: 257, amount: 2 },
+        { itemId: 259, amount: 3 },
+      ],
+    },
     upgradesTo: [40],
   },
   {
@@ -837,7 +1111,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 1,
     rarity: 6,
     price: 55500,
-    upgradesFrom: { weaponId: [39], materials: [ { itemId: 258, amount: 3}, { itemId: 158, amount: 3}, { itemId: 475, amount: 5} ] },
+    upgradesFrom: {
+      weaponId: [39],
+      materials: [
+        { itemId: 258, amount: 3 },
+        { itemId: 158, amount: 3 },
+        { itemId: 475, amount: 5 },
+      ],
+    },
   },
   {
     id: 41,
@@ -855,7 +1136,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 2,
     rarity: 3,
     price: 22300,
-    upgradesFrom: { weaponId: [28], materials: [ { itemId: 330, amount: 50}, { itemId: 332, amount: 50}, { itemId: 251, amount: 1} ] },
+    upgradesFrom: {
+      weaponId: [28],
+      materials: [
+        { itemId: 330, amount: 50 },
+        { itemId: 332, amount: 50 },
+        { itemId: 251, amount: 1 },
+      ],
+    },
     upgradesTo: [42],
   },
   {
@@ -874,7 +1162,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 4,
     price: 33000,
-    upgradesFrom: { weaponId: [41], materials: [ { itemId: 355, amount: 2}, { itemId: 271, amount: 4}, { itemId: 153, amount: 5} ] },
+    upgradesFrom: {
+      weaponId: [41],
+      materials: [
+        { itemId: 355, amount: 2 },
+        { itemId: 271, amount: 4 },
+        { itemId: 153, amount: 5 },
+      ],
+    },
     upgradesTo: [43],
   },
   {
@@ -894,7 +1189,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 6,
     price: 66000,
-    upgradesFrom: { weaponId: [42], materials: [ { itemId: 424, amount: 2}, { itemId: 423, amount: 3}, { itemId: 421, amount: 5} ] },
+    upgradesFrom: {
+      weaponId: [42],
+      materials: [
+        { itemId: 424, amount: 2 },
+        { itemId: 423, amount: 3 },
+        { itemId: 421, amount: 5 },
+      ],
+    },
   },
   {
     id: 44,
@@ -912,7 +1214,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 2,
     price: 3540,
-    upgradesFrom: { weaponId: [26], materials: [ { itemId: 295, amount: 4}, { itemId: 294, amount: 5}, { itemId: 116, amount: 2} ] },
+    upgradesFrom: {
+      weaponId: [26],
+      materials: [
+        { itemId: 295, amount: 4 },
+        { itemId: 294, amount: 5 },
+        { itemId: 116, amount: 2 },
+      ],
+    },
     upgradesTo: [45],
   },
   {
@@ -931,7 +1240,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 1,
     rarity: 2,
     price: 7710,
-    upgradesFrom: { weaponId: [44], materials: [ { itemId: 289, amount: 5}, { itemId: 291, amount: 2}, { itemId: 371, amount: 2} ] },
+    upgradesFrom: {
+      weaponId: [44],
+      materials: [
+        { itemId: 289, amount: 5 },
+        { itemId: 291, amount: 2 },
+        { itemId: 371, amount: 2 },
+      ],
+    },
     upgradesTo: [46],
   },
   {
@@ -950,7 +1266,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 1,
     rarity: 3,
     price: 12500,
-    upgradesFrom: { weaponId: [45], materials: [ { itemId: 456, amount: 1}, { itemId: 299, amount: 2}, { itemId: 151, amount: 5} ] },
+    upgradesFrom: {
+      weaponId: [45],
+      materials: [
+        { itemId: 456, amount: 1 },
+        { itemId: 299, amount: 2 },
+        { itemId: 151, amount: 5 },
+      ],
+    },
     upgradesTo: [47],
   },
   {
@@ -969,7 +1292,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 2,
     rarity: 5,
     price: 37700,
-    upgradesFrom: { weaponId: [46], materials: [ { itemId: 459, amount: 3}, { itemId: 457, amount: 8}, { itemId: 460, amount: 2} ] },
+    upgradesFrom: {
+      weaponId: [46],
+      materials: [
+        { itemId: 459, amount: 3 },
+        { itemId: 457, amount: 8 },
+        { itemId: 460, amount: 2 },
+      ],
+    },
   },
   {
     id: 48,
@@ -1010,7 +1340,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 2,
     rarity: 3,
     price: 21000,
-    upgradesFrom: { weaponId: [48], materials: [ { itemId: 104, amount: 4}, { itemId: 100, amount: 8}, { itemId: 285, amount: 3} ] },
+    upgradesFrom: {
+      weaponId: [48],
+      materials: [
+        { itemId: 104, amount: 4 },
+        { itemId: 100, amount: 8 },
+        { itemId: 285, amount: 3 },
+      ],
+    },
     upgradesTo: [50],
   },
   {
@@ -1031,7 +1368,11 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     price: 43500,
     upgradesFrom: {
       weaponId: [49, 51],
-      materials: [ { itemId: 103, amount: 10}, { itemId: 101, amount: 10}, { itemId: 169, amount: 3} ],
+      materials: [
+        { itemId: 103, amount: 10 },
+        { itemId: 101, amount: 10 },
+        { itemId: 169, amount: 3 },
+      ],
     },
   },
   {
@@ -1050,7 +1391,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 3,
     rarity: 3,
     price: 21000,
-    upgradesFrom: { weaponId: [48], materials: [ { itemId: 104, amount: 4}, { itemId: 100, amount: 8}, { itemId: 507, amount: 5} ] },
+    upgradesFrom: {
+      weaponId: [48],
+      materials: [
+        { itemId: 104, amount: 4 },
+        { itemId: 100, amount: 8 },
+        { itemId: 507, amount: 5 },
+      ],
+    },
     upgradesTo: [50, 52],
   },
   {
@@ -1094,7 +1442,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 2,
     rarity: 3,
     price: 21000,
-    upgradesFrom: { weaponId: [48], materials: [ { itemId: 104, amount: 4}, { itemId: 100, amount: 8}, { itemId: 167, amount: 3} ] },
+    upgradesFrom: {
+      weaponId: [48],
+      materials: [
+        { itemId: 104, amount: 4 },
+        { itemId: 100, amount: 8 },
+        { itemId: 167, amount: 3 },
+      ],
+    },
     upgradesTo: [52],
   },
   {
@@ -1136,7 +1491,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 1,
     rarity: 6,
     price: 64200,
-    upgradesFrom: { weaponId: [54], materials: [ { itemId: 431, amount: 3}, { itemId: 430, amount: 1}, { itemId: 467, amount: 4} ] },
+    upgradesFrom: {
+      weaponId: [54],
+      materials: [
+        { itemId: 431, amount: 3 },
+        { itemId: 430, amount: 1 },
+        { itemId: 467, amount: 4 },
+      ],
+    },
   },
   {
     id: 56,
@@ -1176,7 +1538,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 1,
     rarity: 7,
     price: 83300,
-    upgradesFrom: { weaponId: [56], materials: [ { itemId: 569, amount: 3}, { itemId: 455, amount: 5}, { itemId: 453, amount: 2} ] },
+    upgradesFrom: {
+      weaponId: [56],
+      materials: [
+        { itemId: 569, amount: 3 },
+        { itemId: 455, amount: 5 },
+        { itemId: 453, amount: 2 },
+      ],
+    },
   },
   {
     id: 58,
@@ -1193,7 +1562,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 1,
     rarity: 7,
     price: 83300,
-    upgradesFrom: { weaponId: [56], materials: [ { itemId: 569, amount: 3}, { itemId: 455, amount: 5}, { itemId: 453, amount: 2} ] },
+    upgradesFrom: {
+      weaponId: [56],
+      materials: [
+        { itemId: 569, amount: 3 },
+        { itemId: 455, amount: 5 },
+        { itemId: 453, amount: 2 },
+      ],
+    },
   },
   {
     id: 59,
@@ -1234,7 +1610,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 2,
     rarity: 7,
     price: 100000,
-    upgradesFrom: { weaponId: [59], materials: [ { itemId: 569, amount: 3}, { itemId: 405, amount: 3}, { itemId: 404, amount: 1} ] },
+    upgradesFrom: {
+      weaponId: [59],
+      materials: [
+        { itemId: 569, amount: 3 },
+        { itemId: 405, amount: 3 },
+        { itemId: 404, amount: 1 },
+      ],
+    },
   },
   {
     id: 61,
@@ -1275,7 +1658,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 3,
     rarity: 5,
     price: 50000,
-    upgradesFrom: { weaponId: [61], materials: [ { itemId: 553, amount: 3}, { itemId: 347, amount: 5}, { itemId: 159, amount: 3} ] },
+    upgradesFrom: {
+      weaponId: [61],
+      materials: [
+        { itemId: 553, amount: 3 },
+        { itemId: 347, amount: 5 },
+        { itemId: 159, amount: 3 },
+      ],
+    },
   },
   {
     id: 63,
@@ -1334,7 +1724,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 1,
     price: 5000,
-    upgradesFrom: { weaponId: [64], materials: [ { itemId: 98, amount: 22}, { itemId: 314, amount: 5}, { itemId: 531, amount: 2} ] },
+    upgradesFrom: {
+      weaponId: [64],
+      materials: [
+        { itemId: 98, amount: 22 },
+        { itemId: 314, amount: 5 },
+        { itemId: 531, amount: 2 },
+      ],
+    },
     upgradesTo: [66],
   },
   {
@@ -1353,7 +1750,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 3,
     price: 22222,
-    upgradesFrom: { weaponId: [65], materials: [ { itemId: 98, amount: 44}, { itemId: 377, amount: 2}, { itemId: 252, amount: 2} ] },
+    upgradesFrom: {
+      weaponId: [65],
+      materials: [
+        { itemId: 98, amount: 44 },
+        { itemId: 377, amount: 2 },
+        { itemId: 252, amount: 2 },
+      ],
+    },
     upgradesTo: [67],
   },
   {
@@ -1372,7 +1776,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 5,
     price: 44444,
-    upgradesFrom: { weaponId: [66], materials: [ { itemId: 98, amount: 66}, { itemId: 432, amount: 2}, { itemId: 160, amount: 1} ] },
+    upgradesFrom: {
+      weaponId: [66],
+      materials: [
+        { itemId: 98, amount: 66 },
+        { itemId: 432, amount: 2 },
+        { itemId: 160, amount: 1 },
+      ],
+    },
   },
   {
     id: 68,
@@ -1409,7 +1820,14 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 4,
     price: 5000,
-    upgradesFrom: { weaponId: [68], materials: [ { itemId: 98, amount: 33}, { itemId: 514, amount: 5}, { itemId: 531, amount: 2} ] },
+    upgradesFrom: {
+      weaponId: [68],
+      materials: [
+        { itemId: 98, amount: 33 },
+        { itemId: 514, amount: 5 },
+        { itemId: 531, amount: 2 },
+      ],
+    },
     upgradesTo: [70],
   },
   {
@@ -1428,6 +1846,13 @@ export const GreatSwords: Weapon<WeaponType.GREAT_SWORD>[] = [
     slots: 0,
     rarity: 6,
     price: 55555,
-    upgradesFrom: { weaponId: [69], materials: [ { itemId: 98, amount: 77}, { itemId: 148, amount: 5}, { itemId: 469, amount: 1} ] },
+    upgradesFrom: {
+      weaponId: [69],
+      materials: [
+        { itemId: 98, amount: 77 },
+        { itemId: 148, amount: 5 },
+        { itemId: 469, amount: 1 },
+      ],
+    },
   },
 ];

@@ -1,5 +1,3 @@
-import { WeaponType, Weapon, WeaponDamageProperties } from "../type";
-
 export type GreatSwordAttack =
   | "Unsheathe Attack"
   | "Regular Slice"
