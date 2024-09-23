@@ -356,7 +356,7 @@ export const Lances: Weapon<WeaponType.LANCE>[] = [
     type: WeaponType.LANCE,
     name: "Acrus Lance",
     description:
-      "A fearsome Lance made from Lagiacrus changeme. Jolts prey with electricity.",
+      "A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.",
     attack: 322,
     element: "THUNDER",
     elemAttack: 180,
@@ -382,7 +382,7 @@ export const Lances: Weapon<WeaponType.LANCE>[] = [
     type: WeaponType.LANCE,
     name: "Doris Spear (R)",
     description:
-      "A fearsome Lance made from Lagiacrus changeme. Jolts prey with electricity.",
+      "A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.",
     attack: 368,
     element: "THUNDER",
     elemAttack: 240,
@@ -408,7 +408,7 @@ export const Lances: Weapon<WeaponType.LANCE>[] = [
     type: WeaponType.LANCE,
     name: "Doris Fellspear (P)",
     description:
-      "A fearsome Lance made from Lagiacrus changeme. Jolts prey with electricity.",
+      "A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.",
     attack: 414,
     element: "THUNDER",
     elemAttack: 380,
@@ -433,7 +433,7 @@ export const Lances: Weapon<WeaponType.LANCE>[] = [
     type: WeaponType.LANCE,
     name: "Doris Spear (Y)",
     description:
-      "A fearsome Lance made from Lagiacrus changeme. Jolts prey with electricity.",
+      "A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.",
     attack: 345,
     element: "THUNDER",
     elemAttack: 240,
@@ -459,7 +459,7 @@ export const Lances: Weapon<WeaponType.LANCE>[] = [
     type: WeaponType.LANCE,
     name: "Doris Fellspear (G)",
     description:
-      "A fearsome Lance made from Lagiacrus changeme. Jolts prey with electricity.",
+      "A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.",
     attack: 391,
     element: "THUNDER",
     elemAttack: 380,
@@ -639,7 +639,7 @@ export const Lances: Weapon<WeaponType.LANCE>[] = [
     type: WeaponType.LANCE,
     name: "Azure Crest",
     description:
-      "A Lance made from Baggi changeme. The tip contains tranquilizing fluid.",
+      "A Lance made from Baggi materials. The tip contains tranquilizing fluid.",
     attack: 299,
     element: "SLEEP",
     elemAttack: 150,
@@ -665,7 +665,7 @@ export const Lances: Weapon<WeaponType.LANCE>[] = [
     type: WeaponType.LANCE,
     name: "Azure Crest+",
     description:
-      "A Lance made from Baggi changeme. The tip contains tranquilizing fluid.",
+      "A Lance made from Baggi materials. The tip contains tranquilizing fluid.",
     attack: 322,
     element: "SLEEP",
     elemAttack: 200,
