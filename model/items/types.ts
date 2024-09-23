@@ -29,3 +29,11 @@ export interface QuestReward {
   /** Amount received */
   count: number;
 }
+
+/**
+ * Amount needed of a particular item for crafting, trading, etc
+ */
+export interface ItemRequirement {
+  itemId: Item['id'];
+  amount: number;
+}
