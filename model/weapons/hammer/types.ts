@@ -1,4 +1,4 @@
-export type HammerAttacks =
+export type HammerAttack =
   | "Unsheathe Attack"
   | "Side Swing"
   | "Triple Pound"

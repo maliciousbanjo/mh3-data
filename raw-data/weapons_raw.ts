@@ -3490,7 +3490,7 @@ var Weapons = {
     short: "lc",
     class: 2.3,
     attacks: {
-      "Unsheathe attack": [{ type: "cut", power: 0.28 }],
+      "Unsheathe Attack": [{ type: "cut", power: 0.28 }],
       "Low Stab Combo": [
         { type: "cut", power: 0.23 },
         { type: "cut", power: 0.23 },
@@ -3508,8 +3508,8 @@ var Weapons = {
         { type: "cut", power: 0.2 },
         { type: "cut", power: 0.16 },
       ],
-      "Charge finisher": [{ type: "cut", power: 0.4 }],
-      "Guard attack": [{ type: "cut", power: 0.2 }],
+      "Charge Finisher": [{ type: "cut", power: 0.4 }],
+      "Guard Attack": [{ type: "cut", power: 0.2 }],
       "Shield Bash": [{ type: "impact", power: 0.4, ko: 27 }],
     },
     weapons: [

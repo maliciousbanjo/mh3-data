@@ -1,8 +1,8 @@
 import { Weapon, WeaponDamageProperties, WeaponType } from "../types";
-import { HammerAttacks } from "./types";
+import { HammerAttack } from "./types";
 
 export const HammerDamageProperties = Object.freeze<
-  WeaponDamageProperties<HammerAttacks>
+  WeaponDamageProperties<HammerAttack>
 >({
   type: WeaponType.HAMMER,
   classModifier: 5.2,
