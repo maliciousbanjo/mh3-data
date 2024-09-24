@@ -59,7 +59,7 @@ export function getWeapon<T extends ValidWeaponTypes>(
   }
   if (!weapon)
     throw new Error(
-      `Could not find weapon of type ${weaponType} with ID ${weaponId}`
+      `Could not find weapon of type '${weaponType}' with id: ${weaponId}`
     );
   return weapon;
 }
