@@ -1,10 +1,24 @@
-import { Attack, ValidWeaponTypes, Weapon, WeaponType } from './types';
+import {
+  Attack,
+  CutHit,
+  Hit,
+  ValidWeaponTypes,
+  Weapon,
+  WeaponType
+} from './types';
 import { GreatSwords } from './great-sword';
 import { Hammers } from './hammer';
 import { Lances } from './lance';
 import { Longswords } from './longsword';
 import { SwitchAxes } from './switch-axe';
 import { SwordAndShields } from './sword-and-shield';
+
+/**
+ * Type guard for a {@link CutHit}
+ */
+export function isCutHit(object: Hit): object is CutHit {
+  return object.type === 'cut';
+}
 
 /**
  * Callback for {@link Array.find} to find a weapon
@@ -83,7 +97,7 @@ export function getWeapon<T extends ValidWeaponTypes>(
  * [ATP x TYPE x SHARP x HITZONE] / [CLASS] = Raw Damage [X DEFENSE]
  *  494 x  .23 x 1.05  x   .90    /   2.3   =    46.683   X   .75
  */
-export function calculateDamage<T extends WeaponType>(
+export function calculateDamage<T extends ValidWeaponTypes>(
   weaponType: T,
   weaponId: number,
   attack: Attack, // TODO: Will need type guard to determine if attack is cut or impact
@@ -96,5 +110,8 @@ export function calculateDamage<T extends WeaponType>(
   awaken = false
 ) {
   /** This will get raw, element, weapon class, and verify provided attack is valid for the weapon type */
-  // const weapon = getWeapon(weaponType, weaponId); // switch case on weaponType for correct data, then index
+  const weapon = getWeapon(weaponType, weaponId);
+
+  // TODO:
+  // getDefenseMultiplier
 }

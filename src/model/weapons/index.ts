@@ -17,6 +17,7 @@ export type { LanceTypes } from './lance';
 export type { SwitchAxeTypes } from './switch-axe';
 export type { LongswordTypes } from './longsword';
 export * from './types';
+export * as Util from './util';
 
 export {
   GreatSwords,
