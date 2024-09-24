@@ -1,0 +1,7 @@
+dist/
+node_modules/
+.vscode/
+.env
+.env.local
+.env.*.local
+.tsbuildinfo

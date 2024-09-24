@@ -1,0 +1,31 @@
+{
+  "name": "mh3-data",
+  "version": "0.1.0",
+  "description": "Monster Hunter Tri data for monsters, quests, and weapons",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maliciousbanjo/mh3-data.git"
+  },
+  "keywords": [
+    "mh3",
+    "mhtri",
+    "monsterhunter"
+  ],
+  "author": "MaliciousBanjo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maliciousbanjo/mh3-data/issues"
+  },
+  "homepage": "https://github.com/maliciousbanjo/mh3-data#readme",
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  }
+}
