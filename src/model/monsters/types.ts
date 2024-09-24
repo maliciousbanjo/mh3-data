@@ -90,7 +90,7 @@ export interface StatusValues {
 }
 
 /**
- * Carvable monster part
+ * Monster part that can be carved
  */
 export interface CarveZone {
   name: string;
@@ -158,9 +158,8 @@ export interface LargeMonster
     | MonsterType.BrtWyv
     | MonsterType.EldDrg;
   /** Quests that include this monster */
-  quests: {
-    // TODO: quest type. Will be closely tied to the quest data.
-  };
+  // TODO: quest type. Will be closely tied to the quest data.
+  quests: object;
   carves: CarveZone[];
   breakables: Breakable[];
   status?: {
@@ -179,6 +178,3 @@ export interface LargeMonster
   /** {@link MonsterType.EldDrg} cannot be captured */
   capture?: CaptureInfo;
 }
-
-export type MonsterRecord = Record<Monster['id'], Monster>;
-export type LargeMonsterRecord = Record<LargeMonster['id'], LargeMonster>;

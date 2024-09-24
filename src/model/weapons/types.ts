@@ -14,7 +14,7 @@ export enum WeaponType {
 }
 
 /**
- * Valid weapon types
+ * Used for type validation in functions
  */
 export type ValidWeaponTypes =
   | WeaponType.GREAT_SWORD
@@ -23,6 +23,20 @@ export type ValidWeaponTypes =
   | WeaponType.LANCE
   | WeaponType.SWITCH_AXE
   | WeaponType.LONGSWORD;
+
+/**
+ * Enumerated collection of sharpness levels that can be used as properties/arguments
+ */
+export enum Sharpness {
+  RED = 0,
+  ORANGE = 1,
+  YELLOW = 2,
+  GREEN = 3,
+  BLUE = 4,
+  WHITE = 5,
+  /** Only achievable with armor skill Sharpness+1 */
+  PURPLE = 6
+}
 
 /**
  * Properties specific to a hit with damage type 'cut'
@@ -68,30 +82,57 @@ export interface AttackGroup<N = string> {
   attacks: Attack<N>[];
 }
 
+export interface Damage {
+  /** Decimal is dropped after raw+elemental are totaled */
+  rawDamage: number;
+  /** Decimal is dropped after raw+elemental are totaled */
+  elementalDamage: number;
+  /**
+   * This should ALWAYS be the total of raw + elemental.
+   */
+  totalDamage: number;
+  /** Amount of knockout damage, only present for impact type attacks */
+  koDamage?: number;
+}
+
 /**
- * Collection of attacks and values used for determining wepaon damage
+ * Collection of attacks and values used for determining weapon damage
  *
  * @typeParam T weaponType this attack belongs to
  * @typeParam N Possible names of attacks
  */
-export interface WeaponDamageProperties<T extends WeaponType, N = string> {
+export interface WeaponDamageProperties<
+  T extends ValidWeaponTypes,
+  N = string
+> {
   type: T;
   /** Used in the damage/item buff calculations */
   classModifier: number;
   attackGroups: AttackGroup<N>[];
 }
 
+export type SecondaryDamageType =
+  | 'fire'
+  | 'water'
+  | 'thunder'
+  | 'ice'
+  | 'dragon'
+  | 'paralysis'
+  | 'sleep'
+  | 'poison';
+
 /**
  * Properties of a weapon
  */
-export interface Weapon<T extends WeaponType> {
+export interface Weapon<T extends ValidWeaponTypes> {
   id: number;
   type: T;
   name: string;
   description: string;
   attack: number;
-  element: CommonTypes.ElementType | keyof typeof CommonTypes.StatusType;
-  elemAttack: number;
+  /** Element or status damage */
+  secondaryDamageType: SecondaryDamageType;
+  secondaryAttack: number;
   /** If true requires armor skill 'Awaken' for element properties to take effect */
   awaken: boolean;
   /** Sharpness levels */
@@ -107,11 +148,11 @@ export interface Weapon<T extends WeaponType> {
   defense?: number;
   /** ID of previous weapon in path and what is required to upgrade it */
   upgradesFrom?: {
-    weaponId: Weapon<WeaponType.GREAT_SWORD>['id'][];
+    weaponId: Weapon<T>['id'][];
     materials: ItemTypes.ItemRequirement[];
   };
   /** ID of next weapon in upgrade path */
-  upgradesTo?: Weapon<WeaponType.GREAT_SWORD>['id'][];
+  upgradesTo?: Weapon<T>['id'][];
   /** List of required items to create this weapon */
   create?: ItemTypes.ItemRequirement[];
 }

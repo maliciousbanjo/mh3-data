@@ -7,9 +7,6 @@ export enum StatusType {
   EXHAUST = 'exhaust'
 }
 
-/** Element types */
-export type ElementType = 'FIRE' | 'WATER' | 'THUNDER' | 'ICE' | 'DRAGON';
-
 /** Levels of item/equipment rarity */
 export type Rarity = 1 | 2 | 3 | 4 | 4 | 5 | 6 | 7;
 

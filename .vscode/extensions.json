@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "aaron-bond.better-comments",
+        "dbaeumer.vscode-eslint",
+        "firsttris.vscode-jest-runner",
+        "christian-kohler.npm-intellisense",
+        "esbenp.prettier-vscode"
+    ]
+}

@@ -24,7 +24,7 @@ var Weapons = {
         description:
           'A weapon that even novice hunters can use. Charge up for a more powerful slash.',
         attack: 288,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 50,
         awaken: true,
         sharpness: [7, 3, 5],
@@ -41,7 +41,7 @@ var Weapons = {
         description:
           'A weapon that even novice hunters can use. Charge up for a more powerful slash.',
         attack: 336,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 80,
         awaken: true,
         sharpness: [5, 3, 7],
@@ -58,7 +58,7 @@ var Weapons = {
         description:
           'A strong blade made from high-purity steel, good for confronting huge monsters.',
         attack: 384,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 100,
         awaken: true,
         sharpness: [7, 3, 10],
@@ -75,7 +75,7 @@ var Weapons = {
         description:
           'A strong blade made from high-purity steel, good for confronting huge monsters.',
         attack: 528,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 120,
         awaken: true,
         sharpness: [5, 3, 9, 3],
@@ -92,7 +92,7 @@ var Weapons = {
         description:
           'The final iteration of the Buster Sword. Essential for fighting large monsters.',
         attack: 624,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 150,
         awaken: true,
         sharpness: [13, 1, 8, 3],
@@ -109,7 +109,7 @@ var Weapons = {
         description:
           'A sharpness steel blade. Its giant spikes give it a fearsome appearance.',
         attack: 720,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 200,
         awaken: true,
         defense: 12,
@@ -127,7 +127,7 @@ var Weapons = {
         description:
           'A sharpness steel blade. Its giant spikes give it a fearsome appearance.',
         attack: 816,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 220,
         awaken: true,
         defense: 16,
@@ -145,7 +145,7 @@ var Weapons = {
         description:
           'A sharpness steel blade. It is capable of peerless blows due to its multi-ore alloy.',
         attack: 864,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 260,
         awaken: true,
         defense: 18,
@@ -163,7 +163,7 @@ var Weapons = {
         description:
           'The best blade of its class. Its slashes are as deadly as those of a dragon.',
         attack: 912,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 300,
         awaken: true,
         defense: 20,
@@ -180,7 +180,7 @@ var Weapons = {
         description:
           'A shining gold blade. Its super-hard edge makes it versatile but hard to wield.',
         attack: 1008,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 200,
         awaken: true,
         defense: 30,
@@ -198,7 +198,7 @@ var Weapons = {
         description:
           'A shining gold blade. Its super-hard edge makes it versatile but hard to wield.',
         attack: 1104,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 250,
         awaken: true,
         defense: 40,
@@ -266,7 +266,7 @@ var Weapons = {
         description:
           'An electric blade made using Lagiacrus materials. Danger: high voltage!',
         attack: 672,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 180,
         awaken: false,
         sharpness: [15, 3, 3, 4],
@@ -283,7 +283,7 @@ var Weapons = {
         description:
           'An electric blade made using Lagiacrus materials. Danger: high voltage!',
         attack: 768,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 230,
         awaken: false,
         sharpness: [13, 1, 8, 8],
@@ -300,7 +300,7 @@ var Weapons = {
         description:
           'An electric blade made using Lagiacrus materials. Danger: high voltage!',
         attack: 864,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 330,
         awaken: false,
         sharpness: [13, 1, 8, 11, 2],
@@ -316,7 +316,7 @@ var Weapons = {
         description:
           'An electric blade made using Lagiacrus materials. Danger: high voltage!',
         attack: 720,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 230,
         awaken: false,
         sharpness: [13, 1, 8, 8],
@@ -333,7 +333,7 @@ var Weapons = {
         description:
           'An electric blade made using Lagiacrus materials. Danger: high voltage!',
         attack: 816,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 330,
         awaken: false,
         sharpness: [13, 1, 8, 11, 2],
@@ -349,7 +349,7 @@ var Weapons = {
         description:
           "A Lagiacrus embodied in a blade. Its streaking lightning devours foes' souls.",
         attack: 816,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 280,
         awaken: false,
         sharpness: [7, 3, 12, 8],
@@ -366,7 +366,7 @@ var Weapons = {
         description:
           "A Lagiacrus embodied in a blade. Its streaking lightning devours foes' souls.",
         attack: 912,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 360,
         awaken: false,
         sharpness: [7, 3, 12, 10, 3],
@@ -382,7 +382,7 @@ var Weapons = {
         description:
           "A blade shaped like a Barroth's head; it packs nearly as much punch.",
         attack: 672,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 180,
         awaken: true,
         sharpness: [9, 4, 11, 1],
@@ -399,7 +399,7 @@ var Weapons = {
         description:
           "A blade shaped like a Barroth's head; it packs nearly as much punch.",
         attack: 768,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 250,
         awaken: true,
         sharpness: [7, 3, 12, 3],
@@ -416,7 +416,7 @@ var Weapons = {
         description:
           'A blade made from the thick shell of a Barroth. It can crush even wyvern scales.',
         attack: 912,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 270,
         awaken: true,
         sharpness: [9, 4, 11, 6],
@@ -433,7 +433,7 @@ var Weapons = {
         description:
           'Just like its namesake, this weapon can pulverize its targets into dust.',
         attack: 1056,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 330,
         awaken: true,
         sharpness: [17, 2, 8, 7, 1],
@@ -634,7 +634,7 @@ var Weapons = {
         description:
           'The crimson blade of a brave king. He who uses it justly will win a hundred battles.',
         attack: 768,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 150,
         awaken: true,
         sharpness: [9, 4, 11, 6],
@@ -651,7 +651,7 @@ var Weapons = {
         description:
           "A king's spirit dwells in this fierce blade that cowards cannot touch.",
         attack: 960,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 240,
         awaken: true,
         sharpness: [12, 11, 5, 5, 2],
@@ -667,7 +667,7 @@ var Weapons = {
         description:
           'A blade inspired by Rathalos wings. Incendiaries turn its slashes to arcs of flame.',
         attack: 624,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 210,
         awaken: false,
         sharpness: [17, 2, 8, 3],
@@ -684,7 +684,7 @@ var Weapons = {
         description:
           'A blade inspired by Rathalos wings. Incendiaries turn its slashes to arcs of flame.',
         attack: 672,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 420,
         awaken: false,
         sharpness: [13, 1, 8, 8],
@@ -701,7 +701,7 @@ var Weapons = {
         description:
           'A blade of sparkling, crimson flame. Its entranced victims soon meet their end.',
         attack: 816,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 560,
         awaken: false,
         sharpness: [13, 1, 8, 11, 2],
@@ -734,7 +734,7 @@ var Weapons = {
         description:
           'A wild-looking blade made from Diablos horns. Very powerful.',
         attack: 912,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 50,
         awaken: true,
         defense: 8,
@@ -752,7 +752,7 @@ var Weapons = {
         description:
           'An upgraded Hornsword. It has the demon-like ability to mow down foes.',
         attack: 1008,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 110,
         awaken: true,
         defense: 16,
@@ -769,7 +769,7 @@ var Weapons = {
         description:
           'A bone blade reinforced with Ludroth parts. A good base level for further upgrading.',
         attack: 480,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 150,
         awaken: true,
         sharpness: [3, 7, 10],
@@ -786,7 +786,7 @@ var Weapons = {
         description:
           'A blade of absorbent sponge. Its pressurized water can break through tough shells.',
         attack: 528,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 210,
         awaken: false,
         sharpness: [7, 3, 12, 3],
@@ -803,7 +803,7 @@ var Weapons = {
         description:
           'A blade of absorbent sponge. Its pressurized water can break through tough shells.',
         attack: 624,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 320,
         awaken: false,
         sharpness: [9, 4, 11, 6],
@@ -820,7 +820,7 @@ var Weapons = {
         description:
           'The ultimate Ludroth blade. The water that issues from it leaves rainbow trails.',
         attack: 768,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 450,
         awaken: false,
         sharpness: [5, 3, 9, 14, 4],
@@ -836,7 +836,7 @@ var Weapons = {
         description:
           'A blade made from ore mined in polar climes. Upgradeable in more ways than one.',
         attack: 624,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 190,
         awaken: true,
         sharpness: [5, 3, 9, 3],
@@ -853,7 +853,7 @@ var Weapons = {
         description:
           'A strangely-shaped blade which took this form naturally when crafted.',
         attack: 720,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 260,
         awaken: true,
         sharpness: [5, 3, 9, 8],
@@ -870,7 +870,7 @@ var Weapons = {
         description:
           'An ancient volcanic eruption in blade form. A great life force sleeps within.',
         attack: 912,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 350,
         awaken: true,
         sharpness: [5, 3, 9, 14, 4],
@@ -889,7 +889,7 @@ var Weapons = {
         description:
           'A strangely-shaped blade which took this form naturally when crafted.',
         attack: 672,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 260,
         awaken: true,
         sharpness: [5, 3, 9, 8],
@@ -906,7 +906,7 @@ var Weapons = {
         description:
           'An ancient volcanic eruption in blade form. A great life force sleeps within.',
         attack: 864,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 350,
         awaken: true,
         sharpness: [5, 3, 9, 14, 4],
@@ -925,7 +925,7 @@ var Weapons = {
         description:
           'A strangely-shaped blade which took this form naturally when crafted.',
         attack: 672,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 260,
         awaken: true,
         sharpness: [5, 3, 9, 8],
@@ -942,7 +942,7 @@ var Weapons = {
         description:
           "A blade crafted from a giant horn, Ceadeus's pride. It shines with foes' blood.",
         attack: 672,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 440,
         awaken: false,
         sharpness: [3, 7, 16, 4],
@@ -959,7 +959,7 @@ var Weapons = {
         description:
           "A blade once wielded by an ancient king. In its light dwells a sea-god's soul...",
         attack: 816,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 500,
         awaken: false,
         sharpness: [3, 7, 16, 7, 1, 1],
@@ -1264,7 +1264,7 @@ var Weapons = {
         description:
           'A one-handed, easy-to-wield Sword. Not too powerful; combo attacks are its forte.',
         attack: 84,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 50,
         awaken: true,
         sharpness: [7, 5, 3],
@@ -1281,7 +1281,7 @@ var Weapons = {
         description:
           'A one-handed, easy-to-wield Sword. Not too powerful; combo attacks are its forte.',
         attack: 98,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 80,
         awaken: true,
         sharpness: [5, 3, 7],
@@ -1298,7 +1298,7 @@ var Weapons = {
         description:
           'An iron Sword with a curved, durable blade. It can be upgraded further as well.',
         attack: 112,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 120,
         awaken: true,
         sharpness: [5, 3, 12],
@@ -1315,7 +1315,7 @@ var Weapons = {
         description:
           'An iron Sword with a curved, durable blade. It can be upgraded further as well.',
         attack: 154,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 150,
         awaken: true,
         sharpness: [13, 1, 4, 2],
@@ -1383,7 +1383,7 @@ var Weapons = {
         description:
           'A Sword of extreme cold. The blade can pierce shells to freeze prey from the inside.',
         attack: 168,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 220,
         awaken: false,
         sharpness: [7, 5, 10, 3],
@@ -1400,7 +1400,7 @@ var Weapons = {
         description:
           'A Sword of extreme cold. The blade can pierce shells to freeze prey from the inside.',
         attack: 182,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 330,
         awaken: false,
         sharpness: [2, 5, 17, 6],
@@ -1417,7 +1417,7 @@ var Weapons = {
         description:
           'A Sword of Barioth material that can freeze flames, earth, water and even air.',
         attack: 238,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 420,
         awaken: false,
         sharpness: [2, 5, 17, 6, 5],
@@ -1617,7 +1617,7 @@ var Weapons = {
         description:
           'A Sword made using Ludroth skin. It begs for further upgrades.',
         attack: 154,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 100,
         awaken: true,
         sharpness: [7, 5, 8],
@@ -1635,7 +1635,7 @@ var Weapons = {
         description:
           'A Sword made from Ludroth materials. Its sprays of water mesmerize monsters.',
         attack: 168,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 120,
         awaken: false,
         sharpness: [13, 1, 4, 2],
@@ -1652,7 +1652,7 @@ var Weapons = {
         description:
           'A Sword made from Ludroth materials. Its sprays of water mesmerize monsters.',
         attack: 196,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 210,
         awaken: false,
         sharpness: [5, 3, 13, 4],
@@ -1669,7 +1669,7 @@ var Weapons = {
         description:
           'A Sword covered in an aqueous membrane. Uses water to cut down monsters.',
         attack: 238,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 350,
         awaken: false,
         sharpness: [7, 5, 10, 10, 3],
@@ -1735,7 +1735,7 @@ var Weapons = {
         description:
           'A blunt weapon whose heavy blows hit harder than most Swords.',
         attack: 322,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 210,
         awaken: true,
         defense: 16,
@@ -1753,7 +1753,7 @@ var Weapons = {
         description:
           'A blunt weapn whose heavy blows hit harder than most Swords.',
         attack: 336,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 280,
         awaken: true,
         defense: 24,
@@ -1803,7 +1803,7 @@ var Weapons = {
         description:
           'A handaxe made from Qurupeco materials, modeled after an axe used by Western hunters.',
         attack: 192,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 120,
         awaken: true,
         sharpness: [15, 2, 6, 2],
@@ -1821,7 +1821,7 @@ var Weapons = {
         description:
           'A handaxe made from Qurupeco materials, modeled after an axe used by Western hunters.',
         attack: 182,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 220,
         awaken: false,
         sharpness: [7, 5, 10, 3],
@@ -1838,7 +1838,7 @@ var Weapons = {
         description:
           'A Sword with a red-hot blade wrapped in the scorching flames of a wyvern.',
         attack: 196,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 330,
         awaken: false,
         sharpness: [7, 5, 10, 8],
@@ -1855,7 +1855,7 @@ var Weapons = {
         description:
           'A stronger form of the Djinn, made from incendiary materials. As hot as magma.',
         attack: 238,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 440,
         awaken: false,
         sharpness: [7, 5, 10, 10, 3],
@@ -1871,7 +1871,7 @@ var Weapons = {
         description:
           'A Thunder Sword. Through its blade flows lightning to multiply the pain.',
         attack: 182,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 220,
         awaken: false,
         sharpness: [5, 3, 13, 4],
@@ -1888,7 +1888,7 @@ var Weapons = {
         description:
           'A Thunder Sword. Through its blade flows lightning to multiply the pain.',
         attack: 210,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 270,
         awaken: false,
         sharpness: [5, 3, 13, 12, 2],
@@ -1905,7 +1905,7 @@ var Weapons = {
         description:
           'A Thunder Sword. Through its blade flows lightning to multiply the pain.',
         attack: 252,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 330,
         awaken: false,
         sharpness: [5, 3, 13, 4],
@@ -1921,7 +1921,7 @@ var Weapons = {
         description:
           'A Thunder Sword. Through its blade flows lightning to multiply the pain.',
         attack: 196,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 270,
         awaken: false,
         sharpness: [5, 3, 13, 12, 2],
@@ -1938,7 +1938,7 @@ var Weapons = {
         description:
           'A Thunder Sword. Through its blade flows lightning to multiply the pain.',
         attack: 238,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 330,
         awaken: false,
         sharpness: [5, 3, 13, 4],
@@ -1954,7 +1954,7 @@ var Weapons = {
         description:
           'An azure Sword charged with Lightning; its bearer becomes a raging maelstrom.',
         attack: 238,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 310,
         awaken: false,
         sharpness: [4, 6, 9, 10, 1],
@@ -1971,7 +1971,7 @@ var Weapons = {
         description:
           'An azure Sword charged with Lightning; its bearer becomes a raging maelstrom.',
         attack: 252,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 350,
         awaken: false,
         sharpness: [4, 6, 9, 10, 6],
@@ -1987,7 +1987,7 @@ var Weapons = {
         description:
           'A Sword made from ore mined in polar climes. Upgradeable in more ways than one.',
         attack: 182,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 110,
         awaken: true,
         sharpness: [13, 1, 4, 2],
@@ -2004,7 +2004,7 @@ var Weapons = {
         description:
           "A Sword and shield that, when united, resemble a wyvern's head.",
         attack: 210,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 210,
         awaken: true,
         sharpness: [4, 6, 9, 6],
@@ -2021,7 +2021,7 @@ var Weapons = {
         description:
           'A Sword of ancient memories. The wyvern bares its teeth, sharpnessened over centuries.',
         attack: 280,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 290,
         awaken: true,
         sharpness: [4, 6, 9, 10, 6],
@@ -2040,7 +2040,7 @@ var Weapons = {
         description:
           "A Sword and shield that, when united, resemble a wyvern's head.",
         attack: 196,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 210,
         awaken: true,
         sharpness: [4, 6, 9, 6],
@@ -2057,7 +2057,7 @@ var Weapons = {
         description:
           'A Sword of ancient memories. The wyvern bares its teeth, sharpnessened over centuries.',
         attack: 266,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 290,
         awaken: true,
         sharpness: [4, 6, 9, 10, 6],
@@ -2076,7 +2076,7 @@ var Weapons = {
         description:
           "A Sword and shield that, when united, resemble a wyvern's head.",
         attack: 196,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 210,
         awaken: true,
         sharpness: [4, 6, 9, 6],
@@ -2093,7 +2093,7 @@ var Weapons = {
         description:
           'A Sword made from Ceadeus horns. They say only a hero can wield it...',
         attack: 210,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 270,
         awaken: false,
         sharpness: [15, 2, 6, 7],
@@ -2110,7 +2110,7 @@ var Weapons = {
         description:
           "A symbol of the Ceadeus's pride. It can fell 10,000 monsters in a single blow.",
         attack: 252,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 340,
         awaken: false,
         sharpness: [15, 2, 6, 11, 1],
@@ -2208,7 +2208,7 @@ var Weapons = {
         description:
           'A traditional-looking Sword whose abilities put it far ahead of the pack.',
         attack: 210,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 300,
         awaken: true,
         sharpness: [4, 6, 9, 10, 1],
@@ -2225,7 +2225,7 @@ var Weapons = {
         description:
           'A Sword with Water crafted into it. Given to a brave adventurer for great acts.',
         attack: 252,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 350,
         awaken: true,
         sharpness: [4, 6, 9, 10, 6],
@@ -2241,7 +2241,7 @@ var Weapons = {
         description:
           'A weapon used by foreign hunters. Notable for its strange shape and colors.',
         attack: 224,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 130,
         awaken: true,
         sharpness: [13, 1, 4, 7],
@@ -2258,7 +2258,7 @@ var Weapons = {
         description:
           'A weapon used by foreign hunters. Notable for its strange shape and colors.',
         attack: 238,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 170,
         awaken: true,
         sharpness: [7, 5, 10, 8],
@@ -2275,7 +2275,7 @@ var Weapons = {
         description:
           'A rare foreign weapon that, when paired with a shield, can work as a Sword.',
         attack: 294,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 200,
         awaken: true,
         sharpness: [7, 5, 10, 10, 3],
@@ -2443,7 +2443,7 @@ var Weapons = {
         description:
           'A Hammer of tremendous power. Its heavy blows wear down and knock out prey.',
         attack: 312,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 50,
         awaken: true,
         sharpness: [5, 4, 6],
@@ -2460,7 +2460,7 @@ var Weapons = {
         description:
           'A Hammer of tremendous power. Its heavy blows wear down and knock out prey.',
         attack: 364,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 80,
         awaken: true,
         sharpness: [3, 2, 10],
@@ -2477,7 +2477,7 @@ var Weapons = {
         description:
           'An Iron Hammer with a sharpness tip to increase deadliness. An easy weapon to obtain.',
         attack: 468,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 100,
         awaken: true,
         sharpness: [5, 4, 11],
@@ -2494,7 +2494,7 @@ var Weapons = {
         description:
           'An Iron Hammer with a sharpness tip to increase deadliness. An easy weapon to obtain.',
         attack: 572,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 130,
         awaken: true,
         sharpness: [6, 4, 8, 2],
@@ -2511,7 +2511,7 @@ var Weapons = {
         description:
           'An upgraded version of the War Hammer. Similar in appearance, but stronger.',
         attack: 676,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 150,
         awaken: true,
         sharpness: [5, 4, 14, 2],
@@ -2529,7 +2529,7 @@ var Weapons = {
         description:
           'A giant, super-powerful Hammer that is one incredible hunk of metal.',
         attack: 884,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 240,
         awaken: true,
         sharpness: [6, 4, 8, 11, 1],
@@ -2546,7 +2546,7 @@ var Weapons = {
         description:
           'A heavy Hammer made from hard metal. One blow crushes bones and scales alike.',
         attack: 988,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 270,
         awaken: true,
         sharpness: [5, 4, 14, 10, 2],
@@ -2562,7 +2562,7 @@ var Weapons = {
         description:
           'A testament to modern tech. Powder in a revolving magazine explodes on impact.',
         attack: 728,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 220,
         awaken: false,
         sharpness: [10, 5, 6, 4],
@@ -2579,7 +2579,7 @@ var Weapons = {
         description:
           'A testament to modern tech. Powder in a revolving magazine explodes on impact.',
         attack: 832,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 250,
         awaken: false,
         sharpness: [6, 5, 11, 8],
@@ -2596,7 +2596,7 @@ var Weapons = {
         description:
           'A powerful Hammer for the true seeker of freedom. No walls can hold its wielder.',
         attack: 936,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 300,
         awaken: false,
         sharpness: [10, 5, 5, 12, 3],
@@ -2612,7 +2612,7 @@ var Weapons = {
         description:
           'An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.',
         attack: 676,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 230,
         awaken: false,
         sharpness: [6, 5, 12, 3],
@@ -2629,7 +2629,7 @@ var Weapons = {
         description:
           'An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.',
         attack: 780,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 210,
         awaken: false,
         sharpness: [6, 4, 8, 7],
@@ -2646,7 +2646,7 @@ var Weapons = {
         description:
           'An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.',
         attack: 884,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 360,
         awaken: false,
         sharpness: [18, 2, 6, 8],
@@ -2662,7 +2662,7 @@ var Weapons = {
         description:
           'An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.',
         attack: 728,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 210,
         awaken: false,
         sharpness: [6, 4, 8, 7],
@@ -2679,7 +2679,7 @@ var Weapons = {
         description:
           'An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.',
         attack: 832,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 360,
         awaken: false,
         sharpness: [19, 2, 6, 8],
@@ -2695,7 +2695,7 @@ var Weapons = {
         description:
           'An electric Hammer that resembles a giant whirlpool and devours all life.',
         attack: 780,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 330,
         awaken: false,
         sharpness: [10, 5, 5, 10],
@@ -2712,7 +2712,7 @@ var Weapons = {
         description:
           'An electric Hammer that resembles a giant whirlpool and devours all life.',
         attack: 884,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 390,
         awaken: false,
         sharpness: [10, 5, 5, 12, 3],
@@ -2795,7 +2795,7 @@ var Weapons = {
         description:
           'A Hammer covered in Ludroth skin. The bone construction makes it light and sturdy.',
         attack: 520,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 80,
         awaken: true,
         sharpness: [10, 5, 5],
@@ -2812,7 +2812,7 @@ var Weapons = {
         description:
           'A Hammer covered in Ludroth skin. The bone construction makes it light and sturdy.',
         attack: 572,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 100,
         awaken: true,
         sharpness: [14, 4, 6, 1],
@@ -2830,7 +2830,7 @@ var Weapons = {
         description:
           'A hammer of Ludroth sponge. The water inside explodes onto the target on impact.',
         attack: 624,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 120,
         awaken: false,
         sharpness: [5, 4, 14, 2],
@@ -2847,7 +2847,7 @@ var Weapons = {
         description:
           'A hammer of Ludroth sponge. The water inside explodes onto the target on impact.',
         attack: 676,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 210,
         awaken: false,
         sharpness: [10, 5, 6, 4],
@@ -2864,7 +2864,7 @@ var Weapons = {
         description:
           'A Hammer made from a Jhen Mohran fang. Peerless power and durability.',
         attack: 780,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 250,
         awaken: false,
         sharpness: [6, 4, 8, 7],
@@ -2881,7 +2881,7 @@ var Weapons = {
         description:
           'A Hammer made from a Jhen Mohran fang. Peerless power and durability.',
         attack: 884,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 330,
         awaken: false,
         sharpness: [6, 4, 8, 11, 1],
@@ -2898,7 +2898,7 @@ var Weapons = {
         description:
           'A sacred item that summons the waters to improve the harvest and save the land.',
         attack: 936,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 380,
         awaken: false,
         sharpness: [6, 4, 8, 11, 6],
@@ -2967,7 +2967,7 @@ var Weapons = {
         description:
           "A Hammer that awakens the earth's rage. Heaviest and hardest of all Hammers.",
         attack: 884,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 120,
         awaken: true,
         sharpness: [14, 4, 2],
@@ -2984,7 +2984,7 @@ var Weapons = {
         description:
           "A Hammer that awakens the earth's rage. Heaviest and hardest of all Hammers.",
         attack: 988,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 150,
         awaken: true,
         sharpness: [18, 2, 5],
@@ -3001,7 +3001,7 @@ var Weapons = {
         description:
           'A bulky Hammer made from the bulky Uragaan. Requires great strength to wield.',
         attack: 1144,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 300,
         awaken: true,
         sharpness: [18, 2, 7, 3],
@@ -3017,7 +3017,7 @@ var Weapons = {
         description:
           'A Hammer that uses a built-in flint mechanism to expel flames on impact.',
         attack: 520,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 250,
         awaken: false,
         sharpness: [14, 4, 6, 1],
@@ -3034,7 +3034,7 @@ var Weapons = {
         description:
           'A Hammer that uses a built-in flint mechanism to expel flames on impact.',
         attack: 624,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 320,
         awaken: false,
         sharpness: [3, 2, 16, 4],
@@ -3051,7 +3051,7 @@ var Weapons = {
         description:
           'A superb article made from a Rathalos head. Only the bravest can wield it.',
         attack: 676,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 410,
         awaken: false,
         sharpness: [8, 2, 4, 11],
@@ -3068,7 +3068,7 @@ var Weapons = {
         description:
           'A superb article made from a Rathalos head. Only the bravest can wield it.',
         attack: 780,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 450,
         awaken: false,
         sharpness: [8, 2, 4, 16],
@@ -3085,7 +3085,7 @@ var Weapons = {
         description:
           'A Hammer of raging fire containing the unruly spirit of Rathalos.',
         attack: 884,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 520,
         awaken: false,
         sharpness: [9, 2, 3, 17, 4],
@@ -3151,7 +3151,7 @@ var Weapons = {
         description:
           'A Hammer made from ore mined in polar climes. Upgradeable in more ways than one.',
         attack: 676,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 180,
         awaken: true,
         sharpness: [5, 4, 14, 2],
@@ -3168,7 +3168,7 @@ var Weapons = {
         description:
           'A Hammer overflowing with history, imbued with the soul of an ancient wyvern.',
         attack: 780,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 230,
         awaken: true,
         sharpness: [10, 5, 6, 4],
@@ -3185,7 +3185,7 @@ var Weapons = {
         description:
           "A Hammer sealed within the earth long ago. It pulsates with a wyvern's life force.",
         attack: 988,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 340,
         awaken: true,
         sharpness: [5, 4, 14, 10, 2],
@@ -3204,7 +3204,7 @@ var Weapons = {
         description:
           'A Hammer overflowing with history, imbued with the soul of an ancient wyvern.',
         attack: 728,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 230,
         awaken: true,
         sharpness: [10, 5, 6, 4],
@@ -3221,7 +3221,7 @@ var Weapons = {
         description:
           "A Hammer sealed within the earth long ago. It pulsates with a wyvern's life force.",
         attack: 936,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 340,
         awaken: true,
         sharpness: [5, 4, 14, 10, 2],
@@ -3240,7 +3240,7 @@ var Weapons = {
         description:
           'A Hammer overflowing with history, imbued with the soul of an ancient wyvern.',
         attack: 728,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 230,
         awaken: true,
         sharpness: [10, 5, 6, 4],
@@ -3518,7 +3518,7 @@ var Weapons = {
         description:
           'A basic Lance for beginning hunters. Provides all-round defense and offense.',
         attack: 138,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 50,
         awaken: true,
         sharpness: [7, 4, 4],
@@ -3535,7 +3535,7 @@ var Weapons = {
         description:
           'A basic Lance for beginning hunters. Provides all-round defense and offense.',
         attack: 161,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 80,
         awaken: true,
         sharpness: [7, 3, 10],
@@ -3552,7 +3552,7 @@ var Weapons = {
         description:
           'A large Lance forged of hard ore. Traditionally used as an official arm by knights.',
         attack: 207,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 100,
         awaken: true,
         sharpness: [2, 4, 14],
@@ -3569,7 +3569,7 @@ var Weapons = {
         description:
           'A large Lance forged of hard ore. Traditionally used as an official arm by knights.',
         attack: 253,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 120,
         awaken: true,
         sharpness: [4, 5, 10, 1],
@@ -3587,7 +3587,7 @@ var Weapons = {
         description:
           'A Lance given to a battle-hardened knight. Notable for its large shield.',
         attack: 299,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 150,
         awaken: true,
         sharpness: [4, 8, 6, 2],
@@ -3604,7 +3604,7 @@ var Weapons = {
         description:
           'A Lance given to a battle-hardened knight. Notable for its large shield.',
         attack: 322,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 180,
         awaken: true,
         defense: 12,
@@ -3622,7 +3622,7 @@ var Weapons = {
         description:
           'A golden Lance as stately as its tower namesake with both good offense and defense.',
         attack: 368,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 200,
         awaken: true,
         defense: 16,
@@ -3640,7 +3640,7 @@ var Weapons = {
         description:
           'A golden Lance as stately as its tower namesake with both good offense and defense.',
         attack: 391,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 250,
         awaken: true,
         defense: 20,
@@ -3658,7 +3658,7 @@ var Weapons = {
         description:
           'Lance wielded by a knight of old against the gods in an attempt to protect mankind.',
         attack: 437,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 300,
         awaken: true,
         defense: 24,
@@ -3675,7 +3675,7 @@ var Weapons = {
         description:
           'An icy Lance made from a Barioth tusk. Cold enough to freeze vapor in the air.',
         attack: 299,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 200,
         awaken: false,
         sharpness: [9, 5, 7, 4],
@@ -3692,7 +3692,7 @@ var Weapons = {
         description:
           'An icy Lance made from a Barioth tusk. Cold enough to freeze vapor in the air.',
         attack: 322,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 310,
         awaken: false,
         sharpness: [10, 8, 5, 7],
@@ -3709,7 +3709,7 @@ var Weapons = {
         description:
           'An icy Lance from a frozen land. sharpness and cold, just like the Tundra.',
         attack: 368,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 420,
         awaken: false,
         sharpness: [7, 3, 15, 5, 5],
@@ -3725,7 +3725,7 @@ var Weapons = {
         description:
           'A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.',
         attack: 322,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 180,
         awaken: false,
         sharpness: [2, 4, 16, 3],
@@ -3742,7 +3742,7 @@ var Weapons = {
         description:
           'A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.',
         attack: 368,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 240,
         awaken: false,
         sharpness: [9, 5, 7, 9],
@@ -3759,7 +3759,7 @@ var Weapons = {
         description:
           'A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.',
         attack: 414,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 380,
         awaken: false,
         sharpness: [9, 5, 7, 12, 2],
@@ -3775,7 +3775,7 @@ var Weapons = {
         description:
           'A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.',
         attack: 345,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 240,
         awaken: false,
         sharpness: [9, 5, 7, 9],
@@ -3792,7 +3792,7 @@ var Weapons = {
         description:
           'A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.',
         attack: 391,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 380,
         awaken: false,
         sharpness: [9, 5, 7, 12, 2],
@@ -3808,7 +3808,7 @@ var Weapons = {
         description:
           "Lagiacrus' lightning in Lance form. Those it touches are reduced to sea foam.",
         attack: 368,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 320,
         awaken: false,
         sharpness: [2, 4, 16, 7, 1],
@@ -3825,7 +3825,7 @@ var Weapons = {
         description:
           "Lagiacrus' lightning in Lance form. Those it touches are reduced to sea foam.",
         attack: 414,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 440,
         awaken: false,
         sharpness: [2, 4, 16, 7, 6],
@@ -3993,7 +3993,7 @@ var Weapons = {
         description:
           'A Lance made from the thick, sharpness horn of the Diablos, the dignified desert king.',
         attack: 437,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 200,
         awaken: true,
         sharpness: [15, 5, 3, 7],
@@ -4010,7 +4010,7 @@ var Weapons = {
         description:
           'A Lance holding the spirit of the king of the desert. It can pierce anything.',
         attack: 506,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 250,
         awaken: true,
         sharpness: [16, 5, 2, 10, 2],
@@ -4026,7 +4026,7 @@ var Weapons = {
         description:
           'A Lance made from the beak of the Agnaktor. Capable of piercing solid rock.',
         attack: 345,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 220,
         awaken: false,
         sharpness: [4, 8, 6, 12],
@@ -4043,7 +4043,7 @@ var Weapons = {
         description:
           'A Lance of crimson flame. Its fiery whirlwinds turn everything to ash.',
         attack: 391,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 350,
         awaken: false,
         sharpness: [5, 7, 5, 17, 1],
@@ -4109,7 +4109,7 @@ var Weapons = {
         description:
           'A drill-like shape enhances the piercing power of this Lance made of Ludroth bone.',
         attack: 253,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 90,
         awaken: true,
         sharpness: [2, 4, 14],
@@ -4126,7 +4126,7 @@ var Weapons = {
         description:
           'A Water-filled Lance made of Royal Ludroth bone. Shoots pressurized water into prey.',
         attack: 276,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 110,
         awaken: false,
         sharpness: [9, 5, 7, 4],
@@ -4144,7 +4144,7 @@ var Weapons = {
         description:
           'A Water-filled Lance made of Royal Ludroth bone. Shoots pressurized water into prey.',
         attack: 322,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 240,
         awaken: false,
         sharpness: [15, 5, 3, 7],
@@ -4161,7 +4161,7 @@ var Weapons = {
         description:
           'A Royal Ludroth Lance that resembles a waterspout. Hits prey with a deluge of blows.',
         attack: 391,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 300,
         awaken: false,
         sharpness: [11, 8, 5, 8, 3],
@@ -4177,7 +4177,7 @@ var Weapons = {
         description:
           'A Royal Ludroth Lance that resembles a waterspout. Hits prey with a deluge of blows.',
         attack: 391,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 300,
         awaken: false,
         sharpness: [11, 8, 5, 8, 3],
@@ -4226,7 +4226,7 @@ var Weapons = {
         description:
           'A Lance made from ore mined in polar climes. Upgradeable in more ways than one.',
         attack: 299,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 150,
         awaken: true,
         sharpness: [4, 8, 6, 2],
@@ -4243,7 +4243,7 @@ var Weapons = {
         description:
           'A Lance whose ore holds ancient memories. Impressive in its natural greatness.',
         attack: 345,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 190,
         awaken: true,
         sharpness: [4, 8, 6, 7],
@@ -4260,7 +4260,7 @@ var Weapons = {
         description:
           'An ancient stone Lance whose thrusts are as unstoppable as the march of time.',
         attack: 437,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 280,
         awaken: true,
         sharpness: [5, 5, 9, 13, 3],
@@ -4279,7 +4279,7 @@ var Weapons = {
         description:
           'A Lance whose ore holds ancient memories. Impressive in its natural greatness.',
         attack: 322,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 190,
         awaken: true,
         sharpness: [4, 8, 6, 7],
@@ -4296,7 +4296,7 @@ var Weapons = {
         description:
           'An ancient stone Lance whose thrusts are as unstoppable as the march of time.',
         attack: 414,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 280,
         awaken: true,
         sharpness: [5, 5, 9, 13, 3],
@@ -4315,7 +4315,7 @@ var Weapons = {
         description:
           'A Lance whose ore holds ancient memories. Impressive in its natural greatness.',
         attack: 322,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 190,
         awaken: true,
         sharpness: [4, 8, 6, 7],
@@ -4414,7 +4414,7 @@ var Weapons = {
         description:
           'An ordinary-looking Lance that, with continued use, outranks many others.',
         attack: 345,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 250,
         awaken: true,
         sharpness: [4, 5, 10, 11],
@@ -4431,7 +4431,7 @@ var Weapons = {
         description:
           'A Lance carried by a knight who faced certain death to rescue his princess.',
         attack: 414,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 300,
         awaken: true,
         sharpness: [5, 5, 9, 13, 3],
@@ -4447,7 +4447,7 @@ var Weapons = {
         description:
           "Depicts the terror of Moga's shores. Just watch out for other hunters' harpoons!",
         attack: 230,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 450,
         awaken: false,
         sharpness: [7, 4, 15, 5, 4],
@@ -4463,7 +4463,7 @@ var Weapons = {
         description:
           'Prototype of a weapon being developed in a distant land, for now it works as a Lance.',
         attack: 345,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 250,
         awaken: false,
         sharpness: [9, 5, 7, 9],
@@ -4480,7 +4480,7 @@ var Weapons = {
         description:
           'Prototype of a weapon being developed in a distance land, for now it works as a Lance.',
         attack: 414,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 280,
         awaken: false,
         sharpness: [2, 4, 16, 7, 6],
@@ -4650,7 +4650,7 @@ var Weapons = {
         description:
           'The newest in weapons, a desert creation. Users must master both axe and sword.',
         attack: 540,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 100,
         awaken: true,
         phial: 'power',
@@ -4668,7 +4668,7 @@ var Weapons = {
         description:
           'The newest in weapons, a desert creation. Users must master both axe and sword.',
         attack: 648,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 150,
         awaken: true,
         phial: 'power',
@@ -4775,7 +4775,7 @@ var Weapons = {
         description:
           "An axe that channels the Lagiacrus's power. With each slash, azure light blooms.",
         attack: 756,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 150,
         awaken: false,
         phial: 'element',
@@ -4794,7 +4794,7 @@ var Weapons = {
         description:
           "An axe that channels the Lagiacrus's power. With each slash, azure light blooms.",
         attack: 864,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 210,
         awaken: false,
         phial: 'element',
@@ -4812,7 +4812,7 @@ var Weapons = {
         description:
           "An axe that channels the Lagiacrus's power. With each slash, azure light blooms.",
         attack: 918,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 290,
         awaken: false,
         phial: 'element',
@@ -4829,7 +4829,7 @@ var Weapons = {
         description:
           "An axe that channels the Lagiacrus's power. With each slash, azure light blooms.",
         attack: 810,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 210,
         awaken: false,
         phial: 'element',
@@ -4847,7 +4847,7 @@ var Weapons = {
         description:
           "An axe that channels the Lagiacrus's power. With each slash, azure light blooms.",
         attack: 864,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 290,
         awaken: false,
         phial: 'element',
@@ -4864,7 +4864,7 @@ var Weapons = {
         description:
           'An axe mantled in lightning. A weapon worthy of the Lord of the Seas.',
         attack: 864,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 250,
         awaken: false,
         phial: 'power',
@@ -4882,7 +4882,7 @@ var Weapons = {
         description:
           'An axe mantled in lightning. A weapon worthy of the Lord of the Seas.',
         attack: 972,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 310,
         awaken: false,
         phial: 'power',
@@ -4899,7 +4899,7 @@ var Weapons = {
         description:
           'An axe mantled in lightning. A weapon worthy of the Lord of the Seas.',
         attack: 918,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 310,
         awaken: false,
         phial: 'power',
@@ -4916,7 +4916,7 @@ var Weapons = {
         description:
           'A Switch Axe made with the flaming beak of the magma-dwelling Agnaktor.',
         attack: 864,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 220,
         awaken: false,
         phial: 'power',
@@ -4934,7 +4934,7 @@ var Weapons = {
         description:
           'A scarlet axe that houses an Agnaktor soul. Reduces prey to ash in a stroke.',
         attack: 918,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 330,
         awaken: false,
         phial: 'power',
@@ -4951,7 +4951,7 @@ var Weapons = {
         description:
           'A lovely hunting axe made from the tri-color Barioth. Cold enough to freeze blood.',
         attack: 810,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 230,
         awaken: false,
         phial: 'element',
@@ -4969,7 +4969,7 @@ var Weapons = {
         description:
           'A lovely hunting axe made from the tri-color Barioth. Cold enough to freeze blood.',
         attack: 864,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 290,
         awaken: false,
         phial: 'element',
@@ -4987,7 +4987,7 @@ var Weapons = {
         description:
           'An axe born in the permafrost that summons the north winds and heralds death.',
         attack: 918,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 330,
         awaken: false,
         phial: 'element',
@@ -5004,7 +5004,7 @@ var Weapons = {
         description:
           'A legendary Switch Axe carved from a Ceadeus horn. It glows white from within.',
         attack: 810,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 190,
         awaken: false,
         phial: 'power',
@@ -5022,7 +5022,7 @@ var Weapons = {
         description:
           'A legendary Switch Axe carved from a Ceadeus horn. It glows white from within.',
         attack: 918,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 240,
         awaken: false,
         phial: 'power',
@@ -5040,7 +5040,7 @@ var Weapons = {
         description:
           "Ceadeus's rage in weapon form. It can part the sea and rattle the earth.",
         attack: 1026,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 280,
         awaken: false,
         phial: 'power',
@@ -5057,7 +5057,7 @@ var Weapons = {
         description:
           'A bulky hunting axe of Eastern design. sharpness enough to cleave wyvern scales.',
         attack: 864,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 250,
         awaken: false,
         phial: 'element',
@@ -5076,7 +5076,7 @@ var Weapons = {
         description:
           'A mighty weapon for proven warriors. Modeled after an axe used by an Eastern king.',
         attack: 1026,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 300,
         awaken: false,
         phial: 'element',
@@ -5094,7 +5094,7 @@ var Weapons = {
         description:
           'A mighty weapon for proven warriors. Modeled after an axe used by an Eastern king.',
         attack: 972,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 300,
         awaken: false,
         phial: 'element',
@@ -5259,7 +5259,7 @@ var Weapons = {
         description:
           'Swaying between light and darkness, this troubled blade can work good or evil.',
         attack: 864,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 500,
         awaken: true,
         phial: 'power',
@@ -5299,7 +5299,7 @@ var Weapons = {
         description:
           'A blade made with Eastern methods. Blue-white sparks run down its blade.',
         attack: 429,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 230,
         awaken: false,
         sharpness: [13, 1, 8, 3],
@@ -5316,7 +5316,7 @@ var Weapons = {
         description:
           'A blade made with Eastern methods. Blue-white sparks run down its blade.',
         attack: 462,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 430,
         awaken: false,
         sharpness: [13, 1, 8, 8],
@@ -5333,7 +5333,7 @@ var Weapons = {
         description:
           'A fulgurous blade forged by a master. Its thunderous blows can slay huge wyverns.',
         attack: 594,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 520,
         awaken: false,
         sharpness: [9, 4, 11, 7, 4],
@@ -5349,7 +5349,7 @@ var Weapons = {
         description:
           'A fulgurous blade forged by a master. Its thunderous blows can slay huge wyverns.',
         attack: 561,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 520,
         awaken: false,
         sharpness: [9, 4, 11, 7, 4],
@@ -5431,7 +5431,7 @@ var Weapons = {
         description:
           "A refined blade of crimson flame. The heat it emits can vaporize a foe's blood.",
         attack: 429,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 350,
         awaken: false,
         sharpness: [17, 2, 8, 7, 1],
@@ -5448,7 +5448,7 @@ var Weapons = {
         description:
           "A refined blade of crimson flame. The heat it emits can vaporize a foe's blood.",
         attack: 561,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 480,
         awaken: false,
         sharpness: [3, 7, 16, 7, 1, 1],
@@ -5464,7 +5464,7 @@ var Weapons = {
         description:
           'Made from both Rathian and Rathalos parts, this blade channels both land and sky.',
         attack: 495,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 290,
         awaken: false,
         sharpness: [7, 3, 12, 8],
@@ -5481,7 +5481,7 @@ var Weapons = {
         description:
           'Made from both Rathian and Rathalos parts, this blade channels both land and sky.',
         attack: 528,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 320,
         awaken: false,
         sharpness: [15, 3, 3, 9],
@@ -5498,7 +5498,7 @@ var Weapons = {
         description:
           'A blade with the blood and soul of two wyverns. Crimson flames pour from the blade.',
         attack: 627,
-        element: 'FIRE',
+        element: 'fire',
         elemAttack: 360,
         awaken: false,
         sharpness: [7, 3, 12, 10, 3],
@@ -5631,7 +5631,7 @@ var Weapons = {
         description:
           'A dark blade that pulses with the lifeforce it saps from any who wield it...',
         attack: 462,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 300,
         awaken: true,
         sharpness: [5, 3, 9, 13],
@@ -5648,7 +5648,7 @@ var Weapons = {
         description:
           'A dark blade that pulses with the lifeforce it saps from any who wield it...',
         attack: 561,
-        element: 'ICE',
+        element: 'ice',
         elemAttack: 560,
         awaken: true,
         sharpness: [5, 3, 9, 15, 3],
@@ -5664,7 +5664,7 @@ var Weapons = {
         description:
           "Some say lightning fills the soul of any who wield this, the thunder god's own blade.",
         attack: 594,
-        element: 'THUNDER',
+        element: 'thunder',
         elemAttack: 440,
         awaken: false,
         sharpness: [9, 4, 11, 7, 4],
@@ -5680,7 +5680,7 @@ var Weapons = {
         description:
           'A masterful blade forged in a faraway land and tested in many a heated battle.',
         attack: 495,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 250,
         awaken: false,
         sharpness: [15, 3, 3, 4],
@@ -5696,7 +5696,7 @@ var Weapons = {
         description:
           'A masterful blade forged in a faraway land and tested in many a heated battle.',
         attack: 561,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 280,
         awaken: false,
         sharpness: [3, 7, 16, 4],
@@ -5713,7 +5713,7 @@ var Weapons = {
         description:
           'One of the "three great blades." It snaps from the sheath like a hungry Sharq.',
         attack: 627,
-        element: 'WATER',
+        element: 'water',
         elemAttack: 400,
         awaken: false,
         sharpness: [15, 3, 3, 9, 5],
