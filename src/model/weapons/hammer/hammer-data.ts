@@ -66,7 +66,7 @@ export const HammerDamageProperties = Object.freeze<
   ]
 });
 
-export const Hammers: Hammer[] = [
+export const Hammers = Object.freeze<Hammer[]>([
   {
     id: 0,
     type: WeaponType.HAMMER,
@@ -1625,4 +1625,4 @@ export const Hammers: Hammer[] = [
       ]
     }
   }
-];
+]);

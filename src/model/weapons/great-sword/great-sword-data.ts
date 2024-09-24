@@ -71,7 +71,7 @@ export const GreatSwordDamageProperties = Object.freeze<
   ]
 });
 
-export const GreatSwords: GreatSword[] = [
+export const GreatSwords = Object.freeze<GreatSword[]>([
   {
     id: 0,
     type: WeaponType.GREAT_SWORD,
@@ -1855,4 +1855,4 @@ export const GreatSwords: GreatSword[] = [
       ]
     }
   }
-];
+]);

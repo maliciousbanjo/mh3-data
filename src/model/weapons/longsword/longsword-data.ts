@@ -33,7 +33,7 @@ export const LongswordDamageProperties = Object.freeze<
   ]
 });
 
-export const Longswords: Longsword[] = [
+export const Longswords = Object.freeze<Longsword[]>([
   {
     id: 0,
     type: WeaponType.LONGSWORD,
@@ -667,4 +667,4 @@ export const Longswords: Longsword[] = [
       ]
     }
   }
-];
+]);

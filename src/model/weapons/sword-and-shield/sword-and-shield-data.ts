@@ -61,7 +61,7 @@ export const SwordAndShieldDamageProperties = Object.freeze<
   ]
 });
 
-export const SwordAndShields: SwordAndShield[] = [
+export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   {
     id: 0,
     type: WeaponType.SWORD_AND_SHIELD,
@@ -1763,4 +1763,4 @@ export const SwordAndShields: SwordAndShield[] = [
       ]
     }
   }
-];
+]);

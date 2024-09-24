@@ -51,7 +51,7 @@ export const SwitchAxeDamageProperties = Object.freeze<
   ]
 });
 
-export const SwitchAxes: SwitchAxe[] = [
+export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   {
     id: 0,
     type: WeaponType.SWITCH_AXE,
@@ -967,4 +967,4 @@ export const SwitchAxes: SwitchAxe[] = [
       { itemId: 169, amount: 4 }
     ]
   }
-];
+]);

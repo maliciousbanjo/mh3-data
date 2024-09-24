@@ -45,7 +45,7 @@ export const LanceDamageProperties = Object.freeze<
   ]
 });
 
-export const Lances: Lance[] = [
+export const Lances = Object.freeze<Lance[]>([
   {
     id: 0,
     type: WeaponType.LANCE,
@@ -1681,4 +1681,4 @@ export const Lances: Lance[] = [
       ]
     }
   }
-];
+]);
