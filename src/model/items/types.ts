@@ -6,7 +6,7 @@ export interface Item {
   readonly name: string;
 }
 
-export type ItemRecord = Record<Item["id"], Item>;
+export type ItemRecord = Record<Item['id'], Item>;
 
 /**
  * Result of gathering/carving/quest reward

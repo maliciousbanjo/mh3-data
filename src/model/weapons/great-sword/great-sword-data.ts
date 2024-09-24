@@ -1,5 +1,5 @@
-import { WeaponDamageProperties, WeaponType } from "../types";
-import { GreatSword, GreatSwordAttack } from "./types";
+import { WeaponDamageProperties, WeaponType } from '../types';
+import { GreatSword, GreatSwordAttack } from './types';
 
 export const GreatSwordDamageProperties = Object.freeze<
   WeaponDamageProperties<GreatSwordAttack>
@@ -8,78 +8,78 @@ export const GreatSwordDamageProperties = Object.freeze<
   classModifier: 4.8,
   attackGroups: [
     {
-      name: "default",
+      name: 'default',
       attacks: [
         {
-          name: "Unsheathe Attack",
-          hits: [{ type: "cut", power: 0.48 }],
+          name: 'Unsheathe Attack',
+          hits: [{ type: 'cut', power: 0.48 }]
         },
         {
-          name: "Regular Slice",
-          hits: [{ type: "cut", power: 0.48 }],
+          name: 'Regular Slice',
+          hits: [{ type: 'cut', power: 0.48 }]
         },
         {
-          name: "Sideways Slash",
-          hits: [{ type: "cut", power: 0.36 }],
+          name: 'Sideways Slash',
+          hits: [{ type: 'cut', power: 0.36 }]
         },
         {
-          name: "Upswing",
-          hits: [{ type: "cut", power: 0.46 }],
+          name: 'Upswing',
+          hits: [{ type: 'cut', power: 0.46 }]
         },
         {
-          name: "L1 Charge",
-          hits: [{ type: "cut", power: 0.65 }],
+          name: 'L1 Charge',
+          hits: [{ type: 'cut', power: 0.65 }]
         },
         {
-          name: "L2 Charge",
-          hits: [{ type: "cut", power: 0.8 }],
+          name: 'L2 Charge',
+          hits: [{ type: 'cut', power: 0.8 }]
         },
         {
-          name: "L3 Charge",
-          hits: [{ type: "cut", power: 1.1 }],
+          name: 'L3 Charge',
+          hits: [{ type: 'cut', power: 1.1 }]
         },
         {
-          name: "Overcharge",
-          hits: [{ type: "cut", power: 0.8 }],
+          name: 'Overcharge',
+          hits: [{ type: 'cut', power: 0.8 }]
         },
         {
-          name: "Slap",
-          hits: [{ type: "impact", power: 0.18, ko: 27 }],
+          name: 'Slap',
+          hits: [{ type: 'impact', power: 0.18, ko: 27 }]
         },
         {
-          name: "Overhead Smash",
-          hits: [{ type: "cut", power: 0.52 }],
+          name: 'Overhead Smash',
+          hits: [{ type: 'cut', power: 0.52 }]
         },
         {
-          name: "L1 Smash Charge",
-          hits: [{ type: "cut", power: 0.72 }],
+          name: 'L1 Smash Charge',
+          hits: [{ type: 'cut', power: 0.72 }]
         },
         {
-          name: "L2 Smash Charge",
-          hits: [{ type: "cut", power: 0.9 }],
+          name: 'L2 Smash Charge',
+          hits: [{ type: 'cut', power: 0.9 }]
         },
         {
-          name: "L3 Smash Charge",
-          hits: [{ type: "cut", power: 1.15 }],
+          name: 'L3 Smash Charge',
+          hits: [{ type: 'cut', power: 1.15 }]
         },
         {
-          name: "Smash Overcharge",
-          hits: [{ type: "cut", power: 0.9 }],
-        },
-      ],
-    },
-  ],
+          name: 'Smash Overcharge',
+          hits: [{ type: 'cut', power: 0.9 }]
+        }
+      ]
+    }
+  ]
 });
 
 export const GreatSwords: GreatSword[] = [
   {
     id: 0,
     type: WeaponType.GREAT_SWORD,
-    name: "Iron Sword",
+    name: 'Iron Sword',
     description:
-      "A weapon that even novice hunters can use. Charge up for a more powerful slash.",
+      'A weapon that even novice hunters can use. Charge up for a more powerful slash.',
     attack: 288,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 50,
     awaken: true,
     sharpness: [7, 3, 5],
@@ -89,16 +89,16 @@ export const GreatSwords: GreatSword[] = [
     rarity: 1,
     price: 500,
     create: [{ itemId: 97, amount: 3 }],
-    upgradesTo: [1],
+    upgradesTo: [1]
   },
   {
     id: 1,
     type: WeaponType.GREAT_SWORD,
-    name: "Iron Sword+",
+    name: 'Iron Sword+',
     description:
-      "A weapon that even novice hunters can use. Charge up for a more powerful slash.",
+      'A weapon that even novice hunters can use. Charge up for a more powerful slash.',
     attack: 336,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 80,
     awaken: true,
     sharpness: [5, 3, 7],
@@ -108,16 +108,16 @@ export const GreatSwords: GreatSword[] = [
     rarity: 1,
     price: 1950,
     upgradesFrom: { weaponId: [0], materials: [{ itemId: 97, amount: 5 }] },
-    upgradesTo: [2, 11],
+    upgradesTo: [2, 11]
   },
   {
     id: 2,
     type: WeaponType.GREAT_SWORD,
-    name: "Buster Sword",
+    name: 'Buster Sword',
     description:
-      "A strong blade made from high-purity steel, good for confronting huge monsters.",
+      'A strong blade made from high-purity steel, good for confronting huge monsters.',
     attack: 384,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 100,
     awaken: true,
     sharpness: [7, 3, 10],
@@ -131,19 +131,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 99, amount: 2 },
         { itemId: 98, amount: 3 },
-        { itemId: 97, amount: 8 },
-      ],
+        { itemId: 97, amount: 8 }
+      ]
     },
-    upgradesTo: [3],
+    upgradesTo: [3]
   },
   {
     id: 3,
     type: WeaponType.GREAT_SWORD,
-    name: "Buster Sword+",
+    name: 'Buster Sword+',
     description:
-      "A strong blade made from high-purity steel, good for confronting huge monsters.",
+      'A strong blade made from high-purity steel, good for confronting huge monsters.',
     attack: 528,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 120,
     awaken: true,
     sharpness: [5, 3, 9, 3],
@@ -157,19 +157,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 102, amount: 3 },
         { itemId: 99, amount: 5 },
-        { itemId: 97, amount: 15 },
-      ],
+        { itemId: 97, amount: 15 }
+      ]
     },
-    upgradesTo: [4],
+    upgradesTo: [4]
   },
   {
     id: 4,
     type: WeaponType.GREAT_SWORD,
-    name: "Buster Blade",
+    name: 'Buster Blade',
     description:
-      "The final iteration of the Buster Sword. Essential for fighting large monsters.",
+      'The final iteration of the Buster Sword. Essential for fighting large monsters.',
     attack: 624,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 150,
     awaken: true,
     sharpness: [13, 1, 8, 3],
@@ -183,19 +183,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 110, amount: 6 },
         { itemId: 102, amount: 5 },
-        { itemId: 98, amount: 15 },
-      ],
+        { itemId: 98, amount: 15 }
+      ]
     },
-    upgradesTo: [5],
+    upgradesTo: [5]
   },
   {
     id: 5,
     type: WeaponType.GREAT_SWORD,
-    name: "Ravager Blade",
+    name: 'Ravager Blade',
     description:
-      "A sharpness steel blade. Its giant spikes give it a fearsome appearance.",
+      'A sharpness steel blade. Its giant spikes give it a fearsome appearance.',
     attack: 720,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 200,
     awaken: true,
     defense: 12,
@@ -210,19 +210,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 100, amount: 10 },
         { itemId: 99, amount: 20 },
-        { itemId: 394, amount: 1 },
-      ],
+        { itemId: 394, amount: 1 }
+      ]
     },
-    upgradesTo: [6],
+    upgradesTo: [6]
   },
   {
     id: 6,
     type: WeaponType.GREAT_SWORD,
-    name: "Ravager Blade+",
+    name: 'Ravager Blade+',
     description:
-      "A sharpness steel blade. Its giant spikes give it a fearsome appearance.",
+      'A sharpness steel blade. Its giant spikes give it a fearsome appearance.',
     attack: 816,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 220,
     awaken: true,
     defense: 16,
@@ -237,19 +237,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 101, amount: 10 },
         { itemId: 100, amount: 15 },
-        { itemId: 102, amount: 10 },
-      ],
+        { itemId: 102, amount: 10 }
+      ]
     },
-    upgradesTo: [7, 9],
+    upgradesTo: [7, 9]
   },
   {
     id: 7,
     type: WeaponType.GREAT_SWORD,
-    name: "Lacerator Blade",
+    name: 'Lacerator Blade',
     description:
-      "A sharpness steel blade. It is capable of peerless blows due to its multi-ore alloy.",
+      'A sharpness steel blade. It is capable of peerless blows due to its multi-ore alloy.',
     attack: 864,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 260,
     awaken: true,
     defense: 18,
@@ -264,19 +264,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 103, amount: 10 },
         { itemId: 101, amount: 15 },
-        { itemId: 443, amount: 3 },
-      ],
+        { itemId: 443, amount: 3 }
+      ]
     },
-    upgradesTo: [8],
+    upgradesTo: [8]
   },
   {
     id: 8,
     type: WeaponType.GREAT_SWORD,
-    name: "Mutilator Blade",
+    name: 'Mutilator Blade',
     description:
-      "The best blade of its class. Its slashes are as deadly as those of a dragon.",
+      'The best blade of its class. Its slashes are as deadly as those of a dragon.',
     attack: 912,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 300,
     awaken: true,
     defense: 20,
@@ -291,18 +291,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 111, amount: 5 },
         { itemId: 101, amount: 20 },
-        { itemId: 420, amount: 2 },
-      ],
-    },
+        { itemId: 420, amount: 2 }
+      ]
+    }
   },
   {
     id: 9,
     type: WeaponType.GREAT_SWORD,
-    name: "Brazenwall",
+    name: 'Brazenwall',
     description:
-      "A shining gold blade. Its super-hard edge makes it versatile but hard to wield.",
+      'A shining gold blade. Its super-hard edge makes it versatile but hard to wield.',
     attack: 1008,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 200,
     awaken: true,
     defense: 30,
@@ -317,19 +317,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 101, amount: 10 },
         { itemId: 379, amount: 5 },
-        { itemId: 378, amount: 10 },
-      ],
+        { itemId: 378, amount: 10 }
+      ]
     },
-    upgradesTo: [10],
+    upgradesTo: [10]
   },
   {
     id: 10,
     type: WeaponType.GREAT_SWORD,
-    name: "Crimsonwall",
+    name: 'Crimsonwall',
     description:
-      "A shining gold blade. Its super-hard edge makes it versatile but hard to wield.",
+      'A shining gold blade. Its super-hard edge makes it versatile but hard to wield.',
     attack: 1104,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 250,
     awaken: true,
     defense: 40,
@@ -344,18 +344,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 448, amount: 8 },
         { itemId: 447, amount: 2 },
-        { itemId: 475, amount: 5 },
-      ],
-    },
+        { itemId: 475, amount: 5 }
+      ]
+    }
   },
   {
     id: 11,
     type: WeaponType.GREAT_SWORD,
-    name: "Rugged Great Sword",
+    name: 'Rugged Great Sword',
     description:
-      "A blade made from colorful Jaggi hides. A common weapon among local hunters.",
+      'A blade made from colorful Jaggi hides. A common weapon among local hunters.',
     attack: 480,
-    element: "SLEEP",
+    element: 'SLEEP',
     elemAttack: 110,
     awaken: true,
     sharpness: [7, 3, 12, 3],
@@ -367,26 +367,26 @@ export const GreatSwords: GreatSword[] = [
     create: [
       { itemId: 280, amount: 6 },
       { itemId: 281, amount: 3 },
-      { itemId: 99, amount: 6 },
+      { itemId: 99, amount: 6 }
     ],
     upgradesFrom: {
       weaponId: [1],
       materials: [
         { itemId: 280, amount: 4 },
         { itemId: 278, amount: 8 },
-        { itemId: 99, amount: 3 },
-      ],
+        { itemId: 99, amount: 3 }
+      ]
     },
-    upgradesTo: [12, 21],
+    upgradesTo: [12, 21]
   },
   {
     id: 12,
     type: WeaponType.GREAT_SWORD,
     name: "Chieftain's Grt Swd",
     description:
-      "A blade made from colorful Jaggi hides. A common weapon among local hunters.",
+      'A blade made from colorful Jaggi hides. A common weapon among local hunters.',
     attack: 624,
-    element: "SLEEP",
+    element: 'SLEEP',
     elemAttack: 170,
     awaken: true,
     sharpness: [9, 4, 11, 6],
@@ -400,19 +400,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 507, amount: 4 },
         { itemId: 281, amount: 5 },
-        { itemId: 110, amount: 2 },
-      ],
+        { itemId: 110, amount: 2 }
+      ]
     },
-    upgradesTo: [13, 14],
+    upgradesTo: [13, 14]
   },
   {
     id: 13,
     type: WeaponType.GREAT_SWORD,
     name: "High Chief's Grt Swd",
     description:
-      "A memento of a courageous foray into a well-guarded Jaggi nest.",
+      'A memento of a courageous foray into a well-guarded Jaggi nest.',
     attack: 864,
-    element: "SLEEP",
+    element: 'SLEEP',
     elemAttack: 220,
     awaken: true,
     sharpness: [15, 3, 3, 9],
@@ -426,18 +426,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 532, amount: 10 },
         { itemId: 505, amount: 10 },
-        { itemId: 522, amount: 5 },
-      ],
-    },
+        { itemId: 522, amount: 5 }
+      ]
+    }
   },
   {
     id: 14,
     type: WeaponType.GREAT_SWORD,
-    name: "Lagiacrus Blade",
+    name: 'Lagiacrus Blade',
     description:
-      "An electric blade made using Lagiacrus materials. Danger: high voltage!",
+      'An electric blade made using Lagiacrus materials. Danger: high voltage!',
     attack: 672,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 180,
     awaken: false,
     sharpness: [15, 3, 3, 4],
@@ -451,19 +451,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 287, amount: 2 },
         { itemId: 285, amount: 2 },
-        { itemId: 284, amount: 4 },
-      ],
+        { itemId: 284, amount: 4 }
+      ]
     },
-    upgradesTo: [15, 17, 19],
+    upgradesTo: [15, 17, 19]
   },
   {
     id: 15,
     type: WeaponType.GREAT_SWORD,
-    name: "Lagia Lightning (R)",
+    name: 'Lagia Lightning (R)',
     description:
-      "An electric blade made using Lagiacrus materials. Danger: high voltage!",
+      'An electric blade made using Lagiacrus materials. Danger: high voltage!',
     attack: 768,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 230,
     awaken: false,
     sharpness: [13, 1, 8, 8],
@@ -477,19 +477,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 391, amount: 3 },
         { itemId: 285, amount: 8 },
-        { itemId: 429, amount: 1 },
-      ],
+        { itemId: 429, amount: 1 }
+      ]
     },
-    upgradesTo: [16],
+    upgradesTo: [16]
   },
   {
     id: 16,
     type: WeaponType.GREAT_SWORD,
-    name: "Lagia Bluebolt (P)",
+    name: 'Lagia Bluebolt (P)',
     description:
-      "An electric blade made using Lagiacrus materials. Danger: high voltage!",
+      'An electric blade made using Lagiacrus materials. Danger: high voltage!',
     attack: 864,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 330,
     awaken: false,
     sharpness: [13, 1, 8, 11, 2],
@@ -503,18 +503,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 468, amount: 3 },
         { itemId: 561, amount: 10 },
-        { itemId: 466, amount: 7 },
-      ],
-    },
+        { itemId: 466, amount: 7 }
+      ]
+    }
   },
   {
     id: 17,
     type: WeaponType.GREAT_SWORD,
-    name: "Lagia Lightning (Y)",
+    name: 'Lagia Lightning (Y)',
     description:
-      "An electric blade made using Lagiacrus materials. Danger: high voltage!",
+      'An electric blade made using Lagiacrus materials. Danger: high voltage!',
     attack: 720,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 230,
     awaken: false,
     sharpness: [13, 1, 8, 8],
@@ -528,19 +528,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 288, amount: 1 },
         { itemId: 392, amount: 5 },
-        { itemId: 470, amount: 2 },
-      ],
+        { itemId: 470, amount: 2 }
+      ]
     },
-    upgradesTo: [18],
+    upgradesTo: [18]
   },
   {
     id: 18,
     type: WeaponType.GREAT_SWORD,
-    name: "Lagia Bluebolt (G)",
+    name: 'Lagia Bluebolt (G)',
     description:
-      "An electric blade made using Lagiacrus materials. Danger: high voltage!",
+      'An electric blade made using Lagiacrus materials. Danger: high voltage!',
     attack: 816,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 330,
     awaken: false,
     sharpness: [13, 1, 8, 11, 2],
@@ -554,18 +554,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 468, amount: 3 },
         { itemId: 561, amount: 10 },
-        { itemId: 465, amount: 7 },
-      ],
-    },
+        { itemId: 465, amount: 7 }
+      ]
+    }
   },
   {
     id: 19,
     type: WeaponType.GREAT_SWORD,
-    name: "High Lagia Blade",
+    name: 'High Lagia Blade',
     description:
       "A Lagiacrus embodied in a blade. Its streaking lightning devours foes' souls.",
     attack: 816,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 280,
     awaken: false,
     sharpness: [7, 3, 12, 8],
@@ -579,19 +579,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 288, amount: 1 },
         { itemId: 392, amount: 5 },
-        { itemId: 459, amount: 3 },
-      ],
+        { itemId: 459, amount: 3 }
+      ]
     },
-    upgradesTo: [20],
+    upgradesTo: [20]
   },
   {
     id: 20,
     type: WeaponType.GREAT_SWORD,
-    name: "Lagia Wildfire (P)",
+    name: 'Lagia Wildfire (P)',
     description:
       "A Lagiacrus embodied in a blade. Its streaking lightning devours foes' souls.",
     attack: 912,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 360,
     awaken: false,
     sharpness: [7, 3, 12, 10, 3],
@@ -605,18 +605,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 286, amount: 3 },
         { itemId: 467, amount: 3 },
-        { itemId: 469, amount: 1 },
-      ],
-    },
+        { itemId: 469, amount: 1 }
+      ]
+    }
   },
   {
     id: 21,
     type: WeaponType.GREAT_SWORD,
-    name: "Carapace Sword",
+    name: 'Carapace Sword',
     description:
       "A blade shaped like a Barroth's head; it packs nearly as much punch.",
     attack: 672,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 180,
     awaken: true,
     sharpness: [9, 4, 11, 1],
@@ -630,19 +630,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 274, amount: 2 },
         { itemId: 273, amount: 3 },
-        { itemId: 117, amount: 5 },
-      ],
+        { itemId: 117, amount: 5 }
+      ]
     },
-    upgradesTo: [22],
+    upgradesTo: [22]
   },
   {
     id: 22,
     type: WeaponType.GREAT_SWORD,
-    name: "Carapace Blade",
+    name: 'Carapace Blade',
     description:
       "A blade shaped like a Barroth's head; it packs nearly as much punch.",
     attack: 768,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 250,
     awaken: true,
     sharpness: [7, 3, 12, 3],
@@ -656,19 +656,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 276, amount: 2 },
         { itemId: 275, amount: 3 },
-        { itemId: 378, amount: 3 },
-      ],
+        { itemId: 378, amount: 3 }
+      ]
     },
-    upgradesTo: [23],
+    upgradesTo: [23]
   },
   {
     id: 23,
     type: WeaponType.GREAT_SWORD,
-    name: "Barroth Wedge",
+    name: 'Barroth Wedge',
     description:
-      "A blade made from the thick shell of a Barroth. It can crush even wyvern scales.",
+      'A blade made from the thick shell of a Barroth. It can crush even wyvern scales.',
     attack: 912,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 270,
     awaken: true,
     sharpness: [9, 4, 11, 6],
@@ -682,19 +682,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 442, amount: 5 },
         { itemId: 444, amount: 5 },
-        { itemId: 169, amount: 2 },
-      ],
+        { itemId: 169, amount: 2 }
+      ]
     },
-    upgradesTo: [24],
+    upgradesTo: [24]
   },
   {
     id: 24,
     type: WeaponType.GREAT_SWORD,
-    name: "Barroth Smasher",
+    name: 'Barroth Smasher',
     description:
-      "Just like its namesake, this weapon can pulverize its targets into dust.",
+      'Just like its namesake, this weapon can pulverize its targets into dust.',
     attack: 1056,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 330,
     awaken: true,
     sharpness: [17, 2, 8, 7, 1],
@@ -708,18 +708,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 443, amount: 8 },
         { itemId: 380, amount: 5 },
-        { itemId: 447, amount: 1 },
-      ],
-    },
+        { itemId: 447, amount: 1 }
+      ]
+    }
   },
   {
     id: 25,
     type: WeaponType.GREAT_SWORD,
-    name: "Bone Blade",
+    name: 'Bone Blade',
     description:
-      "A Great Sword forged from monster bone. It can fend off many monsters at once.",
+      'A Great Sword forged from monster bone. It can fend off many monsters at once.',
     attack: 336,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 100,
     awaken: true,
     sharpness: [9, 4, 2],
@@ -729,16 +729,16 @@ export const GreatSwords: GreatSword[] = [
     rarity: 1,
     price: 480,
     create: [{ itemId: 149, amount: 2 }],
-    upgradesTo: [26],
+    upgradesTo: [26]
   },
   {
     id: 26,
     type: WeaponType.GREAT_SWORD,
-    name: "Bone Blade+",
+    name: 'Bone Blade+',
     description:
-      "A Great Sword forged from monster bone. It can fend off many monsters at once.",
+      'A Great Sword forged from monster bone. It can fend off many monsters at once.',
     attack: 384,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 130,
     awaken: true,
     sharpness: [7, 3, 5],
@@ -751,19 +751,19 @@ export const GreatSwords: GreatSword[] = [
       weaponId: [25],
       materials: [
         { itemId: 149, amount: 2 },
-        { itemId: 277, amount: 3 },
-      ],
+        { itemId: 277, amount: 3 }
+      ]
     },
-    upgradesTo: [27, 44],
+    upgradesTo: [27, 44]
   },
   {
     id: 27,
     type: WeaponType.GREAT_SWORD,
-    name: "Jawblade",
+    name: 'Jawblade',
     description:
       "A traditional bone blade. Named for its resemblance to a carnivore's jaw.",
     attack: 480,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 150,
     awaken: true,
     sharpness: [9, 4, 7],
@@ -777,19 +777,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 149, amount: 5 },
         { itemId: 526, amount: 3 },
-        { itemId: 311, amount: 3 },
-      ],
+        { itemId: 311, amount: 3 }
+      ]
     },
-    upgradesTo: [28],
+    upgradesTo: [28]
   },
   {
     id: 28,
     type: WeaponType.GREAT_SWORD,
-    name: "Giant Jawblade",
+    name: 'Giant Jawblade',
     description:
       "A traditional bone blade. Named for its resemblance to a carnivore's jaw.",
     attack: 576,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 190,
     awaken: true,
     sharpness: [9, 4, 11, 1],
@@ -801,26 +801,26 @@ export const GreatSwords: GreatSword[] = [
     create: [
       { itemId: 151, amount: 2 },
       { itemId: 272, amount: 3 },
-      { itemId: 510, amount: 8 },
+      { itemId: 510, amount: 8 }
     ],
     upgradesFrom: {
       weaponId: [27],
       materials: [
         { itemId: 150, amount: 3 },
         { itemId: 263, amount: 2 },
-        { itemId: 510, amount: 5 },
-      ],
+        { itemId: 510, amount: 5 }
+      ]
     },
-    upgradesTo: [29, 38, 41],
+    upgradesTo: [29, 38, 41]
   },
   {
     id: 29,
     type: WeaponType.GREAT_SWORD,
-    name: "Golem Blade",
+    name: 'Golem Blade',
     description:
-      "A Great Sword formed from a giant bone; its powerful, hefty blade is deadly.",
+      'A Great Sword formed from a giant bone; its powerful, hefty blade is deadly.',
     attack: 624,
-    element: "PARALYSIS",
+    element: 'PARALYSIS',
     elemAttack: 150,
     awaken: true,
     sharpness: [7, 3, 12, 3],
@@ -834,19 +834,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 151, amount: 1 },
         { itemId: 511, amount: 3 },
-        { itemId: 297, amount: 3 },
-      ],
+        { itemId: 297, amount: 3 }
+      ]
     },
-    upgradesTo: [30, 32],
+    upgradesTo: [30, 32]
   },
   {
     id: 30,
     type: WeaponType.GREAT_SWORD,
-    name: "Golem Blade+",
+    name: 'Golem Blade+',
     description:
-      "A Great Sword formed from a giant bone; its powerful, hefty blade is deadly.",
+      'A Great Sword formed from a giant bone; its powerful, hefty blade is deadly.',
     attack: 768,
-    element: "PARALYSIS",
+    element: 'PARALYSIS',
     elemAttack: 180,
     awaken: true,
     sharpness: [12, 11, 5, 2],
@@ -860,19 +860,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 268, amount: 2 },
         { itemId: 354, amount: 1 },
-        { itemId: 314, amount: 5 },
-      ],
+        { itemId: 314, amount: 5 }
+      ]
     },
-    upgradesTo: [31],
+    upgradesTo: [31]
   },
   {
     id: 31,
     type: WeaponType.GREAT_SWORD,
-    name: "Blade of Talos",
+    name: 'Blade of Talos',
     description:
-      "A weapon said to be wielded by a giant. Its large weight gives it unusual power.",
+      'A weapon said to be wielded by a giant. Its large weight gives it unusual power.',
     attack: 912,
-    element: "PARALYSIS",
+    element: 'PARALYSIS',
     elemAttack: 220,
     awaken: true,
     sharpness: [17, 2, 8, 7, 1],
@@ -886,18 +886,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 434, amount: 3 },
         { itemId: 169, amount: 5 },
-        { itemId: 561, amount: 5 },
-      ],
-    },
+        { itemId: 561, amount: 5 }
+      ]
+    }
   },
   {
     id: 32,
     type: WeaponType.GREAT_SWORD,
-    name: "Valkyrie Blade",
+    name: 'Valkyrie Blade',
     description:
-      "A Great Sword forged by upgrading a Golem Blade with Rathian materials.",
+      'A Great Sword forged by upgrading a Golem Blade with Rathian materials.',
     attack: 672,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 230,
     awaken: true,
     sharpness: [17, 2, 8, 3],
@@ -911,19 +911,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 247, amount: 6 },
         { itemId: 248, amount: 5 },
-        { itemId: 249, amount: 1 },
-      ],
+        { itemId: 249, amount: 1 }
+      ]
     },
-    upgradesTo: [33, 36],
+    upgradesTo: [33, 36]
   },
   {
     id: 33,
     type: WeaponType.GREAT_SWORD,
-    name: "Sieglinde",
+    name: 'Sieglinde',
     description:
-      "A green blade named for a lovely queen, it kills prey with sweet-smelling poison.",
+      'A green blade named for a lovely queen, it kills prey with sweet-smelling poison.',
     attack: 720,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 320,
     awaken: false,
     sharpness: [9, 4, 11, 6],
@@ -937,19 +937,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 251, amount: 1 },
         { itemId: 250, amount: 2 },
-        { itemId: 118, amount: 5 },
-      ],
+        { itemId: 118, amount: 5 }
+      ]
     },
-    upgradesTo: [34, 35],
+    upgradesTo: [34, 35]
   },
   {
     id: 34,
     type: WeaponType.GREAT_SWORD,
-    name: "High Sieglinde (P)",
+    name: 'High Sieglinde (P)',
     description:
-      "A blade fashioned after a queen clad in purple. It fells foes with elegance.",
+      'A blade fashioned after a queen clad in purple. It fells foes with elegance.',
     attack: 960,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 440,
     awaken: false,
     sharpness: [9, 4, 11, 7, 4],
@@ -963,18 +963,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 159, amount: 4 },
         { itemId: 160, amount: 1 },
-        { itemId: 156, amount: 5 },
-      ],
-    },
+        { itemId: 156, amount: 5 }
+      ]
+    }
   },
   {
     id: 35,
     type: WeaponType.GREAT_SWORD,
-    name: "High Sieglinde (G)",
+    name: 'High Sieglinde (G)',
     description:
-      "A blade fashioned after a queen clad in deep green. It fells foes with elegance.",
+      'A blade fashioned after a queen clad in deep green. It fells foes with elegance.',
     attack: 912,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 440,
     awaken: false,
     sharpness: [9, 4, 11, 7, 4],
@@ -988,18 +988,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 159, amount: 4 },
         { itemId: 160, amount: 1 },
-        { itemId: 157, amount: 5 },
-      ],
-    },
+        { itemId: 157, amount: 5 }
+      ]
+    }
   },
   {
     id: 36,
     type: WeaponType.GREAT_SWORD,
-    name: "Siegmund",
+    name: 'Siegmund',
     description:
-      "The crimson blade of a brave king. He who uses it justly will win a hundred battles.",
+      'The crimson blade of a brave king. He who uses it justly will win a hundred battles.',
     attack: 768,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 150,
     awaken: true,
     sharpness: [9, 4, 11, 6],
@@ -1013,19 +1013,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 258, amount: 1 },
         { itemId: 270, amount: 3 },
-        { itemId: 18, amount: 3 },
-      ],
+        { itemId: 18, amount: 3 }
+      ]
     },
-    upgradesTo: [37],
+    upgradesTo: [37]
   },
   {
     id: 37,
     type: WeaponType.GREAT_SWORD,
-    name: "High Siegmund",
+    name: 'High Siegmund',
     description:
       "A king's spirit dwells in this fierce blade that cowards cannot touch.",
     attack: 960,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 240,
     awaken: true,
     sharpness: [12, 11, 5, 5, 2],
@@ -1039,18 +1039,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 164, amount: 5 },
         { itemId: 161, amount: 2 },
-        { itemId: 423, amount: 3 },
-      ],
-    },
+        { itemId: 423, amount: 3 }
+      ]
+    }
   },
   {
     id: 38,
     type: WeaponType.GREAT_SWORD,
-    name: "Red Wing",
+    name: 'Red Wing',
     description:
-      "A blade inspired by Rathalos wings. Incendiaries turn its slashes to arcs of flame.",
+      'A blade inspired by Rathalos wings. Incendiaries turn its slashes to arcs of flame.',
     attack: 624,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 210,
     awaken: false,
     sharpness: [17, 2, 8, 3],
@@ -1064,19 +1064,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 254, amount: 3 },
         { itemId: 353, amount: 3 },
-        { itemId: 252, amount: 2 },
-      ],
+        { itemId: 252, amount: 2 }
+      ]
     },
-    upgradesTo: [39],
+    upgradesTo: [39]
   },
   {
     id: 39,
     type: WeaponType.GREAT_SWORD,
-    name: "Rathalos Firesword",
+    name: 'Rathalos Firesword',
     description:
-      "A blade inspired by Rathalos wings. Incendiaries turn its slashes to arcs of flame.",
+      'A blade inspired by Rathalos wings. Incendiaries turn its slashes to arcs of flame.',
     attack: 672,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 420,
     awaken: false,
     sharpness: [13, 1, 8, 8],
@@ -1090,19 +1090,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 255, amount: 8 },
         { itemId: 257, amount: 2 },
-        { itemId: 259, amount: 3 },
-      ],
+        { itemId: 259, amount: 3 }
+      ]
     },
-    upgradesTo: [40],
+    upgradesTo: [40]
   },
   {
     id: 40,
     type: WeaponType.GREAT_SWORD,
-    name: "Rathalos Flamesword",
+    name: 'Rathalos Flamesword',
     description:
-      "A blade of sparkling, crimson flame. Its entranced victims soon meet their end.",
+      'A blade of sparkling, crimson flame. Its entranced victims soon meet their end.',
     attack: 816,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 560,
     awaken: false,
     sharpness: [13, 1, 8, 11, 2],
@@ -1116,18 +1116,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 258, amount: 3 },
         { itemId: 158, amount: 3 },
-        { itemId: 475, amount: 5 },
-      ],
-    },
+        { itemId: 475, amount: 5 }
+      ]
+    }
   },
   {
     id: 41,
     type: WeaponType.GREAT_SWORD,
-    name: "Wyvern Jawblade",
+    name: 'Wyvern Jawblade',
     description:
-      "A blade forged from claws and fangs. Can tear through a wyvern carapace.",
+      'A blade forged from claws and fangs. Can tear through a wyvern carapace.',
     attack: 720,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 250,
     awaken: true,
     sharpness: [5, 3, 9, 13],
@@ -1141,18 +1141,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 330, amount: 50 },
         { itemId: 332, amount: 50 },
-        { itemId: 251, amount: 1 },
-      ],
+        { itemId: 251, amount: 1 }
+      ]
     },
-    upgradesTo: [42],
+    upgradesTo: [42]
   },
   {
     id: 42,
     type: WeaponType.GREAT_SWORD,
-    name: "Quarrel Hornsword",
-    description: "A wild-looking blade made from Diablos horns. Very powerful.",
+    name: 'Quarrel Hornsword',
+    description: 'A wild-looking blade made from Diablos horns. Very powerful.',
     attack: 912,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 50,
     awaken: true,
     defense: 8,
@@ -1167,19 +1167,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 355, amount: 2 },
         { itemId: 271, amount: 4 },
-        { itemId: 153, amount: 5 },
-      ],
+        { itemId: 153, amount: 5 }
+      ]
     },
-    upgradesTo: [43],
+    upgradesTo: [43]
   },
   {
     id: 43,
     type: WeaponType.GREAT_SWORD,
-    name: "Diablos Hornsword",
+    name: 'Diablos Hornsword',
     description:
-      "An upgraded Hornsword. It has the demon-like ability to mow down foes.",
+      'An upgraded Hornsword. It has the demon-like ability to mow down foes.',
     attack: 1008,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 110,
     awaken: true,
     defense: 16,
@@ -1194,18 +1194,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 424, amount: 2 },
         { itemId: 423, amount: 3 },
-        { itemId: 421, amount: 5 },
-      ],
-    },
+        { itemId: 421, amount: 5 }
+      ]
+    }
   },
   {
     id: 44,
     type: WeaponType.GREAT_SWORD,
-    name: "Ludroth Bone Sword",
+    name: 'Ludroth Bone Sword',
     description:
-      "A bone blade reinforced with Ludroth parts. A good base level for further upgrading.",
+      'A bone blade reinforced with Ludroth parts. A good base level for further upgrading.',
     attack: 480,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 150,
     awaken: true,
     sharpness: [3, 7, 10],
@@ -1219,19 +1219,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 295, amount: 4 },
         { itemId: 294, amount: 5 },
-        { itemId: 116, amount: 2 },
-      ],
+        { itemId: 116, amount: 2 }
+      ]
     },
-    upgradesTo: [45],
+    upgradesTo: [45]
   },
   {
     id: 45,
     type: WeaponType.GREAT_SWORD,
-    name: "Ludroth Bone Sword+",
+    name: 'Ludroth Bone Sword+',
     description:
-      "A blade of absorbent sponge. Its pressurized water can break through tough shells.",
+      'A blade of absorbent sponge. Its pressurized water can break through tough shells.',
     attack: 528,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 210,
     awaken: false,
     sharpness: [7, 3, 12, 3],
@@ -1245,19 +1245,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 289, amount: 5 },
         { itemId: 291, amount: 2 },
-        { itemId: 371, amount: 2 },
-      ],
+        { itemId: 371, amount: 2 }
+      ]
     },
-    upgradesTo: [46],
+    upgradesTo: [46]
   },
   {
     id: 46,
     type: WeaponType.GREAT_SWORD,
-    name: "Cataclysm Sword",
+    name: 'Cataclysm Sword',
     description:
-      "A blade of absorbent sponge. Its pressurized water can break through tough shells.",
+      'A blade of absorbent sponge. Its pressurized water can break through tough shells.',
     attack: 624,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 320,
     awaken: false,
     sharpness: [9, 4, 11, 6],
@@ -1271,19 +1271,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 456, amount: 1 },
         { itemId: 299, amount: 2 },
-        { itemId: 151, amount: 5 },
-      ],
+        { itemId: 151, amount: 5 }
+      ]
     },
-    upgradesTo: [47],
+    upgradesTo: [47]
   },
   {
     id: 47,
     type: WeaponType.GREAT_SWORD,
-    name: "Cataclysm Blade",
+    name: 'Cataclysm Blade',
     description:
-      "The ultimate Ludroth blade. The water that issues from it leaves rainbow trails.",
+      'The ultimate Ludroth blade. The water that issues from it leaves rainbow trails.',
     attack: 768,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 450,
     awaken: false,
     sharpness: [5, 3, 9, 14, 4],
@@ -1297,18 +1297,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 459, amount: 3 },
         { itemId: 457, amount: 8 },
-        { itemId: 460, amount: 2 },
-      ],
-    },
+        { itemId: 460, amount: 2 }
+      ]
+    }
   },
   {
     id: 48,
     type: WeaponType.GREAT_SWORD,
-    name: "Vulcanis",
+    name: 'Vulcanis',
     description:
-      "A blade made from ore mined in polar climes. Upgradeable in more ways than one.",
+      'A blade made from ore mined in polar climes. Upgradeable in more ways than one.',
     attack: 624,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 190,
     awaken: true,
     sharpness: [5, 3, 9, 3],
@@ -1320,18 +1320,18 @@ export const GreatSwords: GreatSword[] = [
     create: [
       { itemId: 106, amount: 2 },
       { itemId: 102, amount: 10 },
-      { itemId: 146, amount: 1 },
+      { itemId: 146, amount: 1 }
     ],
-    upgradesTo: [49, 51, 53],
+    upgradesTo: [49, 51, 53]
   },
   {
     id: 49,
     type: WeaponType.GREAT_SWORD,
-    name: "Vulcanvil (R)",
+    name: 'Vulcanvil (R)',
     description:
-      "A strangely-shaped blade which took this form naturally when crafted.",
+      'A strangely-shaped blade which took this form naturally when crafted.',
     attack: 720,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 260,
     awaken: true,
     sharpness: [5, 3, 9, 8],
@@ -1345,19 +1345,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 104, amount: 4 },
         { itemId: 100, amount: 8 },
-        { itemId: 285, amount: 3 },
-      ],
+        { itemId: 285, amount: 3 }
+      ]
     },
-    upgradesTo: [50],
+    upgradesTo: [50]
   },
   {
     id: 50,
     type: WeaponType.GREAT_SWORD,
-    name: "Vulcamagnon (P)",
+    name: 'Vulcamagnon (P)',
     description:
-      "An ancient volcanic eruption in blade form. A great life force sleeps within.",
+      'An ancient volcanic eruption in blade form. A great life force sleeps within.',
     attack: 912,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 350,
     awaken: true,
     sharpness: [5, 3, 9, 14, 4],
@@ -1371,18 +1371,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 103, amount: 10 },
         { itemId: 101, amount: 10 },
-        { itemId: 169, amount: 3 },
-      ],
-    },
+        { itemId: 169, amount: 3 }
+      ]
+    }
   },
   {
     id: 51,
     type: WeaponType.GREAT_SWORD,
-    name: "Vulcanvil (B)",
+    name: 'Vulcanvil (B)',
     description:
-      "A strangely-shaped blade which took this form naturally when crafted.",
+      'A strangely-shaped blade which took this form naturally when crafted.',
     attack: 672,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 260,
     awaken: true,
     sharpness: [5, 3, 9, 8],
@@ -1396,19 +1396,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 104, amount: 4 },
         { itemId: 100, amount: 8 },
-        { itemId: 507, amount: 5 },
-      ],
+        { itemId: 507, amount: 5 }
+      ]
     },
-    upgradesTo: [50, 52],
+    upgradesTo: [50, 52]
   },
   {
     id: 52,
     type: WeaponType.GREAT_SWORD,
-    name: "Vulcamagnon (G)",
+    name: 'Vulcamagnon (G)',
     description:
-      "An ancient volcanic eruption in blade form. A great life force sleeps within.",
+      'An ancient volcanic eruption in blade form. A great life force sleeps within.',
     attack: 864,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 350,
     awaken: true,
     sharpness: [5, 3, 9, 14, 4],
@@ -1422,18 +1422,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 103, amount: 10 },
         { itemId: 148, amount: 7 },
-        { itemId: 169, amount: 2 },
-      ],
-    },
+        { itemId: 169, amount: 2 }
+      ]
+    }
   },
   {
     id: 53,
     type: WeaponType.GREAT_SWORD,
-    name: "Vulcanvil (Y)",
+    name: 'Vulcanvil (Y)',
     description:
-      "A strangely-shaped blade which took this form naturally when crafted.",
+      'A strangely-shaped blade which took this form naturally when crafted.',
     attack: 672,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 260,
     awaken: true,
     sharpness: [5, 3, 9, 8],
@@ -1447,19 +1447,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 104, amount: 4 },
         { itemId: 100, amount: 8 },
-        { itemId: 167, amount: 3 },
-      ],
+        { itemId: 167, amount: 3 }
+      ]
     },
-    upgradesTo: [52],
+    upgradesTo: [52]
   },
   {
     id: 54,
     type: WeaponType.GREAT_SWORD,
-    name: "Viking Hornsword",
+    name: 'Viking Hornsword',
     description:
       "A blade crafted from a giant horn, Ceadeus's pride. It shines with foes' blood.",
     attack: 672,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 440,
     awaken: false,
     sharpness: [3, 7, 16, 4],
@@ -1471,18 +1471,18 @@ export const GreatSwords: GreatSword[] = [
     create: [
       { itemId: 431, amount: 2 },
       { itemId: 428, amount: 2 },
-      { itemId: 429, amount: 2 },
+      { itemId: 429, amount: 2 }
     ],
-    upgradesTo: [55],
+    upgradesTo: [55]
   },
   {
     id: 55,
     type: WeaponType.GREAT_SWORD,
-    name: "Ancharius Sword",
+    name: 'Ancharius Sword',
     description:
       "A blade once wielded by an ancient king. In its light dwells a sea-god's soul...",
     attack: 816,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 500,
     awaken: false,
     sharpness: [3, 7, 16, 7, 1, 1],
@@ -1496,18 +1496,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 431, amount: 3 },
         { itemId: 430, amount: 1 },
-        { itemId: 467, amount: 4 },
-      ],
-    },
+        { itemId: 467, amount: 4 }
+      ]
+    }
   },
   {
     id: 56,
     type: WeaponType.GREAT_SWORD,
-    name: "Berserker Sword",
+    name: 'Berserker Sword',
     description:
       "A very heavy blade that channels a Deviljho's power, reducing foes to splinters.",
     attack: 864,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 100,
     awaken: false,
     sharpness: [13, 1, 8, 11, 2],
@@ -1519,17 +1519,17 @@ export const GreatSwords: GreatSword[] = [
     create: [
       { itemId: 452, amount: 5 },
       { itemId: 451, amount: 3 },
-      { itemId: 455, amount: 3 },
+      { itemId: 455, amount: 3 }
     ],
-    upgradesTo: [57, 58],
+    upgradesTo: [57, 58]
   },
   {
     id: 57,
     type: WeaponType.GREAT_SWORD,
-    name: "Anguish (P)",
-    description: "A dark blade filled with the soul of a blood-thirsty wyvern.",
+    name: 'Anguish (P)',
+    description: 'A dark blade filled with the soul of a blood-thirsty wyvern.',
     attack: 960,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 150,
     awaken: false,
     sharpness: [13, 1, 8, 11, 6, 1],
@@ -1543,17 +1543,17 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 569, amount: 3 },
         { itemId: 455, amount: 5 },
-        { itemId: 453, amount: 2 },
-      ],
-    },
+        { itemId: 453, amount: 2 }
+      ]
+    }
   },
   {
     id: 58,
     type: WeaponType.GREAT_SWORD,
-    name: "Anguish (G)",
-    description: "A dark blade filled with the soul of a blood-thirsty wyvern.",
+    name: 'Anguish (G)',
+    description: 'A dark blade filled with the soul of a blood-thirsty wyvern.',
     attack: 912,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 150,
     awaken: false,
     sharpness: [13, 1, 8, 11, 6, 1],
@@ -1567,18 +1567,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 569, amount: 3 },
         { itemId: 455, amount: 5 },
-        { itemId: 453, amount: 2 },
-      ],
-    },
+        { itemId: 453, amount: 2 }
+      ]
+    }
   },
   {
     id: 59,
     type: WeaponType.GREAT_SWORD,
-    name: "Alatreon Great Sword",
+    name: 'Alatreon Great Sword',
     description:
       "An unsettling blade with a sinister light and the power to steal creatures' souls.",
     attack: 816,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 350,
     awaken: false,
     sharpness: [3, 7, 16, 7, 1, 1],
@@ -1590,18 +1590,18 @@ export const GreatSwords: GreatSword[] = [
     create: [
       { itemId: 476, amount: 3 },
       { itemId: 403, amount: 5 },
-      { itemId: 432, amount: 3 },
+      { itemId: 432, amount: 3 }
     ],
-    upgradesTo: [60],
+    upgradesTo: [60]
   },
   {
     id: 60,
     type: WeaponType.GREAT_SWORD,
-    name: "Alatreon Revolution",
+    name: 'Alatreon Revolution',
     description:
-      "A blade of purple light. The bearer must cease being human and choose dragonhood.",
+      'A blade of purple light. The bearer must cease being human and choose dragonhood.',
     attack: 864,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 400,
     awaken: false,
     sharpness: [3, 7, 16, 7, 1, 6],
@@ -1615,18 +1615,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 569, amount: 3 },
         { itemId: 405, amount: 3 },
-        { itemId: 404, amount: 1 },
-      ],
-    },
+        { itemId: 404, amount: 1 }
+      ]
+    }
   },
   {
     id: 61,
     type: WeaponType.GREAT_SWORD,
-    name: "Proto Razor",
+    name: 'Proto Razor',
     description:
-      "A traditional, poison-edged blade; a dangerous weapon in the right hands.",
+      'A traditional, poison-edged blade; a dangerous weapon in the right hands.',
     attack: 720,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 300,
     awaken: true,
     sharpness: [7, 3, 12, 8],
@@ -1638,18 +1638,18 @@ export const GreatSwords: GreatSword[] = [
     create: [
       { itemId: 581, amount: 3 },
       { itemId: 576, amount: 5 },
-      { itemId: 104, amount: 5 },
+      { itemId: 104, amount: 5 }
     ],
-    upgradesTo: [62],
+    upgradesTo: [62]
   },
   {
     id: 62,
     type: WeaponType.GREAT_SWORD,
-    name: "Chrome Razor",
+    name: 'Chrome Razor',
     description:
-      "A strong, razor-sharpness edge (hence the name), this blade hides a secret poison.",
+      'A strong, razor-sharpness edge (hence the name), this blade hides a secret poison.',
     attack: 864,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 450,
     awaken: true,
     sharpness: [7, 3, 12, 10, 3],
@@ -1663,18 +1663,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 553, amount: 3 },
         { itemId: 347, amount: 5 },
-        { itemId: 159, amount: 3 },
-      ],
-    },
+        { itemId: 159, amount: 3 }
+      ]
+    }
   },
   {
     id: 63,
     type: WeaponType.GREAT_SWORD,
     name: "Lion's Bane",
     description:
-      "The fang of the king of beasts. Its wielder gains hundredfold power.",
+      'The fang of the king of beasts. Its wielder gains hundredfold power.',
     attack: 960,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 300,
     awaken: true,
     sharpness: [13, 1, 8, 11, 2],
@@ -1686,17 +1686,17 @@ export const GreatSwords: GreatSword[] = [
     create: [
       { itemId: 559, amount: 5 },
       { itemId: 101, amount: 15 },
-      { itemId: 452, amount: 3 },
-    ],
+      { itemId: 452, amount: 3 }
+    ]
   },
   {
     id: 64,
     type: WeaponType.GREAT_SWORD,
-    name: "Rusted Great Sword",
+    name: 'Rusted Great Sword',
     description:
-      "A Great Sword with unrealized potential. It could perhaps be polished...",
+      'A Great Sword with unrealized potential. It could perhaps be polished...',
     attack: 480,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 10,
     awaken: true,
     sharpness: [12, 8],
@@ -1706,16 +1706,16 @@ export const GreatSwords: GreatSword[] = [
     rarity: 1,
     price: 0,
     create: [{ itemId: 108, amount: 1 }],
-    upgradesTo: [65],
+    upgradesTo: [65]
   },
   {
     id: 65,
     type: WeaponType.GREAT_SWORD,
-    name: "Tarnished Great Swd",
+    name: 'Tarnished Great Swd',
     description:
-      "A Great Sword with unrealized potential. It could perhaps be polished...",
+      'A Great Sword with unrealized potential. It could perhaps be polished...',
     attack: 480,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 10,
     awaken: true,
     sharpness: [12, 11, 2],
@@ -1729,19 +1729,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 98, amount: 22 },
         { itemId: 314, amount: 5 },
-        { itemId: 531, amount: 2 },
-      ],
+        { itemId: 531, amount: 2 }
+      ]
     },
-    upgradesTo: [66],
+    upgradesTo: [66]
   },
   {
     id: 66,
     type: WeaponType.GREAT_SWORD,
-    name: "Ancient Blade",
+    name: 'Ancient Blade',
     description:
-      "Beneath the rust lay a blade forged of metal that no modern smith can reproduce.",
+      'Beneath the rust lay a blade forged of metal that no modern smith can reproduce.',
     attack: 720,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 330,
     awaken: false,
     sharpness: [15, 3, 3, 9],
@@ -1755,19 +1755,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 98, amount: 44 },
         { itemId: 377, amount: 2 },
-        { itemId: 252, amount: 2 },
-      ],
+        { itemId: 252, amount: 2 }
+      ]
     },
-    upgradesTo: [67],
+    upgradesTo: [67]
   },
   {
     id: 67,
     type: WeaponType.GREAT_SWORD,
-    name: "Elder Monument",
+    name: 'Elder Monument',
     description:
-      "Beneath the rust lay a blade forged of metal that no modern smith can reproduce.",
+      'Beneath the rust lay a blade forged of metal that no modern smith can reproduce.',
     attack: 864,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 350,
     awaken: false,
     sharpness: [15, 3, 3, 9, 5],
@@ -1781,18 +1781,18 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 98, amount: 66 },
         { itemId: 432, amount: 2 },
-        { itemId: 160, amount: 1 },
-      ],
-    },
+        { itemId: 160, amount: 1 }
+      ]
+    }
   },
   {
     id: 68,
     type: WeaponType.GREAT_SWORD,
-    name: "Worn Great Sword",
+    name: 'Worn Great Sword',
     description:
-      "A Great Sword with unrealized potential. It could perhaps be restored...",
+      'A Great Sword with unrealized potential. It could perhaps be restored...',
     attack: 528,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 10,
     awaken: true,
     sharpness: [15],
@@ -1802,16 +1802,16 @@ export const GreatSwords: GreatSword[] = [
     rarity: 4,
     price: 0,
     create: [{ itemId: 109, amount: 1 }],
-    upgradesTo: [69],
+    upgradesTo: [69]
   },
   {
     id: 69,
     type: WeaponType.GREAT_SWORD,
-    name: "Weathered Grt Sword",
+    name: 'Weathered Grt Sword',
     description:
-      "A Great Sword with unrealized potential. It could perhaps be restored...",
+      'A Great Sword with unrealized potential. It could perhaps be restored...',
     attack: 528,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 10,
     awaken: true,
     sharpness: [15, 3, 2],
@@ -1825,19 +1825,19 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 98, amount: 33 },
         { itemId: 514, amount: 5 },
-        { itemId: 531, amount: 2 },
-      ],
+        { itemId: 531, amount: 2 }
+      ]
     },
-    upgradesTo: [70],
+    upgradesTo: [70]
   },
   {
     id: 70,
     type: WeaponType.GREAT_SWORD,
-    name: "Epitaph Blade",
+    name: 'Epitaph Blade',
     description:
-      "A blade of unknown origins. It has an inscription, but what could it mean?",
+      'A blade of unknown origins. It has an inscription, but what could it mean?',
     attack: 912,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 380,
     awaken: false,
     sharpness: [3, 7, 16, 7, 1, 1],
@@ -1851,8 +1851,8 @@ export const GreatSwords: GreatSword[] = [
       materials: [
         { itemId: 98, amount: 77 },
         { itemId: 148, amount: 5 },
-        { itemId: 469, amount: 1 },
-      ],
-    },
-  },
+        { itemId: 469, amount: 1 }
+      ]
+    }
+  }
 ];

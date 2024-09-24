@@ -1,2 +1,2 @@
 export * as LongswordTypes from './types';
-export { Longswords, LongswordDamageProperties} from './longsword-data';
+export { Longswords, LongswordDamageProperties } from './longsword-data';

@@ -1,11 +1,14 @@
 # MH3 Data
+
 This project is an attempt to provide a public set of data pertaining to Monster Hunter Tri.
 
 This data was originally found in the source code of a website created by Feox, last hosted at http://mhtri.stilltruth.com/.
 The original site is no longer available, but was partially recovered thanks to the [Internet Archive](http://web.archive.org/).
 
 ## What does this code provide?
+
 The following is currently available:
+
 - Monsters
   - Hitzones
   - Status tolerances

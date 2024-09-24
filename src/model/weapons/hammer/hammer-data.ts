@@ -1,5 +1,5 @@
-import { WeaponDamageProperties, WeaponType } from "../types";
-import { Hammer, HammerAttack } from "./types";
+import { WeaponDamageProperties, WeaponType } from '../types';
+import { Hammer, HammerAttack } from './types';
 
 export const HammerDamageProperties = Object.freeze<
   WeaponDamageProperties<HammerAttack>
@@ -8,73 +8,73 @@ export const HammerDamageProperties = Object.freeze<
   classModifier: 5.2,
   attackGroups: [
     {
-      name: "default",
+      name: 'default',
       attacks: [
         {
-          name: "Unsheathe Attack",
-          hits: [{ type: "impact", power: 0.15, ko: 0 }],
+          name: 'Unsheathe Attack',
+          hits: [{ type: 'impact', power: 0.15, ko: 0 }]
         },
-        { name: "Side Swing", hits: [{ type: "impact", power: 0.15, ko: 0 }] },
+        { name: 'Side Swing', hits: [{ type: 'impact', power: 0.15, ko: 0 }] },
         {
-          name: "Triple Pound",
+          name: 'Triple Pound',
           hits: [
-            { type: "impact", power: 0.52, ko: 15 },
-            { type: "impact", power: 0.2, ko: 15 },
-            { type: "impact", power: 0.65, ko: 27 },
-          ],
+            { type: 'impact', power: 0.52, ko: 15 },
+            { type: 'impact', power: 0.2, ko: 15 },
+            { type: 'impact', power: 0.65, ko: 27 }
+          ]
         },
         {
-          name: "Short Charge",
+          name: 'Short Charge',
           hits: [
-            { type: "impact", power: 0.22, ko: 15 },
-            { type: "impact", power: 0.15, ko: 0 },
-          ],
+            { type: 'impact', power: 0.22, ko: 15 },
+            { type: 'impact', power: 0.15, ko: 0 }
+          ]
         },
-        { name: "Uppercut", hits: [{ type: "impact", power: 0.36, ko: 27 }] },
+        { name: 'Uppercut', hits: [{ type: 'impact', power: 0.36, ko: 27 }] },
         {
-          name: "Superpound",
+          name: 'Superpound',
           hits: [
-            { type: "impact", power: 0.2, ko: 0 },
-            { type: "impact", power: 0.76, ko: 48 },
-          ],
+            { type: 'impact', power: 0.2, ko: 0 },
+            { type: 'impact', power: 0.76, ko: 48 }
+          ]
         },
         {
-          name: "Spin Attack",
+          name: 'Spin Attack',
           hits: [
-            { type: "impact", power: 0.2, ko: 0 },
-            { type: "impact", power: 0.1, ko: 0 },
-            { type: "impact", power: 0.1, ko: 0 },
-            { type: "impact", power: 0.1, ko: 0 },
-            { type: "impact", power: 0.1, ko: 0 },
-            { type: "impact", power: 0.1, ko: 0 },
-          ],
+            { type: 'impact', power: 0.2, ko: 0 },
+            { type: 'impact', power: 0.1, ko: 0 },
+            { type: 'impact', power: 0.1, ko: 0 },
+            { type: 'impact', power: 0.1, ko: 0 },
+            { type: 'impact', power: 0.1, ko: 0 },
+            { type: 'impact', power: 0.1, ko: 0 }
+          ]
         },
         {
-          name: "Spin Release",
-          hits: [{ type: "impact", power: 0.6, ko: 27 }],
+          name: 'Spin Release',
+          hits: [{ type: 'impact', power: 0.6, ko: 27 }]
         },
         {
-          name: "Spin Golfswing",
-          hits: [{ type: "impact", power: 0.9, ko: 48 }],
+          name: 'Spin Golfswing',
+          hits: [{ type: 'impact', power: 0.9, ko: 48 }]
         },
         {
-          name: "Spin Finisher",
-          hits: [{ type: "impact", power: 0.4, ko: 27 }],
-        },
-      ],
-    },
-  ],
+          name: 'Spin Finisher',
+          hits: [{ type: 'impact', power: 0.4, ko: 27 }]
+        }
+      ]
+    }
+  ]
 });
 
 export const Hammers: Hammer[] = [
   {
     id: 0,
     type: WeaponType.HAMMER,
-    name: "Iron Hammer",
+    name: 'Iron Hammer',
     description:
-      "A Hammer of tremendous power. Its heavy blows wear down and knock out prey.",
+      'A Hammer of tremendous power. Its heavy blows wear down and knock out prey.',
     attack: 312,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 50,
     awaken: true,
     sharpness: [5, 4, 6],
@@ -84,16 +84,16 @@ export const Hammers: Hammer[] = [
     rarity: 1,
     price: 530,
     create: [{ itemId: 97, amount: 2 }],
-    upgradesTo: [1],
+    upgradesTo: [1]
   },
   {
     id: 1,
     type: WeaponType.HAMMER,
-    name: "Iron Hammer+",
+    name: 'Iron Hammer+',
     description:
-      "A Hammer of tremendous power. Its heavy blows wear down and knock out prey.",
+      'A Hammer of tremendous power. Its heavy blows wear down and knock out prey.',
     attack: 364,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 80,
     awaken: true,
     sharpness: [3, 2, 10],
@@ -106,19 +106,19 @@ export const Hammers: Hammer[] = [
       weaponId: [0],
       materials: [
         { itemId: 98, amount: 1 },
-        { itemId: 97, amount: 4 },
-      ],
+        { itemId: 97, amount: 4 }
+      ]
     },
-    upgradesTo: [2],
+    upgradesTo: [2]
   },
   {
     id: 2,
     type: WeaponType.HAMMER,
-    name: "War Hammer",
+    name: 'War Hammer',
     description:
-      "An Iron Hammer with a sharpness tip to increase deadliness. An easy weapon to obtain.",
+      'An Iron Hammer with a sharpness tip to increase deadliness. An easy weapon to obtain.',
     attack: 468,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 100,
     awaken: true,
     sharpness: [5, 4, 11],
@@ -132,19 +132,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 99, amount: 3 },
         { itemId: 98, amount: 5 },
-        { itemId: 97, amount: 7 },
-      ],
+        { itemId: 97, amount: 7 }
+      ]
     },
-    upgradesTo: [3],
+    upgradesTo: [3]
   },
   {
     id: 3,
     type: WeaponType.HAMMER,
-    name: "War Hammer+",
+    name: 'War Hammer+',
     description:
-      "An Iron Hammer with a sharpness tip to increase deadliness. An easy weapon to obtain.",
+      'An Iron Hammer with a sharpness tip to increase deadliness. An easy weapon to obtain.',
     attack: 572,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 130,
     awaken: true,
     sharpness: [6, 4, 8, 2],
@@ -158,19 +158,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 102, amount: 5 },
         { itemId: 99, amount: 8 },
-        { itemId: 98, amount: 10 },
-      ],
+        { itemId: 98, amount: 10 }
+      ]
     },
-    upgradesTo: [4],
+    upgradesTo: [4]
   },
   {
     id: 4,
     type: WeaponType.HAMMER,
-    name: "War Mace",
+    name: 'War Mace',
     description:
-      "An upgraded version of the War Hammer. Similar in appearance, but stronger.",
+      'An upgraded version of the War Hammer. Similar in appearance, but stronger.',
     attack: 676,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 150,
     awaken: true,
     sharpness: [5, 4, 14, 2],
@@ -182,26 +182,26 @@ export const Hammers: Hammer[] = [
     create: [
       { itemId: 104, amount: 3 },
       { itemId: 100, amount: 10 },
-      { itemId: 99, amount: 15 },
+      { itemId: 99, amount: 15 }
     ],
     upgradesFrom: {
       weaponId: [3],
       materials: [
         { itemId: 110, amount: 7 },
         { itemId: 102, amount: 8 },
-        { itemId: 99, amount: 15 },
-      ],
+        { itemId: 99, amount: 15 }
+      ]
     },
-    upgradesTo: [5, 7, 10],
+    upgradesTo: [5, 7, 10]
   },
   {
     id: 5,
     type: WeaponType.HAMMER,
-    name: "Iron Striker",
+    name: 'Iron Striker',
     description:
-      "A giant, super-powerful Hammer that is one incredible hunk of metal.",
+      'A giant, super-powerful Hammer that is one incredible hunk of metal.',
     attack: 884,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 240,
     awaken: true,
     sharpness: [6, 4, 8, 11, 1],
@@ -215,19 +215,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 101, amount: 15 },
         { itemId: 100, amount: 20 },
-        { itemId: 376, amount: 3 },
-      ],
+        { itemId: 376, amount: 3 }
+      ]
     },
-    upgradesTo: [6],
+    upgradesTo: [6]
   },
   {
     id: 6,
     type: WeaponType.HAMMER,
-    name: "Iron Impact",
+    name: 'Iron Impact',
     description:
-      "A heavy Hammer made from hard metal. One blow crushes bones and scales alike.",
+      'A heavy Hammer made from hard metal. One blow crushes bones and scales alike.',
     attack: 988,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 270,
     awaken: true,
     sharpness: [5, 4, 14, 10, 2],
@@ -241,18 +241,18 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 111, amount: 10 },
         { itemId: 101, amount: 20 },
-        { itemId: 97, amount: 99 },
-      ],
-    },
+        { itemId: 97, amount: 99 }
+      ]
+    }
   },
   {
     id: 7,
     type: WeaponType.HAMMER,
-    name: "Gun Hammer",
+    name: 'Gun Hammer',
     description:
-      "A testament to modern tech. Powder in a revolving magazine explodes on impact.",
+      'A testament to modern tech. Powder in a revolving magazine explodes on impact.',
     attack: 728,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 220,
     awaken: false,
     sharpness: [10, 5, 6, 4],
@@ -266,19 +266,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 104, amount: 5 },
         { itemId: 100, amount: 15 },
-        { itemId: 386, amount: 5 },
-      ],
+        { itemId: 386, amount: 5 }
+      ]
     },
-    upgradesTo: [8],
+    upgradesTo: [8]
   },
   {
     id: 8,
     type: WeaponType.HAMMER,
-    name: "Gun Hammer+",
+    name: 'Gun Hammer+',
     description:
-      "A testament to modern tech. Powder in a revolving magazine explodes on impact.",
+      'A testament to modern tech. Powder in a revolving magazine explodes on impact.',
     attack: 832,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 250,
     awaken: false,
     sharpness: [6, 5, 11, 8],
@@ -292,19 +292,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 104, amount: 10 },
         { itemId: 101, amount: 10 },
-        { itemId: 385, amount: 5 },
-      ],
+        { itemId: 385, amount: 5 }
+      ]
     },
-    upgradesTo: [9],
+    upgradesTo: [9]
   },
   {
     id: 9,
     type: WeaponType.HAMMER,
-    name: "Deadeye Revolver",
+    name: 'Deadeye Revolver',
     description:
-      "A powerful Hammer for the true seeker of freedom. No walls can hold its wielder.",
+      'A powerful Hammer for the true seeker of freedom. No walls can hold its wielder.',
     attack: 936,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 300,
     awaken: false,
     sharpness: [10, 5, 5, 12, 3],
@@ -318,18 +318,18 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 475, amount: 8 },
         { itemId: 474, amount: 5 },
-        { itemId: 158, amount: 3 },
-      ],
-    },
+        { itemId: 158, amount: 3 }
+      ]
+    }
   },
   {
     id: 10,
     type: WeaponType.HAMMER,
-    name: "Vortex Hammer",
+    name: 'Vortex Hammer',
     description:
-      "An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.",
+      'An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.',
     attack: 676,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 230,
     awaken: false,
     sharpness: [6, 5, 12, 3],
@@ -343,19 +343,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 392, amount: 2 },
         { itemId: 285, amount: 2 },
-        { itemId: 283, amount: 3 },
-      ],
+        { itemId: 283, amount: 3 }
+      ]
     },
-    upgradesTo: [11, 13, 15],
+    upgradesTo: [11, 13, 15]
   },
   {
     id: 11,
     type: WeaponType.HAMMER,
-    name: "Vortical Hammer (R)",
+    name: 'Vortical Hammer (R)',
     description:
-      "An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.",
+      'An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.',
     attack: 780,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 210,
     awaken: false,
     sharpness: [6, 4, 8, 7],
@@ -369,19 +369,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 392, amount: 3 },
         { itemId: 391, amount: 3 },
-        { itemId: 431, amount: 2 },
-      ],
+        { itemId: 431, amount: 2 }
+      ]
     },
-    upgradesTo: [12],
+    upgradesTo: [12]
   },
   {
     id: 12,
     type: WeaponType.HAMMER,
-    name: "Vortiginous Hmr (P)",
+    name: 'Vortiginous Hmr (P)',
     description:
-      "An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.",
+      'An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.',
     attack: 884,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 360,
     awaken: false,
     sharpness: [18, 2, 6, 8],
@@ -395,18 +395,18 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 286, amount: 5 },
         { itemId: 561, amount: 10 },
-        { itemId: 473, amount: 3 },
-      ],
-    },
+        { itemId: 473, amount: 3 }
+      ]
+    }
   },
   {
     id: 13,
     type: WeaponType.HAMMER,
-    name: "Vortical Hammer (Y)",
+    name: 'Vortical Hammer (Y)',
     description:
-      "An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.",
+      'An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.',
     attack: 728,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 210,
     awaken: false,
     sharpness: [6, 4, 8, 7],
@@ -420,19 +420,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 288, amount: 1 },
         { itemId: 391, amount: 4 },
-        { itemId: 270, amount: 3 },
-      ],
+        { itemId: 270, amount: 3 }
+      ]
     },
-    upgradesTo: [14],
+    upgradesTo: [14]
   },
   {
     id: 14,
     type: WeaponType.HAMMER,
-    name: "Vortiginous Hmr (G)",
+    name: 'Vortiginous Hmr (G)',
     description:
-      "An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.",
+      'An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.',
     attack: 832,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 360,
     awaken: false,
     sharpness: [19, 2, 6, 8],
@@ -446,18 +446,18 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 286, amount: 5 },
         { itemId: 561, amount: 10 },
-        { itemId: 474, amount: 3 },
-      ],
-    },
+        { itemId: 474, amount: 3 }
+      ]
+    }
   },
   {
     id: 15,
     type: WeaponType.HAMMER,
-    name: "High Vortex Hammer",
+    name: 'High Vortex Hammer',
     description:
-      "An electric Hammer that resembles a giant whirlpool and devours all life.",
+      'An electric Hammer that resembles a giant whirlpool and devours all life.',
     attack: 780,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 330,
     awaken: false,
     sharpness: [10, 5, 5, 10],
@@ -471,19 +471,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 391, amount: 5 },
         { itemId: 285, amount: 5 },
-        { itemId: 169, amount: 2 },
-      ],
+        { itemId: 169, amount: 2 }
+      ]
     },
-    upgradesTo: [16],
+    upgradesTo: [16]
   },
   {
     id: 16,
     type: WeaponType.HAMMER,
-    name: "Vortastrophe (G)",
+    name: 'Vortastrophe (G)',
     description:
-      "An electric Hammer that resembles a giant whirlpool and devours all life.",
+      'An electric Hammer that resembles a giant whirlpool and devours all life.',
     attack: 884,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 390,
     awaken: false,
     sharpness: [10, 5, 5, 12, 3],
@@ -497,18 +497,18 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 467, amount: 4 },
         { itemId: 468, amount: 4 },
-        { itemId: 288, amount: 5 },
-      ],
-    },
+        { itemId: 288, amount: 5 }
+      ]
+    }
   },
   {
     id: 17,
     type: WeaponType.HAMMER,
-    name: "Bone Hammer",
+    name: 'Bone Hammer',
     description:
-      "A Hammer crafted from bone, with powerful Windup Smashes but no means of blocking.",
+      'A Hammer crafted from bone, with powerful Windup Smashes but no means of blocking.',
     attack: 416,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 50,
     awaken: true,
     sharpness: [10, 5],
@@ -519,18 +519,18 @@ export const Hammers: Hammer[] = [
     price: 520,
     create: [
       { itemId: 245, amount: 2 },
-      { itemId: 182, amount: 2 },
+      { itemId: 182, amount: 2 }
     ],
-    upgradesTo: [18],
+    upgradesTo: [18]
   },
   {
     id: 18,
     type: WeaponType.HAMMER,
-    name: "Bone Hammer+",
+    name: 'Bone Hammer+',
     description:
-      "A Hammer crafted from bone, with powerful Windup Smashes but no means of blocking.",
+      'A Hammer crafted from bone, with powerful Windup Smashes but no means of blocking.',
     attack: 468,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 70,
     awaken: true,
     sharpness: [6, 5, 4],
@@ -540,16 +540,16 @@ export const Hammers: Hammer[] = [
     rarity: 1,
     price: 1710,
     upgradesFrom: { weaponId: [17], materials: [{ itemId: 149, amount: 5 }] },
-    upgradesTo: [19, 21],
+    upgradesTo: [19, 21]
   },
   {
     id: 19,
     type: WeaponType.HAMMER,
-    name: "Bone Bludgeon",
+    name: 'Bone Bludgeon',
     description:
-      "A rough-hewn Hammer of high-quality bone. Grows handier with use.",
+      'A rough-hewn Hammer of high-quality bone. Grows handier with use.',
     attack: 676,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 160,
     awaken: true,
     sharpness: [8, 2, 4, 1],
@@ -563,19 +563,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 150, amount: 5 },
         { itemId: 510, amount: 5 },
-        { itemId: 117, amount: 3 },
-      ],
+        { itemId: 117, amount: 3 }
+      ]
     },
-    upgradesTo: [20],
+    upgradesTo: [20]
   },
   {
     id: 20,
     type: WeaponType.HAMMER,
-    name: "Bone Bludgeon+",
+    name: 'Bone Bludgeon+',
     description:
-      "A rough-hewn Hammer of high-quality bone. Grows handier with use.",
+      'A rough-hewn Hammer of high-quality bone. Grows handier with use.',
     attack: 780,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 200,
     awaken: true,
     sharpness: [6, 4, 8, 2],
@@ -589,18 +589,18 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 151, amount: 2 },
         { itemId: 511, amount: 3 },
-        { itemId: 521, amount: 2 },
-      ],
-    },
+        { itemId: 521, amount: 2 }
+      ]
+    }
   },
   {
     id: 21,
     type: WeaponType.HAMMER,
-    name: "Ludroth Bone Mace",
+    name: 'Ludroth Bone Mace',
     description:
-      "A Hammer covered in Ludroth skin. The bone construction makes it light and sturdy.",
+      'A Hammer covered in Ludroth skin. The bone construction makes it light and sturdy.',
     attack: 520,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 80,
     awaken: true,
     sharpness: [10, 5, 5],
@@ -614,19 +614,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 295, amount: 2 },
         { itemId: 294, amount: 3 },
-        { itemId: 116, amount: 3 },
-      ],
+        { itemId: 116, amount: 3 }
+      ]
     },
-    upgradesTo: [22],
+    upgradesTo: [22]
   },
   {
     id: 22,
     type: WeaponType.HAMMER,
-    name: "Ludroth Bone Maul",
+    name: 'Ludroth Bone Maul',
     description:
-      "A Hammer covered in Ludroth skin. The bone construction makes it light and sturdy.",
+      'A Hammer covered in Ludroth skin. The bone construction makes it light and sturdy.',
     attack: 572,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 100,
     awaken: true,
     sharpness: [14, 4, 6, 1],
@@ -638,26 +638,26 @@ export const Hammers: Hammer[] = [
     create: [
       { itemId: 151, amount: 2 },
       { itemId: 295, amount: 10 },
-      { itemId: 290, amount: 3 },
+      { itemId: 290, amount: 3 }
     ],
     upgradesFrom: {
       weaponId: [21],
       materials: [
         { itemId: 150, amount: 4 },
         { itemId: 295, amount: 5 },
-        { itemId: 388, amount: 2 },
-      ],
+        { itemId: 388, amount: 2 }
+      ]
     },
-    upgradesTo: [23, 28],
+    upgradesTo: [23, 28]
   },
   {
     id: 23,
     type: WeaponType.HAMMER,
-    name: "Ludroth Splashhammer",
+    name: 'Ludroth Splashhammer',
     description:
-      "A hammer of Ludroth sponge. The water inside explodes onto the target on impact.",
+      'A hammer of Ludroth sponge. The water inside explodes onto the target on impact.',
     attack: 624,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 120,
     awaken: false,
     sharpness: [5, 4, 14, 2],
@@ -671,19 +671,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 289, amount: 3 },
         { itemId: 291, amount: 2 },
-        { itemId: 371, amount: 2 },
-      ],
+        { itemId: 371, amount: 2 }
+      ]
     },
-    upgradesTo: [24],
+    upgradesTo: [24]
   },
   {
     id: 24,
     type: WeaponType.HAMMER,
-    name: "Vodyanoy Hammer",
+    name: 'Vodyanoy Hammer',
     description:
-      "A hammer of Ludroth sponge. The water inside explodes onto the target on impact.",
+      'A hammer of Ludroth sponge. The water inside explodes onto the target on impact.',
     attack: 676,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 210,
     awaken: false,
     sharpness: [10, 5, 6, 4],
@@ -697,19 +697,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 456, amount: 3 },
         { itemId: 297, amount: 2 },
-        { itemId: 110, amount: 5 },
-      ],
+        { itemId: 110, amount: 5 }
+      ]
     },
-    upgradesTo: [25],
+    upgradesTo: [25]
   },
   {
     id: 25,
     type: WeaponType.HAMMER,
     name: 'Fang Hammer "Echo"',
     description:
-      "A Hammer made from a Jhen Mohran fang. Peerless power and durability.",
+      'A Hammer made from a Jhen Mohran fang. Peerless power and durability.',
     attack: 780,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 250,
     awaken: false,
     sharpness: [6, 4, 8, 7],
@@ -723,19 +723,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 436, amount: 1 },
         { itemId: 433, amount: 5 },
-        { itemId: 102, amount: 10 },
-      ],
+        { itemId: 102, amount: 10 }
+      ]
     },
-    upgradesTo: [26],
+    upgradesTo: [26]
   },
   {
     id: 26,
     type: WeaponType.HAMMER,
     name: 'Fang Hammer "Ruin"',
     description:
-      "A Hammer made from a Jhen Mohran fang. Peerless power and durability.",
+      'A Hammer made from a Jhen Mohran fang. Peerless power and durability.',
     attack: 884,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 330,
     awaken: false,
     sharpness: [6, 4, 8, 11, 1],
@@ -749,19 +749,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 434, amount: 2 },
         { itemId: 103, amount: 10 },
-        { itemId: 467, amount: 3 },
-      ],
+        { itemId: 467, amount: 3 }
+      ]
     },
-    upgradesTo: [27],
+    upgradesTo: [27]
   },
   {
     id: 27,
     type: WeaponType.HAMMER,
-    name: "Jhen Mohran Hammer",
+    name: 'Jhen Mohran Hammer',
     description:
-      "A sacred item that summons the waters to improve the harvest and save the land.",
+      'A sacred item that summons the waters to improve the harvest and save the land.',
     attack: 936,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 380,
     awaken: false,
     sharpness: [6, 4, 8, 11, 6],
@@ -775,18 +775,18 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 440, amount: 3 },
         { itemId: 441, amount: 3 },
-        { itemId: 437, amount: 3 },
-      ],
-    },
+        { itemId: 437, amount: 3 }
+      ]
+    }
   },
   {
     id: 28,
     type: WeaponType.HAMMER,
-    name: "Carapace Hammer",
+    name: 'Carapace Hammer',
     description:
-      "A Hammer resembling Barroth head armor. Strong enough to crush steel.",
+      'A Hammer resembling Barroth head armor. Strong enough to crush steel.',
     attack: 728,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 150,
     awaken: true,
     defense: 8,
@@ -801,19 +801,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 276, amount: 2 },
         { itemId: 272, amount: 5 },
-        { itemId: 18, amount: 1 },
-      ],
+        { itemId: 18, amount: 1 }
+      ]
     },
-    upgradesTo: [29, 31],
+    upgradesTo: [29, 31]
   },
   {
     id: 29,
     type: WeaponType.HAMMER,
-    name: "Carapace Hammer+",
+    name: 'Carapace Hammer+',
     description:
-      "A Hammer resembling Barroth head armor. Strong enough to crush steel.",
+      'A Hammer resembling Barroth head armor. Strong enough to crush steel.',
     attack: 780,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 180,
     awaken: true,
     defense: 16,
@@ -828,19 +828,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 273, amount: 3 },
         { itemId: 379, amount: 2 },
-        { itemId: 268, amount: 2 },
-      ],
+        { itemId: 268, amount: 2 }
+      ]
     },
-    upgradesTo: [30],
+    upgradesTo: [30]
   },
   {
     id: 30,
     type: WeaponType.HAMMER,
-    name: "Barroth Hammer",
+    name: 'Barroth Hammer',
     description:
-      "A Hammer forged from a tough shell. Forget about being delicate; just swing away!",
+      'A Hammer forged from a tough shell. Forget about being delicate; just swing away!',
     attack: 988,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 240,
     awaken: true,
     defense: 20,
@@ -855,18 +855,18 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 442, amount: 8 },
         { itemId: 443, amount: 5 },
-        { itemId: 444, amount: 4 },
-      ],
-    },
+        { itemId: 444, amount: 4 }
+      ]
+    }
   },
   {
     id: 31,
     type: WeaponType.HAMMER,
-    name: "Brazenclout",
+    name: 'Brazenclout',
     description:
       "A Hammer that awakens the earth's rage. Heaviest and hardest of all Hammers.",
     attack: 884,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 120,
     awaken: true,
     sharpness: [14, 4, 2],
@@ -880,19 +880,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 378, amount: 2 },
         { itemId: 445, amount: 5 },
-        { itemId: 100, amount: 5 },
-      ],
+        { itemId: 100, amount: 5 }
+      ]
     },
-    upgradesTo: [32],
+    upgradesTo: [32]
   },
   {
     id: 32,
     type: WeaponType.HAMMER,
-    name: "Crimsonclout",
+    name: 'Crimsonclout',
     description:
       "A Hammer that awakens the earth's rage. Heaviest and hardest of all Hammers.",
     attack: 988,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 150,
     awaken: true,
     sharpness: [18, 2, 5],
@@ -906,19 +906,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 381, amount: 2 },
         { itemId: 379, amount: 2 },
-        { itemId: 104, amount: 3 },
-      ],
+        { itemId: 104, amount: 3 }
+      ]
     },
-    upgradesTo: [33],
+    upgradesTo: [33]
   },
   {
     id: 33,
     type: WeaponType.HAMMER,
-    name: "Gigas Hammer",
+    name: 'Gigas Hammer',
     description:
-      "A bulky Hammer made from the bulky Uragaan. Requires great strength to wield.",
+      'A bulky Hammer made from the bulky Uragaan. Requires great strength to wield.',
     attack: 1144,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 300,
     awaken: true,
     sharpness: [18, 2, 7, 3],
@@ -932,18 +932,18 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 448, amount: 6 },
         { itemId: 381, amount: 3 },
-        { itemId: 447, amount: 2 },
-      ],
-    },
+        { itemId: 447, amount: 2 }
+      ]
+    }
   },
   {
     id: 34,
     type: WeaponType.HAMMER,
-    name: "Plume Flint",
+    name: 'Plume Flint',
     description:
-      "A Hammer that uses a built-in flint mechanism to expel flames on impact.",
+      'A Hammer that uses a built-in flint mechanism to expel flames on impact.',
     attack: 520,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 250,
     awaken: false,
     sharpness: [14, 4, 6, 1],
@@ -955,18 +955,18 @@ export const Hammers: Hammer[] = [
     create: [
       { itemId: 261, amount: 3 },
       { itemId: 393, amount: 1 },
-      { itemId: 150, amount: 5 },
+      { itemId: 150, amount: 5 }
     ],
-    upgradesTo: [35, 39],
+    upgradesTo: [35, 39]
   },
   {
     id: 35,
     type: WeaponType.HAMMER,
-    name: "Peco Flint",
+    name: 'Peco Flint',
     description:
-      "A Hammer that uses a built-in flint mechanism to expel flames on impact.",
+      'A Hammer that uses a built-in flint mechanism to expel flames on impact.',
     attack: 624,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 320,
     awaken: false,
     sharpness: [3, 2, 16, 4],
@@ -980,19 +980,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 262, amount: 2 },
         { itemId: 393, amount: 3 },
-        { itemId: 252, amount: 1 },
-      ],
+        { itemId: 252, amount: 1 }
+      ]
     },
-    upgradesTo: [36],
+    upgradesTo: [36]
   },
   {
     id: 36,
     type: WeaponType.HAMMER,
-    name: "Red Bludgeon",
+    name: 'Red Bludgeon',
     description:
-      "A superb article made from a Rathalos head. Only the bravest can wield it.",
+      'A superb article made from a Rathalos head. Only the bravest can wield it.',
     attack: 676,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 410,
     awaken: false,
     sharpness: [8, 2, 4, 11],
@@ -1006,19 +1006,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 255, amount: 8 },
         { itemId: 257, amount: 2 },
-        { itemId: 104, amount: 3 },
-      ],
+        { itemId: 104, amount: 3 }
+      ]
     },
-    upgradesTo: [37],
+    upgradesTo: [37]
   },
   {
     id: 37,
     type: WeaponType.HAMMER,
-    name: "Red Bludgeon+",
+    name: 'Red Bludgeon+',
     description:
-      "A superb article made from a Rathalos head. Only the bravest can wield it.",
+      'A superb article made from a Rathalos head. Only the bravest can wield it.',
     attack: 780,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 450,
     awaken: false,
     sharpness: [8, 2, 4, 16],
@@ -1032,19 +1032,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 163, amount: 5 },
         { itemId: 162, amount: 2 },
-        { itemId: 251, amount: 2 },
-      ],
+        { itemId: 251, amount: 2 }
+      ]
     },
-    upgradesTo: [38],
+    upgradesTo: [38]
   },
   {
     id: 38,
     type: WeaponType.HAMMER,
-    name: "Huracan Hammer (P)",
+    name: 'Huracan Hammer (P)',
     description:
-      "A Hammer of raging fire containing the unruly spirit of Rathalos.",
+      'A Hammer of raging fire containing the unruly spirit of Rathalos.',
     attack: 884,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 520,
     awaken: false,
     sharpness: [9, 2, 3, 17, 4],
@@ -1058,18 +1058,18 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 164, amount: 5 },
         { itemId: 162, amount: 3 },
-        { itemId: 161, amount: 1 },
-      ],
-    },
+        { itemId: 161, amount: 1 }
+      ]
+    }
   },
   {
     id: 39,
     type: WeaponType.HAMMER,
-    name: "Numbingbird",
+    name: 'Numbingbird',
     description:
-      "A lovely Hammer wreathed in a plume of feathers that conceals paralyzing thorns.",
+      'A lovely Hammer wreathed in a plume of feathers that conceals paralyzing thorns.',
     attack: 676,
-    element: "PARALYSIS",
+    element: 'PARALYSIS',
     elemAttack: 110,
     awaken: false,
     sharpness: [6, 5, 11, 3],
@@ -1083,19 +1083,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 261, amount: 8 },
         { itemId: 296, amount: 1 },
-        { itemId: 302, amount: 1 },
-      ],
+        { itemId: 302, amount: 1 }
+      ]
     },
-    upgradesTo: [40],
+    upgradesTo: [40]
   },
   {
     id: 40,
     type: WeaponType.HAMMER,
-    name: "Paralykeet",
+    name: 'Paralykeet',
     description:
-      "A lovely Hammer wreathed in a plume of feathers that conceals paralyzing thorns.",
+      'A lovely Hammer wreathed in a plume of feathers that conceals paralyzing thorns.',
     attack: 728,
-    element: "PARALYSIS",
+    element: 'PARALYSIS',
     elemAttack: 170,
     awaken: false,
     sharpness: [3, 2, 16, 4],
@@ -1109,19 +1109,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 262, amount: 3 },
         { itemId: 298, amount: 3 },
-        { itemId: 118, amount: 5 },
-      ],
+        { itemId: 118, amount: 5 }
+      ]
     },
-    upgradesTo: [41],
+    upgradesTo: [41]
   },
   {
     id: 41,
     type: WeaponType.HAMMER,
-    name: "Alluring Lotus",
+    name: 'Alluring Lotus',
     description:
-      "A beautiful Hammer like a lethal flower; it paralyzes prey with its thorns.",
+      'A beautiful Hammer like a lethal flower; it paralyzes prey with its thorns.',
     attack: 832,
-    element: "PARALYSIS",
+    element: 'PARALYSIS',
     elemAttack: 230,
     awaken: false,
     sharpness: [18, 2, 7, 8],
@@ -1135,18 +1135,18 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 504, amount: 6 },
         { itemId: 461, amount: 3 },
-        { itemId: 463, amount: 2 },
-      ],
-    },
+        { itemId: 463, amount: 2 }
+      ]
+    }
   },
   {
     id: 42,
     type: WeaponType.HAMMER,
-    name: "Gaiasp",
+    name: 'Gaiasp',
     description:
-      "A Hammer made from ore mined in polar climes. Upgradeable in more ways than one.",
+      'A Hammer made from ore mined in polar climes. Upgradeable in more ways than one.',
     attack: 676,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 180,
     awaken: true,
     sharpness: [5, 4, 14, 2],
@@ -1158,18 +1158,18 @@ export const Hammers: Hammer[] = [
     create: [
       { itemId: 106, amount: 2 },
       { itemId: 102, amount: 12 },
-      { itemId: 146, amount: 1 },
+      { itemId: 146, amount: 1 }
     ],
-    upgradesTo: [43, 45, 47],
+    upgradesTo: [43, 45, 47]
   },
   {
     id: 43,
     type: WeaponType.HAMMER,
-    name: "Gaiarch (R)",
+    name: 'Gaiarch (R)',
     description:
-      "A Hammer overflowing with history, imbued with the soul of an ancient wyvern.",
+      'A Hammer overflowing with history, imbued with the soul of an ancient wyvern.',
     attack: 780,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 230,
     awaken: true,
     sharpness: [10, 5, 6, 4],
@@ -1183,19 +1183,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 104, amount: 4 },
         { itemId: 100, amount: 10 },
-        { itemId: 386, amount: 3 },
-      ],
+        { itemId: 386, amount: 3 }
+      ]
     },
-    upgradesTo: [44],
+    upgradesTo: [44]
   },
   {
     id: 44,
     type: WeaponType.HAMMER,
-    name: "Great Gaiarch (P)",
+    name: 'Great Gaiarch (P)',
     description:
       "A Hammer sealed within the earth long ago. It pulsates with a wyvern's life force.",
     attack: 988,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 340,
     awaken: true,
     sharpness: [5, 4, 14, 10, 2],
@@ -1209,18 +1209,18 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 103, amount: 10 },
         { itemId: 101, amount: 10 },
-        { itemId: 169, amount: 3 },
-      ],
-    },
+        { itemId: 169, amount: 3 }
+      ]
+    }
   },
   {
     id: 45,
     type: WeaponType.HAMMER,
-    name: "Gaiarch (B)",
+    name: 'Gaiarch (B)',
     description:
-      "A Hammer overflowing with history, imbued with the soul of an ancient wyvern.",
+      'A Hammer overflowing with history, imbued with the soul of an ancient wyvern.',
     attack: 728,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 230,
     awaken: true,
     sharpness: [10, 5, 6, 4],
@@ -1234,19 +1234,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 104, amount: 4 },
         { itemId: 100, amount: 10 },
-        { itemId: 297, amount: 3 },
-      ],
+        { itemId: 297, amount: 3 }
+      ]
     },
-    upgradesTo: [44, 46],
+    upgradesTo: [44, 46]
   },
   {
     id: 46,
     type: WeaponType.HAMMER,
-    name: "Great Gaiarch (G)",
+    name: 'Great Gaiarch (G)',
     description:
       "A Hammer sealed within the earth long ago. It pulsates with a wyvern's life force.",
     attack: 936,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 340,
     awaken: true,
     sharpness: [5, 4, 14, 10, 2],
@@ -1260,18 +1260,18 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 103, amount: 10 },
         { itemId: 148, amount: 7 },
-        { itemId: 169, amount: 2 },
-      ],
-    },
+        { itemId: 169, amount: 2 }
+      ]
+    }
   },
   {
     id: 47,
     type: WeaponType.HAMMER,
-    name: "Gaiarch (Y)",
+    name: 'Gaiarch (Y)',
     description:
-      "A Hammer overflowing with history, imbued with the soul of an ancient wyvern.",
+      'A Hammer overflowing with history, imbued with the soul of an ancient wyvern.',
     attack: 728,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 230,
     awaken: true,
     sharpness: [10, 5, 6, 4],
@@ -1285,10 +1285,10 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 104, amount: 4 },
         { itemId: 100, amount: 10 },
-        { itemId: 248, amount: 3 },
-      ],
+        { itemId: 248, amount: 3 }
+      ]
     },
-    upgradesTo: [46],
+    upgradesTo: [46]
   },
   {
     id: 48,
@@ -1297,7 +1297,7 @@ export const Hammers: Hammer[] = [
     description:
       "This Hammer, oozing with a Deviljho's power, hungers for living sacrifices.",
     attack: 936,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 100,
     awaken: false,
     sharpness: [19, 2, 6, 8],
@@ -1309,18 +1309,18 @@ export const Hammers: Hammer[] = [
     create: [
       { itemId: 452, amount: 6 },
       { itemId: 451, amount: 3 },
-      { itemId: 449, amount: 4 },
+      { itemId: 449, amount: 4 }
     ],
-    upgradesTo: [49, 50],
+    upgradesTo: [49, 50]
   },
   {
     id: 49,
     type: WeaponType.HAMMER,
     name: "Devil's Crush (P)",
     description:
-      "A large Hammer containing the savage, inexhaustiable energy of the Deviljho.",
+      'A large Hammer containing the savage, inexhaustiable energy of the Deviljho.',
     attack: 1040,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 150,
     awaken: false,
     sharpness: [19, 2, 6, 8, 4, 1],
@@ -1334,18 +1334,18 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 569, amount: 3 },
         { itemId: 452, amount: 8 },
-        { itemId: 453, amount: 1 },
-      ],
-    },
+        { itemId: 453, amount: 1 }
+      ]
+    }
   },
   {
     id: 50,
     type: WeaponType.HAMMER,
     name: "Devil's Crush (G)",
     description:
-      "A large Hammer containing the savage, inexhaustiable energy of the Deviljho.",
+      'A large Hammer containing the savage, inexhaustiable energy of the Deviljho.',
     attack: 988,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 150,
     awaken: false,
     sharpness: [19, 2, 6, 8, 4, 1],
@@ -1359,18 +1359,18 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 569, amount: 3 },
         { itemId: 452, amount: 8 },
-        { itemId: 453, amount: 1 },
-      ],
-    },
+        { itemId: 453, amount: 1 }
+      ]
+    }
   },
   {
     id: 51,
     type: WeaponType.HAMMER,
-    name: "Alatreon Hammer",
+    name: 'Alatreon Hammer',
     description:
-      "A Hammer made from Alatreon talons, it protects dragons and destroys humans.",
+      'A Hammer made from Alatreon talons, it protects dragons and destroys humans.',
     attack: 884,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 330,
     awaken: false,
     sharpness: [6, 5, 11, 8, 5],
@@ -1382,18 +1382,18 @@ export const Hammers: Hammer[] = [
     create: [
       { itemId: 403, amount: 6 },
       { itemId: 401, amount: 4 },
-      { itemId: 432, amount: 3 },
+      { itemId: 432, amount: 3 }
     ],
-    upgradesTo: [52],
+    upgradesTo: [52]
   },
   {
     id: 52,
     type: WeaponType.HAMMER,
-    name: "Alatreon Metamorph",
+    name: 'Alatreon Metamorph',
     description:
       "A Hammer of madness. Its soul-sucking light can consume the bearer's identity.",
     attack: 936,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 400,
     awaken: false,
     sharpness: [6, 5, 11, 8, 6, 4],
@@ -1407,18 +1407,18 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 569, amount: 3 },
         { itemId: 403, amount: 8 },
-        { itemId: 404, amount: 1 },
-      ],
-    },
+        { itemId: 404, amount: 1 }
+      ]
+    }
   },
   {
     id: 53,
     type: WeaponType.HAMMER,
-    name: "Kurogane",
+    name: 'Kurogane',
     description:
-      "A simple-looking Hammer with paralyzing powers. Few know how to craft it.",
+      'A simple-looking Hammer with paralyzing powers. Few know how to craft it.',
     attack: 780,
-    element: "PARALYSIS",
+    element: 'PARALYSIS',
     elemAttack: 200,
     awaken: true,
     sharpness: [6, 5, 11, 8],
@@ -1430,18 +1430,18 @@ export const Hammers: Hammer[] = [
     create: [
       { itemId: 581, amount: 3 },
       { itemId: 574, amount: 5 },
-      { itemId: 381, amount: 2 },
+      { itemId: 381, amount: 2 }
     ],
-    upgradesTo: [54],
+    upgradesTo: [54]
   },
   {
     id: 54,
     type: WeaponType.HAMMER,
-    name: "Iron Devil",
+    name: 'Iron Devil',
     description:
-      "Long ago, before Hammers were popular in use, an old hunter wielded this weapon.",
+      'Long ago, before Hammers were popular in use, an old hunter wielded this weapon.',
     attack: 936,
-    element: "PARALYSIS",
+    element: 'PARALYSIS',
     elemAttack: 220,
     awaken: true,
     sharpness: [6, 5, 11, 8, 5],
@@ -1455,18 +1455,18 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 553, amount: 3 },
         { itemId: 554, amount: 5 },
-        { itemId: 461, amount: 3 },
-      ],
-    },
+        { itemId: 461, amount: 3 }
+      ]
+    }
   },
   {
     id: 55,
     type: WeaponType.HAMMER,
-    name: "Rusted Hammer",
+    name: 'Rusted Hammer',
     description:
-      "A Hammer with unrealized potential. It could perhaps be polished...",
+      'A Hammer with unrealized potential. It could perhaps be polished...',
     attack: 520,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 10,
     awaken: true,
     sharpness: [14, 1],
@@ -1476,16 +1476,16 @@ export const Hammers: Hammer[] = [
     rarity: 1,
     price: 0,
     create: [{ itemId: 108, amount: 1 }],
-    upgradesTo: [56],
+    upgradesTo: [56]
   },
   {
     id: 56,
     type: WeaponType.HAMMER,
-    name: "Tarnished Hammer",
+    name: 'Tarnished Hammer',
     description:
-      "A Hammer with unrealized potential. It could perhaps be polished...",
+      'A Hammer with unrealized potential. It could perhaps be polished...',
     attack: 520,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 10,
     awaken: true,
     sharpness: [14, 4, 2],
@@ -1499,19 +1499,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 98, amount: 22 },
         { itemId: 314, amount: 5 },
-        { itemId: 531, amount: 2 },
-      ],
+        { itemId: 531, amount: 2 }
+      ]
     },
-    upgradesTo: [57],
+    upgradesTo: [57]
   },
   {
     id: 57,
     type: WeaponType.HAMMER,
-    name: "Breath Core Hammer",
+    name: 'Breath Core Hammer',
     description:
       "An ancient military Hammer, restored. Its inner core of dragon's breath still burns.",
     attack: 832,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 280,
     awaken: false,
     sharpness: [8, 2, 4, 11],
@@ -1525,19 +1525,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 98, amount: 44 },
         { itemId: 377, amount: 2 },
-        { itemId: 252, amount: 2 },
-      ],
+        { itemId: 252, amount: 2 }
+      ]
     },
-    upgradesTo: [58],
+    upgradesTo: [58]
   },
   {
     id: 58,
     type: WeaponType.HAMMER,
-    name: "Lava Core Hammer",
+    name: 'Lava Core Hammer',
     description:
       "An ancient military Hammer, restored. Its inner core of dragon's breath still burns.",
     attack: 936,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 330,
     awaken: false,
     sharpness: [8, 2, 4, 16],
@@ -1551,18 +1551,18 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 98, amount: 66 },
         { itemId: 432, amount: 2 },
-        { itemId: 160, amount: 1 },
-      ],
-    },
+        { itemId: 160, amount: 1 }
+      ]
+    }
   },
   {
     id: 59,
     type: WeaponType.HAMMER,
-    name: "Worn Hammer",
+    name: 'Worn Hammer',
     description:
-      "A Hammer with unrealized potential. It could perhaps be restored...",
+      'A Hammer with unrealized potential. It could perhaps be restored...',
     attack: 572,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 10,
     awaken: true,
     sharpness: [6, 5, 4],
@@ -1572,16 +1572,16 @@ export const Hammers: Hammer[] = [
     rarity: 4,
     price: 0,
     create: [{ itemId: 109, amount: 1 }],
-    upgradesTo: [60],
+    upgradesTo: [60]
   },
   {
     id: 60,
     type: WeaponType.HAMMER,
-    name: "Weathered Hammer",
+    name: 'Weathered Hammer',
     description:
-      "A Hammer with unrealized potential. It could perhaps be restored...",
+      'A Hammer with unrealized potential. It could perhaps be restored...',
     attack: 572,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 10,
     awaken: true,
     sharpness: [6, 5, 9],
@@ -1595,19 +1595,19 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 98, amount: 33 },
         { itemId: 514, amount: 5 },
-        { itemId: 531, amount: 2 },
-      ],
+        { itemId: 531, amount: 2 }
+      ]
     },
-    upgradesTo: [61],
+    upgradesTo: [61]
   },
   {
     id: 61,
     type: WeaponType.HAMMER,
-    name: "Pulsating Core",
+    name: 'Pulsating Core',
     description:
-      "A Hammer from a lost civilization that crushes targets using powerful vibrations.",
+      'A Hammer from a lost civilization that crushes targets using powerful vibrations.',
     attack: 988,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 350,
     awaken: false,
     sharpness: [10, 5, 6, 8, 6],
@@ -1621,8 +1621,8 @@ export const Hammers: Hammer[] = [
       materials: [
         { itemId: 98, amount: 77 },
         { itemId: 148, amount: 5 },
-        { itemId: 447, amount: 1 },
-      ],
-    },
-  },
+        { itemId: 447, amount: 1 }
+      ]
+    }
+  }
 ];

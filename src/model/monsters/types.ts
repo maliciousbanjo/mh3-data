@@ -1,17 +1,17 @@
-import { CommonTypes } from "../common";
-import { ItemTypes } from "../items";
+import { CommonTypes } from '../common';
+import { ItemTypes } from '../items';
 
 export enum MonsterType {
-  Herbvr = "herbivore",
-  Nptron = "neopteron",
-  Lynian = "lynian",
-  Fish = "fish",
-  PscWyv = "piscine wyvern",
-  BrdWyv = "bird wyvern",
-  FlyWyv = "flying wyvern",
-  Levthn = "leviathan",
-  BrtWyv = "brute wyvern",
-  EldDrg = "elder dragon",
+  Herbvr = 'herbivore',
+  Nptron = 'neopteron',
+  Lynian = 'lynian',
+  Fish = 'fish',
+  PscWyv = 'piscine wyvern',
+  BrdWyv = 'bird wyvern',
+  FlyWyv = 'flying wyvern',
+  Levthn = 'leviathan',
+  BrtWyv = 'brute wyvern',
+  EldDrg = 'elder dragon'
 }
 
 /**
@@ -132,8 +132,8 @@ export interface Monster {
   description: string;
   type: MonsterType;
   threat: number;
-  /** 
-   * List of hitzones. Will either contain a "default" hitzone group 
+  /**
+   * List of hitzones. Will either contain a "default" hitzone group
    * or multiple based on different monster states eg; flying, enraged, etc
    */
   hitzoneGroups: HitzoneGroup[];
@@ -149,7 +149,7 @@ export interface Monster {
  * Properties for a large (boss) monster
  */
 export interface LargeMonster
-  extends Omit<Monster, "carves" | "type" | "variants"> {
+  extends Omit<Monster, 'carves' | 'type' | 'variants'> {
   hp: number;
   type:
     | MonsterType.BrdWyv
@@ -174,11 +174,11 @@ export interface LargeMonster
     [CommonTypes.StatusType.PARALYSIS]: StatusValues;
     [CommonTypes.StatusType.SLEEP]: StatusValues;
     [CommonTypes.StatusType.STUN]: StatusValues;
-    [CommonTypes.StatusType.EXHAUST]?: Omit<StatusValues, "duration">;
+    [CommonTypes.StatusType.EXHAUST]?: Omit<StatusValues, 'duration'>;
   };
   /** {@link MonsterType.EldDrg} cannot be captured */
   capture?: CaptureInfo;
 }
 
-export type MonsterRecord = Record<Monster["id"], Monster>;
-export type LargeMonsterRecord = Record<LargeMonster["id"], LargeMonster>;
+export type MonsterRecord = Record<Monster['id'], Monster>;
+export type LargeMonsterRecord = Record<LargeMonster['id'], LargeMonster>;

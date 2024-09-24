@@ -1,40 +1,40 @@
-import { ItemTypes } from "../items";
-import { MonsterTypes } from "../monsters";
-import { MonsterLevelTypes } from "../monster-levels";
+import { ItemTypes } from '../items';
+import { MonsterTypes } from '../monsters';
+import { MonsterLevelTypes } from '../monster-levels';
 
 export type QuestType =
-  | "gather"
-  | "hunt"
-  | "capture"
-  | "harvest"
-  | "escort"
-  | "multihunt"
-  | "repel"
-  | "slay";
+  | 'gather'
+  | 'hunt'
+  | 'capture'
+  | 'harvest'
+  | 'escort'
+  | 'multihunt'
+  | 'repel'
+  | 'slay';
 
 export type QuestGoal =
-  | "gathering"
-  | "slay"
-  | "capture"
-  | "hunt"
-  | "break"
-  | "sever"
-  | "sonic"
-  | "repel"
-  | "other"
-  | "anthill";
+  | 'gathering'
+  | 'slay'
+  | 'capture'
+  | 'hunt'
+  | 'break'
+  | 'sever'
+  | 'sonic'
+  | 'repel'
+  | 'other'
+  | 'anthill';
 
 export enum Location {
-  DESERTED_ISLAND = "Deserted Island",
-  SANDY_PLAINS = "Sandy Plains",
-  FLOODED_FOREST = "Flooded Forest",
-  TUNDRA = "Tundra",
-  VOLCANO = "Volcano",
-  UNDERWATER_RUIN = "Underwater Ruin",
-  GREAT_DESERT = "Great Desert",
-  SACRED_LAND = "Sacred Land",
-  LAND_ARENA = "Land Arena",
-  WATER_ARENA = "Water Arena",
+  DESERTED_ISLAND = 'Deserted Island',
+  SANDY_PLAINS = 'Sandy Plains',
+  FLOODED_FOREST = 'Flooded Forest',
+  TUNDRA = 'Tundra',
+  VOLCANO = 'Volcano',
+  UNDERWATER_RUIN = 'Underwater Ruin',
+  GREAT_DESERT = 'Great Desert',
+  SACRED_LAND = 'Sacred Land',
+  LAND_ARENA = 'Land Arena',
+  WATER_ARENA = 'Water Arena'
 }
 
 /**
@@ -42,7 +42,7 @@ export enum Location {
  * The values are incorrect/flawed. ZeSpyro
  */
 interface BossInfo {
-  type1: MonsterTypes.Monster["id"];
+  type1: MonsterTypes.Monster['id'];
   /** Starting area? */
   type2: 0 | 1 | 2;
   /** TODO: Unidentified monster levels: 30, 55, 59, 60 */
@@ -92,14 +92,14 @@ interface Quest {
 type NumberRequired = number;
 
 export interface GatheringQuest extends Quest {
-  type: "gather";
-  goal: "gathering";
-  targets: Record<ItemTypes.Item["id"], NumberRequired>;
+  type: 'gather';
+  goal: 'gathering';
+  targets: Record<ItemTypes.Item['id'], NumberRequired>;
 }
 
 export interface HarvestQuest extends Quest {
-  type: "harvest";
-  goal: "gathering";
+  type: 'harvest';
+  goal: 'gathering';
   /** Harvest Ticket */
   targets: {
     396: 1;
@@ -107,56 +107,56 @@ export interface HarvestQuest extends Quest {
 }
 
 export interface HuntQuest extends Quest {
-  type: "hunt";
-  goal: "hunt" | "slay";
-  targets: Record<MonsterTypes.Monster["id"], NumberRequired>;
+  type: 'hunt';
+  goal: 'hunt' | 'slay';
+  targets: Record<MonsterTypes.Monster['id'], NumberRequired>;
   bosses: BossInfo[];
 }
 
 export interface MultiHuntQuest extends Quest {
-  type: "multihunt";
-  goal: "hunt";
-  targets: Record<MonsterTypes.Monster["id"], NumberRequired>;
+  type: 'multihunt';
+  goal: 'hunt';
+  targets: Record<MonsterTypes.Monster['id'], NumberRequired>;
 }
 
 export interface CaptureQuest extends Quest {
-  type: "capture";
-  goal: "capture";
-  targets: Record<MonsterTypes.Monster["id"], NumberRequired>;
+  type: 'capture';
+  goal: 'capture';
+  targets: Record<MonsterTypes.Monster['id'], NumberRequired>;
   bosses: BossInfo[];
 }
 
 export interface EscortQuest extends Quest {
-  type: "escort";
-  goal: "slay";
-  targets: Record<MonsterTypes.Monster["id"], NumberRequired>;
+  type: 'escort';
+  goal: 'slay';
+  targets: Record<MonsterTypes.Monster['id'], NumberRequired>;
 }
 
-export interface ArenaQuest extends Omit<Quest, "secondaryRewards"> {
-  type: "slay";
-  goal: "hunt";
-  targets: Record<MonsterTypes.Monster["id"], NumberRequired>;
+export interface ArenaQuest extends Omit<Quest, 'secondaryRewards'> {
+  type: 'slay';
+  goal: 'hunt';
+  targets: Record<MonsterTypes.Monster['id'], NumberRequired>;
   bosses: BossInfo[];
 }
 
 export interface RepelQuest extends Quest {
-  type: "repel";
-  goal: "repel" | "other";
+  type: 'repel';
+  goal: 'repel' | 'other';
   bosses: BossInfo[];
 }
 
 /** Quest star levels */
 export enum StarLevel {
-  OneStar = "1 Star",
-  TwoStar = "2 Star",
-  ThreeStar = "3 Star",
-  FourStar = "4 Star",
-  FiveStar = "5 Star",
-  SixStar = "6 Star",
+  OneStar = '1 Star',
+  TwoStar = '2 Star',
+  ThreeStar = '3 Star',
+  FourStar = '4 Star',
+  FiveStar = '5 Star',
+  SixStar = '6 Star'
 }
 
 export interface QuestRegion {
-  name: "Village" | "City";
+  name: 'Village' | 'City';
   starLevels: {
     [StarLevel.OneStar]: Quest[];
     [StarLevel.TwoStar]: Quest[];

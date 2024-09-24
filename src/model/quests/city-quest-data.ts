@@ -1,14 +1,14 @@
-import { QuestRegion, Location, StarLevel } from "./types";
+import { QuestRegion, Location, StarLevel } from './types';
 
 export const CityQuestData = Object.freeze<QuestRegion>({
-  name: "City",
+  name: 'City',
   starLevels: {
     [StarLevel.OneStar]: [
       {
         name: "Harvest 'Shroom",
-        client: "Apprentice Cook",
-        type: "gather",
-        goal: "gathering",
+        client: 'Apprentice Cook',
+        type: 'gather',
+        goal: 'gathering',
         targets: { 141: 14 },
         contract: 0,
         time: 50,
@@ -24,19 +24,19 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 139, count: 1, chance: 14 },
           { itemId: 359, count: 2, chance: 10 },
           { itemId: 130, count: 1, chance: 10 },
-          { itemId: 300, count: 1, chance: 8 },
+          { itemId: 300, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "gathering", targets: { 370: 4 }, reward: 1000, hrp: 60 },
-          { goal: "gathering", targets: { 140: 2 }, reward: 1000, hrp: 40 },
+          { goal: 'gathering', targets: { 370: 4 }, reward: 1000, hrp: 60 },
+          { goal: 'gathering', targets: { 140: 2 }, reward: 1000, hrp: 40 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "Sunken Treasures",
-        client: "Trader",
-        type: "gather",
-        goal: "gathering",
+        name: 'Sunken Treasures',
+        client: 'Trader',
+        type: 'gather',
+        goal: 'gathering',
         targets: { 398: 15 },
         contract: 100,
         time: 50,
@@ -52,19 +52,19 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 139, count: 1, chance: 14 },
           { itemId: 359, count: 2, chance: 10 },
           { itemId: 130, count: 1, chance: 10 },
-          { itemId: 300, count: 1, chance: 8 },
+          { itemId: 300, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "slay", targets: { 8: 6 }, reward: 1200, hrp: 90 },
-          { goal: "gathering", targets: { 397: 6 }, reward: 900, hrp: 50 },
+          { goal: 'slay', targets: { 8: 6 }, reward: 1200, hrp: 90 },
+          { goal: 'gathering', targets: { 397: 6 }, reward: 900, hrp: 50 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "The Perfect Panacea",
-        client: "Nurse",
-        type: "gather",
-        goal: "gathering",
+        name: 'The Perfect Panacea',
+        client: 'Nurse',
+        type: 'gather',
+        goal: 'gathering',
         targets: { 310: 5 },
         contract: 100,
         time: 50,
@@ -80,18 +80,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 139, count: 1, chance: 14 },
           { itemId: 359, count: 2, chance: 10 },
           { itemId: 130, count: 1, chance: 10 },
-          { itemId: 300, count: 1, chance: 8 },
+          { itemId: 300, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "slay", targets: { 1: 10 }, reward: 1200, hrp: 55 },
+          { goal: 'slay', targets: { 1: 10 }, reward: 1200, hrp: 55 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "The Jaggi Menace",
-        client: "Female Farmer",
-        type: "slay",
-        goal: "slay",
+        name: 'The Jaggi Menace',
+        client: 'Female Farmer',
+        type: 'slay',
+        goal: 'slay',
         targets: { 11: 8 },
         contract: 150,
         time: 50,
@@ -107,18 +107,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 139, count: 1, chance: 14 },
           { itemId: 359, count: 2, chance: 10 },
           { itemId: 130, count: 1, chance: 10 },
-          { itemId: 300, count: 1, chance: 8 },
+          { itemId: 300, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "slay", targets: { 10: 12 }, reward: 1200, hrp: 80 },
+          { goal: 'slay', targets: { 10: 12 }, reward: 1200, hrp: 80 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
         name: 'Help the "Hunter"',
-        client: "Rich Hunter",
-        type: "hunt",
-        goal: "hunt",
+        client: 'Rich Hunter',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 17: 1 },
         contract: 200,
         time: 50,
@@ -135,18 +135,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 278, count: 1, chance: 15 },
           { itemId: 277, count: 2, chance: 12 },
           { itemId: 279, count: 2, chance: 9 },
-          { itemId: 413, count: 1, chance: 8 },
+          { itemId: 413, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "break", targets: { 17: 0 }, reward: 400, hrp: 40 },
-          { goal: "stun", targets: [17], reward: 400, hrp: 40 },
-        ],
+          { goal: 'break', targets: { 17: 0 }, reward: 400, hrp: 40 },
+          { goal: 'stun', targets: [17], reward: 400, hrp: 40 }
+        ]
       },
       {
-        name: "Playing with Fire",
-        client: "Red-cheeked Huntress",
-        type: "hunt",
-        goal: "hunt",
+        name: 'Playing with Fire',
+        client: 'Red-cheeked Huntress',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 21: 1 },
         contract: 350,
         time: 50,
@@ -163,18 +163,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 139, count: 1, chance: 14 },
           { itemId: 359, count: 2, chance: 10 },
           { itemId: 130, count: 1, chance: 10 },
-          { itemId: 300, count: 1, chance: 8 },
+          { itemId: 300, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "gathering", targets: { 253: 1 }, reward: 1000, hrp: 30 },
-          { goal: "stun", targets: [21], reward: 600, hrp: 60 },
-        ],
+          { goal: 'gathering', targets: { 253: 1 }, reward: 1000, hrp: 30 },
+          { goal: 'stun', targets: [21], reward: 600, hrp: 60 }
+        ]
       },
       {
         name: "The Fisherman's Tale",
-        client: "Middle-aged Fisherman",
-        type: "capture",
-        goal: "capture",
+        client: 'Middle-aged Fisherman',
+        type: 'capture',
+        goal: 'capture',
         targets: { 27: 1 },
         contract: 400,
         time: 50,
@@ -191,15 +191,15 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 139, count: 1, chance: 14 },
           { itemId: 359, count: 2, chance: 10 },
           { itemId: 130, count: 1, chance: 10 },
-          { itemId: 300, count: 1, chance: 8 },
+          { itemId: 300, count: 1, chance: 8 }
         ],
-        subquests: [{ goal: "slay", targets: { 13: 5 }, reward: 800, hrp: 70 }],
+        subquests: [{ goal: 'slay', targets: { 13: 5 }, reward: 800, hrp: 70 }]
       },
       {
-        name: "Secret of the Crystal Bones",
-        client: "Archeologist",
-        type: "gather",
-        goal: "gathering",
+        name: 'Secret of the Crystal Bones',
+        client: 'Archeologist',
+        type: 'gather',
+        goal: 'gathering',
         targets: { 364: 14 },
         contract: 100,
         time: 50,
@@ -215,18 +215,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 149, count: 2, chance: 17 },
           { itemId: 300, count: 1, chance: 12 },
           { itemId: 182, count: 4, chance: 10 },
-          { itemId: 406, count: 1, chance: 5 },
+          { itemId: 406, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "slay", targets: { 9: 12 }, reward: 1200, hrp: 70 },
+          { goal: 'slay', targets: { 9: 12 }, reward: 1200, hrp: 70 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "No Guts, No Glory",
-        client: "Caravan Leader",
-        type: "gather",
-        goal: "gathering",
+        name: 'No Guts, No Glory',
+        client: 'Caravan Leader',
+        type: 'gather',
+        goal: 'gathering',
         targets: { 397: 10 },
         contract: 150,
         time: 50,
@@ -242,18 +242,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 361, count: 1, chance: 12 },
           { itemId: 137, count: 1, chance: 10 },
           { itemId: 116, count: 1, chance: 8 },
-          { itemId: 300, count: 1, chance: 8 },
+          { itemId: 300, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "slay", targets: { 15: 14 }, reward: 1600, hrp: 100 },
+          { goal: 'slay', targets: { 15: 14 }, reward: 1600, hrp: 100 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "Jaggi Population Control",
-        client: "Influential Citizen",
-        type: "capture",
-        goal: "capture",
+        name: 'Jaggi Population Control',
+        client: 'Influential Citizen',
+        type: 'capture',
+        goal: 'capture',
         targets: { 17: 1 },
         contract: 200,
         time: 50,
@@ -270,18 +270,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 361, count: 1, chance: 12 },
           { itemId: 137, count: 1, chance: 10 },
           { itemId: 116, count: 1, chance: 8 },
-          { itemId: 300, count: 1, chance: 8 },
+          { itemId: 300, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "slay", targets: { 11: 6 }, reward: 1400, hrp: 70 },
-          { goal: "slay", targets: { 10: 10 }, reward: 1200, hrp: 60 },
-        ],
+          { goal: 'slay', targets: { 11: 6 }, reward: 1400, hrp: 70 },
+          { goal: 'slay', targets: { 10: 10 }, reward: 1200, hrp: 60 }
+        ]
       },
       {
-        name: "Tracking the Trickster",
-        client: "Newbie Hunter",
-        type: "capture",
-        goal: "capture",
+        name: 'Tracking the Trickster',
+        client: 'Newbie Hunter',
+        type: 'capture',
+        goal: 'capture',
         targets: { 21: 1 },
         contract: 350,
         time: 50,
@@ -298,18 +298,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 361, count: 1, chance: 12 },
           { itemId: 137, count: 1, chance: 10 },
           { itemId: 116, count: 1, chance: 8 },
-          { itemId: 300, count: 1, chance: 8 },
+          { itemId: 300, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "break", targets: { 21: 0 }, reward: 600, hrp: 60 },
-          { goal: "break", targets: { 21: 1 }, reward: 600, hrp: 60 },
-        ],
+          { goal: 'break', targets: { 21: 0 }, reward: 600, hrp: 60 },
+          { goal: 'break', targets: { 21: 1 }, reward: 600, hrp: 60 }
+        ]
       },
       {
-        name: "Goldenfish Opportunity",
-        client: "Fish Fanboy",
-        type: "gather",
-        goal: "gathering",
+        name: 'Goldenfish Opportunity',
+        client: 'Fish Fanboy',
+        type: 'gather',
+        goal: 'gathering',
         targets: { 203: 6 },
         contract: 350,
         time: 50,
@@ -325,19 +325,19 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 190, count: 2, chance: 14 },
           { itemId: 300, count: 1, chance: 12 },
           { itemId: 117, count: 1, chance: 8 },
-          { itemId: 406, count: 1, chance: 4 },
+          { itemId: 406, count: 1, chance: 4 }
         ],
         subquests: [
-          { goal: "gathering", targets: { 202: 5 }, reward: 800, hrp: 25 },
-          { goal: "gathering", targets: { 202: 3 }, reward: 1200, hrp: 45 },
+          { goal: 'gathering', targets: { 202: 5 }, reward: 800, hrp: 25 },
+          { goal: 'gathering', targets: { 202: 3 }, reward: 1200, hrp: 45 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "No Love for Ludroth",
-        client: "Ex-Caravan Sentry",
-        type: "slay",
-        goal: "slay",
+        name: 'No Love for Ludroth',
+        client: 'Ex-Caravan Sentry',
+        type: 'slay',
+        goal: 'slay',
         targets: { 13: 10 },
         contract: 150,
         time: 50,
@@ -353,16 +353,16 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 190, count: 2, chance: 14 },
           { itemId: 300, count: 1, chance: 12 },
           { itemId: 117, count: 1, chance: 8 },
-          { itemId: 406, count: 1, chance: 4 },
+          { itemId: 406, count: 1, chance: 4 }
         ],
-        subquests: [{ goal: "slay", targets: { 8: 7 }, reward: 1400, hrp: 90 }],
-        bosses: [],
+        subquests: [{ goal: 'slay', targets: { 8: 7 }, reward: 1400, hrp: 90 }],
+        bosses: []
       },
       {
         name: "The Fisherman's Tale",
-        client: "Middle-aged Fisherman",
-        type: "hunt",
-        goal: "hunt",
+        client: 'Middle-aged Fisherman',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 27: 1 },
         contract: 400,
         time: 50,
@@ -379,20 +379,20 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 190, count: 2, chance: 14 },
           { itemId: 300, count: 1, chance: 12 },
           { itemId: 117, count: 1, chance: 8 },
-          { itemId: 406, count: 1, chance: 4 },
+          { itemId: 406, count: 1, chance: 4 }
         ],
         subquests: [
-          { goal: "break", targets: { 27: 0 }, reward: 600, hrp: 60 },
-          { goal: "sever", targets: { 27: 1 }, reward: 600, hrp: 60 },
-        ],
-      },
+          { goal: 'break', targets: { 27: 0 }, reward: 600, hrp: 60 },
+          { goal: 'sever', targets: { 27: 1 }, reward: 600, hrp: 60 }
+        ]
+      }
     ],
     [StarLevel.TwoStar]: [
       {
-        name: "Harvest Tour: Deserted Isle",
-        client: "Felyne Tour Guide",
-        type: "harvest",
-        goal: "gathering",
+        name: 'Harvest Tour: Deserted Isle',
+        client: 'Felyne Tour Guide',
+        type: 'harvest',
+        goal: 'gathering',
         targets: { 396: 1 },
         contract: 0,
         time: 50,
@@ -408,15 +408,15 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 139, count: 1, chance: 14 },
           { itemId: 359, count: 2, chance: 10 },
           { itemId: 130, count: 1, chance: 10 },
-          { itemId: 300, count: 1, chance: 8 },
+          { itemId: 300, count: 1, chance: 8 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "Harvest Tour: Sandy Plains",
-        client: "Felyne Tour Guide",
-        type: "harvest",
-        goal: "gathering",
+        name: 'Harvest Tour: Sandy Plains',
+        client: 'Felyne Tour Guide',
+        type: 'harvest',
+        goal: 'gathering',
         targets: { 396: 1 },
         contract: 0,
         time: 50,
@@ -432,15 +432,15 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 361, count: 1, chance: 12 },
           { itemId: 137, count: 1, chance: 10 },
           { itemId: 116, count: 1, chance: 8 },
-          { itemId: 300, count: 1, chance: 8 },
+          { itemId: 300, count: 1, chance: 8 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "Bug Hunt",
-        client: "Brainy Biologist",
-        type: "slay",
-        goal: "slay",
+        name: 'Bug Hunt',
+        client: 'Brainy Biologist',
+        type: 'slay',
+        goal: 'slay',
         targets: { 5: 15 },
         contract: 100,
         time: 50,
@@ -456,19 +456,19 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 139, count: 1, chance: 14 },
           { itemId: 359, count: 2, chance: 10 },
           { itemId: 130, count: 1, chance: 10 },
-          { itemId: 300, count: 1, chance: 8 },
+          { itemId: 300, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "gathering", targets: { 370: 4 }, reward: 1100, hrp: 60 },
-          { goal: "gathering", targets: { 140: 2 }, reward: 1100, hrp: 40 },
+          { goal: 'gathering', targets: { 370: 4 }, reward: 1100, hrp: 60 },
+          { goal: 'gathering', targets: { 140: 2 }, reward: 1100, hrp: 40 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "Wyvern Conservation",
-        client: "Wise Princess",
-        type: "gather",
-        goal: "gathering",
+        name: 'Wyvern Conservation',
+        client: 'Wise Princess',
+        type: 'gather',
+        goal: 'gathering',
         targets: { 136: 3 },
         contract: 600,
         time: 50,
@@ -484,19 +484,19 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 139, count: 1, chance: 14 },
           { itemId: 359, count: 2, chance: 10 },
           { itemId: 130, count: 1, chance: 10 },
-          { itemId: 300, count: 1, chance: 8 },
+          { itemId: 300, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "gathering", targets: { 136: 1 }, reward: 3000, hrp: 100 },
-          { goal: "slay", targets: { 10: 12 }, reward: 1500, hrp: 80 },
+          { goal: 'gathering', targets: { 136: 1 }, reward: 3000, hrp: 100 },
+          { goal: 'slay', targets: { 10: 12 }, reward: 1500, hrp: 80 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "A Royal Pain",
-        client: "Middle-aged Knight",
-        type: "capture",
-        goal: "capture",
+        name: 'A Royal Pain',
+        client: 'Middle-aged Knight',
+        type: 'capture',
+        goal: 'capture',
         targets: { 22: 1 },
         contract: 500,
         time: 50,
@@ -513,18 +513,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 139, count: 1, chance: 14 },
           { itemId: 359, count: 2, chance: 10 },
           { itemId: 130, count: 1, chance: 10 },
-          { itemId: 300, count: 1, chance: 8 },
+          { itemId: 300, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "break", targets: { 22: 0 }, reward: 800, hrp: 80 },
-          { goal: "sever", targets: { 22: 1 }, reward: 800, hrp: 80 },
-        ],
+          { goal: 'break', targets: { 22: 0 }, reward: 800, hrp: 80 },
+          { goal: 'sever', targets: { 22: 1 }, reward: 800, hrp: 80 }
+        ]
       },
       {
-        name: "Rhenoplos Rampage!",
-        client: "City Protector",
-        type: "slay",
-        goal: "slay",
+        name: 'Rhenoplos Rampage!',
+        client: 'City Protector',
+        type: 'slay',
+        goal: 'slay',
         targets: { 16: 13 },
         contract: 1500,
         time: 50,
@@ -540,16 +540,16 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 361, count: 1, chance: 12 },
           { itemId: 137, count: 1, chance: 10 },
           { itemId: 116, count: 1, chance: 8 },
-          { itemId: 300, count: 1, chance: 8 },
+          { itemId: 300, count: 1, chance: 8 }
         ],
-        subquests: [{ goal: "slay", targets: { 0: 6 }, reward: 600, hrp: 55 }],
-        bosses: [],
+        subquests: [{ goal: 'slay', targets: { 0: 6 }, reward: 600, hrp: 55 }],
+        bosses: []
       },
       {
-        name: "Poached Herbivore Eggs",
-        client: "Newlywed Wife",
-        type: "gather",
-        goal: "gathering",
+        name: 'Poached Herbivore Eggs',
+        client: 'Newlywed Wife',
+        type: 'gather',
+        goal: 'gathering',
         targets: { 363: 3 },
         contract: 400,
         time: 50,
@@ -565,19 +565,19 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 361, count: 1, chance: 12 },
           { itemId: 137, count: 1, chance: 10 },
           { itemId: 116, count: 1, chance: 8 },
-          { itemId: 300, count: 1, chance: 8 },
+          { itemId: 300, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "gathering", targets: { 363: 1 }, reward: 2000, hrp: 80 },
-          { goal: "slay", targets: { 11: 8 }, reward: 1700, hrp: 100 },
+          { goal: 'gathering', targets: { 363: 1 }, reward: 2000, hrp: 80 },
+          { goal: 'slay', targets: { 11: 8 }, reward: 1700, hrp: 100 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "Specimen Collection",
-        client: "Brainy Biologist",
-        type: "capture",
-        goal: "capture",
+        name: 'Specimen Collection',
+        client: 'Brainy Biologist',
+        type: 'capture',
+        goal: 'capture',
         targets: { 19: 1 },
         contract: 500,
         time: 50,
@@ -592,18 +592,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 300, count: 2, chance: 28 },
           { itemId: 301, count: 1, chance: 14 },
           { itemId: 414, count: 3, chance: 10 },
-          { itemId: 409, count: 1, chance: 5 },
+          { itemId: 409, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "sever", targets: { 19: 2 }, reward: 700, hrp: 100 },
-          { goal: "break", targets: { 19: 0 }, reward: 700, hrp: 100 },
-        ],
+          { goal: 'sever', targets: { 19: 2 }, reward: 700, hrp: 100 },
+          { goal: 'break', targets: { 19: 0 }, reward: 700, hrp: 100 }
+        ]
       },
       {
-        name: "Flooded Forest Extermination",
-        client: "Cattle Rancher",
-        type: "slay",
-        goal: "slay",
+        name: 'Flooded Forest Extermination',
+        client: 'Cattle Rancher',
+        type: 'slay',
+        goal: 'slay',
         targets: { 4: 20 },
         contract: 150,
         time: 50,
@@ -619,18 +619,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 190, count: 2, chance: 14 },
           { itemId: 300, count: 1, chance: 12 },
           { itemId: 117, count: 1, chance: 8 },
-          { itemId: 406, count: 1, chance: 4 },
+          { itemId: 406, count: 1, chance: 4 }
         ],
         subquests: [
-          { goal: "gathering", targets: { 119: 6 }, reward: 1600, hrp: 55 },
+          { goal: 'gathering', targets: { 119: 6 }, reward: 1600, hrp: 55 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "Scene of the Crime",
-        client: "Trader",
-        type: "hunt",
-        goal: "hunt",
+        name: 'Scene of the Crime',
+        client: 'Trader',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 28: 1 },
         contract: 550,
         time: 50,
@@ -647,15 +647,15 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 190, count: 2, chance: 14 },
           { itemId: 300, count: 1, chance: 12 },
           { itemId: 117, count: 1, chance: 8 },
-          { itemId: 406, count: 1, chance: 4 },
+          { itemId: 406, count: 1, chance: 4 }
         ],
-        subquests: [{ goal: "fish", targets: [28], reward: 1200, hrp: 60 }],
+        subquests: [{ goal: 'fish', targets: [28], reward: 1200, hrp: 60 }]
       },
       {
-        name: "Lady and the Gobul",
-        client: "Spoiled Princess",
-        type: "capture",
-        goal: "capture",
+        name: 'Lady and the Gobul',
+        client: 'Spoiled Princess',
+        type: 'capture',
+        goal: 'capture',
         targets: { 28: 1 },
         contract: 550,
         time: 50,
@@ -672,18 +672,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 190, count: 2, chance: 14 },
           { itemId: 300, count: 1, chance: 12 },
           { itemId: 117, count: 1, chance: 8 },
-          { itemId: 406, count: 1, chance: 4 },
+          { itemId: 406, count: 1, chance: 4 }
         ],
         subquests: [
-          { goal: "break", targets: { 28: 0 }, reward: 800, hrp: 100 },
-          { goal: "sever", targets: { 28: 1 }, reward: 800, hrp: 100 },
-        ],
+          { goal: 'break', targets: { 28: 0 }, reward: 800, hrp: 100 },
+          { goal: 'sever', targets: { 28: 1 }, reward: 800, hrp: 100 }
+        ]
       },
       {
         name: "The Merchant's Mission",
-        client: "Simple Fur Trader",
-        type: "hunt",
-        goal: "hunt",
+        client: 'Simple Fur Trader',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 22: 1 },
         contract: 500,
         time: 50,
@@ -700,18 +700,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 190, count: 2, chance: 14 },
           { itemId: 300, count: 1, chance: 12 },
           { itemId: 117, count: 1, chance: 8 },
-          { itemId: 406, count: 1, chance: 4 },
+          { itemId: 406, count: 1, chance: 4 }
         ],
         subquests: [
-          { goal: "break", targets: { 22: 1 }, reward: 800, hrp: 80 },
-          { goal: "gathering", targets: { 253: 1 }, reward: 1200, hrp: 40 },
-        ],
+          { goal: 'break', targets: { 22: 1 }, reward: 800, hrp: 80 },
+          { goal: 'gathering', targets: { 253: 1 }, reward: 1200, hrp: 40 }
+        ]
       },
       {
-        name: "Blood From a Stone",
-        client: "Female Geologist",
-        type: "gather",
-        goal: "gathering",
+        name: 'Blood From a Stone',
+        client: 'Female Geologist',
+        type: 'gather',
+        goal: 'gathering',
         targets: { 395: 13 },
         contract: 150,
         time: 50,
@@ -727,19 +727,19 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 414, count: 1, chance: 12 },
           { itemId: 301, count: 1, chance: 10 },
           { itemId: 106, count: 1, chance: 5 },
-          { itemId: 406, count: 1, chance: 5 },
+          { itemId: 406, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "gathering", targets: { 509: 3 }, reward: 1200, hrp: 55 },
-          { goal: "light", targets: [5], reward: 500, hrp: 40 },
+          { goal: 'gathering', targets: { 509: 3 }, reward: 1200, hrp: 55 },
+          { goal: 'light', targets: [5], reward: 500, hrp: 40 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "Leader of the Icepack",
-        client: "Tundra-expedition Leader",
-        type: "hunt",
-        goal: "hunt",
+        name: 'Leader of the Icepack',
+        client: 'Tundra-expedition Leader',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 18: 1 },
         contract: 250,
         time: 50,
@@ -756,17 +756,17 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 414, count: 1, chance: 12 },
           { itemId: 301, count: 1, chance: 10 },
           { itemId: 106, count: 1, chance: 5 },
-          { itemId: 406, count: 1, chance: 5 },
+          { itemId: 406, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "slay", targets: { 12: 8 }, reward: 1600, hrp: 100 },
-        ],
+          { goal: 'slay', targets: { 12: 8 }, reward: 1600, hrp: 100 }
+        ]
       },
       {
         name: "The Butler's Great Baggi",
-        client: "White-clad Butler",
-        type: "capture",
-        goal: "capture",
+        client: 'White-clad Butler',
+        type: 'capture',
+        goal: 'capture',
         targets: { 18: 1 },
         contract: 250,
         time: 50,
@@ -782,18 +782,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 182, count: 3, chance: 18 },
           { itemId: 406, count: 1, chance: 10 },
           { itemId: 301, count: 1, chance: 8 },
-          { itemId: 300, count: 1, chance: 5 },
+          { itemId: 300, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "break", targets: { 18: 0 }, reward: 600, hrp: 40 },
-          { goal: "stun", targets: [18], reward: 600, hrp: 40 },
-        ],
+          { goal: 'break', targets: { 18: 0 }, reward: 600, hrp: 40 },
+          { goal: 'stun', targets: [18], reward: 600, hrp: 40 }
+        ]
       },
       {
-        name: "Leading the Charge",
-        client: "Brainy Biologist",
-        type: "hunt",
-        goal: "hunt",
+        name: 'Leading the Charge',
+        client: 'Brainy Biologist',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 19: 1 },
         contract: 500,
         time: 50,
@@ -810,20 +810,20 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 361, count: 1, chance: 12 },
           { itemId: 137, count: 1, chance: 10 },
           { itemId: 116, count: 1, chance: 8 },
-          { itemId: 300, count: 1, chance: 8 },
+          { itemId: 300, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "sever", targets: { 19: 1 }, reward: 700, hrp: 100 },
-          { goal: "anthill", count: 2, reward: 800, hrp: 40 },
-        ],
-      },
+          { goal: 'sever', targets: { 19: 1 }, reward: 700, hrp: 100 },
+          { goal: 'anthill', count: 2, reward: 800, hrp: 40 }
+        ]
+      }
     ],
     [StarLevel.ThreeStar]: [
       {
-        name: "Harvest Tour: Flooded Forest",
-        client: "Felyne Tour Guide",
-        type: "harvest",
-        goal: "gathering",
+        name: 'Harvest Tour: Flooded Forest',
+        client: 'Felyne Tour Guide',
+        type: 'harvest',
+        goal: 'gathering',
         targets: { 396: 1 },
         contract: 0,
         time: 50,
@@ -839,15 +839,15 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 190, count: 2, chance: 14 },
           { itemId: 300, count: 1, chance: 12 },
           { itemId: 117, count: 1, chance: 8 },
-          { itemId: 406, count: 1, chance: 4 },
+          { itemId: 406, count: 1, chance: 4 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "Harvest Tour: Tundra",
-        client: "Felyne Tour Guide",
-        type: "harvest",
-        goal: "gathering",
+        name: 'Harvest Tour: Tundra',
+        client: 'Felyne Tour Guide',
+        type: 'harvest',
+        goal: 'gathering',
         targets: { 396: 1 },
         contract: 0,
         time: 50,
@@ -863,15 +863,15 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 414, count: 1, chance: 12 },
           { itemId: 301, count: 1, chance: 10 },
           { itemId: 106, count: 1, chance: 5 },
-          { itemId: 406, count: 1, chance: 5 },
+          { itemId: 406, count: 1, chance: 5 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "We Need a Hero",
-        client: "Princess of a Ruined Land",
-        type: "hunt",
-        goal: "hunt",
+        name: 'We Need a Hero',
+        client: 'Princess of a Ruined Land',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 23: 1 },
         contract: 800,
         time: 50,
@@ -889,18 +889,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 120, count: 2, chance: 10 },
           { itemId: 413, count: 1, chance: 10 },
           { itemId: 407, count: 1, chance: 8 },
-          { itemId: 301, count: 1, chance: 8 },
+          { itemId: 301, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "sever", targets: { 23: 1 }, reward: 1000, hrp: 120 },
-          { goal: "gathering", targets: { 253: 1 }, reward: 1600, hrp: 60 },
-        ],
+          { goal: 'sever', targets: { 23: 1 }, reward: 1000, hrp: 120 },
+          { goal: 'gathering', targets: { 253: 1 }, reward: 1600, hrp: 60 }
+        ]
       },
       {
-        name: "Into the Danger Zone",
-        client: "City Security Chief",
-        type: "hunt",
-        goal: "hunt",
+        name: 'Into the Danger Zone',
+        client: 'City Security Chief',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 24: 1 },
         contract: 850,
         time: 50,
@@ -916,18 +916,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 315, count: 28, chance: 20 },
           { itemId: 407, count: 1, chance: 18 },
           { itemId: 108, count: 1, chance: 8 },
-          { itemId: 409, count: 1, chance: 5 },
+          { itemId: 409, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "anthill", count: 2, reward: 800, hrp: 40 },
-          { goal: "stun", targets: [24], reward: 1000, hrp: 140 },
-        ],
+          { goal: 'anthill', count: 2, reward: 800, hrp: 40 },
+          { goal: 'stun', targets: [24], reward: 1000, hrp: 140 }
+        ]
       },
       {
-        name: "Wanted Alive",
-        client: "Middle-aged Knight",
-        type: "capture",
-        goal: "capture",
+        name: 'Wanted Alive',
+        client: 'Middle-aged Knight',
+        type: 'capture',
+        goal: 'capture',
         targets: { 24: 1 },
         contract: 850,
         time: 50,
@@ -942,18 +942,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 301, count: 1, chance: 25 },
           { itemId: 300, count: 1, chance: 20 },
           { itemId: 407, count: 1, chance: 15 },
-          { itemId: 413, count: 1, chance: 5 },
+          { itemId: 413, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "break", targets: { 24: 0 }, reward: 1200, hrp: 140 },
-          { goal: "sever", targets: { 24: 1 }, reward: 1200, hrp: 140 },
-        ],
+          { goal: 'break', targets: { 24: 0 }, reward: 1200, hrp: 140 },
+          { goal: 'sever', targets: { 24: 1 }, reward: 1200, hrp: 140 }
+        ]
       },
       {
-        name: "Rotten Fish",
-        client: "Frontier Baron",
-        type: "capture",
-        goal: "capture",
+        name: 'Rotten Fish',
+        client: 'Frontier Baron',
+        type: 'capture',
+        goal: 'capture',
         targets: { 29: 1 },
         contract: 750,
         time: 50,
@@ -968,18 +968,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 301, count: 1, chance: 25 },
           { itemId: 300, count: 1, chance: 20 },
           { itemId: 407, count: 1, chance: 15 },
-          { itemId: 413, count: 1, chance: 5 },
+          { itemId: 413, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "break", targets: { 29: 0 }, reward: 800, hrp: 120 },
-          { goal: "sever", targets: { 29: 1 }, reward: 800, hrp: 120 },
-        ],
+          { goal: 'break', targets: { 29: 0 }, reward: 800, hrp: 120 },
+          { goal: 'sever', targets: { 29: 1 }, reward: 800, hrp: 120 }
+        ]
       },
       {
-        name: "The Creeping Venom",
-        client: "Cocky Hunter",
-        type: "hunt",
-        goal: "hunt",
+        name: 'The Creeping Venom',
+        client: 'Cocky Hunter',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 25: 1 },
         contract: 600,
         time: 50,
@@ -996,18 +996,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 414, count: 1, chance: 12 },
           { itemId: 301, count: 1, chance: 10 },
           { itemId: 106, count: 1, chance: 5 },
-          { itemId: 406, count: 1, chance: 5 },
+          { itemId: 406, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "slay", targets: { 9: 12 }, reward: 1200, hrp: 70 },
-          { goal: "eggs", count: 8, reward: 800, hrp: 55 },
-        ],
+          { goal: 'slay', targets: { 9: 12 }, reward: 1200, hrp: 70 },
+          { goal: 'eggs', count: 8, reward: 800, hrp: 55 }
+        ]
       },
       {
-        name: "The Lost Expedition",
-        client: "Female Geologist",
-        type: "hunt",
-        goal: "hunt",
+        name: 'The Lost Expedition',
+        client: 'Female Geologist',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 26: 1 },
         contract: 800,
         time: 50,
@@ -1027,18 +1027,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 150, count: 1, chance: 8 },
           { itemId: 301, count: 1, chance: 8 },
           { itemId: 407, count: 1, chance: 7 },
-          { itemId: 410, count: 1, chance: 5 },
+          { itemId: 410, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "pitfall", targets: [26], reward: 500, hrp: 60 },
-          { goal: "gathering", targets: { 253: 1 }, reward: 1600, hrp: 60 },
-        ],
+          { goal: 'pitfall', targets: [26], reward: 500, hrp: 60 },
+          { goal: 'gathering', targets: { 253: 1 }, reward: 1600, hrp: 60 }
+        ]
       },
       {
         name: "The Bard's Barioth",
-        client: "Wandering Bard",
-        type: "capture",
-        goal: "capture",
+        client: 'Wandering Bard',
+        type: 'capture',
+        goal: 'capture',
         targets: { 26: 1 },
         contract: 800,
         time: 50,
@@ -1053,18 +1053,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 301, count: 1, chance: 25 },
           { itemId: 300, count: 1, chance: 20 },
           { itemId: 407, count: 1, chance: 15 },
-          { itemId: 413, count: 1, chance: 5 },
+          { itemId: 413, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "break", targets: { 26: 1 }, reward: 1000, hrp: 120 },
-          { goal: "break", targets: { 26: 0 }, reward: 1000, hrp: 120 },
-        ],
+          { goal: 'break', targets: { 26: 1 }, reward: 1000, hrp: 120 },
+          { goal: 'break', targets: { 26: 0 }, reward: 1000, hrp: 120 }
+        ]
       },
       {
-        name: "Roll the Uroktor",
-        client: "Caravan Leader",
-        type: "hunt",
-        goal: "hunt",
+        name: 'Roll the Uroktor',
+        client: 'Caravan Leader',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 14: 15 },
         contract: 150,
         time: 50,
@@ -1081,18 +1081,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 410, count: 1, chance: 8 },
           { itemId: 104, count: 1, chance: 6 },
           { itemId: 406, count: 1, chance: 6 },
-          { itemId: 407, count: 1, chance: 3 },
+          { itemId: 407, count: 1, chance: 3 }
         ],
         subquests: [
-          { goal: "slay", targets: { 16: 8 }, reward: 1400, hrp: 120 },
+          { goal: 'slay', targets: { 16: 8 }, reward: 1400, hrp: 120 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "Powder Burns",
-        client: "City Armorer",
-        type: "gather",
-        goal: "gathering",
+        name: 'Powder Burns',
+        client: 'City Armorer',
+        type: 'gather',
+        goal: 'gathering',
         targets: { 350: 3 },
         contract: 800,
         time: 50,
@@ -1109,18 +1109,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 410, count: 1, chance: 8 },
           { itemId: 104, count: 1, chance: 6 },
           { itemId: 406, count: 1, chance: 6 },
-          { itemId: 407, count: 1, chance: 3 },
+          { itemId: 407, count: 1, chance: 3 }
         ],
         subquests: [
-          { goal: "gathering", targets: { 350: 1 }, reward: 4000, hrp: 150 },
+          { goal: 'gathering', targets: { 350: 1 }, reward: 4000, hrp: 150 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
         name: "The Volcano's Fury",
-        client: "Scarred Hunter",
-        type: "hunt",
-        goal: "hunt",
+        client: 'Scarred Hunter',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 20: 1 },
         contract: 850,
         time: 50,
@@ -1136,18 +1136,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 315, count: 28, chance: 20 },
           { itemId: 407, count: 1, chance: 18 },
           { itemId: 108, count: 1, chance: 8 },
-          { itemId: 409, count: 1, chance: 5 },
+          { itemId: 409, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "gathering", targets: { 253: 3 }, reward: 3200, hrp: 140 },
-          { goal: "gathering", targets: { 253: 1 }, reward: 1600, hrp: 70 },
-        ],
+          { goal: 'gathering', targets: { 253: 3 }, reward: 3200, hrp: 140 },
+          { goal: 'gathering', targets: { 253: 1 }, reward: 1600, hrp: 70 }
+        ]
       },
       {
-        name: "To Catch an Uragaan",
-        client: "Brainy Biologist",
-        type: "capture",
-        goal: "capture",
+        name: 'To Catch an Uragaan',
+        client: 'Brainy Biologist',
+        type: 'capture',
+        goal: 'capture',
         targets: { 20: 1 },
         contract: 850,
         time: 50,
@@ -1162,18 +1162,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 301, count: 1, chance: 25 },
           { itemId: 300, count: 1, chance: 20 },
           { itemId: 407, count: 1, chance: 15 },
-          { itemId: 413, count: 1, chance: 5 },
+          { itemId: 413, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "break", targets: { 20: 0 }, reward: 1200, hrp: 140 },
-          { goal: "sever", targets: { 20: 1 }, reward: 1200, hrp: 140 },
-        ],
+          { goal: 'break', targets: { 20: 0 }, reward: 1200, hrp: 140 },
+          { goal: 'sever', targets: { 20: 1 }, reward: 1200, hrp: 140 }
+        ]
       },
       {
-        name: "[Advanced] Double Trouble",
-        client: "Head of Island Guard",
-        type: "multihunt",
-        goal: "hunt",
+        name: '[Advanced] Double Trouble',
+        client: 'Head of Island Guard',
+        type: 'multihunt',
+        goal: 'hunt',
         targets: { 22: 1, 23: 1 },
         contract: 1550,
         time: 50,
@@ -1184,7 +1184,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         hrp: 1820,
         bosses: [
           { type1: 22, type2: 0, level: 40, size: 100, min: 0, max: 3 },
-          { type1: 23, type2: 1, level: 40, size: 100, min: 0, max: 3 },
+          { type1: 23, type2: 1, level: 40, size: 100, min: 0, max: 3 }
         ],
         secondaryRewards: [
           { itemId: 255, count: 1, chance: 28 },
@@ -1193,14 +1193,14 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 330, count: 5, chance: 12 },
           { itemId: 252, count: 1, chance: 9 },
           { itemId: 257, count: 1, chance: 8 },
-          { itemId: 151, count: 1, chance: 5 },
-        ],
+          { itemId: 151, count: 1, chance: 5 }
+        ]
       },
       {
-        name: "[Advanced] Fort Gigginox",
-        client: "Ruler of the Frozen Lands",
-        type: "capture",
-        goal: "capture",
+        name: '[Advanced] Fort Gigginox',
+        client: 'Ruler of the Frozen Lands',
+        type: 'capture',
+        goal: 'capture',
         targets: { 25: 1 },
         contract: 700,
         time: 50,
@@ -1216,18 +1216,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 315, count: 28, chance: 20 },
           { itemId: 407, count: 1, chance: 18 },
           { itemId: 108, count: 1, chance: 8 },
-          { itemId: 409, count: 1, chance: 5 },
+          { itemId: 409, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "break", targets: { 25: 0 }, reward: 1000, hrp: 140 },
-          { goal: "break", targets: { 25: 1 }, reward: 1000, hrp: 140 },
-        ],
+          { goal: 'break', targets: { 25: 0 }, reward: 1000, hrp: 140 },
+          { goal: 'break', targets: { 25: 1 }, reward: 1000, hrp: 140 }
+        ]
       },
       {
-        name: "[Advanced] Rathalos Alert",
-        client: "Wyvern Observation Post",
-        type: "capture",
-        goal: "capture",
+        name: '[Advanced] Rathalos Alert',
+        client: 'Wyvern Observation Post',
+        type: 'capture',
+        goal: 'capture',
         targets: { 23: 1 },
         contract: 850,
         time: 50,
@@ -1243,18 +1243,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 315, count: 28, chance: 20 },
           { itemId: 407, count: 1, chance: 18 },
           { itemId: 108, count: 1, chance: 8 },
-          { itemId: 409, count: 1, chance: 5 },
+          { itemId: 409, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "break", targets: { 23: 0 }, reward: 1200, hrp: 140 },
-          { goal: "sever", targets: { 23: 1 }, reward: 1200, hrp: 140 },
-        ],
+          { goal: 'break', targets: { 23: 0 }, reward: 1200, hrp: 140 },
+          { goal: 'sever', targets: { 23: 1 }, reward: 1200, hrp: 140 }
+        ]
       },
       {
-        name: "[Advanced] Agnaktor Alert",
-        client: "Volcano Observation Post",
-        type: "hunt",
-        goal: "hunt",
+        name: '[Advanced] Agnaktor Alert',
+        client: 'Volcano Observation Post',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 30: 1 },
         contract: 1100,
         time: 50,
@@ -1272,18 +1272,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 410, count: 1, chance: 8 },
           { itemId: 104, count: 1, chance: 6 },
           { itemId: 406, count: 1, chance: 6 },
-          { itemId: 407, count: 1, chance: 3 },
+          { itemId: 407, count: 1, chance: 3 }
         ],
         subquests: [
-          { goal: "break", targets: { 30: 0 }, reward: 1400, hrp: 160 },
-          { goal: "sever", targets: { 30: 1 }, reward: 1400, hrp: 160 },
-        ],
+          { goal: 'break', targets: { 30: 0 }, reward: 1400, hrp: 160 },
+          { goal: 'sever', targets: { 30: 1 }, reward: 1400, hrp: 160 }
+        ]
       },
       {
         name: "The Fisherman's Fiend",
-        client: "Frontier Baron",
-        type: "hunt",
-        goal: "hunt",
+        client: 'Frontier Baron',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 29: 1 },
         contract: 750,
         time: 50,
@@ -1301,18 +1301,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 120, count: 2, chance: 10 },
           { itemId: 413, count: 1, chance: 10 },
           { itemId: 407, count: 1, chance: 8 },
-          { itemId: 301, count: 1, chance: 8 },
+          { itemId: 301, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "break", targets: { 29: 1 }, reward: 800, hrp: 120 },
-          { goal: "gathering", targets: { 253: 1 }, reward: 1200, hrp: 60 },
-        ],
+          { goal: 'break', targets: { 29: 1 }, reward: 800, hrp: 120 },
+          { goal: 'gathering', targets: { 253: 1 }, reward: 1200, hrp: 60 }
+        ]
       },
       {
-        name: "The Festival of Fear",
-        client: "Desert Mayor",
-        type: "slay",
-        goal: "hunt",
+        name: 'The Festival of Fear',
+        client: 'Desert Mayor',
+        type: 'slay',
+        goal: 'hunt',
         targets: { 33: 1 },
         contract: 1500,
         time: 30,
@@ -1327,14 +1327,14 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 301, count: 1, chance: 25 },
           { itemId: 300, count: 1, chance: 20 },
           { itemId: 407, count: 1, chance: 15 },
-          { itemId: 413, count: 1, chance: 5 },
-        ],
+          { itemId: 413, count: 1, chance: 5 }
+        ]
       },
       {
-        name: "The Festival of Fear",
-        client: "Guildmaster",
-        type: "repel",
-        goal: "repel",
+        name: 'The Festival of Fear',
+        client: 'Guildmaster',
+        type: 'repel',
+        goal: 'repel',
         targets: { 33: 60 },
         contract: 750,
         time: 30,
@@ -1352,16 +1352,16 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 434, count: 1, chance: 10 },
           { itemId: 436, count: 1, chance: 5 },
           { itemId: 432, count: 1, chance: 4 },
-          { itemId: 437, count: 1, chance: 1 },
-        ],
-      },
+          { itemId: 437, count: 1, chance: 1 }
+        ]
+      }
     ],
     [StarLevel.FourStar]: [
       {
-        name: "Harvest Tour: Deserted Isle",
-        client: "Felyne Tour Guide",
-        type: "harvest",
-        goal: "gathering",
+        name: 'Harvest Tour: Deserted Isle',
+        client: 'Felyne Tour Guide',
+        type: 'harvest',
+        goal: 'gathering',
         targets: { 396: 1 },
         contract: 0,
         time: 50,
@@ -1377,15 +1377,15 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 414, count: 1, chance: 13 },
           { itemId: 410, count: 1, chance: 10 },
           { itemId: 406, count: 1, chance: 8 },
-          { itemId: 407, count: 1, chance: 5 },
+          { itemId: 407, count: 1, chance: 5 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "Harvest Tour: Sandy Plains",
-        client: "Felyne Tour Guide",
-        type: "harvest",
-        goal: "gathering",
+        name: 'Harvest Tour: Sandy Plains',
+        client: 'Felyne Tour Guide',
+        type: 'harvest',
+        goal: 'gathering',
         targets: { 396: 1 },
         contract: 0,
         time: 50,
@@ -1401,15 +1401,15 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 414, count: 1, chance: 12 },
           { itemId: 410, count: 1, chance: 10 },
           { itemId: 406, count: 1, chance: 8 },
-          { itemId: 407, count: 1, chance: 5 },
+          { itemId: 407, count: 1, chance: 5 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "Jump a Jaggi",
-        client: "Head Village Guard",
-        type: "hunt",
-        goal: "hunt",
+        name: 'Jump a Jaggi',
+        client: 'Head Village Guard',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 17: 1 },
         contract: 300,
         time: 50,
@@ -1419,7 +1419,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 1000,
         hrp: 320,
         bosses: [
-          { type1: 17, type2: 0, level: 45, size: 100, min: 1, max: 10 },
+          { type1: 17, type2: 0, level: 45, size: 100, min: 1, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 149, count: 2, chance: 30 },
@@ -1427,18 +1427,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 182, count: 4, chance: 20 },
           { itemId: 245, count: 5, chance: 15 },
           { itemId: 406, count: 1, chance: 8 },
-          { itemId: 407, count: 1, chance: 5 },
+          { itemId: 407, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "slay", targets: { 11: 6 }, reward: 2400, hrp: 130 },
-          { goal: "slay", targets: { 10: 10 }, reward: 1800, hrp: 110 },
-        ],
+          { goal: 'slay', targets: { 11: 6 }, reward: 2400, hrp: 130 },
+          { goal: 'slay', targets: { 10: 10 }, reward: 1800, hrp: 110 }
+        ]
       },
       {
-        name: "Playing with Fire",
-        client: "Red-cheeked Huntress",
-        type: "hunt",
-        goal: "hunt",
+        name: 'Playing with Fire',
+        client: 'Red-cheeked Huntress',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 21: 1 },
         contract: 500,
         time: 50,
@@ -1448,7 +1448,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 1800,
         hrp: 540,
         bosses: [
-          { type1: 21, type2: 0, level: 45, size: 100, min: 1, max: 10 },
+          { type1: 21, type2: 0, level: 45, size: 100, min: 1, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 316, count: 15, chance: 18 },
@@ -1458,18 +1458,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 182, count: 5, chance: 10 },
           { itemId: 410, count: 1, chance: 10 },
           { itemId: 149, count: 3, chance: 9 },
-          { itemId: 407, count: 1, chance: 8 },
+          { itemId: 407, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "slay", targets: { 10: 5 }, reward: 900, hrp: 60 },
-          { goal: "gathering", targets: { 253: 1 }, reward: 1400, hrp: 30 },
-        ],
+          { goal: 'slay', targets: { 10: 5 }, reward: 900, hrp: 60 },
+          { goal: 'gathering', targets: { 253: 1 }, reward: 1400, hrp: 30 }
+        ]
       },
       {
-        name: "Reel In a Rathian",
-        client: "Village Protector",
-        type: "hunt",
-        goal: "hunt",
+        name: 'Reel In a Rathian',
+        client: 'Village Protector',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 22: 1 },
         contract: 750,
         time: 50,
@@ -1479,7 +1479,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 2600,
         hrp: 840,
         bosses: [
-          { type1: 22, type2: 0, level: 45, size: 100, min: 1, max: 10 },
+          { type1: 22, type2: 0, level: 45, size: 100, min: 1, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 120, count: 2, chance: 26 },
@@ -1488,17 +1488,17 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 414, count: 1, chance: 13 },
           { itemId: 410, count: 1, chance: 10 },
           { itemId: 406, count: 1, chance: 8 },
-          { itemId: 407, count: 1, chance: 5 },
+          { itemId: 407, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "gathering", targets: { 136: 1 }, reward: 4000, hrp: 100 },
-        ],
+          { goal: 'gathering', targets: { 136: 1 }, reward: 4000, hrp: 100 }
+        ]
       },
       {
-        name: "No Guts, No Glory",
-        client: "Caravan Leader",
-        type: "gather",
-        goal: "gathering",
+        name: 'No Guts, No Glory',
+        client: 'Caravan Leader',
+        type: 'gather',
+        goal: 'gathering',
         targets: { 397: 10 },
         contract: 200,
         time: 50,
@@ -1514,19 +1514,19 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 414, count: 1, chance: 12 },
           { itemId: 410, count: 1, chance: 10 },
           { itemId: 406, count: 1, chance: 8 },
-          { itemId: 407, count: 1, chance: 5 },
+          { itemId: 407, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "slay", targets: { 15: 14 }, reward: 2700, hrp: 150 },
-          { goal: "gathering", targets: { 364: 10 }, reward: 2100, hrp: 70 },
+          { goal: 'slay', targets: { 15: 14 }, reward: 2700, hrp: 150 },
+          { goal: 'gathering', targets: { 364: 10 }, reward: 2100, hrp: 70 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "Jumping for Jaggi",
-        client: "City Security Chief",
-        type: "multihunt",
-        goal: "hunt",
+        name: 'Jumping for Jaggi',
+        client: 'City Security Chief',
+        type: 'multihunt',
+        goal: 'hunt',
         targets: { 17: 2 },
         contract: 600,
         time: 50,
@@ -1537,7 +1537,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         hrp: 520,
         bosses: [
           { type1: 17, type2: 0, level: 45, size: 100, min: 1, max: 10 },
-          { type1: 17, type2: 1, level: 45, size: 100, min: 1, max: 10 },
+          { type1: 17, type2: 1, level: 45, size: 100, min: 1, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 281, count: 1, chance: 28 },
@@ -1546,14 +1546,14 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 282, count: 2, chance: 10 },
           { itemId: 149, count: 3, chance: 10 },
           { itemId: 279, count: 3, chance: 8 },
-          { itemId: 315, count: 10, chance: 8 },
-        ],
+          { itemId: 315, count: 10, chance: 8 }
+        ]
       },
       {
-        name: "The Mysterious Mimic",
-        client: "Brainy Biologist",
-        type: "capture",
-        goal: "capture",
+        name: 'The Mysterious Mimic',
+        client: 'Brainy Biologist',
+        type: 'capture',
+        goal: 'capture',
         targets: { 21: 1 },
         contract: 500,
         time: 50,
@@ -1563,7 +1563,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 2640,
         hrp: 560,
         bosses: [
-          { type1: 21, type2: 0, level: 45, size: 100, min: 1, max: 10 },
+          { type1: 21, type2: 0, level: 45, size: 100, min: 1, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 361, count: 2, chance: 27 },
@@ -1572,18 +1572,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 414, count: 1, chance: 12 },
           { itemId: 410, count: 1, chance: 10 },
           { itemId: 406, count: 1, chance: 8 },
-          { itemId: 407, count: 1, chance: 5 },
+          { itemId: 407, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "break", targets: { 21: 0 }, reward: 900, hrp: 60 },
-          { goal: "break", targets: { 21: 1 }, reward: 900, hrp: 60 },
-        ],
+          { goal: 'break', targets: { 21: 0 }, reward: 900, hrp: 60 },
+          { goal: 'break', targets: { 21: 1 }, reward: 900, hrp: 60 }
+        ]
       },
       {
-        name: "Ambush the Ambusher",
-        client: "Newbie Hunter",
-        type: "capture",
-        goal: "capture",
+        name: 'Ambush the Ambusher',
+        client: 'Newbie Hunter',
+        type: 'capture',
+        goal: 'capture',
         targets: { 22: 1 },
         contract: 750,
         time: 50,
@@ -1593,7 +1593,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 3600,
         hrp: 860,
         bosses: [
-          { type1: 22, type2: 0, level: 45, size: 100, min: 1, max: 10 },
+          { type1: 22, type2: 0, level: 45, size: 100, min: 1, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 561, count: 1, chance: 23 },
@@ -1604,18 +1604,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 407, count: 1, chance: 10 },
           { itemId: 411, count: 1, chance: 8 },
           { itemId: 332, count: 8, chance: 7 },
-          { itemId: 330, count: 8, chance: 7 },
+          { itemId: 330, count: 8, chance: 7 }
         ],
         subquests: [
-          { goal: "anthill", count: 2, reward: 1000, hrp: 40 },
-          { goal: "break", targets: { 22: 0 }, reward: 1200, hrp: 80 },
-        ],
+          { goal: 'anthill', count: 2, reward: 1000, hrp: 40 },
+          { goal: 'break', targets: { 22: 0 }, reward: 1200, hrp: 80 }
+        ]
       },
       {
-        name: "Avenging the Fallen Hunter",
-        client: "Wounded Hunter",
-        type: "hunt",
-        goal: "hunt",
+        name: 'Avenging the Fallen Hunter',
+        client: 'Wounded Hunter',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 19: 1 },
         contract: 750,
         time: 50,
@@ -1625,7 +1625,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 2600,
         hrp: 860,
         bosses: [
-          { type1: 19, type2: 0, level: 45, size: 100, min: 1, max: 10 },
+          { type1: 19, type2: 0, level: 45, size: 100, min: 1, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 316, count: 15, chance: 18 },
@@ -1635,18 +1635,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 182, count: 5, chance: 10 },
           { itemId: 410, count: 1, chance: 10 },
           { itemId: 149, count: 3, chance: 9 },
-          { itemId: 407, count: 1, chance: 8 },
+          { itemId: 407, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "gathering", targets: { 363: 1 }, reward: 3000, hrp: 80 },
-          { goal: "slay", targets: { 16: 6 }, reward: 1500, hrp: 70 },
-        ],
+          { goal: 'gathering', targets: { 363: 1 }, reward: 3000, hrp: 80 },
+          { goal: 'slay', targets: { 16: 6 }, reward: 1500, hrp: 70 }
+        ]
       },
       {
-        name: "Neopteron Pest Control",
-        client: "Cattle Rancher",
-        type: "slay",
-        goal: "slay",
+        name: 'Neopteron Pest Control',
+        client: 'Cattle Rancher',
+        type: 'slay',
+        goal: 'slay',
         targets: { 4: 20 },
         contract: 200,
         time: 50,
@@ -1663,19 +1663,19 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 117, count: 2, chance: 10 },
           { itemId: 411, count: 1, chance: 8 },
           { itemId: 407, count: 1, chance: 5 },
-          { itemId: 132, count: 3, chance: 5 },
+          { itemId: 132, count: 3, chance: 5 }
         ],
         subquests: [
-          { goal: "slay", targets: { 5: 15 }, reward: 1800, hrp: 100 },
-          { goal: "gathering", targets: { 119: 6 }, reward: 2400, hrp: 55 },
+          { goal: 'slay', targets: { 5: 15 }, reward: 1800, hrp: 100 },
+          { goal: 'gathering', targets: { 119: 6 }, reward: 2400, hrp: 55 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
         name: "A Ludroth Lickin'",
-        client: "Ex-Caravan Sentry",
-        type: "slay",
-        goal: "slay",
+        client: 'Ex-Caravan Sentry',
+        type: 'slay',
+        goal: 'slay',
         targets: { 13: 10 },
         contract: 250,
         time: 50,
@@ -1692,18 +1692,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 117, count: 2, chance: 10 },
           { itemId: 411, count: 1, chance: 8 },
           { itemId: 407, count: 1, chance: 5 },
-          { itemId: 132, count: 3, chance: 5 },
+          { itemId: 132, count: 3, chance: 5 }
         ],
         subquests: [
-          { goal: "slay", targets: { 8: 7 }, reward: 2100, hrp: 120 },
+          { goal: 'slay', targets: { 8: 7 }, reward: 2100, hrp: 120 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "Fine Kettle of Fish",
-        client: "Fish Fanboy",
-        type: "gather",
-        goal: "gathering",
+        name: 'Fine Kettle of Fish',
+        client: 'Fish Fanboy',
+        type: 'gather',
+        goal: 'gathering',
         targets: { 203: 6 },
         contract: 400,
         time: 50,
@@ -1719,19 +1719,19 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 191, count: 2, chance: 12 },
           { itemId: 200, count: 3, chance: 10 },
           { itemId: 195, count: 4, chance: 10 },
-          { itemId: 324, count: 1, chance: 5 },
+          { itemId: 324, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "gathering", targets: { 202: 5 }, reward: 1000, hrp: 25 },
-          { goal: "gathering", targets: { 202: 3 }, reward: 1500, hrp: 45 },
+          { goal: 'gathering', targets: { 202: 5 }, reward: 1000, hrp: 25 },
+          { goal: 'gathering', targets: { 202: 3 }, reward: 1500, hrp: 45 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
         name: "The Fisherman's Tale",
-        client: "Middle-aged Fisherman",
-        type: "capture",
-        goal: "capture",
+        client: 'Middle-aged Fisherman',
+        type: 'capture',
+        goal: 'capture',
         targets: { 27: 1 },
         contract: 600,
         time: 50,
@@ -1741,7 +1741,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 2840,
         hrp: 600,
         bosses: [
-          { type1: 27, type2: 0, level: 45, size: 100, min: 1, max: 10 },
+          { type1: 27, type2: 0, level: 45, size: 100, min: 1, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 406, count: 1, chance: 25 },
@@ -1749,18 +1749,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 301, count: 1, chance: 17 },
           { itemId: 407, count: 1, chance: 15 },
           { itemId: 411, count: 1, chance: 15 },
-          { itemId: 300, count: 1, chance: 5 },
+          { itemId: 300, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "break", targets: { 27: 0 }, reward: 900, hrp: 60 },
-          { goal: "gathering", targets: { 253: 1 }, reward: 1400, hrp: 30 },
-        ],
+          { goal: 'break', targets: { 27: 0 }, reward: 900, hrp: 60 },
+          { goal: 'gathering', targets: { 253: 1 }, reward: 1400, hrp: 30 }
+        ]
       },
       {
-        name: "Grab a Gobul",
-        client: "Trader",
-        type: "hunt",
-        goal: "hunt",
+        name: 'Grab a Gobul',
+        client: 'Trader',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 28: 1 },
         contract: 800,
         time: 50,
@@ -1770,7 +1770,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 2800,
         hrp: 920,
         bosses: [
-          { type1: 28, type2: 0, level: 45, size: 100, min: 1, max: 10 },
+          { type1: 28, type2: 0, level: 45, size: 100, min: 1, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 360, count: 2, chance: 24 },
@@ -1780,15 +1780,15 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 117, count: 2, chance: 10 },
           { itemId: 411, count: 1, chance: 8 },
           { itemId: 407, count: 1, chance: 5 },
-          { itemId: 132, count: 3, chance: 5 },
+          { itemId: 132, count: 3, chance: 5 }
         ],
-        subquests: [{ goal: "fish", targets: [28], reward: 1600, hrp: 60 }],
+        subquests: [{ goal: 'fish', targets: [28], reward: 1600, hrp: 60 }]
       },
       {
-        name: "[Advanced] Fearsome Twosome",
-        client: "Head Village Guard",
-        type: "multihunt",
-        goal: "hunt",
+        name: '[Advanced] Fearsome Twosome',
+        client: 'Head Village Guard',
+        type: 'multihunt',
+        goal: 'hunt',
         targets: { 27: 2 },
         contract: 1200,
         time: 50,
@@ -1799,7 +1799,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         hrp: 1220,
         bosses: [
           { type1: 27, type2: 0, level: 44, size: 100, min: 2, max: 10 },
-          { type1: 27, type2: 1, level: 44, size: 100, min: 2, max: 10 },
+          { type1: 27, type2: 1, level: 44, size: 100, min: 2, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 316, count: 15, chance: 18 },
@@ -1809,14 +1809,14 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 182, count: 5, chance: 10 },
           { itemId: 410, count: 1, chance: 10 },
           { itemId: 149, count: 3, chance: 9 },
-          { itemId: 407, count: 1, chance: 8 },
-        ],
+          { itemId: 407, count: 1, chance: 8 }
+        ]
       },
       {
-        name: "[Advanced] Barroth Buster",
-        client: "Wounded Hunter",
-        type: "hunt",
-        goal: "hunt",
+        name: '[Advanced] Barroth Buster',
+        client: 'Wounded Hunter',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 19: 1 },
         contract: 900,
         time: 50,
@@ -1826,7 +1826,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 3140,
         hrp: 1120,
         bosses: [
-          { type1: 19, type2: 0, level: 48, size: 100, min: 2, max: 10 },
+          { type1: 19, type2: 0, level: 48, size: 100, min: 2, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 561, count: 1, chance: 23 },
@@ -1837,18 +1837,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 407, count: 1, chance: 10 },
           { itemId: 411, count: 1, chance: 8 },
           { itemId: 332, count: 8, chance: 7 },
-          { itemId: 330, count: 8, chance: 7 },
+          { itemId: 330, count: 8, chance: 7 }
         ],
         subquests: [
-          { goal: "sever", targets: { 19: 2 }, reward: 1300, hrp: 120 },
-          { goal: "sever", targets: { 19: 1 }, reward: 1300, hrp: 120 },
-        ],
+          { goal: 'sever', targets: { 19: 2 }, reward: 1300, hrp: 120 },
+          { goal: 'sever', targets: { 19: 1 }, reward: 1300, hrp: 120 }
+        ]
       },
       {
-        name: "[Advanced] Grab a Gobul",
-        client: "Seafaring Trader",
-        type: "hunt",
-        goal: "hunt",
+        name: '[Advanced] Grab a Gobul',
+        client: 'Seafaring Trader',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 28: 1 },
         contract: 1000,
         time: 50,
@@ -1858,7 +1858,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 3340,
         hrp: 1200,
         bosses: [
-          { type1: 28, type2: 0, level: 48, size: 100, min: 2, max: 10 },
+          { type1: 28, type2: 0, level: 48, size: 100, min: 2, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 561, count: 1, chance: 23 },
@@ -1869,14 +1869,14 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 407, count: 1, chance: 10 },
           { itemId: 411, count: 1, chance: 8 },
           { itemId: 332, count: 8, chance: 7 },
-          { itemId: 330, count: 8, chance: 7 },
-        ],
+          { itemId: 330, count: 8, chance: 7 }
+        ]
       },
       {
-        name: "[Advanced] The Jaggia Menace",
-        client: "Female Farmer",
-        type: "slay",
-        goal: "slay",
+        name: '[Advanced] The Jaggia Menace',
+        client: 'Female Farmer',
+        type: 'slay',
+        goal: 'slay',
         targets: { 11: 25 },
         contract: 600,
         time: 50,
@@ -1892,18 +1892,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 414, count: 1, chance: 13 },
           { itemId: 410, count: 1, chance: 10 },
           { itemId: 406, count: 1, chance: 8 },
-          { itemId: 407, count: 1, chance: 5 },
+          { itemId: 407, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "slay", targets: { 10: 10 }, reward: 2400, hrp: 200 },
+          { goal: 'slay', targets: { 10: 10 }, reward: 2400, hrp: 200 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "Rumble in the Great Desert",
-        client: "Guildmaster",
-        type: "slay",
-        goal: "hunt",
+        name: 'Rumble in the Great Desert',
+        client: 'Guildmaster',
+        type: 'slay',
+        goal: 'hunt',
         targets: { 33: 1 },
         contract: 3600,
         time: 30,
@@ -1921,16 +1921,16 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 439, count: 1, chance: 10 },
           { itemId: 432, count: 1, chance: 8 },
           { itemId: 410, count: 1, chance: 7 },
-          { itemId: 437, count: 1, chance: 4 },
-        ],
-      },
+          { itemId: 437, count: 1, chance: 4 }
+        ]
+      }
     ],
     [StarLevel.FiveStar]: [
       {
-        name: "Harvest Tour: Flooded Forest",
-        client: "Felyne Tour Guide",
-        type: "harvest",
-        goal: "gathering",
+        name: 'Harvest Tour: Flooded Forest',
+        client: 'Felyne Tour Guide',
+        type: 'harvest',
+        goal: 'gathering',
         targets: { 396: 1 },
         contract: 0,
         time: 50,
@@ -1947,15 +1947,15 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 117, count: 2, chance: 10 },
           { itemId: 411, count: 1, chance: 8 },
           { itemId: 407, count: 1, chance: 5 },
-          { itemId: 132, count: 3, chance: 5 },
+          { itemId: 132, count: 3, chance: 5 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "Harvest Tour: Tundra",
-        client: "Felyne Tour Guide",
-        type: "harvest",
-        goal: "gathering",
+        name: 'Harvest Tour: Tundra',
+        client: 'Felyne Tour Guide',
+        type: 'harvest',
+        goal: 'gathering',
         targets: { 396: 1 },
         contract: 0,
         time: 50,
@@ -1972,15 +1972,15 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 415, count: 1, chance: 10 },
           { itemId: 407, count: 1, chance: 7 },
           { itemId: 411, count: 1, chance: 5 },
-          { itemId: 408, count: 1, chance: 3 },
+          { itemId: 408, count: 1, chance: 3 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "Rathalos Research",
-        client: "Wyvern Researcher",
-        type: "capture",
-        goal: "capture",
+        name: 'Rathalos Research',
+        client: 'Wyvern Researcher',
+        type: 'capture',
+        goal: 'capture',
         targets: { 23: 1 },
         contract: 1200,
         time: 50,
@@ -1990,7 +1990,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 5340,
         hrp: 1120,
         bosses: [
-          { type1: 23, type2: 0, level: 48, size: 100, min: 2, max: 10 },
+          { type1: 23, type2: 0, level: 48, size: 100, min: 2, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 407, count: 1, chance: 25 },
@@ -1999,18 +1999,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 108, count: 1, chance: 14 },
           { itemId: 410, count: 1, chance: 12 },
           { itemId: 412, count: 1, chance: 6 },
-          { itemId: 408, count: 1, chance: 5 },
+          { itemId: 408, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "gathering", targets: { 253: 1 }, reward: 1800, hrp: 60 },
-          { goal: "stun", targets: [23], reward: 1400, hrp: 120 },
-        ],
+          { goal: 'gathering', targets: { 253: 1 }, reward: 1800, hrp: 60 },
+          { goal: 'stun', targets: [23], reward: 1400, hrp: 120 }
+        ]
       },
       {
-        name: "Into the Danger Zone",
-        client: "City Security Chief",
-        type: "hunt",
-        goal: "hunt",
+        name: 'Into the Danger Zone',
+        client: 'City Security Chief',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 24: 1 },
         contract: 1300,
         time: 50,
@@ -2020,7 +2020,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 4400,
         hrp: 1200,
         bosses: [
-          { type1: 24, type2: 0, level: 48, size: 100, min: 2, max: 10 },
+          { type1: 24, type2: 0, level: 48, size: 100, min: 2, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 150, count: 2, chance: 23 },
@@ -2029,18 +2029,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 316, count: 10, chance: 14 },
           { itemId: 315, count: 18, chance: 14 },
           { itemId: 407, count: 1, chance: 10 },
-          { itemId: 408, count: 1, chance: 3 },
+          { itemId: 408, count: 1, chance: 3 }
         ],
         subquests: [
-          { goal: "break", targets: { 24: 0 }, reward: 1800, hrp: 140 },
-          { goal: "sever", targets: { 24: 1 }, reward: 1800, hrp: 140 },
-        ],
+          { goal: 'break', targets: { 24: 0 }, reward: 1800, hrp: 140 },
+          { goal: 'sever', targets: { 24: 1 }, reward: 1800, hrp: 140 }
+        ]
       },
       {
-        name: "Rotten Fish",
-        client: "Frontier Baron",
-        type: "capture",
-        goal: "capture",
+        name: 'Rotten Fish',
+        client: 'Frontier Baron',
+        type: 'capture',
+        goal: 'capture',
         targets: { 29: 1 },
         contract: 1100,
         time: 50,
@@ -2050,7 +2050,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 4970,
         hrp: 1120,
         bosses: [
-          { type1: 29, type2: 0, level: 48, size: 100, min: 2, max: 10 },
+          { type1: 29, type2: 0, level: 48, size: 100, min: 2, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 407, count: 1, chance: 25 },
@@ -2059,18 +2059,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 108, count: 1, chance: 14 },
           { itemId: 410, count: 1, chance: 12 },
           { itemId: 412, count: 1, chance: 6 },
-          { itemId: 408, count: 1, chance: 5 },
+          { itemId: 408, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "break", targets: { 29: 2 }, reward: 1400, hrp: 120 },
-          { goal: "break", targets: { 29: 1 }, reward: 1400, hrp: 120 },
-        ],
+          { goal: 'break', targets: { 29: 2 }, reward: 1400, hrp: 120 },
+          { goal: 'break', targets: { 29: 1 }, reward: 1400, hrp: 120 }
+        ]
       },
       {
-        name: "Leader of the Icepack",
-        client: "Tundra-expedition Leader",
-        type: "hunt",
-        goal: "hunt",
+        name: 'Leader of the Icepack',
+        client: 'Tundra-expedition Leader',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 18: 1 },
         contract: 400,
         time: 50,
@@ -2080,7 +2080,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 1400,
         hrp: 480,
         bosses: [
-          { type1: 18, type2: 0, level: 45, size: 100, min: 1, max: 12 },
+          { type1: 18, type2: 0, level: 45, size: 100, min: 1, max: 12 }
         ],
         secondaryRewards: [
           { itemId: 362, count: 2, chance: 27 },
@@ -2090,17 +2090,17 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 415, count: 1, chance: 10 },
           { itemId: 407, count: 1, chance: 7 },
           { itemId: 411, count: 1, chance: 5 },
-          { itemId: 408, count: 1, chance: 3 },
+          { itemId: 408, count: 1, chance: 3 }
         ],
         subquests: [
-          { goal: "slay", targets: { 12: 10 }, reward: 2400, hrp: 150 },
-        ],
+          { goal: 'slay', targets: { 12: 10 }, reward: 2400, hrp: 150 }
+        ]
       },
       {
-        name: "The Creeping Venom",
-        client: "Cocky Hunter",
-        type: "hunt",
-        goal: "hunt",
+        name: 'The Creeping Venom',
+        client: 'Cocky Hunter',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 25: 1 },
         contract: 900,
         time: 50,
@@ -2110,7 +2110,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 3000,
         hrp: 960,
         bosses: [
-          { type1: 25, type2: 0, level: 48, size: 100, min: 2, max: 11 },
+          { type1: 25, type2: 0, level: 48, size: 100, min: 2, max: 11 }
         ],
         secondaryRewards: [
           { itemId: 561, count: 1, chance: 23 },
@@ -2121,18 +2121,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 407, count: 1, chance: 10 },
           { itemId: 411, count: 1, chance: 8 },
           { itemId: 332, count: 8, chance: 7 },
-          { itemId: 330, count: 8, chance: 7 },
+          { itemId: 330, count: 8, chance: 7 }
         ],
         subquests: [
-          { goal: "hunt", targets: { 9: 12 }, reward: 1500, hrp: 100 },
-          { goal: "eggs", count: 8, reward: 1000, hrp: 55 },
-        ],
+          { goal: 'hunt', targets: { 9: 12 }, reward: 1500, hrp: 100 },
+          { goal: 'eggs', count: 8, reward: 1000, hrp: 55 }
+        ]
       },
       {
-        name: "Gigginox RX",
-        client: "Researcher of Medicine",
-        type: "capture",
-        goal: "capture",
+        name: 'Gigginox RX',
+        client: 'Researcher of Medicine',
+        type: 'capture',
+        goal: 'capture',
         targets: { 25: 1 },
         contract: 900,
         time: 50,
@@ -2142,7 +2142,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 4170,
         hrp: 980,
         bosses: [
-          { type1: 25, type2: 0, level: 48, size: 100, min: 2, max: 11 },
+          { type1: 25, type2: 0, level: 48, size: 100, min: 2, max: 11 }
         ],
         secondaryRewards: [
           { itemId: 407, count: 1, chance: 25 },
@@ -2151,18 +2151,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 108, count: 1, chance: 14 },
           { itemId: 410, count: 1, chance: 12 },
           { itemId: 412, count: 1, chance: 6 },
-          { itemId: 408, count: 1, chance: 5 },
+          { itemId: 408, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "break", targets: { 25: 0 }, reward: 1400, hrp: 100 },
-          { goal: "stun", targets: [25], reward: 1400, hrp: 100 },
-        ],
+          { goal: 'break', targets: { 25: 0 }, reward: 1400, hrp: 100 },
+          { goal: 'stun', targets: [25], reward: 1400, hrp: 100 }
+        ]
       },
       {
-        name: "The Lost Expedition",
-        client: "Female Geologist",
-        type: "hunt",
-        goal: "hunt",
+        name: 'The Lost Expedition',
+        client: 'Female Geologist',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 26: 1 },
         contract: 1200,
         time: 50,
@@ -2172,7 +2172,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 4000,
         hrp: 1100,
         bosses: [
-          { type1: 26, type2: 0, level: 48, size: 100, min: 2, max: 11 },
+          { type1: 26, type2: 0, level: 48, size: 100, min: 2, max: 11 }
         ],
         secondaryRewards: [
           { itemId: 561, count: 1, chance: 23 },
@@ -2183,18 +2183,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 407, count: 1, chance: 10 },
           { itemId: 411, count: 1, chance: 8 },
           { itemId: 332, count: 8, chance: 7 },
-          { itemId: 330, count: 8, chance: 7 },
+          { itemId: 330, count: 8, chance: 7 }
         ],
         subquests: [
-          { goal: "break", targets: { 26: 1 }, reward: 1400, hrp: 120 },
-          { goal: "pitfall", targets: [26], reward: 800, hrp: 60 },
-        ],
+          { goal: 'break', targets: { 26: 1 }, reward: 1400, hrp: 120 },
+          { goal: 'pitfall', targets: [26], reward: 800, hrp: 60 }
+        ]
       },
       {
-        name: "Roll the Uroktor",
-        client: "Caravan Leader",
-        type: "slay",
-        goal: "slay",
+        name: 'Roll the Uroktor',
+        client: 'Caravan Leader',
+        type: 'slay',
+        goal: 'slay',
         targets: { 14: 20 },
         contract: 250,
         time: 50,
@@ -2211,19 +2211,19 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 108, count: 1, chance: 10 },
           { itemId: 411, count: 1, chance: 10 },
           { itemId: 475, count: 1, chance: 8 },
-          { itemId: 408, count: 1, chance: 3 },
+          { itemId: 408, count: 1, chance: 3 }
         ],
         subquests: [
-          { goal: "slay", targets: { 16: 8 }, reward: 2400, hrp: 150 },
-          { goal: "gathering", targets: { 350: 1 }, reward: 5000, hrp: 150 },
+          { goal: 'slay', targets: { 16: 8 }, reward: 2400, hrp: 150 },
+          { goal: 'gathering', targets: { 350: 1 }, reward: 5000, hrp: 150 }
         ],
-        bosses: [],
+        bosses: []
       },
       {
-        name: "Run Down a Rathalos",
-        client: "Princess of a Ruined Land",
-        type: "hunt",
-        goal: "hunt",
+        name: 'Run Down a Rathalos',
+        client: 'Princess of a Ruined Land',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 23: 1 },
         contract: 1200,
         time: 50,
@@ -2233,7 +2233,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 4000,
         hrp: 1100,
         bosses: [
-          { type1: 23, type2: 0, level: 48, size: 100, min: 2, max: 10 },
+          { type1: 23, type2: 0, level: 48, size: 100, min: 2, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 341, count: 2, chance: 25 },
@@ -2243,18 +2243,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 108, count: 1, chance: 10 },
           { itemId: 411, count: 1, chance: 10 },
           { itemId: 475, count: 1, chance: 8 },
-          { itemId: 408, count: 1, chance: 3 },
+          { itemId: 408, count: 1, chance: 3 }
         ],
         subquests: [
-          { goal: "break", targets: { 23: 0 }, reward: 1400, hrp: 120 },
-          { goal: "sever", targets: { 23: 1 }, reward: 1400, hrp: 120 },
-        ],
+          { goal: 'break', targets: { 23: 0 }, reward: 1400, hrp: 120 },
+          { goal: 'sever', targets: { 23: 1 }, reward: 1400, hrp: 120 }
+        ]
       },
       {
-        name: "The Thrill of the Hunt",
-        client: "Scarred Hunter",
-        type: "hunt",
-        goal: "hunt",
+        name: 'The Thrill of the Hunt',
+        client: 'Scarred Hunter',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 20: 1 },
         contract: 1300,
         time: 50,
@@ -2264,7 +2264,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 4400,
         hrp: 1200,
         bosses: [
-          { type1: 20, type2: 0, level: 48, size: 100, min: 2, max: 10 },
+          { type1: 20, type2: 0, level: 48, size: 100, min: 2, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 561, count: 1, chance: 23 },
@@ -2275,17 +2275,17 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 407, count: 1, chance: 10 },
           { itemId: 411, count: 1, chance: 8 },
           { itemId: 332, count: 8, chance: 7 },
-          { itemId: 330, count: 8, chance: 7 },
+          { itemId: 330, count: 8, chance: 7 }
         ],
         subquests: [
-          { goal: "sever", targets: { 20: 1 }, reward: 1800, hrp: 140 },
-        ],
+          { goal: 'sever', targets: { 20: 1 }, reward: 1800, hrp: 140 }
+        ]
       },
       {
-        name: "The Molten Monstrosity",
-        client: "Fire Country Chieftain",
-        type: "hunt",
-        goal: "hunt",
+        name: 'The Molten Monstrosity',
+        client: 'Fire Country Chieftain',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 30: 1 },
         contract: 1350,
         time: 50,
@@ -2295,7 +2295,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 4600,
         hrp: 1240,
         bosses: [
-          { type1: 30, type2: 0, level: 48, size: 100, min: 2, max: 10 },
+          { type1: 30, type2: 0, level: 48, size: 100, min: 2, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 561, count: 1, chance: 23 },
@@ -2306,18 +2306,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 407, count: 1, chance: 10 },
           { itemId: 411, count: 1, chance: 8 },
           { itemId: 332, count: 8, chance: 7 },
-          { itemId: 330, count: 8, chance: 7 },
+          { itemId: 330, count: 8, chance: 7 }
         ],
         subquests: [
-          { goal: "break", targets: { 30: 2 }, reward: 1800, hrp: 140 },
-          { goal: "gathering", targets: { 253: 1 }, reward: 2700, hrp: 70 },
-        ],
+          { goal: 'break', targets: { 30: 2 }, reward: 1800, hrp: 140 },
+          { goal: 'gathering', targets: { 253: 1 }, reward: 2700, hrp: 70 }
+        ]
       },
       {
-        name: "Agnaktor Alert",
-        client: "Guild Observation Post",
-        type: "capture",
-        goal: "capture",
+        name: 'Agnaktor Alert',
+        client: 'Guild Observation Post',
+        type: 'capture',
+        goal: 'capture',
         targets: { 30: 1 },
         contract: 1350,
         time: 50,
@@ -2327,7 +2327,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 5940,
         hrp: 1260,
         bosses: [
-          { type1: 30, type2: 0, level: 48, size: 100, min: 2, max: 10 },
+          { type1: 30, type2: 0, level: 48, size: 100, min: 2, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 407, count: 1, chance: 25 },
@@ -2336,18 +2336,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 108, count: 1, chance: 14 },
           { itemId: 410, count: 1, chance: 12 },
           { itemId: 412, count: 1, chance: 6 },
-          { itemId: 408, count: 1, chance: 5 },
+          { itemId: 408, count: 1, chance: 5 }
         ],
         subquests: [
-          { goal: "break", targets: { 30: 3 }, reward: 1800, hrp: 140 },
-          { goal: "sever", targets: { 30: 1 }, reward: 1800, hrp: 140 },
-        ],
+          { goal: 'break', targets: { 30: 3 }, reward: 1800, hrp: 140 },
+          { goal: 'sever', targets: { 30: 1 }, reward: 1800, hrp: 140 }
+        ]
       },
       {
-        name: "[Advanced] Run Down Rathalos",
-        client: "Princess of a Ruined Land",
-        type: "hunt",
-        goal: "hunt",
+        name: '[Advanced] Run Down Rathalos',
+        client: 'Princess of a Ruined Land',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 23: 1 },
         contract: 1400,
         time: 50,
@@ -2357,7 +2357,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 4670,
         hrp: 1430,
         bosses: [
-          { type1: 23, type2: 0, level: 50, size: 100, min: 2, max: 10 },
+          { type1: 23, type2: 0, level: 50, size: 100, min: 2, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 561, count: 1, chance: 24 },
@@ -2367,18 +2367,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 411, count: 1, chance: 10 },
           { itemId: 108, count: 1, chance: 10 },
           { itemId: 406, count: 1, chance: 8 },
-          { itemId: 412, count: 1, chance: 8 },
+          { itemId: 412, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "break", targets: { 23: 0 }, reward: 1800, hrp: 140 },
-          { goal: "sever", targets: { 23: 1 }, reward: 1800, hrp: 140 },
-        ],
+          { goal: 'break', targets: { 23: 0 }, reward: 1800, hrp: 140 },
+          { goal: 'sever', targets: { 23: 1 }, reward: 1800, hrp: 140 }
+        ]
       },
       {
-        name: "[Advanced] Lick a Lagiacrus",
-        client: "Frontier Baron",
-        type: "hunt",
-        goal: "hunt",
+        name: '[Advanced] Lick a Lagiacrus',
+        client: 'Frontier Baron',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 29: 1 },
         contract: 1300,
         time: 50,
@@ -2388,7 +2388,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 4390,
         hrp: 1430,
         bosses: [
-          { type1: 29, type2: 0, level: 50, size: 100, min: 2, max: 10 },
+          { type1: 29, type2: 0, level: 50, size: 100, min: 2, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 561, count: 1, chance: 24 },
@@ -2398,18 +2398,18 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 411, count: 1, chance: 10 },
           { itemId: 108, count: 1, chance: 10 },
           { itemId: 406, count: 1, chance: 8 },
-          { itemId: 412, count: 1, chance: 8 },
+          { itemId: 412, count: 1, chance: 8 }
         ],
         subquests: [
-          { goal: "break", targets: { 29: 0 }, reward: 1800, hrp: 140 },
-          { goal: "break", targets: { 29: 2 }, reward: 1800, hrp: 140 },
-        ],
+          { goal: 'break', targets: { 29: 0 }, reward: 1800, hrp: 140 },
+          { goal: 'break', targets: { 29: 2 }, reward: 1800, hrp: 140 }
+        ]
       },
       {
-        name: "[Advanced] Bump Off Barioth",
-        client: "Spoiled Princess",
-        type: "hunt",
-        goal: "hunt",
+        name: '[Advanced] Bump Off Barioth',
+        client: 'Spoiled Princess',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 26: 1 },
         contract: 1400,
         time: 50,
@@ -2419,7 +2419,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 4670,
         hrp: 1430,
         bosses: [
-          { type1: 26, type2: 0, level: 50, size: 100, min: 2, max: 11 },
+          { type1: 26, type2: 0, level: 50, size: 100, min: 2, max: 11 }
         ],
         secondaryRewards: [
           { itemId: 561, count: 1, chance: 24 },
@@ -2429,14 +2429,14 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 411, count: 1, chance: 10 },
           { itemId: 108, count: 1, chance: 10 },
           { itemId: 406, count: 1, chance: 8 },
-          { itemId: 412, count: 1, chance: 8 },
-        ],
+          { itemId: 412, count: 1, chance: 8 }
+        ]
       },
       {
-        name: "[Advanced] Heroes Wanted",
-        client: "Fire Country Princess",
-        type: "multihunt",
-        goal: "hunt",
+        name: '[Advanced] Heroes Wanted',
+        client: 'Fire Country Princess',
+        type: 'multihunt',
+        goal: 'hunt',
         targets: { 20: 2 },
         contract: 3000,
         time: 50,
@@ -2447,7 +2447,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         hrp: 2500,
         bosses: [
           { type1: 20, type2: 1, level: 58, size: 100, min: 0, max: 10 },
-          { type1: 20, type2: 2, level: 58, size: 100, min: 0, max: 10 },
+          { type1: 20, type2: 2, level: 58, size: 100, min: 0, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 561, count: 1, chance: 24 },
@@ -2457,14 +2457,14 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 411, count: 1, chance: 10 },
           { itemId: 108, count: 1, chance: 10 },
           { itemId: 406, count: 1, chance: 8 },
-          { itemId: 412, count: 1, chance: 8 },
-        ],
+          { itemId: 412, count: 1, chance: 8 }
+        ]
       },
       {
-        name: "Double Trouble",
-        client: "Head of Island Guard",
-        type: "multihunt",
-        goal: "hunt",
+        name: 'Double Trouble',
+        client: 'Head of Island Guard',
+        type: 'multihunt',
+        goal: 'hunt',
         targets: { 22: 1, 23: 1 },
         contract: 1950,
         time: 50,
@@ -2475,7 +2475,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         hrp: 1560,
         bosses: [
           { type1: 22, type2: 0, level: 54, size: 100, min: 0, max: 10 },
-          { type1: 23, type2: 1, level: 54, size: 100, min: 0, max: 10 },
+          { type1: 23, type2: 1, level: 54, size: 100, min: 0, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 164, count: 1, chance: 24 },
@@ -2485,16 +2485,16 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 330, count: 5, chance: 8 },
           { itemId: 158, count: 1, chance: 8 },
           { itemId: 408, count: 1, chance: 8 },
-          { itemId: 561, count: 1, chance: 5 },
-        ],
-      },
+          { itemId: 561, count: 1, chance: 5 }
+        ]
+      }
     ],
     [StarLevel.SixStar]: [
       {
-        name: "Deep-six a Deviljho",
-        client: "Ex-Hunter Merchant",
-        type: "hunt",
-        goal: "hunt",
+        name: 'Deep-six a Deviljho',
+        client: 'Ex-Hunter Merchant',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 32: 1 },
         contract: 1800,
         time: 50,
@@ -2504,7 +2504,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 6000,
         hrp: 1800,
         bosses: [
-          { type1: 32, type2: 0, level: 52, size: 100, min: 0, max: 13 },
+          { type1: 32, type2: 0, level: 52, size: 100, min: 0, max: 13 }
         ],
         secondaryRewards: [
           { itemId: 361, count: 2, chance: 27 },
@@ -2513,14 +2513,14 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 414, count: 1, chance: 12 },
           { itemId: 410, count: 1, chance: 10 },
           { itemId: 406, count: 1, chance: 8 },
-          { itemId: 407, count: 1, chance: 5 },
-        ],
+          { itemId: 407, count: 1, chance: 5 }
+        ]
       },
       {
-        name: "Bedevil a Deviljho",
-        client: "Borderlands Sentry",
-        type: "hunt",
-        goal: "hunt",
+        name: 'Bedevil a Deviljho',
+        client: 'Borderlands Sentry',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 32: 1 },
         contract: 1800,
         time: 50,
@@ -2530,7 +2530,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 6000,
         hrp: 1800,
         bosses: [
-          { type1: 32, type2: 0, level: 52, size: 100, min: 0, max: 13 },
+          { type1: 32, type2: 0, level: 52, size: 100, min: 0, max: 13 }
         ],
         secondaryRewards: [
           { itemId: 360, count: 2, chance: 24 },
@@ -2540,14 +2540,14 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 117, count: 2, chance: 10 },
           { itemId: 411, count: 1, chance: 8 },
           { itemId: 407, count: 1, chance: 5 },
-          { itemId: 132, count: 3, chance: 5 },
-        ],
+          { itemId: 132, count: 3, chance: 5 }
+        ]
       },
       {
-        name: "Into the Fire",
-        client: "Fire Country Chieftain",
-        type: "hunt",
-        goal: "hunt",
+        name: 'Into the Fire',
+        client: 'Fire Country Chieftain',
+        type: 'hunt',
+        goal: 'hunt',
         targets: { 32: 1 },
         contract: 1800,
         time: 50,
@@ -2557,7 +2557,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         ko: 6000,
         hrp: 1800,
         bosses: [
-          { type1: 32, type2: 0, level: 52, size: 100, min: 0, max: 13 },
+          { type1: 32, type2: 0, level: 52, size: 100, min: 0, max: 13 }
         ],
         secondaryRewards: [
           { itemId: 341, count: 2, chance: 25 },
@@ -2567,14 +2567,14 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 108, count: 1, chance: 10 },
           { itemId: 411, count: 1, chance: 10 },
           { itemId: 475, count: 1, chance: 8 },
-          { itemId: 408, count: 1, chance: 3 },
-        ],
+          { itemId: 408, count: 1, chance: 3 }
+        ]
       },
       {
-        name: "Double Trouble",
-        client: "Head of Island Guard",
-        type: "multihunt",
-        goal: "hunt",
+        name: 'Double Trouble',
+        client: 'Head of Island Guard',
+        type: 'multihunt',
+        goal: 'hunt',
         targets: { 22: 1, 23: 1 },
         contract: 2200,
         time: 50,
@@ -2585,7 +2585,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         hrp: 1940,
         bosses: [
           { type1: 22, type2: 0, level: 53, size: 100, min: 0, max: 10 },
-          { type1: 23, type2: 1, level: 53, size: 100, min: 0, max: 10 },
+          { type1: 23, type2: 1, level: 53, size: 100, min: 0, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 157, count: 1, chance: 22 },
@@ -2596,14 +2596,14 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 408, count: 1, chance: 10 },
           { itemId: 412, count: 1, chance: 8 },
           { itemId: 161, count: 1, chance: 5 },
-          { itemId: 160, count: 1, chance: 5 },
-        ],
+          { itemId: 160, count: 1, chance: 5 }
+        ]
       },
       {
         name: "The Princess's Pride",
-        client: "Spoiled Princess",
-        type: "multihunt",
-        goal: "hunt",
+        client: 'Spoiled Princess',
+        type: 'multihunt',
+        goal: 'hunt',
         targets: { 24: 2 },
         contract: 2600,
         time: 50,
@@ -2614,7 +2614,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         hrp: 2400,
         bosses: [
           { type1: 24, type2: 0, level: 53, size: 100, min: 0, max: 10 },
-          { type1: 24, type2: 1, level: 53, size: 100, min: 0, max: 10 },
+          { type1: 24, type2: 1, level: 53, size: 100, min: 0, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 422, count: 1, chance: 24 },
@@ -2624,14 +2624,14 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 412, count: 1, chance: 10 },
           { itemId: 169, count: 1, chance: 9 },
           { itemId: 421, count: 1, chance: 8 },
-          { itemId: 569, count: 1, chance: 1 },
-        ],
+          { itemId: 569, count: 1, chance: 1 }
+        ]
       },
       {
-        name: "A Sea of Dragons",
-        client: "City Guild Representative",
-        type: "multihunt",
-        goal: "hunt",
+        name: 'A Sea of Dragons',
+        client: 'City Guild Representative',
+        type: 'multihunt',
+        goal: 'hunt',
         targets: { 29: 1, 28: 1 },
         contract: 1950,
         time: 50,
@@ -2642,7 +2642,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         hrp: 2020,
         bosses: [
           { type1: 29, type2: 1, level: 53, size: 100, min: 0, max: 10 },
-          { type1: 28, type2: 1, level: 53, size: 100, min: 0, max: 10 },
+          { type1: 28, type2: 1, level: 53, size: 100, min: 0, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 465, count: 1, chance: 20 },
@@ -2653,14 +2653,14 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 561, count: 3, chance: 10 },
           { itemId: 412, count: 1, chance: 8 },
           { itemId: 469, count: 1, chance: 5 },
-          { itemId: 569, count: 1, chance: 1 },
-        ],
+          { itemId: 569, count: 1, chance: 1 }
+        ]
       },
       {
-        name: "Tragedy on the Tundra",
-        client: "Troop Captain",
-        type: "multihunt",
-        goal: "hunt",
+        name: 'Tragedy on the Tundra',
+        client: 'Troop Captain',
+        type: 'multihunt',
+        goal: 'hunt',
         targets: { 26: 2 },
         contract: 2400,
         time: 50,
@@ -2671,7 +2671,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         hrp: 2200,
         bosses: [
           { type1: 26, type2: 1, level: 53, size: 100, min: 0, max: 11 },
-          { type1: 26, type2: 2, level: 53, size: 100, min: 0, max: 11 },
+          { type1: 26, type2: 2, level: 53, size: 100, min: 0, max: 11 }
         ],
         secondaryRewards: [
           { itemId: 418, count: 2, chance: 22 },
@@ -2682,14 +2682,14 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 408, count: 1, chance: 10 },
           { itemId: 412, count: 1, chance: 7 },
           { itemId: 169, count: 1, chance: 5 },
-          { itemId: 569, count: 1, chance: 1 },
-        ],
+          { itemId: 569, count: 1, chance: 1 }
+        ]
       },
       {
-        name: "A Burnt Offering",
-        client: "Fire Country Princess",
-        type: "multihunt",
-        goal: "hunt",
+        name: 'A Burnt Offering',
+        client: 'Fire Country Princess',
+        type: 'multihunt',
+        goal: 'hunt',
         targets: { 30: 1, 20: 1 },
         contract: 2700,
         time: 50,
@@ -2700,7 +2700,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         hrp: 2440,
         bosses: [
           { type1: 30, type2: 0, level: 53, size: 100, min: 0, max: 10 },
-          { type1: 20, type2: 1, level: 53, size: 100, min: 0, max: 10 },
+          { type1: 20, type2: 1, level: 53, size: 100, min: 0, max: 10 }
         ],
         secondaryRewards: [
           { itemId: 386, count: 2, chance: 20 },
@@ -2711,14 +2711,14 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 412, count: 1, chance: 10 },
           { itemId: 447, count: 1, chance: 8 },
           { itemId: 169, count: 1, chance: 7 },
-          { itemId: 569, count: 1, chance: 1 },
-        ],
+          { itemId: 569, count: 1, chance: 1 }
+        ]
       },
       {
-        name: "The Brilliant Darkness",
-        client: "Desert Mayor",
-        type: "slay",
-        goal: "hunt",
+        name: 'The Brilliant Darkness',
+        client: 'Desert Mayor',
+        type: 'slay',
+        goal: 'hunt',
         targets: { 34: 1 },
         contract: 3600,
         time: 50,
@@ -2736,20 +2736,20 @@ export const CityQuestData = Object.freeze<QuestRegion>({
           { itemId: 411, count: 1, chance: 10 },
           { itemId: 108, count: 1, chance: 10 },
           { itemId: 406, count: 1, chance: 8 },
-          { itemId: 412, count: 1, chance: 8 },
-        ],
-      },
-    ],
+          { itemId: 412, count: 1, chance: 8 }
+        ]
+      }
+    ]
   },
   /**
    * ! Incomplete
    */
   arena: [
     {
-      name: "Grudge Match: Royal Ludroth",
-      client: "Announcer/Receptionist",
-      type: "slay",
-      goal: "hunt",
+      name: 'Grudge Match: Royal Ludroth',
+      client: 'Announcer/Receptionist',
+      type: 'slay',
+      goal: 'hunt',
       targets: { 27: 1 },
       contract: 0,
       time: 50,
@@ -2758,13 +2758,13 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       reward: 1000,
       ko: 200,
       hrp: 0,
-      bosses: [{ type1: 27, type2: 0, level: 23, size: 100, min: 0, max: 0 }],
+      bosses: [{ type1: 27, type2: 0, level: 23, size: 100, min: 0, max: 0 }]
     },
     {
-      name: "Grudge Match: Rathian",
-      client: "Announcer/Receptionist",
-      type: "slay",
-      goal: "hunt",
+      name: 'Grudge Match: Rathian',
+      client: 'Announcer/Receptionist',
+      type: 'slay',
+      goal: 'hunt',
       targets: { 22: 1 },
       contract: 0,
       time: 50,
@@ -2773,13 +2773,13 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       reward: 1000,
       ko: 200,
       hrp: 0,
-      bosses: [{ type1: 22, type2: 0, level: 26, size: 100, min: 0, max: 0 }],
+      bosses: [{ type1: 22, type2: 0, level: 26, size: 100, min: 0, max: 0 }]
     },
     {
-      name: "Grudge Match: Uragaan",
-      client: "Announcer/Receptionist",
-      type: "slay",
-      goal: "hunt",
+      name: 'Grudge Match: Uragaan',
+      client: 'Announcer/Receptionist',
+      type: 'slay',
+      goal: 'hunt',
       targets: { 20: 1 },
       contract: 0,
       time: 50,
@@ -2788,13 +2788,13 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       reward: 1500,
       ko: 220,
       hrp: 0,
-      bosses: [{ type1: 20, type2: 0, level: 23, size: 100, min: 0, max: 0 }],
+      bosses: [{ type1: 20, type2: 0, level: 23, size: 100, min: 0, max: 0 }]
     },
     {
-      name: "Grudge Match: Bird and Brute",
-      client: "Announcer/Receptionist",
-      type: "slay",
-      goal: "hunt",
+      name: 'Grudge Match: Bird and Brute',
+      client: 'Announcer/Receptionist',
+      type: 'slay',
+      goal: 'hunt',
       targets: { 21: 1, 19: 1 },
       contract: 0,
       time: 50,
@@ -2805,14 +2805,14 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       hrp: 0,
       bosses: [
         { type1: 21, type2: 0, level: 55, size: 100, min: 0, max: 0 },
-        { type1: 19, type2: 0, level: 55, size: 100, min: 0, max: 0 },
-      ],
+        { type1: 19, type2: 0, level: 55, size: 100, min: 0, max: 0 }
+      ]
     },
     {
-      name: "Grudge Match: Ice and Fire",
-      client: "Announcer/Receptionist",
-      type: "slay",
-      goal: "hunt",
+      name: 'Grudge Match: Ice and Fire',
+      client: 'Announcer/Receptionist',
+      type: 'slay',
+      goal: 'hunt',
       targets: { 26: 1, 30: 1 },
       contract: 0,
       time: 50,
@@ -2823,19 +2823,19 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       hrp: 0,
       bosses: [
         { type1: 26, type2: 0, level: 55, size: 100, min: 0, max: 0 },
-        { type1: 30, type2: 0, level: 55, size: 100, min: 0, max: 0 },
-      ],
-    },
+        { type1: 30, type2: 0, level: 55, size: 100, min: 0, max: 0 }
+      ]
+    }
   ],
   /**
    * ! Incomplete
    */
   events: [
     {
-      name: "Jump Four Jaggi",
-      client: "Guild Subcontractor",
-      type: "hunt",
-      goal: "hunt",
+      name: 'Jump Four Jaggi',
+      client: 'Guild Subcontractor',
+      type: 'hunt',
+      goal: 'hunt',
       targets: { 17: 4 },
       contract: 400,
       time: 50,
@@ -2850,15 +2850,15 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         { itemId: 301, count: 1, chance: 25 },
         { itemId: 300, count: 1, chance: 20 },
         { itemId: 407, count: 1, chance: 15 },
-        { itemId: 413, count: 1, chance: 5 },
+        { itemId: 413, count: 1, chance: 5 }
       ],
-      subquests: [{ goal: "hunt", targets: { 17: 2 }, reward: 4000, hrp: 440 }],
+      subquests: [{ goal: 'hunt', targets: { 17: 2 }, reward: 4000, hrp: 440 }]
     },
     {
-      name: "Blood Sport",
-      client: "Spoiled Princess",
-      type: "multihunt",
-      goal: "hunt",
+      name: 'Blood Sport',
+      client: 'Spoiled Princess',
+      type: 'multihunt',
+      goal: 'hunt',
       targets: { 24: 1, 20: 1 },
       contract: 1750,
       time: 50,
@@ -2869,7 +2869,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       hrp: 1760,
       bosses: [
         { type1: 24, type2: 0, level: 40, size: 100, min: 0, max: 9 },
-        { type1: 20, type2: 0, level: 40, size: 100, min: 0, max: 9 },
+        { type1: 20, type2: 0, level: 40, size: 100, min: 0, max: 9 }
       ],
       secondaryRewards: [
         { itemId: 558, count: 1, chance: 25 },
@@ -2879,14 +2879,14 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         { itemId: 378, count: 1, chance: 10 },
         { itemId: 421, count: 1, chance: 9 },
         { itemId: 380, count: 1, chance: 9 },
-        { itemId: 445, count: 1, chance: 1 },
-      ],
+        { itemId: 445, count: 1, chance: 1 }
+      ]
     },
     {
-      name: "Marine Warfare",
-      client: "Guild Weapons Development",
-      type: "multihunt",
-      goal: "hunt",
+      name: 'Marine Warfare',
+      client: 'Guild Weapons Development',
+      type: 'multihunt',
+      goal: 'hunt',
       targets: { 28: 2 },
       contract: 1650,
       time: 50,
@@ -2897,7 +2897,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       hrp: 1480,
       bosses: [
         { type1: 28, type2: 0, level: 54, size: 100, min: 0, max: 10 },
-        { type1: 28, type2: 1, level: 54, size: 100, min: 0, max: 10 },
+        { type1: 28, type2: 1, level: 54, size: 100, min: 0, max: 10 }
       ],
       secondaryRewards: [
         { itemId: 150, count: 2, chance: 23 },
@@ -2906,14 +2906,14 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         { itemId: 316, count: 10, chance: 14 },
         { itemId: 315, count: 18, chance: 14 },
         { itemId: 407, count: 1, chance: 10 },
-        { itemId: 408, count: 1, chance: 3 },
-      ],
+        { itemId: 408, count: 1, chance: 3 }
+      ]
     },
     {
-      name: "Hot Deal",
-      client: "Shady Merchant",
-      type: "hunt",
-      goal: "hunt",
+      name: 'Hot Deal',
+      client: 'Shady Merchant',
+      type: 'hunt',
+      goal: 'hunt',
       targets: { 30: 2 },
       contract: 2750,
       time: 50,
@@ -2930,17 +2930,17 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         { itemId: 561, count: 1, chance: 12 },
         { itemId: 473, count: 1, chance: 12 },
         { itemId: 471, count: 1, chance: 8 },
-        { itemId: 475, count: 1, chance: 5 },
+        { itemId: 475, count: 1, chance: 5 }
       ],
       subquests: [
-        { goal: "hunt", targets: { 30: 1 }, reward: 13800, hrp: 1240 },
-      ],
+        { goal: 'hunt', targets: { 30: 1 }, reward: 13800, hrp: 1240 }
+      ]
     },
     {
-      name: "Fiery Skies, Frozen Fields",
-      client: "Deserted Island Maiden",
-      type: "multihunt",
-      goal: "hunt",
+      name: 'Fiery Skies, Frozen Fields',
+      client: 'Deserted Island Maiden',
+      type: 'multihunt',
+      goal: 'hunt',
       targets: { 26: 1, 23: 1 },
       contract: 4200,
       time: 50,
@@ -2951,7 +2951,7 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       hrp: 4290,
       bosses: [
         { type1: 26, type2: 0, level: 60, size: 100, min: 0, max: 11 },
-        { type1: 23, type2: 0, level: 59, size: 100, min: 0, max: 10 },
+        { type1: 23, type2: 0, level: 59, size: 100, min: 0, max: 10 }
       ],
       secondaryRewards: [
         { itemId: 164, count: 2, chance: 25 },
@@ -2959,8 +2959,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
         { itemId: 411, count: 2, chance: 17 },
         { itemId: 412, count: 1, chance: 15 },
         { itemId: 161, count: 1, chance: 10 },
-        { itemId: 169, count: 1, chance: 9 },
-      ],
-    },
-  ],
+        { itemId: 169, count: 1, chance: 9 }
+      ]
+    }
+  ]
 });

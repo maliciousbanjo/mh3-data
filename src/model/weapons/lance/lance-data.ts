@@ -1,5 +1,5 @@
-import { WeaponDamageProperties, WeaponType } from "../types";
-import { Lance, LanceAttack } from "./types";
+import { WeaponDamageProperties, WeaponType } from '../types';
+import { Lance, LanceAttack } from './types';
 
 export const LanceDamageProperties = Object.freeze<
   WeaponDamageProperties<LanceAttack>
@@ -8,52 +8,52 @@ export const LanceDamageProperties = Object.freeze<
   classModifier: 2.3,
   attackGroups: [
     {
-      name: "default",
+      name: 'default',
       attacks: [
-        { name: "Unsheathe Attack", hits: [{ type: "cut", power: 0.28 }] },
+        { name: 'Unsheathe Attack', hits: [{ type: 'cut', power: 0.28 }] },
         {
-          name: "Low Stab Combo",
+          name: 'Low Stab Combo',
           hits: [
-            { type: "cut", power: 0.23 },
-            { type: "cut", power: 0.23 },
-            { type: "cut", power: 0.3 },
-          ],
+            { type: 'cut', power: 0.23 },
+            { type: 'cut', power: 0.23 },
+            { type: 'cut', power: 0.3 }
+          ]
         },
         {
-          name: "High Stab Combo",
+          name: 'High Stab Combo',
           hits: [
-            { type: "cut", power: 0.28 },
-            { type: "cut", power: 0.28 },
-            { type: "cut", power: 0.3 },
-          ],
+            { type: 'cut', power: 0.28 },
+            { type: 'cut', power: 0.28 },
+            { type: 'cut', power: 0.3 }
+          ]
         },
-        { name: "Fast Counter", hits: [{ type: "cut", power: 0.28 }] },
-        { name: "Charge Counter", hits: [{ type: "cut", power: 0.3 }] },
-        { name: "Sweep", hits: [{ type: "cut", power: 0.2 }] },
+        { name: 'Fast Counter', hits: [{ type: 'cut', power: 0.28 }] },
+        { name: 'Charge Counter', hits: [{ type: 'cut', power: 0.3 }] },
+        { name: 'Sweep', hits: [{ type: 'cut', power: 0.2 }] },
         {
-          name: "Charge",
+          name: 'Charge',
           hits: [
-            { type: "cut", power: 0.2 },
-            { type: "cut", power: 0.16 },
-          ],
+            { type: 'cut', power: 0.2 },
+            { type: 'cut', power: 0.16 }
+          ]
         },
-        { name: "Charge Finisher", hits: [{ type: "cut", power: 0.4 }] },
-        { name: "Guard Attack", hits: [{ type: "cut", power: 0.2 }] },
-        { name: "Shield Bash", hits: [{ type: "impact", power: 0.4, ko: 27 }] },
-      ],
-    },
-  ],
+        { name: 'Charge Finisher', hits: [{ type: 'cut', power: 0.4 }] },
+        { name: 'Guard Attack', hits: [{ type: 'cut', power: 0.2 }] },
+        { name: 'Shield Bash', hits: [{ type: 'impact', power: 0.4, ko: 27 }] }
+      ]
+    }
+  ]
 });
 
 export const Lances: Lance[] = [
   {
     id: 0,
     type: WeaponType.LANCE,
-    name: "Iron Lance",
+    name: 'Iron Lance',
     description:
-      "A basic Lance for beginning hunters. Provides all-round defense and offense.",
+      'A basic Lance for beginning hunters. Provides all-round defense and offense.',
     attack: 138,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 50,
     awaken: true,
     sharpness: [7, 4, 4],
@@ -63,16 +63,16 @@ export const Lances: Lance[] = [
     rarity: 1,
     price: 550,
     create: [{ itemId: 97, amount: 3 }],
-    upgradesTo: [1],
+    upgradesTo: [1]
   },
   {
     id: 1,
     type: WeaponType.LANCE,
-    name: "Iron Lance+",
+    name: 'Iron Lance+',
     description:
-      "A basic Lance for beginning hunters. Provides all-round defense and offense.",
+      'A basic Lance for beginning hunters. Provides all-round defense and offense.',
     attack: 161,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 80,
     awaken: true,
     sharpness: [7, 3, 10],
@@ -82,16 +82,16 @@ export const Lances: Lance[] = [
     rarity: 1,
     price: 2010,
     upgradesFrom: { weaponId: [0], materials: [{ itemId: 97, amount: 5 }] },
-    upgradesTo: [2],
+    upgradesTo: [2]
   },
   {
     id: 2,
     type: WeaponType.LANCE,
-    name: "Thane Lance",
+    name: 'Thane Lance',
     description:
-      "A large Lance forged of hard ore. Traditionally used as an official arm by knights.",
+      'A large Lance forged of hard ore. Traditionally used as an official arm by knights.',
     attack: 207,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 100,
     awaken: true,
     sharpness: [2, 4, 14],
@@ -105,19 +105,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 99, amount: 2 },
         { itemId: 98, amount: 3 },
-        { itemId: 97, amount: 8 },
-      ],
+        { itemId: 97, amount: 8 }
+      ]
     },
-    upgradesTo: [3],
+    upgradesTo: [3]
   },
   {
     id: 3,
     type: WeaponType.LANCE,
-    name: "Knight Lance",
+    name: 'Knight Lance',
     description:
-      "A large Lance forged of hard ore. Traditionally used as an official arm by knights.",
+      'A large Lance forged of hard ore. Traditionally used as an official arm by knights.',
     attack: 253,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 120,
     awaken: true,
     sharpness: [4, 5, 10, 1],
@@ -129,26 +129,26 @@ export const Lances: Lance[] = [
     create: [
       { itemId: 100, amount: 5 },
       { itemId: 102, amount: 8 },
-      { itemId: 98, amount: 15 },
+      { itemId: 98, amount: 15 }
     ],
     upgradesFrom: {
       weaponId: [2],
       materials: [
         { itemId: 102, amount: 6 },
         { itemId: 99, amount: 7 },
-        { itemId: 97, amount: 10 },
-      ],
+        { itemId: 97, amount: 10 }
+      ]
     },
-    upgradesTo: [4, 12],
+    upgradesTo: [4, 12]
   },
   {
     id: 4,
     type: WeaponType.LANCE,
-    name: "Rampart",
+    name: 'Rampart',
     description:
-      "A Lance given to a battle-hardened knight. Notable for its large shield.",
+      'A Lance given to a battle-hardened knight. Notable for its large shield.',
     attack: 299,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 150,
     awaken: true,
     sharpness: [4, 8, 6, 2],
@@ -162,19 +162,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 110, amount: 4 },
         { itemId: 99, amount: 15 },
-        { itemId: 97, amount: 15 },
-      ],
+        { itemId: 97, amount: 15 }
+      ]
     },
-    upgradesTo: [5, 9],
+    upgradesTo: [5, 9]
   },
   {
     id: 5,
     type: WeaponType.LANCE,
-    name: "Rampart+",
+    name: 'Rampart+',
     description:
-      "A Lance given to a battle-hardened knight. Notable for its large shield.",
+      'A Lance given to a battle-hardened knight. Notable for its large shield.',
     attack: 322,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 180,
     awaken: true,
     defense: 12,
@@ -189,19 +189,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 104, amount: 3 },
         { itemId: 100, amount: 10 },
-        { itemId: 118, amount: 5 },
-      ],
+        { itemId: 118, amount: 5 }
+      ]
     },
-    upgradesTo: [6],
+    upgradesTo: [6]
   },
   {
     id: 6,
     type: WeaponType.LANCE,
-    name: "Babel Spear",
+    name: 'Babel Spear',
     description:
-      "A golden Lance as stately as its tower namesake with both good offense and defense.",
+      'A golden Lance as stately as its tower namesake with both good offense and defense.',
     attack: 368,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 200,
     awaken: true,
     defense: 16,
@@ -216,19 +216,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 378, amount: 5 },
         { itemId: 379, amount: 2 },
-        { itemId: 100, amount: 15 },
-      ],
+        { itemId: 100, amount: 15 }
+      ]
     },
-    upgradesTo: [7],
+    upgradesTo: [7]
   },
   {
     id: 7,
     type: WeaponType.LANCE,
-    name: "Babel Spear+",
+    name: 'Babel Spear+',
     description:
-      "A golden Lance as stately as its tower namesake with both good offense and defense.",
+      'A golden Lance as stately as its tower namesake with both good offense and defense.',
     attack: 391,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 250,
     awaken: true,
     defense: 20,
@@ -243,19 +243,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 101, amount: 10 },
         { itemId: 104, amount: 10 },
-        { itemId: 106, amount: 5 },
-      ],
+        { itemId: 106, amount: 5 }
+      ]
     },
-    upgradesTo: [8],
+    upgradesTo: [8]
   },
   {
     id: 8,
     type: WeaponType.LANCE,
-    name: "Elder Babel Spr (R)",
+    name: 'Elder Babel Spr (R)',
     description:
-      "Lance wielded by a knight of old against the gods in an attempt to protect mankind.",
+      'Lance wielded by a knight of old against the gods in an attempt to protect mankind.',
     attack: 437,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 300,
     awaken: true,
     defense: 24,
@@ -270,18 +270,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 101, amount: 20 },
         { itemId: 447, amount: 1 },
-        { itemId: 475, amount: 5 },
-      ],
-    },
+        { itemId: 475, amount: 5 }
+      ]
+    }
   },
   {
     id: 9,
     type: WeaponType.LANCE,
-    name: "Tusk Lance",
+    name: 'Tusk Lance',
     description:
-      "An icy Lance made from a Barioth tusk. Cold enough to freeze vapor in the air.",
+      'An icy Lance made from a Barioth tusk. Cold enough to freeze vapor in the air.',
     attack: 299,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 200,
     awaken: false,
     sharpness: [9, 5, 7, 4],
@@ -295,19 +295,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 374, amount: 1 },
         { itemId: 375, amount: 3 },
-        { itemId: 372, amount: 5 },
-      ],
+        { itemId: 372, amount: 5 }
+      ]
     },
-    upgradesTo: [10],
+    upgradesTo: [10]
   },
   {
     id: 10,
     type: WeaponType.LANCE,
-    name: "Tusk Lance+",
+    name: 'Tusk Lance+',
     description:
-      "An icy Lance made from a Barioth tusk. Cold enough to freeze vapor in the air.",
+      'An icy Lance made from a Barioth tusk. Cold enough to freeze vapor in the air.',
     attack: 322,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 310,
     awaken: false,
     sharpness: [10, 8, 5, 7],
@@ -321,19 +321,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 374, amount: 3 },
         { itemId: 376, amount: 2 },
-        { itemId: 377, amount: 4 },
-      ],
+        { itemId: 377, amount: 4 }
+      ]
     },
-    upgradesTo: [11],
+    upgradesTo: [11]
   },
   {
     id: 11,
     type: WeaponType.LANCE,
-    name: "Sabertooth (G)",
+    name: 'Sabertooth (G)',
     description:
-      "An icy Lance from a frozen land. sharpness and cold, just like the Tundra.",
+      'An icy Lance from a frozen land. sharpness and cold, just like the Tundra.',
     attack: 368,
-    element: "ICE",
+    element: 'ICE',
     elemAttack: 420,
     awaken: false,
     sharpness: [7, 3, 15, 5, 5],
@@ -347,18 +347,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 419, amount: 3 },
         { itemId: 170, amount: 4 },
-        { itemId: 420, amount: 2 },
-      ],
-    },
+        { itemId: 420, amount: 2 }
+      ]
+    }
   },
   {
     id: 12,
     type: WeaponType.LANCE,
-    name: "Acrus Lance",
+    name: 'Acrus Lance',
     description:
-      "A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.",
+      'A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.',
     attack: 322,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 180,
     awaken: false,
     sharpness: [2, 4, 16, 3],
@@ -372,19 +372,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 392, amount: 1 },
         { itemId: 284, amount: 7 },
-        { itemId: 100, amount: 9 },
-      ],
+        { itemId: 100, amount: 9 }
+      ]
     },
-    upgradesTo: [13, 15, 17],
+    upgradesTo: [13, 15, 17]
   },
   {
     id: 13,
     type: WeaponType.LANCE,
-    name: "Doris Spear (R)",
+    name: 'Doris Spear (R)',
     description:
-      "A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.",
+      'A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.',
     attack: 368,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 240,
     awaken: false,
     sharpness: [9, 5, 7, 9],
@@ -398,19 +398,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 391, amount: 3 },
         { itemId: 287, amount: 3 },
-        { itemId: 429, amount: 1 },
-      ],
+        { itemId: 429, amount: 1 }
+      ]
     },
-    upgradesTo: [14],
+    upgradesTo: [14]
   },
   {
     id: 14,
     type: WeaponType.LANCE,
-    name: "Doris Fellspear (P)",
+    name: 'Doris Fellspear (P)',
     description:
-      "A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.",
+      'A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.',
     attack: 414,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 380,
     awaken: false,
     sharpness: [9, 5, 7, 12, 2],
@@ -424,18 +424,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 467, amount: 8 },
         { itemId: 561, amount: 10 },
-        { itemId: 164, amount: 5 },
-      ],
-    },
+        { itemId: 164, amount: 5 }
+      ]
+    }
   },
   {
     id: 15,
     type: WeaponType.LANCE,
-    name: "Doris Spear (Y)",
+    name: 'Doris Spear (Y)',
     description:
-      "A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.",
+      'A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.',
     attack: 345,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 240,
     awaken: false,
     sharpness: [9, 5, 7, 9],
@@ -449,19 +449,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 288, amount: 1 },
         { itemId: 392, amount: 3 },
-        { itemId: 268, amount: 4 },
-      ],
+        { itemId: 268, amount: 4 }
+      ]
     },
-    upgradesTo: [16],
+    upgradesTo: [16]
   },
   {
     id: 16,
     type: WeaponType.LANCE,
-    name: "Doris Fellspear (G)",
+    name: 'Doris Fellspear (G)',
     description:
-      "A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.",
+      'A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.',
     attack: 391,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 380,
     awaken: false,
     sharpness: [9, 5, 7, 12, 2],
@@ -475,18 +475,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 467, amount: 8 },
         { itemId: 561, amount: 10 },
-        { itemId: 163, amount: 5 },
-      ],
-    },
+        { itemId: 163, amount: 5 }
+      ]
+    }
   },
   {
     id: 17,
     type: WeaponType.LANCE,
-    name: "High Acrus Lance",
+    name: 'High Acrus Lance',
     description:
       "Lagiacrus' lightning in Lance form. Those it touches are reduced to sea foam.",
     attack: 368,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 320,
     awaken: false,
     sharpness: [2, 4, 16, 7, 1],
@@ -500,19 +500,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 392, amount: 4 },
         { itemId: 287, amount: 4 },
-        { itemId: 169, amount: 2 },
-      ],
+        { itemId: 169, amount: 2 }
+      ]
     },
-    upgradesTo: [18],
+    upgradesTo: [18]
   },
   {
     id: 18,
     type: WeaponType.LANCE,
-    name: "Amphitrite (P)",
+    name: 'Amphitrite (P)',
     description:
       "Lagiacrus' lightning in Lance form. Those it touches are reduced to sea foam.",
     attack: 414,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 440,
     awaken: false,
     sharpness: [2, 4, 16, 7, 6],
@@ -526,18 +526,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 468, amount: 4 },
         { itemId: 286, amount: 3 },
-        { itemId: 288, amount: 5 },
-      ],
-    },
+        { itemId: 288, amount: 5 }
+      ]
+    }
   },
   {
     id: 19,
     type: WeaponType.LANCE,
-    name: "Bone Lance",
+    name: 'Bone Lance',
     description:
-      "A Lance notable for its exceptional blocking and Finishing Blow.",
+      'A Lance notable for its exceptional blocking and Finishing Blow.',
     attack: 161,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 80,
     awaken: true,
     sharpness: [9, 5, 1],
@@ -548,18 +548,18 @@ export const Lances: Lance[] = [
     price: 540,
     create: [
       { itemId: 149, amount: 1 },
-      { itemId: 182, amount: 2 },
+      { itemId: 182, amount: 2 }
     ],
-    upgradesTo: [20],
+    upgradesTo: [20]
   },
   {
     id: 20,
     type: WeaponType.LANCE,
-    name: "Bone Lance+",
+    name: 'Bone Lance+',
     description:
-      "A Lance notable for its exceptional blocking and Finishing Blow.",
+      'A Lance notable for its exceptional blocking and Finishing Blow.',
     attack: 184,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 110,
     awaken: true,
     sharpness: [4, 8, 3],
@@ -572,19 +572,19 @@ export const Lances: Lance[] = [
       weaponId: [19],
       materials: [
         { itemId: 149, amount: 3 },
-        { itemId: 277, amount: 2 },
-      ],
+        { itemId: 277, amount: 2 }
+      ]
     },
-    upgradesTo: [21],
+    upgradesTo: [21]
   },
   {
     id: 21,
     type: WeaponType.LANCE,
-    name: "Ploshasta",
+    name: 'Ploshasta',
     description:
-      "A Lance made from Rhenoplos parts. Pairs good Defense with a strong Dash Attack.",
+      'A Lance made from Rhenoplos parts. Pairs good Defense with a strong Dash Attack.',
     attack: 230,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 130,
     awaken: true,
     sharpness: [9, 5, 6],
@@ -598,19 +598,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 149, amount: 5 },
         { itemId: 510, amount: 2 },
-        { itemId: 280, amount: 2 },
-      ],
+        { itemId: 280, amount: 2 }
+      ]
     },
-    upgradesTo: [22, 35],
+    upgradesTo: [22, 35]
   },
   {
     id: 22,
     type: WeaponType.LANCE,
-    name: "Rhenohasta",
+    name: 'Rhenohasta',
     description:
-      "A Lance made from Rhenoplos parts. Pairs good Defense with a strong Dash Attack.",
+      'A Lance made from Rhenoplos parts. Pairs good Defense with a strong Dash Attack.',
     attack: 299,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 150,
     awaken: true,
     sharpness: [4, 5, 10, 1],
@@ -622,26 +622,26 @@ export const Lances: Lance[] = [
     create: [
       { itemId: 151, amount: 2 },
       { itemId: 272, amount: 4 },
-      { itemId: 510, amount: 5 },
+      { itemId: 510, amount: 5 }
     ],
     upgradesFrom: {
       weaponId: [21],
       materials: [
         { itemId: 150, amount: 3 },
         { itemId: 511, amount: 2 },
-        { itemId: 263, amount: 2 },
-      ],
+        { itemId: 263, amount: 2 }
+      ]
     },
-    upgradesTo: [23, 26, 32],
+    upgradesTo: [23, 26, 32]
   },
   {
     id: 23,
     type: WeaponType.LANCE,
-    name: "Azure Crest",
+    name: 'Azure Crest',
     description:
-      "A Lance made from Baggi materials. The tip contains tranquilizing fluid.",
+      'A Lance made from Baggi materials. The tip contains tranquilizing fluid.',
     attack: 299,
-    element: "SLEEP",
+    element: 'SLEEP',
     elemAttack: 150,
     awaken: false,
     sharpness: [4, 5, 10, 6],
@@ -655,19 +655,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 521, amount: 3 },
         { itemId: 518, amount: 10 },
-        { itemId: 151, amount: 2 },
-      ],
+        { itemId: 151, amount: 2 }
+      ]
     },
-    upgradesTo: [24],
+    upgradesTo: [24]
   },
   {
     id: 24,
     type: WeaponType.LANCE,
-    name: "Azure Crest+",
+    name: 'Azure Crest+',
     description:
-      "A Lance made from Baggi materials. The tip contains tranquilizing fluid.",
+      'A Lance made from Baggi materials. The tip contains tranquilizing fluid.',
     attack: 322,
-    element: "SLEEP",
+    element: 'SLEEP',
     elemAttack: 200,
     awaken: false,
     sharpness: [4, 5, 10, 11],
@@ -681,19 +681,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 516, amount: 3 },
         { itemId: 394, amount: 3 },
-        { itemId: 118, amount: 5 },
-      ],
+        { itemId: 118, amount: 5 }
+      ]
     },
-    upgradesTo: [25],
+    upgradesTo: [25]
   },
   {
     id: 25,
     type: WeaponType.LANCE,
-    name: "Great Azure",
+    name: 'Great Azure',
     description:
-      "A Lance that gives prey a few moments of rest followed by an eternity of slumber.",
+      'A Lance that gives prey a few moments of rest followed by an eternity of slumber.',
     attack: 391,
-    element: "SLEEP",
+    element: 'SLEEP',
     elemAttack: 250,
     awaken: false,
     sharpness: [5, 5, 9, 13, 3],
@@ -707,18 +707,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 517, amount: 5 },
         { itemId: 525, amount: 10 },
-        { itemId: 522, amount: 5 },
-      ],
-    },
+        { itemId: 522, amount: 5 }
+      ]
+    }
   },
   {
     id: 26,
     type: WeaponType.LANCE,
-    name: "Rugged Lance",
+    name: 'Rugged Lance',
     description:
-      "A Lance as solid as a Barroth. Better for sweeping than thrusting.",
+      'A Lance as solid as a Barroth. Better for sweeping than thrusting.',
     attack: 345,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 170,
     awaken: true,
     sharpness: [2, 4, 16, 3],
@@ -732,19 +732,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 272, amount: 5 },
         { itemId: 274, amount: 2 },
-        { itemId: 110, amount: 8 },
-      ],
+        { itemId: 110, amount: 8 }
+      ]
     },
-    upgradesTo: [27, 28, 30],
+    upgradesTo: [27, 28, 30]
   },
   {
     id: 27,
     type: WeaponType.LANCE,
-    name: "Rugged Lance+",
+    name: 'Rugged Lance+',
     description:
-      "A Lance as solid as a Barroth. Better for sweeping than thrusting.",
+      'A Lance as solid as a Barroth. Better for sweeping than thrusting.',
     attack: 391,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 200,
     awaken: true,
     sharpness: [2, 4, 16, 7, 1],
@@ -758,18 +758,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 276, amount: 2 },
         { itemId: 273, amount: 5 },
-        { itemId: 355, amount: 1 },
-      ],
-    },
+        { itemId: 355, amount: 1 }
+      ]
+    }
   },
   {
     id: 28,
     type: WeaponType.LANCE,
-    name: "Diablos Lance",
+    name: 'Diablos Lance',
     description:
-      "A Lance made from the thick, sharpness horn of the Diablos, the dignified desert king.",
+      'A Lance made from the thick, sharpness horn of the Diablos, the dignified desert king.',
     attack: 437,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 200,
     awaken: true,
     sharpness: [15, 5, 3, 7],
@@ -783,19 +783,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 355, amount: 2 },
         { itemId: 271, amount: 4 },
-        { itemId: 561, amount: 5 },
-      ],
+        { itemId: 561, amount: 5 }
+      ]
     },
-    upgradesTo: [29],
+    upgradesTo: [29]
   },
   {
     id: 29,
     type: WeaponType.LANCE,
-    name: "Diablos Spear",
+    name: 'Diablos Spear',
     description:
-      "A Lance holding the spirit of the king of the desert. It can pierce anything.",
+      'A Lance holding the spirit of the king of the desert. It can pierce anything.',
     attack: 506,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 250,
     awaken: true,
     sharpness: [16, 5, 2, 10, 2],
@@ -809,18 +809,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 424, amount: 2 },
         { itemId: 423, amount: 3 },
-        { itemId: 421, amount: 3 },
-      ],
-    },
+        { itemId: 421, amount: 3 }
+      ]
+    }
   },
   {
     id: 30,
     type: WeaponType.LANCE,
-    name: "Spiral Heat",
+    name: 'Spiral Heat',
     description:
-      "A Lance made from the beak of the Agnaktor. Capable of piercing solid rock.",
+      'A Lance made from the beak of the Agnaktor. Capable of piercing solid rock.',
     attack: 345,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 220,
     awaken: false,
     sharpness: [4, 8, 6, 12],
@@ -834,19 +834,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 387, amount: 2 },
         { itemId: 382, amount: 5 },
-        { itemId: 384, amount: 3 },
-      ],
+        { itemId: 384, amount: 3 }
+      ]
     },
-    upgradesTo: [31],
+    upgradesTo: [31]
   },
   {
     id: 31,
     type: WeaponType.LANCE,
-    name: "Agnaktor Firelance",
+    name: 'Agnaktor Firelance',
     description:
-      "A Lance of crimson flame. Its fiery whirlwinds turn everything to ash.",
+      'A Lance of crimson flame. Its fiery whirlwinds turn everything to ash.',
     attack: 391,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 350,
     awaken: false,
     sharpness: [5, 7, 5, 17, 1],
@@ -860,18 +860,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 387, amount: 5 },
         { itemId: 474, amount: 5 },
-        { itemId: 473, amount: 5 },
-      ],
-    },
+        { itemId: 473, amount: 5 }
+      ]
+    }
   },
   {
     id: 32,
     type: WeaponType.LANCE,
-    name: "Gobulu Muruka",
+    name: 'Gobulu Muruka',
     description:
-      "A Lance made from Gobul spines. Paralyzes its prey with neurotoxins.",
+      'A Lance made from Gobul spines. Paralyzes its prey with neurotoxins.',
     attack: 299,
-    element: "PARALYSIS",
+    element: 'PARALYSIS',
     elemAttack: 120,
     awaken: false,
     sharpness: [9, 5, 7, 4],
@@ -885,19 +885,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 296, amount: 2 },
         { itemId: 297, amount: 3 },
-        { itemId: 302, amount: 1 },
-      ],
+        { itemId: 302, amount: 1 }
+      ]
     },
-    upgradesTo: [33],
+    upgradesTo: [33]
   },
   {
     id: 33,
     type: WeaponType.LANCE,
-    name: "Gobulu Muruka+",
+    name: 'Gobulu Muruka+',
     description:
-      "A Lance made from Gobul spines. Paralyzes its prey with neurotoxins.",
+      'A Lance made from Gobul spines. Paralyzes its prey with neurotoxins.',
     attack: 322,
-    element: "PARALYSIS",
+    element: 'PARALYSIS',
     elemAttack: 180,
     awaken: false,
     sharpness: [9, 5, 7, 9],
@@ -911,19 +911,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 298, amount: 3 },
         { itemId: 376, amount: 1 },
-        { itemId: 168, amount: 1 },
-      ],
+        { itemId: 168, amount: 1 }
+      ]
     },
-    upgradesTo: [34],
+    upgradesTo: [34]
   },
   {
     id: 34,
     type: WeaponType.LANCE,
-    name: "Gobulu Muraaka",
+    name: 'Gobulu Muraaka',
     description:
-      "A Lance with the power to paralyze the bodies of monsters it wounds.",
+      'A Lance with the power to paralyze the bodies of monsters it wounds.',
     attack: 368,
-    element: "PARALYSIS",
+    element: 'PARALYSIS',
     elemAttack: 230,
     awaken: false,
     sharpness: [9, 5, 7, 12, 2],
@@ -937,18 +937,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 461, amount: 7 },
         { itemId: 464, amount: 4 },
-        { itemId: 103, amount: 10 },
-      ],
-    },
+        { itemId: 103, amount: 10 }
+      ]
+    }
   },
   {
     id: 35,
     type: WeaponType.LANCE,
-    name: "Ludroth Bone Spear",
+    name: 'Ludroth Bone Spear',
     description:
-      "A drill-like shape enhances the piercing power of this Lance made of Ludroth bone.",
+      'A drill-like shape enhances the piercing power of this Lance made of Ludroth bone.',
     attack: 253,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 90,
     awaken: true,
     sharpness: [2, 4, 14],
@@ -962,19 +962,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 295, amount: 2 },
         { itemId: 294, amount: 6 },
-        { itemId: 116, amount: 2 },
-      ],
+        { itemId: 116, amount: 2 }
+      ]
     },
-    upgradesTo: [36],
+    upgradesTo: [36]
   },
   {
     id: 36,
     type: WeaponType.LANCE,
-    name: "Spiral Lance",
+    name: 'Spiral Lance',
     description:
-      "A Water-filled Lance made of Royal Ludroth bone. Shoots pressurized water into prey.",
+      'A Water-filled Lance made of Royal Ludroth bone. Shoots pressurized water into prey.',
     attack: 276,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 110,
     awaken: false,
     sharpness: [9, 5, 7, 4],
@@ -986,26 +986,26 @@ export const Lances: Lance[] = [
     create: [
       { itemId: 456, amount: 1 },
       { itemId: 289, amount: 3 },
-      { itemId: 151, amount: 2 },
+      { itemId: 151, amount: 2 }
     ],
     upgradesFrom: {
       weaponId: [35],
       materials: [
         { itemId: 289, amount: 3 },
         { itemId: 291, amount: 2 },
-        { itemId: 371, amount: 2 },
-      ],
+        { itemId: 371, amount: 2 }
+      ]
     },
-    upgradesTo: [37, 40],
+    upgradesTo: [37, 40]
   },
   {
     id: 37,
     type: WeaponType.LANCE,
-    name: "Spiral Lance+",
+    name: 'Spiral Lance+',
     description:
-      "A Water-filled Lance made of Royal Ludroth bone. Shoots pressurized water into prey.",
+      'A Water-filled Lance made of Royal Ludroth bone. Shoots pressurized water into prey.',
     attack: 322,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 240,
     awaken: false,
     sharpness: [15, 5, 3, 7],
@@ -1019,19 +1019,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 456, amount: 4 },
         { itemId: 297, amount: 3 },
-        { itemId: 287, amount: 3 },
-      ],
+        { itemId: 287, amount: 3 }
+      ]
     },
-    upgradesTo: [38, 39],
+    upgradesTo: [38, 39]
   },
   {
     id: 38,
     type: WeaponType.LANCE,
-    name: "Spiral Splash (B)",
+    name: 'Spiral Splash (B)',
     description:
-      "A Royal Ludroth Lance that resembles a waterspout. Hits prey with a deluge of blows.",
+      'A Royal Ludroth Lance that resembles a waterspout. Hits prey with a deluge of blows.',
     attack: 391,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 300,
     awaken: false,
     sharpness: [11, 8, 5, 8, 3],
@@ -1045,18 +1045,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 457, amount: 5 },
         { itemId: 460, amount: 2 },
-        { itemId: 459, amount: 3 },
-      ],
-    },
+        { itemId: 459, amount: 3 }
+      ]
+    }
   },
   {
     id: 39,
     type: WeaponType.LANCE,
-    name: "Spiral Splash (G)",
+    name: 'Spiral Splash (G)',
     description:
-      "A Royal Ludroth Lance that resembles a waterspout. Hits prey with a deluge of blows.",
+      'A Royal Ludroth Lance that resembles a waterspout. Hits prey with a deluge of blows.',
     attack: 391,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 300,
     awaken: false,
     sharpness: [11, 8, 5, 8, 3],
@@ -1070,18 +1070,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 457, amount: 5 },
         { itemId: 460, amount: 2 },
-        { itemId: 467, amount: 3 },
-      ],
-    },
+        { itemId: 467, amount: 3 }
+      ]
+    }
   },
   {
     id: 40,
     type: WeaponType.LANCE,
-    name: "Shadow Javelin",
+    name: 'Shadow Javelin',
     description:
-      "A Lance made with the toxins of the Gigginox. Violently poisons any monster it hits.",
+      'A Lance made with the toxins of the Gigginox. Violently poisons any monster it hits.',
     attack: 414,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 240,
     awaken: false,
     sharpness: [4, 5, 10, 11],
@@ -1095,19 +1095,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 167, amount: 3 },
         { itemId: 266, amount: 3 },
-        { itemId: 169, amount: 2 },
-      ],
+        { itemId: 169, amount: 2 }
+      ]
     },
-    upgradesTo: [41],
+    upgradesTo: [41]
   },
   {
     id: 41,
     type: WeaponType.LANCE,
-    name: "Toxic Javelin",
+    name: 'Toxic Javelin',
     description:
-      "A Lance with a poisoned tip. A knowledge of poison is required to use it safely.",
+      'A Lance with a poisoned tip. A knowledge of poison is required to use it safely.',
     attack: 437,
-    element: "POISON",
+    element: 'POISON',
     elemAttack: 290,
     awaken: false,
     sharpness: [9, 5, 7, 12, 2],
@@ -1121,18 +1121,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 176, amount: 3 },
         { itemId: 175, amount: 3 },
-        { itemId: 174, amount: 3 },
-      ],
-    },
+        { itemId: 174, amount: 3 }
+      ]
+    }
   },
   {
     id: 42,
     type: WeaponType.LANCE,
-    name: "Blue Crater",
+    name: 'Blue Crater',
     description:
-      "A Lance made from ore mined in polar climes. Upgradeable in more ways than one.",
+      'A Lance made from ore mined in polar climes. Upgradeable in more ways than one.',
     attack: 299,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 150,
     awaken: true,
     sharpness: [4, 8, 6, 2],
@@ -1144,18 +1144,18 @@ export const Lances: Lance[] = [
     create: [
       { itemId: 106, amount: 2 },
       { itemId: 102, amount: 10 },
-      { itemId: 146, amount: 1 },
+      { itemId: 146, amount: 1 }
     ],
-    upgradesTo: [43, 45, 47],
+    upgradesTo: [43, 45, 47]
   },
   {
     id: 43,
     type: WeaponType.LANCE,
-    name: "Smalt Crater (R)",
+    name: 'Smalt Crater (R)',
     description:
-      "A Lance whose ore holds ancient memories. Impressive in its natural greatness.",
+      'A Lance whose ore holds ancient memories. Impressive in its natural greatness.',
     attack: 345,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 190,
     awaken: true,
     sharpness: [4, 8, 6, 7],
@@ -1169,19 +1169,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 118, amount: 5 },
         { itemId: 100, amount: 5 },
-        { itemId: 269, amount: 3 },
-      ],
+        { itemId: 269, amount: 3 }
+      ]
     },
-    upgradesTo: [44],
+    upgradesTo: [44]
   },
   {
     id: 44,
     type: WeaponType.LANCE,
-    name: "Doom Crown (P)",
+    name: 'Doom Crown (P)',
     description:
-      "An ancient stone Lance whose thrusts are as unstoppable as the march of time.",
+      'An ancient stone Lance whose thrusts are as unstoppable as the march of time.',
     attack: 437,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 280,
     awaken: true,
     sharpness: [5, 5, 9, 13, 3],
@@ -1195,18 +1195,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 103, amount: 10 },
         { itemId: 101, amount: 10 },
-        { itemId: 169, amount: 3 },
-      ],
-    },
+        { itemId: 169, amount: 3 }
+      ]
+    }
   },
   {
     id: 45,
     type: WeaponType.LANCE,
-    name: "Smalt Crater (B)",
+    name: 'Smalt Crater (B)',
     description:
-      "A Lance whose ore holds ancient memories. Impressive in its natural greatness.",
+      'A Lance whose ore holds ancient memories. Impressive in its natural greatness.',
     attack: 322,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 190,
     awaken: true,
     sharpness: [4, 8, 6, 7],
@@ -1220,19 +1220,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 118, amount: 5 },
         { itemId: 100, amount: 5 },
-        { itemId: 292, amount: 3 },
-      ],
+        { itemId: 292, amount: 3 }
+      ]
     },
-    upgradesTo: [44, 46],
+    upgradesTo: [44, 46]
   },
   {
     id: 46,
     type: WeaponType.LANCE,
-    name: "Doom Crown (G)",
+    name: 'Doom Crown (G)',
     description:
-      "An ancient stone Lance whose thrusts are as unstoppable as the march of time.",
+      'An ancient stone Lance whose thrusts are as unstoppable as the march of time.',
     attack: 414,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 280,
     awaken: true,
     sharpness: [5, 5, 9, 13, 3],
@@ -1246,18 +1246,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 103, amount: 10 },
         { itemId: 148, amount: 7 },
-        { itemId: 169, amount: 2 },
-      ],
-    },
+        { itemId: 169, amount: 2 }
+      ]
+    }
   },
   {
     id: 47,
     type: WeaponType.LANCE,
-    name: "Smalt Crater (Y)",
+    name: 'Smalt Crater (Y)',
     description:
-      "A Lance whose ore holds ancient memories. Impressive in its natural greatness.",
+      'A Lance whose ore holds ancient memories. Impressive in its natural greatness.',
     attack: 322,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 190,
     awaken: true,
     sharpness: [4, 8, 6, 7],
@@ -1271,19 +1271,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 118, amount: 5 },
         { itemId: 100, amount: 5 },
-        { itemId: 247, amount: 3 },
-      ],
+        { itemId: 247, amount: 3 }
+      ]
     },
-    upgradesTo: [46],
+    upgradesTo: [46]
   },
   {
     id: 48,
     type: WeaponType.LANCE,
-    name: "Grief Lance",
+    name: 'Grief Lance',
     description:
-      "The muscular force of a Deviljho has been channeled into this Lance.",
+      'The muscular force of a Deviljho has been channeled into this Lance.',
     attack: 414,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 100,
     awaken: false,
     sharpness: [9, 5, 7, 12, 2],
@@ -1295,18 +1295,18 @@ export const Lances: Lance[] = [
     create: [
       { itemId: 455, amount: 3 },
       { itemId: 452, amount: 5 },
-      { itemId: 450, amount: 8 },
+      { itemId: 450, amount: 8 }
     ],
-    upgradesTo: [49, 50],
+    upgradesTo: [49, 50]
   },
   {
     id: 49,
     type: WeaponType.LANCE,
-    name: "Fiendish Tower (P)",
+    name: 'Fiendish Tower (P)',
     description:
       "This Lance channels a Deviljho's power to split dragon scales like steel.",
     attack: 460,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 150,
     awaken: false,
     sharpness: [9, 5, 7, 12, 6, 1],
@@ -1320,18 +1320,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 569, amount: 3 },
         { itemId: 454, amount: 3 },
-        { itemId: 453, amount: 1 },
-      ],
-    },
+        { itemId: 453, amount: 1 }
+      ]
+    }
   },
   {
     id: 50,
     type: WeaponType.LANCE,
-    name: "Fiendish Tower (G)",
+    name: 'Fiendish Tower (G)',
     description:
       "This Lance channels a Deviljho's power to split dragon scales like steel.",
     attack: 437,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 150,
     awaken: false,
     sharpness: [9, 5, 7, 12, 6, 1],
@@ -1345,18 +1345,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 569, amount: 3 },
         { itemId: 454, amount: 3 },
-        { itemId: 453, amount: 1 },
-      ],
-    },
+        { itemId: 453, amount: 1 }
+      ]
+    }
   },
   {
     id: 51,
     type: WeaponType.LANCE,
-    name: "Alatreon Lance",
+    name: 'Alatreon Lance',
     description:
       "A Lance fashioned after the Alatreon's horns. Some say it's a key to another world.",
     attack: 391,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 400,
     awaken: false,
     sharpness: [7, 3, 15, 5, 5],
@@ -1368,18 +1368,18 @@ export const Lances: Lance[] = [
     create: [
       { itemId: 476, amount: 3 },
       { itemId: 477, amount: 4 },
-      { itemId: 432, amount: 3 },
+      { itemId: 432, amount: 3 }
     ],
-    upgradesTo: [52],
+    upgradesTo: [52]
   },
   {
     id: 52,
     type: WeaponType.LANCE,
-    name: "Alatreon Gleam",
+    name: 'Alatreon Gleam',
     description:
-      "A terrible Lance that issues a dim light. Owners are said to go missing, or worse...",
+      'A terrible Lance that issues a dim light. Owners are said to go missing, or worse...',
     attack: 414,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 450,
     awaken: false,
     sharpness: [7, 3, 15, 5, 5],
@@ -1393,18 +1393,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 569, amount: 3 },
         { itemId: 477, amount: 5 },
-        { itemId: 404, amount: 1 },
-      ],
-    },
+        { itemId: 404, amount: 1 }
+      ]
+    }
   },
   {
     id: 53,
     type: WeaponType.LANCE,
     name: "Warrior's Lance",
     description:
-      "An ordinary-looking Lance that, with continued use, outranks many others.",
+      'An ordinary-looking Lance that, with continued use, outranks many others.',
     attack: 345,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 250,
     awaken: true,
     sharpness: [4, 5, 10, 11],
@@ -1416,18 +1416,18 @@ export const Lances: Lance[] = [
     create: [
       { itemId: 581, amount: 3 },
       { itemId: 577, amount: 4 },
-      { itemId: 104, amount: 5 },
+      { itemId: 104, amount: 5 }
     ],
-    upgradesTo: [54],
+    upgradesTo: [54]
   },
   {
     id: 54,
     type: WeaponType.LANCE,
-    name: "Millennium",
+    name: 'Millennium',
     description:
-      "A Lance carried by a knight who faced certain death to rescue his princess.",
+      'A Lance carried by a knight who faced certain death to rescue his princess.',
     attack: 414,
-    element: "THUNDER",
+    element: 'THUNDER',
     elemAttack: 300,
     awaken: true,
     sharpness: [5, 5, 9, 13, 3],
@@ -1441,18 +1441,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 553, amount: 3 },
         { itemId: 347, amount: 5 },
-        { itemId: 168, amount: 2 },
-      ],
-    },
+        { itemId: 168, amount: 2 }
+      ]
+    }
   },
   {
     id: 55,
     type: WeaponType.LANCE,
-    name: "Sharq Attack",
+    name: 'Sharq Attack',
     description:
       "Depicts the terror of Moga's shores. Just watch out for other hunters' harpoons!",
     attack: 230,
-    element: "WATER",
+    element: 'WATER',
     elemAttack: 450,
     awaken: false,
     sharpness: [7, 4, 15, 5, 4],
@@ -1464,17 +1464,17 @@ export const Lances: Lance[] = [
     create: [
       { itemId: 107, amount: 5 },
       { itemId: 575, amount: 5 },
-      { itemId: 102, amount: 20 },
-    ],
+      { itemId: 102, amount: 20 }
+    ]
   },
   {
     id: 56,
     type: WeaponType.LANCE,
-    name: "ML001: Baltzenger",
+    name: 'ML001: Baltzenger',
     description:
-      "Prototype of a weapon being developed in a distant land, for now it works as a Lance.",
+      'Prototype of a weapon being developed in a distant land, for now it works as a Lance.',
     attack: 345,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 250,
     awaken: false,
     sharpness: [9, 5, 7, 9],
@@ -1486,18 +1486,18 @@ export const Lances: Lance[] = [
     create: [
       { itemId: 558, amount: 5 },
       { itemId: 104, amount: 5 },
-      { itemId: 257, amount: 2 },
+      { itemId: 257, amount: 2 }
     ],
-    upgradesTo: [57],
+    upgradesTo: [57]
   },
   {
     id: 57,
     type: WeaponType.LANCE,
     name: 'Banderlance "Byakko"',
     description:
-      "Prototype of a weapon being developed in a distance land, for now it works as a Lance.",
+      'Prototype of a weapon being developed in a distance land, for now it works as a Lance.',
     attack: 414,
-    element: "FIRE",
+    element: 'FIRE',
     elemAttack: 280,
     awaken: false,
     sharpness: [2, 4, 16, 7, 6],
@@ -1511,18 +1511,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 558, amount: 6 },
         { itemId: 475, amount: 7 },
-        { itemId: 158, amount: 2 },
-      ],
-    },
+        { itemId: 158, amount: 2 }
+      ]
+    }
   },
   {
     id: 58,
     type: WeaponType.LANCE,
-    name: "Rusted Lance",
+    name: 'Rusted Lance',
     description:
-      "A Lance with unrealized potential. It could perhaps be polished...",
+      'A Lance with unrealized potential. It could perhaps be polished...',
     attack: 230,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 10,
     awaken: true,
     sharpness: [15],
@@ -1532,16 +1532,16 @@ export const Lances: Lance[] = [
     rarity: 1,
     price: 0,
     create: [{ itemId: 108, amount: 1 }],
-    upgradesTo: [59],
+    upgradesTo: [59]
   },
   {
     id: 59,
     type: WeaponType.LANCE,
-    name: "Tarnished Lance",
+    name: 'Tarnished Lance',
     description:
-      "A Lance with unrealized potential. It could perhaps be polished...",
+      'A Lance with unrealized potential. It could perhaps be polished...',
     attack: 230,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 10,
     awaken: true,
     sharpness: [4, 8, 3],
@@ -1555,19 +1555,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 98, amount: 22 },
         { itemId: 314, amount: 5 },
-        { itemId: 531, amount: 2 },
-      ],
+        { itemId: 531, amount: 2 }
+      ]
     },
-    upgradesTo: [60],
+    upgradesTo: [60]
   },
   {
     id: 60,
     type: WeaponType.LANCE,
-    name: "Undertaker",
+    name: 'Undertaker',
     description:
-      "A mechanical spear of ancient metal. No modern smith can restore its tip.",
+      'A mechanical spear of ancient metal. No modern smith can restore its tip.',
     attack: 368,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 250,
     awaken: false,
     sharpness: [3, 7, 4, 11],
@@ -1581,19 +1581,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 98, amount: 44 },
         { itemId: 377, amount: 2 },
-        { itemId: 252, amount: 2 },
-      ],
+        { itemId: 252, amount: 2 }
+      ]
     },
-    upgradesTo: [61],
+    upgradesTo: [61]
   },
   {
     id: 61,
     type: WeaponType.LANCE,
-    name: "High Undertaker",
+    name: 'High Undertaker',
     description:
-      "A mechanical spear of ancient metal. No modern smith can restore its tip.",
+      'A mechanical spear of ancient metal. No modern smith can restore its tip.',
     attack: 414,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 300,
     awaken: false,
     sharpness: [3, 7, 4, 14, 2],
@@ -1607,18 +1607,18 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 98, amount: 66 },
         { itemId: 432, amount: 2 },
-        { itemId: 463, amount: 2 },
-      ],
-    },
+        { itemId: 463, amount: 2 }
+      ]
+    }
   },
   {
     id: 62,
     type: WeaponType.LANCE,
-    name: "Worn Spear",
+    name: 'Worn Spear',
     description:
-      "A Lance with unrealized potential. Perhaps it could be restored...",
+      'A Lance with unrealized potential. Perhaps it could be restored...',
     attack: 253,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 10,
     awaken: true,
     sharpness: [10, 5],
@@ -1628,16 +1628,16 @@ export const Lances: Lance[] = [
     rarity: 4,
     price: 0,
     create: [{ itemId: 109, amount: 1 }],
-    upgradesTo: [63],
+    upgradesTo: [63]
   },
   {
     id: 63,
     type: WeaponType.LANCE,
-    name: "Weathered Spear",
+    name: 'Weathered Spear',
     description:
-      "A Lance with unrealized potential. Perhaps it could be restored...",
+      'A Lance with unrealized potential. Perhaps it could be restored...',
     attack: 253,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 10,
     awaken: true,
     sharpness: [10, 8, 2],
@@ -1651,19 +1651,19 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 98, amount: 33 },
         { itemId: 514, amount: 5 },
-        { itemId: 531, amount: 2 },
-      ],
+        { itemId: 531, amount: 2 }
+      ]
     },
-    upgradesTo: [64],
+    upgradesTo: [64]
   },
   {
     id: 64,
     type: WeaponType.LANCE,
-    name: "Skyscraper",
+    name: 'Skyscraper',
     description:
-      "An ancient Lance discovered unused. It towers high, as if to pierce the heavens.",
+      'An ancient Lance discovered unused. It towers high, as if to pierce the heavens.',
     attack: 437,
-    element: "DRAGON",
+    element: 'DRAGON',
     elemAttack: 330,
     awaken: false,
     sharpness: [3, 7, 4, 14, 7],
@@ -1677,8 +1677,8 @@ export const Lances: Lance[] = [
       materials: [
         { itemId: 98, amount: 77 },
         { itemId: 148, amount: 5 },
-        { itemId: 469, amount: 1 },
-      ],
-    },
-  },
+        { itemId: 469, amount: 1 }
+      ]
+    }
+  }
 ];

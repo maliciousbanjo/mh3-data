@@ -9,10 +9,10 @@ export interface MonsterLevelMultipliers {
 
 /**
  * All known monster levels. Potentially incomplete.
- * 
+ *
  * A monster level maps to an object containing scalers for monster health,
  * defense, and flinch values.
- * 
+ *
  * TODO:
  * @todo Unidentified monster levels: 30, 55, 59, 60
  */

@@ -1,28 +1,29 @@
-import { CommonTypes } from "../common";
-import { ItemTypes } from "../items";
+import { CommonTypes } from '../common';
+import { ItemTypes } from '../items';
 
 export enum WeaponType {
-  GREAT_SWORD = "Great Sword",
-  SWORD_AND_SHIELD = "Sword and Shield",
-  HAMMER = "Hammer",
-  LANCE = "Lance",
-  SWITCH_AXE = "Switch Axe",
-  LONGSWORD = "Longsword",
+  GREAT_SWORD = 'Great Sword',
+  SWORD_AND_SHIELD = 'Sword and Shield',
+  HAMMER = 'Hammer',
+  LANCE = 'Lance',
+  SWITCH_AXE = 'Switch Axe',
+  LONGSWORD = 'Longsword'
 }
 
 /**
  * Properties specific to a hit with damage type 'cut'
-*/
+ */
 export interface CutHit {
-  type: "cut";
+  type: 'cut';
   /** Multiplier used in damage calculations */
-  power: number;}
+  power: number;
+}
 
 /**
  * Properties specific to a hit with damage type 'impact'
-*/
+ */
 export interface ImpactHit {
-  type: "impact";
+  type: 'impact';
   /** Multiplier used in damage calculations */
   power: number;
   /** Amount of KO damage dealt */
@@ -81,7 +82,10 @@ export interface Weapon<T extends WeaponType> {
   /** Optionally improves hunter defense */
   defense?: number;
   /** ID of previous weapon in path and what is required to upgrade it */
-  upgradesFrom?: { weaponId: Weapon<WeaponType.GREAT_SWORD>['id'][]; materials: ItemTypes.ItemRequirement[] };
+  upgradesFrom?: {
+    weaponId: Weapon<WeaponType.GREAT_SWORD>['id'][];
+    materials: ItemTypes.ItemRequirement[];
+  };
   /** ID of next weapon in upgrade path */
   upgradesTo?: Weapon<WeaponType.GREAT_SWORD>['id'][];
   /** List of required items to create this weapon */

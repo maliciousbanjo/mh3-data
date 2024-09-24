@@ -5,12 +5,12 @@
  */
 var Guns = {
   Frames: {
-    short: "frm",
+    short: 'frm',
     weapons: [
       {
-        name: "Light Bowgun",
+        name: 'Light Bowgun',
         description:
-          "A cheap, lightweight, mass-produced Frame. The best choice for novice Gunners.",
+          'A cheap, lightweight, mass-produced Frame. The best choice for novice Gunners.',
         attack: 60,
         maxattack: 180,
         weight: 10,
@@ -44,15 +44,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 2 }],
-          paint: [{ clip: 2 }],
+          paint: [{ clip: 2 }]
         },
         price: 740,
-        create: { "97": 1, "245": 2 },
+        create: { '97': 1, '245': 2 }
       },
       {
-        name: "Medium Bowgun",
+        name: 'Medium Bowgun',
         description:
-          "A cheap, mid-weight, mass-produced Frame. Deviates slightly L/R.",
+          'A cheap, mid-weight, mass-produced Frame. Deviates slightly L/R.',
         attack: 72,
         maxattack: 192,
         weight: 25,
@@ -88,14 +88,14 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 2 }],
-          paint: [{ clip: 2 }],
+          paint: [{ clip: 2 }]
         },
         price: 860,
-        create: { "97": 2, "149": 2 },
+        create: { '97': 2, '149': 2 }
       },
       {
-        name: "Heavy Bowgun",
-        description: "A cheap, heavy, mass-produced Frame.",
+        name: 'Heavy Bowgun',
+        description: 'A cheap, heavy, mass-produced Frame.',
         attack: 96,
         maxattack: 216,
         weight: 30,
@@ -131,15 +131,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 2 }],
-          paint: [{ clip: 2 }],
+          paint: [{ clip: 2 }]
         },
         price: 980,
-        create: { "99": 1, "149": 2 },
+        create: { '99': 1, '149': 2 }
       },
       {
-        name: "Royal Launcher",
+        name: 'Royal Launcher',
         description:
-          "The sponge on the body makes this Frame comfy to hold. Take it on underwater hunts!",
+          'The sponge on the body makes this Frame comfy to hold. Take it on underwater hunts!',
         attack: 72,
         maxattack: 192,
         weight: 10,
@@ -175,15 +175,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 2 }],
-          paint: [{ clip: 2 }],
+          paint: [{ clip: 2 }]
         },
         price: 3600,
-        create: { "289": 3, "97": 2, "291": 2 },
+        create: { '289': 3, '97': 2, '291': 2 }
       },
       {
-        name: "Jaggid Fire",
+        name: 'Jaggid Fire',
         description:
-          "The mark of an accomplished Jaggi hunter. Your quest for glory has only just begun...",
+          'The mark of an accomplished Jaggi hunter. Your quest for glory has only just begun...',
         attack: 84,
         maxattack: 204,
         weight: 15,
@@ -219,15 +219,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 1 }],
           tranq: [{ clip: 2 }],
-          paint: [{ clip: 2 }],
+          paint: [{ clip: 2 }]
         },
         price: 3500,
-        create: { "281": 2, "277": 3, "182": 4 },
+        create: { '281': 2, '277': 3, '182': 4 }
       },
       {
-        name: "Tropeco Gun",
+        name: 'Tropeco Gun',
         description:
-          "An exercise in flamboyance? More reliable than it looks, thankfully.",
+          'An exercise in flamboyance? More reliable than it looks, thankfully.',
         attack: 72,
         maxattack: 192,
         weight: 25,
@@ -261,13 +261,13 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 2 }],
-          paint: [{ clip: 2 }],
+          paint: [{ clip: 2 }]
         },
         price: 4200,
-        create: { "260": 2, "99": 4, "150": 3 },
+        create: { '260': 2, '99': 4, '150': 3 }
       },
       {
-        name: "Poison Stinger",
+        name: 'Poison Stinger',
         description:
           "An unsettling Frame built from unsettling things. It's heavier than it looks.",
         attack: 96,
@@ -303,15 +303,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 2 }],
-          paint: [{ clip: 2 }],
+          paint: [{ clip: 2 }]
         },
         price: 4600,
-        create: { "264": 2, "265": 2, "314": 1 },
+        create: { '264': 2, '265': 2, '314': 1 }
       },
       {
-        name: "Agnablaster",
+        name: 'Agnablaster',
         description:
-          "A scarlet Frame whose steamlined body makes it a stylish hit.",
+          'A scarlet Frame whose steamlined body makes it a stylish hit.',
         attack: 120,
         maxattack: 240,
         weight: 35,
@@ -347,13 +347,13 @@ var Guns = {
           dragon: [{ clip: 1 }],
           slicing: [{ clip: 1 }],
           tranq: [{ clip: 2 }],
-          paint: [{ clip: 2 }],
+          paint: [{ clip: 2 }]
         },
         price: 5100,
-        create: { "382": 3, "386": 2, "104": 1 },
+        create: { '382': 3, '386': 2, '104': 1 }
       },
       {
-        name: "Thundacrus Rex",
+        name: 'Thundacrus Rex',
         description:
           "The Frame you've been waiting for, made from the finest Lagiacrus materials!",
         attack: 156,
@@ -391,15 +391,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 1 }],
           tranq: [{ clip: 2 }],
-          paint: [{ clip: 2 }],
+          paint: [{ clip: 2 }]
         },
         price: 6800,
-        create: { "467": 7, "465": 14, "419": 3, "170": 8 },
+        create: { '467': 7, '465': 14, '419': 3, '170': 8 }
       },
       {
-        name: "Rathling Gun+",
+        name: 'Rathling Gun+',
         description:
-          "A Frame made possible by superior Rathalos materials. Less accuracy, more power.",
+          'A Frame made possible by superior Rathalos materials. Less accuracy, more power.',
         attack: 144,
         maxattack: 216,
         weight: 25,
@@ -435,15 +435,15 @@ var Guns = {
           dragon: [{ clip: 1 }],
           slicing: [{ clip: 1 }],
           tranq: [{ clip: 2 }],
-          paint: [{ clip: 2 }],
+          paint: [{ clip: 2 }]
         },
         price: 7400,
-        create: { "164": 4, "353": 4, "101": 2, "258": 5 },
+        create: { '164': 4, '353': 4, '101': 2, '258': 5 }
       },
       {
-        name: "Blizzard Cannon",
+        name: 'Blizzard Cannon',
         description:
-          "A powerful, snow-white Frame made of Barioth materials. Excels at Critical Hits.",
+          'A powerful, snow-white Frame made of Barioth materials. Excels at Critical Hits.',
         attack: 132,
         maxattack: 192,
         weight: 30,
@@ -479,15 +479,15 @@ var Guns = {
           dragon: [{ clip: 1 }],
           slicing: [{ clip: 1 }],
           tranq: [{ clip: 2 }],
-          paint: [{ clip: 2 }],
+          paint: [{ clip: 2 }]
         },
         price: 8800,
-        create: { "417": 4, "514": 10, "420": 4, "376": 3 },
+        create: { '417': 4, '514': 10, '420': 4, '376': 3 }
       },
       {
         name: "Devil's Grin",
         description:
-          "A baleful Frame said to have been crafted in a dark workshop.",
+          'A baleful Frame said to have been crafted in a dark workshop.',
         attack: 156,
         maxattack: 240,
         weight: 45,
@@ -523,15 +523,15 @@ var Guns = {
           dragon: [{ clip: 1 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 2 }],
-          paint: [{ clip: 2 }],
+          paint: [{ clip: 2 }]
         },
         price: 9600,
-        create: { "449": 4, "450": 6, "153": 9, "453": 1 },
+        create: { '449': 4, '450': 6, '153': 9, '453': 1 }
       },
       {
-        name: "Diablazooka",
+        name: 'Diablazooka',
         description:
-          "A majestic Frame with two giant horns, popular among pro Gunners.",
+          'A majestic Frame with two giant horns, popular among pro Gunners.',
         attack: 168,
         maxattack: 204,
         weight: 20,
@@ -567,15 +567,15 @@ var Guns = {
           dragon: [{ clip: 1 }],
           slicing: [{ clip: 1 }],
           tranq: [{ clip: 2 }],
-          paint: [{ clip: 2 }],
+          paint: [{ clip: 2 }]
         },
         price: 4400,
-        create: { "424": 1, "422": 5, "269": 6, "102": 4 },
+        create: { '424': 1, '422': 5, '269': 6, '102': 4 }
       },
       {
-        name: "Chaos Wing",
+        name: 'Chaos Wing',
         description:
-          "The ultimate weapon, complete with dreadful Alatreon wings.",
+          'The ultimate weapon, complete with dreadful Alatreon wings.',
         attack: 168,
         maxattack: 252,
         weight: 45,
@@ -611,15 +611,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 2 }],
-          paint: [{ clip: 2 }],
+          paint: [{ clip: 2 }]
         },
         price: 14200,
-        create: { "478": 2, "401": 5, "403": 1, "148": 6 },
+        create: { '478': 2, '401': 5, '403': 1, '148': 6 }
       },
       {
-        name: "Jhen Cannon",
+        name: 'Jhen Cannon',
         description:
-          "A stately frame made of Jhen Mohran parts. Heavy and tough to use.",
+          'A stately frame made of Jhen Mohran parts. Heavy and tough to use.',
         attack: 144,
         maxattack: 228,
         weight: 50,
@@ -653,10 +653,10 @@ var Guns = {
           dragon: [{ clip: 1 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 2 }],
-          paint: [{ clip: 2 }],
+          paint: [{ clip: 2 }]
         },
         price: 8800,
-        create: { "438": 2, "433": 8, "103": 4, "432": 1 },
+        create: { '438': 2, '433': 8, '103': 4, '432': 1 }
       },
       {
         name: 'Aquamatic "Spark"',
@@ -697,10 +697,10 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 2 }],
-          paint: [{ clip: 2 }],
+          paint: [{ clip: 2 }]
         },
         price: 0,
-        create: { "108": 1 },
+        create: { '108': 1 }
       },
       {
         name: 'Aquamatic "Longshot"',
@@ -739,13 +739,13 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 2 }],
-          paint: [{ clip: 2 }],
+          paint: [{ clip: 2 }]
         },
         price: 30000,
-        create: { "553": 1, "550": 2, "552": 2 },
+        create: { '553': 1, '550': 2, '552': 2 }
       },
       {
-        name: "Vulcannon",
+        name: 'Vulcannon',
         description:
           "A Heavy Bowgun Kit. Parts can't be changed, but it has special qualities.",
         attack: 252,
@@ -783,20 +783,20 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 2 }],
-          paint: [{ clip: 2 }],
+          paint: [{ clip: 2 }]
         },
         price: 30000,
-        create: { "555": 4, "553": 2, "578": 2 },
-      },
-    ],
+        create: { '555': 4, '553': 2, '578': 2 }
+      }
+    ]
   },
   Barrels: {
-    short: "brl",
+    short: 'brl',
     weapons: [
       {
-        name: "Light Bowgun",
+        name: 'Light Bowgun',
         description:
-          "A cheap, lightweight, mass-produced Barrel. Slightly decreases Deviation.",
+          'A cheap, lightweight, mass-produced Barrel. Slightly decreases Deviation.',
         attack: 48,
         weight: 10,
         range: 1.0,
@@ -827,15 +827,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 430,
-        create: { "97": 1, "245": 2, "98": 1 },
+        create: { '97': 1, '245': 2, '98': 1 }
       },
       {
-        name: "Medium Bowgun",
+        name: 'Medium Bowgun',
         description:
-          "A cheap, mid-weight, mass-produced Barrel. Slightly decreases Deviation.",
+          'A cheap, mid-weight, mass-produced Barrel. Slightly decreases Deviation.',
         attack: 72,
         weight: 20,
         range: 1.1,
@@ -866,15 +866,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 520,
-        create: { "97": 1, "245": 1, "98": 2 },
+        create: { '97': 1, '245': 1, '98': 2 }
       },
       {
-        name: "Heavy Bowgun",
+        name: 'Heavy Bowgun',
         description:
-          "A cheap, heavy, mass-produced Barrel. Allows you to block.",
+          'A cheap, heavy, mass-produced Barrel. Allows you to block.',
         attack: 84,
         weight: 25,
         range: 1.2,
@@ -905,15 +905,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 660,
-        create: { "99": 2, "149": 2 },
+        create: { '99': 2, '149': 2 }
       },
       {
         name: 'Aquamatic "Needler"',
         description:
-          "An odd Barrel that may have once been a full Bowgun Kit. Works well enough in combat.",
+          'An odd Barrel that may have once been a full Bowgun Kit. Works well enough in combat.',
         attack: 96,
         weight: 5,
         range: 1.0,
@@ -944,15 +944,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 5600,
-        create: { "584": 1, "102": 4, "252": 1, "145": 3 },
+        create: { '584': 1, '102': 4, '252': 1, '145': 3 }
       },
       {
-        name: "Royal Launcher",
+        name: 'Royal Launcher',
         description:
-          "A Barrel capable of rapid-fire Water Shots. Favored by many Gunners for its portability.",
+          'A Barrel capable of rapid-fire Water Shots. Favored by many Gunners for its portability.',
         attack: 84,
         weight: 5,
         range: 1.0,
@@ -983,15 +983,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 3600,
-        create: { "290": 3, "291": 1, "149": 4, "371": 1 },
+        create: { '290': 3, '291': 1, '149': 4, '371': 1 }
       },
       {
-        name: "Jaggid Fire",
+        name: 'Jaggid Fire',
         description:
-          "The mark of an accomplished Jaggi hunter. Your quest for glory has only just begun...",
+          'The mark of an accomplished Jaggi hunter. Your quest for glory has only just begun...',
         attack: 72,
         weight: 10,
         range: 0.8,
@@ -1022,15 +1022,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 2 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 3500,
-        create: { "388": 1, "280": 3, "279": 4, "97": 2 },
+        create: { '388': 1, '280': 3, '279': 4, '97': 2 }
       },
       {
-        name: "Tropeco Gun",
+        name: 'Tropeco Gun',
         description:
-          "An exercise in flamboyance? More reliable than it looks, thankfully.",
+          'An exercise in flamboyance? More reliable than it looks, thankfully.',
         attack: 84,
         weight: 10,
         range: 0.9,
@@ -1061,15 +1061,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 4200,
-        create: { "263": 1, "261": 4, "260": 2, "150": 2 },
+        create: { '263': 1, '261': 4, '260': 2, '150': 2 }
       },
       {
-        name: "Barrozooka",
+        name: 'Barrozooka',
         description:
-          "One for the power-hungry: Pretty? No. Well-rounded? Nope. Destructive? HELL yes!",
+          'One for the power-hungry: Pretty? No. Well-rounded? Nope. Destructive? HELL yes!',
         attack: 120,
         weight: 35,
         range: 0.6,
@@ -1100,15 +1100,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 5300,
-        create: { "276": 3, "272": 2, "99": 4 },
+        create: { '276': 3, '272': 2, '99': 4 }
       },
       {
-        name: "Thundacrus",
+        name: 'Thundacrus',
         description:
-          "A stable Barrel crafted from Lagiacrus materials, which allow for more firepower.",
+          'A stable Barrel crafted from Lagiacrus materials, which allow for more firepower.',
         attack: 108,
         weight: 15,
         range: 1.0,
@@ -1139,15 +1139,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 1 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 4500,
-        create: { "283": 3, "102": 5, "391": 2 },
+        create: { '283': 3, '102': 5, '391': 2 }
       },
       {
-        name: "Thundacrus Rex",
+        name: 'Thundacrus Rex',
         description:
-          "A slightly tweaked Barrel made from only the finest Lagiacrus materials.",
+          'A slightly tweaked Barrel made from only the finest Lagiacrus materials.',
         attack: 108,
         weight: 15,
         range: 1.1,
@@ -1178,15 +1178,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 1 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 6800,
-        create: { "465": 6, "103": 3, "469": 1, "170": 4 },
+        create: { '465': 6, '103': 3, '469': 1, '170': 4 }
       },
       {
-        name: "Bloodguilty Maw",
+        name: 'Bloodguilty Maw',
         description:
-          "Opinions differ on the bizarre appearance of this poison-equipped Barrel.",
+          'Opinions differ on the bizarre appearance of this poison-equipped Barrel.',
         attack: 84,
         weight: 15,
         range: 0.9,
@@ -1217,15 +1217,15 @@ var Guns = {
           dragon: [{ clip: 2 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 4600,
-        create: { "168": 1, "267": 3, "529": 10, "530": 5 },
+        create: { '168': 1, '267': 3, '529': 10, '530': 5 }
       },
       {
-        name: "Rathling Gun",
+        name: 'Rathling Gun',
         description:
-          "A Barrel made with Rathalos materials, featuring a dignified design to match.",
+          'A Barrel made with Rathalos materials, featuring a dignified design to match.',
         attack: 96,
         weight: 25,
         range: 1.0,
@@ -1256,15 +1256,15 @@ var Guns = {
           dragon: [{ clip: 2 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 5200,
-        create: { "255": 3, "330": 20, "102": 4, "258": 1 },
+        create: { '255': 3, '330': 20, '102': 4, '258': 1 }
       },
       {
-        name: "Rathling Gun+",
+        name: 'Rathling Gun+',
         description:
-          "A more capable Barrel that uses Rathalos materials of superior quality.",
+          'A more capable Barrel that uses Rathalos materials of superior quality.',
         attack: 108,
         weight: 20,
         range: 1.0,
@@ -1295,15 +1295,15 @@ var Guns = {
           dragon: [{ clip: 2 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 7900,
-        create: { "164": 18, "162": 8, "103": 8, "161": 1 },
+        create: { '164': 18, '162': 8, '103': 8, '161': 1 }
       },
       {
         name: "Devil's Grin",
         description:
-          "A baleful Barrel said to have been crafted in a dark workshop.",
+          'A baleful Barrel said to have been crafted in a dark workshop.',
         attack: 144,
         weight: 25,
         range: 0.8,
@@ -1334,15 +1334,15 @@ var Guns = {
           dragon: [{ clip: 1 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 9600,
-        create: { "454": 1, "452": 4, "451": 8, "148": 12 },
+        create: { '454': 1, '452': 4, '451': 8, '148': 12 }
       },
       {
-        name: "Diablazooka",
+        name: 'Diablazooka',
         description:
-          "A strong Barrel but, much like its namesake, hard to handle. Allows you to block.",
+          'A strong Barrel but, much like its namesake, hard to handle. Allows you to block.',
         attack: 132,
         weight: 40,
         range: 0.7,
@@ -1373,14 +1373,14 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 8100,
-        create: { "423": 1, "422": 3, "421": 2, "101": 16 },
+        create: { '423': 1, '422': 3, '421': 2, '101': 16 }
       },
       {
-        name: "Chaos Wing",
-        description: "undefined",
+        name: 'Chaos Wing',
+        description: 'undefined',
         attack: 120,
         weight: 10,
         range: 0.9,
@@ -1411,15 +1411,15 @@ var Guns = {
           dragon: [{ clip: 0, rapid: true }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 14200,
-        create: { "405": 1, "476": 3, "401": 4, "432": 3 },
+        create: { '405': 1, '476': 3, '401': 4, '432': 3 }
       },
       {
-        name: "Jhen Cannon",
+        name: 'Jhen Cannon',
         description:
-          "A stately Barrel made of Jhen Mohran materials. Heavy and tough to use.",
+          'A stately Barrel made of Jhen Mohran materials. Heavy and tough to use.',
         attack: 132,
         weight: 30,
         range: 1.0,
@@ -1450,10 +1450,10 @@ var Guns = {
           dragon: [{ clip: 3 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 8800,
-        create: { "439": 14, "440": 1, "103": 8, "430": 1 },
+        create: { '439': 14, '440': 1, '103': 8, '430': 1 }
       },
       {
         name: 'Aquamatic "Spark"',
@@ -1489,10 +1489,10 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 0,
-        create: {},
+        create: {}
       },
       {
         name: 'Aquamatic "Longshot"',
@@ -1528,13 +1528,13 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 0,
-        create: {},
+        create: {}
       },
       {
-        name: "Vulcannon",
+        name: 'Vulcannon',
         description:
           "A Heavy Bowgun Kit. Parts can't be changed, but it has special qualities.",
         attack: 120,
@@ -1567,20 +1567,20 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 0,
-        create: {},
-      },
-    ],
+        create: {}
+      }
+    ]
   },
   Stocks: {
-    short: "stk",
+    short: 'stk',
     weapons: [
       {
-        name: "Light Bowgun",
+        name: 'Light Bowgun',
         description:
-          "This ultra-light Stock features a quick reload speed. A popular choice.",
+          'This ultra-light Stock features a quick reload speed. A popular choice.',
         weight: 5,
         reload: 1,
         recoil: 0,
@@ -1609,15 +1609,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 430,
-        create: { "97": 1, "245": 2, "98": 2 },
+        create: { '97': 1, '245': 2, '98': 2 }
       },
       {
-        name: "Medium Bowgun",
+        name: 'Medium Bowgun',
         description:
-          "A mid-weight Stock with a lightning-fast reload speed. Simple and easy to use.",
+          'A mid-weight Stock with a lightning-fast reload speed. Simple and easy to use.',
         weight: 10,
         reload: 2,
         recoil: 1,
@@ -1646,15 +1646,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 520,
-        create: { "97": 1, "149": 2, "98": 1 },
+        create: { '97': 1, '149': 2, '98': 1 }
       },
       {
-        name: "Heavy Bowgun",
+        name: 'Heavy Bowgun',
         description:
-          "Heavy, but supports a wider variety of ammo types. For more experienced Gunners.",
+          'Heavy, but supports a wider variety of ammo types. For more experienced Gunners.',
         defense: 10,
         weight: 20,
         reload: 1,
@@ -1684,15 +1684,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 660,
-        create: { "99": 2, "149": 2 },
+        create: { '99': 2, '149': 2 }
       },
       {
         name: 'Aquamatic "Needler"',
         description:
-          "An odd Stock that may once have been a full Bowgun Kit. Works well enough in combat.",
+          'An odd Stock that may once have been a full Bowgun Kit. Works well enough in combat.',
         weight: 15,
         reload: 1,
         recoil: 1,
@@ -1721,15 +1721,15 @@ var Guns = {
           dragon: [{ clip: 3 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 5600,
-        create: { "583": 1, "102": 3, "225": 1, "151": 4 },
+        create: { '583': 1, '102': 3, '225': 1, '151': 4 }
       },
       {
-        name: "Royal Launcher",
+        name: 'Royal Launcher',
         description:
-          "The sponge on the body makes this Stock comfy to hold. Take it on underwater hunts!",
+          'The sponge on the body makes this Stock comfy to hold. Take it on underwater hunts!',
         weight: 5,
         reload: 1,
         recoil: 1,
@@ -1758,15 +1758,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 3600,
-        create: { "295": 3, "294": 2, "99": 2, "182": 5 },
+        create: { '295': 3, '294': 2, '99': 2, '182': 5 }
       },
       {
-        name: "Tropeco Gun",
+        name: 'Tropeco Gun',
         description:
-          "An exercise in flamboyance? More reliable than it looks, thankfully.",
+          'An exercise in flamboyance? More reliable than it looks, thankfully.',
         weight: 25,
         reload: 1,
         recoil: 2,
@@ -1795,15 +1795,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 1 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 4200,
-        create: { "261": 2, "262": 2, "99": 1, "149": 8 },
+        create: { '261': 2, '262': 2, '99': 1, '149': 8 }
       },
       {
-        name: "Thundacrus",
+        name: 'Thundacrus',
         description:
-          "A stable Stock crafted from Lagiacrus mmaterials, which allow for more firepower.",
+          'A stable Stock crafted from Lagiacrus mmaterials, which allow for more firepower.',
         weight: 10,
         reload: 1,
         recoil: 2,
@@ -1832,15 +1832,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 4500,
-        create: { "284": 4, "102": 2, "288": 1, "287": 1 },
+        create: { '284': 4, '102': 2, '288': 1, '287': 1 }
       },
       {
-        name: "Thundracrus Rex",
+        name: 'Thundracrus Rex',
         description:
-          "A slightly tweaked Stock made from only the finest Lagiacrus materials.",
+          'A slightly tweaked Stock made from only the finest Lagiacrus materials.',
         weight: 10,
         reload: 1,
         recoil: 1,
@@ -1869,13 +1869,13 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 6800,
-        create: { "466": 8, "100": 12, "288": 3, "287": 6 },
+        create: { '466': 8, '100': 12, '288': 3, '287': 6 }
       },
       {
-        name: "Poison Stinger",
+        name: 'Poison Stinger',
         description:
           "An unsettling Stock built from unsettling things. It's heavier than it looks.",
         defense: 10,
@@ -1907,15 +1907,15 @@ var Guns = {
           dragon: [{ clip: 2 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 4600,
-        create: { "265": 3, "100": 2, "330": 15, "150": 10 },
+        create: { '265': 3, '100': 2, '330': 15, '150': 10 }
       },
       {
-        name: "Rathling Gun",
+        name: 'Rathling Gun',
         description:
-          "A Stock made with Rathalos materials (and featuring a dignified design to match).",
+          'A Stock made with Rathalos materials (and featuring a dignified design to match).',
         weight: 10,
         reload: 1,
         recoil: 2,
@@ -1944,15 +1944,15 @@ var Guns = {
           dragon: [{ clip: 2 }],
           slicing: [{ clip: 2 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 5200,
-        create: { "254": 5, "151": 1, "257": 2, "259": 2 },
+        create: { '254': 5, '151': 1, '257': 2, '259': 2 }
       },
       {
-        name: "Rathling Gun+",
+        name: 'Rathling Gun+',
         description:
-          "A more capable Stock that uses Rathalos materials of superior quality.",
+          'A more capable Stock that uses Rathalos materials of superior quality.',
         defense: 10,
         weight: 5,
         reload: 1,
@@ -1982,13 +1982,13 @@ var Guns = {
           dragon: [{ clip: 3 }],
           slicing: [{ clip: 2 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 7900,
-        create: { "163": 10, "151": 10, "158": 2, "259": 4 },
+        create: { '163': 10, '151': 10, '158': 2, '259': 4 }
       },
       {
-        name: "Agnablaster",
+        name: 'Agnablaster',
         description:
           "Resembles an Agnaktor taking a dip in lava. It's still a bit warm to the touch.",
         weight: 30,
@@ -2019,15 +2019,15 @@ var Guns = {
           dragon: [{ clip: 2 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 5100,
-        create: { "382": 3, "384": 2, "104": 5, "151": 2 },
+        create: { '382': 3, '384': 2, '104': 5, '151': 2 }
       },
       {
-        name: "Blizzard Cannon",
+        name: 'Blizzard Cannon',
         description:
-          "A snow-white Stock made of Barioth materials. Much, much lighter than it looks.",
+          'A snow-white Stock made of Barioth materials. Much, much lighter than it looks.',
         weight: 5,
         reload: 2,
         recoil: 0,
@@ -2056,15 +2056,15 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 1 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 8800,
-        create: { "417": 12, "103": 15, "148": 2, "169": 2 },
+        create: { '417': 12, '103': 15, '148': 2, '169': 2 }
       },
       {
-        name: "Diablazooka",
+        name: 'Diablazooka',
         description:
-          "This Stock uses the tail of Diablos, but is just as powerful as the rest of him.",
+          'This Stock uses the tail of Diablos, but is just as powerful as the rest of him.',
         weight: 10,
         reload: 2,
         recoil: 0,
@@ -2093,15 +2093,15 @@ var Guns = {
           dragon: [{ clip: 2 }],
           slicing: [{ clip: 1 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 4400,
-        create: { "422": 3, "423": 10, "103": 18, "271": 8 },
+        create: { '422': 3, '423': 10, '103': 18, '271': 8 }
       },
       {
-        name: "Chaos Wing",
+        name: 'Chaos Wing',
         description:
-          "A Stock of ill portent, whose owners are said to disappear without warning...",
+          'A Stock of ill portent, whose owners are said to disappear without warning...',
         weight: 25,
         reload: 1,
         recoil: 2,
@@ -2130,15 +2130,15 @@ var Guns = {
           dragon: [{ clip: 1 }],
           slicing: [{ clip: 3 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 14200,
-        create: { "477": 1, "402": 12, "403": 2, "404": 1 },
+        create: { '477': 1, '402': 12, '403': 2, '404': 1 }
       },
       {
-        name: "Jhen Cannon",
+        name: 'Jhen Cannon',
         description:
-          "A stately Stock make of Jhen Mohran materials. It is surprisingly light.",
+          'A stately Stock make of Jhen Mohran materials. It is surprisingly light.',
         weight: 10,
         reload: 0,
         recoil: 1,
@@ -2167,10 +2167,10 @@ var Guns = {
           dragon: [{ clip: 3 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 8800,
-        create: { "441": 10, "438": 2, "103": 12, "436": 3 },
+        create: { '441': 10, '438': 2, '103': 12, '436': 3 }
       },
       {
         name: 'Aquamatic "Spark"',
@@ -2204,10 +2204,10 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 0,
-        create: {},
+        create: {}
       },
       {
         name: 'Aquamatic "Longshot"',
@@ -2241,13 +2241,13 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 0,
-        create: {},
+        create: {}
       },
       {
-        name: "Vulcannon",
+        name: 'Vulcannon',
         description:
           "A Heavy Bowgun Kit. Parts can't be changed, but it has special qualities.",
         weight: 1,
@@ -2278,11 +2278,11 @@ var Guns = {
           dragon: [{ clip: 0 }],
           slicing: [{ clip: 0 }],
           tranq: [{ clip: 0 }],
-          paint: [{ clip: 0 }],
+          paint: [{ clip: 0 }]
         },
         price: 0,
-        create: {},
-      },
-    ],
-  },
+        create: {}
+      }
+    ]
+  }
 };
