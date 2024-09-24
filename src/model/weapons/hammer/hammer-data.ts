@@ -2,7 +2,7 @@ import { WeaponDamageProperties, WeaponType } from '../types';
 import { Hammer, HammerAttack } from './types';
 
 export const HammerDamageProperties = Object.freeze<
-  WeaponDamageProperties<HammerAttack>
+  WeaponDamageProperties<WeaponType.HAMMER, HammerAttack>
 >({
   type: WeaponType.HAMMER,
   classModifier: 5.2,
@@ -66,6 +66,9 @@ export const HammerDamageProperties = Object.freeze<
   ]
 });
 
+/**
+ * List of all available {@link Hammer}s
+ */
 export const Hammers = Object.freeze<Hammer[]>([
   {
     id: 0,

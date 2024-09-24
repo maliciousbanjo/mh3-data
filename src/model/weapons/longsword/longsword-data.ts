@@ -2,7 +2,7 @@ import { WeaponDamageProperties, WeaponType } from '../types';
 import { Longsword, LongswordAttack } from './types';
 
 export const LongswordDamageProperties = Object.freeze<
-  WeaponDamageProperties<LongswordAttack>
+  WeaponDamageProperties<WeaponType.LONGSWORD, LongswordAttack>
 >({
   type: WeaponType.LONGSWORD,
   classModifier: 3.3,
@@ -33,6 +33,9 @@ export const LongswordDamageProperties = Object.freeze<
   ]
 });
 
+/**
+ * List of all available {@link Longsword}s
+ */
 export const Longswords = Object.freeze<Longsword[]>([
   {
     id: 0,

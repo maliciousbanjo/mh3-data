@@ -1,6 +1,9 @@
 import { CommonTypes } from '../common';
 import { ItemTypes } from '../items';
 
+/**
+ * Enumerated collection of weapon types that can be used as properties/arguments
+ */
 export enum WeaponType {
   GREAT_SWORD = 'Great Sword',
   SWORD_AND_SHIELD = 'Sword and Shield',
@@ -9,6 +12,17 @@ export enum WeaponType {
   SWITCH_AXE = 'Switch Axe',
   LONGSWORD = 'Longsword'
 }
+
+/**
+ * Valid weapon types
+ */
+export type ValidWeaponTypes =
+  | WeaponType.GREAT_SWORD
+  | WeaponType.SWORD_AND_SHIELD
+  | WeaponType.HAMMER
+  | WeaponType.LANCE
+  | WeaponType.SWITCH_AXE
+  | WeaponType.LONGSWORD;
 
 /**
  * Properties specific to a hit with damage type 'cut'
@@ -33,28 +47,38 @@ export interface ImpactHit {
 export type Hit = CutHit | ImpactHit;
 
 /**
- * Base type for an attack
+ * Base type for an attack, used by {@link AttackGroup}
+ *
+ * @typeParam N Name of attack
  */
-export interface Attack<T = string> {
+export interface Attack<N = string> {
   /** Human-readable attack name */
-  name: T;
+  name: N;
   hits: Hit[];
 }
 
-export interface AttackGroup<T> {
+/**
+ * Grouping of attacks for a particular weapon, used by {@link WeaponDamageProperties}
+ *
+ * @typeParam N Possible names of attacks
+ */
+export interface AttackGroup<N = string> {
   /** Usage scenario @example default, underwater, axe mode */
   name: string;
-  attacks: Attack<T>[];
+  attacks: Attack<N>[];
 }
 
 /**
  * Collection of attacks and values used for determining wepaon damage
+ *
+ * @typeParam T weaponType this attack belongs to
+ * @typeParam N Possible names of attacks
  */
-export interface WeaponDamageProperties<T> {
-  type: WeaponType;
+export interface WeaponDamageProperties<T extends WeaponType, N = string> {
+  type: T;
   /** Used in the damage/item buff calculations */
   classModifier: number;
-  attackGroups: AttackGroup<T>[];
+  attackGroups: AttackGroup<N>[];
 }
 
 /**

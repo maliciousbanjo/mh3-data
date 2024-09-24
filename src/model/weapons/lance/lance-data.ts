@@ -2,7 +2,7 @@ import { WeaponDamageProperties, WeaponType } from '../types';
 import { Lance, LanceAttack } from './types';
 
 export const LanceDamageProperties = Object.freeze<
-  WeaponDamageProperties<LanceAttack>
+  WeaponDamageProperties<WeaponType.LANCE, LanceAttack>
 >({
   type: WeaponType.LANCE,
   classModifier: 2.3,
@@ -45,6 +45,9 @@ export const LanceDamageProperties = Object.freeze<
   ]
 });
 
+/**
+ * List of all available {@link Lance}s
+ */
 export const Lances = Object.freeze<Lance[]>([
   {
     id: 0,

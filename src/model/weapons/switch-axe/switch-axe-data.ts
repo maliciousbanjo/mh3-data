@@ -2,7 +2,7 @@ import { WeaponDamageProperties, WeaponType } from '../types';
 import { SwitchAxe, SwitchAxeAttack } from './types';
 
 export const SwitchAxeDamageProperties = Object.freeze<
-  WeaponDamageProperties<SwitchAxeAttack>
+  WeaponDamageProperties<WeaponType.SWITCH_AXE, SwitchAxeAttack>
 >({
   type: WeaponType.SWITCH_AXE,
   classModifier: 5.4,
@@ -51,6 +51,9 @@ export const SwitchAxeDamageProperties = Object.freeze<
   ]
 });
 
+/**
+ * List of all available {@link SwitchAxe}s
+ */
 export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   {
     id: 0,

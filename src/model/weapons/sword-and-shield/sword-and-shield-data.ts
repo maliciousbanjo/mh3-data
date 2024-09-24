@@ -2,7 +2,7 @@ import { WeaponDamageProperties, WeaponType } from '../types';
 import { SwordAndShield, SwordAndShieldAttack } from './types';
 
 export const SwordAndShieldDamageProperties = Object.freeze<
-  WeaponDamageProperties<SwordAndShieldAttack>
+  WeaponDamageProperties<WeaponType.SWORD_AND_SHIELD, SwordAndShieldAttack>
 >({
   type: WeaponType.SWORD_AND_SHIELD,
   classModifier: 1.4,
@@ -61,6 +61,9 @@ export const SwordAndShieldDamageProperties = Object.freeze<
   ]
 });
 
+/**
+ * List of all available {@link SwordAndShield}s
+ */
 export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   {
     id: 0,
