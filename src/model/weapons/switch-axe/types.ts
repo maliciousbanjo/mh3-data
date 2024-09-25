@@ -19,7 +19,15 @@ export type SwitchAxeAttack =
   | 'Discharge Finisher'
   | 'Switch to Axe';
 
+export type SwitchAxeAttackMode = 'axe' | 'sword';
+
+export type SwitchAxePhial = 'element' | 'power' | 'dragon' | 'paralysis';
+
+export interface SwitchAxeSpecialMultiplierArgs {
+  mode: SwitchAxeAttackMode;
+}
+
 export interface SwitchAxe extends Weapon<WeaponType.SWITCH_AXE> {
   /** Unique property for switch axes */
-  phial: 'element' | 'power' | 'dragon' | 'paralysis';
+  phial: SwitchAxePhial;
 }

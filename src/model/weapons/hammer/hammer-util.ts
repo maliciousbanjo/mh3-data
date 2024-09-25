@@ -5,7 +5,7 @@ import {
   calculateElementalDamage,
   getSharpnessRawMultiplier,
   isCutHit
-} from '../util';
+} from '../weapon-util';
 import { HammerDamageProperties } from './hammer-data';
 import { HammerAttack } from './types';
 

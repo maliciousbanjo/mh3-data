@@ -5,7 +5,7 @@ import {
   calculateElementalDamage,
   getSharpnessRawMultiplier,
   isCutHit
-} from '../util';
+} from '../weapon-util';
 import { LanceDamageProperties } from './lance-data';
 import { LanceAttack } from './types';
 

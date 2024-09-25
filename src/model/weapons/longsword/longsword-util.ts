@@ -1,12 +1,11 @@
 import { MonsterLevelTypes } from '../../monster-levels';
 import { MonsterTypes } from '../../monsters';
-import { GreatSwordDamageProperties } from '../great-sword';
 import { Weapon, WeaponType, Sharpness, Damage } from '../types';
 import {
   getSharpnessRawMultiplier,
   isCutHit,
   calculateElementalDamage
-} from '../util';
+} from '../weapon-util';
 import { LongswordDamageProperties } from './longsword-data';
 import {
   LongswordAttack,
@@ -32,6 +31,10 @@ function getLongwordAttack(attackName: LongswordAttack) {
 
 /**
  * Determines special var multipliers for Longsword
+ *
+ * Middle of blade receives a 1.05 bonus
+ * Full spirit guage receives a 1.13 bonus
+ * Spirit guage colors WHITE, YELLOW, and RED receives bonuses of 1.1, 1.2, and 1.3
  */
 function getLongswordSpecialVarMultiplier({
   middleOfBlade,
@@ -60,15 +63,15 @@ export function calculateLongswordDamage(
   hitzoneValues: MonsterTypes.HitzoneValues,
   /** Derived from Monster level set by Quest */
   multipliers: MonsterLevelTypes.MonsterLevelMultipliers,
+  specialMultiplierArgs: LongswordSpecialMultiplierArgs,
   /** Will include awakened element if applicable */
-  awaken = false,
-  specialMultiplierArgs: LongswordSpecialMultiplierArgs
+  awaken = false
 ) {
   if (longsword.type !== WeaponType.LONGSWORD) {
     throw new Error(`${longsword.name} is not a ${WeaponType.LONGSWORD}`);
   }
 
-  const { classModifier } = GreatSwordDamageProperties;
+  const { classModifier } = LongswordDamageProperties;
 
   const sharpnessMultiplier = getSharpnessRawMultiplier(sharpness);
 

@@ -1,6 +1,7 @@
 import { CommonTypes } from '../common';
 import { ItemTypes } from '../items';
 import { LongswordTypes } from './longsword';
+import { SwitchAxeTypes } from './switch-axe';
 
 /**
  * Catch-all object that contains args for determining weapon "special variables"
@@ -14,7 +15,7 @@ export interface SpecialMultiplierArgs {
   /** Sword and Shield only */
   swordAndShield: boolean;
   /** Switch Axe only */
-  switchAxePhial: 'power' | 'element' | 'na';
+  switchAxeMode: SwitchAxeTypes.SwitchAxeAttackMode;
   longsword: Omit<
     LongswordTypes.LongswordSpecialMultiplierArgs,
     'middleOfBlade'

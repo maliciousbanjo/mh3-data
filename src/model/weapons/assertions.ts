@@ -21,11 +21,11 @@ export function assertLongswordSpecialMultiplierArgs(
  * Type assertion for Switch Axe special multiplier args
  */
 export function assertSwitchAxeSpecialMultiplierArgs(
-  switchAxePhial: SpecialMultiplierArgs['switchAxePhial'] | undefined
-): asserts switchAxePhial is NonNullable<
-  SpecialMultiplierArgs['switchAxePhial']
+  switchAxeMode: SpecialMultiplierArgs['switchAxeMode'] | undefined
+): asserts switchAxeMode is NonNullable<
+  SpecialMultiplierArgs['switchAxeMode']
 > {
-  if (!switchAxePhial) {
-    throw new Error('switch axe phial required for damage calculations');
+  if (!switchAxeMode) {
+    throw new Error('switch axe mode required for damage calculations');
   }
 }

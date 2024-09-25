@@ -79,8 +79,8 @@ exports[`Weapon utils calculateDamage Longsword Spirit Guage NONE 1`] = `
   {
     "elementalDamage": 2.115,
     "koDamage": undefined,
-    "rawDamage": 25.485384375000002,
-    "totalDamage": 27,
+    "rawDamage": 37.06965,
+    "totalDamage": 39,
   },
 ]
 `;
@@ -90,8 +90,8 @@ exports[`Weapon utils calculateDamage Longsword Spirit Guage RED 1`] = `
   {
     "elementalDamage": 2.115,
     "koDamage": undefined,
-    "rawDamage": 33.1309996875,
-    "totalDamage": 35,
+    "rawDamage": 48.190545,
+    "totalDamage": 50,
   },
 ]
 `;
@@ -101,8 +101,8 @@ exports[`Weapon utils calculateDamage Longsword Spirit Guage WHITE 1`] = `
   {
     "elementalDamage": 2.115,
     "koDamage": undefined,
-    "rawDamage": 26.759653593750002,
-    "totalDamage": 28,
+    "rawDamage": 38.9231325,
+    "totalDamage": 41,
   },
 ]
 `;
@@ -112,8 +112,30 @@ exports[`Weapon utils calculateDamage Longsword Spirit Guage YELLOW 1`] = `
   {
     "elementalDamage": 2.115,
     "koDamage": undefined,
-    "rawDamage": 28.0339228125,
-    "totalDamage": 30,
+    "rawDamage": 40.776615,
+    "totalDamage": 42,
+  },
+]
+`;
+
+exports[`Weapon utils calculateDamage Switch Axe Element phial 1`] = `
+[
+  {
+    "elementalDamage": 2.0250000000000004,
+    "koDamage": undefined,
+    "rawDamage": 30.982499999999998,
+    "totalDamage": 33,
+  },
+]
+`;
+
+exports[`Weapon utils calculateDamage Switch Axe Power phial 1`] = `
+[
+  {
+    "elementalDamage": 3.54375,
+    "koDamage": undefined,
+    "rawDamage": 35.974125,
+    "totalDamage": 39,
   },
 ]
 `;

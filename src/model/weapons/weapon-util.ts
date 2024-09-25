@@ -33,14 +33,22 @@ import {
   Util as LongswordUtils,
   LongswordTypes
 } from './longsword';
-import { SwitchAxes, SwitchAxeDamageProperties } from './switch-axe';
+import {
+  SwitchAxes,
+  SwitchAxeDamageProperties,
+  Util as SwitchAxeUtils,
+  SwitchAxeTypes
+} from './switch-axe';
 import {
   SwordAndShields,
   SwordAndShieldDamageProperties
 } from './sword-and-shield';
 import { MonsterLevelTypes } from '../monster-levels';
 import { MonsterTypes } from '../monsters';
-import { assertLongswordSpecialMultiplierArgs } from './assertions';
+import {
+  assertLongswordSpecialMultiplierArgs,
+  assertSwitchAxeSpecialMultiplierArgs
+} from './assertions';
 
 const ELEMENTAL_DAMAGE_DIVIDER = 10;
 
@@ -263,11 +271,11 @@ export function validateWeaponSharpness(
  * [ELEMENT x ESHARP x ELMZONE] / [DIVIDER] = Elemental Damage
  *
  * @example
- * [ELEMENT]:  250           (250 thunder element)
- * [ESHARP]:   1.0           (Green sharpness for elements, x 1.0)
- * [ELMZONE]:  .20           (Rathian's weakness to thunder at head is 20)
- * [DIVIDER]:   10           (Elemental Divider is always 10)
- * [DEFENSE]:  .75           (.75 online high rank defense from earlier)
+ * [ELEMENT]:  250    // (250 thunder element)
+ * [ESHARP]:   1.0    // (Green sharpness for elements, x 1.0)
+ * [ELMZONE]:  .20    // (Rathian's weakness to thunder at head is 20)
+ * [DIVIDER]:   10    // (Elemental Divider is always 10)
+ * [DEFENSE]:  .75    // (.75 online high rank defense from earlier)
  *
  * [ELEMENT x ESHARP x ELMZONE] / [DIVIDER] = Elemental Damage [X DEFENSE]
  *    250   x  1.0   x   .20    /     10    =      5 (Added Thunder Damage)
@@ -308,13 +316,13 @@ export function calculateElementalDamage(
  * [ATP x TYPE x SHARP x HITZONE x VAR] / [CLASS] = Raw Damage
  *
  * @example
- * [ATP]:     494      (Lance 483 + attack boost 11)
- * [TYPE]:    .23      (Normal lance stab, 23%)
- * [SHARP]:   1.05     (Green sharpness 105%, or 1.05)
- * [HITZONE]: .90      (Rathian head multiplier is 90)
- * [DEFENSE]: .75      (In this high rank online quest, defense is .75)
- * [VAR]:     1.0      (No special variable for lance)
- * [CLASS]:   2.3      (All lances, class multiplier 2.3)
+ * [ATP]:     494     // (Lance 483 + attack boost 11)
+ * [TYPE]:    .23     // (Normal lance stab, 23%)
+ * [SHARP]:   1.05    // (Green sharpness 105%, or 1.05)
+ * [HITZONE]: .90     // (Rathian head multiplier is 90)
+ * [DEFENSE]: .75     // (In this high rank online quest, defense is .75)
+ * [VAR]:     1.0     // (No special variable for lance)
+ * [CLASS]:   2.3     // (All lances, class multiplier 2.3)
  *
  * [ATP x TYPE x SHARP x HITZONE] / [CLASS] = Raw Damage [X DEFENSE]
  *  494 x  .23 x 1.05  x   .90    /   2.3   =    46.683   X   .75
@@ -346,8 +354,8 @@ export function calculateDamage(
         sharpness,
         hitzoneValues,
         multipliers,
-        awaken,
-        !!specialMultipliers.middleOfBlade
+        !!specialMultipliers.middleOfBlade,
+        awaken
       );
     }
     case WeaponType.HAMMER: {
@@ -379,20 +387,28 @@ export function calculateDamage(
         sharpness,
         hitzoneValues,
         multipliers,
-        awaken,
         {
           middleOfBlade: !!specialMultipliers.middleOfBlade,
           fullSpiritGuage: !!longsword.fullSpiritGuage,
           spiritGuageColor: longsword.spiritGuageColor
-        }
+        },
+        awaken
       );
     }
-    // TODO:
     case WeaponType.SWITCH_AXE: {
-      console.error(
-        `Damage calulation for ${WeaponType.SWITCH_AXE} not yet implemented`
+      const { switchAxeMode } = specialMultipliers;
+      assertSwitchAxeSpecialMultiplierArgs(switchAxeMode);
+      return SwitchAxeUtils.calculateSwitchAxeDamage(
+        weapon,
+        attackName as SwitchAxeTypes.SwitchAxeAttack,
+        sharpness,
+        hitzoneValues,
+        multipliers,
+        {
+          mode: switchAxeMode
+        },
+        awaken
       );
-      return [];
     }
     // TODO:
     case WeaponType.SWORD_AND_SHIELD: {

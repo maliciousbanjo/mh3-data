@@ -10,7 +10,7 @@ import {
   getWeapon,
   getWeaponDamageProperties,
   validateWeaponSharpness
-} from '../../../src/model/weapons/util';
+} from '../../../src/model/weapons/weapon-util';
 
 describe('Weapon utils', () => {
   describe('getWeapon', () => {
@@ -258,6 +258,53 @@ describe('Weapon utils', () => {
               fullSpiritGuage: true,
               spiritGuageColor: 'RED'
             }
+          }
+        );
+        expect(damage).toMatchSnapshot();
+      });
+    });
+
+    describe('Switch Axe', () => {
+      it('Throws error for missing special args', () => {
+        expect(() =>
+          calculateDamage(
+            WeaponType.SWITCH_AXE,
+            22, // Great Inceadeus
+            'Overhead Slash',
+            Sharpness.WHITE,
+            alatreonHeadHitzoneValues,
+            levelMultipliers,
+            false,
+            {}
+          )
+        ).toThrow();
+      });
+      it('Power phial', () => {
+        const damage = calculateDamage(
+          WeaponType.SWITCH_AXE,
+          22, // Great Inceadeus
+          'Overhead Slash',
+          Sharpness.WHITE,
+          alatreonHeadHitzoneValues,
+          levelMultipliers,
+          false,
+          {
+            switchAxeMode: 'sword'
+          }
+        );
+        expect(damage).toMatchSnapshot();
+      });
+      it('Element phial', () => {
+        const damage = calculateDamage(
+          WeaponType.SWITCH_AXE,
+          33, // Black Harvest
+          'Overhead Slash',
+          Sharpness.PURPLE,
+          alatreonHeadHitzoneValues,
+          levelMultipliers,
+          false,
+          {
+            switchAxeMode: 'sword'
           }
         );
         expect(damage).toMatchSnapshot();

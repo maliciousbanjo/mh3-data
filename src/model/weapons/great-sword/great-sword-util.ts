@@ -5,7 +5,7 @@ import {
   calculateElementalDamage,
   getSharpnessRawMultiplier,
   isCutHit
-} from '../util';
+} from '../weapon-util';
 import { GreatSwordDamageProperties } from './great-sword-data';
 import { GreatSwordAttack } from './types';
 
@@ -69,10 +69,10 @@ export function calculateGreatSwordDamage(
   hitzoneValues: MonsterTypes.HitzoneValues,
   /** Derived from Monster level set by Quest */
   multipliers: MonsterLevelTypes.MonsterLevelMultipliers,
-  /** Will include awakened element if applicable */
-  awaken = false,
   /** Adds a 1.05 multiplier if true */
-  middleOfBlade = false
+  middleOfBlade = false,
+  /** Will include awakened element if applicable */
+  awaken = false
 ) {
   if (greatSword.type !== WeaponType.GREAT_SWORD) {
     throw new Error(`${greatSword.name} is not a ${WeaponType.GREAT_SWORD}`);
