@@ -4,6 +4,7 @@ import {
   Damage,
   Hit,
   Sharpness,
+  SpecialMultiplierArgs,
   ValidWeaponTypes,
   Weapon,
   WeaponType
@@ -26,7 +27,12 @@ import {
   Util as LanceUtils,
   LanceTypes
 } from './lance';
-import { Longswords, LongswordDamageProperties } from './longsword';
+import {
+  Longswords,
+  LongswordDamageProperties,
+  Util as LongswordUtils,
+  LongswordTypes
+} from './longsword';
 import { SwitchAxes, SwitchAxeDamageProperties } from './switch-axe';
 import {
   SwordAndShields,
@@ -34,6 +40,7 @@ import {
 } from './sword-and-shield';
 import { MonsterLevelTypes } from '../monster-levels';
 import { MonsterTypes } from '../monsters';
+import { assertLongswordSpecialMultiplierArgs } from './assertions';
 
 const ELEMENTAL_DAMAGE_DIVIDER = 10;
 
@@ -293,22 +300,6 @@ export function calculateElementalDamage(
 }
 
 /**
- * Catch-all object that contains args for determining weapon "special variables"
- *
- * - Middle of blade (Great Sword, Longsword) adds a 1.05 multiplier
- */
-export interface SpecialMultiplierArgs {
-  criticalHit: 'none' | 'positive' | 'negative';
-  /** Great Sword, Longsword only */
-  middleOfBlade: boolean;
-  /** Sword and Shield only */
-  swordAndShield: boolean;
-  /** Switch Axe only */
-  switchAxePhial: 'power' | 'element' | 'na';
-  // TODO: Longsword full spirit guage & spirit guage color
-}
-
-/**
  * TODO: Affinity (positive or negative critical hit)
  * RAW DAMAGE FORMULA
  *
@@ -379,12 +370,22 @@ export function calculateDamage(
         awaken
       );
     }
-    // TODO:
     case WeaponType.LONGSWORD: {
-      console.error(
-        `Damage calulation for ${WeaponType.LONGSWORD} not yet implemented`
+      const { longsword } = specialMultipliers;
+      assertLongswordSpecialMultiplierArgs(longsword);
+      return LongswordUtils.calculateLongswordDamage(
+        weapon,
+        attackName as LongswordTypes.LongswordAttack,
+        sharpness,
+        hitzoneValues,
+        multipliers,
+        awaken,
+        {
+          middleOfBlade: !!specialMultipliers.middleOfBlade,
+          fullSpiritGuage: !!longsword.fullSpiritGuage,
+          spiritGuageColor: longsword.spiritGuageColor
+        }
       );
-      return [];
     }
     // TODO:
     case WeaponType.SWITCH_AXE: {

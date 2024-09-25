@@ -174,5 +174,94 @@ describe('Weapon utils', () => {
         expect(damage).toMatchSnapshot();
       });
     });
+
+    describe('Longsword', () => {
+      it('throws error for missing special args', () => {
+        expect(() =>
+          calculateDamage(
+            WeaponType.LONGSWORD,
+            19, // Dark Claw Demise
+            'Spirit Finisher',
+            Sharpness.PURPLE,
+            alatreonHeadHitzoneValues,
+            levelMultipliers,
+            false,
+            {}
+          )
+        ).toThrow();
+      });
+      it('Spirit Guage NONE', () => {
+        const damage = calculateDamage(
+          WeaponType.LONGSWORD,
+          19, // Dark Claw Demise
+          'Spirit Finisher',
+          Sharpness.PURPLE,
+          alatreonHeadHitzoneValues,
+          levelMultipliers,
+          false,
+          {
+            longsword: {
+              fullSpiritGuage: true,
+              spiritGuageColor: 'NONE'
+            }
+          }
+        );
+        expect(damage).toMatchSnapshot();
+      });
+      it('Spirit Guage WHITE', () => {
+        const damage = calculateDamage(
+          WeaponType.LONGSWORD,
+          19, // Dark Claw Demise
+          'Spirit Finisher',
+          Sharpness.PURPLE,
+          alatreonHeadHitzoneValues,
+          levelMultipliers,
+          false,
+          {
+            longsword: {
+              fullSpiritGuage: true,
+              spiritGuageColor: 'WHITE'
+            }
+          }
+        );
+        expect(damage).toMatchSnapshot();
+      });
+      it('Spirit Guage YELLOW', () => {
+        const damage = calculateDamage(
+          WeaponType.LONGSWORD,
+          19, // Dark Claw Demise
+          'Spirit Finisher',
+          Sharpness.PURPLE,
+          alatreonHeadHitzoneValues,
+          levelMultipliers,
+          false,
+          {
+            longsword: {
+              fullSpiritGuage: true,
+              spiritGuageColor: 'YELLOW'
+            }
+          }
+        );
+        expect(damage).toMatchSnapshot();
+      });
+      it('Spirit Guage RED', () => {
+        const damage = calculateDamage(
+          WeaponType.LONGSWORD,
+          19, // Dark Claw Demise
+          'Spirit Finisher',
+          Sharpness.PURPLE,
+          alatreonHeadHitzoneValues,
+          levelMultipliers,
+          false,
+          {
+            longsword: {
+              fullSpiritGuage: true,
+              spiritGuageColor: 'RED'
+            }
+          }
+        );
+        expect(damage).toMatchSnapshot();
+      });
+    });
   });
 });

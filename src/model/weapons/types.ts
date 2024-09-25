@@ -1,5 +1,25 @@
 import { CommonTypes } from '../common';
 import { ItemTypes } from '../items';
+import { LongswordTypes } from './longsword';
+
+/**
+ * Catch-all object that contains args for determining weapon "special variables"
+ *
+ * - Middle of blade (Great Sword, Longsword) adds a 1.05 multiplier
+ */
+export interface SpecialMultiplierArgs {
+  criticalHit: 'none' | 'positive' | 'negative';
+  /** Great Sword, Longsword only */
+  middleOfBlade: boolean;
+  /** Sword and Shield only */
+  swordAndShield: boolean;
+  /** Switch Axe only */
+  switchAxePhial: 'power' | 'element' | 'na';
+  longsword: Omit<
+    LongswordTypes.LongswordSpecialMultiplierArgs,
+    'middleOfBlade'
+  >;
+}
 
 /**
  * Enumerated collection of weapon types that can be used as properties/arguments

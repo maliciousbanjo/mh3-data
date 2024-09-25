@@ -73,3 +73,47 @@ exports[`Weapon utils calculateDamage Lance Modified impact hitzone 1`] = `
   },
 ]
 `;
+
+exports[`Weapon utils calculateDamage Longsword Spirit Guage NONE 1`] = `
+[
+  {
+    "elementalDamage": 2.115,
+    "koDamage": undefined,
+    "rawDamage": 25.485384375000002,
+    "totalDamage": 27,
+  },
+]
+`;
+
+exports[`Weapon utils calculateDamage Longsword Spirit Guage RED 1`] = `
+[
+  {
+    "elementalDamage": 2.115,
+    "koDamage": undefined,
+    "rawDamage": 33.1309996875,
+    "totalDamage": 35,
+  },
+]
+`;
+
+exports[`Weapon utils calculateDamage Longsword Spirit Guage WHITE 1`] = `
+[
+  {
+    "elementalDamage": 2.115,
+    "koDamage": undefined,
+    "rawDamage": 26.759653593750002,
+    "totalDamage": 28,
+  },
+]
+`;
+
+exports[`Weapon utils calculateDamage Longsword Spirit Guage YELLOW 1`] = `
+[
+  {
+    "elementalDamage": 2.115,
+    "koDamage": undefined,
+    "rawDamage": 28.0339228125,
+    "totalDamage": 30,
+  },
+]
+`;
