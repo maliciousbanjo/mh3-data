@@ -3,7 +3,7 @@
  * This is a "raw" object taken from the archived MH3 stilltruth website.
  * http://web.archive.org/web/20130407144759/http://mhtri.stilltruth.com/
  */
-var Shots = {
+const Shots = {
   normal: {
     name: 'Normal',
     levels: [

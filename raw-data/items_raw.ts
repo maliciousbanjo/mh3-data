@@ -7,7 +7,7 @@
  * found elsewhere on the site.
  */
 
-var Items = [
+const Items = [
   { id: 1, name: 'Barrel Bomb S', icon: 'bomb', color: 'yellow', rarity: 2 },
   { id: 2, name: 'Barrel Bomb L', icon: 'bomb', color: 'red', rarity: 4 },
   { id: 3, name: 'Pitfall Trap', icon: 'trap', color: 'green', rarity: 4 },

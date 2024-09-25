@@ -4,7 +4,7 @@
  * http://web.archive.org/web/20130407144759/http://mhtri.stilltruth.com/
  */
 
-var Skills = [
+const Skills = [
   {
     name: 'Sharpness',
     desc: 'Doubles or halves the rate at which your weapon loses Sharpness.',
@@ -906,6 +906,7 @@ var Skills = [
     desc: 'Enables ability to automatically block attacks (when blocking is possible).',
     group: 3,
     bounds: { '10': 'Auto-Guard' }
-  },
-  { name: 'Torso Up', copy: 'plt' }
+  }
+  // TODO: Add this back
+  // { name: 'Torso Up', copy: 'plt' }
 ];

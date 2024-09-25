@@ -3,7 +3,7 @@
  * This is a "raw" object taken from the archived MH3 stilltruth website.
  * http://web.archive.org/web/20130407144759/http://mhtri.stilltruth.com/
  */
-var Ammos = [
+const Ammos = [
   { desc: 'Normal S' },
   {
     desc: '  <A HREF="items.php?id=52" title="Capacity: Infinite">Lv1</A>| <span id="shotnormal0" class="">-</span> ',

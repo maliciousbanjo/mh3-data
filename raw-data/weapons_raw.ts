@@ -1,4 +1,4 @@
-var Weapons = {
+const Weapons = {
   'Great Swords': {
     short: 'gs',
     class: 4.8,

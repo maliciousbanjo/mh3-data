@@ -4,7 +4,7 @@
  * http://web.archive.org/web/20130407144759/http://mhtri.stilltruth.com/
  */
 
-var Armor = {
+const Armor = {
   Helmets: {
     short: 'hlm',
     pieces: [
@@ -9998,7 +9998,7 @@ var Armor = {
   }
 };
 
-var MHAGArmor = {
+const MHAGArmor = {
   Helmets: {
     short: 'hlm',
     pieces: [

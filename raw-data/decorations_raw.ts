@@ -4,7 +4,7 @@
  * http://web.archive.org/web/20130407144759/http://mhtri.stilltruth.com/
  */
 
-var Decorations = [
+const Decorations = [
   {
     name: 'Antidote Jewel',
     slots: 1,

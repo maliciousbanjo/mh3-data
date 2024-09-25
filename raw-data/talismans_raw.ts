@@ -4,7 +4,7 @@
  * http://web.archive.org/web/20130407144759/http://mhtri.stilltruth.com/
  */
 
-var Talismans = [
+const Talismans = [
   { rate: 10, skills: [{ group: 2, points: 1 }], slots: 0 },
   { rate: 12, skills: [{ group: 2, points: 2 }], slots: 0 },
   { rate: 12, skills: [{ group: 2, points: 3 }], slots: 0 },
