@@ -139,3 +139,31 @@ exports[`Weapon utils calculateDamage Switch Axe Power phial 1`] = `
   },
 ]
 `;
+
+exports[`Weapon utils calculateDamage Sword and Shield Cut attack 1`] = `
+[
+  {
+    "elementalDamage": 1.6650000000000003,
+    "koDamage": undefined,
+    "rawDamage": 15.4548,
+    "totalDamage": 17,
+  },
+]
+`;
+
+exports[`Weapon utils calculateDamage Sword and Shield Impact attack 1`] = `
+[
+  {
+    "elementalDamage": 1.6650000000000003,
+    "koDamage": 22.5,
+    "rawDamage": 8.1,
+    "totalDamage": 9,
+  },
+  {
+    "elementalDamage": 1.6650000000000003,
+    "koDamage": 22.5,
+    "rawDamage": 12.149999999999999,
+    "totalDamage": 13,
+  },
+]
+`;

@@ -310,5 +310,56 @@ describe('Weapon utils', () => {
         expect(damage).toMatchSnapshot();
       });
     });
+
+    describe('Sword and Shield', () => {
+      it('Throws error for missing special args', () => {
+        expect(() =>
+          calculateDamage(
+            WeaponType.SWORD_AND_SHIELD,
+            55, // Alatreon Star
+            'Jumping Slash',
+            Sharpness.PURPLE,
+            alatreonHeadHitzoneValues,
+            levelMultipliers,
+            false,
+            {}
+          )
+        ).toThrow();
+      });
+
+      it('Cut attack', () => {
+        const damage = calculateDamage(
+          WeaponType.SWORD_AND_SHIELD,
+          55, // Alatreon Star
+          'Jumping Slash',
+          Sharpness.PURPLE,
+          alatreonHeadHitzoneValues,
+          levelMultipliers,
+          false,
+          {
+            swordAndShieldMode: 'land'
+          }
+        );
+
+        expect(damage).toMatchSnapshot();
+      });
+
+      it('Impact attack', () => {
+        const damage = calculateDamage(
+          WeaponType.SWORD_AND_SHIELD,
+          55, // Alatreon Star
+          'Shield Combo',
+          Sharpness.PURPLE,
+          alatreonHeadHitzoneValues,
+          levelMultipliers,
+          false,
+          {
+            swordAndShieldMode: 'land'
+          }
+        );
+
+        expect(damage).toMatchSnapshot();
+      });
+    });
   });
 });

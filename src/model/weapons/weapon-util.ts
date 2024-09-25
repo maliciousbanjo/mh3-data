@@ -41,13 +41,16 @@ import {
 } from './switch-axe';
 import {
   SwordAndShields,
-  SwordAndShieldDamageProperties
+  SwordAndShieldDamageProperties,
+  Util as SwordAndShieldUtils,
+  SwordAndShieldTypes
 } from './sword-and-shield';
 import { MonsterLevelTypes } from '../monster-levels';
 import { MonsterTypes } from '../monsters';
 import {
   assertLongswordSpecialMultiplierArgs,
-  assertSwitchAxeSpecialMultiplierArgs
+  assertSwitchAxeSpecialMultiplierArgs,
+  assertSwordAndShieldSpecialMultiplierArgs
 } from './assertions';
 
 const ELEMENTAL_DAMAGE_DIVIDER = 10;
@@ -410,12 +413,20 @@ export function calculateDamage(
         awaken
       );
     }
-    // TODO:
     case WeaponType.SWORD_AND_SHIELD: {
-      console.error(
-        `Damage calulation for ${WeaponType.SWORD_AND_SHIELD} not yet implemented`
+      const { swordAndShieldMode } = specialMultipliers;
+      assertSwordAndShieldSpecialMultiplierArgs(swordAndShieldMode);
+      return SwordAndShieldUtils.calculateSwordAndShieldDamage(
+        weapon,
+        attackName as SwordAndShieldTypes.SwordAndShieldAttack,
+        sharpness,
+        hitzoneValues,
+        multipliers,
+        {
+          mode: swordAndShieldMode
+        },
+        awaken
       );
-      return [];
     }
     default: {
       throw new Error(`${weaponType} is not a valid weapon type`);

@@ -29,3 +29,16 @@ export function assertSwitchAxeSpecialMultiplierArgs(
     throw new Error('switch axe mode required for damage calculations');
   }
 }
+
+/**
+ * Type assertion for Sword and Shield special multiplier args
+ */
+export function assertSwordAndShieldSpecialMultiplierArgs(
+  swordAndShieldMode: SpecialMultiplierArgs['swordAndShieldMode'] | undefined
+): asserts swordAndShieldMode is NonNullable<
+  SpecialMultiplierArgs['swordAndShieldMode']
+> {
+  if (!swordAndShieldMode) {
+    throw new Error('sword and shield mode required for damage calculations');
+  }
+}

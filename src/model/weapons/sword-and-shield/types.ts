@@ -22,4 +22,10 @@ export type SwordAndShieldAttack =
   | 'Revolving Slice'
   | 'Guard Slice';
 
+export type SwordAndShieldAttackMode = 'land' | 'water';
+
+export interface SwordAndShieldSpecialMultiplierArgs {
+  mode: SwordAndShieldAttackMode;
+}
+
 export type SwordAndShield = Weapon<WeaponType.SWORD_AND_SHIELD>;
