@@ -28,7 +28,7 @@ exports[`Weapon utils calculateDamage Hammer 1`] = `
 ]
 `;
 
-exports[`Weapon utils calculateDamage Lance 1`] = `
+exports[`Weapon utils calculateDamage Lance Cut hitzone 1`] = `
 [
   {
     "elementalDamage": 2.025,
@@ -47,6 +47,29 @@ exports[`Weapon utils calculateDamage Lance 1`] = `
     "koDamage": undefined,
     "rawDamage": 27.337500000000002,
     "totalDamage": 29,
+  },
+]
+`;
+
+exports[`Weapon utils calculateDamage Lance Modified impact hitzone 1`] = `
+[
+  {
+    "elementalDamage": 2.7,
+    "koDamage": undefined,
+    "rawDamage": 47.17440000000001,
+    "totalDamage": 49,
+  },
+  {
+    "elementalDamage": 2.7,
+    "koDamage": undefined,
+    "rawDamage": 47.17440000000001,
+    "totalDamage": 49,
+  },
+  {
+    "elementalDamage": 2.7,
+    "koDamage": undefined,
+    "rawDamage": 50.54400000000001,
+    "totalDamage": 53,
   },
 ]
 `;

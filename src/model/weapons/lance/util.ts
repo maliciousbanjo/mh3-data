@@ -1,6 +1,6 @@
 import { MonsterLevelTypes } from '../../monster-levels';
 import { MonsterTypes } from '../../monsters';
-import { Weapon, WeaponType, Sharpness, Attack, Damage } from '../types';
+import { Weapon, WeaponType, Sharpness, Attack, Damage, Hit } from '../types';
 import {
   calculateElementalDamage,
   getSharpnessRawMultiplier,
@@ -9,7 +9,7 @@ import {
 import { LanceDamageProperties } from './lance-data';
 import { LanceAttack } from './types';
 
-const LANCE_VAR_MULTIPLIER = 0.72;
+const LANCE_VAR_MULTIPLIER = 0.78;
 const LANCE_CHARGE_ELEMENTAL_MULTIPLIER = 0.25;
 
 function getLanceAttack(attackName: LanceAttack): Attack<LanceAttack> {
@@ -22,12 +22,20 @@ function getLanceAttack(attackName: LanceAttack): Attack<LanceAttack> {
   return result;
 }
 
-function getLanceSpecialVarMultiplier(
+/**
+ * If the impact hitzone * .72 is greater than the cut hitzone then
+ * that modified impact value will be used instead. Otherwise take cut.
+ */
+function getLanceHitzoneMultiplier(
+  hit: Hit,
   hitzoneValues: MonsterTypes.HitzoneValues
-): typeof LANCE_VAR_MULTIPLIER | 1 {
-  return hitzoneValues.impact * LANCE_VAR_MULTIPLIER > hitzoneValues.cut
-    ? LANCE_VAR_MULTIPLIER
-    : 1;
+) {
+  if (isCutHit(hit)) {
+    const varImpact = hitzoneValues.impact * LANCE_VAR_MULTIPLIER;
+    return varImpact > hitzoneValues.cut ? varImpact : hitzoneValues.cut;
+  }
+  // Shield bash should always be impact
+  return hitzoneValues.impact;
 }
 
 /**
@@ -54,20 +62,17 @@ export function calculateLanceDamage(
 
   const sharpnessMultiplier = getSharpnessRawMultiplier(sharpness);
 
-  const specialVarMultiplier = getLanceSpecialVarMultiplier(hitzoneValues);
-
   const attack = getLanceAttack(attackName);
 
   return attack.hits.map<Damage>(hit => {
-    const isCut = isCutHit(hit);
-    const hitzoneMultiplier = isCut ? hitzoneValues.cut : hitzoneValues.impact;
+    const hitzoneMultiplier = getLanceHitzoneMultiplier(hit, hitzoneValues);
 
     const rawDamage =
       (lance.attack *
         hit.power *
         sharpnessMultiplier *
         hitzoneMultiplier *
-        specialVarMultiplier *
+        1 * // Lance does not have a [SpecialVar], but this is here for consistency
         multipliers.defense) /
       classModifier;
 
@@ -84,7 +89,7 @@ export function calculateLanceDamage(
         ? baseElementalDamage * LANCE_CHARGE_ELEMENTAL_MULTIPLIER
         : baseElementalDamage;
 
-    const koDamage = !isCut ? hit.ko * sharpnessMultiplier : undefined;
+    const koDamage = !isCutHit(hit) ? hit.ko * sharpnessMultiplier : undefined;
 
     return {
       rawDamage,

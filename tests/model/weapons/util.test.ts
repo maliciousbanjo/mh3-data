@@ -1,5 +1,8 @@
 import { MonsterLevels } from '../../../src/model';
-import { Alatreon } from '../../../src/model/monsters/large-monster-data';
+import {
+  Alatreon,
+  RoyalLudroth
+} from '../../../src/model/monsters/large-monster-data';
 import { GreatSwords } from '../../../src/model/weapons/great-sword';
 import { Sharpness, WeaponType } from '../../../src/model/weapons/types';
 import {
@@ -135,18 +138,41 @@ describe('Weapon utils', () => {
       expect(damage).toMatchSnapshot();
     });
 
-    it('Lance', () => {
-      const damage = calculateDamage(
-        WeaponType.LANCE,
-        52, // Alatreon Gleam,
-        'High Stab Combo',
-        Sharpness.PURPLE,
-        alatreonHeadHitzoneValues,
-        levelMultipliers,
-        false,
-        {}
-      );
-      expect(damage).toMatchSnapshot();
+    describe('Lance', () => {
+      it('Cut hitzone', () => {
+        const damage = calculateDamage(
+          WeaponType.LANCE,
+          52, // Alatreon Gleam,
+          'High Stab Combo',
+          Sharpness.PURPLE,
+          alatreonHeadHitzoneValues,
+          levelMultipliers,
+          false,
+          {}
+        );
+        expect(damage).toMatchSnapshot();
+      });
+
+      it('Modified impact hitzone', () => {
+        // Royal Ludroth head (impact: 0.8, cut: 0.5), so the impact hitzone should be used
+        const ludrothLevelMultipliers =
+          MonsterLevels.Util.getMonsterLevelMultipliers(5); // Save Our Boat
+
+        const royalLudrothHeadHitzoneValues =
+          RoyalLudroth.hitzoneGroups[0].hitzones['Head'];
+        const damage = calculateDamage(
+          WeaponType.LANCE,
+          52, // Alatreon Gleam,
+          'High Stab Combo',
+          Sharpness.PURPLE,
+          royalLudrothHeadHitzoneValues,
+          ludrothLevelMultipliers,
+          false,
+          {}
+        );
+
+        expect(damage).toMatchSnapshot();
+      });
     });
   });
 });
