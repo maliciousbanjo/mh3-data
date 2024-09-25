@@ -37,11 +37,9 @@ export function isCutHit(object: Hit): object is CutHit {
  * Callback for {@link Array.find} to find a weapon
  * @param weaponId Weapon to find
  */
-const findWeapon =
-  <T extends ValidWeaponTypes>(weaponId: number) =>
-  (weapon: Weapon<T>) => {
-    return weapon.id === weaponId;
-  };
+const findWeapon = (weaponId: number) => (weapon: Weapon<WeaponType>) => {
+  return weapon.id === weaponId;
+};
 
 /**
  * @param weaponType
@@ -50,10 +48,10 @@ const findWeapon =
  * @returns instance of a {@link Weapon}
  */
 export function getWeapon(
-  weaponType: ValidWeaponTypes,
+  weaponType: WeaponType,
   weaponId: number
-): Weapon<ValidWeaponTypes> {
-  let weapon: Weapon<ValidWeaponTypes> | undefined = undefined;
+): Weapon<WeaponType> {
+  let weapon: Weapon<WeaponType> | undefined = undefined;
 
   switch (weaponType) {
     case WeaponType.GREAT_SWORD: {
@@ -94,9 +92,7 @@ export function getWeapon(
 /**
  * @returns DamageProperties corresponding to the provided weaponType
  */
-export function getWeaponDamageProperties<T extends ValidWeaponTypes>(
-  weaponType: T
-) {
+export function getWeaponDamageProperties(weaponType: WeaponType) {
   switch (weaponType) {
     case WeaponType.GREAT_SWORD: {
       return GreatSwordDamageProperties;
@@ -228,8 +224,8 @@ function getHitzoneForWeaponElement(
  * @returns true if weapon has the provided sharpness level, otherwise throws error
  * @throws Error if weapon does not have provided sharpness level
  */
-export function validateWeaponSharpness<T extends ValidWeaponTypes>(
-  weapon: Weapon<T>,
+export function validateWeaponSharpness(
+  weapon: Weapon<WeaponType>,
   sharpness: Sharpness
 ): true {
   const validSharpness = sharpness <= weapon.sharpnessUp.length - 1;
@@ -304,8 +300,8 @@ export function calculateElementalDamage(
  * [ATP x TYPE x SHARP x HITZONE] / [CLASS] = Raw Damage [X DEFENSE]
  *  494 x  .23 x 1.05  x   .90    /   2.3   =    46.683   X   .75
  */
-export function calculateDamage<T extends ValidWeaponTypes>(
-  weaponType: T,
+export function calculateDamage(
+  weaponType: WeaponType,
   weaponId: number,
   /** Attack being performed by weapon */
   attackName: Attack['name'],
