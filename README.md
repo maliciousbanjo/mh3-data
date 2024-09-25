@@ -57,6 +57,16 @@ The following is currently available:
 
 </details>
 
+<details>
+  <summary>Armor Skills</summary>
+
+- Skill trees
+- Armor skills
+  - Point threshold
+  - Description
+- Categorized by A, B, C skill groups
+</details>
+
 ## Util Functions
 
 - Damage calculation for blademaster weapons
