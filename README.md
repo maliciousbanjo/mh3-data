@@ -9,32 +9,54 @@ The original site is no longer available, but was partially recovered thanks to 
 
 The following is currently available:
 
-- Monsters
+## Data
+
+<details>
+  <summary>Monsters</summary>
+  
   - Hitzones
   - Status tolerances
   - Carve item results
   - Breakable parts & item results
   - Capture item results
   - Shiny item drops
-- Quests
-  - Moga Village (Offline) & Loc Lac City (Online)
-    - Offline Arena quests
-    - Partial set of Online Arena & Event quests
-  - Organized by quest type (eg; gathering, hunt, capture, repel, etc)
-  - Success requirement (eg; gather 5 mushrooms, capture Great Jaggi, etc)
-  - Location (eg; Deserted Island, Flooded Forest, etc)
-  - Zenny reward
-  - HRP reward
-  - Secondary item rewards
-  - Bosses that can spawn in each quest
-- Blademaster Weapons
-  - Raw
-  - Element
-  - Affinity
-  - Slots
-  - Sharpness (including Sharpness+1)
-  - Materials required to craft/upgrade
-  - Upgrade path
-  - Awaken-able
-- Items
-  - Names
+</details>
+
+<details>
+  <summary>Quests</summary>
+
+- Moga Village (Offline) & Loc Lac City (Online)
+  - Offline Arena quests
+  - Partial set of Online Arena & Event quests
+- Organized by quest type (eg; gathering, hunt, capture, repel, etc)
+- Success requirement (eg; gather 5 mushrooms, capture Great Jaggi, etc)
+- Location (eg; Deserted Island, Flooded Forest, etc)
+- Zenny reward
+- HRP reward
+- Secondary item rewards
+- Bosses that can spawn in each quest
+</details>
+
+<details>
+  <summary>Blademaster Weapons</summary>
+
+- Raw
+- Element
+- Affinity
+- Slots
+- Sharpness (including Sharpness+1)
+- Materials required to craft/upgrade
+- Upgrade path
+- Awaken-able
+</details>
+
+<details>
+  <summary>Items</summary>
+
+- Names
+
+</details>
+
+## Util Functions
+
+- Damage calculation for blademaster weapons
