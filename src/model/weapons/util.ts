@@ -1,6 +1,7 @@
 import {
   Attack,
   CutHit,
+  Damage,
   Hit,
   Sharpness,
   ValidWeaponTypes,
@@ -13,8 +14,18 @@ import {
   Util as GreatSwordUtils,
   GreatSwordTypes
 } from './great-sword';
-import { Hammers, HammerDamageProperties } from './hammer';
-import { Lances, LanceDamageProperties } from './lance';
+import {
+  Hammers,
+  HammerDamageProperties,
+  Util as HammerUtils,
+  HammerTypes
+} from './hammer';
+import {
+  Lances,
+  LanceDamageProperties,
+  Util as LanceUtils,
+  LanceTypes
+} from './lance';
 import { Longswords, LongswordDamageProperties } from './longsword';
 import { SwitchAxes, SwitchAxeDamageProperties } from './switch-axe';
 import {
@@ -195,7 +206,7 @@ export function getSharpnessElementalMultiplier(sharpness: Sharpness): number {
  */
 function getHitzoneForWeaponElement(
   hitzoneValues: MonsterTypes.HitzoneValues,
-  weaponElement: Weapon<ValidWeaponTypes>['secondaryDamageType']
+  weaponElement: Weapon<WeaponType>['secondaryDamageType']
 ) {
   if (
     weaponElement === 'sleep' ||
@@ -282,6 +293,23 @@ export function calculateElementalDamage(
 }
 
 /**
+ * Catch-all object that contains args for determining weapon "special variables"
+ *
+ * - Middle of blade (Great Sword, Longsword) adds a 1.05 multiplier
+ */
+export interface SpecialMultiplierArgs {
+  criticalHit: 'none' | 'positive' | 'negative';
+  /** Great Sword, Longsword only */
+  middleOfBlade: boolean;
+  /** Sword and Shield only */
+  swordAndShield: boolean;
+  /** Switch Axe only */
+  switchAxePhial: 'power' | 'element' | 'na';
+  // TODO: Longsword full spirit guage & spirit guage color
+}
+
+/**
+ * TODO: Affinity (positive or negative critical hit)
  * RAW DAMAGE FORMULA
  *
  * Taken from Lord Grahf's [Monster Hunter Tri Damage Formula FAQ](https://gamefaqs.gamespot.com/wii/943655-monster-hunter-tri/faqs/59207)
@@ -312,65 +340,68 @@ export function calculateDamage(
   /** Derived from Monster level set by Quest */
   multipliers: MonsterLevelTypes.MonsterLevelMultipliers,
   /** Will include awakened element if applicable */
-  awaken = false
-): number {
+  awaken = false,
+  specialMultipliers: Partial<SpecialMultiplierArgs> = {}
+): Damage[] {
   /** This will get raw, element, weapon class, and verify provided attack is valid for the weapon type */
   const weapon = getWeapon(weaponType, weaponId);
   validateWeaponSharpness(weapon, sharpness);
 
   switch (weaponType) {
-    // TODO: include arg for middle of blade
-    case WeaponType.GREAT_SWORD:
-      {
-        GreatSwordUtils.calculateGreatSwordDamage(
-          weapon,
-          attackName as GreatSwordTypes.GreatSwordAttack,
-          sharpness,
-          hitzoneValues,
-          multipliers,
-          awaken
-        );
-      }
-      break;
-    // TODO:
-    case WeaponType.HAMMER: {
-      console.error(
-        `Damage calulation for ${WeaponType.HAMMER} not yet implemented`
+    case WeaponType.GREAT_SWORD: {
+      return GreatSwordUtils.calculateGreatSwordDamage(
+        weapon,
+        attackName as GreatSwordTypes.GreatSwordAttack,
+        sharpness,
+        hitzoneValues,
+        multipliers,
+        awaken,
+        !!specialMultipliers.middleOfBlade
       );
-      break;
     }
-    // TODO:
-    case WeaponType.LANCE: {
-      console.error(
-        `Damage calulation for ${WeaponType.LANCE} not yet implemented`
+    case WeaponType.HAMMER: {
+      return HammerUtils.calculateHammerDamage(
+        weapon,
+        attackName as HammerTypes.HammerAttack,
+        sharpness,
+        hitzoneValues,
+        multipliers,
+        awaken
       );
-      break;
+    }
+    case WeaponType.LANCE: {
+      return LanceUtils.calculateLanceDamage(
+        weapon,
+        attackName as LanceTypes.LanceAttack,
+        sharpness,
+        hitzoneValues,
+        multipliers,
+        awaken
+      );
     }
     // TODO:
     case WeaponType.LONGSWORD: {
       console.error(
         `Damage calulation for ${WeaponType.LONGSWORD} not yet implemented`
       );
-      break;
+      return [];
     }
     // TODO:
     case WeaponType.SWITCH_AXE: {
       console.error(
         `Damage calulation for ${WeaponType.SWITCH_AXE} not yet implemented`
       );
-      break;
+      return [];
     }
     // TODO:
     case WeaponType.SWORD_AND_SHIELD: {
       console.error(
         `Damage calulation for ${WeaponType.SWORD_AND_SHIELD} not yet implemented`
       );
-      break;
+      return [];
     }
     default: {
       throw new Error(`${weaponType} is not a valid weapon type`);
     }
   }
-
-  return 0; // TODO: Real numbers
 }

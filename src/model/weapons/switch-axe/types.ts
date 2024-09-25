@@ -21,5 +21,5 @@ export type SwitchAxeAttack =
 
 export interface SwitchAxe extends Weapon<WeaponType.SWITCH_AXE> {
   /** Unique property for switch axes */
-  phial: 'ELEMENT' | 'POWER' | 'DRAGON' | 'PARALYSIS';
+  phial: 'element' | 'power' | 'dragon' | 'paralysis';
 }

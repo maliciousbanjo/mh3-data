@@ -1,13 +1,6 @@
 import { MonsterLevelTypes } from '../../monster-levels';
 import { MonsterTypes } from '../../monsters';
-import {
-  Attack,
-  Damage,
-  Sharpness,
-  ValidWeaponTypes,
-  Weapon,
-  WeaponType
-} from '../types';
+import { Attack, Damage, Sharpness, Weapon, WeaponType } from '../types';
 import {
   calculateElementalDamage,
   getSharpnessRawMultiplier,
@@ -24,10 +17,12 @@ const LEVEL_THREE_CHARGE_MULTIPLIER = 1.3;
 /**
  * @returns Attack properties for a great sword attack
  */
-function getAttack(attackName: GreatSwordAttack): Attack<GreatSwordAttack> {
+function getGreatSwordAttack(
+  attackName: GreatSwordAttack
+): Attack<GreatSwordAttack> {
   const gsAttacks = GreatSwordDamageProperties.attackGroups[0];
 
-  const result = gsAttacks.attacks.find((atk) => atk.name === attackName);
+  const result = gsAttacks.attacks.find(atk => atk.name === attackName);
   if (!result) {
     throw new Error(`${attackName} is not a valid Great Sword attack`);
   }
@@ -62,10 +57,10 @@ function getGreatSwordSpecialVarMultiplier(
 }
 
 /**
- * Calculates RAW damage for a {@link GreatSwordAttack}.
+ * Calculates damage for a {@link GreatSwordAttack}.
  */
 export function calculateGreatSwordDamage(
-  greatSword: Weapon<ValidWeaponTypes>,
+  greatSword: Weapon<WeaponType>,
   /** Attack being performed by weapon */
   attackName: GreatSwordAttack,
   /** Current sharpness of weapon */
@@ -80,7 +75,7 @@ export function calculateGreatSwordDamage(
   middleOfBlade = false
 ) {
   if (greatSword.type !== WeaponType.GREAT_SWORD) {
-    throw new Error(`${greatSword.name} is not a great sword`);
+    throw new Error(`${greatSword.name} is not a ${WeaponType.GREAT_SWORD}`);
   }
 
   const { classModifier } = GreatSwordDamageProperties;
@@ -92,9 +87,10 @@ export function calculateGreatSwordDamage(
     attackName
   );
 
-  const attack = getAttack(attackName);
+  const attack = getGreatSwordAttack(attackName);
 
-  return attack.hits.map<Damage>((hit) => {
+  // TODO: This should probably get lifted into a shared function that all weapons can use
+  return attack.hits.map<Damage>(hit => {
     const isCut = isCutHit(hit);
     const hitzoneMultiplier = isCut ? hitzoneValues.cut : hitzoneValues.impact;
 
