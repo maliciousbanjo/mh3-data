@@ -27,8 +27,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 15,
-        skillName: 'Sharpness +1',
-        skillDescription: ''
+        skillName: 'Sharpness +1'
       }
     ]
   },
@@ -39,8 +38,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: "Mind's Eye",
-        skillDescription: ''
+        skillName: "Mind's Eye"
       }
     ]
   },
@@ -88,8 +86,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Normal S Boost',
-        skillDescription: ''
+        skillName: 'Normal S Boost'
       }
     ]
   },
@@ -100,8 +97,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Pierce S Boost',
-        skillDescription: ''
+        skillName: 'Pierce S Boost'
       }
     ]
   },
@@ -112,8 +108,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Pellet S Boost',
-        skillDescription: ''
+        skillName: 'Pellet S Boost'
       }
     ]
   },
@@ -124,8 +119,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Normal S All Up',
-        skillDescription: ''
+        skillName: 'Normal S All Up'
       }
     ]
   },
@@ -255,9 +249,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     name: 'Loading',
     description: 'Increases the loadable amount of all usable ammo by one.',
     group: SkillGroup.A,
-    armorSkills: [
-      { pointThreshold: 15, skillName: 'Load Up', skillDescription: '' }
-    ]
+    armorSkills: [{ pointThreshold: 15, skillName: 'Load Up' }]
   },
   {
     name: 'Carving',
@@ -286,8 +278,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 15,
-        skillName: 'Evasion Up',
-        skillDescription: ''
+        skillName: 'Evasion Up'
       }
     ]
   },
@@ -299,8 +290,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Capture Expert',
-        skillDescription: ''
+        skillName: 'Capture Expert'
       }
     ]
   },
@@ -331,8 +321,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Punishing Draw',
-        skillDescription: ''
+        skillName: 'Punishing Draw'
       }
     ]
   },
@@ -341,9 +330,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     description:
       "Releases the latent elemental properties in weapons that don't have elements.",
     group: SkillGroup.A,
-    armorSkills: [
-      { pointThreshold: 15, skillName: 'Awaken', skillDescription: '' }
-    ]
+    armorSkills: [{ pointThreshold: 15, skillName: 'Awaken' }]
   },
   {
     name: 'Rapid Fire',
@@ -352,8 +339,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Bonus Shot',
-        skillDescription: ''
+        skillName: 'Bonus Shot'
       }
     ]
   },
@@ -522,8 +508,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Guard Boost',
-        skillDescription: ''
+        skillName: 'Guard Boost'
       }
     ]
   },
@@ -622,8 +607,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Bombardier',
-        skillDescription: ''
+        skillName: 'Bombardier'
       }
     ]
   },
@@ -812,8 +796,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Speed Gatherer',
-        skillDescription: ''
+        skillName: 'Speed Gatherer'
       }
     ]
   },
@@ -861,13 +844,11 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Evasion +1',
-        skillDescription: ''
+        skillName: 'Evasion +1'
       },
       {
         pointThreshold: 15,
-        skillName: 'Evasion +2',
-        skillDescription: ''
+        skillName: 'Evasion +2'
       }
     ]
   },
@@ -926,8 +907,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Tremor-Proof',
-        skillDescription: ''
+        skillName: 'Tremor-Proof'
       }
     ]
   },
@@ -938,8 +918,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Critical Draw',
-        skillDescription: ''
+        skillName: 'Critical Draw'
       }
     ]
   },
@@ -1000,8 +979,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Dung Bomb Expert',
-        skillDescription: ''
+        skillName: 'Dung Bomb Expert'
       }
     ]
   },
@@ -1013,8 +991,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Flaming Aura',
-        skillDescription: ''
+        skillName: 'Flaming Aura'
       }
     ]
   },
@@ -1082,8 +1059,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Negate Mud/Snow',
-        skillDescription: ''
+        skillName: 'Negate Mud/Snow'
       }
     ]
   },
@@ -1131,8 +1107,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Anti-Theft',
-        skillDescription: ''
+        skillName: 'Anti-Theft'
       }
     ]
   },
@@ -1143,8 +1118,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Pro Transporter',
-        skillDescription: ''
+        skillName: 'Pro Transporter'
       }
     ]
   },
@@ -1424,8 +1398,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Fishing Expert',
-        skillDescription: ''
+        skillName: 'Fishing Expert'
       }
     ]
   },
@@ -1474,8 +1447,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Combination Pro',
-        skillDescription: ''
+        skillName: 'Combination Pro'
       }
     ]
   },
@@ -1526,8 +1498,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'BBQ Expert',
-        skillDescription: ''
+        skillName: 'BBQ Expert'
       }
     ]
   },
@@ -1539,8 +1510,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Trap Master',
-        skillDescription: ''
+        skillName: 'Trap Master'
       }
     ]
   },
@@ -1552,8 +1522,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Capture Guru',
-        skillDescription: ''
+        skillName: 'Capture Guru'
       }
     ]
   },
@@ -1597,9 +1566,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     description: 'Increases your Attack every time you fall in battle.',
     restricted: true,
     group: SkillGroup.A,
-    armorSkills: [
-      { pointThreshold: 10, skillName: 'Fortify', skillDescription: '' }
-    ]
+    armorSkills: [{ pointThreshold: 10, skillName: 'Fortify' }]
   },
   {
     name: 'Blight Res',
@@ -1610,8 +1577,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Blightproof',
-        skillDescription: ''
+        skillName: 'Blightproof'
       }
     ]
   },
@@ -1624,8 +1590,7 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
     armorSkills: [
       {
         pointThreshold: 10,
-        skillName: 'Auto-Guard',
-        skillDescription: ''
+        skillName: 'Auto-Guard'
       }
     ]
   }
