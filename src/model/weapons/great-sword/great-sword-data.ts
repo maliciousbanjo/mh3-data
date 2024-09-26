@@ -1,10 +1,10 @@
-import { WeaponDamageProperties, WeaponType } from '../types';
+import { WeaponDamageProperties, WeaponClass } from '../types';
 import { GreatSword, GreatSwordAttack } from './types';
 
 export const GreatSwordDamageProperties = Object.freeze<
-  WeaponDamageProperties<WeaponType.GREAT_SWORD, GreatSwordAttack>
+  WeaponDamageProperties<WeaponClass.GREAT_SWORD, GreatSwordAttack>
 >({
-  type: WeaponType.GREAT_SWORD,
+  type: WeaponClass.GREAT_SWORD,
   classModifier: 4.8,
   attackGroups: [
     {
@@ -77,7 +77,7 @@ export const GreatSwordDamageProperties = Object.freeze<
 export const GreatSwords = Object.freeze<GreatSword[]>([
   {
     id: 0,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Iron Sword',
     description:
       'A weapon that even novice hunters can use. Charge up for a more powerful slash.',
@@ -96,7 +96,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 1,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Iron Sword+',
     description:
       'A weapon that even novice hunters can use. Charge up for a more powerful slash.',
@@ -115,7 +115,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 2,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Buster Sword',
     description:
       'A strong blade made from high-purity steel, good for confronting huge monsters.',
@@ -141,7 +141,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 3,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Buster Sword+',
     description:
       'A strong blade made from high-purity steel, good for confronting huge monsters.',
@@ -167,7 +167,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 4,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Buster Blade',
     description:
       'The final iteration of the Buster Sword. Essential for fighting large monsters.',
@@ -193,7 +193,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 5,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Ravager Blade',
     description:
       'A sharpness steel blade. Its giant spikes give it a fearsome appearance.',
@@ -220,7 +220,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 6,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Ravager Blade+',
     description:
       'A sharpness steel blade. Its giant spikes give it a fearsome appearance.',
@@ -247,7 +247,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 7,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Lacerator Blade',
     description:
       'A sharpness steel blade. It is capable of peerless blows due to its multi-ore alloy.',
@@ -274,7 +274,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 8,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Mutilator Blade',
     description:
       'The best blade of its class. Its slashes are as deadly as those of a dragon.',
@@ -300,7 +300,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 9,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Brazenwall',
     description:
       'A shining gold blade. Its super-hard edge makes it versatile but hard to wield.',
@@ -327,7 +327,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 10,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Crimsonwall',
     description:
       'A shining gold blade. Its super-hard edge makes it versatile but hard to wield.',
@@ -353,7 +353,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 11,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Rugged Great Sword',
     description:
       'A blade made from colorful Jaggi hides. A common weapon among local hunters.',
@@ -384,7 +384,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 12,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: "Chieftain's Grt Swd",
     description:
       'A blade made from colorful Jaggi hides. A common weapon among local hunters.',
@@ -410,7 +410,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 13,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: "High Chief's Grt Swd",
     description:
       'A memento of a courageous foray into a well-guarded Jaggi nest.',
@@ -435,7 +435,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 14,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Lagiacrus Blade',
     description:
       'An electric blade made using Lagiacrus materials. Danger: high voltage!',
@@ -461,7 +461,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 15,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Lagia Lightning (R)',
     description:
       'An electric blade made using Lagiacrus materials. Danger: high voltage!',
@@ -487,7 +487,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 16,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Lagia Bluebolt (P)',
     description:
       'An electric blade made using Lagiacrus materials. Danger: high voltage!',
@@ -512,7 +512,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 17,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Lagia Lightning (Y)',
     description:
       'An electric blade made using Lagiacrus materials. Danger: high voltage!',
@@ -538,7 +538,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 18,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Lagia Bluebolt (G)',
     description:
       'An electric blade made using Lagiacrus materials. Danger: high voltage!',
@@ -563,7 +563,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 19,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'High Lagia Blade',
     description:
       "A Lagiacrus embodied in a blade. Its streaking lightning devours foes' souls.",
@@ -589,7 +589,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 20,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Lagia Wildfire (P)',
     description:
       "A Lagiacrus embodied in a blade. Its streaking lightning devours foes' souls.",
@@ -614,7 +614,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 21,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Carapace Sword',
     description:
       "A blade shaped like a Barroth's head; it packs nearly as much punch.",
@@ -640,7 +640,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 22,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Carapace Blade',
     description:
       "A blade shaped like a Barroth's head; it packs nearly as much punch.",
@@ -666,7 +666,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 23,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Barroth Wedge',
     description:
       'A blade made from the thick shell of a Barroth. It can crush even wyvern scales.',
@@ -692,7 +692,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 24,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Barroth Smasher',
     description:
       'Just like its namesake, this weapon can pulverize its targets into dust.',
@@ -717,7 +717,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 25,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Bone Blade',
     description:
       'A Great Sword forged from monster bone. It can fend off many monsters at once.',
@@ -736,7 +736,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 26,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Bone Blade+',
     description:
       'A Great Sword forged from monster bone. It can fend off many monsters at once.',
@@ -761,7 +761,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 27,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Jawblade',
     description:
       "A traditional bone blade. Named for its resemblance to a carnivore's jaw.",
@@ -787,7 +787,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 28,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Giant Jawblade',
     description:
       "A traditional bone blade. Named for its resemblance to a carnivore's jaw.",
@@ -818,7 +818,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 29,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Golem Blade',
     description:
       'A Great Sword formed from a giant bone; its powerful, hefty blade is deadly.',
@@ -844,7 +844,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 30,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Golem Blade+',
     description:
       'A Great Sword formed from a giant bone; its powerful, hefty blade is deadly.',
@@ -870,7 +870,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 31,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Blade of Talos',
     description:
       'A weapon said to be wielded by a giant. Its large weight gives it unusual power.',
@@ -895,7 +895,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 32,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Valkyrie Blade',
     description:
       'A Great Sword forged by upgrading a Golem Blade with Rathian materials.',
@@ -921,7 +921,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 33,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Sieglinde',
     description:
       'A green blade named for a lovely queen, it kills prey with sweet-smelling poison.',
@@ -947,7 +947,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 34,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'High Sieglinde (P)',
     description:
       'A blade fashioned after a queen clad in purple. It fells foes with elegance.',
@@ -972,7 +972,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 35,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'High Sieglinde (G)',
     description:
       'A blade fashioned after a queen clad in deep green. It fells foes with elegance.',
@@ -997,7 +997,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 36,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Siegmund',
     description:
       'The crimson blade of a brave king. He who uses it justly will win a hundred battles.',
@@ -1023,7 +1023,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 37,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'High Siegmund',
     description:
       "A king's spirit dwells in this fierce blade that cowards cannot touch.",
@@ -1048,7 +1048,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 38,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Red Wing',
     description:
       'A blade inspired by Rathalos wings. Incendiaries turn its slashes to arcs of flame.',
@@ -1074,7 +1074,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 39,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Rathalos Firesword',
     description:
       'A blade inspired by Rathalos wings. Incendiaries turn its slashes to arcs of flame.',
@@ -1100,7 +1100,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 40,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Rathalos Flamesword',
     description:
       'A blade of sparkling, crimson flame. Its entranced victims soon meet their end.',
@@ -1125,7 +1125,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 41,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Wyvern Jawblade',
     description:
       'A blade forged from claws and fangs. Can tear through a wyvern carapace.',
@@ -1151,7 +1151,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 42,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Quarrel Hornsword',
     description: 'A wild-looking blade made from Diablos horns. Very powerful.',
     attack: 912,
@@ -1177,7 +1177,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 43,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Diablos Hornsword',
     description:
       'An upgraded Hornsword. It has the demon-like ability to mow down foes.',
@@ -1203,7 +1203,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 44,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Ludroth Bone Sword',
     description:
       'A bone blade reinforced with Ludroth parts. A good base level for further upgrading.',
@@ -1229,7 +1229,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 45,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Ludroth Bone Sword+',
     description:
       'A blade of absorbent sponge. Its pressurized water can break through tough shells.',
@@ -1255,7 +1255,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 46,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Cataclysm Sword',
     description:
       'A blade of absorbent sponge. Its pressurized water can break through tough shells.',
@@ -1281,7 +1281,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 47,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Cataclysm Blade',
     description:
       'The ultimate Ludroth blade. The water that issues from it leaves rainbow trails.',
@@ -1306,7 +1306,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 48,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Vulcanis',
     description:
       'A blade made from ore mined in polar climes. Upgradeable in more ways than one.',
@@ -1329,7 +1329,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 49,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Vulcanvil (R)',
     description:
       'A strangely-shaped blade which took this form naturally when crafted.',
@@ -1355,7 +1355,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 50,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Vulcamagnon (P)',
     description:
       'An ancient volcanic eruption in blade form. A great life force sleeps within.',
@@ -1380,7 +1380,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 51,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Vulcanvil (B)',
     description:
       'A strangely-shaped blade which took this form naturally when crafted.',
@@ -1406,7 +1406,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 52,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Vulcamagnon (G)',
     description:
       'An ancient volcanic eruption in blade form. A great life force sleeps within.',
@@ -1431,7 +1431,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 53,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Vulcanvil (Y)',
     description:
       'A strangely-shaped blade which took this form naturally when crafted.',
@@ -1457,7 +1457,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 54,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Viking Hornsword',
     description:
       "A blade crafted from a giant horn, Ceadeus's pride. It shines with foes' blood.",
@@ -1480,7 +1480,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 55,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Ancharius Sword',
     description:
       "A blade once wielded by an ancient king. In its light dwells a sea-god's soul...",
@@ -1505,7 +1505,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 56,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Berserker Sword',
     description:
       "A very heavy blade that channels a Deviljho's power, reducing foes to splinters.",
@@ -1528,7 +1528,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 57,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Anguish (P)',
     description: 'A dark blade filled with the soul of a blood-thirsty wyvern.',
     attack: 960,
@@ -1552,7 +1552,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 58,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Anguish (G)',
     description: 'A dark blade filled with the soul of a blood-thirsty wyvern.',
     attack: 912,
@@ -1576,7 +1576,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 59,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Alatreon Great Sword',
     description:
       "An unsettling blade with a sinister light and the power to steal creatures' souls.",
@@ -1599,7 +1599,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 60,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Alatreon Revolution',
     description:
       'A blade of purple light. The bearer must cease being human and choose dragonhood.',
@@ -1624,7 +1624,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 61,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Proto Razor',
     description:
       'A traditional, poison-edged blade; a dangerous weapon in the right hands.',
@@ -1647,7 +1647,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 62,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Chrome Razor',
     description:
       'A strong, razor-sharpness edge (hence the name), this blade hides a secret poison.',
@@ -1672,7 +1672,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 63,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: "Lion's Bane",
     description:
       'The fang of the king of beasts. Its wielder gains hundredfold power.',
@@ -1694,7 +1694,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 64,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Rusted Great Sword',
     description:
       'A Great Sword with unrealized potential. It could perhaps be polished...',
@@ -1713,7 +1713,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 65,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Tarnished Great Swd',
     description:
       'A Great Sword with unrealized potential. It could perhaps be polished...',
@@ -1739,7 +1739,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 66,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Ancient Blade',
     description:
       'Beneath the rust lay a blade forged of metal that no modern smith can reproduce.',
@@ -1765,7 +1765,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 67,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Elder Monument',
     description:
       'Beneath the rust lay a blade forged of metal that no modern smith can reproduce.',
@@ -1790,7 +1790,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 68,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Worn Great Sword',
     description:
       'A Great Sword with unrealized potential. It could perhaps be restored...',
@@ -1809,7 +1809,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 69,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Weathered Grt Sword',
     description:
       'A Great Sword with unrealized potential. It could perhaps be restored...',
@@ -1835,7 +1835,7 @@ export const GreatSwords = Object.freeze<GreatSword[]>([
   },
   {
     id: 70,
-    type: WeaponType.GREAT_SWORD,
+    type: WeaponClass.GREAT_SWORD,
     name: 'Epitaph Blade',
     description:
       'A blade of unknown origins. It has an inscription, but what could it mean?',

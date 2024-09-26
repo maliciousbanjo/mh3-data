@@ -1,4 +1,4 @@
-import { Weapon, WeaponType } from '../types';
+import { Weapon, WeaponClass } from '../types';
 
 export type LanceAttack =
   | 'Unsheathe Attack'
@@ -12,4 +12,4 @@ export type LanceAttack =
   | 'Guard Attack'
   | 'Shield Bash';
 
-export type Lance = Weapon<WeaponType.LANCE>;
+export type Lance = Weapon<WeaponClass.LANCE>;

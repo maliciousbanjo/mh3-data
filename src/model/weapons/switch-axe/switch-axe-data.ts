@@ -1,10 +1,10 @@
-import { WeaponDamageProperties, WeaponType } from '../types';
+import { WeaponDamageProperties, WeaponClass } from '../types';
 import { SwitchAxe, SwitchAxeAttack } from './types';
 
 export const SwitchAxeDamageProperties = Object.freeze<
-  WeaponDamageProperties<WeaponType.SWITCH_AXE, SwitchAxeAttack>
+  WeaponDamageProperties<WeaponClass.SWITCH_AXE, SwitchAxeAttack>
 >({
-  type: WeaponType.SWITCH_AXE,
+  type: WeaponClass.SWITCH_AXE,
   classModifier: 5.4,
   attackGroups: [
     {
@@ -57,7 +57,7 @@ export const SwitchAxeDamageProperties = Object.freeze<
 export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   {
     id: 0,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Bone Axe',
     description:
       'The newest in weapons, a desert creation. Users must master both axe and sword.',
@@ -81,7 +81,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 1,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Bone Axe+',
     description:
       'The newest in weapons, a desert creation. Users must master both axe and sword.',
@@ -108,7 +108,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 2,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Assault Axe',
     description:
       'A versatile hunting axe. In Sword mode, it pumps paralyzing agents into targets.',
@@ -135,7 +135,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 3,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Assault Axe+',
     description:
       'A versatile hunting axe. In Sword mode, it pumps paralyzing agents into targets.',
@@ -162,7 +162,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 4,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Blitzkrieg (R)',
     description:
       'A versatile hunting axe. In Sword mode, it pumps paralyzing agents into targets.',
@@ -189,7 +189,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 5,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Bastion Blitz (P)',
     description:
       "A symbol of the brute wyvern's tenacity; no prey escapes domination.",
@@ -215,7 +215,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 6,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Blitzkrieg (B)',
     description:
       'A versatile hunting axe. In Sword mode, it pumps paralyzing agents into targets.',
@@ -242,7 +242,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 7,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Bolt Axe',
     description:
       "An axe that channels the Lagiacrus's power. With each slash, azure light blooms.",
@@ -274,7 +274,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 8,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Volt Axe (R)',
     description:
       "An axe that channels the Lagiacrus's power. With each slash, azure light blooms.",
@@ -301,7 +301,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 9,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Megavolt Axe (P)',
     description:
       "An axe that channels the Lagiacrus's power. With each slash, azure light blooms.",
@@ -327,7 +327,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 10,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Volt Axe (Y)',
     description:
       "An axe that channels the Lagiacrus's power. With each slash, azure light blooms.",
@@ -354,7 +354,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 11,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Megavolt Axe (G)',
     description:
       "An axe that channels the Lagiacrus's power. With each slash, azure light blooms.",
@@ -380,7 +380,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 12,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'High Bolt Axe',
     description:
       'An axe mantled in lightning. A weapon worthy of the Lord of the Seas.',
@@ -407,7 +407,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 13,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Thunderstrike (P)',
     description:
       'An axe mantled in lightning. A weapon worthy of the Lord of the Seas.',
@@ -433,7 +433,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 14,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Thunderstrike (G)',
     description:
       'An axe mantled in lightning. A weapon worthy of the Lord of the Seas.',
@@ -459,7 +459,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 15,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Fire Tempest',
     description:
       'A Switch Axe made with the flaming beak of the magma-dwelling Agnaktor.',
@@ -483,7 +483,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 16,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Flame Tempest',
     description:
       'A scarlet axe that houses an Agnaktor soul. Reduces prey to ash in a stroke.',
@@ -509,7 +509,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 17,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Amber Slash',
     description:
       'A lovely hunting axe made from the tri-color Barioth. Cold enough to freeze blood.',
@@ -533,7 +533,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 18,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Amber Slash+',
     description:
       'A lovely hunting axe made from the tri-color Barioth. Cold enough to freeze blood.',
@@ -560,7 +560,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 19,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Amber Hoarfrost',
     description:
       'An axe born in the permafrost that summons the north winds and heralds death.',
@@ -586,7 +586,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 20,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Inceadeus',
     description:
       'A legendary Switch Axe carved from a Ceadeus horn. It glows white from within.',
@@ -610,7 +610,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 21,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Inceadeus+',
     description:
       'A legendary Switch Axe carved from a Ceadeus horn. It glows white from within.',
@@ -637,7 +637,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 22,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Great Inceadeus',
     description:
       "Ceadeus's rage in weapon form. It can part the sea and rattle the earth.",
@@ -663,7 +663,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 23,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Demonbind',
     description:
       'A bulky hunting axe of Eastern design. sharpness enough to cleave wyvern scales.',
@@ -688,7 +688,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 24,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Great Demonbind (P)',
     description:
       'A mighty weapon for proven warriors. Modeled after an axe used by an Eastern king.',
@@ -715,7 +715,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 25,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Great Demonbind (G)',
     description:
       'A mighty weapon for proven warriors. Modeled after an axe used by an Eastern king.',
@@ -742,7 +742,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 26,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Rough Edge',
     description:
       'An axe made from ore mined in polar climes. Upgradeable in more ways than one.',
@@ -766,7 +766,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 27,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Tough Break (R)',
     description:
       'A stone axe made of ancient ore, and an embodiment of the unyielding human spirit.',
@@ -793,7 +793,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 28,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Soulbreaker (P)',
     description:
       'A weapon of stone housing an ancient soul. Eons have whetted it to a fine point.',
@@ -819,7 +819,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 29,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Tough Break (B)',
     description:
       'A stone axe made of ancient ore, and an embodiment of the unyielding human spirit.',
@@ -846,7 +846,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 30,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Soulbreaker (G)',
     description:
       'A weapon of stone housing an ancient soul. Eons have whetted it to a fine point.',
@@ -872,7 +872,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 31,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Tough Break (Y)',
     description:
       'A stone axe made of ancient ore, and an embodiment of the unyielding human spirit.',
@@ -899,7 +899,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 32,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Dark Switch Axe',
     description:
       'A dreadful Switch Axe shaped after an Alatreon horn, dark as the primordial dawn.',
@@ -923,7 +923,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 33,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Black Harvest',
     description:
       "A weapon for reaping souls, it heralds mankind's fall and the rise of the dragons.",
@@ -949,7 +949,7 @@ export const SwitchAxes = Object.freeze<SwitchAxe[]>([
   },
   {
     id: 34,
-    type: WeaponType.SWITCH_AXE,
+    type: WeaponClass.SWITCH_AXE,
     name: 'Sinister Saints',
     description:
       'Swaying between light and darkness, this troubled blade can work good or evil.',

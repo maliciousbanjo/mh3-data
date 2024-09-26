@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Weapon utils calculateDamage Great Sword 1`] = `
+exports[`Damage calculateDamage Great Sword 1`] = `
 [
   {
     "elementalDamage": 0.675,
@@ -11,7 +11,7 @@ exports[`Weapon utils calculateDamage Great Sword 1`] = `
 ]
 `;
 
-exports[`Weapon utils calculateDamage Hammer 1`] = `
+exports[`Damage calculateDamage Hammer 1`] = `
 [
   {
     "elementalDamage": 0.675,
@@ -28,7 +28,7 @@ exports[`Weapon utils calculateDamage Hammer 1`] = `
 ]
 `;
 
-exports[`Weapon utils calculateDamage Lance Cut hitzone 1`] = `
+exports[`Damage calculateDamage Lance Cut hitzone 1`] = `
 [
   {
     "elementalDamage": 2.025,
@@ -51,7 +51,7 @@ exports[`Weapon utils calculateDamage Lance Cut hitzone 1`] = `
 ]
 `;
 
-exports[`Weapon utils calculateDamage Lance Modified impact hitzone 1`] = `
+exports[`Damage calculateDamage Lance Modified impact hitzone 1`] = `
 [
   {
     "elementalDamage": 2.7,
@@ -74,7 +74,18 @@ exports[`Weapon utils calculateDamage Lance Modified impact hitzone 1`] = `
 ]
 `;
 
-exports[`Weapon utils calculateDamage Longsword Spirit Guage NONE 1`] = `
+exports[`Damage calculateDamage Longsword Deviljho Spirit Gauge RED 1`] = `
+[
+  {
+    "elementalDamage": 14.804999999999998,
+    "koDamage": undefined,
+    "rawDamage": 66.63384,
+    "totalDamage": 81,
+  },
+]
+`;
+
+exports[`Damage calculateDamage Longsword Spirit Gauge NONE 1`] = `
 [
   {
     "elementalDamage": 2.115,
@@ -85,7 +96,7 @@ exports[`Weapon utils calculateDamage Longsword Spirit Guage NONE 1`] = `
 ]
 `;
 
-exports[`Weapon utils calculateDamage Longsword Spirit Guage RED 1`] = `
+exports[`Damage calculateDamage Longsword Spirit Gauge RED 1`] = `
 [
   {
     "elementalDamage": 2.115,
@@ -96,7 +107,7 @@ exports[`Weapon utils calculateDamage Longsword Spirit Guage RED 1`] = `
 ]
 `;
 
-exports[`Weapon utils calculateDamage Longsword Spirit Guage WHITE 1`] = `
+exports[`Damage calculateDamage Longsword Spirit Gauge WHITE 1`] = `
 [
   {
     "elementalDamage": 2.115,
@@ -107,7 +118,7 @@ exports[`Weapon utils calculateDamage Longsword Spirit Guage WHITE 1`] = `
 ]
 `;
 
-exports[`Weapon utils calculateDamage Longsword Spirit Guage YELLOW 1`] = `
+exports[`Damage calculateDamage Longsword Spirit Gauge YELLOW 1`] = `
 [
   {
     "elementalDamage": 2.115,
@@ -118,7 +129,7 @@ exports[`Weapon utils calculateDamage Longsword Spirit Guage YELLOW 1`] = `
 ]
 `;
 
-exports[`Weapon utils calculateDamage Switch Axe Element phial 1`] = `
+exports[`Damage calculateDamage Switch Axe Element phial 1`] = `
 [
   {
     "elementalDamage": 2.0250000000000004,
@@ -129,7 +140,7 @@ exports[`Weapon utils calculateDamage Switch Axe Element phial 1`] = `
 ]
 `;
 
-exports[`Weapon utils calculateDamage Switch Axe Power phial 1`] = `
+exports[`Damage calculateDamage Switch Axe Power phial 1`] = `
 [
   {
     "elementalDamage": 3.54375,
@@ -140,7 +151,7 @@ exports[`Weapon utils calculateDamage Switch Axe Power phial 1`] = `
 ]
 `;
 
-exports[`Weapon utils calculateDamage Sword and Shield Cut attack 1`] = `
+exports[`Damage calculateDamage Sword and Shield Cut attack 1`] = `
 [
   {
     "elementalDamage": 1.6650000000000003,
@@ -151,7 +162,7 @@ exports[`Weapon utils calculateDamage Sword and Shield Cut attack 1`] = `
 ]
 `;
 
-exports[`Weapon utils calculateDamage Sword and Shield Impact attack 1`] = `
+exports[`Damage calculateDamage Sword and Shield Impact attack 1`] = `
 [
   {
     "elementalDamage": 1.6650000000000003,

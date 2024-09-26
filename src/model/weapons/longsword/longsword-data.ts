@@ -1,17 +1,17 @@
-import { WeaponDamageProperties, WeaponType } from '../types';
+import { WeaponDamageProperties, WeaponClass } from '../types';
 import { Longsword, LongswordAttack } from './types';
 
 export const LongswordDamageProperties = Object.freeze<
-  WeaponDamageProperties<WeaponType.LONGSWORD, LongswordAttack>
+  WeaponDamageProperties<WeaponClass.LONGSWORD, LongswordAttack>
 >({
-  type: WeaponType.LONGSWORD,
+  type: WeaponClass.LONGSWORD,
   classModifier: 3.3,
   attackGroups: [
     {
       name: 'default',
       attacks: [
         { name: 'Unsheathe Attack', hits: [{ type: 'cut', power: 0.28 }] },
-        { name: 'Step Stash', hits: [{ type: 'cut', power: 0.28 }] },
+        { name: 'Step Slash', hits: [{ type: 'cut', power: 0.28 }] },
         { name: 'Downward Slash', hits: [{ type: 'cut', power: 0.23 }] },
         { name: 'Stab', hits: [{ type: 'cut', power: 0.14 }] },
         { name: 'Upward Slash', hits: [{ type: 'cut', power: 0.18 }] },
@@ -39,7 +39,7 @@ export const LongswordDamageProperties = Object.freeze<
 export const Longswords = Object.freeze<Longsword[]>([
   {
     id: 0,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Thunderclap',
     description:
       'A blade made with Eastern methods. Blue-white sparks run down its blade.',
@@ -62,7 +62,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 1,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Thunderclap+',
     description:
       'A blade made with Eastern methods. Blue-white sparks run down its blade.',
@@ -88,7 +88,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 2,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: "Heaven's Thunder (R)",
     description:
       'A fulgurous blade forged by a master. Its thunderous blows can slay huge wyverns.',
@@ -113,7 +113,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 3,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: "Heaven's Thunder (Y)",
     description:
       'A fulgurous blade forged by a master. Its thunderous blows can slay huge wyverns.',
@@ -138,7 +138,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 4,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Ananta Boneblade',
     description:
       'A Long Sword coated in paralytic toxins that penetrate monster defenses.',
@@ -161,7 +161,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 5,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Ananta Boneblade+',
     description:
       'A Long Sword coated in paralytic toxins that penetrate monster defenses.',
@@ -187,7 +187,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 6,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Shadowbinder (P)',
     description:
       'A Long Sword that paralyzes monsters, a tactic Eastern hunters regard as improper.',
@@ -212,7 +212,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 7,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Shadowbinder (G)',
     description:
       'A Long Sword that paralyzes monsters, a tactic Eastern hunters regard as improper.',
@@ -237,7 +237,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 8,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Dancing Flames',
     description:
       "A refined blade of crimson flame. The heat it emits can vaporize a foe's blood.",
@@ -263,7 +263,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 9,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Dancing Hellfire',
     description:
       "A refined blade of crimson flame. The heat it emits can vaporize a foe's blood.",
@@ -288,7 +288,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 10,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Wyvern Blade "FIRE"',
     description:
       'Made from both Rathian and Rathalos parts, this blade channels both land and sky.',
@@ -311,7 +311,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 11,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Wyvern Blade "Flame"',
     description:
       'Made from both Rathian and Rathalos parts, this blade channels both land and sky.',
@@ -337,7 +337,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 12,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Wyvern Blade "Flare"',
     description:
       'A blade with the blood and soul of two wyverns. Crimson flames pour from the blade.',
@@ -362,7 +362,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 13,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Guan Dao',
     description:
       'A bizarre blade from the East. Its long hilt allows anyone to swing with force.',
@@ -386,7 +386,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 14,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Yan Yue Dao (P)',
     description:
       'In Eastern legend, a princess married a dragon and brought this blade back.',
@@ -412,7 +412,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 15,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Yan Yue Dao (G)',
     description:
       'In Eastern legend, a princess married a dragon and brought this blade back.',
@@ -438,7 +438,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 16,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Reaver "Cruelty"',
     description:
       'A living blade made from Deviljho meat and bone and possessing a ruthless bite.',
@@ -461,7 +461,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 17,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Reaver "Calamity"',
     description:
       'A blade of insanity. None are spared from its insatiable bloodlust.',
@@ -486,7 +486,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 18,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Dark Claw',
     description: 'A large, black scythe resembling Alatreon talons.',
     attack: 561,
@@ -508,7 +508,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 19,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Dark Claw "Demise"',
     description:
       'A demonic scythe that tempts its bearer towards dark, monstrous deeds.',
@@ -533,7 +533,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 20,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Tenebra',
     description:
       'A dark blade that pulses with the lifeforce it saps from any who wield it...',
@@ -556,7 +556,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 21,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Tenebra D',
     description:
       'A dark blade that pulses with the lifeforce it saps from any who wield it...',
@@ -581,7 +581,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 22,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Rising Soul',
     description:
       "Some say lightning fills the soul of any who wield this, the thunder god's own blade.",
@@ -603,7 +603,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 23,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Barbarian Blade',
     description:
       'A masterful blade forged in a faraway land and tested in many a heated battle.',
@@ -621,7 +621,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 24,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Barbarian Blade+',
     description:
       'A masterful blade forged in a faraway land and tested in many a heated battle.',
@@ -647,7 +647,7 @@ export const Longswords = Object.freeze<Longsword[]>([
   },
   {
     id: 25,
-    type: WeaponType.LONGSWORD,
+    type: WeaponClass.LONGSWORD,
     name: 'Barbarian "Sharq" (P)',
     description:
       'One of the "three great blades." It snaps from the sheath like a hungry Sharq.',

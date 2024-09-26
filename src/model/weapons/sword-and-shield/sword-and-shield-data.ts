@@ -1,10 +1,10 @@
-import { WeaponDamageProperties, WeaponType } from '../types';
+import { WeaponDamageProperties, WeaponClass } from '../types';
 import { SwordAndShield, SwordAndShieldAttack } from './types';
 
 export const SwordAndShieldDamageProperties = Object.freeze<
-  WeaponDamageProperties<WeaponType.SWORD_AND_SHIELD, SwordAndShieldAttack>
+  WeaponDamageProperties<WeaponClass.SWORD_AND_SHIELD, SwordAndShieldAttack>
 >({
-  type: WeaponType.SWORD_AND_SHIELD,
+  type: WeaponClass.SWORD_AND_SHIELD,
   classModifier: 1.4,
   attackGroups: [
     {
@@ -67,7 +67,7 @@ export const SwordAndShieldDamageProperties = Object.freeze<
 export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   {
     id: 0,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: "Hunter's Knife",
     description:
       'A one-handed, easy-to-wield Sword. Not too powerful; combo attacks are its forte.',
@@ -86,7 +86,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 1,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: "Hunter's Knife+",
     description:
       'A one-handed, easy-to-wield Sword. Not too powerful; combo attacks are its forte.',
@@ -105,7 +105,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 2,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: "Hunter's Dagger",
     description:
       'An iron Sword with a curved, durable blade. It can be upgraded further as well.',
@@ -130,7 +130,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 3,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: "Assassin's Dagger",
     description:
       'An iron Sword with a curved, durable blade. It can be upgraded further as well.',
@@ -161,7 +161,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 4,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Shadow Saber',
     description:
       "A royal knight's weapon, adapted for hunting. Handle the poison blade with care.",
@@ -187,7 +187,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 5,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Shadow Saber+',
     description:
       "A royal knight's weapon, adapted for hunting. Handle the poison blade with care.",
@@ -213,7 +213,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 6,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Toxic Fang',
     description:
       'A brutal Sword infused with poison. It causes rot and decay on contact.',
@@ -238,7 +238,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 7,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Icicle Spike',
     description:
       'A Sword of extreme cold. The blade can pierce shells to freeze prey from the inside.',
@@ -264,7 +264,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 8,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Icicle Spike+',
     description:
       'A Sword of extreme cold. The blade can pierce shells to freeze prey from the inside.',
@@ -290,7 +290,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 9,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Nardebosche',
     description:
       'A Sword of Barioth material that can freeze flames, earth, water and even air.',
@@ -315,7 +315,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 10,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: "Soldier's Dagger",
     description:
       'A light Sword crafted from Jaggi materials. Easy to use and widely available.',
@@ -341,7 +341,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 11,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: "Commander's Dagger",
     description:
       'A light Sword crafted from Jaggi materials. Easy to use and widely available.',
@@ -367,7 +367,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 12,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Hydra Knife',
     description:
       'A very easy-to-use Sword made from Great Jaggi skin. It really grows on you.',
@@ -393,7 +393,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 13,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Deadly Knife',
     description:
       'A very easy-to-use Sword made from Great Jaggi skin. It really grows on you.',
@@ -418,7 +418,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 14,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Hypnos Knife',
     description:
       'Clever hunters prefer this Sword, which uses sedatives extracted from a Baggi.',
@@ -444,7 +444,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 15,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Morpheus Knife',
     description:
       "This Sword's prey succumbs to a quiet slumber, followed by a violent awakening.",
@@ -469,7 +469,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 16,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Azi Dahaka',
     description:
       "A Sword made from Gobul's tail barbs. Contains a strong nerve toxin.",
@@ -495,7 +495,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 17,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Azi Dahaka+',
     description:
       "A Sword made from Gobul's tail barbs. Contains a strong nerve toxin.",
@@ -521,7 +521,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 18,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Almighty Dahaka (P)',
     description:
       "A paralytic Sword. Once monsters see the crest on this blade, it's too late.",
@@ -546,7 +546,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 19,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Bone Kris',
     description:
       'A simple and dependable bone dagger. The shield can also be used for attacking.',
@@ -565,7 +565,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 20,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Bone Kris+',
     description:
       'A simple and dependable bone dagger. The shield can also be used for attacking.',
@@ -584,7 +584,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 21,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: "Ludroth's Nail",
     description:
       'A Sword made using Ludroth skin. It begs for further upgrades.',
@@ -615,7 +615,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 22,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Royal Claw',
     description:
       'A Sword made from Ludroth materials. Its sprays of water mesmerize monsters.',
@@ -641,7 +641,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 23,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Royal Claw+',
     description:
       'A Sword made from Ludroth materials. Its sprays of water mesmerize monsters.',
@@ -667,7 +667,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 24,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Royal Ludroth Claw',
     description:
       'A Sword covered in an aqueous membrane. Uses water to cut down monsters.',
@@ -692,7 +692,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 25,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Carapace Mace',
     description:
       "A grim, cudgel-like Sword made from a Barroth's shell. It can shatter bone.",
@@ -718,7 +718,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 26,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Carapace Mace+',
     description:
       "A grim, cudgel-like Sword made from a Barroth's shell. It can shatter bone.",
@@ -744,7 +744,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 27,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Barroth Club',
     description:
       'A monster carapace further condensed to produce a sharpness and destructive edge.',
@@ -769,7 +769,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 28,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Gigas Club',
     description:
       'A blunt weapon whose heavy blows hit harder than most Swords.',
@@ -796,7 +796,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 29,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Gigas Crusher',
     description: 'A blunt weapn whose heavy blows hit harder than most Swords.',
     attack: 336,
@@ -821,7 +821,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 30,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Blood Tabar',
     description:
       'A double-edged axe with a sharpness, poisoned blade. Extremely lethal.',
@@ -847,7 +847,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 31,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Plague Tabar',
     description:
       'A double-edged axe with a sharpness, poisoned blade. Extremely lethal.',
@@ -872,7 +872,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 32,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Bone Tomahawk',
     description:
       'A handaxe made from Qurupeco materials, modeled after an axe used by Western hunters.',
@@ -903,7 +903,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 33,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Qurupeco Chopper',
     description:
       'A handaxe made from Qurupeco materials, modeled after an axe used by Western hunters.',
@@ -929,7 +929,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 34,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Djinn',
     description:
       'A Sword with a red-hot blade wrapped in the scorching flames of a wyvern.',
@@ -955,7 +955,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 35,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Blazing Falchion',
     description:
       'A stronger form of the Djinn, made from incendiary materials. As hot as magma.',
@@ -980,7 +980,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 36,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Lagia Sword',
     description:
       'A Thunder Sword. Through its blade flows lightning to multiply the pain.',
@@ -1006,7 +1006,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 37,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Storm Sword (R)',
     description:
       'A Thunder Sword. Through its blade flows lightning to multiply the pain.',
@@ -1032,7 +1032,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 38,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Maelstrom Sword (P)',
     description:
       'A Thunder Sword. Through its blade flows lightning to multiply the pain.',
@@ -1057,7 +1057,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 39,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Storm Sword (Y)',
     description:
       'A Thunder Sword. Through its blade flows lightning to multiply the pain.',
@@ -1083,7 +1083,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 40,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Maelstrom Sword (G)',
     description:
       'A Thunder Sword. Through its blade flows lightning to multiply the pain.',
@@ -1108,7 +1108,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 41,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'High Lagia Sword',
     description:
       'An azure Sword charged with Lightning; its bearer becomes a raging maelstrom.',
@@ -1134,7 +1134,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 42,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Takemikazuchi (G)',
     description:
       'An azure Sword charged with Lightning; its bearer becomes a raging maelstrom.',
@@ -1159,7 +1159,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 43,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Tusk Gear',
     description:
       'A Sword made from ore mined in polar climes. Upgradeable in more ways than one.',
@@ -1182,7 +1182,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 44,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Fossil Gear (R)',
     description:
       "A Sword and shield that, when united, resemble a wyvern's head.",
@@ -1208,7 +1208,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 45,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: "Skull's Wrath (P)",
     description:
       'A Sword of ancient memories. The wyvern bares its teeth, sharpnessened over centuries.',
@@ -1233,7 +1233,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 46,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Fossil Gear (B)',
     description:
       "A Sword and shield that, when united, resemble a wyvern's head.",
@@ -1259,7 +1259,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 47,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: "Skull's Wrath (G)",
     description:
       'A Sword of ancient memories. The wyvern bares its teeth, sharpnessened over centuries.',
@@ -1284,7 +1284,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 48,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Fossil Gear (Y)',
     description:
       "A Sword and shield that, when united, resemble a wyvern's head.",
@@ -1310,7 +1310,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 49,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Sea Striker',
     description:
       'A Sword made from Ceadeus horns. They say only a hero can wield it...',
@@ -1333,7 +1333,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 50,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Abyssal Striker',
     description:
       "A symbol of the Ceadeus's pride. It can fell 10,000 monsters in a single blow.",
@@ -1358,7 +1358,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 51,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Jhen Kodachi',
     description:
       'An Eastern Sword used to cut down enemies, armor and all. Marvelously sharpness.',
@@ -1381,7 +1381,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 52,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Calm Sands (P)',
     description:
       'A Sword spoken of in legend. A god of war was said to use it to slay countless foes.',
@@ -1406,7 +1406,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 53,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Calm Sands (G)',
     description:
       'A Sword spoken of in legend. A god of war was said to use it to slay countless foes.',
@@ -1431,7 +1431,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 54,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Alatreon Sword',
     description:
       'An Alatreon horn Sword. They say its holder can hear a mysterious voice...',
@@ -1454,7 +1454,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 55,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Alatreon Star',
     description:
       'A bewitching Sword whose holder is lured into darkness by a ghostly voice.',
@@ -1479,7 +1479,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 56,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: "Warrior's Sword",
     description:
       'A traditional-looking Sword whose abilities put it far ahead of the pack.',
@@ -1502,7 +1502,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 57,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Odyssey',
     description:
       'A Sword with Water crafted into it. Given to a brave adventurer for great acts.',
@@ -1527,7 +1527,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 58,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Chak Chak',
     description:
       'A weapon used by foreign hunters. Notable for its strange shape and colors.',
@@ -1551,7 +1551,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 59,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Chak Chak+',
     description:
       'A weapon used by foreign hunters. Notable for its strange shape and colors.',
@@ -1577,7 +1577,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 60,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Wagga Wagga',
     description:
       'A rare foreign weapon that, when paired with a shield, can work as a Sword.',
@@ -1602,7 +1602,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 61,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Rusted Sword',
     description:
       'A Sword with unrealized potential. It could perhaps be polished...',
@@ -1621,7 +1621,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 62,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Tarnished Sword',
     description:
       'A Sword with unrealized potential. It could perhaps be polished...',
@@ -1647,7 +1647,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 63,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Eternal Strife',
     description:
       'The ultimate dragon slayer, this Sword was hammered by blacksmiths for 108 days.',
@@ -1673,7 +1673,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 64,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Eternal Hate',
     description:
       'The ultimate dragon slayer, this Sword was hammered by blacksmiths for 108 days.',
@@ -1698,7 +1698,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 65,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Worn Sword',
     description:
       'A Sword with unrealized potential. It could perhaps be restored.',
@@ -1717,7 +1717,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 66,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Weathered Sword',
     description:
       'A Sword with unrealized potential. It could perhaps be restored.',
@@ -1743,7 +1743,7 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
   },
   {
     id: 67,
-    type: WeaponType.SWORD_AND_SHIELD,
+    type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Divine Exodus',
     description:
       "A strange Sword. They say the polished shield shows one's future self.",

@@ -1,10 +1,10 @@
-import { WeaponDamageProperties, WeaponType } from '../types';
+import { WeaponDamageProperties, WeaponClass } from '../types';
 import { Hammer, HammerAttack } from './types';
 
 export const HammerDamageProperties = Object.freeze<
-  WeaponDamageProperties<WeaponType.HAMMER, HammerAttack>
+  WeaponDamageProperties<WeaponClass.HAMMER, HammerAttack>
 >({
-  type: WeaponType.HAMMER,
+  type: WeaponClass.HAMMER,
   classModifier: 5.2,
   attackGroups: [
     {
@@ -72,7 +72,7 @@ export const HammerDamageProperties = Object.freeze<
 export const Hammers = Object.freeze<Hammer[]>([
   {
     id: 0,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Iron Hammer',
     description:
       'A Hammer of tremendous power. Its heavy blows wear down and knock out prey.',
@@ -91,7 +91,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 1,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Iron Hammer+',
     description:
       'A Hammer of tremendous power. Its heavy blows wear down and knock out prey.',
@@ -116,7 +116,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 2,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'War Hammer',
     description:
       'An Iron Hammer with a sharpness tip to increase deadliness. An easy weapon to obtain.',
@@ -142,7 +142,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 3,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'War Hammer+',
     description:
       'An Iron Hammer with a sharpness tip to increase deadliness. An easy weapon to obtain.',
@@ -168,7 +168,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 4,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'War Mace',
     description:
       'An upgraded version of the War Hammer. Similar in appearance, but stronger.',
@@ -199,7 +199,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 5,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Iron Striker',
     description:
       'A giant, super-powerful Hammer that is one incredible hunk of metal.',
@@ -225,7 +225,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 6,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Iron Impact',
     description:
       'A heavy Hammer made from hard metal. One blow crushes bones and scales alike.',
@@ -250,7 +250,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 7,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Gun Hammer',
     description:
       'A testament to modern tech. Powder in a revolving magazine explodes on impact.',
@@ -276,7 +276,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 8,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Gun Hammer+',
     description:
       'A testament to modern tech. Powder in a revolving magazine explodes on impact.',
@@ -302,7 +302,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 9,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Deadeye Revolver',
     description:
       'A powerful Hammer for the true seeker of freedom. No walls can hold its wielder.',
@@ -327,7 +327,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 10,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Vortex Hammer',
     description:
       'An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.',
@@ -353,7 +353,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 11,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Vortical Hammer (R)',
     description:
       'An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.',
@@ -379,7 +379,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 12,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Vortiginous Hmr (P)',
     description:
       'An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.',
@@ -404,7 +404,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 13,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Vortical Hammer (Y)',
     description:
       'An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.',
@@ -430,7 +430,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 14,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Vortiginous Hmr (G)',
     description:
       'An electric Hammer inspired by the whirlpools Lagiacrus use to destroy prey.',
@@ -455,7 +455,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 15,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'High Vortex Hammer',
     description:
       'An electric Hammer that resembles a giant whirlpool and devours all life.',
@@ -481,7 +481,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 16,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Vortastrophe (G)',
     description:
       'An electric Hammer that resembles a giant whirlpool and devours all life.',
@@ -506,7 +506,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 17,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Bone Hammer',
     description:
       'A Hammer crafted from bone, with powerful Windup Smashes but no means of blocking.',
@@ -528,7 +528,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 18,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Bone Hammer+',
     description:
       'A Hammer crafted from bone, with powerful Windup Smashes but no means of blocking.',
@@ -547,7 +547,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 19,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Bone Bludgeon',
     description:
       'A rough-hewn Hammer of high-quality bone. Grows handier with use.',
@@ -573,7 +573,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 20,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Bone Bludgeon+',
     description:
       'A rough-hewn Hammer of high-quality bone. Grows handier with use.',
@@ -598,7 +598,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 21,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Ludroth Bone Mace',
     description:
       'A Hammer covered in Ludroth skin. The bone construction makes it light and sturdy.',
@@ -624,7 +624,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 22,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Ludroth Bone Maul',
     description:
       'A Hammer covered in Ludroth skin. The bone construction makes it light and sturdy.',
@@ -655,7 +655,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 23,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Ludroth Splashhammer',
     description:
       'A hammer of Ludroth sponge. The water inside explodes onto the target on impact.',
@@ -681,7 +681,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 24,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Vodyanoy Hammer',
     description:
       'A hammer of Ludroth sponge. The water inside explodes onto the target on impact.',
@@ -707,7 +707,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 25,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Fang Hammer "Echo"',
     description:
       'A Hammer made from a Jhen Mohran fang. Peerless power and durability.',
@@ -733,7 +733,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 26,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Fang Hammer "Ruin"',
     description:
       'A Hammer made from a Jhen Mohran fang. Peerless power and durability.',
@@ -759,7 +759,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 27,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Jhen Mohran Hammer',
     description:
       'A sacred item that summons the waters to improve the harvest and save the land.',
@@ -784,7 +784,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 28,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Carapace Hammer',
     description:
       'A Hammer resembling Barroth head armor. Strong enough to crush steel.',
@@ -811,7 +811,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 29,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Carapace Hammer+',
     description:
       'A Hammer resembling Barroth head armor. Strong enough to crush steel.',
@@ -838,7 +838,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 30,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Barroth Hammer',
     description:
       'A Hammer forged from a tough shell. Forget about being delicate; just swing away!',
@@ -864,7 +864,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 31,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Brazenclout',
     description:
       "A Hammer that awakens the earth's rage. Heaviest and hardest of all Hammers.",
@@ -890,7 +890,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 32,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Crimsonclout',
     description:
       "A Hammer that awakens the earth's rage. Heaviest and hardest of all Hammers.",
@@ -916,7 +916,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 33,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Gigas Hammer',
     description:
       'A bulky Hammer made from the bulky Uragaan. Requires great strength to wield.',
@@ -941,7 +941,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 34,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Plume Flint',
     description:
       'A Hammer that uses a built-in flint mechanism to expel flames on impact.',
@@ -964,7 +964,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 35,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Peco Flint',
     description:
       'A Hammer that uses a built-in flint mechanism to expel flames on impact.',
@@ -990,7 +990,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 36,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Red Bludgeon',
     description:
       'A superb article made from a Rathalos head. Only the bravest can wield it.',
@@ -1016,7 +1016,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 37,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Red Bludgeon+',
     description:
       'A superb article made from a Rathalos head. Only the bravest can wield it.',
@@ -1042,7 +1042,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 38,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Huracan Hammer (P)',
     description:
       'A Hammer of raging fire containing the unruly spirit of Rathalos.',
@@ -1067,7 +1067,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 39,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Numbingbird',
     description:
       'A lovely Hammer wreathed in a plume of feathers that conceals paralyzing thorns.',
@@ -1093,7 +1093,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 40,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Paralykeet',
     description:
       'A lovely Hammer wreathed in a plume of feathers that conceals paralyzing thorns.',
@@ -1119,7 +1119,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 41,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Alluring Lotus',
     description:
       'A beautiful Hammer like a lethal flower; it paralyzes prey with its thorns.',
@@ -1144,7 +1144,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 42,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Gaiasp',
     description:
       'A Hammer made from ore mined in polar climes. Upgradeable in more ways than one.',
@@ -1167,7 +1167,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 43,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Gaiarch (R)',
     description:
       'A Hammer overflowing with history, imbued with the soul of an ancient wyvern.',
@@ -1193,7 +1193,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 44,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Great Gaiarch (P)',
     description:
       "A Hammer sealed within the earth long ago. It pulsates with a wyvern's life force.",
@@ -1218,7 +1218,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 45,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Gaiarch (B)',
     description:
       'A Hammer overflowing with history, imbued with the soul of an ancient wyvern.',
@@ -1244,7 +1244,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 46,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Great Gaiarch (G)',
     description:
       "A Hammer sealed within the earth long ago. It pulsates with a wyvern's life force.",
@@ -1269,7 +1269,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 47,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Gaiarch (Y)',
     description:
       'A Hammer overflowing with history, imbued with the soul of an ancient wyvern.',
@@ -1295,7 +1295,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 48,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: "Devil's Due",
     description:
       "This Hammer, oozing with a Deviljho's power, hungers for living sacrifices.",
@@ -1318,7 +1318,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 49,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: "Devil's Crush (P)",
     description:
       'A large Hammer containing the savage, inexhaustiable energy of the Deviljho.',
@@ -1343,7 +1343,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 50,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: "Devil's Crush (G)",
     description:
       'A large Hammer containing the savage, inexhaustiable energy of the Deviljho.',
@@ -1368,7 +1368,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 51,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Alatreon Hammer',
     description:
       'A Hammer made from Alatreon talons, it protects dragons and destroys humans.',
@@ -1391,7 +1391,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 52,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Alatreon Metamorph',
     description:
       "A Hammer of madness. Its soul-sucking light can consume the bearer's identity.",
@@ -1416,7 +1416,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 53,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Kurogane',
     description:
       'A simple-looking Hammer with paralyzing powers. Few know how to craft it.',
@@ -1439,7 +1439,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 54,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Iron Devil',
     description:
       'Long ago, before Hammers were popular in use, an old hunter wielded this weapon.',
@@ -1464,7 +1464,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 55,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Rusted Hammer',
     description:
       'A Hammer with unrealized potential. It could perhaps be polished...',
@@ -1483,7 +1483,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 56,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Tarnished Hammer',
     description:
       'A Hammer with unrealized potential. It could perhaps be polished...',
@@ -1509,7 +1509,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 57,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Breath Core Hammer',
     description:
       "An ancient military Hammer, restored. Its inner core of dragon's breath still burns.",
@@ -1535,7 +1535,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 58,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Lava Core Hammer',
     description:
       "An ancient military Hammer, restored. Its inner core of dragon's breath still burns.",
@@ -1560,7 +1560,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 59,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Worn Hammer',
     description:
       'A Hammer with unrealized potential. It could perhaps be restored...',
@@ -1579,7 +1579,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 60,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Weathered Hammer',
     description:
       'A Hammer with unrealized potential. It could perhaps be restored...',
@@ -1605,7 +1605,7 @@ export const Hammers = Object.freeze<Hammer[]>([
   },
   {
     id: 61,
-    type: WeaponType.HAMMER,
+    type: WeaponClass.HAMMER,
     name: 'Pulsating Core',
     description:
       'A Hammer from a lost civilization that crushes targets using powerful vibrations.',

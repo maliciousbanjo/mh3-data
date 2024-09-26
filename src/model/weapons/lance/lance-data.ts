@@ -1,10 +1,10 @@
-import { WeaponDamageProperties, WeaponType } from '../types';
+import { WeaponDamageProperties, WeaponClass } from '../types';
 import { Lance, LanceAttack } from './types';
 
 export const LanceDamageProperties = Object.freeze<
-  WeaponDamageProperties<WeaponType.LANCE, LanceAttack>
+  WeaponDamageProperties<WeaponClass.LANCE, LanceAttack>
 >({
-  type: WeaponType.LANCE,
+  type: WeaponClass.LANCE,
   classModifier: 2.3,
   attackGroups: [
     {
@@ -51,7 +51,7 @@ export const LanceDamageProperties = Object.freeze<
 export const Lances = Object.freeze<Lance[]>([
   {
     id: 0,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Iron Lance',
     description:
       'A basic Lance for beginning hunters. Provides all-round defense and offense.',
@@ -70,7 +70,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 1,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Iron Lance+',
     description:
       'A basic Lance for beginning hunters. Provides all-round defense and offense.',
@@ -89,7 +89,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 2,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Thane Lance',
     description:
       'A large Lance forged of hard ore. Traditionally used as an official arm by knights.',
@@ -115,7 +115,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 3,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Knight Lance',
     description:
       'A large Lance forged of hard ore. Traditionally used as an official arm by knights.',
@@ -146,7 +146,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 4,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Rampart',
     description:
       'A Lance given to a battle-hardened knight. Notable for its large shield.',
@@ -172,7 +172,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 5,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Rampart+',
     description:
       'A Lance given to a battle-hardened knight. Notable for its large shield.',
@@ -199,7 +199,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 6,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Babel Spear',
     description:
       'A golden Lance as stately as its tower namesake with both good offense and defense.',
@@ -226,7 +226,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 7,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Babel Spear+',
     description:
       'A golden Lance as stately as its tower namesake with both good offense and defense.',
@@ -253,7 +253,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 8,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Elder Babel Spr (R)',
     description:
       'Lance wielded by a knight of old against the gods in an attempt to protect mankind.',
@@ -279,7 +279,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 9,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Tusk Lance',
     description:
       'An icy Lance made from a Barioth tusk. Cold enough to freeze vapor in the air.',
@@ -305,7 +305,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 10,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Tusk Lance+',
     description:
       'An icy Lance made from a Barioth tusk. Cold enough to freeze vapor in the air.',
@@ -331,7 +331,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 11,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Sabertooth (G)',
     description:
       'An icy Lance from a frozen land. sharpness and cold, just like the Tundra.',
@@ -356,7 +356,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 12,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Acrus Lance',
     description:
       'A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.',
@@ -382,7 +382,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 13,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Doris Spear (R)',
     description:
       'A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.',
@@ -408,7 +408,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 14,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Doris Fellspear (P)',
     description:
       'A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.',
@@ -433,7 +433,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 15,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Doris Spear (Y)',
     description:
       'A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.',
@@ -459,7 +459,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 16,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Doris Fellspear (G)',
     description:
       'A fearsome Lance made from Lagiacrus materials. Jolts prey with electricity.',
@@ -484,7 +484,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 17,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'High Acrus Lance',
     description:
       "Lagiacrus' lightning in Lance form. Those it touches are reduced to sea foam.",
@@ -510,7 +510,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 18,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Amphitrite (P)',
     description:
       "Lagiacrus' lightning in Lance form. Those it touches are reduced to sea foam.",
@@ -535,7 +535,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 19,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Bone Lance',
     description:
       'A Lance notable for its exceptional blocking and Finishing Blow.',
@@ -557,7 +557,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 20,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Bone Lance+',
     description:
       'A Lance notable for its exceptional blocking and Finishing Blow.',
@@ -582,7 +582,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 21,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Ploshasta',
     description:
       'A Lance made from Rhenoplos parts. Pairs good Defense with a strong Dash Attack.',
@@ -608,7 +608,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 22,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Rhenohasta',
     description:
       'A Lance made from Rhenoplos parts. Pairs good Defense with a strong Dash Attack.',
@@ -639,7 +639,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 23,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Azure Crest',
     description:
       'A Lance made from Baggi materials. The tip contains tranquilizing fluid.',
@@ -665,7 +665,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 24,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Azure Crest+',
     description:
       'A Lance made from Baggi materials. The tip contains tranquilizing fluid.',
@@ -691,7 +691,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 25,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Great Azure',
     description:
       'A Lance that gives prey a few moments of rest followed by an eternity of slumber.',
@@ -716,7 +716,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 26,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Rugged Lance',
     description:
       'A Lance as solid as a Barroth. Better for sweeping than thrusting.',
@@ -742,7 +742,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 27,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Rugged Lance+',
     description:
       'A Lance as solid as a Barroth. Better for sweeping than thrusting.',
@@ -767,7 +767,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 28,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Diablos Lance',
     description:
       'A Lance made from the thick, sharpness horn of the Diablos, the dignified desert king.',
@@ -793,7 +793,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 29,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Diablos Spear',
     description:
       'A Lance holding the spirit of the king of the desert. It can pierce anything.',
@@ -818,7 +818,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 30,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Spiral Heat',
     description:
       'A Lance made from the beak of the Agnaktor. Capable of piercing solid rock.',
@@ -844,7 +844,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 31,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Agnaktor Firelance',
     description:
       'A Lance of crimson flame. Its fiery whirlwinds turn everything to ash.',
@@ -869,7 +869,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 32,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Gobulu Muruka',
     description:
       'A Lance made from Gobul spines. Paralyzes its prey with neurotoxins.',
@@ -895,7 +895,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 33,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Gobulu Muruka+',
     description:
       'A Lance made from Gobul spines. Paralyzes its prey with neurotoxins.',
@@ -921,7 +921,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 34,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Gobulu Muraaka',
     description:
       'A Lance with the power to paralyze the bodies of monsters it wounds.',
@@ -946,7 +946,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 35,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Ludroth Bone Spear',
     description:
       'A drill-like shape enhances the piercing power of this Lance made of Ludroth bone.',
@@ -972,7 +972,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 36,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Spiral Lance',
     description:
       'A Water-filled Lance made of Royal Ludroth bone. Shoots pressurized water into prey.',
@@ -1003,7 +1003,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 37,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Spiral Lance+',
     description:
       'A Water-filled Lance made of Royal Ludroth bone. Shoots pressurized water into prey.',
@@ -1029,7 +1029,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 38,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Spiral Splash (B)',
     description:
       'A Royal Ludroth Lance that resembles a waterspout. Hits prey with a deluge of blows.',
@@ -1054,7 +1054,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 39,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Spiral Splash (G)',
     description:
       'A Royal Ludroth Lance that resembles a waterspout. Hits prey with a deluge of blows.',
@@ -1079,7 +1079,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 40,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Shadow Javelin',
     description:
       'A Lance made with the toxins of the Gigginox. Violently poisons any monster it hits.',
@@ -1105,7 +1105,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 41,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Toxic Javelin',
     description:
       'A Lance with a poisoned tip. A knowledge of poison is required to use it safely.',
@@ -1130,7 +1130,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 42,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Blue Crater',
     description:
       'A Lance made from ore mined in polar climes. Upgradeable in more ways than one.',
@@ -1153,7 +1153,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 43,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Smalt Crater (R)',
     description:
       'A Lance whose ore holds ancient memories. Impressive in its natural greatness.',
@@ -1179,7 +1179,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 44,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Doom Crown (P)',
     description:
       'An ancient stone Lance whose thrusts are as unstoppable as the march of time.',
@@ -1204,7 +1204,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 45,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Smalt Crater (B)',
     description:
       'A Lance whose ore holds ancient memories. Impressive in its natural greatness.',
@@ -1230,7 +1230,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 46,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Doom Crown (G)',
     description:
       'An ancient stone Lance whose thrusts are as unstoppable as the march of time.',
@@ -1255,7 +1255,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 47,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Smalt Crater (Y)',
     description:
       'A Lance whose ore holds ancient memories. Impressive in its natural greatness.',
@@ -1281,7 +1281,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 48,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Grief Lance',
     description:
       'The muscular force of a Deviljho has been channeled into this Lance.',
@@ -1304,7 +1304,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 49,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Fiendish Tower (P)',
     description:
       "This Lance channels a Deviljho's power to split dragon scales like steel.",
@@ -1329,7 +1329,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 50,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Fiendish Tower (G)',
     description:
       "This Lance channels a Deviljho's power to split dragon scales like steel.",
@@ -1354,7 +1354,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 51,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Alatreon Lance',
     description:
       "A Lance fashioned after the Alatreon's horns. Some say it's a key to another world.",
@@ -1377,7 +1377,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 52,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Alatreon Gleam',
     description:
       'A terrible Lance that issues a dim light. Owners are said to go missing, or worse...',
@@ -1402,7 +1402,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 53,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: "Warrior's Lance",
     description:
       'An ordinary-looking Lance that, with continued use, outranks many others.',
@@ -1425,7 +1425,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 54,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Millennium',
     description:
       'A Lance carried by a knight who faced certain death to rescue his princess.',
@@ -1450,7 +1450,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 55,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Sharq Attack',
     description:
       "Depicts the terror of Moga's shores. Just watch out for other hunters' harpoons!",
@@ -1472,7 +1472,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 56,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'ML001: Baltzenger',
     description:
       'Prototype of a weapon being developed in a distant land, for now it works as a Lance.',
@@ -1495,7 +1495,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 57,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Banderlance "Byakko"',
     description:
       'Prototype of a weapon being developed in a distance land, for now it works as a Lance.',
@@ -1520,7 +1520,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 58,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Rusted Lance',
     description:
       'A Lance with unrealized potential. It could perhaps be polished...',
@@ -1539,7 +1539,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 59,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Tarnished Lance',
     description:
       'A Lance with unrealized potential. It could perhaps be polished...',
@@ -1565,7 +1565,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 60,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Undertaker',
     description:
       'A mechanical spear of ancient metal. No modern smith can restore its tip.',
@@ -1591,7 +1591,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 61,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'High Undertaker',
     description:
       'A mechanical spear of ancient metal. No modern smith can restore its tip.',
@@ -1616,7 +1616,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 62,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Worn Spear',
     description:
       'A Lance with unrealized potential. Perhaps it could be restored...',
@@ -1635,7 +1635,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 63,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Weathered Spear',
     description:
       'A Lance with unrealized potential. Perhaps it could be restored...',
@@ -1661,7 +1661,7 @@ export const Lances = Object.freeze<Lance[]>([
   },
   {
     id: 64,
-    type: WeaponType.LANCE,
+    type: WeaponClass.LANCE,
     name: 'Skyscraper',
     description:
       'An ancient Lance discovered unused. It towers high, as if to pierce the heavens.',

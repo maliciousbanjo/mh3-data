@@ -1,4 +1,4 @@
-import { Weapon, WeaponType } from '../types';
+import { Weapon, WeaponClass } from '../types';
 
 export type SwordAndShieldAttack =
   // land attacks
@@ -28,4 +28,4 @@ export interface SwordAndShieldSpecialMultiplierArgs {
   mode: SwordAndShieldAttackMode;
 }
 
-export type SwordAndShield = Weapon<WeaponType.SWORD_AND_SHIELD>;
+export type SwordAndShield = Weapon<WeaponClass.SWORD_AND_SHIELD>;

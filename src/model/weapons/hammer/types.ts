@@ -1,4 +1,4 @@
-import { Weapon, WeaponType } from '../types';
+import { Weapon, WeaponClass } from '../types';
 
 export type HammerAttack =
   | 'Unsheathe Attack'
@@ -12,4 +12,4 @@ export type HammerAttack =
   | 'Spin Golfswing'
   | 'Spin Finisher';
 
-export type Hammer = Weapon<WeaponType.HAMMER>;
+export type Hammer = Weapon<WeaponClass.HAMMER>;

@@ -1,4 +1,4 @@
-import { Weapon, WeaponType } from '../types';
+import { Weapon, WeaponClass } from '../types';
 
 export type SwitchAxeAttack =
   // Axe mode
@@ -27,7 +27,7 @@ export interface SwitchAxeSpecialMultiplierArgs {
   mode: SwitchAxeAttackMode;
 }
 
-export interface SwitchAxe extends Weapon<WeaponType.SWITCH_AXE> {
+export interface SwitchAxe extends Weapon<WeaponClass.SWITCH_AXE> {
   /** Unique property for switch axes */
   phial: SwitchAxePhial;
 }

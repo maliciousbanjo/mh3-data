@@ -1,25 +1,32 @@
-import { MonsterLevelTypes } from '../../monster-levels';
-import { MonsterTypes } from '../../monsters';
-import { Weapon, WeaponType, Sharpness, Attack, Damage, Hit } from '../types';
+import { Weapons } from '../../model';
+import { MonsterTypes } from '../../model/monsters';
+import { LanceTypes, WeaponTypes } from '../../model/weapons';
+import { isCutHit } from '../../model/weapons/weapon-util';
+import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import {
   calculateElementalDamage,
   getSharpnessRawMultiplier,
-  isCutHit
-} from '../weapon-util';
-import { LanceDamageProperties } from './lance-data';
-import { LanceAttack } from './types';
+  validateWeaponSharpness
+} from './damage-util';
 
 const LANCE_VAR_MULTIPLIER = 0.78;
 const LANCE_CHARGE_ELEMENTAL_MULTIPLIER = 0.25;
 
-function getLanceAttack(attackName: LanceAttack): Attack<LanceAttack> {
-  const lanceAttacks = LanceDamageProperties.attackGroups[0];
+/**
+ * @returns Attack properties for a {@link LanceTypes.LanceAttack}
+ */
+function getLanceAttack(
+  attackName: string
+): WeaponTypes.Attack<LanceTypes.LanceAttack> {
+  const lanceAttacks = Weapons.Util.getWeaponDamageProperties(
+    WeaponTypes.WeaponClass.LANCE
+  ).attackGroups[0];
 
   const result = lanceAttacks.attacks.find(atk => atk.name === attackName);
   if (!result) {
     throw new Error(`${attackName} is not a valid Lance attack`);
   }
-  return result;
+  return result as WeaponTypes.Attack<LanceTypes.LanceAttack>;
 }
 
 /**
@@ -27,7 +34,7 @@ function getLanceAttack(attackName: LanceAttack): Attack<LanceAttack> {
  * that modified impact value will be used instead. Otherwise take cut.
  */
 function getLanceHitzoneMultiplier(
-  hit: Hit,
+  hit: WeaponTypes.Hit,
   hitzoneValues: MonsterTypes.HitzoneValues
 ) {
   if (isCutHit(hit)) {
@@ -38,31 +45,39 @@ function getLanceHitzoneMultiplier(
   return hitzoneValues.impact;
 }
 
+function validateLance(
+  weapon: WeaponTypes.Weapon<WeaponTypes.WeaponClass>
+): asserts weapon is LanceTypes.Lance {
+  if (weapon.type !== WeaponTypes.WeaponClass.LANCE) {
+    throw new Error(`${weapon.name} is not a ${WeaponTypes.WeaponClass.LANCE}`);
+  }
+}
+
 /**
- * Calculates damage for a {@link LanceAttack}.
+ * Calculates damage for a {@link LanceTypes.Lance}.
  */
 export function calculateLanceDamage(
-  lance: Weapon<WeaponType>,
-  /** Attack being performed by weapon */
-  attackName: LanceAttack,
-  /** Current sharpness of weapon */
-  sharpness: Sharpness,
-  /** Derived from Monster hitzone */
-  hitzoneValues: MonsterTypes.HitzoneValues,
-  /** Derived from Monster level set by Quest */
-  multipliers: MonsterLevelTypes.MonsterLevelMultipliers,
-  /** Will include awakened element if applicable */
-  awaken = false
+  weaponArgs: WeaponArgs,
+  monsterArgs: MonsterArgs,
+  damageBuffArgs: DamageBuffArgs
 ) {
-  if (lance.type !== WeaponType.LANCE) {
-    throw new Error(`${lance.name} is not a ${WeaponType.LANCE}`);
-  }
+  const { weaponId, attackName, sharpness } = weaponArgs;
+  const { hitzoneValues, levelMultipliers } = monsterArgs;
+  const { elementArgs } = damageBuffArgs;
 
-  const { classModifier } = LanceDamageProperties;
+  const lance = Weapons.Util.getWeapon(
+    Weapons.WeaponTypes.WeaponClass.LANCE,
+    weaponId
+  );
+  validateLance(lance);
+  validateWeaponSharpness(lance, sharpness);
 
-  const sharpnessMultiplier = getSharpnessRawMultiplier(sharpness);
+  const { classModifier } = Weapons.Util.getWeaponDamageProperties(
+    WeaponTypes.WeaponClass.LANCE
+  );
 
   const attack = getLanceAttack(attackName);
+  const sharpnessMultiplier = getSharpnessRawMultiplier(sharpness);
 
   return attack.hits.map<Damage>(hit => {
     const hitzoneMultiplier = getLanceHitzoneMultiplier(hit, hitzoneValues);
@@ -73,15 +88,15 @@ export function calculateLanceDamage(
         sharpnessMultiplier *
         hitzoneMultiplier *
         1 * // Lance does not have a [SpecialVar], but this is here for consistency
-        multipliers.defense) /
+        levelMultipliers.defense) /
       classModifier;
 
     const baseElementalDamage = calculateElementalDamage(
       lance,
       sharpness,
       hitzoneValues,
-      multipliers,
-      awaken
+      levelMultipliers,
+      !!elementArgs.awaken
     );
     // Lance charge elemental damage is cut by 75%
     const elementalDamage =

@@ -1,32 +1,10 @@
 import { CommonTypes } from '../common';
 import { ItemTypes } from '../items';
-import { LongswordTypes } from './longsword';
-import { SwitchAxeTypes } from './switch-axe';
-import { SwordAndShieldTypes } from './sword-and-shield';
-
-/**
- * Catch-all object that contains args for determining weapon "special variables"
- *
- * - Middle of blade (Great Sword, Longsword) adds a 1.05 multiplier
- */
-export interface SpecialMultiplierArgs {
-  criticalHit: 'none' | 'positive' | 'negative';
-  /** Great Sword, Longsword only */
-  middleOfBlade: boolean;
-  /** Sword and Shield only */
-  swordAndShieldMode: SwordAndShieldTypes.SwordAndShieldAttackMode;
-  /** Switch Axe only */
-  switchAxeMode: SwitchAxeTypes.SwitchAxeAttackMode;
-  longsword: Omit<
-    LongswordTypes.LongswordSpecialMultiplierArgs,
-    'middleOfBlade'
-  >;
-}
 
 /**
  * Enumerated collection of weapon types that can be used as properties/arguments
  */
-export enum WeaponType {
+export enum WeaponClass {
   GREAT_SWORD = 'Great Sword',
   SWORD_AND_SHIELD = 'Sword and Shield',
   HAMMER = 'Hammer',
@@ -38,13 +16,13 @@ export enum WeaponType {
 /**
  * Used for type validation in functions
  */
-export type ValidWeaponTypes =
-  | WeaponType.GREAT_SWORD
-  | WeaponType.SWORD_AND_SHIELD
-  | WeaponType.HAMMER
-  | WeaponType.LANCE
-  | WeaponType.SWITCH_AXE
-  | WeaponType.LONGSWORD;
+export type ValidWeaponClasses =
+  | WeaponClass.GREAT_SWORD
+  | WeaponClass.SWORD_AND_SHIELD
+  | WeaponClass.HAMMER
+  | WeaponClass.LANCE
+  | WeaponClass.SWITCH_AXE
+  | WeaponClass.LONGSWORD;
 
 /**
  * Enumerated collection of sharpness levels that can be used as properties/arguments
@@ -104,19 +82,6 @@ export interface AttackGroup<N = string> {
   attacks: Attack<N>[];
 }
 
-export interface Damage {
-  /** Decimal is dropped after raw+elemental are totaled */
-  rawDamage: number;
-  /** Decimal is dropped after raw+elemental are totaled */
-  elementalDamage: number;
-  /**
-   * This should ALWAYS be the total of raw + elemental.
-   */
-  totalDamage: number;
-  /** Amount of knockout damage, only present for impact type attacks */
-  koDamage?: number;
-}
-
 /**
  * Collection of attacks and values used for determining weapon damage
  *
@@ -124,7 +89,7 @@ export interface Damage {
  * @typeParam N Possible names of attacks
  */
 export interface WeaponDamageProperties<
-  T extends ValidWeaponTypes,
+  T extends ValidWeaponClasses,
   N = string
 > {
   type: T;
@@ -146,7 +111,7 @@ export type SecondaryDamageType =
 /**
  * Properties of a weapon
  */
-export interface Weapon<T extends ValidWeaponTypes> {
+export interface Weapon<T extends ValidWeaponClasses> {
   id: number;
   type: T;
   name: string;

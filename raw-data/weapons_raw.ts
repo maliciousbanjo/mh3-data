@@ -5278,7 +5278,7 @@ const Weapons = {
     class: 3.3,
     attacks: {
       'Unsheathe Attack': [{ type: 'cut', power: 0.28 }],
-      'Step Stash': [{ type: 'cut', power: 0.28 }],
+      'Step Slash': [{ type: 'cut', power: 0.28 }],
       'Downward Slash': [{ type: 'cut', power: 0.23 }],
       Stab: [{ type: 'cut', power: 0.14 }],
       'Upward Slash': [{ type: 'cut', power: 0.18 }],
