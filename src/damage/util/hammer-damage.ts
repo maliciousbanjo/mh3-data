@@ -3,6 +3,8 @@ import { HammerTypes, WeaponTypes } from '../../model/weapons';
 import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import {
   calculateElementalDamage,
+  getAttackUpMultiplier,
+  getRawMultiplier,
   getSharpnessRawMultiplier,
   validateWeaponSharpness
 } from './damage-util';
@@ -46,7 +48,7 @@ export function calculateHammerDamage(
 ) {
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { hitzoneValues, levelMultipliers } = monsterArgs;
-  const { elementArgs } = damageBuffArgs;
+  const { criticalHit, lowHealthSkill, elementArgs } = damageBuffArgs;
 
   const hammer = Weapons.Util.getWeapon(
     Weapons.WeaponTypes.WeaponClass.HAMMER,
@@ -62,14 +64,21 @@ export function calculateHammerDamage(
   const attack = getHammerAttack(attackName);
   const sharpnessMultiplier = getSharpnessRawMultiplier(sharpness);
 
+  const rawMultiplier = getRawMultiplier(criticalHit, lowHealthSkill);
+
+  const attackBuffMultiplier = getAttackUpMultiplier(damageBuffArgs.attackArgs);
+
+  const attackWithBuffs = hammer.attack + attackBuffMultiplier * classModifier;
+
   // TODO: This should probably get lifted into a shared function that all weapons can use
   return attack.hits.map<Damage>(hit => {
     const isCut = Weapons.Util.isCutHit(hit);
     const hitzoneMultiplier = isCut ? hitzoneValues.cut : hitzoneValues.impact;
 
     const rawDamage =
-      (hammer.attack *
+      (attackWithBuffs *
         hit.power *
+        rawMultiplier *
         sharpnessMultiplier *
         hitzoneMultiplier *
         1 * // Hammer does not have a [SpecialVar], but this is here for consistency
@@ -81,7 +90,7 @@ export function calculateHammerDamage(
       sharpness,
       hitzoneValues,
       levelMultipliers,
-      !!elementArgs.awaken
+      elementArgs
     );
 
     const koDamage = !isCut ? hit.ko * sharpnessMultiplier : undefined;

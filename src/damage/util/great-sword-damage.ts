@@ -3,6 +3,8 @@ import { GreatSwordTypes, WeaponTypes } from '../../model/weapons';
 import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import {
   calculateElementalDamage,
+  getAttackUpMultiplier,
+  getRawMultiplier,
   getSharpnessRawMultiplier,
   validateWeaponSharpness
 } from './damage-util';
@@ -78,7 +80,7 @@ export function calculateGreatSwordDamage(
 ) {
   const { weaponId, attackName, sharpness, weaponMultipliers } = weaponArgs;
   const { hitzoneValues, levelMultipliers } = monsterArgs;
-  const { elementArgs } = damageBuffArgs;
+  const { criticalHit, lowHealthSkill, elementArgs } = damageBuffArgs;
 
   const greatSword = Weapons.Util.getWeapon(
     Weapons.WeaponTypes.WeaponClass.GREAT_SWORD,
@@ -99,14 +101,22 @@ export function calculateGreatSwordDamage(
     attack.name
   );
 
+  const rawMultiplier = getRawMultiplier(criticalHit, lowHealthSkill);
+
+  const attackBuffMultiplier = getAttackUpMultiplier(damageBuffArgs.attackArgs);
+
+  const attackWithBuffs =
+    greatSword.attack + attackBuffMultiplier * classModifier;
+
   // TODO: This should probably get lifted into a shared function that all weapons can use
   return attack.hits.map<Damage>(hit => {
     const isCut = Weapons.Util.isCutHit(hit);
     const hitzoneMultiplier = isCut ? hitzoneValues.cut : hitzoneValues.impact;
 
     const rawDamage =
-      (greatSword.attack *
+      (attackWithBuffs *
         hit.power *
+        rawMultiplier *
         sharpnessMultiplier *
         hitzoneMultiplier *
         specialVarMultiplier *
@@ -118,7 +128,7 @@ export function calculateGreatSwordDamage(
       sharpness,
       hitzoneValues,
       levelMultipliers,
-      elementArgs.awaken
+      elementArgs
     );
 
     const koDamage = !isCut ? hit.ko * sharpnessMultiplier : undefined;

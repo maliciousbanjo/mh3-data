@@ -6,6 +6,15 @@ import {
   SwordAndShieldTypes,
   WeaponTypes
 } from '../model/weapons/';
+import {
+  ARMOR_SKILL_MULTIPLIERS,
+  CRITICAL_HIT_MULTIPLIERS,
+  DEMONDRUG_MULTIPLIERS,
+  ELEMENT_ATTACK_MULTIPLIERS,
+  FORTIFY_MULTIPLIERS,
+  LOW_HEALTH_SKILL_MULTIPLIERS,
+  MIGHT_MULTIPLIERS
+} from './util/attack-multipliers';
 
 export interface LongswordSpecialMultiplierArgs {
   middleOfBlade: boolean;
@@ -58,10 +67,22 @@ export interface MonsterArgs {
  * felyne heroics, awaken, powercharm, fortify, element attack up
  */
 export interface DamageBuffArgs {
-  criticalHit: 'none' | 'positive' | 'negative';
-  elementArgs: {
-    awaken: boolean;
-    // TODO: Element Attack Up/Down
+  /** Multiplied against {@link WeaponTypes.Weapon['attack']} */
+  criticalHit?: keyof typeof CRITICAL_HIT_MULTIPLIERS;
+  lowHealthSkill?: keyof typeof LOW_HEALTH_SKILL_MULTIPLIERS;
+  fortify?: keyof typeof FORTIFY_MULTIPLIERS;
+  /** Multiplied against {@link WeaponTypes.Weapon['secondaryAttack']} */
+  elementArgs?: {
+    awaken?: boolean;
+    elementAttack?: keyof typeof ELEMENT_ATTACK_MULTIPLIERS;
+  };
+  /** Multiplied against {@link WeaponTypes.WeaponDamageProperties['classModifier']} */
+  attackArgs?: {
+    powercharm?: boolean;
+    powertalon?: boolean;
+    demonDrug?: keyof typeof DEMONDRUG_MULTIPLIERS;
+    might?: keyof typeof MIGHT_MULTIPLIERS;
+    armor?: keyof typeof ARMOR_SKILL_MULTIPLIERS;
   };
 }
 

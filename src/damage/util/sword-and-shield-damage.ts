@@ -4,6 +4,8 @@ import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import { assertSwordAndShieldWeaponMultipliers } from './assertions';
 import {
   calculateElementalDamage,
+  getAttackUpMultiplier,
+  getRawMultiplier,
   getSharpnessRawMultiplier,
   validateWeaponSharpness
 } from './damage-util';
@@ -57,7 +59,7 @@ export function calculateSwordAndShieldDamage(
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { swordAndShieldMode } = weaponArgs.weaponMultipliers;
   const { hitzoneValues, levelMultipliers } = monsterArgs;
-  const { elementArgs } = damageBuffArgs;
+  const { criticalHit, lowHealthSkill, elementArgs } = damageBuffArgs;
 
   const swordAndShield = Weapons.Util.getWeapon(
     Weapons.WeaponTypes.WeaponClass.SWORD_AND_SHIELD,
@@ -74,6 +76,13 @@ export function calculateSwordAndShieldDamage(
   const attack = getSwordAndShieldAttack(swordAndShieldMode, attackName);
   const sharpnessMultiplier = getSharpnessRawMultiplier(sharpness);
 
+  const rawMultiplier = getRawMultiplier(criticalHit, lowHealthSkill);
+
+  const attackBuffMultiplier = getAttackUpMultiplier(damageBuffArgs.attackArgs);
+
+  const attackWithBuffs =
+    swordAndShield.attack + attackBuffMultiplier * classModifier;
+
   // TODO: This should probably get lifted into a shared function that all weapons can use
   return attack.hits.map<Damage>(hit => {
     const isCut = Weapons.Util.isCutHit(hit);
@@ -81,8 +90,9 @@ export function calculateSwordAndShieldDamage(
     const hitzoneMultiplier = isCut ? hitzoneValues.cut : hitzoneValues.impact;
 
     const rawDamage =
-      (swordAndShield.attack *
+      (attackWithBuffs *
         hit.power *
+        rawMultiplier *
         sharpnessMultiplier *
         hitzoneMultiplier *
         // SnS cut damage receives a 1.06 multiplier
@@ -95,7 +105,7 @@ export function calculateSwordAndShieldDamage(
       sharpness,
       hitzoneValues,
       levelMultipliers,
-      !!elementArgs.awaken
+      elementArgs
     );
 
     const koDamage = !isCut ? hit.ko * sharpnessMultiplier : undefined;

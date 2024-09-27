@@ -5,6 +5,8 @@ import { isCutHit } from '../../model/weapons/weapon-util';
 import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import {
   calculateElementalDamage,
+  getAttackUpMultiplier,
+  getRawMultiplier,
   getSharpnessRawMultiplier,
   validateWeaponSharpness
 } from './damage-util';
@@ -63,7 +65,7 @@ export function calculateLanceDamage(
 ) {
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { hitzoneValues, levelMultipliers } = monsterArgs;
-  const { elementArgs } = damageBuffArgs;
+  const { criticalHit, lowHealthSkill, elementArgs } = damageBuffArgs;
 
   const lance = Weapons.Util.getWeapon(
     Weapons.WeaponTypes.WeaponClass.LANCE,
@@ -79,12 +81,19 @@ export function calculateLanceDamage(
   const attack = getLanceAttack(attackName);
   const sharpnessMultiplier = getSharpnessRawMultiplier(sharpness);
 
+  const rawMultiplier = getRawMultiplier(criticalHit, lowHealthSkill);
+
+  const attackBuffMultiplier = getAttackUpMultiplier(damageBuffArgs.attackArgs);
+
+  const attackWithBuffs = lance.attack + attackBuffMultiplier * classModifier;
+
   return attack.hits.map<Damage>(hit => {
     const hitzoneMultiplier = getLanceHitzoneMultiplier(hit, hitzoneValues);
 
     const rawDamage =
-      (lance.attack *
+      (attackWithBuffs *
         hit.power *
+        rawMultiplier *
         sharpnessMultiplier *
         hitzoneMultiplier *
         1 * // Lance does not have a [SpecialVar], but this is here for consistency
@@ -96,7 +105,7 @@ export function calculateLanceDamage(
       sharpness,
       hitzoneValues,
       levelMultipliers,
-      !!elementArgs.awaken
+      elementArgs
     );
     // Lance charge elemental damage is cut by 75%
     const elementalDamage =

@@ -2,6 +2,18 @@ import { WeaponTypes } from '../../model/weapons';
 import { Weapons } from '../../model';
 import { MonsterTypes } from '../../model/monsters';
 import { MonsterLevelTypes } from '../../model/monster-levels';
+import { DamageBuffArgs } from '../types';
+import {
+  ARMOR_SKILL_MULTIPLIERS,
+  CRITICAL_HIT_MULTIPLIERS,
+  DEMONDRUG_MULTIPLIERS,
+  ELEMENT_ATTACK_MULTIPLIERS,
+  FORTIFY_MULTIPLIERS,
+  LOW_HEALTH_SKILL_MULTIPLIERS,
+  MIGHT_MULTIPLIERS,
+  POWERCHARM_MULTIPLIER,
+  POWERTALON_MULTIPLIER
+} from './attack-multipliers';
 
 const ELEMENTAL_DAMAGE_DIVIDER = 10;
 
@@ -106,9 +118,71 @@ function getHitzoneForWeaponElement(
 }
 
 /**
+ * Get additional attack buffs multiplied against the weapon's class modifier.
+ *
+ * Taken from Lord Grahf's [Monster Hunter Tri Damage Formula FAQ](https://gamefaqs.gamespot.com/wii/943655-monster-hunter-tri/faqs/59207)
+ * Section 9a. Attack Up Multipliers (ATKUP)
+ *
+ * Items and armor skills can affect attack stats. Multipliers are broken into different sub-categories
+ * which can stack amongst each other. Each category has a multiplier which is applied to the weapon's class modifier.
+ */
+export function getAttackUpMultiplier(
+  attackArgs: DamageBuffArgs['attackArgs'] = {}
+): number {
+  let totalAttackMultiplier = 0;
+  const { powercharm, powertalon, demonDrug, might, armor } = attackArgs;
+  /**
+   * 1. Powercharm
+   */
+  totalAttackMultiplier += powercharm ? POWERCHARM_MULTIPLIER : 0;
+  /**
+   * 2. Powertalon
+   */
+  totalAttackMultiplier += powertalon ? POWERTALON_MULTIPLIER : 0;
+  /**
+   * 3. Demondrug/Kitchen
+   */
+  totalAttackMultiplier += DEMONDRUG_MULTIPLIERS[demonDrug ?? 'none'];
+  /**
+   * 4. Might
+   */
+  totalAttackMultiplier += MIGHT_MULTIPLIERS[might ?? 'none'];
+  /**
+   * 5. Armor Skill
+   */
+  totalAttackMultiplier += ARMOR_SKILL_MULTIPLIERS[armor ?? 'none'];
+
+  return totalAttackMultiplier;
+}
+
+/**
+ * Get additional attack buffs multiplied against the weapon's raw
+ *
+ * - Critical hits recieve a 1.25 bonus (0.75 for negative critical)
+ *
+ * - Felyne Heroics recieves a 1.35 bonus
+ * - Adrenaline+2 recieves a 1.30 bonus
+ *   - Does not stack with heroics (and vice versa)
+ *
+ * - Fortify recieves a 10% bonus per faint
+ */
+export function getRawMultiplier(
+  criticalHit: DamageBuffArgs['criticalHit'],
+  lowHealthSkill: DamageBuffArgs['lowHealthSkill'],
+  fortify: DamageBuffArgs['fortify']
+) {
+  return (
+    CRITICAL_HIT_MULTIPLIERS[criticalHit ?? 'none'] *
+    LOW_HEALTH_SKILL_MULTIPLIERS[lowHealthSkill ?? 'none'] *
+    FORTIFY_MULTIPLIERS[fortify ?? 'none']
+  );
+}
+
+/**
  * ELEMENTAL DAMAGE FORMULA
  *
  * Taken from Lord Grahf's [Monster Hunter Tri Damage Formula FAQ](https://gamefaqs.gamespot.com/wii/943655-monster-hunter-tri/faqs/59207)
+ * Section 1c. Elemental Damage Formula (EFMLA)
  *
  * [ELEMENT x ESHARP x ELMZONE] / [DIVIDER] = Elemental Damage
  *
@@ -128,9 +202,10 @@ export function calculateElementalDamage(
   sharpness: WeaponTypes.Sharpness,
   /** Derived from Monster hitzone */
   hitzoneValues: MonsterTypes.HitzoneValues,
-  multipliers: MonsterLevelTypes.MonsterLevelMultipliers,
-  awaken = false
+  levelMultipliers: MonsterLevelTypes.MonsterLevelMultipliers,
+  elementArgs: DamageBuffArgs['elementArgs'] = {}
 ): number {
+  const { awaken, elementAttack } = elementArgs;
   const sharpnessMultiplier = getSharpnessElementalMultiplier(sharpness);
   const elementalHitzoneMultiplier = getHitzoneForWeaponElement(
     hitzoneValues,
@@ -140,11 +215,17 @@ export function calculateElementalDamage(
   // Element is not calculated for non-awakened weapon or if hitzone multiplier is 0
   if ((weapon.awaken && !awaken) || elementalHitzoneMultiplier === 0) return 0;
 
+  const elementMultiplier = elementAttack
+    ? ELEMENT_ATTACK_MULTIPLIERS[elementAttack]
+    : 1;
+
+  const secondaryAttackWithBuffs = weapon.secondaryAttack * elementMultiplier;
+
   return (
-    (weapon.secondaryAttack *
+    (secondaryAttackWithBuffs *
       sharpnessMultiplier *
       elementalHitzoneMultiplier *
-      multipliers.defense) /
+      levelMultipliers.defense) /
     ELEMENTAL_DAMAGE_DIVIDER
   );
 }

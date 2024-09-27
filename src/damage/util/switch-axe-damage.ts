@@ -4,6 +4,8 @@ import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import { assertSwitchAxeWeaponMultipliers } from './assertions';
 import {
   calculateElementalDamage,
+  getAttackUpMultiplier,
+  getRawMultiplier,
   getSharpnessRawMultiplier,
   validateWeaponSharpness
 } from './damage-util';
@@ -72,7 +74,7 @@ export function calculateSwitchAxeDamage(
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { switchAxeMode } = weaponArgs.weaponMultipliers;
   const { hitzoneValues, levelMultipliers } = monsterArgs;
-  const { elementArgs } = damageBuffArgs;
+  const { criticalHit, lowHealthSkill, elementArgs } = damageBuffArgs;
 
   const switchAxe = Weapons.Util.getWeapon(
     Weapons.WeaponTypes.WeaponClass.SWITCH_AXE,
@@ -92,14 +94,22 @@ export function calculateSwitchAxeDamage(
   const { rawSpecialVarMultiplier, elementSpecialVarMultiplier } =
     getSwitchAxeSpecialVarMultiplier(switchAxe);
 
+  const rawMultiplier = getRawMultiplier(criticalHit, lowHealthSkill);
+
+  const attackBuffMultiplier = getAttackUpMultiplier(damageBuffArgs.attackArgs);
+
+  const attackWithBuffs =
+    switchAxe.attack + attackBuffMultiplier * classModifier;
+
   // TODO: This should probably get lifted into a shared function that all weapons can use
   return attack.hits.map<Damage>(hit => {
     const isCut = Weapons.Util.isCutHit(hit);
     const hitzoneMultiplier = isCut ? hitzoneValues.cut : hitzoneValues.impact;
 
     const rawDamage =
-      (switchAxe.attack *
+      (attackWithBuffs *
         hit.power *
+        rawMultiplier *
         sharpnessMultiplier *
         hitzoneMultiplier *
         rawSpecialVarMultiplier *
@@ -112,7 +122,7 @@ export function calculateSwitchAxeDamage(
         sharpness,
         hitzoneValues,
         levelMultipliers,
-        !!elementArgs.awaken
+        elementArgs
       ) * elementSpecialVarMultiplier;
 
     const koDamage = !isCut ? hit.ko * sharpnessMultiplier : undefined;

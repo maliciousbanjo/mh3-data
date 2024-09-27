@@ -11,6 +11,8 @@ import {
 import { assertLongswordWeaponMultipliers } from './assertions';
 import {
   calculateElementalDamage,
+  getAttackUpMultiplier,
+  getRawMultiplier,
   getSharpnessRawMultiplier,
   validateWeaponSharpness
 } from './damage-util';
@@ -79,7 +81,7 @@ export function calculateLongswordDamage(
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { longsword: longswordArgs } = weaponArgs.weaponMultipliers;
   const { hitzoneValues, levelMultipliers } = monsterArgs;
-  const { elementArgs } = damageBuffArgs;
+  const { criticalHit, lowHealthSkill, elementArgs } = damageBuffArgs;
 
   const longsword = Weapons.Util.getWeapon(
     Weapons.WeaponTypes.WeaponClass.LONGSWORD,
@@ -101,14 +103,22 @@ export function calculateLongswordDamage(
     spiritGaugeColor: longswordArgs.spiritGaugeColor
   });
 
+  const rawMultiplier = getRawMultiplier(criticalHit, lowHealthSkill);
+
+  const attackBuffMultiplier = getAttackUpMultiplier(damageBuffArgs.attackArgs);
+
+  const attackWithBuffs =
+    longsword.attack + attackBuffMultiplier * classModifier;
+
   // TODO: This should probably get lifted into a shared function that all weapons can use
   return attack.hits.map<Damage>(hit => {
     const isCut = Weapons.Util.isCutHit(hit);
     const hitzoneMultiplier = isCut ? hitzoneValues.cut : hitzoneValues.impact;
 
     const rawDamage =
-      (longsword.attack *
+      (attackWithBuffs *
         hit.power *
+        rawMultiplier *
         sharpnessMultiplier *
         hitzoneMultiplier *
         specialVarMultiplier *
@@ -120,7 +130,7 @@ export function calculateLongswordDamage(
       sharpness,
       hitzoneValues,
       levelMultipliers,
-      !!elementArgs.awaken
+      elementArgs
     );
 
     const koDamage = !isCut ? hit.ko * sharpnessMultiplier : undefined;

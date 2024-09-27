@@ -12,6 +12,7 @@ import { calculateSwordAndShieldDamage } from './util/sword-and-shield-damage';
  * RAW DAMAGE FORMULA
  *
  * Taken from Lord Grahf's [Monster Hunter Tri Damage Formula FAQ](https://gamefaqs.gamespot.com/wii/943655-monster-hunter-tri/faqs/59207)
+ * Section 1b. Raw Damage Formula (RFMLA)
  *
  * [ATP x TYPE x SHARP x HITZONE x VAR] / [CLASS] = Raw Damage
  *

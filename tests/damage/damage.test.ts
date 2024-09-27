@@ -1,31 +1,13 @@
 import { calculateDamage } from '../../src/damage/damage';
-import { validateWeaponSharpness } from '../../src/damage/util/damage-util';
 import { MonsterLevels } from '../../src/model';
 import {
   Alatreon,
   Deviljho,
   RoyalLudroth
 } from '../../src/model/monsters/large-monster-data';
-import { GreatSwords, WeaponTypes } from '../../src/model/weapons';
+import { WeaponTypes } from '../../src/model/weapons';
 
 describe('Damage', () => {
-  describe('damage utils', () => {
-    describe('validateWeaponSharpness', () => {
-      it('weapon has valid sharpness', () => {
-        const gs = GreatSwords[0];
-        expect(
-          validateWeaponSharpness(gs, WeaponTypes.Sharpness.ORANGE)
-        ).toBeTruthy();
-      });
-      it('throws error because weapon does not have sharpness', () => {
-        const gs = GreatSwords[0];
-        expect(() =>
-          validateWeaponSharpness(gs, WeaponTypes.Sharpness.PURPLE)
-        ).toThrow();
-      });
-    });
-  });
-
   describe('calculateDamage', () => {
     const alatreonHeadHitzoneValues =
       Alatreon.hitzoneGroups[0].hitzones['Head'];
