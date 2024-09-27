@@ -1,4 +1,4 @@
-import { WeaponClass } from '../../../src/model/weapons/types';
+import { WeaponClass } from '../../../src/model/weapons';
 import {
   getWeapon,
   getWeaponDamageProperties

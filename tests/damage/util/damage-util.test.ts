@@ -13,21 +13,17 @@ import {
   getRawMultiplier,
   validateWeaponSharpness
 } from '../../../src/damage/util/damage-util';
-import { GreatSwords, WeaponTypes } from '../../../src/model/weapons';
+import { GreatSword, Sharpness } from '../../../src/model/weapons';
 
 describe('damage utils', () => {
   describe('validateWeaponSharpness', () => {
     it('weapon has valid sharpness', () => {
-      const gs = GreatSwords[0];
-      expect(
-        validateWeaponSharpness(gs, WeaponTypes.Sharpness.ORANGE)
-      ).toBeTruthy();
+      const gs = GreatSword.GreatSwords[0];
+      expect(validateWeaponSharpness(gs, Sharpness.ORANGE)).toBeTruthy();
     });
     it('throws error because weapon does not have sharpness', () => {
-      const gs = GreatSwords[0];
-      expect(() =>
-        validateWeaponSharpness(gs, WeaponTypes.Sharpness.PURPLE)
-      ).toThrow();
+      const gs = GreatSword.GreatSwords[0];
+      expect(() => validateWeaponSharpness(gs, Sharpness.PURPLE)).toThrow();
     });
   });
 

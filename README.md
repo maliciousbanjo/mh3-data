@@ -70,3 +70,8 @@ The following is currently available:
 ## Util Functions
 
 - Damage calculation for blademaster weapons
+
+### Sources
+
+- Capcom Unity user Feox, creator of the original [MHTri](http://mhtri.stilltruth.com/) website
+- [Monster Hunter Tri Damage Formula](https://gamefaqs.gamespot.com/wii/943655-monster-hunter-tri/faqs/59207) by GameFAQs users Lord Grahf and DS31

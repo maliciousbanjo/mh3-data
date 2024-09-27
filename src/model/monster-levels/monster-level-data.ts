@@ -1,13 +1,16 @@
 import type { MonsterLevelRecord } from './types';
 
 /**
- * Per some research, it seems the `stagger` could be wrong?
- * An example for Alatreon, with a base head stagger limit of 700 HP.
+ * !This data is not 100% accurate.
  *
- * That would make 700 * 2.2 = 1540 to stagger which is not true, he actually
- * staggers around 700.
+ * Health multipliers do not actually work this way. Rather, each level
+ * should correspond to a singular health multiplier. It is theorized that
+ * there is an additional property in the quest format that allows for a variable
+ * range of HP in a monsters.
  *
- * The rest of this information could be fine, but should be looked at with scrutiny.
+ * This dataset was likely derived by examining the pre-defined quest files.
+ *
+ * Defense and stagger multpliers DO appear to be accurate.
  */
 export const MonsterLevelData = Object.freeze<MonsterLevelRecord>({
   3: { health: [0.35, 0.38, 0.4, 0.43, 0.45], defense: 1, stagger: 1 },

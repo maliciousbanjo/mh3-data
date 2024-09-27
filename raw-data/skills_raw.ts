@@ -906,7 +906,6 @@ const Skills = [
     desc: 'Enables ability to automatically block attacks (when blocking is possible).',
     group: 3,
     bounds: { '10': 'Auto-Guard' }
-  }
-  // TODO: Add this back
-  // { name: 'Torso Up', copy: 'plt' }
+  },
+  { name: 'Torso Up', copy: 'plt' }
 ];
