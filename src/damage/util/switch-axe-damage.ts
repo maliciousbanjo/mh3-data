@@ -4,7 +4,7 @@ import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import { assertSwitchAxeWeaponMultipliers } from './assertions';
 import {
   calculateElementalDamage,
-  getAttackUpMultiplier,
+  getWeaponClassMultiplier,
   getRawMultiplier,
   getSharpnessRawMultiplier,
   validateWeaponSharpness
@@ -74,7 +74,7 @@ export function calculateSwitchAxeDamage(
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { switchAxeMode } = weaponArgs.weaponMultipliers;
   const { hitzoneValues, levelMultipliers } = monsterArgs;
-  const { criticalHit, lowHealthSkill, elementArgs } = damageBuffArgs;
+  const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const switchAxe = Weapons.Util.getWeapon(
     Weapons.WeaponTypes.WeaponClass.SWITCH_AXE,
@@ -94,9 +94,9 @@ export function calculateSwitchAxeDamage(
   const { rawSpecialVarMultiplier, elementSpecialVarMultiplier } =
     getSwitchAxeSpecialVarMultiplier(switchAxe);
 
-  const rawMultiplier = getRawMultiplier(criticalHit, lowHealthSkill);
+  const rawMultiplier = getRawMultiplier(rawArgs);
 
-  const attackBuffMultiplier = getAttackUpMultiplier(damageBuffArgs.attackArgs);
+  const attackBuffMultiplier = getWeaponClassMultiplier(weaponClassArgs);
 
   const attackWithBuffs =
     switchAxe.attack + attackBuffMultiplier * classModifier;

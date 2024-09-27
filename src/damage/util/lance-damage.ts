@@ -5,7 +5,7 @@ import { isCutHit } from '../../model/weapons/weapon-util';
 import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import {
   calculateElementalDamage,
-  getAttackUpMultiplier,
+  getWeaponClassMultiplier,
   getRawMultiplier,
   getSharpnessRawMultiplier,
   validateWeaponSharpness
@@ -65,7 +65,7 @@ export function calculateLanceDamage(
 ) {
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { hitzoneValues, levelMultipliers } = monsterArgs;
-  const { criticalHit, lowHealthSkill, elementArgs } = damageBuffArgs;
+  const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const lance = Weapons.Util.getWeapon(
     Weapons.WeaponTypes.WeaponClass.LANCE,
@@ -81,9 +81,9 @@ export function calculateLanceDamage(
   const attack = getLanceAttack(attackName);
   const sharpnessMultiplier = getSharpnessRawMultiplier(sharpness);
 
-  const rawMultiplier = getRawMultiplier(criticalHit, lowHealthSkill);
+  const rawMultiplier = getRawMultiplier(rawArgs);
 
-  const attackBuffMultiplier = getAttackUpMultiplier(damageBuffArgs.attackArgs);
+  const attackBuffMultiplier = getWeaponClassMultiplier(weaponClassArgs);
 
   const attackWithBuffs = lance.attack + attackBuffMultiplier * classModifier;
 

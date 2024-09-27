@@ -3,7 +3,7 @@ import { HammerTypes, WeaponTypes } from '../../model/weapons';
 import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import {
   calculateElementalDamage,
-  getAttackUpMultiplier,
+  getWeaponClassMultiplier,
   getRawMultiplier,
   getSharpnessRawMultiplier,
   validateWeaponSharpness
@@ -48,7 +48,7 @@ export function calculateHammerDamage(
 ) {
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { hitzoneValues, levelMultipliers } = monsterArgs;
-  const { criticalHit, lowHealthSkill, elementArgs } = damageBuffArgs;
+  const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const hammer = Weapons.Util.getWeapon(
     Weapons.WeaponTypes.WeaponClass.HAMMER,
@@ -64,9 +64,9 @@ export function calculateHammerDamage(
   const attack = getHammerAttack(attackName);
   const sharpnessMultiplier = getSharpnessRawMultiplier(sharpness);
 
-  const rawMultiplier = getRawMultiplier(criticalHit, lowHealthSkill);
+  const rawMultiplier = getRawMultiplier(rawArgs);
 
-  const attackBuffMultiplier = getAttackUpMultiplier(damageBuffArgs.attackArgs);
+  const attackBuffMultiplier = getWeaponClassMultiplier(weaponClassArgs);
 
   const attackWithBuffs = hammer.attack + attackBuffMultiplier * classModifier;
 

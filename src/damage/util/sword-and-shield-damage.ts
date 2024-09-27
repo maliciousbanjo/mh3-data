@@ -4,7 +4,7 @@ import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import { assertSwordAndShieldWeaponMultipliers } from './assertions';
 import {
   calculateElementalDamage,
-  getAttackUpMultiplier,
+  getWeaponClassMultiplier,
   getRawMultiplier,
   getSharpnessRawMultiplier,
   validateWeaponSharpness
@@ -59,7 +59,7 @@ export function calculateSwordAndShieldDamage(
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { swordAndShieldMode } = weaponArgs.weaponMultipliers;
   const { hitzoneValues, levelMultipliers } = monsterArgs;
-  const { criticalHit, lowHealthSkill, elementArgs } = damageBuffArgs;
+  const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const swordAndShield = Weapons.Util.getWeapon(
     Weapons.WeaponTypes.WeaponClass.SWORD_AND_SHIELD,
@@ -76,9 +76,9 @@ export function calculateSwordAndShieldDamage(
   const attack = getSwordAndShieldAttack(swordAndShieldMode, attackName);
   const sharpnessMultiplier = getSharpnessRawMultiplier(sharpness);
 
-  const rawMultiplier = getRawMultiplier(criticalHit, lowHealthSkill);
+  const rawMultiplier = getRawMultiplier(rawArgs);
 
-  const attackBuffMultiplier = getAttackUpMultiplier(damageBuffArgs.attackArgs);
+  const attackBuffMultiplier = getWeaponClassMultiplier(weaponClassArgs);
 
   const attackWithBuffs =
     swordAndShield.attack + attackBuffMultiplier * classModifier;

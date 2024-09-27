@@ -66,25 +66,27 @@ export interface MonsterArgs {
  * Various aspects that can affect damage stats eg; might seed, attack up large,
  * felyne heroics, awaken, powercharm, fortify, element attack up
  */
-export interface DamageBuffArgs {
+export type DamageBuffArgs = Partial<{
   /** Multiplied against {@link WeaponTypes.Weapon['attack']} */
-  criticalHit?: keyof typeof CRITICAL_HIT_MULTIPLIERS;
-  lowHealthSkill?: keyof typeof LOW_HEALTH_SKILL_MULTIPLIERS;
-  fortify?: keyof typeof FORTIFY_MULTIPLIERS;
+  rawArgs: {
+    criticalHit?: keyof typeof CRITICAL_HIT_MULTIPLIERS;
+    lowHealthSkill?: keyof typeof LOW_HEALTH_SKILL_MULTIPLIERS;
+    fortify?: keyof typeof FORTIFY_MULTIPLIERS;
+  };
   /** Multiplied against {@link WeaponTypes.Weapon['secondaryAttack']} */
-  elementArgs?: {
+  elementArgs: {
     awaken?: boolean;
     elementAttack?: keyof typeof ELEMENT_ATTACK_MULTIPLIERS;
   };
   /** Multiplied against {@link WeaponTypes.WeaponDamageProperties['classModifier']} */
-  attackArgs?: {
+  weaponClassArgs: {
     powercharm?: boolean;
     powertalon?: boolean;
     demonDrug?: keyof typeof DEMONDRUG_MULTIPLIERS;
     might?: keyof typeof MIGHT_MULTIPLIERS;
     armor?: keyof typeof ARMOR_SKILL_MULTIPLIERS;
   };
-}
+}>;
 
 /**
  * Damage dealt by a weapon

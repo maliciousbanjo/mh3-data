@@ -11,7 +11,7 @@ import {
 import { assertLongswordWeaponMultipliers } from './assertions';
 import {
   calculateElementalDamage,
-  getAttackUpMultiplier,
+  getWeaponClassMultiplier,
   getRawMultiplier,
   getSharpnessRawMultiplier,
   validateWeaponSharpness
@@ -81,7 +81,7 @@ export function calculateLongswordDamage(
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { longsword: longswordArgs } = weaponArgs.weaponMultipliers;
   const { hitzoneValues, levelMultipliers } = monsterArgs;
-  const { criticalHit, lowHealthSkill, elementArgs } = damageBuffArgs;
+  const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const longsword = Weapons.Util.getWeapon(
     Weapons.WeaponTypes.WeaponClass.LONGSWORD,
@@ -103,9 +103,9 @@ export function calculateLongswordDamage(
     spiritGaugeColor: longswordArgs.spiritGaugeColor
   });
 
-  const rawMultiplier = getRawMultiplier(criticalHit, lowHealthSkill);
+  const rawMultiplier = getRawMultiplier(rawArgs);
 
-  const attackBuffMultiplier = getAttackUpMultiplier(damageBuffArgs.attackArgs);
+  const attackBuffMultiplier = getWeaponClassMultiplier(weaponClassArgs);
 
   const attackWithBuffs =
     longsword.attack + attackBuffMultiplier * classModifier;

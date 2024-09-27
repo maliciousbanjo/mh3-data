@@ -126,11 +126,11 @@ function getHitzoneForWeaponElement(
  * Items and armor skills can affect attack stats. Multipliers are broken into different sub-categories
  * which can stack amongst each other. Each category has a multiplier which is applied to the weapon's class modifier.
  */
-export function getAttackUpMultiplier(
-  attackArgs: DamageBuffArgs['attackArgs'] = {}
+export function getWeaponClassMultiplier(
+  weaponClassArgs: DamageBuffArgs['weaponClassArgs'] = {}
 ): number {
   let totalAttackMultiplier = 0;
-  const { powercharm, powertalon, demonDrug, might, armor } = attackArgs;
+  const { powercharm, powertalon, demonDrug, might, armor } = weaponClassArgs;
   /**
    * 1. Powercharm
    */
@@ -166,11 +166,8 @@ export function getAttackUpMultiplier(
  *
  * - Fortify recieves a 10% bonus per faint
  */
-export function getRawMultiplier(
-  criticalHit: DamageBuffArgs['criticalHit'],
-  lowHealthSkill: DamageBuffArgs['lowHealthSkill'],
-  fortify: DamageBuffArgs['fortify']
-) {
+export function getRawMultiplier(rawArgs: DamageBuffArgs['rawArgs'] = {}) {
+  const { criticalHit, lowHealthSkill, fortify } = rawArgs;
   return (
     CRITICAL_HIT_MULTIPLIERS[criticalHit ?? 'none'] *
     LOW_HEALTH_SKILL_MULTIPLIERS[lowHealthSkill ?? 'none'] *

@@ -3,7 +3,7 @@ import { GreatSwordTypes, WeaponTypes } from '../../model/weapons';
 import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import {
   calculateElementalDamage,
-  getAttackUpMultiplier,
+  getWeaponClassMultiplier,
   getRawMultiplier,
   getSharpnessRawMultiplier,
   validateWeaponSharpness
@@ -80,7 +80,7 @@ export function calculateGreatSwordDamage(
 ) {
   const { weaponId, attackName, sharpness, weaponMultipliers } = weaponArgs;
   const { hitzoneValues, levelMultipliers } = monsterArgs;
-  const { criticalHit, lowHealthSkill, elementArgs } = damageBuffArgs;
+  const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const greatSword = Weapons.Util.getWeapon(
     Weapons.WeaponTypes.WeaponClass.GREAT_SWORD,
@@ -101,9 +101,9 @@ export function calculateGreatSwordDamage(
     attack.name
   );
 
-  const rawMultiplier = getRawMultiplier(criticalHit, lowHealthSkill);
+  const rawMultiplier = getRawMultiplier(rawArgs);
 
-  const attackBuffMultiplier = getAttackUpMultiplier(damageBuffArgs.attackArgs);
+  const attackBuffMultiplier = getWeaponClassMultiplier(weaponClassArgs);
 
   const attackWithBuffs =
     greatSword.attack + attackBuffMultiplier * classModifier;
