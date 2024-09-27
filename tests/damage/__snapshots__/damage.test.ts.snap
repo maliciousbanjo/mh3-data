@@ -165,16 +165,16 @@ exports[`Damage calculateDamage Sword and Shield Cut attack 1`] = `
 exports[`Damage calculateDamage Sword and Shield Impact attack 1`] = `
 [
   {
-    "elementalDamage": 1.6650000000000003,
+    "elementalDamage": 0,
     "koDamage": 22.5,
     "rawDamage": 8.1,
-    "totalDamage": 9,
+    "totalDamage": 8,
   },
   {
-    "elementalDamage": 1.6650000000000003,
+    "elementalDamage": 0,
     "koDamage": 22.5,
     "rawDamage": 12.149999999999999,
-    "totalDamage": 13,
+    "totalDamage": 12,
   },
 ]
 `;

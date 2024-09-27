@@ -100,13 +100,16 @@ export function calculateSwordAndShieldDamage(
         levelMultipliers.defense) /
       classModifier;
 
-    const elementalDamage = calculateElementalDamage(
-      swordAndShield,
-      sharpness,
-      hitzoneValues,
-      levelMultipliers,
-      elementArgs
-    );
+    // Shield attacks do not deal element damage
+    const elementalDamage = isCut
+      ? calculateElementalDamage(
+          swordAndShield,
+          sharpness,
+          hitzoneValues,
+          levelMultipliers,
+          elementArgs
+        )
+      : 0;
 
     const koDamage = !isCut ? hit.ko * sharpnessMultiplier : undefined;
 
