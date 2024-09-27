@@ -1,4 +1,4 @@
-import { ItemRecord } from './types';
+import type { ItemRecord } from './types';
 
 export const ItemData = Object.freeze<ItemRecord>({
   0: { id: 0, name: 'Barrel Bomb S' },

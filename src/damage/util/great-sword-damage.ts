@@ -1,6 +1,10 @@
 import { Weapons } from '../../model';
-import { GreatSwordTypes, WeaponClass, WeaponTypes } from '../../model/weapons';
-import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
+import {
+  type GreatSwordTypes,
+  WeaponClass,
+  type WeaponTypes
+} from '../../model/weapons';
+import type { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import {
   calculateElementalDamage,
   getWeaponClassMultiplier,

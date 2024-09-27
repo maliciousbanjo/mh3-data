@@ -1,4 +1,4 @@
-import { WeaponMultipliers } from '../types';
+import type { WeaponMultipliers } from '../types';
 
 /**
  * Type assertion for Longsword special multiplier args

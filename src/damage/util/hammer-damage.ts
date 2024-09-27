@@ -1,6 +1,10 @@
 import { Weapons } from '../../model';
-import { HammerTypes, WeaponClass, WeaponTypes } from '../../model/weapons';
-import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
+import {
+  type HammerTypes,
+  WeaponClass,
+  type WeaponTypes
+} from '../../model/weapons';
+import type { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import {
   calculateElementalDamage,
   getWeaponClassMultiplier,

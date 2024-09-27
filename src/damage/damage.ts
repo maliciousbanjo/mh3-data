@@ -1,4 +1,4 @@
-import { DamageBuffArgs, MonsterArgs, WeaponArgs } from './types';
+import type { DamageBuffArgs, MonsterArgs, WeaponArgs } from './types';
 import { Weapons } from '../model';
 import { calculateGreatSwordDamage } from './util/great-sword-damage';
 import { calculateHammerDamage } from './util/hammer-damage';

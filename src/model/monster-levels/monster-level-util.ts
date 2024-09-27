@@ -1,5 +1,5 @@
 import { MonsterLevelData } from './monster-level-data';
-import { MonsterLevel, MonsterLevelMultipliers } from './types';
+import type { MonsterLevel, MonsterLevelMultipliers } from './types';
 
 export function getMonsterLevelMultipliers(
   level: MonsterLevel

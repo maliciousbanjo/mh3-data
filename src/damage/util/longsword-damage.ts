@@ -1,11 +1,11 @@
 import { Weapons } from '../../model';
 import {
   Longsword,
-  LongswordTypes,
+  type LongswordTypes,
   WeaponClass,
-  WeaponTypes
+  type WeaponTypes
 } from '../../model/weapons';
-import {
+import type {
   Damage,
   DamageBuffArgs,
   LongswordSpecialMultiplierArgs,

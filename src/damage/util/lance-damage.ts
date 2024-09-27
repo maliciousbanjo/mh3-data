@@ -1,8 +1,12 @@
 import { Weapons } from '../../model';
-import { MonsterTypes } from '../../model/monsters';
-import { LanceTypes, WeaponClass, WeaponTypes } from '../../model/weapons';
+import type { MonsterTypes } from '../../model/monsters';
+import {
+  type LanceTypes,
+  WeaponClass,
+  type WeaponTypes
+} from '../../model/weapons';
 import { isCutHit } from '../../model/weapons/weapon-util';
-import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
+import type { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import {
   calculateElementalDamage,
   getWeaponClassMultiplier,

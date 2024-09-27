@@ -1,4 +1,4 @@
-import { SkillTree } from './types';
+import type { SkillTree } from './types';
 import { SkillGroup } from './enum';
 
 export const SkillTreesData = Object.freeze<SkillTree[]>([

@@ -1,4 +1,4 @@
-import { CutHit, Hit, Weapon, WeaponDamageProperties } from './types';
+import type { CutHit, Hit, Weapon, WeaponDamageProperties } from './types';
 import { GreatSwords, GreatSwordDamageProperties } from './great-sword';
 import { Hammers, HammerDamageProperties } from './hammer';
 import { Lances, LanceDamageProperties } from './lance';

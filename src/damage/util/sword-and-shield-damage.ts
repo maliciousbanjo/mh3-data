@@ -1,10 +1,10 @@
 import { Weapons } from '../../model';
 import {
-  SwordAndShieldTypes,
+  type SwordAndShieldTypes,
   WeaponClass,
-  WeaponTypes
+  type WeaponTypes
 } from '../../model/weapons';
-import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
+import type { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import { assertSwordAndShieldWeaponMultipliers } from './assertions';
 import {
   calculateElementalDamage,

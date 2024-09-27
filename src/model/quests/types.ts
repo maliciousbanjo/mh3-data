@@ -1,6 +1,6 @@
 import type { MonsterLevelTypes } from '../monster-levels';
 import type { ItemTypes } from '../items';
-import { MonsterTypes } from '../monsters';
+import type { MonsterTypes } from '../monsters';
 import { MapLocation, StarLevel } from './enum';
 
 export type QuestType =

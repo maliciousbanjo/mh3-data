@@ -8,7 +8,9 @@
     "/dist"
   ],
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",

@@ -87,4 +87,4 @@ export const LargeMonsterData = Object.freeze<MonsterTypes.LargeMonster[]>([
   Alatreon
 ]);
 
-export { MonsterTypes };
+export type { MonsterTypes };

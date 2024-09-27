@@ -1,4 +1,4 @@
-import { MonsterLevelRecord } from './types';
+import type { MonsterLevelRecord } from './types';
 
 /**
  * Per some research, it seems the `stagger` could be wrong?

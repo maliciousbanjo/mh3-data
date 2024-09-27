@@ -1,4 +1,4 @@
-import { QuestRegion } from './types';
+import type { QuestRegion } from './types';
 import { StarLevel, MapLocation } from './enum';
 
 export const VillageQuestData = Object.freeze<QuestRegion>({

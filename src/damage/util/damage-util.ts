@@ -1,8 +1,8 @@
-import { Sharpness, WeaponClass, WeaponTypes } from '../../model/weapons';
+import { Sharpness, WeaponClass, type WeaponTypes } from '../../model/weapons';
 import { Weapons } from '../../model';
-import { MonsterTypes } from '../../model/monsters';
-import { MonsterLevelTypes } from '../../model/monster-levels';
-import { DamageBuffArgs } from '../types';
+import type { MonsterTypes } from '../../model/monsters';
+import type { MonsterLevelTypes } from '../../model/monster-levels';
+import type { DamageBuffArgs } from '../types';
 import {
   ARMOR_SKILL_MULTIPLIERS,
   CRITICAL_HIT_MULTIPLIERS,

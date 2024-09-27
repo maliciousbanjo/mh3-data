@@ -1,6 +1,10 @@
 import { Weapons } from '../../model';
-import { SwitchAxeTypes, WeaponClass, WeaponTypes } from '../../model/weapons';
-import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
+import {
+  type SwitchAxeTypes,
+  WeaponClass,
+  type WeaponTypes
+} from '../../model/weapons';
+import type { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import { assertSwitchAxeWeaponMultipliers } from './assertions';
 import {
   calculateElementalDamage,
