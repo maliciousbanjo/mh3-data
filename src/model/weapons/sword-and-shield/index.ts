@@ -1,4 +1,4 @@
-export * as SwordAndShieldTypes from './types';
+export type * as SwordAndShieldTypes from './types';
 export {
   SwordAndShields,
   SwordAndShieldDamageProperties

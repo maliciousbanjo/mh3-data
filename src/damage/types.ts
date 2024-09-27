@@ -1,9 +1,11 @@
-import { MonsterLevelTypes } from '../model/monster-levels';
-import { MonsterTypes } from '../model/monsters';
-import {
-  LongswordTypes,
+import type { MonsterLevelTypes } from '../model/monster-levels';
+import type { MonsterTypes } from '../model/monsters';
+import type {
+  Longsword,
+  Sharpness,
   SwitchAxeTypes,
   SwordAndShieldTypes,
+  WeaponClass,
   WeaponTypes
 } from '../model/weapons/';
 import {
@@ -19,7 +21,7 @@ import {
 export interface LongswordSpecialMultiplierArgs {
   middleOfBlade: boolean;
   fullSpiritGauge: boolean;
-  spiritGaugeColor: keyof typeof LongswordTypes.SpiritGaugeMultipliers;
+  spiritGaugeColor: keyof typeof Longsword.SpiritGaugeMultipliers;
 }
 
 /**
@@ -40,12 +42,12 @@ export interface WeaponMultipliers {
  * Weapon-related parameters used in damage calculation
  */
 export interface WeaponArgs {
-  weaponClass: WeaponTypes.WeaponClass;
+  weaponClass: WeaponClass;
   weaponId: number;
   /** Attack being performed by weapon */
   attackName: WeaponTypes.Attack['name'];
   /** Current weapon sharpness */
-  sharpness: WeaponTypes.Sharpness;
+  sharpness: Sharpness;
   /**
    * Multipliers specific to the weapon class eg; middle of blade, spirit guage color, etc
    */

@@ -1,17 +1,6 @@
-import { CommonTypes } from '../common';
-import { ItemTypes } from '../items';
-
-/**
- * Enumerated collection of weapon types that can be used as properties/arguments
- */
-export enum WeaponClass {
-  GREAT_SWORD = 'Great Sword',
-  SWORD_AND_SHIELD = 'Sword and Shield',
-  HAMMER = 'Hammer',
-  LANCE = 'Lance',
-  SWITCH_AXE = 'Switch Axe',
-  LONGSWORD = 'Longsword'
-}
+import type { CommonTypes } from '../common';
+import type { ItemTypes } from '../items';
+import { WeaponClass } from './enum';
 
 /**
  * Used for type validation in functions
@@ -23,20 +12,6 @@ export type ValidWeaponClasses =
   | WeaponClass.LANCE
   | WeaponClass.SWITCH_AXE
   | WeaponClass.LONGSWORD;
-
-/**
- * Enumerated collection of sharpness levels that can be used as properties/arguments
- */
-export enum Sharpness {
-  RED = 0,
-  ORANGE = 1,
-  YELLOW = 2,
-  GREEN = 3,
-  BLUE = 4,
-  WHITE = 5,
-  /** Only achievable with armor skill Sharpness+1 */
-  PURPLE = 6
-}
 
 /**
  * Properties specific to a hit with damage type 'cut'

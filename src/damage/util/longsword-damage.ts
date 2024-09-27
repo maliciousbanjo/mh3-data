@@ -1,6 +1,10 @@
 import { Weapons } from '../../model';
-import { LongswordTypes, WeaponTypes } from '../../model/weapons';
-import { SpiritGaugeMultipliers } from '../../model/weapons/longsword/types';
+import {
+  Longsword,
+  LongswordTypes,
+  WeaponClass,
+  WeaponTypes
+} from '../../model/weapons';
 import {
   Damage,
   DamageBuffArgs,
@@ -26,9 +30,8 @@ const FULL_SPIRIT_GAUGE_MULTIPLIER = 1.13;
 function getLongwordAttack(
   attackName: string
 ): WeaponTypes.Attack<LongswordTypes.LongswordAttack> {
-  const lsAttack = Weapons.Util.getWeaponDamageProperties(
-    WeaponTypes.WeaponClass.LONGSWORD
-  ).attackGroups[0];
+  const lsAttack = Weapons.getWeaponDamageProperties(WeaponClass.LONGSWORD)
+    .attackGroups[0];
 
   const result = lsAttack.attacks.find(atk => atk.name === attackName);
   if (!result) {
@@ -55,18 +58,17 @@ function getLongswordSpecialVarMultiplier({
     specialVarMultiplier = specialVarMultiplier * FULL_SPIRIT_GAUGE_MULTIPLIER;
   }
 
-  const spiritGaugeMultiplier = SpiritGaugeMultipliers[spiritGaugeColor];
+  const spiritGaugeMultiplier =
+    Longsword.SpiritGaugeMultipliers[spiritGaugeColor];
 
   return specialVarMultiplier * spiritGaugeMultiplier;
 }
 
 function validateLongsword(
-  weapon: WeaponTypes.Weapon<WeaponTypes.WeaponClass>
+  weapon: WeaponTypes.Weapon<WeaponClass>
 ): asserts weapon is LongswordTypes.Longsword {
-  if (weapon.type !== WeaponTypes.WeaponClass.LONGSWORD) {
-    throw new Error(
-      `${weapon.name} is not a ${WeaponTypes.WeaponClass.LONGSWORD}`
-    );
+  if (weapon.type !== WeaponClass.LONGSWORD) {
+    throw new Error(`${weapon.name} is not a ${WeaponClass.LONGSWORD}`);
   }
 }
 
@@ -83,16 +85,13 @@ export function calculateLongswordDamage(
   const { hitzoneValues, levelMultipliers } = monsterArgs;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
-  const longsword = Weapons.Util.getWeapon(
-    Weapons.WeaponTypes.WeaponClass.LONGSWORD,
-    weaponId
-  );
+  const longsword = Weapons.getWeapon(Weapons.WeaponClass.LONGSWORD, weaponId);
   validateLongsword(longsword);
   validateWeaponSharpness(longsword, sharpness);
   assertLongswordWeaponMultipliers(longswordArgs);
 
-  const { classModifier } = Weapons.Util.getWeaponDamageProperties(
-    WeaponTypes.WeaponClass.LONGSWORD
+  const { classModifier } = Weapons.getWeaponDamageProperties(
+    WeaponClass.LONGSWORD
   );
 
   const attack = getLongwordAttack(attackName);
@@ -112,7 +111,7 @@ export function calculateLongswordDamage(
 
   // TODO: This should probably get lifted into a shared function that all weapons can use
   return attack.hits.map<Damage>(hit => {
-    const isCut = Weapons.Util.isCutHit(hit);
+    const isCut = Weapons.isCutHit(hit);
     const hitzoneMultiplier = isCut ? hitzoneValues.cut : hitzoneValues.impact;
 
     const rawDamage =

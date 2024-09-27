@@ -1,4 +1,5 @@
-import { Monster, MonsterType } from './types';
+import type { Monster } from './types';
+import { MonsterType } from './enum';
 
 export const Aptonoth = Object.freeze<Monster>({
   id: 0,

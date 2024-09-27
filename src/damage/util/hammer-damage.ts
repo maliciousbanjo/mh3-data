@@ -1,5 +1,5 @@
 import { Weapons } from '../../model';
-import { HammerTypes, WeaponTypes } from '../../model/weapons';
+import { HammerTypes, WeaponClass, WeaponTypes } from '../../model/weapons';
 import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import {
   calculateElementalDamage,
@@ -15,26 +15,23 @@ import {
 function getHammerAttack(
   attackName: string
 ): WeaponTypes.Attack<HammerTypes.HammerAttack> {
-  const hammerAttacks = Weapons.Util.getWeaponDamageProperties(
-    WeaponTypes.WeaponClass.HAMMER
-  ).attackGroups[0];
+  const hammerAttacks = Weapons.getWeaponDamageProperties(WeaponClass.HAMMER)
+    .attackGroups[0];
 
   const result = hammerAttacks.attacks.find(atk => atk.name === attackName);
   if (!result) {
     throw new Error(
-      `${attackName} is not a valid ${WeaponTypes.WeaponClass.HAMMER} attack`
+      `${attackName} is not a valid ${WeaponClass.HAMMER} attack`
     );
   }
   return result as WeaponTypes.Attack<HammerTypes.HammerAttack>;
 }
 
 function validateHammer(
-  weapon: WeaponTypes.Weapon<WeaponTypes.WeaponClass>
+  weapon: WeaponTypes.Weapon<WeaponClass>
 ): asserts weapon is HammerTypes.Hammer {
-  if (weapon.type !== WeaponTypes.WeaponClass.HAMMER) {
-    throw new Error(
-      `${weapon.name} is not a ${WeaponTypes.WeaponClass.HAMMER}`
-    );
+  if (weapon.type !== WeaponClass.HAMMER) {
+    throw new Error(`${weapon.name} is not a ${WeaponClass.HAMMER}`);
   }
 }
 
@@ -50,15 +47,12 @@ export function calculateHammerDamage(
   const { hitzoneValues, levelMultipliers } = monsterArgs;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
-  const hammer = Weapons.Util.getWeapon(
-    Weapons.WeaponTypes.WeaponClass.HAMMER,
-    weaponId
-  );
+  const hammer = Weapons.getWeapon(Weapons.WeaponClass.HAMMER, weaponId);
   validateHammer(hammer);
   validateWeaponSharpness(hammer, sharpness);
 
-  const { classModifier } = Weapons.Util.getWeaponDamageProperties(
-    WeaponTypes.WeaponClass.HAMMER
+  const { classModifier } = Weapons.getWeaponDamageProperties(
+    WeaponClass.HAMMER
   );
 
   const attack = getHammerAttack(attackName);
@@ -72,7 +66,7 @@ export function calculateHammerDamage(
 
   // TODO: This should probably get lifted into a shared function that all weapons can use
   return attack.hits.map<Damage>(hit => {
-    const isCut = Weapons.Util.isCutHit(hit);
+    const isCut = Weapons.isCutHit(hit);
     const hitzoneMultiplier = isCut ? hitzoneValues.cut : hitzoneValues.impact;
 
     const rawDamage =

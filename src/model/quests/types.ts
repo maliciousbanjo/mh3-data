@@ -1,6 +1,7 @@
-import { ItemTypes } from '../items';
+import type { MonsterLevelTypes } from '../monster-levels';
+import type { ItemTypes } from '../items';
 import { MonsterTypes } from '../monsters';
-import { MonsterLevelTypes } from '../monster-levels';
+import { MapLocation, StarLevel } from './enum';
 
 export type QuestType =
   | 'gather'
@@ -23,19 +24,6 @@ export type QuestGoal =
   | 'repel'
   | 'other'
   | 'anthill';
-
-export enum Location {
-  DESERTED_ISLAND = 'Deserted Island',
-  SANDY_PLAINS = 'Sandy Plains',
-  FLOODED_FOREST = 'Flooded Forest',
-  TUNDRA = 'Tundra',
-  VOLCANO = 'Volcano',
-  UNDERWATER_RUIN = 'Underwater Ruin',
-  GREAT_DESERT = 'Great Desert',
-  SACRED_LAND = 'Sacred Land',
-  LAND_ARENA = 'Land Arena',
-  WATER_ARENA = 'Water Arena'
-}
 
 /**
  * These properties were derived from the publicly-available MH3 Quest editor.
@@ -71,7 +59,7 @@ interface Quest {
   contract: number;
   /** Maximum quest time in minutes */
   time: number;
-  location: Location;
+  location: MapLocation;
   /** If true, hunter will spawn in random location */
   randomspawn: boolean;
   /** Quest completion reward in zenny */
@@ -143,16 +131,6 @@ export interface RepelQuest extends Quest {
   type: 'repel';
   goal: 'repel' | 'other';
   bosses: BossInfo[];
-}
-
-/** Quest star levels */
-export enum StarLevel {
-  OneStar = '1 Star',
-  TwoStar = '2 Star',
-  ThreeStar = '3 Star',
-  FourStar = '4 Star',
-  FiveStar = '5 Star',
-  SixStar = '6 Star'
 }
 
 export interface QuestRegion {

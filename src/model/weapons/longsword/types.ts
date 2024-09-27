@@ -1,4 +1,5 @@
-import { Weapon, WeaponClass } from '../types';
+import { WeaponClass } from '../enum';
+import type { Weapon } from '../types';
 
 export type LongswordAttack =
   | 'Unsheathe Attack'
@@ -12,12 +13,5 @@ export type LongswordAttack =
   | 'Spirit 2'
   | 'Spirit 3'
   | 'Spirit Finisher';
-
-export enum SpiritGaugeMultipliers {
-  NONE = 1,
-  WHITE = 1.05,
-  YELLOW = 1.1,
-  RED = 1.3
-}
 
 export type Longsword = Weapon<WeaponClass.LONGSWORD>;

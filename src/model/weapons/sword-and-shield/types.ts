@@ -1,4 +1,5 @@
-import { Weapon, WeaponClass } from '../types';
+import { WeaponClass } from '../enum';
+import type { Weapon } from '../types';
 
 export type SwordAndShieldAttack =
   // land attacks

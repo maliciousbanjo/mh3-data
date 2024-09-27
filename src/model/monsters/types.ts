@@ -1,18 +1,6 @@
-import { CommonTypes } from '../common';
-import { ItemTypes } from '../items';
-
-export enum MonsterType {
-  Herbvr = 'herbivore',
-  Nptron = 'neopteron',
-  Lynian = 'lynian',
-  Fish = 'fish',
-  PscWyv = 'piscine wyvern',
-  BrdWyv = 'bird wyvern',
-  FlyWyv = 'flying wyvern',
-  Levthn = 'leviathan',
-  BrtWyv = 'brute wyvern',
-  EldDrg = 'elder dragon'
-}
+import { StatusType } from '../common';
+import type { ItemTypes } from '../items';
+import { MonsterType } from './enum';
 
 /**
  * Monster hitzone values for different damage types.
@@ -163,17 +151,17 @@ export interface LargeMonster
   carves: CarveZone[];
   breakables: Breakable[];
   status?: {
-    [CommonTypes.StatusType.POISON]: StatusValues & {
+    [StatusType.POISON]: StatusValues & {
       /** Damage taken by poison per interval */
       damage: {
         initial: number;
         total: number;
       };
     };
-    [CommonTypes.StatusType.PARALYSIS]: StatusValues;
-    [CommonTypes.StatusType.SLEEP]: StatusValues;
-    [CommonTypes.StatusType.STUN]: StatusValues;
-    [CommonTypes.StatusType.EXHAUST]?: Omit<StatusValues, 'duration'>;
+    [StatusType.PARALYSIS]: StatusValues;
+    [StatusType.SLEEP]: StatusValues;
+    [StatusType.STUN]: StatusValues;
+    [StatusType.EXHAUST]?: Omit<StatusValues, 'duration'>;
   };
   /** {@link MonsterType.EldDrg} cannot be captured */
   capture?: CaptureInfo;

@@ -1,11 +1,4 @@
-import {
-  CutHit,
-  Hit,
-  Sharpness,
-  Weapon,
-  WeaponClass,
-  WeaponDamageProperties
-} from './types';
+import { CutHit, Hit, Weapon, WeaponDamageProperties } from './types';
 import { GreatSwords, GreatSwordDamageProperties } from './great-sword';
 import { Hammers, HammerDamageProperties } from './hammer';
 import { Lances, LanceDamageProperties } from './lance';
@@ -15,6 +8,7 @@ import {
   SwordAndShields,
   SwordAndShieldDamageProperties
 } from './sword-and-shield';
+import { Sharpness, WeaponClass } from './enum';
 
 /**
  * Type guard for a {@link CutHit}

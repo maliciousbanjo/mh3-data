@@ -1,5 +1,9 @@
 import { Weapons } from '../../model';
-import { SwordAndShieldTypes, WeaponTypes } from '../../model/weapons';
+import {
+  SwordAndShieldTypes,
+  WeaponClass,
+  WeaponTypes
+} from '../../model/weapons';
 import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import { assertSwordAndShieldWeaponMultipliers } from './assertions';
 import {
@@ -19,8 +23,8 @@ function getSwordAndShieldAttack(
   swordAndShieldMode: SwordAndShieldTypes.SwordAndShieldAttackMode,
   attackName: string
 ): WeaponTypes.Attack<SwordAndShieldTypes.SwordAndShieldAttack> {
-  const swordAndShieldAttacks = Weapons.Util.getWeaponDamageProperties(
-    WeaponTypes.WeaponClass.SWORD_AND_SHIELD
+  const swordAndShieldAttacks = Weapons.getWeaponDamageProperties(
+    WeaponClass.SWORD_AND_SHIELD
   ).attackGroups.find(atkGroup => atkGroup.name === swordAndShieldMode);
   if (!swordAndShieldAttacks) {
     throw new Error(
@@ -39,12 +43,10 @@ function getSwordAndShieldAttack(
 }
 
 function validateSwordAndShield(
-  weapon: WeaponTypes.Weapon<WeaponTypes.WeaponClass>
+  weapon: WeaponTypes.Weapon<WeaponClass>
 ): asserts weapon is SwordAndShieldTypes.SwordAndShield {
-  if (weapon.type !== WeaponTypes.WeaponClass.SWORD_AND_SHIELD) {
-    throw new Error(
-      `${weapon.name} is not a ${WeaponTypes.WeaponClass.SWORD_AND_SHIELD}`
-    );
+  if (weapon.type !== WeaponClass.SWORD_AND_SHIELD) {
+    throw new Error(`${weapon.name} is not a ${WeaponClass.SWORD_AND_SHIELD}`);
   }
 }
 
@@ -61,16 +63,16 @@ export function calculateSwordAndShieldDamage(
   const { hitzoneValues, levelMultipliers } = monsterArgs;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
-  const swordAndShield = Weapons.Util.getWeapon(
-    Weapons.WeaponTypes.WeaponClass.SWORD_AND_SHIELD,
+  const swordAndShield = Weapons.getWeapon(
+    Weapons.WeaponClass.SWORD_AND_SHIELD,
     weaponId
   );
   validateSwordAndShield(swordAndShield);
   validateWeaponSharpness(swordAndShield, sharpness);
   assertSwordAndShieldWeaponMultipliers(swordAndShieldMode);
 
-  const { classModifier } = Weapons.Util.getWeaponDamageProperties(
-    WeaponTypes.WeaponClass.SWORD_AND_SHIELD
+  const { classModifier } = Weapons.getWeaponDamageProperties(
+    WeaponClass.SWORD_AND_SHIELD
   );
 
   const attack = getSwordAndShieldAttack(swordAndShieldMode, attackName);
@@ -85,7 +87,7 @@ export function calculateSwordAndShieldDamage(
 
   // TODO: This should probably get lifted into a shared function that all weapons can use
   return attack.hits.map<Damage>(hit => {
-    const isCut = Weapons.Util.isCutHit(hit);
+    const isCut = Weapons.isCutHit(hit);
 
     const hitzoneMultiplier = isCut ? hitzoneValues.cut : hitzoneValues.impact;
 

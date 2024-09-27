@@ -1,5 +1,5 @@
 import { Weapons } from '../../model';
-import { GreatSwordTypes, WeaponTypes } from '../../model/weapons';
+import { GreatSwordTypes, WeaponClass, WeaponTypes } from '../../model/weapons';
 import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import {
   calculateElementalDamage,
@@ -20,14 +20,13 @@ const LEVEL_THREE_CHARGE_MULTIPLIER = 1.3;
 function getGreatSwordAttack(
   attackName: string
 ): WeaponTypes.Attack<GreatSwordTypes.GreatSwordAttack> {
-  const gsAttacks = Weapons.Util.getWeaponDamageProperties(
-    WeaponTypes.WeaponClass.GREAT_SWORD
-  ).attackGroups[0];
+  const gsAttacks = Weapons.getWeaponDamageProperties(WeaponClass.GREAT_SWORD)
+    .attackGroups[0];
 
   const result = gsAttacks.attacks.find(atk => atk.name === attackName);
   if (!result) {
     throw new Error(
-      `${attackName} is not a valid ${WeaponTypes.WeaponClass.GREAT_SWORD} attack`
+      `${attackName} is not a valid ${WeaponClass.GREAT_SWORD} attack`
     );
   }
   return result as WeaponTypes.Attack<GreatSwordTypes.GreatSwordAttack>;
@@ -61,12 +60,10 @@ function getGreatSwordSpecialVarMultiplier(
 }
 
 function validateGreatSword(
-  weapon: WeaponTypes.Weapon<WeaponTypes.WeaponClass>
+  weapon: WeaponTypes.Weapon<WeaponClass>
 ): asserts weapon is GreatSwordTypes.GreatSword {
-  if (weapon.type !== WeaponTypes.WeaponClass.GREAT_SWORD) {
-    throw new Error(
-      `${weapon.name} is not a ${WeaponTypes.WeaponClass.GREAT_SWORD}`
-    );
+  if (weapon.type !== WeaponClass.GREAT_SWORD) {
+    throw new Error(`${weapon.name} is not a ${WeaponClass.GREAT_SWORD}`);
   }
 }
 
@@ -82,15 +79,15 @@ export function calculateGreatSwordDamage(
   const { hitzoneValues, levelMultipliers } = monsterArgs;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
-  const greatSword = Weapons.Util.getWeapon(
-    Weapons.WeaponTypes.WeaponClass.GREAT_SWORD,
+  const greatSword = Weapons.getWeapon(
+    Weapons.WeaponClass.GREAT_SWORD,
     weaponId
   );
   validateGreatSword(greatSword);
   validateWeaponSharpness(greatSword, sharpness);
 
-  const { classModifier } = Weapons.Util.getWeaponDamageProperties(
-    WeaponTypes.WeaponClass.GREAT_SWORD
+  const { classModifier } = Weapons.getWeaponDamageProperties(
+    WeaponClass.GREAT_SWORD
   );
 
   const sharpnessMultiplier = getSharpnessRawMultiplier(sharpness);
@@ -110,7 +107,7 @@ export function calculateGreatSwordDamage(
 
   // TODO: This should probably get lifted into a shared function that all weapons can use
   return attack.hits.map<Damage>(hit => {
-    const isCut = Weapons.Util.isCutHit(hit);
+    const isCut = Weapons.isCutHit(hit);
     const hitzoneMultiplier = isCut ? hitzoneValues.cut : hitzoneValues.impact;
 
     const rawDamage =

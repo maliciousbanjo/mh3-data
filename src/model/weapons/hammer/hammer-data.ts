@@ -1,5 +1,6 @@
-import { WeaponDamageProperties, WeaponClass } from '../types';
-import { Hammer, HammerAttack } from './types';
+import { WeaponClass } from '../enum';
+import type { WeaponDamageProperties } from '../types';
+import type { Hammer, HammerAttack } from './types';
 
 export const HammerDamageProperties = Object.freeze<
   WeaponDamageProperties<WeaponClass.HAMMER, HammerAttack>

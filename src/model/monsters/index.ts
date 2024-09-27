@@ -1,4 +1,5 @@
-import * as MonsterTypes from './types';
+import type * as MonsterTypes from './types';
+export * from './enum';
 import {
   Aptonoth,
   Kelbi,
@@ -38,8 +39,6 @@ import {
   JhenMohran,
   Alatreon
 } from './large-monster-data';
-
-export { MonsterTypes };
 
 /**
  * List of all small monsters
@@ -87,3 +86,5 @@ export const LargeMonsterData = Object.freeze<MonsterTypes.LargeMonster[]>([
   JhenMohran,
   Alatreon
 ]);
+
+export { MonsterTypes };

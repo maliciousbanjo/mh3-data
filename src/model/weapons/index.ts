@@ -1,38 +1,29 @@
-// Data
-import { GreatSwords, GreatSwordDamageProperties } from './great-sword';
-import {
-  SwordAndShields,
-  SwordAndShieldDamageProperties
-} from './sword-and-shield';
-import { Hammers, HammerDamageProperties } from './hammer';
-import { Lances, LanceDamageProperties } from './lance';
-import { SwitchAxes, SwitchAxeDamageProperties } from './switch-axe';
-import { Longswords, LongswordDamageProperties } from './longsword';
+import type * as WeaponTypes from './types';
+import type { GreatSwordTypes } from './great-sword';
+import type { HammerTypes } from './hammer';
+import type { LanceTypes } from './lance';
+import type { LongswordTypes } from './longsword';
+import type { SwitchAxeTypes } from './switch-axe';
+import type { SwordAndShieldTypes } from './sword-and-shield';
 
-// Types
-export type { GreatSwordTypes } from './great-sword';
-export type { SwordAndShieldTypes } from './sword-and-shield';
-export type { HammerTypes } from './hammer';
-export type { LanceTypes } from './lance';
-export type { SwitchAxeTypes } from './switch-axe';
-export type { LongswordTypes } from './longsword';
-export * as WeaponTypes from './types';
-export * as Util from './weapon-util';
+import * as GreatSword from './great-sword';
+import * as Hammer from './hammer';
+import * as Lance from './lance';
+import * as Longsword from './longsword';
+import * as SwitchAxe from './switch-axe';
+import * as SwordAndShield from './sword-and-shield';
 
-export {
-  GreatSwords,
-  SwordAndShields,
-  Hammers,
-  Lances,
-  SwitchAxes,
-  Longswords
+export type {
+  WeaponTypes,
+  GreatSwordTypes,
+  HammerTypes,
+  LanceTypes,
+  LongswordTypes,
+  SwitchAxeTypes,
+  SwordAndShieldTypes
 };
 
-export const DamageProperties = {
-  GreatSwordDamageProperties,
-  SwordAndShieldDamageProperties,
-  HammerDamageProperties,
-  LanceDamageProperties,
-  SwitchAxeDamageProperties,
-  LongswordDamageProperties
-};
+export * from './enum';
+export * from './weapon-util';
+
+export { GreatSword, Hammer, Lance, Longsword, SwitchAxe, SwordAndShield };

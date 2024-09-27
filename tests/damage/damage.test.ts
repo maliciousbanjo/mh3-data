@@ -17,7 +17,7 @@ describe('Damage', () => {
       expect(() =>
         calculateDamage(
           {
-            weaponClass: WeaponTypes.WeaponClass.GREAT_SWORD,
+            weaponClass: WeaponClass.GREAT_SWORD,
             weaponId: 1, // Iron Blade
             attackName: 'L3 Charge',
             sharpness: WeaponTypes.Sharpness.PURPLE,
@@ -37,7 +37,7 @@ describe('Damage', () => {
     it('Great Sword', () => {
       const damage = calculateDamage(
         {
-          weaponClass: WeaponTypes.WeaponClass.GREAT_SWORD,
+          weaponClass: WeaponClass.GREAT_SWORD,
           weaponId: 57, // Anguish (P)
           attackName: 'L3 Charge',
           sharpness: WeaponTypes.Sharpness.PURPLE,
@@ -60,7 +60,7 @@ describe('Damage', () => {
     it('Hammer', () => {
       const damage = calculateDamage(
         {
-          weaponClass: WeaponTypes.WeaponClass.HAMMER,
+          weaponClass: WeaponClass.HAMMER,
           weaponId: 49, // Devil's Crush (P)
           attackName: 'Superpound',
           sharpness: WeaponTypes.Sharpness.PURPLE,
@@ -81,7 +81,7 @@ describe('Damage', () => {
       it('Cut hitzone', () => {
         const damage = calculateDamage(
           {
-            weaponClass: WeaponTypes.WeaponClass.LANCE,
+            weaponClass: WeaponClass.LANCE,
             weaponId: 52, // Alatreon Gleam,
             attackName: 'High Stab Combo',
             sharpness: WeaponTypes.Sharpness.PURPLE,
@@ -107,7 +107,7 @@ describe('Damage', () => {
           RoyalLudroth.hitzoneGroups[0].hitzones['Head'];
         const damage = calculateDamage(
           {
-            weaponClass: WeaponTypes.WeaponClass.LANCE,
+            weaponClass: WeaponClass.LANCE,
             weaponId: 52, // Alatreon Gleam,
             attackName: 'High Stab Combo',
             sharpness: WeaponTypes.Sharpness.PURPLE,
@@ -135,7 +135,7 @@ describe('Damage', () => {
         expect(() =>
           calculateDamage(
             {
-              weaponClass: WeaponTypes.WeaponClass.LONGSWORD,
+              weaponClass: WeaponClass.LONGSWORD,
               weaponId: 19, // Dark Claw Demise
               attackName: 'Spirit Finisher',
               sharpness: WeaponTypes.Sharpness.PURPLE,
@@ -154,7 +154,7 @@ describe('Damage', () => {
       it('Spirit Gauge NONE', () => {
         const damage = calculateDamage(
           {
-            weaponClass: WeaponTypes.WeaponClass.LONGSWORD,
+            weaponClass: WeaponClass.LONGSWORD,
             weaponId: 19, // Dark Claw Demise
             attackName: 'Spirit Finisher',
             sharpness: WeaponTypes.Sharpness.PURPLE,
@@ -178,7 +178,7 @@ describe('Damage', () => {
       it('Spirit Gauge WHITE', () => {
         const damage = calculateDamage(
           {
-            weaponClass: WeaponTypes.WeaponClass.LONGSWORD,
+            weaponClass: WeaponClass.LONGSWORD,
             weaponId: 19, // Dark Claw Demise
             attackName: 'Spirit Finisher',
             sharpness: WeaponTypes.Sharpness.PURPLE,
@@ -202,7 +202,7 @@ describe('Damage', () => {
       it('Spirit Gauge YELLOW', () => {
         const damage = calculateDamage(
           {
-            weaponClass: WeaponTypes.WeaponClass.LONGSWORD,
+            weaponClass: WeaponClass.LONGSWORD,
             weaponId: 19, // Dark Claw Demise
             attackName: 'Spirit Finisher',
             sharpness: WeaponTypes.Sharpness.PURPLE,
@@ -226,7 +226,7 @@ describe('Damage', () => {
       it('Spirit Gauge RED', () => {
         const damage = calculateDamage(
           {
-            weaponClass: WeaponTypes.WeaponClass.LONGSWORD,
+            weaponClass: WeaponClass.LONGSWORD,
             weaponId: 19, // Dark Claw Demise
             attackName: 'Spirit Finisher',
             sharpness: WeaponTypes.Sharpness.PURPLE,
@@ -254,7 +254,7 @@ describe('Damage', () => {
           Deviljho.hitzoneGroups[1].hitzones['Stomach'];
         const damage = calculateDamage(
           {
-            weaponClass: WeaponTypes.WeaponClass.LONGSWORD,
+            weaponClass: WeaponClass.LONGSWORD,
             weaponId: 19, // Dark Claw Demise
             attackName: 'Step Slash',
             sharpness: WeaponTypes.Sharpness.PURPLE,
@@ -282,7 +282,7 @@ describe('Damage', () => {
         expect(() =>
           calculateDamage(
             {
-              weaponClass: WeaponTypes.WeaponClass.SWITCH_AXE,
+              weaponClass: WeaponClass.SWITCH_AXE,
               weaponId: 22, // Great Inceadeus
               attackName: 'Overhead Slash',
               sharpness: WeaponTypes.Sharpness.WHITE,
@@ -301,7 +301,7 @@ describe('Damage', () => {
       it('Power phial', () => {
         const damage = calculateDamage(
           {
-            weaponClass: WeaponTypes.WeaponClass.SWITCH_AXE,
+            weaponClass: WeaponClass.SWITCH_AXE,
             weaponId: 22, // Great Inceadeus
             attackName: 'Overhead Slash',
             sharpness: WeaponTypes.Sharpness.WHITE,
@@ -322,7 +322,7 @@ describe('Damage', () => {
       it('Element phial', () => {
         const damage = calculateDamage(
           {
-            weaponClass: WeaponTypes.WeaponClass.SWITCH_AXE,
+            weaponClass: WeaponClass.SWITCH_AXE,
             weaponId: 33, // Black Harvest
             attackName: 'Overhead Slash',
             sharpness: WeaponTypes.Sharpness.PURPLE,
@@ -347,7 +347,7 @@ describe('Damage', () => {
         expect(() =>
           calculateDamage(
             {
-              weaponClass: WeaponTypes.WeaponClass.SWORD_AND_SHIELD,
+              weaponClass: WeaponClass.SWORD_AND_SHIELD,
               weaponId: 55, // Alatreon Star
               attackName: 'Jumping Slash',
               sharpness: WeaponTypes.Sharpness.PURPLE,
@@ -367,7 +367,7 @@ describe('Damage', () => {
       it('Cut attack', () => {
         const damage = calculateDamage(
           {
-            weaponClass: WeaponTypes.WeaponClass.SWORD_AND_SHIELD,
+            weaponClass: WeaponClass.SWORD_AND_SHIELD,
             weaponId: 55, // Alatreon Star
             attackName: 'Jumping Slash',
             sharpness: WeaponTypes.Sharpness.PURPLE,
@@ -390,7 +390,7 @@ describe('Damage', () => {
       it('Impact attack', () => {
         const damage = calculateDamage(
           {
-            weaponClass: WeaponTypes.WeaponClass.SWORD_AND_SHIELD,
+            weaponClass: WeaponClass.SWORD_AND_SHIELD,
             weaponId: 55, // Alatreon Star
             attackName: 'Shield Combo',
             sharpness: WeaponTypes.Sharpness.PURPLE,

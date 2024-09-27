@@ -1,4 +1,5 @@
-import { Weapon, WeaponClass } from '../types';
+import type { Weapon } from '../types';
+import { WeaponClass } from '../enum';
 
 export type GreatSwordAttack =
   | 'Unsheathe Attack'

@@ -1,4 +1,4 @@
-import { WeaponTypes } from '../../model/weapons';
+import { Sharpness, WeaponClass, WeaponTypes } from '../../model/weapons';
 import { Weapons } from '../../model';
 import { MonsterTypes } from '../../model/monsters';
 import { MonsterLevelTypes } from '../../model/monster-levels';
@@ -22,13 +22,13 @@ const ELEMENTAL_DAMAGE_DIVIDER = 10;
  * @throws Error if weapon does not have provided sharpness level
  */
 export function validateWeaponSharpness(
-  weapon: WeaponTypes.Weapon<WeaponTypes.WeaponClass>,
-  sharpness: WeaponTypes.Sharpness
+  weapon: WeaponTypes.Weapon<WeaponClass>,
+  sharpness: Sharpness
 ): true {
   const validSharpness = sharpness <= weapon.sharpnessUp.length - 1;
   if (!validSharpness) {
     throw new Error(
-      `${weapon.name} cannot have ${Weapons.Util.sharpnessAsString(sharpness)} sharpness`
+      `${weapon.name} cannot have ${Weapons.sharpnessAsString(sharpness)} sharpness`
     );
   }
   return validSharpness;
@@ -37,23 +37,21 @@ export function validateWeaponSharpness(
 /**
  * @returns sharpness multiplier for RAW damage (as opposed to ELEMENTAL)
  */
-export function getSharpnessRawMultiplier(
-  sharpness: WeaponTypes.Sharpness
-): number {
+export function getSharpnessRawMultiplier(sharpness: Sharpness): number {
   switch (sharpness) {
-    case WeaponTypes.Sharpness.RED:
+    case Sharpness.RED:
       return 0.5;
-    case WeaponTypes.Sharpness.ORANGE:
+    case Sharpness.ORANGE:
       return 0.75;
-    case WeaponTypes.Sharpness.YELLOW:
+    case Sharpness.YELLOW:
       return 1;
-    case WeaponTypes.Sharpness.GREEN:
+    case Sharpness.GREEN:
       return 1.05;
-    case WeaponTypes.Sharpness.BLUE:
+    case Sharpness.BLUE:
       return 1.2;
-    case WeaponTypes.Sharpness.WHITE:
+    case Sharpness.WHITE:
       return 1.32;
-    case WeaponTypes.Sharpness.PURPLE:
+    case Sharpness.PURPLE:
       return 1.5;
     default:
       throw new Error(`Invalid sharpness value ${sharpness}`);
@@ -63,23 +61,21 @@ export function getSharpnessRawMultiplier(
 /**
  * @returns sharpness multiplier for ELEMENTAL damage (as opposed to RAW)
  */
-export function getSharpnessElementalMultiplier(
-  sharpness: WeaponTypes.Sharpness
-): number {
+export function getSharpnessElementalMultiplier(sharpness: Sharpness): number {
   switch (sharpness) {
-    case WeaponTypes.Sharpness.RED:
+    case Sharpness.RED:
       return 0.25;
-    case WeaponTypes.Sharpness.ORANGE:
+    case Sharpness.ORANGE:
       return 0.55;
-    case WeaponTypes.Sharpness.YELLOW:
+    case Sharpness.YELLOW:
       return 0.75;
-    case WeaponTypes.Sharpness.GREEN:
+    case Sharpness.GREEN:
       return 1;
-    case WeaponTypes.Sharpness.BLUE:
+    case Sharpness.BLUE:
       return 1.0625;
-    case WeaponTypes.Sharpness.WHITE:
+    case Sharpness.WHITE:
       return 1.125;
-    case WeaponTypes.Sharpness.PURPLE:
+    case Sharpness.PURPLE:
       return 1.2;
     default:
       throw new Error(`Invalid sharpness value ${sharpness}`);
@@ -92,7 +88,7 @@ export function getSharpnessElementalMultiplier(
  */
 function getHitzoneForWeaponElement(
   hitzoneValues: MonsterTypes.HitzoneValues,
-  weaponElement: WeaponTypes.Weapon<WeaponTypes.WeaponClass>['secondaryDamageType']
+  weaponElement: WeaponTypes.Weapon<WeaponClass>['secondaryDamageType']
 ) {
   if (
     weaponElement === 'sleep' ||
@@ -196,7 +192,7 @@ export function getRawMultiplier(rawArgs: DamageBuffArgs['rawArgs'] = {}) {
 export function calculateElementalDamage(
   weapon: WeaponTypes.Weapon<WeaponTypes.ValidWeaponClasses>,
   /** Current sharpness of weapon */
-  sharpness: WeaponTypes.Sharpness,
+  sharpness: Sharpness,
   /** Derived from Monster hitzone */
   hitzoneValues: MonsterTypes.HitzoneValues,
   levelMultipliers: MonsterLevelTypes.MonsterLevelMultipliers,

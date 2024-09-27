@@ -1,6 +1,6 @@
 import { Weapons } from '../../model';
 import { MonsterTypes } from '../../model/monsters';
-import { LanceTypes, WeaponTypes } from '../../model/weapons';
+import { LanceTypes, WeaponClass, WeaponTypes } from '../../model/weapons';
 import { isCutHit } from '../../model/weapons/weapon-util';
 import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import {
@@ -20,9 +20,8 @@ const LANCE_CHARGE_ELEMENTAL_MULTIPLIER = 0.25;
 function getLanceAttack(
   attackName: string
 ): WeaponTypes.Attack<LanceTypes.LanceAttack> {
-  const lanceAttacks = Weapons.Util.getWeaponDamageProperties(
-    WeaponTypes.WeaponClass.LANCE
-  ).attackGroups[0];
+  const lanceAttacks = Weapons.getWeaponDamageProperties(WeaponClass.LANCE)
+    .attackGroups[0];
 
   const result = lanceAttacks.attacks.find(atk => atk.name === attackName);
   if (!result) {
@@ -48,10 +47,10 @@ function getLanceHitzoneMultiplier(
 }
 
 function validateLance(
-  weapon: WeaponTypes.Weapon<WeaponTypes.WeaponClass>
+  weapon: WeaponTypes.Weapon<WeaponClass>
 ): asserts weapon is LanceTypes.Lance {
-  if (weapon.type !== WeaponTypes.WeaponClass.LANCE) {
-    throw new Error(`${weapon.name} is not a ${WeaponTypes.WeaponClass.LANCE}`);
+  if (weapon.type !== WeaponClass.LANCE) {
+    throw new Error(`${weapon.name} is not a ${WeaponClass.LANCE}`);
   }
 }
 
@@ -67,15 +66,12 @@ export function calculateLanceDamage(
   const { hitzoneValues, levelMultipliers } = monsterArgs;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
-  const lance = Weapons.Util.getWeapon(
-    Weapons.WeaponTypes.WeaponClass.LANCE,
-    weaponId
-  );
+  const lance = Weapons.getWeapon(Weapons.WeaponClass.LANCE, weaponId);
   validateLance(lance);
   validateWeaponSharpness(lance, sharpness);
 
-  const { classModifier } = Weapons.Util.getWeaponDamageProperties(
-    WeaponTypes.WeaponClass.LANCE
+  const { classModifier } = Weapons.getWeaponDamageProperties(
+    WeaponClass.LANCE
   );
 
   const attack = getLanceAttack(attackName);

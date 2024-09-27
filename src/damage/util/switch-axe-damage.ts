@@ -1,5 +1,5 @@
 import { Weapons } from '../../model';
-import { SwitchAxeTypes, WeaponTypes } from '../../model/weapons';
+import { SwitchAxeTypes, WeaponClass, WeaponTypes } from '../../model/weapons';
 import { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
 import { assertSwitchAxeWeaponMultipliers } from './assertions';
 import {
@@ -19,8 +19,8 @@ function getSwitchAxeAttack(
   switchAxeMode: SwitchAxeTypes.SwitchAxeAttackMode,
   attackName: string
 ): WeaponTypes.Attack<SwitchAxeTypes.SwitchAxeAttack> {
-  const switchAxeAttacks = Weapons.Util.getWeaponDamageProperties(
-    WeaponTypes.WeaponClass.SWITCH_AXE
+  const switchAxeAttacks = Weapons.getWeaponDamageProperties(
+    WeaponClass.SWITCH_AXE
   ).attackGroups.find(atkGroup => atkGroup.name === switchAxeMode);
 
   if (!switchAxeAttacks) {
@@ -51,15 +51,13 @@ function getSwitchAxeSpecialVarMultiplier(switchAxe: SwitchAxeTypes.SwitchAxe) {
 }
 
 function validateSwitchAxe(
-  weapon: WeaponTypes.Weapon<WeaponTypes.WeaponClass>
+  weapon: WeaponTypes.Weapon<WeaponClass>
 ): asserts weapon is SwitchAxeTypes.SwitchAxe {
   if (
-    weapon.type !== WeaponTypes.WeaponClass.SWITCH_AXE ||
+    weapon.type !== WeaponClass.SWITCH_AXE ||
     (weapon as SwitchAxeTypes.SwitchAxe).phial === undefined
   ) {
-    throw new Error(
-      `${weapon.name} is not a ${WeaponTypes.WeaponClass.SWITCH_AXE}`
-    );
+    throw new Error(`${weapon.name} is not a ${WeaponClass.SWITCH_AXE}`);
   }
 }
 
@@ -76,16 +74,13 @@ export function calculateSwitchAxeDamage(
   const { hitzoneValues, levelMultipliers } = monsterArgs;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
-  const switchAxe = Weapons.Util.getWeapon(
-    Weapons.WeaponTypes.WeaponClass.SWITCH_AXE,
-    weaponId
-  );
+  const switchAxe = Weapons.getWeapon(Weapons.WeaponClass.SWITCH_AXE, weaponId);
   validateSwitchAxe(switchAxe);
   validateWeaponSharpness(switchAxe, sharpness);
   assertSwitchAxeWeaponMultipliers(switchAxeMode);
 
-  const { classModifier } = Weapons.Util.getWeaponDamageProperties(
-    WeaponTypes.WeaponClass.SWITCH_AXE
+  const { classModifier } = Weapons.getWeaponDamageProperties(
+    WeaponClass.SWITCH_AXE
   );
 
   const attack = getSwitchAxeAttack(switchAxeMode, attackName);
@@ -103,7 +98,7 @@ export function calculateSwitchAxeDamage(
 
   // TODO: This should probably get lifted into a shared function that all weapons can use
   return attack.hits.map<Damage>(hit => {
-    const isCut = Weapons.Util.isCutHit(hit);
+    const isCut = Weapons.isCutHit(hit);
     const hitzoneMultiplier = isCut ? hitzoneValues.cut : hitzoneValues.impact;
 
     const rawDamage =

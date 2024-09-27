@@ -1,12 +1,3 @@
-/** Status ailment types */
-export enum StatusType {
-  POISON = 'poison',
-  PARALYSIS = 'paralysis',
-  SLEEP = 'sleep',
-  STUN = 'stun',
-  EXHAUST = 'exhaust'
-}
-
 /** Levels of item/equipment rarity */
 export type Rarity = 1 | 2 | 3 | 4 | 4 | 5 | 6 | 7;
 

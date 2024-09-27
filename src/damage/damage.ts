@@ -35,22 +35,22 @@ export function calculateDamage(
 ) {
   const { weaponClass } = weaponArgs;
   switch (weaponClass) {
-    case Weapons.WeaponTypes.WeaponClass.GREAT_SWORD: {
+    case Weapons.WeaponClass.GREAT_SWORD: {
       return calculateGreatSwordDamage(weaponArgs, monsterArgs, damageBuffArgs);
     }
-    case Weapons.WeaponTypes.WeaponClass.HAMMER: {
+    case Weapons.WeaponClass.HAMMER: {
       return calculateHammerDamage(weaponArgs, monsterArgs, damageBuffArgs);
     }
-    case Weapons.WeaponTypes.WeaponClass.LANCE: {
+    case Weapons.WeaponClass.LANCE: {
       return calculateLanceDamage(weaponArgs, monsterArgs, damageBuffArgs);
     }
-    case Weapons.WeaponTypes.WeaponClass.LONGSWORD: {
+    case Weapons.WeaponClass.LONGSWORD: {
       return calculateLongswordDamage(weaponArgs, monsterArgs, damageBuffArgs);
     }
-    case Weapons.WeaponTypes.WeaponClass.SWITCH_AXE: {
+    case Weapons.WeaponClass.SWITCH_AXE: {
       return calculateSwitchAxeDamage(weaponArgs, monsterArgs, damageBuffArgs);
     }
-    case Weapons.WeaponTypes.WeaponClass.SWORD_AND_SHIELD: {
+    case Weapons.WeaponClass.SWORD_AND_SHIELD: {
       return calculateSwordAndShieldDamage(
         weaponArgs,
         monsterArgs,

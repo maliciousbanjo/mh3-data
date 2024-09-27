@@ -1,2 +1,2 @@
-export * as DamageTypes from './types';
-export * as Util from './damage';
+export type * as DamageTypes from './types';
+export * as Damage from './damage';
