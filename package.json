@@ -2,6 +2,10 @@
   "name": "mh3-data",
   "version": "1.0.0",
   "description": "Monster Hunter Tri data for monsters, quests, and weapons",
+  "type": "module",
+  "export": {
+    "import": "dist/index.js"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
