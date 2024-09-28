@@ -3195,7 +3195,7 @@ export const Deviljho = Object.freeze<LargeMonster>({
   hp: 12078,
   hitzoneGroups: [
     {
-      name: 'Angry',
+      name: 'Calm',
       hitzones: {
         Head: {
           cut: 0.5,
@@ -3217,7 +3217,7 @@ export const Deviljho = Object.freeze<LargeMonster>({
           thunder: 0.25,
           ice: 0.1,
           dragon: 0.25,
-          stagger: 200
+          stagger: 150
         },
         Neck: {
           cut: 0.25,
@@ -3277,7 +3277,7 @@ export const Deviljho = Object.freeze<LargeMonster>({
       }
     },
     {
-      name: 'More Angry',
+      name: 'Enraged',
       hitzones: {
         Head: {
           cut: 0.4,
@@ -3299,7 +3299,7 @@ export const Deviljho = Object.freeze<LargeMonster>({
           thunder: 0.35,
           ice: 0.15,
           dragon: 0.35,
-          stagger: 200
+          stagger: 150
         },
         Neck: {
           cut: 0.21,

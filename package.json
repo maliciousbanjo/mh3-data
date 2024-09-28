@@ -3,11 +3,18 @@
   "version": "1.0.1",
   "description": "Monster Hunter Tri data for monsters, quests, and weapons",
   "type": "module",
-  "export": {
-    "import": "dist/index.js"
-  },
-  "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./damage": "./dist/damage/index.js",
+    "./armorSkills": "./dist/model/armor-skills/index.js",
+    "./common": "./dist/model/common/index.js",
+    "./items": "./dist/model/items/index.js",
+    "./monsterLevels": "./dist/model/monster-levels/index.js",
+    "./monsters": "./dist/model/monsters/index.js",
+    "./quests": "./dist/model/quests/index.js",
+    "./weapons": "./dist/model/weapons/index.js"
+  },
   "files": [
     "/dist"
   ],

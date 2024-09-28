@@ -6,6 +6,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
   starLevels: {
     [StarLevel.OneStar]: [
       {
+        id: 0x03e8,
         name: "Harvest 'Shroom",
         client: 'Clan Matriarch',
         type: 'gather',
@@ -34,6 +35,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x03e9,
         name: 'Prescription Pick-up',
         client: 'Medicine Man',
         type: 'gather',
@@ -59,6 +61,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x03ea,
         name: 'Goldenfish Opportunity',
         client: 'Fish Fanboy',
         type: 'gather',
@@ -86,6 +89,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x03eb,
         name: 'Farm Aid',
         client: 'Old Farmer',
         type: 'hunt',
@@ -111,6 +115,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x03ec,
         name: "Guts: It's What's for Dinner",
         client: 'Manor Cook',
         type: 'gather',
@@ -123,7 +128,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 800,
         ko: 270,
         hrp: 0,
-        bosses: [{ type1: 29, type2: 0, level: 9, size: 100, min: 0, max: 0 }],
+        bosses: [
+          {
+            monsterId: 29,
+            startingArea: 0,
+            level: 9,
+            size: 100,
+            min: 0,
+            max: 0
+          }
+        ],
         secondaryRewards: [
           { itemId: 125, count: 2, chance: 24 },
           { itemId: 120, count: 2, chance: 20 },
@@ -135,6 +149,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x03ed,
         name: 'Sunken Treasures',
         client: 'Lovesick Kid',
         type: 'gather',
@@ -162,6 +177,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
     ],
     [StarLevel.TwoStar]: [
       {
+        id: 0x03f2,
         name: 'Bug Hunt',
         client: 'Brainy Biologist',
         type: 'hunt',
@@ -190,6 +206,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x03f3,
         name: 'Secret of the Crystal Bones',
         client: 'Archeologist',
         type: 'gather',
@@ -215,6 +232,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x03f4,
         name: 'No Guts, No Glory',
         client: 'Caravan Leader',
         type: 'gather',
@@ -240,6 +258,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x03f5,
         name: 'Big Game Hunting',
         client: 'Head Village Guard',
         type: 'hunt',
@@ -252,7 +271,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 1000,
         ko: 340,
         hrp: 0,
-        bosses: [{ type1: 17, type2: 0, level: 3, size: 100, min: 1, max: 6 }],
+        bosses: [
+          {
+            monsterId: 17,
+            startingArea: 0,
+            level: 3,
+            size: 100,
+            min: 1,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 149, count: 1, chance: 30 },
           { itemId: 315, count: 8, chance: 26 },
@@ -266,6 +294,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x03f6,
         name: "Who's the Boss?",
         client: 'Brainy Biologist',
         type: 'capture',
@@ -278,7 +307,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 2000,
         ko: 670,
         hrp: 0,
-        bosses: [{ type1: 17, type2: 0, level: 3, size: 100, min: 1, max: 6 }],
+        bosses: [
+          {
+            monsterId: 17,
+            startingArea: 0,
+            level: 3,
+            size: 100,
+            min: 1,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 123, count: 2, chance: 26 },
           { itemId: 131, count: 2, chance: 22 },
@@ -294,6 +332,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x07d0,
         name: 'No Love for Ludroth',
         client: 'Ex-Caravan Sentry',
         type: 'hunt',
@@ -320,6 +359,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
     ],
     [StarLevel.ThreeStar]: [
       {
+        id: 0x03fc,
         name: 'Rhenoplos Rampage!',
         client: 'Bandaged Boy',
         type: 'hunt',
@@ -345,6 +385,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x03fd,
         name: 'Herbivore Egg Hunt!',
         client: 'Newlywed Wife',
         type: 'gather',
@@ -373,6 +414,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x03fe,
         name: 'Pest Control',
         client: 'Cattle Rancher',
         type: 'hunt',
@@ -400,6 +442,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x03ff,
         name: 'The Deadliest Catch',
         client: 'Flooded Forest Guardsman',
         type: 'hunt',
@@ -425,6 +468,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x0400,
         name: 'Playing with Fire',
         client: 'Red-cheeked Huntress',
         type: 'hunt',
@@ -437,7 +481,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 1800,
         ko: 600,
         hrp: 0,
-        bosses: [{ type1: 21, type2: 0, level: 5, size: 100, min: 1, max: 6 }],
+        bosses: [
+          {
+            monsterId: 21,
+            startingArea: 0,
+            level: 5,
+            size: 100,
+            min: 1,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 123, count: 2, chance: 26 },
           { itemId: 131, count: 2, chance: 22 },
@@ -453,6 +506,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x0401,
         name: 'Trapping a Trickster',
         client: 'Newbie Hunter',
         type: 'capture',
@@ -465,7 +519,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 3600,
         ko: 1200,
         hrp: 0,
-        bosses: [{ type1: 21, type2: 0, level: 5, size: 100, min: 1, max: 6 }],
+        bosses: [
+          {
+            monsterId: 21,
+            startingArea: 0,
+            level: 5,
+            size: 100,
+            min: 1,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 125, count: 2, chance: 24 },
           { itemId: 120, count: 2, chance: 20 },
@@ -481,6 +544,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x0402,
         name: 'Save Our Boat',
         client: 'Fleet Captain',
         type: 'hunt',
@@ -493,7 +557,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 2000,
         ko: 670,
         hrp: 0,
-        bosses: [{ type1: 27, type2: 0, level: 5, size: 100, min: 1, max: 6 }],
+        bosses: [
+          {
+            monsterId: 27,
+            startingArea: 0,
+            level: 5,
+            size: 100,
+            min: 1,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 114, count: 1, chance: 24 },
           { itemId: 132, count: 2, chance: 20 },
@@ -509,6 +582,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x0403,
         name: 'Leading the Charge',
         client: 'Brainy Biologist',
         type: 'hunt',
@@ -521,7 +595,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 2600,
         ko: 870,
         hrp: 0,
-        bosses: [{ type1: 19, type2: 0, level: 5, size: 100, min: 1, max: 6 }],
+        bosses: [
+          {
+            monsterId: 19,
+            startingArea: 0,
+            level: 5,
+            size: 100,
+            min: 1,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 150, count: 1, chance: 20 },
           { itemId: 316, count: 8, chance: 18 },
@@ -537,6 +620,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x0404,
         name: 'A Royal Pain',
         client: "The Lord's Beloved Daughter",
         type: 'capture',
@@ -549,7 +633,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 4000,
         ko: 1340,
         hrp: 0,
-        bosses: [{ type1: 27, type2: 0, level: 5, size: 100, min: 1, max: 6 }],
+        bosses: [
+          {
+            monsterId: 27,
+            startingArea: 0,
+            level: 5,
+            size: 100,
+            min: 1,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 125, count: 2, chance: 24 },
           { itemId: 120, count: 2, chance: 20 },
@@ -565,6 +658,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x07d1,
         name: 'Shakalaka Savior!',
         client: 'Carefree Lad',
         type: 'escort',
@@ -595,6 +689,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
     ],
     [StarLevel.FourStar]: [
       {
+        id: 0x0406,
         name: 'Lost in Blue',
         client: 'Tundra-expedition Member',
         type: 'slay',
@@ -617,6 +712,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x0407,
         name: 'Leader of the Icepack',
         client: 'Tundra-expedition Leader',
         type: 'hunt',
@@ -629,7 +725,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 1400,
         ko: 470,
         hrp: 0,
-        bosses: [{ type1: 18, type2: 0, level: 7, size: 100, min: 1, max: 8 }],
+        bosses: [
+          {
+            monsterId: 18,
+            startingArea: 0,
+            level: 7,
+            size: 100,
+            min: 1,
+            max: 8
+          }
+        ],
         secondaryRewards: [
           { itemId: 149, count: 2, chance: 32 },
           { itemId: 315, count: 8, chance: 27 },
@@ -644,6 +749,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x0408,
         name: 'Cold Stones',
         client: 'Female Geologist',
         type: 'gather',
@@ -672,6 +778,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x0409,
         name: 'Hunter Killer',
         client: 'Wounded Hunter',
         type: 'multihunt',
@@ -685,9 +792,30 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ko: 1270,
         hrp: 0,
         bosses: [
-          { type1: 19, type2: 0, level: 7, size: 100, min: 1, max: 6 },
-          { type1: 17, type2: 0, level: 7, size: 100, min: 1, max: 6 },
-          { type1: 21, type2: 0, level: 7, size: 100, min: 1, max: 6 }
+          {
+            monsterId: 19,
+            startingArea: 0,
+            level: 7,
+            size: 100,
+            min: 1,
+            max: 6
+          },
+          {
+            monsterId: 17,
+            startingArea: 0,
+            level: 7,
+            size: 100,
+            min: 1,
+            max: 6
+          },
+          {
+            monsterId: 21,
+            startingArea: 0,
+            level: 7,
+            size: 100,
+            min: 1,
+            max: 6
+          }
         ],
         secondaryRewards: [
           { itemId: 131, count: 1, chance: 20 },
@@ -701,6 +829,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x040a,
         name: 'Harvest Tour: Sandy Plains',
         client: 'Felyne Tour Guide',
         type: 'harvest',
@@ -725,6 +854,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x040b,
         name: 'Harvest Tour: Flooded Forest',
         client: 'Felyne Tour Guide',
         type: 'harvest',
@@ -749,6 +879,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x040c,
         name: 'Dragon Lady',
         client: 'Village Protector',
         type: 'hunt',
@@ -761,7 +892,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 2800,
         ko: 940,
         hrp: 0,
-        bosses: [{ type1: 22, type2: 0, level: 7, size: 100, min: 1, max: 6 }],
+        bosses: [
+          {
+            monsterId: 22,
+            startingArea: 0,
+            level: 7,
+            size: 100,
+            min: 1,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 125, count: 2, chance: 24 },
           { itemId: 120, count: 2, chance: 20 },
@@ -777,6 +917,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x040d,
         name: 'The Creeping Venom',
         client: 'Cocky Hunter',
         type: 'hunt',
@@ -789,7 +930,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 3400,
         ko: 1140,
         hrp: 0,
-        bosses: [{ type1: 25, type2: 0, level: 7, size: 100, min: 1, max: 7 }],
+        bosses: [
+          {
+            monsterId: 25,
+            startingArea: 0,
+            level: 7,
+            size: 100,
+            min: 1,
+            max: 7
+          }
+        ],
         secondaryRewards: [
           { itemId: 151, count: 1, chance: 16 },
           { itemId: 316, count: 12, chance: 12 },
@@ -808,6 +958,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x040e,
         name: 'A Royal Rumble',
         client: 'Middle-aged Knight',
         type: 'capture',
@@ -820,7 +971,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 5600,
         ko: 1870,
         hrp: 0,
-        bosses: [{ type1: 22, type2: 0, level: 7, size: 100, min: 1, max: 6 }],
+        bosses: [
+          {
+            monsterId: 22,
+            startingArea: 0,
+            level: 7,
+            size: 100,
+            min: 1,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 406, count: 1, chance: 35 },
           { itemId: 301, count: 1, chance: 25 },
@@ -834,6 +994,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x040f,
         name: 'Poached Wyvern Eggs',
         client: 'Royal Cook',
         type: 'gather',
@@ -861,6 +1022,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x07d2,
         name: 'Accident Investigation',
         client: 'Trader',
         type: 'hunt',
@@ -873,7 +1035,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 3000,
         ko: 1000,
         hrp: 0,
-        bosses: [{ type1: 28, type2: 0, level: 7, size: 100, min: 0, max: 6 }],
+        bosses: [
+          {
+            monsterId: 28,
+            startingArea: 0,
+            level: 7,
+            size: 100,
+            min: 0,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 150, count: 1, chance: 20 },
           { itemId: 316, count: 8, chance: 18 },
@@ -891,6 +1062,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
     ],
     [StarLevel.FiveStar]: [
       {
+        id: 0x0410,
         name: 'Best the Lava Beasts!',
         client: 'Caravan Leader',
         type: 'slay',
@@ -917,6 +1089,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x0411,
         name: 'Heat Exhaustion',
         client: 'City Blacksmith',
         type: 'gather',
@@ -945,6 +1118,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x0412,
         name: 'The Lord of the Seas',
         client: 'Oceanographer',
         type: 'capture',
@@ -957,7 +1131,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 7200,
         ko: 2400,
         hrp: 0,
-        bosses: [{ type1: 29, type2: 0, level: 9, size: 100, min: 1, max: 6 }],
+        bosses: [
+          {
+            monsterId: 29,
+            startingArea: 0,
+            level: 9,
+            size: 100,
+            min: 1,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 151, count: 1, chance: 16 },
           { itemId: 316, count: 12, chance: 12 },
@@ -976,6 +1159,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x0413,
         name: 'Harvest Tour: Tundra',
         client: 'Felyne Tour Guide',
         type: 'harvest',
@@ -1000,6 +1184,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         bosses: []
       },
       {
+        id: 0x0414,
         name: 'The Wrath of Rathalos',
         client: 'Princess of a Ruined Land',
         type: 'hunt',
@@ -1012,7 +1197,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 4800,
         ko: 1600,
         hrp: 0,
-        bosses: [{ type1: 23, type2: 0, level: 11, size: 100, min: 1, max: 6 }],
+        bosses: [
+          {
+            monsterId: 23,
+            startingArea: 0,
+            level: 11,
+            size: 100,
+            min: 1,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 306, count: 1, chance: 29 },
           { itemId: 341, count: 1, chance: 24 },
@@ -1029,6 +1223,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x0415,
         name: "A Bard's Tale",
         client: 'Wandering Bard',
         type: 'hunt',
@@ -1041,7 +1236,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 4800,
         ko: 1600,
         hrp: 0,
-        bosses: [{ type1: 26, type2: 0, level: 11, size: 100, min: 1, max: 7 }],
+        bosses: [
+          {
+            monsterId: 26,
+            startingArea: 0,
+            level: 11,
+            size: 100,
+            min: 1,
+            max: 7
+          }
+        ],
         secondaryRewards: [
           { itemId: 133, count: 2, chance: 26 },
           { itemId: 112, count: 2, chance: 22 },
@@ -1057,6 +1261,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x0416,
         name: 'The Horned Dragon',
         client: 'Watchtower Sentinel',
         type: 'hunt',
@@ -1069,7 +1274,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 5600,
         ko: 1870,
         hrp: 0,
-        bosses: [{ type1: 24, type2: 0, level: 11, size: 100, min: 1, max: 6 }],
+        bosses: [
+          {
+            monsterId: 24,
+            startingArea: 0,
+            level: 11,
+            size: 100,
+            min: 1,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 316, count: 16, chance: 25 },
           { itemId: 406, count: 1, chance: 24 },
@@ -1084,6 +1298,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x0417,
         name: 'The Omen',
         client: 'Shipmaster',
         type: 'hunt',
@@ -1096,7 +1311,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 5200,
         ko: 1740,
         hrp: 0,
-        bosses: [{ type1: 23, type2: 0, level: 11, size: 100, min: 1, max: 6 }],
+        bosses: [
+          {
+            monsterId: 23,
+            startingArea: 0,
+            level: 11,
+            size: 100,
+            min: 1,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 151, count: 1, chance: 16 },
           { itemId: 316, count: 12, chance: 12 },
@@ -1115,6 +1339,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x0418,
         name: 'Denizen of the Molten Deep',
         client: 'Fire Country Chieftain',
         type: 'hunt',
@@ -1127,7 +1352,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 6000,
         ko: 2000,
         hrp: 0,
-        bosses: [{ type1: 30, type2: 0, level: 13, size: 100, min: 1, max: 6 }],
+        bosses: [
+          {
+            monsterId: 30,
+            startingArea: 0,
+            level: 13,
+            size: 100,
+            min: 1,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 306, count: 1, chance: 29 },
           { itemId: 341, count: 1, chance: 24 },
@@ -1144,6 +1378,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x0419,
         name: "The Volcano's Fury",
         client: 'Scarred Hunter',
         type: 'hunt',
@@ -1156,7 +1391,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 5600,
         ko: 1870,
         hrp: 0,
-        bosses: [{ type1: 20, type2: 0, level: 11, size: 100, min: 1, max: 6 }],
+        bosses: [
+          {
+            monsterId: 20,
+            startingArea: 0,
+            level: 11,
+            size: 100,
+            min: 1,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 316, count: 16, chance: 25 },
           { itemId: 406, count: 1, chance: 24 },
@@ -1171,6 +1415,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x041a,
         name: "Uragaan's Trail",
         client: 'Brainy Biologist',
         type: 'capture',
@@ -1183,7 +1428,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 8600,
         ko: 2870,
         hrp: 0,
-        bosses: [{ type1: 20, type2: 0, level: 11, size: 100, min: 1, max: 6 }],
+        bosses: [
+          {
+            monsterId: 20,
+            startingArea: 0,
+            level: 11,
+            size: 100,
+            min: 1,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 406, count: 1, chance: 35 },
           { itemId: 301, count: 1, chance: 25 },
@@ -1197,6 +1451,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x07d3,
         name: 'Trial of the Sea Dragon',
         client: 'Moga Village Chief',
         type: 'repel',
@@ -1209,7 +1464,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 2100,
         ko: 700,
         hrp: 0,
-        bosses: [{ type1: 29, type2: 2, level: 9, size: 100, min: 0, max: 6 }],
+        bosses: [
+          {
+            monsterId: 29,
+            startingArea: 2,
+            level: 9,
+            size: 100,
+            min: 0,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 125, count: 2, chance: 24 },
           { itemId: 120, count: 2, chance: 20 },
@@ -1221,6 +1485,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x07d4,
         name: 'Fell the Lagiacrus!',
         client: 'Moga Village Chief',
         type: 'hunt',
@@ -1233,7 +1498,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 4200,
         ko: 1400,
         hrp: 0,
-        bosses: [{ type1: 29, type2: 0, level: 9, size: 100, min: 0, max: 6 }],
+        bosses: [
+          {
+            monsterId: 29,
+            startingArea: 0,
+            level: 9,
+            size: 100,
+            min: 0,
+            max: 6
+          }
+        ],
         secondaryRewards: [
           { itemId: 284, count: 1, chance: 28 },
           { itemId: 151, count: 1, chance: 23 },
@@ -1250,6 +1524,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
     ],
     [StarLevel.SixStar]: [
       {
+        id: 0x0424,
         name: 'Mating Season',
         client: 'Moga Village Chief',
         type: 'multihunt',
@@ -1263,8 +1538,22 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ko: 2540,
         hrp: 0,
         bosses: [
-          { type1: 22, type2: 0, level: 16, size: 100, min: 0, max: 9 },
-          { type1: 23, type2: 1, level: 16, size: 100, min: 0, max: 9 }
+          {
+            monsterId: 22,
+            startingArea: 0,
+            level: 16,
+            size: 100,
+            min: 0,
+            max: 9
+          },
+          {
+            monsterId: 23,
+            startingArea: 1,
+            level: 16,
+            size: 100,
+            min: 0,
+            max: 9
+          }
         ],
         secondaryRewards: [
           { itemId: 316, count: 16, chance: 25 },
@@ -1276,6 +1565,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x0425,
         name: 'Four Horns',
         client: 'Spoiled Princess',
         type: 'multihunt',
@@ -1289,8 +1579,22 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ko: 3740,
         hrp: 0,
         bosses: [
-          { type1: 24, type2: 0, level: 16, size: 100, min: 0, max: 9 },
-          { type1: 24, type2: 1, level: 16, size: 100, min: 0, max: 9 }
+          {
+            monsterId: 24,
+            startingArea: 0,
+            level: 16,
+            size: 100,
+            min: 0,
+            max: 9
+          },
+          {
+            monsterId: 24,
+            startingArea: 1,
+            level: 16,
+            size: 100,
+            min: 0,
+            max: 9
+          }
         ],
         secondaryRewards: [
           { itemId: 316, count: 16, chance: 25 },
@@ -1302,6 +1606,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x0426,
         name: 'Dangerous Waters',
         client: 'Shipmaster',
         type: 'multihunt',
@@ -1315,8 +1620,22 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ko: 2000,
         hrp: 0,
         bosses: [
-          { type1: 27, type2: 1, level: 17, size: 100, min: 0, max: 9 },
-          { type1: 28, type2: 0, level: 18, size: 100, min: 0, max: 9 }
+          {
+            monsterId: 27,
+            startingArea: 1,
+            level: 17,
+            size: 100,
+            min: 0,
+            max: 9
+          },
+          {
+            monsterId: 28,
+            startingArea: 0,
+            level: 18,
+            size: 100,
+            min: 0,
+            max: 9
+          }
         ],
         secondaryRewards: [
           { itemId: 316, count: 16, chance: 25 },
@@ -1328,6 +1647,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x0427,
         name: 'White Wind of the Tundra',
         client: 'Troop Captain',
         type: 'multihunt',
@@ -1341,8 +1661,22 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ko: 3200,
         hrp: 0,
         bosses: [
-          { type1: 26, type2: 2, level: 16, size: 100, min: 0, max: 7 },
-          { type1: 26, type2: 1, level: 16, size: 100, min: 0, max: 7 }
+          {
+            monsterId: 26,
+            startingArea: 2,
+            level: 16,
+            size: 100,
+            min: 0,
+            max: 7
+          },
+          {
+            monsterId: 26,
+            startingArea: 1,
+            level: 16,
+            size: 100,
+            min: 0,
+            max: 7
+          }
         ],
         secondaryRewards: [
           { itemId: 316, count: 16, chance: 25 },
@@ -1354,6 +1688,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x0428,
         name: 'The Death of Sky and Sea',
         client: 'Imperial Envoy',
         type: 'multihunt',
@@ -1367,8 +1702,22 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ko: 3000,
         hrp: 0,
         bosses: [
-          { type1: 29, type2: 0, level: 18, size: 100, min: 0, max: 9 },
-          { type1: 23, type2: 1, level: 18, size: 100, min: 0, max: 9 }
+          {
+            monsterId: 29,
+            startingArea: 0,
+            level: 18,
+            size: 100,
+            min: 0,
+            max: 9
+          },
+          {
+            monsterId: 23,
+            startingArea: 1,
+            level: 18,
+            size: 100,
+            min: 0,
+            max: 9
+          }
         ],
         secondaryRewards: [
           { itemId: 316, count: 16, chance: 25 },
@@ -1380,6 +1729,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x0429,
         name: 'A Burnt Offering',
         client: 'Fire Country Princess',
         type: 'multihunt',
@@ -1393,8 +1743,22 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ko: 3870,
         hrp: 0,
         bosses: [
-          { type1: 20, type2: 0, level: 17, size: 100, min: 0, max: 9 },
-          { type1: 30, type2: 1, level: 17, size: 100, min: 0, max: 9 }
+          {
+            monsterId: 20,
+            startingArea: 0,
+            level: 17,
+            size: 100,
+            min: 0,
+            max: 9
+          },
+          {
+            monsterId: 30,
+            startingArea: 1,
+            level: 17,
+            size: 100,
+            min: 0,
+            max: 9
+          }
         ],
         secondaryRewards: [
           { itemId: 316, count: 16, chance: 25 },
@@ -1406,6 +1770,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         ]
       },
       {
+        id: 0x07d5,
         name: 'Save Moga Village!',
         client: 'Moga Village Chief',
         type: 'repel',
@@ -1418,10 +1783,20 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 6000,
         ko: 2000,
         hrp: 0,
-        bosses: [{ type1: 31, type2: 0, level: 16, size: 100, min: 0, max: 0 }],
+        bosses: [
+          {
+            monsterId: 31,
+            startingArea: 0,
+            level: 16,
+            size: 100,
+            min: 0,
+            max: 0
+          }
+        ],
         secondaryRewards: []
       },
       {
+        id: 0x07d6,
         name: 'The Decisive Battle',
         client: 'Guild Headquarters',
         type: 'slay',
@@ -1434,7 +1809,16 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
         reward: 12000,
         ko: 4000,
         hrp: 0,
-        bosses: [{ type1: 31, type2: 0, level: 17, size: 100, min: 0, max: 0 }],
+        bosses: [
+          {
+            monsterId: 31,
+            startingArea: 0,
+            level: 17,
+            size: 100,
+            min: 0,
+            max: 0
+          }
+        ],
         secondaryRewards: [
           { itemId: 426, count: 1, chance: 30 },
           { itemId: 413, count: 2, chance: 25 },
@@ -1447,6 +1831,7 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
   },
   arena: [
     {
+      id: 0x2328,
       name: 'Great Jaggi Team Takedown',
       client: 'Announcer/Receptionist',
       type: 'slay',
@@ -1459,9 +1844,13 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       reward: 500,
       ko: 180,
       hrp: 0,
-      bosses: [{ type1: 17, type2: 0, level: 23, size: 100, min: 0, max: 0 }]
+      bosses: [
+        { monsterId: 17, startingArea: 0, level: 23, size: 100, min: 0, max: 0 }
+      ],
+      secondaryRewards: []
     },
     {
+      id: 0x2329,
       name: 'Qurupeco Team Takedown',
       client: 'Announcer/Receptionist',
       type: 'slay',
@@ -1474,9 +1863,13 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       reward: 500,
       ko: 180,
       hrp: 0,
-      bosses: [{ type1: 21, type2: 0, level: 23, size: 100, min: 0, max: 0 }]
+      bosses: [
+        { monsterId: 21, startingArea: 0, level: 23, size: 100, min: 0, max: 0 }
+      ],
+      secondaryRewards: []
     },
     {
+      id: 0x232b,
       name: 'Barroth Team Takedown',
       client: 'Announcer/Receptionist',
       type: 'slay',
@@ -1489,9 +1882,13 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       reward: 1000,
       ko: 200,
       hrp: 0,
-      bosses: [{ type1: 19, type2: 0, level: 23, size: 100, min: 0, max: 0 }]
+      bosses: [
+        { monsterId: 19, startingArea: 0, level: 23, size: 100, min: 0, max: 0 }
+      ],
+      secondaryRewards: []
     },
     {
+      id: 0x232a,
       name: 'Royal Ludroth Team Takedown',
       client: 'Announcer/Receptionist',
       type: 'slay',
@@ -1504,9 +1901,13 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       reward: 1000,
       ko: 200,
       hrp: 0,
-      bosses: [{ type1: 27, type2: 0, level: 23, size: 100, min: 0, max: 0 }]
+      bosses: [
+        { monsterId: 27, startingArea: 0, level: 23, size: 100, min: 0, max: 0 }
+      ],
+      secondaryRewards: []
     },
     {
+      id: 0x232c,
       name: 'Rathian Team Takedown',
       client: 'Announcer/Receptionist',
       type: 'slay',
@@ -1519,9 +1920,13 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       reward: 1000,
       ko: 200,
       hrp: 0,
-      bosses: [{ type1: 22, type2: 0, level: 26, size: 100, min: 0, max: 0 }]
+      bosses: [
+        { monsterId: 22, startingArea: 0, level: 26, size: 100, min: 0, max: 0 }
+      ],
+      secondaryRewards: []
     },
     {
+      id: 0x232d,
       name: 'Lagiacrus Team Takedown',
       client: 'Announcer/Receptionist',
       type: 'slay',
@@ -1534,9 +1939,13 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       reward: 1500,
       ko: 220,
       hrp: 0,
-      bosses: [{ type1: 29, type2: 0, level: 23, size: 100, min: 0, max: 0 }]
+      bosses: [
+        { monsterId: 29, startingArea: 0, level: 23, size: 100, min: 0, max: 0 }
+      ],
+      secondaryRewards: []
     },
     {
+      id: 0x232e,
       name: 'Uragaan Team Takedown',
       client: 'Announcer/Receptionist',
       type: 'slay',
@@ -1549,9 +1958,13 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       reward: 1500,
       ko: 220,
       hrp: 0,
-      bosses: [{ type1: 20, type2: 0, level: 23, size: 100, min: 0, max: 0 }]
+      bosses: [
+        { monsterId: 20, startingArea: 0, level: 23, size: 100, min: 0, max: 0 }
+      ],
+      secondaryRewards: []
     },
     {
+      id: 0x232f,
       name: 'Wyvern Team Takedown',
       client: 'Announcer/Receptionist',
       type: 'slay',
@@ -1565,11 +1978,20 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       ko: 230,
       hrp: 0,
       bosses: [
-        { type1: 22, type2: 0, level: 36, size: 100, min: 0, max: 0 },
-        { type1: 23, type2: 1, level: 37, size: 100, min: 0, max: 0 }
-      ]
+        {
+          monsterId: 22,
+          startingArea: 0,
+          level: 36,
+          size: 100,
+          min: 0,
+          max: 0
+        },
+        { monsterId: 23, startingArea: 1, level: 37, size: 100, min: 0, max: 0 }
+      ],
+      secondaryRewards: []
     },
     {
+      id: 0x2330,
       name: 'Water Arena Rumble',
       client: 'Announcer/Receptionist',
       type: 'slay',
@@ -1583,11 +2005,20 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       ko: 230,
       hrp: 0,
       bosses: [
-        { type1: 28, type2: 0, level: 39, size: 100, min: 0, max: 0 },
-        { type1: 29, type2: 1, level: 36, size: 100, min: 0, max: 0 }
-      ]
+        {
+          monsterId: 28,
+          startingArea: 0,
+          level: 39,
+          size: 100,
+          min: 0,
+          max: 0
+        },
+        { monsterId: 29, startingArea: 1, level: 36, size: 100, min: 0, max: 0 }
+      ],
+      secondaryRewards: []
     },
     {
+      id: 0x2331,
       name: 'Arena Free-for-all',
       client: 'Announcer/Receptionist',
       type: 'slay',
@@ -1601,10 +2032,25 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       ko: 350,
       hrp: 0,
       bosses: [
-        { type1: 19, type2: 1, level: 36, size: 100, min: 0, max: 0 },
-        { type1: 26, type2: 1, level: 36, size: 100, min: 0, max: 0 },
-        { type1: 23, type2: 0, level: 38, size: 115, min: 0, max: 0 }
-      ]
+        {
+          monsterId: 19,
+          startingArea: 1,
+          level: 36,
+          size: 100,
+          min: 0,
+          max: 0
+        },
+        {
+          monsterId: 26,
+          startingArea: 1,
+          level: 36,
+          size: 100,
+          min: 0,
+          max: 0
+        },
+        { monsterId: 23, startingArea: 0, level: 38, size: 115, min: 0, max: 0 }
+      ],
+      secondaryRewards: []
     }
   ],
   events: []

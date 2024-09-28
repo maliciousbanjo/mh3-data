@@ -30,9 +30,8 @@ export type QuestGoal =
  * The values are incorrect/flawed. ZeSpyro
  */
 interface BossInfo {
-  type1: MonsterTypes.Monster['id'];
-  /** Starting area? */
-  type2: 0 | 1 | 2;
+  monsterId: MonsterTypes.Monster['id'];
+  startingArea: 0 | 1 | 2;
   /** TODO: Unidentified monster levels: 30, 55, 59, 60 */
   level: MonsterLevelTypes.MonsterLevel | 30 | 55 | 59 | 60;
 
@@ -50,7 +49,8 @@ interface BossInfo {
  * 'target' points to differnt ids. Gather quests have IDs for items. Hunt/capture likely
  * have IDs for monsters, but the monsters themselves don't seem to have IDs.
  */
-interface Quest {
+export interface Quest {
+  id: number;
   name: string;
   client: string;
   type: QuestType;
@@ -120,7 +120,10 @@ export interface EscortQuest extends Quest {
   targets: Record<MonsterTypes.Monster['id'], NumberRequired>;
 }
 
-export interface ArenaQuest extends Omit<Quest, 'secondaryRewards'> {
+/**
+ * Typically used for Arena and Elder Dragon quests
+ */
+export interface SlayQuest extends Quest {
   type: 'slay';
   goal: 'hunt';
   targets: Record<MonsterTypes.Monster['id'], NumberRequired>;
@@ -143,6 +146,6 @@ export interface QuestRegion {
     [StarLevel.FiveStar]: Quest[];
     [StarLevel.SixStar]: Quest[];
   };
-  arena: ArenaQuest[];
+  arena: SlayQuest[];
   events: Quest[];
 }
