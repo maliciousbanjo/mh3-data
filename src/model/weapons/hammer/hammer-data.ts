@@ -7,7 +7,7 @@ export const HammerDamageProperties = Object.freeze<
 >({
   type: WeaponClass.HAMMER,
   classModifier: 5.2,
-  attackGroups: [
+  attackModes: [
     {
       name: 'default',
       attacks: [

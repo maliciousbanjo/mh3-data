@@ -25,7 +25,7 @@ function getHammerAttack(
   attackName: string
 ): WeaponTypes.Attack<HammerTypes.HammerAttack> {
   const hammerAttacks = Weapons.getWeaponDamageProperties(WeaponClass.HAMMER)
-    .attackGroups[0];
+    .attackModes[0];
 
   const result = hammerAttacks.attacks.find(atk => atk.name === attackName);
   if (!result) {

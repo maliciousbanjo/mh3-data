@@ -7,7 +7,7 @@ export const SwordAndShieldDamageProperties = Object.freeze<
 >({
   type: WeaponClass.SWORD_AND_SHIELD,
   classModifier: 1.4,
-  attackGroups: [
+  attackModes: [
     {
       name: 'land',
       attacks: [

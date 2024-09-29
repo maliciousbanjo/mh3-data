@@ -30,7 +30,7 @@ function getSwordAndShieldAttack(
 ): WeaponTypes.Attack<SwordAndShieldTypes.SwordAndShieldAttack> {
   const swordAndShieldAttacks = Weapons.getWeaponDamageProperties(
     WeaponClass.SWORD_AND_SHIELD
-  ).attackGroups.find(atkGroup => atkGroup.name === swordAndShieldMode);
+  ).attackModes.find(atkGroup => atkGroup.name === swordAndShieldMode);
   if (!swordAndShieldAttacks) {
     throw new Error(
       `${swordAndShieldMode} is not a valid sword and shield attack mode`

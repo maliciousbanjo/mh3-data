@@ -7,7 +7,7 @@ export const SwitchAxeDamageProperties = Object.freeze<
 >({
   type: WeaponClass.SWITCH_AXE,
   classModifier: 5.4,
-  attackGroups: [
+  attackModes: [
     {
       name: 'axe',
       attacks: [

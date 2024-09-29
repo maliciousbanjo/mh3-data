@@ -36,7 +36,7 @@ export interface ImpactHit {
 export type Hit = CutHit | ImpactHit;
 
 /**
- * Base type for an attack, used by {@link AttackGroup}
+ * Base type for an attack, used by {@link AttackMode}
  *
  * @typeParam N Name of attack
  */
@@ -51,7 +51,7 @@ export interface Attack<N = string> {
  *
  * @typeParam N Possible names of attacks
  */
-export interface AttackGroup<N = string> {
+export interface AttackMode<N = string> {
   /** Usage scenario @example default, underwater, axe mode */
   name: string;
   attacks: Attack<N>[];
@@ -70,7 +70,7 @@ export interface WeaponDamageProperties<
   type: T;
   /** Used in the damage/item buff calculations */
   classModifier: number;
-  attackGroups: AttackGroup<N>[];
+  attackModes: AttackMode<N>[];
 }
 
 export type SecondaryDamageType =

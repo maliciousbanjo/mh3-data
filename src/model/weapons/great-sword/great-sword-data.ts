@@ -7,7 +7,7 @@ export const GreatSwordDamageProperties = Object.freeze<
 >({
   type: WeaponClass.GREAT_SWORD,
   classModifier: 4.8,
-  attackGroups: [
+  attackModes: [
     {
       name: 'default',
       attacks: [

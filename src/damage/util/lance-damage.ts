@@ -30,7 +30,7 @@ function getLanceAttack(
   attackName: string
 ): WeaponTypes.Attack<LanceTypes.LanceAttack> {
   const lanceAttacks = Weapons.getWeaponDamageProperties(WeaponClass.LANCE)
-    .attackGroups[0];
+    .attackModes[0];
 
   const result = lanceAttacks.attacks.find(atk => atk.name === attackName);
   if (!result) {

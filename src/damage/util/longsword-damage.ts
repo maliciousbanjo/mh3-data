@@ -31,7 +31,7 @@ function getLongwordAttack(
   attackName: string
 ): WeaponTypes.Attack<LongswordTypes.LongswordAttack> {
   const lsAttack = Weapons.getWeaponDamageProperties(WeaponClass.LONGSWORD)
-    .attackGroups[0];
+    .attackModes[0];
 
   const result = lsAttack.attacks.find(atk => atk.name === attackName);
   if (!result) {

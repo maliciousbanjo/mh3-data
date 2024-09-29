@@ -7,7 +7,7 @@ export const LongswordDamageProperties = Object.freeze<
 >({
   type: WeaponClass.LONGSWORD,
   classModifier: 3.3,
-  attackGroups: [
+  attackModes: [
     {
       name: 'default',
       attacks: [

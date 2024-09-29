@@ -30,7 +30,7 @@ function getGreatSwordAttack(
   attackName: string
 ): WeaponTypes.Attack<GreatSwordTypes.GreatSwordAttack> {
   const gsAttacks = Weapons.getWeaponDamageProperties(WeaponClass.GREAT_SWORD)
-    .attackGroups[0];
+    .attackModes[0];
 
   const result = gsAttacks.attacks.find(atk => atk.name === attackName);
   if (!result) {

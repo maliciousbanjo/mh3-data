@@ -7,7 +7,7 @@ export const LanceDamageProperties = Object.freeze<
 >({
   type: WeaponClass.LANCE,
   classModifier: 2.3,
-  attackGroups: [
+  attackModes: [
     {
       name: 'default',
       attacks: [

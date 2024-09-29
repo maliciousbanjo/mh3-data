@@ -30,7 +30,7 @@ function getSwitchAxeAttack(
 ): WeaponTypes.Attack<SwitchAxeTypes.SwitchAxeAttack> {
   const switchAxeAttacks = Weapons.getWeaponDamageProperties(
     WeaponClass.SWITCH_AXE
-  ).attackGroups.find(atkGroup => atkGroup.name === switchAxeMode);
+  ).attackModes.find(atkGroup => atkGroup.name === switchAxeMode);
 
   if (!switchAxeAttacks) {
     throw new Error(`${switchAxeMode} is not a valid switch axe mode`);
