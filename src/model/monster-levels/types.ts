@@ -31,6 +31,8 @@ export type MonsterLevel =
   | 26
   | 27
   | 29
+  | 30
+  | 31
   | 32
   | 36
   | 37
@@ -44,8 +46,11 @@ export type MonsterLevel =
   | 52
   | 53
   | 54
+  | 55
   | 57
-  | 58;
+  | 58
+  | 59
+  | 60;
 
 /**
  * Collection of monster levels paired with stat multipliers

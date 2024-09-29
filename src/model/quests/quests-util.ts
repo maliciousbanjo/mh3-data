@@ -160,8 +160,5 @@ export function getMonsterLevelForQuest(
       `Quest ID ${questId} does not include monster ID ${monsterId}`
     );
 
-  // TODO: Fix this assertion by fixing the monsterLevel type
-  return MonsterLevels.getMonsterLevelMultipliers(
-    monster.level as MonsterLevelTypes.MonsterLevel
-  );
+  return MonsterLevels.getMonsterLevelMultipliers(monster.level);
 }

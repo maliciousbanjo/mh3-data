@@ -32,11 +32,9 @@ export type QuestGoal =
 interface BossInfo {
   monsterId: MonsterTypes.Monster['id'];
   startingArea: 0 | 1 | 2;
-  /** TODO: Unidentified monster levels: 30, 55, 59, 60 */
-  level: MonsterLevelTypes.MonsterLevel | 30 | 55 | 59 | 60;
-
+  level: MonsterLevelTypes.MonsterLevel;
   size: number;
-  /** controls random distribution of monster's HP */
+  /** controls random distribution of monster's level */
   min: number;
   /** controls random distribution of monster's size */
   max: number;

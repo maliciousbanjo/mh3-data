@@ -4,9 +4,9 @@ import type { MonsterLevelRecord } from './types';
  * !This data is not 100% accurate.
  *
  * Health multipliers do not actually work this way. Rather, each level
- * should correspond to a singular health multiplier. It is theorized that
- * there is an additional property in the quest format that allows for a variable
- * range of HP in a monsters.
+ * should correspond to a singular health multiplier. There is an additional
+ * property in the quest format that allows for a variable level range
+ * for a monster in the quest.
  *
  * This dataset was likely derived by examining the pre-defined quest files.
  *
@@ -28,15 +28,17 @@ export const MonsterLevelData = Object.freeze<MonsterLevelRecord>({
   26: { health: [0.64], defense: 0.95, stagger: 1.5 },
   27: { health: [1.15, 1.17, 1.2, 1.22, 1.25], defense: 0.95, stagger: 1.5 },
   29: { health: [1.2, 1.22, 1.25, 1.27, 1.3], defense: 0.95, stagger: 1.5 },
+  30: { health: [1.27], defense: 0.95, stagger: 1.5 },
+  31: { health: [1.3], defense: 0.95, stagger: 1.6 },
   32: { health: [1.3, 1.32, 1.35], defense: 0.95, stagger: 1.6 },
   /** Used in offline arena quests */
-  36: { health: [0.44], defense: 0.95, stagger: 1.5 },
+  36: { health: [0.8], defense: 0.95, stagger: 1.5 },
   /** Used in offline arena quests */
-  37: { health: [0.52], defense: 0.95, stagger: 1.5 },
+  37: { health: [0.95], defense: 0.95, stagger: 1.5 },
   /** Used in offline arena quests */
-  38: { health: [0.44], defense: 0.9, stagger: 1.5 },
+  38: { health: [0.8], defense: 0.95, stagger: 1.5 },
   /** Used in offline arena quests */
-  39: { health: [0.385], defense: 0.95, stagger: 1.5 },
+  39: { health: [0.7], defense: 0.95, stagger: 1.5 },
   40: { health: [0.8], defense: 0.95, stagger: 1.5 },
   44: { health: [1.48, 1.52, 1.56], defense: 0.8, stagger: 2.1 },
   45: { health: [1.48, 1.52, 1.56, 1.59, 1.63], defense: 0.8, stagger: 2.1 },
@@ -45,6 +47,9 @@ export const MonsterLevelData = Object.freeze<MonsterLevelRecord>({
   52: { health: [1], defense: 0.75, stagger: 2.2 },
   53: { health: [1.6], defense: 0.75, stagger: 2.2 },
   54: { health: [1.3], defense: 0.75, stagger: 2.1 },
+  55: { health: [1.1], defense: 0.75, stagger: 1.9 },
   57: { health: [1.9], defense: 0.75, stagger: 2.2 },
-  58: { health: [1.1], defense: 0.75, stagger: 2.2 }
+  58: { health: [1.1], defense: 0.75, stagger: 2.2 },
+  59: { health: [1.3], defense: 0.75, stagger: 2.2 },
+  60: { health: [1.5], defense: 0.75, stagger: 2.2 }
 });
