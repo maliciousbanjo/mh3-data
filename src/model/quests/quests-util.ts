@@ -144,6 +144,10 @@ export function isMonsterInQuest(
   return quest.bosses.some(boss => boss.monsterId === monsterId);
 }
 
+/**
+ * @returns MonsterLevelMultiplier for a given monster ID in a quest ID.
+ * @throw Error if monster is not present in quest
+ */
 export function getMonsterLevelForQuest(
   monsterId: MonsterTypes.Monster['id'],
   questId: Quest['id']
