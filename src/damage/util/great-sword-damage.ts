@@ -4,7 +4,12 @@ import {
   WeaponClass,
   type WeaponTypes
 } from '../../model/weapons';
-import type { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
+import type {
+  Damage,
+  DamageBuffArgs,
+  MonsterMultipliers,
+  WeaponArgs
+} from '../types';
 import {
   calculateElementalDamage,
   getWeaponClassMultiplier,
@@ -76,11 +81,11 @@ function validateGreatSword(
  */
 export function calculateGreatSwordDamage(
   weaponArgs: WeaponArgs,
-  monsterArgs: MonsterArgs,
-  damageBuffArgs: DamageBuffArgs
+  monsterMultipliers: MonsterMultipliers,
+  damageBuffArgs: Partial<DamageBuffArgs>
 ) {
   const { weaponId, attackName, sharpness, weaponMultipliers } = weaponArgs;
-  const { hitzoneValues, levelMultipliers } = monsterArgs;
+  const { hitzoneValues, levelMultipliers } = monsterMultipliers;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const greatSword = Weapons.getWeapon(

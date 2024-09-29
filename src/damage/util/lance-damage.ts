@@ -6,7 +6,12 @@ import {
   type WeaponTypes
 } from '../../model/weapons';
 import { isCutHit } from '../../model/weapons/weapon-util';
-import type { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
+import type {
+  Damage,
+  DamageBuffArgs,
+  MonsterMultipliers,
+  WeaponArgs
+} from '../types';
 import {
   calculateElementalDamage,
   getWeaponClassMultiplier,
@@ -63,11 +68,11 @@ function validateLance(
  */
 export function calculateLanceDamage(
   weaponArgs: WeaponArgs,
-  monsterArgs: MonsterArgs,
-  damageBuffArgs: DamageBuffArgs
+  monsterMultipliers: MonsterMultipliers,
+  damageBuffArgs: Partial<DamageBuffArgs>
 ) {
   const { weaponId, attackName, sharpness } = weaponArgs;
-  const { hitzoneValues, levelMultipliers } = monsterArgs;
+  const { hitzoneValues, levelMultipliers } = monsterMultipliers;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const lance = Weapons.getWeapon(Weapons.WeaponClass.LANCE, weaponId);

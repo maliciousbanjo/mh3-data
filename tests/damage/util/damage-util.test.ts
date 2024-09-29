@@ -34,27 +34,43 @@ describe('damage utils', () => {
     it('Powercharm', () => {
       expect(
         getWeaponClassMultiplier({
-          powercharm: true
+          powercharm: true,
+          powertalon: false,
+          armor: 'none',
+          demondrug: 'none',
+          might: 'none'
         })
       ).toBe(POWERCHARM_MULTIPLIER);
     });
     it('Powertalon', () => {
       expect(
         getWeaponClassMultiplier({
-          powertalon: true
+          powercharm: false,
+          powertalon: true,
+          armor: 'none',
+          demondrug: 'none',
+          might: 'none'
         })
       ).toBe(POWERTALON_MULTIPLIER);
     });
     it('Demondrug', () => {
       expect(
         getWeaponClassMultiplier({
-          demonDrug: 'megaDemondrug'
+          powercharm: false,
+          powertalon: false,
+          armor: 'none',
+          demondrug: 'megaDemondrug',
+          might: 'none'
         })
       ).toBe(DEMONDRUG_MULTIPLIERS.megaDemondrug);
     });
     it('Might', () => {
       expect(
         getWeaponClassMultiplier({
+          powercharm: false,
+          powertalon: false,
+          armor: 'none',
+          demondrug: 'none',
           might: 'mightPill'
         })
       ).toBe(MIGHT_MULTIPLIERS.mightPill);
@@ -62,6 +78,10 @@ describe('damage utils', () => {
     it('Armor Skill', () => {
       expect(
         getWeaponClassMultiplier({
+          powercharm: false,
+          powertalon: false,
+          demondrug: 'none',
+          might: 'none',
           armor: 'attackUpLarge'
         })
       ).toBe(ARMOR_SKILL_MULTIPLIERS.attackUpLarge);
@@ -73,8 +93,8 @@ describe('damage utils', () => {
       expect(
         getRawMultiplier({
           criticalHit: 'positive',
-          lowHealthSkill: undefined,
-          fortify: undefined
+          lowHealthSkill: 'none',
+          fortify: 'none'
         })
       ).toBe(CRITICAL_HIT_MULTIPLIERS['positive']);
     });
@@ -83,8 +103,8 @@ describe('damage utils', () => {
       expect(
         getRawMultiplier({
           criticalHit: 'negative',
-          lowHealthSkill: undefined,
-          fortify: undefined
+          lowHealthSkill: 'none',
+          fortify: 'none'
         })
       ).toBe(CRITICAL_HIT_MULTIPLIERS['negative']);
     });
@@ -92,9 +112,9 @@ describe('damage utils', () => {
     it('Adrenaline+2', () => {
       expect(
         getRawMultiplier({
-          criticalHit: undefined,
+          criticalHit: 'none',
           lowHealthSkill: 'adrenalineTwo',
-          fortify: undefined
+          fortify: 'none'
         })
       ).toBe(LOW_HEALTH_SKILL_MULTIPLIERS['adrenalineTwo']);
     });
@@ -102,9 +122,9 @@ describe('damage utils', () => {
     it('Felyine Heroics', () => {
       expect(
         getRawMultiplier({
-          criticalHit: undefined,
+          criticalHit: 'none',
           lowHealthSkill: 'heroics',
-          fortify: undefined
+          fortify: 'none'
         })
       ).toBe(LOW_HEALTH_SKILL_MULTIPLIERS['heroics']);
     });
@@ -112,8 +132,8 @@ describe('damage utils', () => {
     it('Fortify', () => {
       expect(
         getRawMultiplier({
-          criticalHit: undefined,
-          lowHealthSkill: undefined,
+          criticalHit: 'none',
+          lowHealthSkill: 'none',
           fortify: 'secondFaint'
         })
       ).toBe(FORTIFY_MULTIPLIERS['secondFaint']);

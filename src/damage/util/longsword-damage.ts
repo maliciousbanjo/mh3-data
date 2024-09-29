@@ -9,7 +9,7 @@ import type {
   Damage,
   DamageBuffArgs,
   LongswordSpecialMultiplierArgs,
-  MonsterArgs,
+  MonsterMultipliers,
   WeaponArgs
 } from '../types';
 import { assertLongswordWeaponMultipliers } from './assertions';
@@ -77,12 +77,12 @@ function validateLongsword(
  */
 export function calculateLongswordDamage(
   weaponArgs: WeaponArgs,
-  monsterArgs: MonsterArgs,
-  damageBuffArgs: DamageBuffArgs
+  monsterMultipliers: MonsterMultipliers,
+  damageBuffArgs: Partial<DamageBuffArgs>
 ) {
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { longsword: longswordArgs } = weaponArgs.weaponMultipliers;
-  const { hitzoneValues, levelMultipliers } = monsterArgs;
+  const { hitzoneValues, levelMultipliers } = monsterMultipliers;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const longsword = Weapons.getWeapon(Weapons.WeaponClass.LONGSWORD, weaponId);

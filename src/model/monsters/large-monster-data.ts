@@ -15,7 +15,7 @@ export const GreatJaggi = Object.freeze<LargeMonster>({
     '0': { '2': [3, 4], '4': [3] },
     '1': { '1': [4, 9], '4': [2, 6], Arena: [], Events: [0] }
   },
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -141,7 +141,7 @@ export const GreatBaggi = Object.freeze<LargeMonster>({
     '1': { '2': [13, 14], '5': [5], Arena: [], Events: [] }
   },
   hp: 3000,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -268,7 +268,7 @@ export const Barroth = Object.freeze<LargeMonster>({
     '1': { '2': [7, 15], '4': [9, 16], Arena: [3], Events: [] }
   },
   hp: 4000,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'Muddy',
       hitzones: {
@@ -542,7 +542,7 @@ export const Uragaan = Object.freeze<LargeMonster>({
     '1': { '3': [11, 12], '5': [11, 17], '6': [7], Arena: [2], Events: [1] }
   },
   hp: 4500,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -760,7 +760,7 @@ export const Qurupeco = Object.freeze<LargeMonster>({
     '1': { '1': [5, 10], '4': [3, 7], Arena: [3], Events: [] }
   },
   hp: 3200,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -960,7 +960,7 @@ export const Rathian = Object.freeze<LargeMonster>({
     }
   },
   hp: 4500,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -1188,7 +1188,7 @@ export const Rathalos = Object.freeze<LargeMonster>({
     }
   },
   hp: 4500,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -1409,7 +1409,7 @@ export const Diablos = Object.freeze<LargeMonster>({
     '1': { '3': [3, 4], '5': [3], '6': [4], Arena: [], Events: [1] }
   },
   hp: 5000,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -1621,7 +1621,7 @@ export const Gigginox = Object.freeze<LargeMonster>({
     '1': { '3': [6, 14], '5': [6, 7], Arena: [], Events: [] }
   },
   hp: 4500,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -1827,7 +1827,7 @@ export const Barioth = Object.freeze<LargeMonster>({
     '1': { '3': [7, 8], '5': [8, 16], '6': [6], Arena: [4], Events: [4] }
   },
   hp: 4000,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -2044,7 +2044,7 @@ export const RoyalLudroth = Object.freeze<LargeMonster>({
     '1': { '1': [6, 13], '4': [13, 15], Arena: [0], Events: [] }
   },
   hp: 3800,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -2259,7 +2259,7 @@ export const Gobul = Object.freeze<LargeMonster>({
     '1': { '2': [9, 10], '4': [14, 17], '6': [5], Arena: [], Events: [2] }
   },
   hp: 4000,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -2472,7 +2472,7 @@ export const Lagiacrus = Object.freeze<LargeMonster>({
     '1': { '3': [5, 17], '5': [4, 15], '6': [5], Arena: [], Events: [] }
   },
   hp: 4300,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -2703,7 +2703,7 @@ export const Agnaktor = Object.freeze<LargeMonster>({
     '1': { '3': [16], '5': [12, 13], '6': [7], Arena: [4], Events: [3] }
   },
   hp: 5000,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'Hot',
       hitzones: {
@@ -3052,7 +3052,7 @@ export const Ceadeus = Object.freeze<LargeMonster>({
     'Legendary elder dragons known as both "shining giants of the depths" and "great sea dragons." Not confirmed to exist until recently. The Moga quakes were due to a Ceadeus butting its abnormally long horns into the earth.',
   quests: { '0': { '6': [6, 7] }, '1': { Arena: [], Events: [] } },
   hp: 15000,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -3193,7 +3193,7 @@ export const Deviljho = Object.freeze<LargeMonster>({
     'The dreaded, nomadic Deviljho have no specific territory of their own. Their muscles swell if provoked, revealing old wounds. Needing to feed constantly due to high body heat, they can hunt nearby animals to extinction.',
   quests: { '1': { '6': [0, 1, 2], Arena: [], Events: [] }, '0': {} },
   hp: 12078,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'Calm',
       hitzones: {
@@ -3447,7 +3447,7 @@ export const JhenMohran = Object.freeze<LargeMonster>({
     '0': {}
   },
   hp: 27750,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -3639,7 +3639,7 @@ export const Alatreon = Object.freeze<LargeMonster>({
     'Blazing black dragons, so named for resembling both lightning and darkness. They mercilessly tear apart whoever touches their sharp scales. Elementally unstable, their actions can affect the very weather. Living natural disasters.',
   quests: { '1': { '6': [8], Arena: [], Events: [] }, '0': {} },
   hp: 10000,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'Regular',
       hitzones: {

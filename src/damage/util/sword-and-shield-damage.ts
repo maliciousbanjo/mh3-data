@@ -4,7 +4,12 @@ import {
   WeaponClass,
   type WeaponTypes
 } from '../../model/weapons';
-import type { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
+import type {
+  Damage,
+  DamageBuffArgs,
+  MonsterMultipliers,
+  WeaponArgs
+} from '../types';
 import { assertSwordAndShieldWeaponMultipliers } from './assertions';
 import {
   calculateElementalDamage,
@@ -55,12 +60,12 @@ function validateSwordAndShield(
  */
 export function calculateSwordAndShieldDamage(
   weaponArgs: WeaponArgs,
-  monsterArgs: MonsterArgs,
-  damageBuffArgs: DamageBuffArgs
+  monsterMultipliers: MonsterMultipliers,
+  damageBuffArgs: Partial<DamageBuffArgs>
 ) {
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { swordAndShieldMode } = weaponArgs.weaponMultipliers;
-  const { hitzoneValues, levelMultipliers } = monsterArgs;
+  const { hitzoneValues, levelMultipliers } = monsterMultipliers;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const swordAndShield = Weapons.getWeapon(

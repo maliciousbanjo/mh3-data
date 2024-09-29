@@ -4,7 +4,12 @@ import {
   WeaponClass,
   type WeaponTypes
 } from '../../model/weapons';
-import type { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
+import type {
+  Damage,
+  DamageBuffArgs,
+  MonsterMultipliers,
+  WeaponArgs
+} from '../types';
 import {
   calculateElementalDamage,
   getWeaponClassMultiplier,
@@ -44,11 +49,11 @@ function validateHammer(
  */
 export function calculateHammerDamage(
   weaponArgs: WeaponArgs,
-  monsterArgs: MonsterArgs,
-  damageBuffArgs: DamageBuffArgs
+  monsterMultipliers: MonsterMultipliers,
+  damageBuffArgs: Partial<DamageBuffArgs>
 ) {
   const { weaponId, attackName, sharpness } = weaponArgs;
-  const { hitzoneValues, levelMultipliers } = monsterArgs;
+  const { hitzoneValues, levelMultipliers } = monsterMultipliers;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const hammer = Weapons.getWeapon(Weapons.WeaponClass.HAMMER, weaponId);

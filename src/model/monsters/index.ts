@@ -1,5 +1,4 @@
 import type * as MonsterTypes from './types';
-export * from './enum';
 import {
   Aptonoth,
   Kelbi,
@@ -88,3 +87,5 @@ export const LargeMonsterData = Object.freeze<MonsterTypes.LargeMonster[]>([
 ]);
 
 export type { MonsterTypes };
+export * from './enum';
+export * from './monsters-util';

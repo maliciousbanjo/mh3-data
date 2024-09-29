@@ -13,6 +13,7 @@ import type {
   HarvestQuest,
   QuestRegion
 } from './types';
+import { MonsterLevels, type MonsterLevelTypes } from '..';
 
 /**
  * Type guard for a {@link HuntQuest}
@@ -103,5 +104,60 @@ export function getQuestsWithLargeMonster(
   // Filter down quests that contain this large monster ID
   return quests.filter(quest =>
     quest.bosses.some(bossInfo => bossInfo.monsterId === id)
+  );
+}
+
+/**
+ * @returns Quest with a given ID
+ * @throws error if quest cannot be found
+ */
+export function getQuestById(questId: Quest['id']): Quest {
+  const villageQuests = Object.values(VillageQuestData.starLevels)
+    .flat()
+    .concat(VillageQuestData.arena);
+
+  let quest = villageQuests.find(quest => quest.id === questId);
+
+  if (quest) return quest;
+
+  const cityQuests = Object.values(CityQuestData.starLevels)
+    .flat()
+    .concat(CityQuestData.events)
+    .concat(CityQuestData.arena);
+
+  quest = cityQuests.find(quest => quest.id === questId);
+
+  if (!quest) throw new Error(`Could not find quest with ID ${questId}`);
+
+  return quest;
+}
+
+/**
+ * Verify if a monster is present in a particular quest
+ * @returns true if monster is in quest, otherwise false
+ */
+export function isMonsterInQuest(
+  monsterId: MonsterTypes.Monster['id'],
+  questId: Quest['id']
+): boolean {
+  const quest = getQuestById(questId);
+  return quest.bosses.some(boss => boss.monsterId === monsterId);
+}
+
+export function getMonsterLevelForQuest(
+  monsterId: MonsterTypes.Monster['id'],
+  questId: Quest['id']
+): MonsterLevelTypes.MonsterLevelMultipliers {
+  const quest = getQuestById(questId);
+
+  const monster = quest.bosses.find(boss => boss.monsterId === monsterId);
+  if (!monster)
+    throw new Error(
+      `Quest ID ${questId} does not include monster ID ${monsterId}`
+    );
+
+  // TODO: Fix this assertion by fixing the monsterLevel type
+  return MonsterLevels.getMonsterLevelMultipliers(
+    monster.level as MonsterLevelTypes.MonsterLevel
   );
 }

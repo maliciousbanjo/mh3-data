@@ -8,7 +8,7 @@ export const Aptonoth = Object.freeze<Monster>({
   description:
     'Relatively docile herbivores with characteristic crest plates. They form herds and raise young communally, and have been used as pack animals for generations; their meat is tasty and nutritious. Very cautious around large monsters.',
   threat: 1,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -70,7 +70,7 @@ export const Kelbi = Object.freeze<Monster>({
   description:
     'Small herbivores known for their gentle demeanor. Kelbi horns are effective against various diseases, but recent research has shown the animal must be kept alive to harvest quality material. Thus, they must be stunned first.',
   threat: 1,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -152,7 +152,7 @@ export const Epioth = Object.freeze<Monster>({
   description:
     'Submissive, water-dwelling herbivores that subsist on water grasses and moss. Epioth surface frequently to sunbathe. Extremely timid, they panic when danger is near, swimming about in haphazard fashion.',
   threat: 1,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -196,7 +196,7 @@ export const Popo = Object.freeze<Monster>({
   description:
     'Herd-forming herbivores. Covered in thick fur to endure the cold. Popo are gently, but known to use their massive tusks bravely when defending their young. Pop meat is very nutricious; the tongue is said to be especially palatable.',
   threat: 1,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -239,7 +239,7 @@ export const Bnahabra = Object.freeze<Monster>({
   description:
     'Flying insects that inhabit most environments. They attack invaders with a paralyzing poison, and lay eggs in carrion together with a body fluid that hastens decomposition. Attracted to light, they will gather around any fire.',
   threat: 2,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -351,7 +351,7 @@ export const Altaroth = Object.freeze<Monster>({
   description:
     'Insects that widely inhabit many areas. Noted for absorbing fruit, mushrooms and honey, then carrying them back to the nest. Materials can thus be collected from their swolen abdomens, whose color is related to what is being carried.',
   threat: 1,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -456,7 +456,7 @@ export const Felyne = Object.freeze<Monster>({
   description:
     'Bipedal creatures resembling cats, known for their light hair. Though usually docile, they will attack viciously if provoked. Naturally curious, some try to enter human soceity. Fond of Felvine, they will follow its scent anywhere.',
   threat: 1,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -495,7 +495,7 @@ export const Melynx = Object.freeze<Monster>({
   description:
     'Bipedal creatures resembling cats, known for their dark hair. More curious than Felynes and possessed by kleptomania, Melynxes take what they steal back to their dens. Felvine intoxicates them, causing them to sometimes drop items.',
   threat: 2,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -534,7 +534,7 @@ export const Fish = Object.freeze<Monster>({
   description:
     'This category includes carnivorous fish (Sharq, Catfish), migratory fish (Tuna, Arowanas), and natatorial fish (Molids, Perciformes). Fish often flee when attacked, so hunters prefer to use harpoons to obtain materials from them.',
   threat: 2,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -678,7 +678,7 @@ export const Giggi = Object.freeze<Monster>({
   description:
     'Wyvern larvae. Remarkably fecund, they can survive in any dark environment. Giggi are sensitive to light and heat, and hence will avoid torches. They are also known to leech blood from other animals, converting it into toxins.',
   threat: 2,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -721,7 +721,7 @@ export const Jaggi = Object.freeze<Monster>({
   description:
     'Highly social, carnivorous bird wyverns that live in large packs. Young Jaggi males hunt in groups, attacking much larger animals. Current research suggests they operate under orders from an alpha male. Aggressive but wary of fire.',
   threat: 2,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -765,7 +765,7 @@ export const Jaggia = Object.freeze<Monster>({
   description:
     "Female Jaggi that stay in groups, Jaggia generally cluster around the nest to defend it and raise whelps. Smaller than mature male, but larger and tougher than the countless young males. Jaggia also operate under an alpha's orders.",
   threat: 2,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -809,7 +809,7 @@ export const Baggi = Object.freeze<Monster>({
   description:
     'Highly intelligent, carnivorous bird wyverns that hunt in packs. Noted for their blue scales and sharp glare. Baggi are feared for their ability to secrete a tranquilizing fluid, which can knock even a human out for a few seconds.',
   threat: 2,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -854,7 +854,7 @@ export const Ludroth = Object.freeze<Monster>({
   description:
     'Aquatic female monsters. Ludroth form "harems" around large males, gathering in territories designated as breeding grounds. They\'re known to be extremely aggressive towards outsiders; caution is advised.',
   threat: 2,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -907,7 +907,7 @@ export const Uroktor = Object.freeze<Monster>({
   description:
     "Leviathans that inhabit volcanoes. Noted for swarming around larger monsters' kills in order to feed. Uroktor rarely hunt for themselves, but stab upwards at pray from the ground when they do. Known for being highly aggressive.",
   threat: 2,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -960,7 +960,7 @@ export const Delex = Object.freeze<Monster>({
   description:
     'Carnivorous monsters that inhabit deserts. Delex always travel in schools of five or six. When near large monsters on the hunt, they will attempt to surround the prey and scavenge food. Known to flee if other Delex are injured.',
   threat: 2,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {
@@ -1002,7 +1002,7 @@ export const Rhenoplos = Object.freeze<Monster>({
   description:
     'Extremely territorial herbivores with poor vision, but acute hearing. Rhenoplos will doggedly pursue any nearby target they sense. They often collide into boulders, perhaps because they cannot easily stop once they begin to run.',
   threat: 2,
-  hitzoneGroups: [
+  monsterStates: [
     {
       name: 'default',
       hitzones: {

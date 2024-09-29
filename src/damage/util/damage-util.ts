@@ -18,6 +18,35 @@ import {
 const ELEMENTAL_DAMAGE_DIVIDER = 10;
 
 /**
+ * Default params for {@link getWeaponClassMultiplier}
+ */
+const defaultWeaponClassArgs = Object.freeze<DamageBuffArgs['weaponClassArgs']>(
+  {
+    powercharm: false,
+    powertalon: false,
+    demondrug: 'none',
+    might: 'none',
+    armor: 'none'
+  }
+);
+
+/**
+ * Default params for {@link getRawMultiplier}
+ */
+const defaultRawArgs = Object.freeze<DamageBuffArgs['rawArgs']>({
+  criticalHit: 'none',
+  lowHealthSkill: 'none',
+  fortify: 'none'
+}); /**
+
+ * Default params for {@link calculateElementalDamage}
+ */
+const defaultElementArgs = Object.freeze<DamageBuffArgs['elementArgs']>({
+  awaken: false,
+  elementAttack: 'none'
+});
+
+/**
  * @returns true if weapon has the provided sharpness level, otherwise throws error
  * @throws Error if weapon does not have provided sharpness level
  */
@@ -117,16 +146,16 @@ function getHitzoneForWeaponElement(
  * Get additional attack buffs multiplied against the weapon's class modifier.
  *
  * Taken from Lord Grahf's [Monster Hunter Tri Damage Formula FAQ](https://gamefaqs.gamespot.com/wii/943655-monster-hunter-tri/faqs/59207)
- * Section 9a. Attack Up Multipliers (ATKUP)
+ * - Section 9a. Attack Up Multipliers (ATKUP)
  *
  * Items and armor skills can affect attack stats. Multipliers are broken into different sub-categories
  * which can stack amongst each other. Each category has a multiplier which is applied to the weapon's class modifier.
  */
 export function getWeaponClassMultiplier(
-  weaponClassArgs: DamageBuffArgs['weaponClassArgs'] = {}
+  weaponClassArgs: DamageBuffArgs['weaponClassArgs'] = defaultWeaponClassArgs
 ): number {
   let totalAttackMultiplier = 0;
-  const { powercharm, powertalon, demonDrug, might, armor } = weaponClassArgs;
+  const { powercharm, powertalon, demondrug, might, armor } = weaponClassArgs;
   /**
    * 1. Powercharm
    */
@@ -138,15 +167,15 @@ export function getWeaponClassMultiplier(
   /**
    * 3. Demondrug/Kitchen
    */
-  totalAttackMultiplier += DEMONDRUG_MULTIPLIERS[demonDrug ?? 'none'];
+  totalAttackMultiplier += DEMONDRUG_MULTIPLIERS[demondrug];
   /**
    * 4. Might
    */
-  totalAttackMultiplier += MIGHT_MULTIPLIERS[might ?? 'none'];
+  totalAttackMultiplier += MIGHT_MULTIPLIERS[might];
   /**
    * 5. Armor Skill
    */
-  totalAttackMultiplier += ARMOR_SKILL_MULTIPLIERS[armor ?? 'none'];
+  totalAttackMultiplier += ARMOR_SKILL_MULTIPLIERS[armor];
 
   return totalAttackMultiplier;
 }
@@ -162,12 +191,14 @@ export function getWeaponClassMultiplier(
  *
  * - Fortify recieves a 10% bonus per faint
  */
-export function getRawMultiplier(rawArgs: DamageBuffArgs['rawArgs'] = {}) {
+export function getRawMultiplier(
+  rawArgs: DamageBuffArgs['rawArgs'] = defaultRawArgs
+) {
   const { criticalHit, lowHealthSkill, fortify } = rawArgs;
   return (
-    CRITICAL_HIT_MULTIPLIERS[criticalHit ?? 'none'] *
-    LOW_HEALTH_SKILL_MULTIPLIERS[lowHealthSkill ?? 'none'] *
-    FORTIFY_MULTIPLIERS[fortify ?? 'none']
+    CRITICAL_HIT_MULTIPLIERS[criticalHit] *
+    LOW_HEALTH_SKILL_MULTIPLIERS[lowHealthSkill] *
+    FORTIFY_MULTIPLIERS[fortify]
   );
 }
 
@@ -175,7 +206,7 @@ export function getRawMultiplier(rawArgs: DamageBuffArgs['rawArgs'] = {}) {
  * ELEMENTAL DAMAGE FORMULA
  *
  * Taken from Lord Grahf's [Monster Hunter Tri Damage Formula FAQ](https://gamefaqs.gamespot.com/wii/943655-monster-hunter-tri/faqs/59207)
- * Section 1c. Elemental Damage Formula (EFMLA)
+ * - Section 1c. Elemental Damage Formula (EFMLA)
  *
  * [ELEMENT x ESHARP x ELMZONE] / [DIVIDER] = Elemental Damage
  *
@@ -196,7 +227,7 @@ export function calculateElementalDamage(
   /** Derived from Monster hitzone */
   hitzoneValues: MonsterTypes.HitzoneValues,
   levelMultipliers: MonsterLevelTypes.MonsterLevelMultipliers,
-  elementArgs: DamageBuffArgs['elementArgs'] = {}
+  elementArgs: DamageBuffArgs['elementArgs'] = defaultElementArgs
 ): number {
   const { awaken, elementAttack } = elementArgs;
   const sharpnessMultiplier = getSharpnessElementalMultiplier(sharpness);
@@ -208,9 +239,7 @@ export function calculateElementalDamage(
   // Element is not calculated for non-awakened weapon or if hitzone multiplier is 0
   if ((weapon.awaken && !awaken) || elementalHitzoneMultiplier === 0) return 0;
 
-  const elementMultiplier = elementAttack
-    ? ELEMENT_ATTACK_MULTIPLIERS[elementAttack]
-    : 1;
+  const elementMultiplier = ELEMENT_ATTACK_MULTIPLIERS[elementAttack];
 
   const secondaryAttackWithBuffs = weapon.secondaryAttack * elementMultiplier;
 

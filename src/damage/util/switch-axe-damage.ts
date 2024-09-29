@@ -4,7 +4,12 @@ import {
   WeaponClass,
   type WeaponTypes
 } from '../../model/weapons';
-import type { Damage, DamageBuffArgs, MonsterArgs, WeaponArgs } from '../types';
+import type {
+  Damage,
+  DamageBuffArgs,
+  MonsterMultipliers,
+  WeaponArgs
+} from '../types';
 import { assertSwitchAxeWeaponMultipliers } from './assertions';
 import {
   calculateElementalDamage,
@@ -70,12 +75,12 @@ function validateSwitchAxe(
  */
 export function calculateSwitchAxeDamage(
   weaponArgs: WeaponArgs,
-  monsterArgs: MonsterArgs,
-  damageBuffArgs: DamageBuffArgs
+  monsterMultipliers: MonsterMultipliers,
+  damageBuffArgs: Partial<DamageBuffArgs>
 ) {
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { switchAxeMode } = weaponArgs.weaponMultipliers;
-  const { hitzoneValues, levelMultipliers } = monsterArgs;
+  const { hitzoneValues, levelMultipliers } = monsterMultipliers;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const switchAxe = Weapons.getWeapon(Weapons.WeaponClass.SWITCH_AXE, weaponId);

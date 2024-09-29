@@ -1,4 +1,4 @@
-import type { MonsterLevelTypes } from '../model/monster-levels';
+import type { MonsterLevelTypes, QuestTypes } from '../model';
 import type { MonsterTypes } from '../model/monsters';
 import type {
   Longsword,
@@ -58,6 +58,20 @@ export interface WeaponArgs {
  * Monster-related parameters used in damage calculation
  */
 export interface MonsterArgs {
+  monsterName: MonsterTypes.MonsterName;
+  /** Quest featuring this monster */
+  questId: QuestTypes.Quest['id'];
+  /** Must be valid monster state for this monsters */
+  monsterStateIndex: number;
+  /** Must be valid hitzone for this monster */
+  hitzoneName: keyof MonsterTypes.Hitzone;
+}
+
+/**
+ * @internal
+ * Used internally by the damage calculation helper functions
+ */
+export interface MonsterMultipliers {
   /** Derived from Monster hitzone */
   hitzoneValues: MonsterTypes.HitzoneValues;
   /** Derived from Monster level set by Quest */
@@ -68,27 +82,27 @@ export interface MonsterArgs {
  * Various aspects that can affect damage stats eg; might seed, attack up large,
  * felyne heroics, awaken, powercharm, fortify, element attack up
  */
-export type DamageBuffArgs = Partial<{
+export interface DamageBuffArgs {
   /** Multiplied against {@link WeaponTypes.Weapon['attack']} */
   rawArgs: {
-    criticalHit?: keyof typeof CRITICAL_HIT_MULTIPLIERS;
-    lowHealthSkill?: keyof typeof LOW_HEALTH_SKILL_MULTIPLIERS;
-    fortify?: keyof typeof FORTIFY_MULTIPLIERS;
+    criticalHit: keyof typeof CRITICAL_HIT_MULTIPLIERS;
+    lowHealthSkill: keyof typeof LOW_HEALTH_SKILL_MULTIPLIERS;
+    fortify: keyof typeof FORTIFY_MULTIPLIERS;
   };
   /** Multiplied against {@link WeaponTypes.Weapon['secondaryAttack']} */
   elementArgs: {
-    awaken?: boolean;
-    elementAttack?: keyof typeof ELEMENT_ATTACK_MULTIPLIERS;
+    awaken: boolean;
+    elementAttack: keyof typeof ELEMENT_ATTACK_MULTIPLIERS;
   };
   /** Multiplied against {@link WeaponTypes.WeaponDamageProperties['classModifier']} */
   weaponClassArgs: {
-    powercharm?: boolean;
-    powertalon?: boolean;
-    demonDrug?: keyof typeof DEMONDRUG_MULTIPLIERS;
-    might?: keyof typeof MIGHT_MULTIPLIERS;
-    armor?: keyof typeof ARMOR_SKILL_MULTIPLIERS;
+    powercharm: boolean;
+    powertalon: boolean;
+    demondrug: keyof typeof DEMONDRUG_MULTIPLIERS;
+    might: keyof typeof MIGHT_MULTIPLIERS;
+    armor: keyof typeof ARMOR_SKILL_MULTIPLIERS;
   };
-}>;
+}
 
 /**
  * Damage dealt by a weapon

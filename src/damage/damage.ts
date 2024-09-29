@@ -1,5 +1,10 @@
-import type { DamageBuffArgs, MonsterArgs, WeaponArgs } from './types';
-import { Weapons } from '../model';
+import type {
+  DamageBuffArgs,
+  MonsterArgs,
+  MonsterMultipliers,
+  WeaponArgs
+} from './types';
+import { Monsters, Quests, Weapons, type MonsterTypes } from '../model';
 import { calculateGreatSwordDamage } from './util/great-sword-damage';
 import { calculateHammerDamage } from './util/hammer-damage';
 import { calculateLanceDamage } from './util/lance-damage';
@@ -8,11 +13,10 @@ import { calculateSwitchAxeDamage } from './util/switch-axe-damage';
 import { calculateSwordAndShieldDamage } from './util/sword-and-shield-damage';
 
 /**
- * TODO: Affinity (positive or negative critical hit)
  * RAW DAMAGE FORMULA
  *
  * Taken from Lord Grahf's [Monster Hunter Tri Damage Formula FAQ](https://gamefaqs.gamespot.com/wii/943655-monster-hunter-tri/faqs/59207)
- * Section 1b. Raw Damage Formula (RFMLA)
+ * - Section 1b. Raw Damage Formula (RFMLA)
  *
  * [ATP x TYPE x SHARP x HITZONE x VAR] / [CLASS] = Raw Damage
  *
@@ -31,29 +35,66 @@ import { calculateSwordAndShieldDamage } from './util/sword-and-shield-damage';
 export function calculateDamage(
   weaponArgs: WeaponArgs,
   monsterArgs: MonsterArgs,
-  damageBuffArgs: DamageBuffArgs
+  damageBuffArgs: Partial<DamageBuffArgs>
 ) {
   const { weaponClass } = weaponArgs;
+  const { monsterName, questId, monsterStateIndex, hitzoneName } = monsterArgs;
+  const monster = Monsters.getMonster(monsterName);
+
+  // Validate parameters
+  const maybeHitzoneValues: MonsterTypes.HitzoneValues | undefined =
+    monster.monsterStates[monsterStateIndex]?.hitzones[hitzoneName];
+  if (!maybeHitzoneValues) {
+    throw new Error(
+      `${monsterName} does not have a ${hitzoneName} hitzone at monsterStateIndex ${monsterStateIndex}`
+    );
+  }
+
+  const monsterMultipliers: MonsterMultipliers = {
+    hitzoneValues: maybeHitzoneValues,
+    levelMultipliers: Quests.getMonsterLevelForQuest(monster.id, questId)
+  };
+
   switch (weaponClass) {
     case Weapons.WeaponClass.GREAT_SWORD: {
-      return calculateGreatSwordDamage(weaponArgs, monsterArgs, damageBuffArgs);
+      return calculateGreatSwordDamage(
+        weaponArgs,
+        monsterMultipliers,
+        damageBuffArgs
+      );
     }
     case Weapons.WeaponClass.HAMMER: {
-      return calculateHammerDamage(weaponArgs, monsterArgs, damageBuffArgs);
+      return calculateHammerDamage(
+        weaponArgs,
+        monsterMultipliers,
+        damageBuffArgs
+      );
     }
     case Weapons.WeaponClass.LANCE: {
-      return calculateLanceDamage(weaponArgs, monsterArgs, damageBuffArgs);
+      return calculateLanceDamage(
+        weaponArgs,
+        monsterMultipliers,
+        damageBuffArgs
+      );
     }
     case Weapons.WeaponClass.LONGSWORD: {
-      return calculateLongswordDamage(weaponArgs, monsterArgs, damageBuffArgs);
+      return calculateLongswordDamage(
+        weaponArgs,
+        monsterMultipliers,
+        damageBuffArgs
+      );
     }
     case Weapons.WeaponClass.SWITCH_AXE: {
-      return calculateSwitchAxeDamage(weaponArgs, monsterArgs, damageBuffArgs);
+      return calculateSwitchAxeDamage(
+        weaponArgs,
+        monsterMultipliers,
+        damageBuffArgs
+      );
     }
     case Weapons.WeaponClass.SWORD_AND_SHIELD: {
       return calculateSwordAndShieldDamage(
         weaponArgs,
-        monsterArgs,
+        monsterMultipliers,
         damageBuffArgs
       );
     }

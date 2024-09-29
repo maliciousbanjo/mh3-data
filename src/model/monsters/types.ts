@@ -3,6 +3,53 @@ import type { ItemTypes } from '../items';
 import { MonsterType } from './enum';
 
 /**
+ * Names of small monsters
+ */
+export type SmallMonsterName =
+  | 'Aptonoth'
+  | 'Kelbi'
+  | 'Epioth'
+  | 'Popo'
+  | 'Bnahabra'
+  | 'Altaroth'
+  | 'Felyne'
+  | 'Melynx'
+  | 'Fish'
+  | 'Giggi'
+  | 'Jaggi'
+  | 'Jaggia'
+  | 'Baggi'
+  | 'Ludroth'
+  | 'Uroktor'
+  | 'Delex'
+  | 'Rhenoplos';
+
+/**
+ * Names of large monsters
+ */
+export type LargeMonsterName =
+  | 'Great Jaggi'
+  | 'Great Baggi'
+  | 'Barroth'
+  | 'Uragaan'
+  | 'Qurupeco'
+  | 'Rathian'
+  | 'Rathalos'
+  | 'Diablos'
+  | 'Gigginox'
+  | 'Barioth'
+  | 'Royal Ludroth'
+  | 'Gobul'
+  | 'Lagiacrus'
+  | 'Agnaktor'
+  | 'Ceadeus'
+  | 'Deviljho'
+  | 'Jhen Mohran'
+  | 'Alatreon';
+
+export type MonsterName = SmallMonsterName | LargeMonsterName;
+
+/**
  * Monster hitzone values for different damage types.
  * Used by {@link Hitzone} to match against a particular monster part
  */
@@ -27,7 +74,7 @@ export type Hitzone = Record<string, HitzoneValues>;
  * Collection of either a default hitzone or hitzones
  * based on a monster's status eg; enraged, flying, etc
  */
-export interface HitzoneGroup {
+export interface MonsterState {
   name: string;
   hitzones: Hitzone;
 }
@@ -116,7 +163,7 @@ export interface ShinyDrop {
  */
 export interface Monster {
   id: number;
-  name: string;
+  name: SmallMonsterName | LargeMonsterName;
   description: string;
   type: MonsterType;
   threat: number;
@@ -124,7 +171,7 @@ export interface Monster {
    * List of hitzones. Will either contain a "default" hitzone group
    * or multiple based on different monster states eg; flying, enraged, etc
    */
-  hitzoneGroups: HitzoneGroup[];
+  monsterStates: MonsterState[];
   /** If undefined this monster should have a 'variant' property */
   shiny?: ShinyDrop;
   /** If undefined this monster should have a 'variant' property */
@@ -137,7 +184,8 @@ export interface Monster {
  * Properties for a large (boss) monster
  */
 export interface LargeMonster
-  extends Omit<Monster, 'carves' | 'type' | 'variants'> {
+  extends Omit<Monster, 'name' | 'carves' | 'type' | 'variants'> {
+  name: LargeMonsterName;
   hp: number;
   type:
     | MonsterType.BrdWyv

@@ -1,5 +1,4 @@
 import { calculateDamage } from '../../src/damage/damage';
-import { MonsterLevels } from '../../src/model';
 import {
   Alatreon,
   Deviljho,
@@ -9,9 +8,7 @@ import { Sharpness, WeaponClass } from '../../src/model/weapons';
 
 describe('Damage', () => {
   describe('calculateDamage', () => {
-    const alatreonHeadHitzoneValues =
-      Alatreon.hitzoneGroups[0].hitzones['Head'];
-    const levelMultipliers = MonsterLevels.getMonsterLevelMultipliers(52); // The Brilliant Darkness
+    const theBrilliantDarknessId = 0x4a39;
 
     it('throws error for invalid sharpness', () => {
       expect(() =>
@@ -23,10 +20,16 @@ describe('Damage', () => {
             sharpness: Sharpness.PURPLE,
             weaponMultipliers: {}
           },
-          { hitzoneValues: alatreonHeadHitzoneValues, levelMultipliers },
+          {
+            monsterName: Alatreon.name,
+            questId: theBrilliantDarknessId,
+            monsterStateIndex: 0,
+            hitzoneName: 'Head'
+          },
           {
             elementArgs: {
-              awaken: false
+              awaken: false,
+              elementAttack: 'none'
             }
           }
         )
@@ -44,10 +47,16 @@ describe('Damage', () => {
             middleOfBlade: false
           }
         },
-        { hitzoneValues: alatreonHeadHitzoneValues, levelMultipliers },
+        {
+          monsterName: Alatreon.name,
+          questId: theBrilliantDarknessId,
+          monsterStateIndex: 0,
+          hitzoneName: 'Head'
+        },
         {
           elementArgs: {
-            awaken: false
+            awaken: false,
+            elementAttack: 'none'
           }
         }
       );
@@ -64,10 +73,16 @@ describe('Damage', () => {
           sharpness: Sharpness.PURPLE,
           weaponMultipliers: {}
         },
-        { hitzoneValues: alatreonHeadHitzoneValues, levelMultipliers },
+        {
+          monsterName: Alatreon.name,
+          questId: theBrilliantDarknessId,
+          monsterStateIndex: 0,
+          hitzoneName: 'Head'
+        },
         {
           elementArgs: {
-            awaken: false
+            awaken: false,
+            elementAttack: 'none'
           }
         }
       );
@@ -84,10 +99,16 @@ describe('Damage', () => {
             sharpness: Sharpness.PURPLE,
             weaponMultipliers: {}
           },
-          { hitzoneValues: alatreonHeadHitzoneValues, levelMultipliers },
+          {
+            monsterName: Alatreon.name,
+            questId: theBrilliantDarknessId,
+            monsterStateIndex: 0,
+            hitzoneName: 'Head'
+          },
           {
             elementArgs: {
-              awaken: false
+              awaken: false,
+              elementAttack: 'none'
             }
           }
         );
@@ -95,12 +116,7 @@ describe('Damage', () => {
       });
 
       it('Modified impact hitzone', () => {
-        // Royal Ludroth head (impact: 0.8, cut: 0.5), so the impact hitzone should be used
-        const ludrothLevelMultipliers =
-          MonsterLevels.getMonsterLevelMultipliers(5); // Save Our Boat
-
-        const royalLudrothHeadHitzoneValues =
-          RoyalLudroth.hitzoneGroups[0].hitzones['Head'];
+        const saveOurBoatId = 0x0402;
         const damage = calculateDamage(
           {
             weaponClass: WeaponClass.LANCE,
@@ -110,12 +126,15 @@ describe('Damage', () => {
             weaponMultipliers: {}
           },
           {
-            hitzoneValues: royalLudrothHeadHitzoneValues,
-            levelMultipliers: ludrothLevelMultipliers
+            monsterName: RoyalLudroth.name,
+            questId: saveOurBoatId,
+            monsterStateIndex: 0,
+            hitzoneName: 'Head'
           },
           {
             elementArgs: {
-              awaken: false
+              awaken: false,
+              elementAttack: 'none'
             }
           }
         );
@@ -135,10 +154,16 @@ describe('Damage', () => {
               sharpness: Sharpness.PURPLE,
               weaponMultipliers: {}
             },
-            { hitzoneValues: alatreonHeadHitzoneValues, levelMultipliers },
+            {
+              monsterName: Alatreon.name,
+              questId: theBrilliantDarknessId,
+              monsterStateIndex: 0,
+              hitzoneName: 'Head'
+            },
             {
               elementArgs: {
-                awaken: false
+                awaken: false,
+                elementAttack: 'none'
               }
             }
           )
@@ -158,10 +183,16 @@ describe('Damage', () => {
               }
             }
           },
-          { hitzoneValues: alatreonHeadHitzoneValues, levelMultipliers },
+          {
+            monsterName: Alatreon.name,
+            questId: theBrilliantDarknessId,
+            monsterStateIndex: 0,
+            hitzoneName: 'Head'
+          },
           {
             elementArgs: {
-              awaken: false
+              awaken: false,
+              elementAttack: 'none'
             }
           }
         );
@@ -181,10 +212,16 @@ describe('Damage', () => {
               }
             }
           },
-          { hitzoneValues: alatreonHeadHitzoneValues, levelMultipliers },
+          {
+            monsterName: Alatreon.name,
+            questId: theBrilliantDarknessId,
+            monsterStateIndex: 0,
+            hitzoneName: 'Head'
+          },
           {
             elementArgs: {
-              awaken: false
+              awaken: false,
+              elementAttack: 'none'
             }
           }
         );
@@ -204,10 +241,16 @@ describe('Damage', () => {
               }
             }
           },
-          { hitzoneValues: alatreonHeadHitzoneValues, levelMultipliers },
+          {
+            monsterName: Alatreon.name,
+            questId: theBrilliantDarknessId,
+            monsterStateIndex: 0,
+            hitzoneName: 'Head'
+          },
           {
             elementArgs: {
-              awaken: false
+              awaken: false,
+              elementAttack: 'none'
             }
           }
         );
@@ -227,10 +270,16 @@ describe('Damage', () => {
               }
             }
           },
-          { hitzoneValues: alatreonHeadHitzoneValues, levelMultipliers },
+          {
+            monsterName: Alatreon.name,
+            questId: theBrilliantDarknessId,
+            monsterStateIndex: 0,
+            hitzoneName: 'Head'
+          },
           {
             elementArgs: {
-              awaken: false
+              awaken: false,
+              elementAttack: 'none'
             }
           }
         );
@@ -238,9 +287,8 @@ describe('Damage', () => {
       });
 
       it('Deviljho Spirit Gauge RED', () => {
-        // rage
-        const deviljhoStomachHitzoneValues =
-          Deviljho.hitzoneGroups[1].hitzones['Stomach'];
+        const bedevilADeviljhoId = 0x3afd;
+
         const damage = calculateDamage(
           {
             weaponClass: WeaponClass.LONGSWORD,
@@ -254,10 +302,16 @@ describe('Damage', () => {
               }
             }
           },
-          { hitzoneValues: deviljhoStomachHitzoneValues, levelMultipliers },
+          {
+            monsterName: Deviljho.name,
+            questId: bedevilADeviljhoId,
+            monsterStateIndex: 1, // rage
+            hitzoneName: 'Stomach'
+          },
           {
             elementArgs: {
-              awaken: false
+              awaken: false,
+              elementAttack: 'none'
             }
           }
         );
@@ -276,10 +330,16 @@ describe('Damage', () => {
               sharpness: Sharpness.WHITE,
               weaponMultipliers: {}
             },
-            { hitzoneValues: alatreonHeadHitzoneValues, levelMultipliers },
+            {
+              monsterName: Alatreon.name,
+              questId: theBrilliantDarknessId,
+              monsterStateIndex: 0,
+              hitzoneName: 'Head'
+            },
             {
               elementArgs: {
-                awaken: false
+                awaken: false,
+                elementAttack: 'none'
               }
             }
           )
@@ -296,10 +356,16 @@ describe('Damage', () => {
               switchAxeMode: 'sword'
             }
           },
-          { hitzoneValues: alatreonHeadHitzoneValues, levelMultipliers },
+          {
+            monsterName: Alatreon.name,
+            questId: theBrilliantDarknessId,
+            monsterStateIndex: 0,
+            hitzoneName: 'Head'
+          },
           {
             elementArgs: {
-              awaken: false
+              awaken: false,
+              elementAttack: 'none'
             }
           }
         );
@@ -316,10 +382,16 @@ describe('Damage', () => {
               switchAxeMode: 'sword'
             }
           },
-          { hitzoneValues: alatreonHeadHitzoneValues, levelMultipliers },
+          {
+            monsterName: Alatreon.name,
+            questId: theBrilliantDarknessId,
+            monsterStateIndex: 0,
+            hitzoneName: 'Head'
+          },
           {
             elementArgs: {
-              awaken: false
+              awaken: false,
+              elementAttack: 'none'
             }
           }
         );
@@ -338,10 +410,16 @@ describe('Damage', () => {
               sharpness: Sharpness.PURPLE,
               weaponMultipliers: {}
             },
-            { hitzoneValues: alatreonHeadHitzoneValues, levelMultipliers },
+            {
+              monsterName: Alatreon.name,
+              questId: theBrilliantDarknessId,
+              monsterStateIndex: 0,
+              hitzoneName: 'Head'
+            },
             {
               elementArgs: {
-                awaken: false
+                awaken: false,
+                elementAttack: 'none'
               }
             }
           )
@@ -359,10 +437,16 @@ describe('Damage', () => {
               swordAndShieldMode: 'land'
             }
           },
-          { hitzoneValues: alatreonHeadHitzoneValues, levelMultipliers },
+          {
+            monsterName: Alatreon.name,
+            questId: theBrilliantDarknessId,
+            monsterStateIndex: 0,
+            hitzoneName: 'Head'
+          },
           {
             elementArgs: {
-              awaken: false
+              awaken: false,
+              elementAttack: 'none'
             }
           }
         );
@@ -381,10 +465,16 @@ describe('Damage', () => {
               swordAndShieldMode: 'land'
             }
           },
-          { hitzoneValues: alatreonHeadHitzoneValues, levelMultipliers },
+          {
+            monsterName: Alatreon.name,
+            questId: theBrilliantDarknessId,
+            monsterStateIndex: 0,
+            hitzoneName: 'Head'
+          },
           {
             elementArgs: {
-              awaken: false
+              awaken: false,
+              elementAttack: 'none'
             }
           }
         );
