@@ -1,5 +1,17 @@
 # mh3-data
 
+## 0.9.1
+
+### Patch Changes
+
+- 760c032: Change to Damage.calculateDamage function signature
+
+  - Accepts an optional Quest ID in order to look up monster level information
+    - Will default to multipliers of 1.0
+  - Accepts monster name, preventing a user from having to look that up themselves before calling the function
+  - Sub-arguments for DamageBuffArgs are no longer optional
+  - General type improvements
+
 ## 1.0.1
 
 ### Patch Changes
