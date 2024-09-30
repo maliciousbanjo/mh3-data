@@ -1,7 +1,7 @@
 import type { MonsterLevelTypes, QuestTypes } from '../model';
 import type { MonsterTypes } from '../model/monsters';
 import type {
-  Longsword,
+  LongswordTypes,
   Sharpness,
   SwitchAxeTypes,
   SwordAndShieldTypes,
@@ -21,7 +21,7 @@ import {
 export interface LongswordSpecialMultiplierArgs {
   middleOfBlade: boolean;
   fullSpiritGauge: boolean;
-  spiritGaugeColor: keyof typeof Longsword.SpiritGaugeMultipliers;
+  spiritGaugeColor: LongswordTypes.SpiritGaugeColors;
 }
 
 /**
@@ -60,7 +60,7 @@ export interface WeaponArgs {
 export interface MonsterArgs {
   monsterName: MonsterTypes.MonsterName;
   /** Quest featuring this monster */
-  questId: QuestTypes.Quest['id'];
+  questId: QuestTypes.Quest['id'] | undefined;
   /** Must be valid monster state for this monsters */
   monsterStateIndex: number;
   /** Must be valid hitzone for this monster */

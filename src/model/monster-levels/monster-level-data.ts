@@ -13,6 +13,7 @@ import type { MonsterLevelRecord } from './types';
  * Defense and stagger multpliers DO appear to be accurate.
  */
 export const MonsterLevelData = Object.freeze<MonsterLevelRecord>({
+  0: { health: [1], defense: 1, stagger: 1 }, // DEFAULT
   3: { health: [0.35, 0.38, 0.4, 0.43, 0.45], defense: 1, stagger: 1 },
   5: { health: [0.4, 0.43, 0.45, 0.48, 0.5], defense: 1, stagger: 1 },
   7: { health: [0.45, 0.48, 0.5, 0.55, 0.6], defense: 1, stagger: 1 },
@@ -24,20 +25,15 @@ export const MonsterLevelData = Object.freeze<MonsterLevelRecord>({
   18: { health: [0.9], defense: 0.9, stagger: 1 },
   23: { health: [1.05, 1.08, 1.1, 1.12, 1.15], defense: 0.95, stagger: 1.5 },
   25: { health: [1.1, 1.12, 1.15, 1.17, 1.2], defense: 0.95, stagger: 1.5 },
-  /** Used in offline arena quests */
   26: { health: [0.64], defense: 0.95, stagger: 1.5 },
   27: { health: [1.15, 1.17, 1.2, 1.22, 1.25], defense: 0.95, stagger: 1.5 },
   29: { health: [1.2, 1.22, 1.25, 1.27, 1.3], defense: 0.95, stagger: 1.5 },
   30: { health: [1.27], defense: 0.95, stagger: 1.5 },
   31: { health: [1.3], defense: 0.95, stagger: 1.6 },
   32: { health: [1.3, 1.32, 1.35], defense: 0.95, stagger: 1.6 },
-  /** Used in offline arena quests */
   36: { health: [0.8], defense: 0.95, stagger: 1.5 },
-  /** Used in offline arena quests */
   37: { health: [0.95], defense: 0.95, stagger: 1.5 },
-  /** Used in offline arena quests */
   38: { health: [0.8], defense: 0.95, stagger: 1.5 },
-  /** Used in offline arena quests */
   39: { health: [0.7], defense: 0.95, stagger: 1.5 },
   40: { health: [0.8], defense: 0.95, stagger: 1.5 },
   44: { health: [1.48, 1.52, 1.56], defense: 0.8, stagger: 2.1 },
@@ -48,6 +44,7 @@ export const MonsterLevelData = Object.freeze<MonsterLevelRecord>({
   53: { health: [1.6], defense: 0.75, stagger: 2.2 },
   54: { health: [1.3], defense: 0.75, stagger: 2.1 },
   55: { health: [1.1], defense: 0.75, stagger: 1.9 },
+  56: { health: [0.9], defense: 0.75, stagger: 1.9 },
   57: { health: [1.9], defense: 0.75, stagger: 2.2 },
   58: { health: [1.1], defense: 0.75, stagger: 2.2 },
   59: { health: [1.3], defense: 0.75, stagger: 2.2 },

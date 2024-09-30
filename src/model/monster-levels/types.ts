@@ -12,11 +12,9 @@ export interface MonsterLevelMultipliers {
  *
  * A monster level maps to an object containing scalers for monster health,
  * defense, and flinch values.
- *
- * TODO:
- * @todo Unidentified monster levels: 30, 55, 59, 60
  */
 export type MonsterLevel =
+  | 0 // DEFAULT
   | 3
   | 5
   | 7
@@ -47,6 +45,7 @@ export type MonsterLevel =
   | 53
   | 54
   | 55
+  | 56
   | 57
   | 58
   | 59

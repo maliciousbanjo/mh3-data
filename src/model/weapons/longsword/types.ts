@@ -1,4 +1,5 @@
 import { WeaponClass } from '../enum';
+import { SpiritGaugeMultipliers } from './enum';
 import type { Weapon } from '../types';
 
 export type LongswordAttack =
@@ -15,3 +16,4 @@ export type LongswordAttack =
   | 'Spirit Finisher';
 
 export type Longsword = Weapon<WeaponClass.LONGSWORD>;
+export type SpiritGaugeColors = keyof typeof SpiritGaugeMultipliers;
