@@ -24,7 +24,7 @@ describe('Damage', () => {
             monsterName: Alatreon.name,
             questId: theBrilliantDarknessId,
             monsterStateIndex: 0,
-            hitzoneName: 'Head'
+            hitzoneIndex: 0
           },
           {
             elementArgs: {
@@ -51,7 +51,7 @@ describe('Damage', () => {
           monsterName: Alatreon.name,
           questId: theBrilliantDarknessId,
           monsterStateIndex: 0,
-          hitzoneName: 'Head'
+          hitzoneIndex: 0
         },
         {
           elementArgs: {
@@ -77,7 +77,7 @@ describe('Damage', () => {
           monsterName: Alatreon.name,
           questId: theBrilliantDarknessId,
           monsterStateIndex: 0,
-          hitzoneName: 'Head'
+          hitzoneIndex: 0
         },
         {
           elementArgs: {
@@ -103,7 +103,7 @@ describe('Damage', () => {
             monsterName: Alatreon.name,
             questId: theBrilliantDarknessId,
             monsterStateIndex: 0,
-            hitzoneName: 'Head'
+            hitzoneIndex: 0
           },
           {
             elementArgs: {
@@ -129,7 +129,7 @@ describe('Damage', () => {
             monsterName: RoyalLudroth.name,
             questId: saveOurBoatId,
             monsterStateIndex: 0,
-            hitzoneName: 'Head'
+            hitzoneIndex: 0
           },
           {
             elementArgs: {
@@ -158,7 +158,7 @@ describe('Damage', () => {
               monsterName: Alatreon.name,
               questId: theBrilliantDarknessId,
               monsterStateIndex: 0,
-              hitzoneName: 'Head'
+              hitzoneIndex: 0
             },
             {
               elementArgs: {
@@ -187,7 +187,7 @@ describe('Damage', () => {
             monsterName: Alatreon.name,
             questId: theBrilliantDarknessId,
             monsterStateIndex: 0,
-            hitzoneName: 'Head'
+            hitzoneIndex: 0
           },
           {
             elementArgs: {
@@ -216,7 +216,7 @@ describe('Damage', () => {
             monsterName: Alatreon.name,
             questId: theBrilliantDarknessId,
             monsterStateIndex: 0,
-            hitzoneName: 'Head'
+            hitzoneIndex: 0
           },
           {
             elementArgs: {
@@ -245,7 +245,7 @@ describe('Damage', () => {
             monsterName: Alatreon.name,
             questId: theBrilliantDarknessId,
             monsterStateIndex: 0,
-            hitzoneName: 'Head'
+            hitzoneIndex: 0
           },
           {
             elementArgs: {
@@ -274,7 +274,7 @@ describe('Damage', () => {
             monsterName: Alatreon.name,
             questId: theBrilliantDarknessId,
             monsterStateIndex: 0,
-            hitzoneName: 'Head'
+            hitzoneIndex: 0
           },
           {
             elementArgs: {
@@ -306,7 +306,7 @@ describe('Damage', () => {
             monsterName: Deviljho.name,
             questId: bedevilADeviljhoId,
             monsterStateIndex: 1, // rage
-            hitzoneName: 'Stomach'
+            hitzoneIndex: 1 // Stomach
           },
           {
             elementArgs: {
@@ -334,7 +334,7 @@ describe('Damage', () => {
               monsterName: Alatreon.name,
               questId: theBrilliantDarknessId,
               monsterStateIndex: 0,
-              hitzoneName: 'Head'
+              hitzoneIndex: 0
             },
             {
               elementArgs: {
@@ -360,7 +360,7 @@ describe('Damage', () => {
             monsterName: Alatreon.name,
             questId: theBrilliantDarknessId,
             monsterStateIndex: 0,
-            hitzoneName: 'Head'
+            hitzoneIndex: 0
           },
           {
             elementArgs: {
@@ -386,7 +386,7 @@ describe('Damage', () => {
             monsterName: Alatreon.name,
             questId: theBrilliantDarknessId,
             monsterStateIndex: 0,
-            hitzoneName: 'Head'
+            hitzoneIndex: 0
           },
           {
             elementArgs: {
@@ -414,7 +414,7 @@ describe('Damage', () => {
               monsterName: Alatreon.name,
               questId: theBrilliantDarknessId,
               monsterStateIndex: 0,
-              hitzoneName: 'Head'
+              hitzoneIndex: 0
             },
             {
               elementArgs: {
@@ -441,7 +441,7 @@ describe('Damage', () => {
             monsterName: Alatreon.name,
             questId: theBrilliantDarknessId,
             monsterStateIndex: 0,
-            hitzoneName: 'Head'
+            hitzoneIndex: 0
           },
           {
             elementArgs: {
@@ -469,7 +469,7 @@ describe('Damage', () => {
             monsterName: Alatreon.name,
             questId: theBrilliantDarknessId,
             monsterStateIndex: 0,
-            hitzoneName: 'Head'
+            hitzoneIndex: 0
           },
           {
             elementArgs: {

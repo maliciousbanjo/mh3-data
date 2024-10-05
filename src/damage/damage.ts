@@ -44,16 +44,16 @@ export function calculateDamage(
   damageBuffArgs: Partial<DamageBuffArgs>
 ) {
   const { weaponClass } = weaponArgs;
-  const { monsterName, questId, monsterStateIndex, hitzoneName } = monsterArgs;
+  const { monsterName, questId, monsterStateIndex, hitzoneIndex } = monsterArgs;
   const monster = Monsters.getMonster(monsterName);
 
   // Validate parameters
-  const maybeHitzone: MonsterTypes.Hitzone | undefined = monster.monsterStates[
-    monsterStateIndex
-  ]?.hitzones.find(hz => hz.name === hitzoneName);
+  const maybeHitzone: MonsterTypes.Hitzone | undefined = monster.monsterStates
+    .at(monsterStateIndex)
+    ?.hitzones.at(hitzoneIndex);
   if (!maybeHitzone) {
     throw new Error(
-      `${monsterName} does not have a ${hitzoneName} hitzone at monsterStateIndex ${monsterStateIndex}`
+      `${monsterName}, monsterStateIndex ${monsterStateIndex} does not have a hitzone at index ${hitzoneIndex}`
     );
   }
 

@@ -63,8 +63,8 @@ export interface MonsterArgs {
   questId: QuestTypes.Quest['id'] | undefined;
   /** Must be valid monster state for this monsters */
   monsterStateIndex: number;
-  /** Must be valid hitzone for this monster */
-  hitzoneName: MonsterTypes.Hitzone['name'];
+  /** Must be valid index for the provided monsterStateIndex */
+  hitzoneIndex: number;
 }
 
 /**
