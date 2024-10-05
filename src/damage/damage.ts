@@ -48,16 +48,17 @@ export function calculateDamage(
   const monster = Monsters.getMonster(monsterName);
 
   // Validate parameters
-  const maybeHitzoneValues: MonsterTypes.HitzoneValues | undefined =
-    monster.monsterStates[monsterStateIndex]?.hitzones[hitzoneName];
-  if (!maybeHitzoneValues) {
+  const maybeHitzone: MonsterTypes.Hitzone | undefined = monster.monsterStates[
+    monsterStateIndex
+  ]?.hitzones.find(hz => hz.name === hitzoneName);
+  if (!maybeHitzone) {
     throw new Error(
       `${monsterName} does not have a ${hitzoneName} hitzone at monsterStateIndex ${monsterStateIndex}`
     );
   }
 
   const monsterMultipliers: MonsterMultipliers = {
-    hitzoneValues: maybeHitzoneValues,
+    hitzoneValues: maybeHitzone.values,
     levelMultipliers: !questId
       ? MonsterLevels.getMonsterLevelMultipliers(0)
       : Quests.getMonsterLevelForQuest(monster.id, questId)

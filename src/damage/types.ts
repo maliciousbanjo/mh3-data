@@ -64,7 +64,7 @@ export interface MonsterArgs {
   /** Must be valid monster state for this monsters */
   monsterStateIndex: number;
   /** Must be valid hitzone for this monster */
-  hitzoneName: keyof MonsterTypes.Hitzone;
+  hitzoneName: MonsterTypes.Hitzone['name'];
 }
 
 /**

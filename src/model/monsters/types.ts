@@ -66,9 +66,12 @@ export interface HitzoneValues {
 }
 
 /**
- * Record of <Part: HitzoneValues>
+ * Unique area on a monster that takes damage
  */
-export type Hitzone = Record<string, HitzoneValues>;
+export interface Hitzone {
+  name: string;
+  values: HitzoneValues;
+}
 
 /**
  * Collection of either a default hitzone or hitzones
@@ -76,7 +79,7 @@ export type Hitzone = Record<string, HitzoneValues>;
  */
 export interface MonsterState {
   name: string;
-  hitzones: Hitzone;
+  hitzones: Hitzone[];
 }
 
 /**
