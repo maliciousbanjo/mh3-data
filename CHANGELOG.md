@@ -1,5 +1,11 @@
 # mh3-data
 
+## 0.9.2
+
+### Patch Changes
+
+- ec78641: Changes to object structures such as Monster Hitzones
+
 ## 0.9.1
 
 ### Patch Changes
