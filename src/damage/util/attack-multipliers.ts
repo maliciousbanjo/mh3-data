@@ -62,5 +62,5 @@ export const LOW_HEALTH_SKILL_MULTIPLIERS = Object.freeze({
 export const FORTIFY_MULTIPLIERS = Object.freeze({
   none: 1,
   firstFaint: 1.1,
-  secondFaint: 2.2
+  secondFaint: 1.2
 });
