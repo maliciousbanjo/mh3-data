@@ -1,5 +1,11 @@
 # mh3-data
 
+## 0.9.3
+
+### Patch Changes
+
+- 613295b: Fixed incorrect multiplier for 2nd fortify
+
 ## 0.9.2
 
 ### Patch Changes
