@@ -1,5 +1,11 @@
 # mh3-data
 
+## 0.9.4
+
+### Patch Changes
+
+- 894ca47: Fixed error in switch axe damage calculation that was always including phial type (regardless of sword/axe mode)
+
 ## 0.9.3
 
 ### Patch Changes
