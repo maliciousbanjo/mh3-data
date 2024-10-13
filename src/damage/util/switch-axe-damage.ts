@@ -50,11 +50,21 @@ function getSwitchAxeAttack(
  * Power phials receive a 1.25 bonus to RAW damage
  * Element phials receive a 1.25 bonus to ELEMENTAL damage
  */
-function getSwitchAxeSpecialVarMultiplier(switchAxe: SwitchAxeTypes.SwitchAxe) {
+function getSwitchAxeSpecialVarMultiplier(
+  switchAxe: SwitchAxeTypes.SwitchAxe,
+  switchAxeMode: SwitchAxeTypes.SwitchAxeAttackMode
+) {
+  const noMulitiplier = 1;
+  if (switchAxeMode === 'axe')
+    return {
+      rawSpecialVarMultiplier: noMulitiplier,
+      elementSpecialVarMultiplier: noMulitiplier
+    };
+
   const rawSpecialVarMultiplier =
-    switchAxe.phial === 'power' ? SWITCH_AXE_PHIAL_MULTIPLIER : 1;
+    switchAxe.phial === 'power' ? SWITCH_AXE_PHIAL_MULTIPLIER : noMulitiplier;
   const elementSpecialVarMultiplier =
-    switchAxe.phial === 'element' ? SWITCH_AXE_PHIAL_MULTIPLIER : 1;
+    switchAxe.phial === 'element' ? SWITCH_AXE_PHIAL_MULTIPLIER : noMulitiplier;
 
   return { rawSpecialVarMultiplier, elementSpecialVarMultiplier };
 }
@@ -91,12 +101,11 @@ export function calculateSwitchAxeDamage(
   const { classModifier } = Weapons.getWeaponDamageProperties(
     WeaponClass.SWITCH_AXE
   );
-
-  const attack = getSwitchAxeAttack(switchAxeMode, attackName);
   const sharpnessMultiplier = getSharpnessRawMultiplier(sharpness);
 
+  const attack = getSwitchAxeAttack(switchAxeMode, attackName);
   const { rawSpecialVarMultiplier, elementSpecialVarMultiplier } =
-    getSwitchAxeSpecialVarMultiplier(switchAxe);
+    getSwitchAxeSpecialVarMultiplier(switchAxe, switchAxeMode);
 
   const rawMultiplier = getRawMultiplier(rawArgs);
 

@@ -5,10 +5,17 @@ import {
   RoyalLudroth
 } from '../../src/model/monsters/large-monster-data';
 import { Sharpness, WeaponClass } from '../../src/model/weapons';
+import type { DamageTypes } from '../../src/damage';
 
 describe('Damage', () => {
   describe('calculateDamage', () => {
     const theBrilliantDarknessId = 0x4a39;
+    const alatreonMonsterArgs: DamageTypes.MonsterArgs = {
+      monsterName: Alatreon.name,
+      questId: theBrilliantDarknessId,
+      monsterStateIndex: 0,
+      hitzoneIndex: 0
+    };
 
     it('throws error for invalid sharpness', () => {
       expect(() =>
@@ -20,12 +27,7 @@ describe('Damage', () => {
             sharpness: Sharpness.PURPLE,
             weaponMultipliers: {}
           },
-          {
-            monsterName: Alatreon.name,
-            questId: theBrilliantDarknessId,
-            monsterStateIndex: 0,
-            hitzoneIndex: 0
-          },
+          alatreonMonsterArgs,
           {
             elementArgs: {
               awaken: false,
@@ -47,12 +49,7 @@ describe('Damage', () => {
             middleOfBlade: false
           }
         },
-        {
-          monsterName: Alatreon.name,
-          questId: theBrilliantDarknessId,
-          monsterStateIndex: 0,
-          hitzoneIndex: 0
-        },
+        alatreonMonsterArgs,
         {
           elementArgs: {
             awaken: false,
@@ -73,12 +70,7 @@ describe('Damage', () => {
           sharpness: Sharpness.PURPLE,
           weaponMultipliers: {}
         },
-        {
-          monsterName: Alatreon.name,
-          questId: theBrilliantDarknessId,
-          monsterStateIndex: 0,
-          hitzoneIndex: 0
-        },
+        alatreonMonsterArgs,
         {
           elementArgs: {
             awaken: false,
@@ -99,12 +91,7 @@ describe('Damage', () => {
             sharpness: Sharpness.PURPLE,
             weaponMultipliers: {}
           },
-          {
-            monsterName: Alatreon.name,
-            questId: theBrilliantDarknessId,
-            monsterStateIndex: 0,
-            hitzoneIndex: 0
-          },
+          alatreonMonsterArgs,
           {
             elementArgs: {
               awaken: false,
@@ -154,12 +141,7 @@ describe('Damage', () => {
               sharpness: Sharpness.PURPLE,
               weaponMultipliers: {}
             },
-            {
-              monsterName: Alatreon.name,
-              questId: theBrilliantDarknessId,
-              monsterStateIndex: 0,
-              hitzoneIndex: 0
-            },
+            alatreonMonsterArgs,
             {
               elementArgs: {
                 awaken: false,
@@ -183,12 +165,7 @@ describe('Damage', () => {
               }
             }
           },
-          {
-            monsterName: Alatreon.name,
-            questId: theBrilliantDarknessId,
-            monsterStateIndex: 0,
-            hitzoneIndex: 0
-          },
+          alatreonMonsterArgs,
           {
             elementArgs: {
               awaken: false,
@@ -212,12 +189,7 @@ describe('Damage', () => {
               }
             }
           },
-          {
-            monsterName: Alatreon.name,
-            questId: theBrilliantDarknessId,
-            monsterStateIndex: 0,
-            hitzoneIndex: 0
-          },
+          alatreonMonsterArgs,
           {
             elementArgs: {
               awaken: false,
@@ -241,12 +213,7 @@ describe('Damage', () => {
               }
             }
           },
-          {
-            monsterName: Alatreon.name,
-            questId: theBrilliantDarknessId,
-            monsterStateIndex: 0,
-            hitzoneIndex: 0
-          },
+          alatreonMonsterArgs,
           {
             elementArgs: {
               awaken: false,
@@ -270,12 +237,7 @@ describe('Damage', () => {
               }
             }
           },
-          {
-            monsterName: Alatreon.name,
-            questId: theBrilliantDarknessId,
-            monsterStateIndex: 0,
-            hitzoneIndex: 0
-          },
+          alatreonMonsterArgs,
           {
             elementArgs: {
               awaken: false,
@@ -356,12 +318,7 @@ describe('Damage', () => {
               switchAxeMode: 'sword'
             }
           },
-          {
-            monsterName: Alatreon.name,
-            questId: theBrilliantDarknessId,
-            monsterStateIndex: 0,
-            hitzoneIndex: 0
-          },
+          alatreonMonsterArgs,
           {
             elementArgs: {
               awaken: false,
@@ -371,6 +328,50 @@ describe('Damage', () => {
         );
         expect(damage).toMatchSnapshot();
       });
+
+      it('Axe mode', () => {
+        const greatInceadeusDamage = calculateDamage(
+          {
+            weaponClass: WeaponClass.SWITCH_AXE,
+            weaponId: 22, // Great Inceadeus
+            attackName: 'Overhead Slash',
+            sharpness: Sharpness.BLUE,
+            weaponMultipliers: {
+              switchAxeMode: 'axe'
+            }
+          },
+          alatreonMonsterArgs,
+          {
+            elementArgs: {
+              awaken: false,
+              elementAttack: 'none'
+            }
+          }
+        );
+
+        const greatDemonbindDamage = calculateDamage(
+          {
+            weaponClass: WeaponClass.SWITCH_AXE,
+            weaponId: 24, // Great Demonbind (P)
+            attackName: 'Overhead Slash',
+            sharpness: Sharpness.BLUE,
+            weaponMultipliers: {
+              switchAxeMode: 'axe'
+            }
+          },
+          alatreonMonsterArgs,
+          {
+            elementArgs: {
+              awaken: false,
+              elementAttack: 'none'
+            }
+          }
+        );
+
+        expect(greatInceadeusDamage[0].totalDamage).toBe(44);
+        expect(greatDemonbindDamage[0].totalDamage).toBe(45);
+      });
+
       it('Element phial', () => {
         const damage = calculateDamage(
           {
@@ -382,12 +383,7 @@ describe('Damage', () => {
               switchAxeMode: 'sword'
             }
           },
-          {
-            monsterName: Alatreon.name,
-            questId: theBrilliantDarknessId,
-            monsterStateIndex: 0,
-            hitzoneIndex: 0
-          },
+          alatreonMonsterArgs,
           {
             elementArgs: {
               awaken: false,
@@ -410,12 +406,7 @@ describe('Damage', () => {
               sharpness: Sharpness.PURPLE,
               weaponMultipliers: {}
             },
-            {
-              monsterName: Alatreon.name,
-              questId: theBrilliantDarknessId,
-              monsterStateIndex: 0,
-              hitzoneIndex: 0
-            },
+            alatreonMonsterArgs,
             {
               elementArgs: {
                 awaken: false,
@@ -437,12 +428,7 @@ describe('Damage', () => {
               swordAndShieldMode: 'land'
             }
           },
-          {
-            monsterName: Alatreon.name,
-            questId: theBrilliantDarknessId,
-            monsterStateIndex: 0,
-            hitzoneIndex: 0
-          },
+          alatreonMonsterArgs,
           {
             elementArgs: {
               awaken: false,
@@ -465,12 +451,7 @@ describe('Damage', () => {
               swordAndShieldMode: 'land'
             }
           },
-          {
-            monsterName: Alatreon.name,
-            questId: theBrilliantDarknessId,
-            monsterStateIndex: 0,
-            hitzoneIndex: 0
-          },
+          alatreonMonsterArgs,
           {
             elementArgs: {
               awaken: false,
