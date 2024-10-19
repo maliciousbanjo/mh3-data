@@ -1,16 +1,10 @@
+import { MonsterLevels, Monsters, Weapons, type MonsterTypes } from '../model';
 import type {
   DamageBuffArgs,
   MonsterArgs,
   MonsterMultipliers,
   WeaponArgs
 } from './types';
-import {
-  MonsterLevels,
-  Monsters,
-  Quests,
-  Weapons,
-  type MonsterTypes
-} from '../model';
 import { calculateGreatSwordDamage } from './util/great-sword-damage';
 import { calculateHammerDamage } from './util/hammer-damage';
 import { calculateLanceDamage } from './util/lance-damage';
@@ -59,9 +53,10 @@ export function calculateDamage(
 
   const monsterMultipliers: MonsterMultipliers = {
     hitzoneValues: maybeHitzone.values,
-    levelMultipliers: !questId
-      ? MonsterLevels.getMonsterLevelMultipliers(0)
-      : Quests.getMonsterLevelForQuest(monster.id, questId)
+    levelMultipliers:
+      questId === undefined
+        ? MonsterLevels.getMonsterLevelMultipliers(monsterName, 0)
+        : MonsterLevels.getMonsterMultipliersForQuest(monsterName, questId)
   };
 
   switch (weaponClass) {

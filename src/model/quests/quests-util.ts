@@ -1,19 +1,18 @@
-import type { MonsterTypes } from '../monsters';
-import { VillageQuestData } from './village-quest-data';
+import { type MonsterTypes } from '../monsters';
 import { CityQuestData } from './city-quest-data';
 import type {
-  SlayQuest,
   CaptureQuest,
   EscortQuest,
+  GatheringQuest,
+  HarvestQuest,
   HuntQuest,
   MultiHuntQuest,
   Quest,
+  QuestRegion,
   RepelQuest,
-  GatheringQuest,
-  HarvestQuest,
-  QuestRegion
+  SlayQuest
 } from './types';
-import { MonsterLevels, type MonsterLevelTypes } from '..';
+import { VillageQuestData } from './village-quest-data';
 
 /**
  * Type guard for a {@link HuntQuest}
@@ -142,23 +141,4 @@ export function isMonsterInQuest(
 ): boolean {
   const quest = getQuestById(questId);
   return quest.bosses.some(boss => boss.monsterId === monsterId);
-}
-
-/**
- * @returns MonsterLevelMultiplier for a given monster ID in a quest ID.
- * @throw Error if monster is not present in quest
- */
-export function getMonsterLevelForQuest(
-  monsterId: MonsterTypes.Monster['id'],
-  questId: Quest['id']
-): MonsterLevelTypes.MonsterLevelMultipliers {
-  const quest = getQuestById(questId);
-
-  const monster = quest.bosses.find(boss => boss.monsterId === monsterId);
-  if (!monster)
-    throw new Error(
-      `Quest ID ${questId} does not include monster ID ${monsterId}`
-    );
-
-  return MonsterLevels.getMonsterLevelMultipliers(monster.level);
 }

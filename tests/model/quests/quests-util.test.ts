@@ -1,12 +1,9 @@
-import { MonsterLevelTypes } from '../../../src/model';
 import {
-  Alatreon,
   Ceadeus,
   Deviljho,
   GreatJaggi
 } from '../../../src/model/monsters/large-monster-data';
 import {
-  getMonsterLevelForQuest,
   getQuestById,
   getQuestsWithLargeMonster
 } from '../../../src/model/quests/quests-util';
@@ -53,23 +50,6 @@ describe('Quests util', () => {
       expect(getQuestById(0x4a39)).toHaveProperty(
         'name',
         'The Brilliant Darkness'
-      );
-    });
-  });
-
-  describe('getMonsterLevelForQuest', () => {
-    it('Throws error for invalid monster ID', () => {
-      expect(() => getMonsterLevelForQuest(Deviljho.id, 0x4a39)).toThrow();
-    });
-
-    it('Returns monster level multipliers', () => {
-      const expectedMultipliers: MonsterLevelTypes.MonsterLevelMultipliers = {
-        defense: 0.75,
-        health: [1],
-        stagger: 2.2
-      };
-      expect(getMonsterLevelForQuest(Alatreon.id, 0x4a39)).toStrictEqual(
-        expectedMultipliers
       );
     });
   });
