@@ -1,13 +1,15 @@
-import type { QuestRegion } from './types';
+import type { QuestMode } from './types';
 import { StarLevel, MapLocation } from './enum';
 
-export const VillageQuestData = Object.freeze<QuestRegion>({
-  name: 'Village',
+export const VillageQuestData = Object.freeze<QuestMode>({
+  region: 'Village',
   starLevels: {
     [StarLevel.OneStar]: [
       {
         id: 0x03e8,
         name: "Harvest 'Shroom",
+        region: 'Village',
+        rank: 'Low',
         client: 'Clan Matriarch',
         type: 'gather',
         goal: 'gathering',
@@ -37,6 +39,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x03e9,
         name: 'Prescription Pick-up',
+        region: 'Village',
+        rank: 'Low',
         client: 'Medicine Man',
         type: 'gather',
         goal: 'gathering',
@@ -63,6 +67,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x03ea,
         name: 'Goldenfish Opportunity',
+        region: 'Village',
+        rank: 'Low',
         client: 'Fish Fanboy',
         type: 'gather',
         goal: 'gathering',
@@ -91,6 +97,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x03eb,
         name: 'Farm Aid',
+        region: 'Village',
+        rank: 'Low',
         client: 'Old Farmer',
         type: 'hunt',
         goal: 'slay',
@@ -117,6 +125,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x03ec,
         name: "Guts: It's What's for Dinner",
+        region: 'Village',
+        rank: 'Low',
         client: 'Manor Cook',
         type: 'gather',
         goal: 'gathering',
@@ -151,6 +161,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x03ed,
         name: 'Sunken Treasures',
+        region: 'Village',
+        rank: 'Low',
         client: 'Lovesick Kid',
         type: 'gather',
         goal: 'gathering',
@@ -179,6 +191,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x03f2,
         name: 'Bug Hunt',
+        region: 'Village',
+        rank: 'Low',
         client: 'Brainy Biologist',
         type: 'hunt',
         goal: 'slay',
@@ -208,6 +222,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x03f3,
         name: 'Secret of the Crystal Bones',
+        region: 'Village',
+        rank: 'Low',
         client: 'Archeologist',
         type: 'gather',
         goal: 'gathering',
@@ -234,6 +250,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x03f4,
         name: 'No Guts, No Glory',
+        region: 'Village',
+        rank: 'Low',
         client: 'Caravan Leader',
         type: 'gather',
         goal: 'gathering',
@@ -260,6 +278,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x03f5,
         name: 'Big Game Hunting',
+        region: 'Village',
+        rank: 'Low',
         client: 'Head Village Guard',
         type: 'hunt',
         goal: 'hunt',
@@ -296,6 +316,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x03f6,
         name: "Who's the Boss?",
+        region: 'Village',
+        rank: 'Low',
         client: 'Brainy Biologist',
         type: 'capture',
         goal: 'capture',
@@ -334,6 +356,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x07d0,
         name: 'No Love for Ludroth',
+        region: 'Village',
+        rank: 'Low',
         client: 'Ex-Caravan Sentry',
         type: 'hunt',
         goal: 'slay',
@@ -361,6 +385,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x03fc,
         name: 'Rhenoplos Rampage!',
+        region: 'Village',
+        rank: 'Low',
         client: 'Bandaged Boy',
         type: 'hunt',
         goal: 'slay',
@@ -387,6 +413,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x03fd,
         name: 'Herbivore Egg Hunt!',
+        region: 'Village',
+        rank: 'Low',
         client: 'Newlywed Wife',
         type: 'gather',
         goal: 'gathering',
@@ -416,6 +444,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x03fe,
         name: 'Pest Control',
+        region: 'Village',
+        rank: 'Low',
         client: 'Cattle Rancher',
         type: 'hunt',
         goal: 'slay',
@@ -444,6 +474,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x03ff,
         name: 'The Deadliest Catch',
+        region: 'Village',
+        rank: 'Low',
         client: 'Flooded Forest Guardsman',
         type: 'hunt',
         goal: 'slay',
@@ -470,6 +502,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0400,
         name: 'Playing with Fire',
+        region: 'Village',
+        rank: 'Low',
         client: 'Red-cheeked Huntress',
         type: 'hunt',
         goal: 'hunt',
@@ -508,6 +542,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0401,
         name: 'Trapping a Trickster',
+        region: 'Village',
+        rank: 'Low',
         client: 'Newbie Hunter',
         type: 'capture',
         goal: 'capture',
@@ -546,6 +582,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0402,
         name: 'Save Our Boat',
+        region: 'Village',
+        rank: 'Low',
         client: 'Fleet Captain',
         type: 'hunt',
         goal: 'hunt',
@@ -584,6 +622,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0403,
         name: 'Leading the Charge',
+        region: 'Village',
+        rank: 'Low',
         client: 'Brainy Biologist',
         type: 'hunt',
         goal: 'hunt',
@@ -622,6 +662,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0404,
         name: 'A Royal Pain',
+        region: 'Village',
+        rank: 'Low',
         client: "The Lord's Beloved Daughter",
         type: 'capture',
         goal: 'capture',
@@ -660,6 +702,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x07d1,
         name: 'Shakalaka Savior!',
+        region: 'Village',
+        rank: 'Low',
         client: 'Carefree Lad',
         type: 'escort',
         goal: 'slay',
@@ -691,6 +735,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0406,
         name: 'Lost in Blue',
+        region: 'Village',
+        rank: 'Low',
         client: 'Tundra-expedition Member',
         type: 'slay',
         goal: 'slay',
@@ -714,6 +760,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0407,
         name: 'Leader of the Icepack',
+        region: 'Village',
+        rank: 'Low',
         client: 'Tundra-expedition Leader',
         type: 'hunt',
         goal: 'hunt',
@@ -751,6 +799,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0408,
         name: 'Cold Stones',
+        region: 'Village',
+        rank: 'Low',
         client: 'Female Geologist',
         type: 'gather',
         goal: 'gathering',
@@ -780,6 +830,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0409,
         name: 'Hunter Killer',
+        region: 'Village',
+        rank: 'Low',
         client: 'Wounded Hunter',
         type: 'multihunt',
         goal: 'hunt',
@@ -831,6 +883,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x040a,
         name: 'Harvest Tour: Sandy Plains',
+        region: 'Village',
+        rank: 'Low',
         client: 'Felyne Tour Guide',
         type: 'harvest',
         goal: 'gathering',
@@ -856,6 +910,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x040b,
         name: 'Harvest Tour: Flooded Forest',
+        region: 'Village',
+        rank: 'Low',
         client: 'Felyne Tour Guide',
         type: 'harvest',
         goal: 'gathering',
@@ -881,6 +937,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x040c,
         name: 'Dragon Lady',
+        region: 'Village',
+        rank: 'Low',
         client: 'Village Protector',
         type: 'hunt',
         goal: 'hunt',
@@ -919,6 +977,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x040d,
         name: 'The Creeping Venom',
+        region: 'Village',
+        rank: 'Low',
         client: 'Cocky Hunter',
         type: 'hunt',
         goal: 'hunt',
@@ -960,6 +1020,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x040e,
         name: 'A Royal Rumble',
+        region: 'Village',
+        rank: 'Low',
         client: 'Middle-aged Knight',
         type: 'capture',
         goal: 'capture',
@@ -996,6 +1058,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x040f,
         name: 'Poached Wyvern Eggs',
+        region: 'Village',
+        rank: 'Low',
         client: 'Royal Cook',
         type: 'gather',
         goal: 'gathering',
@@ -1024,6 +1088,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x07d2,
         name: 'Accident Investigation',
+        region: 'Village',
+        rank: 'Low',
         client: 'Trader',
         type: 'hunt',
         goal: 'hunt',
@@ -1064,6 +1130,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0410,
         name: 'Best the Lava Beasts!',
+        region: 'Village',
+        rank: 'Low',
         client: 'Caravan Leader',
         type: 'slay',
         goal: 'slay',
@@ -1091,6 +1159,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0411,
         name: 'Heat Exhaustion',
+        region: 'Village',
+        rank: 'Low',
         client: 'City Blacksmith',
         type: 'gather',
         goal: 'gathering',
@@ -1120,6 +1190,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0412,
         name: 'The Lord of the Seas',
+        region: 'Village',
+        rank: 'Low',
         client: 'Oceanographer',
         type: 'capture',
         goal: 'capture',
@@ -1161,6 +1233,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0413,
         name: 'Harvest Tour: Tundra',
+        region: 'Village',
+        rank: 'Low',
         client: 'Felyne Tour Guide',
         type: 'harvest',
         goal: 'gathering',
@@ -1186,6 +1260,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0414,
         name: 'The Wrath of Rathalos',
+        region: 'Village',
+        rank: 'Low',
         client: 'Princess of a Ruined Land',
         type: 'hunt',
         goal: 'hunt',
@@ -1225,6 +1301,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0415,
         name: "A Bard's Tale",
+        region: 'Village',
+        rank: 'Low',
         client: 'Wandering Bard',
         type: 'hunt',
         goal: 'hunt',
@@ -1263,6 +1341,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0416,
         name: 'The Horned Dragon',
+        region: 'Village',
+        rank: 'Low',
         client: 'Watchtower Sentinel',
         type: 'hunt',
         goal: 'hunt',
@@ -1300,6 +1380,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0417,
         name: 'The Omen',
+        region: 'Village',
+        rank: 'Low',
         client: 'Shipmaster',
         type: 'hunt',
         goal: 'hunt',
@@ -1341,6 +1423,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0418,
         name: 'Denizen of the Molten Deep',
+        region: 'Village',
+        rank: 'Low',
         client: 'Fire Country Chieftain',
         type: 'hunt',
         goal: 'hunt',
@@ -1380,6 +1464,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0419,
         name: "The Volcano's Fury",
+        region: 'Village',
+        rank: 'Low',
         client: 'Scarred Hunter',
         type: 'hunt',
         goal: 'hunt',
@@ -1417,6 +1503,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x041a,
         name: "Uragaan's Trail",
+        region: 'Village',
+        rank: 'Low',
         client: 'Brainy Biologist',
         type: 'capture',
         goal: 'capture',
@@ -1453,6 +1541,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x07d3,
         name: 'Trial of the Sea Dragon',
+        region: 'Village',
+        rank: 'Low',
         client: 'Moga Village Chief',
         type: 'repel',
         goal: 'repel',
@@ -1487,6 +1577,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x07d4,
         name: 'Fell the Lagiacrus!',
+        region: 'Village',
+        rank: 'Low',
         client: 'Moga Village Chief',
         type: 'hunt',
         goal: 'hunt',
@@ -1526,6 +1618,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0424,
         name: 'Mating Season',
+        region: 'Village',
+        rank: 'Low',
         client: 'Moga Village Chief',
         type: 'multihunt',
         goal: 'hunt',
@@ -1567,6 +1661,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0425,
         name: 'Four Horns',
+        region: 'Village',
+        rank: 'Low',
         client: 'Spoiled Princess',
         type: 'multihunt',
         goal: 'hunt',
@@ -1608,6 +1704,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0426,
         name: 'Dangerous Waters',
+        region: 'Village',
+        rank: 'Low',
         client: 'Shipmaster',
         type: 'multihunt',
         goal: 'hunt',
@@ -1649,6 +1747,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0427,
         name: 'White Wind of the Tundra',
+        region: 'Village',
+        rank: 'Low',
         client: 'Troop Captain',
         type: 'multihunt',
         goal: 'hunt',
@@ -1690,6 +1790,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0428,
         name: 'The Death of Sky and Sea',
+        region: 'Village',
+        rank: 'Low',
         client: 'Imperial Envoy',
         type: 'multihunt',
         goal: 'hunt',
@@ -1731,6 +1833,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x0429,
         name: 'A Burnt Offering',
+        region: 'Village',
+        rank: 'Low',
         client: 'Fire Country Princess',
         type: 'multihunt',
         goal: 'hunt',
@@ -1772,6 +1876,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x07d5,
         name: 'Save Moga Village!',
+        region: 'Village',
+        rank: 'Low',
         client: 'Moga Village Chief',
         type: 'repel',
         goal: 'other',
@@ -1798,6 +1904,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x07d6,
         name: 'The Decisive Battle',
+        region: 'Village',
+        rank: 'Low',
         client: 'Guild Headquarters',
         type: 'slay',
         goal: 'hunt',
@@ -1833,6 +1941,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
     {
       id: 0x2328,
       name: 'Great Jaggi Team Takedown',
+      region: 'Village',
+      rank: 'Low',
       client: 'Announcer/Receptionist',
       type: 'slay',
       goal: 'hunt',
@@ -1852,6 +1962,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
     {
       id: 0x2329,
       name: 'Qurupeco Team Takedown',
+      region: 'Village',
+      rank: 'Low',
       client: 'Announcer/Receptionist',
       type: 'slay',
       goal: 'hunt',
@@ -1871,6 +1983,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
     {
       id: 0x232b,
       name: 'Barroth Team Takedown',
+      region: 'Village',
+      rank: 'Low',
       client: 'Announcer/Receptionist',
       type: 'slay',
       goal: 'hunt',
@@ -1890,6 +2004,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
     {
       id: 0x232a,
       name: 'Royal Ludroth Team Takedown',
+      region: 'Village',
+      rank: 'Low',
       client: 'Announcer/Receptionist',
       type: 'slay',
       goal: 'hunt',
@@ -1909,6 +2025,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
     {
       id: 0x232c,
       name: 'Rathian Team Takedown',
+      region: 'Village',
+      rank: 'Low',
       client: 'Announcer/Receptionist',
       type: 'slay',
       goal: 'hunt',
@@ -1928,6 +2046,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
     {
       id: 0x232d,
       name: 'Lagiacrus Team Takedown',
+      region: 'Village',
+      rank: 'Low',
       client: 'Announcer/Receptionist',
       type: 'slay',
       goal: 'hunt',
@@ -1947,6 +2067,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
     {
       id: 0x232e,
       name: 'Uragaan Team Takedown',
+      region: 'Village',
+      rank: 'Low',
       client: 'Announcer/Receptionist',
       type: 'slay',
       goal: 'hunt',
@@ -1966,6 +2088,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
     {
       id: 0x232f,
       name: 'Wyvern Team Takedown',
+      region: 'Village',
+      rank: 'Low',
       client: 'Announcer/Receptionist',
       type: 'slay',
       goal: 'hunt',
@@ -1993,6 +2117,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
     {
       id: 0x2330,
       name: 'Water Arena Rumble',
+      region: 'Village',
+      rank: 'Low',
       client: 'Announcer/Receptionist',
       type: 'slay',
       goal: 'hunt',
@@ -2020,6 +2146,8 @@ export const VillageQuestData = Object.freeze<QuestRegion>({
     {
       id: 0x2331,
       name: 'Arena Free-for-all',
+      region: 'Village',
+      rank: 'Low',
       client: 'Announcer/Receptionist',
       type: 'slay',
       goal: 'hunt',

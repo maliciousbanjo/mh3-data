@@ -8,7 +8,7 @@ import type {
   HuntQuest,
   MultiHuntQuest,
   Quest,
-  QuestRegion,
+  QuestMode,
   RepelQuest,
   SlayQuest
 } from './types';
@@ -77,7 +77,7 @@ export function isHarvestQuest(quest: Quest): quest is HarvestQuest {
  */
 export function getQuestsWithLargeMonster(
   id: MonsterTypes.LargeMonster['id'],
-  region: QuestRegion['name'] | 'Both'
+  region: QuestMode['region'] | 'Both'
 ): Quest[] {
   const cityQuests = Object.values(CityQuestData.starLevels)
     .flat()

@@ -1,13 +1,15 @@
-import type { QuestRegion } from './types';
+import type { QuestMode } from './types';
 import { StarLevel, MapLocation } from './enum';
 
-export const CityQuestData = Object.freeze<QuestRegion>({
-  name: 'City',
+export const CityQuestData = Object.freeze<QuestMode>({
+  region: 'City',
   starLevels: {
     [StarLevel.OneStar]: [
       {
         id: 0x2710,
         name: "Harvest 'Shroom",
+        region: 'City',
+        rank: 'Low',
         client: 'Apprentice Cook',
         type: 'gather',
         goal: 'gathering',
@@ -37,6 +39,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2711,
         name: 'Sunken Treasures',
+        region: 'City',
+        rank: 'Low',
         client: 'Trader',
         type: 'gather',
         goal: 'gathering',
@@ -66,6 +70,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2712,
         name: 'The Perfect Panacea',
+        region: 'City',
+        rank: 'Low',
         client: 'Nurse',
         type: 'gather',
         goal: 'gathering',
@@ -94,6 +100,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2713,
         name: 'The Jaggi Menace',
+        region: 'City',
+        rank: 'Low',
         client: 'Female Farmer',
         type: 'slay',
         goal: 'slay',
@@ -122,6 +130,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2714,
         name: 'Help the "Hunter"',
+        region: 'City',
+        rank: 'Low',
         client: 'Rich Hunter',
         type: 'hunt',
         goal: 'hunt',
@@ -160,6 +170,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2715,
         name: 'Playing with Fire',
+        region: 'City',
+        rank: 'Low',
         client: 'Red-cheeked Huntress',
         type: 'hunt',
         goal: 'hunt',
@@ -198,6 +210,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2716,
         name: "The Fisherman's Tale",
+        region: 'City',
+        rank: 'Low',
         client: 'Middle-aged Fisherman',
         type: 'capture',
         goal: 'capture',
@@ -233,6 +247,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2716,
         name: 'Secret of the Crystal Bones',
+        region: 'City',
+        rank: 'Low',
         client: 'Archeologist',
         type: 'gather',
         goal: 'gathering',
@@ -261,6 +277,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2718,
         name: 'No Guts, No Glory',
+        region: 'City',
+        rank: 'Low',
         client: 'Caravan Leader',
         type: 'gather',
         goal: 'gathering',
@@ -289,6 +307,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2719,
         name: 'Jaggi Population Control',
+        region: 'City',
+        rank: 'Low',
         client: 'Influential Citizen',
         type: 'capture',
         goal: 'capture',
@@ -327,6 +347,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x271a,
         name: 'Tracking the Trickster',
+        region: 'City',
+        rank: 'Low',
         client: 'Newbie Hunter',
         type: 'capture',
         goal: 'capture',
@@ -365,6 +387,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x271b,
         name: 'Goldenfish Opportunity',
+        region: 'City',
+        rank: 'Low',
         client: 'Fish Fanboy',
         type: 'gather',
         goal: 'gathering',
@@ -394,6 +418,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x271c,
         name: 'No Love for Ludroth',
+        region: 'City',
+        rank: 'Low',
         client: 'Ex-Caravan Sentry',
         type: 'slay',
         goal: 'slay',
@@ -420,6 +446,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x271d,
         name: "The Fisherman's Tale",
+        region: 'City',
+        rank: 'Low',
         client: 'Middle-aged Fisherman',
         type: 'hunt',
         goal: 'hunt',
@@ -460,6 +488,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2742,
         name: 'Harvest Tour: Deserted Isle',
+        region: 'City',
+        rank: 'Low',
         client: 'Felyne Tour Guide',
         type: 'harvest',
         goal: 'gathering',
@@ -485,6 +515,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2743,
         name: 'Bug Hunt',
+        region: 'City',
+        rank: 'Low',
         client: 'Brainy Biologist',
         type: 'slay',
         goal: 'slay',
@@ -514,6 +546,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2744,
         name: 'Wyvern Conservation',
+        region: 'City',
+        rank: 'Low',
         client: 'Wise Princess',
         type: 'gather',
         goal: 'gathering',
@@ -543,6 +577,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2745,
         name: 'A Royal Pain',
+        region: 'City',
+        rank: 'Low',
         client: 'Middle-aged Knight',
         type: 'capture',
         goal: 'capture',
@@ -581,6 +617,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2746,
         name: 'Harvest Tour: Sandy Plains',
+        region: 'City',
+        rank: 'Low',
         client: 'Felyne Tour Guide',
         type: 'harvest',
         goal: 'gathering',
@@ -606,6 +644,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2747,
         name: 'Rhenoplos Rampage!',
+        region: 'City',
+        rank: 'Low',
         client: 'City Protector',
         type: 'slay',
         goal: 'slay',
@@ -632,6 +672,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2748,
         name: 'Poached Herbivore Eggs',
+        region: 'City',
+        rank: 'Low',
         client: 'Newlywed Wife',
         type: 'gather',
         goal: 'gathering',
@@ -661,6 +703,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2749,
         name: 'Specimen Collection',
+        region: 'City',
+        rank: 'Low',
         client: 'Brainy Biologist',
         type: 'capture',
         goal: 'capture',
@@ -697,6 +741,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x274a,
         name: 'Flooded Forest Extermination',
+        region: 'City',
+        rank: 'Low',
         client: 'Cattle Rancher',
         type: 'slay',
         goal: 'slay',
@@ -725,6 +771,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x274b,
         name: 'Scene of the Crime',
+        region: 'City',
+        rank: 'Low',
         client: 'Trader',
         type: 'hunt',
         goal: 'hunt',
@@ -760,6 +808,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x274c,
         name: 'Lady and the Gobul',
+        region: 'City',
+        rank: 'Low',
         client: 'Spoiled Princess',
         type: 'capture',
         goal: 'capture',
@@ -798,6 +848,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x274d,
         name: "The Merchant's Mission",
+        region: 'City',
+        rank: 'Low',
         client: 'Simple Fur Trader',
         type: 'hunt',
         goal: 'hunt',
@@ -836,6 +888,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x274e,
         name: 'Blood From a Stone',
+        region: 'City',
+        rank: 'Low',
         client: 'Female Geologist',
         type: 'gather',
         goal: 'gathering',
@@ -865,6 +919,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x274f,
         name: 'Leader of the Icepack',
+        region: 'City',
+        rank: 'Low',
         client: 'Tundra-expedition Leader',
         type: 'hunt',
         goal: 'hunt',
@@ -902,6 +958,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2750,
         name: "The Butler's Great Baggi",
+        region: 'City',
+        rank: 'Low',
         client: 'White-clad Butler',
         type: 'capture',
         goal: 'capture',
@@ -939,6 +997,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x36b0,
         name: 'Leading the Charge',
+        region: 'City',
+        rank: 'Low',
         client: 'Brainy Biologist',
         type: 'hunt',
         goal: 'hunt',
@@ -979,6 +1039,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2774,
         name: 'Harvest Tour: Flooded Forest',
+        region: 'City',
+        rank: 'Low',
         client: 'Felyne Tour Guide',
         type: 'harvest',
         goal: 'gathering',
@@ -1004,6 +1066,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2775,
         name: 'Harvest Tour: Tundra',
+        region: 'City',
+        rank: 'Low',
         client: 'Felyne Tour Guide',
         type: 'harvest',
         goal: 'gathering',
@@ -1029,6 +1093,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2776,
         name: 'We Need a Hero',
+        region: 'City',
+        rank: 'Low',
         client: 'Princess of a Ruined Land',
         type: 'hunt',
         goal: 'hunt',
@@ -1068,6 +1134,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2777,
         name: 'Into the Danger Zone',
+        region: 'City',
+        rank: 'Low',
         client: 'City Security Chief',
         type: 'hunt',
         goal: 'hunt',
@@ -1105,6 +1173,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2778,
         name: 'Wanted Alive',
+        region: 'City',
+        rank: 'Low',
         client: 'Middle-aged Knight',
         type: 'capture',
         goal: 'capture',
@@ -1141,6 +1211,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2779,
         name: 'Rotten Fish',
+        region: 'City',
+        rank: 'Low',
         client: 'Frontier Baron',
         type: 'capture',
         goal: 'capture',
@@ -1177,6 +1249,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x277a,
         name: 'The Creeping Venom',
+        region: 'City',
+        rank: 'Low',
         client: 'Cocky Hunter',
         type: 'hunt',
         goal: 'hunt',
@@ -1215,6 +1289,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x277b,
         name: 'The Lost Expedition',
+        region: 'City',
+        rank: 'Low',
         client: 'Female Geologist',
         type: 'hunt',
         goal: 'hunt',
@@ -1256,6 +1332,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x277c,
         name: "The Bard's Barioth",
+        region: 'City',
+        rank: 'Low',
         client: 'Wandering Bard',
         type: 'capture',
         goal: 'capture',
@@ -1292,6 +1370,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x277d,
         name: 'Roll the Uroktor',
+        region: 'City',
+        rank: 'Low',
         client: 'Caravan Leader',
         type: 'hunt',
         goal: 'hunt',
@@ -1321,6 +1401,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x277e,
         name: 'Powder Burns',
+        region: 'City',
+        rank: 'Low',
         client: 'City Armorer',
         type: 'gather',
         goal: 'gathering',
@@ -1350,6 +1432,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x277f,
         name: "The Volcano's Fury",
+        region: 'City',
+        rank: 'Low',
         client: 'Scarred Hunter',
         type: 'hunt',
         goal: 'hunt',
@@ -1387,6 +1471,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2780,
         name: 'To Catch an Uragaan',
+        region: 'City',
+        rank: 'Low',
         client: 'Brainy Biologist',
         type: 'capture',
         goal: 'capture',
@@ -1423,6 +1509,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2781,
         name: '[Advanced] Double Trouble',
+        region: 'City',
+        rank: 'Low',
         client: 'Head of Island Guard',
         type: 'multihunt',
         goal: 'hunt',
@@ -1465,6 +1553,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2782,
         name: '[Advanced] Fort Gigginox',
+        region: 'City',
+        rank: 'Low',
         client: 'Ruler of the Frozen Lands',
         type: 'capture',
         goal: 'capture',
@@ -1502,6 +1592,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2783,
         name: '[Advanced] Rathalos Alert',
+        region: 'City',
+        rank: 'Low',
         client: 'Wyvern Observation Post',
         type: 'capture',
         goal: 'capture',
@@ -1539,6 +1631,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x2784,
         name: '[Advanced] Agnaktor Alert',
+        region: 'City',
+        rank: 'Low',
         client: 'Volcano Observation Post',
         type: 'hunt',
         goal: 'hunt',
@@ -1578,6 +1672,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x36b1,
         name: "The Fisherman's Fiend",
+        region: 'City',
+        rank: 'Low',
         client: 'Frontier Baron',
         type: 'hunt',
         goal: 'hunt',
@@ -1617,6 +1713,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x36b2,
         name: 'The Festival of Fear',
+        region: 'City',
+        rank: 'Low',
         client: 'Desert Mayor',
         type: 'slay',
         goal: 'hunt',
@@ -1649,6 +1747,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3e80,
         name: 'The Festival of Fear',
+        region: 'City',
+        rank: 'Low',
         client: 'Guildmaster',
         type: 'repel',
         goal: 'repel',
@@ -1686,6 +1786,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3a98,
         name: 'Harvest Tour: Deserted Isle',
+        region: 'City',
+        rank: 'High',
         client: 'Felyne Tour Guide',
         type: 'harvest',
         goal: 'gathering',
@@ -1711,6 +1813,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3a99,
         name: 'Jump a Jaggi',
+        region: 'City',
+        rank: 'High',
         client: 'Head Village Guard',
         type: 'hunt',
         goal: 'hunt',
@@ -1748,6 +1852,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3a9a,
         name: 'Playing with Fire',
+        region: 'City',
+        rank: 'High',
         client: 'Red-cheeked Huntress',
         type: 'hunt',
         goal: 'hunt',
@@ -1787,6 +1893,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3a9b,
         name: 'Reel In a Rathian',
+        region: 'City',
+        rank: 'High',
         client: 'Village Protector',
         type: 'hunt',
         goal: 'hunt',
@@ -1824,6 +1932,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3a9c,
         name: 'Harvest Tour: Sandy Plains',
+        region: 'City',
+        rank: 'High',
         client: 'Felyne Tour Guide',
         type: 'harvest',
         goal: 'gathering',
@@ -1849,6 +1959,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3a9d,
         name: 'No Guts, No Glory',
+        region: 'City',
+        rank: 'High',
         client: 'Caravan Leader',
         type: 'gather',
         goal: 'gathering',
@@ -1878,6 +1990,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3a9e,
         name: 'Jumping for Jaggi',
+        region: 'City',
+        rank: 'High',
         client: 'City Security Chief',
         type: 'multihunt',
         goal: 'hunt',
@@ -1920,6 +2034,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3a9f,
         name: 'The Mysterious Mimic',
+        region: 'City',
+        rank: 'High',
         client: 'Brainy Biologist',
         type: 'capture',
         goal: 'capture',
@@ -1958,6 +2074,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3aa0,
         name: 'Ambush the Ambusher',
+        region: 'City',
+        rank: 'High',
         client: 'Newbie Hunter',
         type: 'capture',
         goal: 'capture',
@@ -1998,6 +2116,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3aa1,
         name: 'Avenging the Fallen Hunter',
+        region: 'City',
+        rank: 'High',
         client: 'Wounded Hunter',
         type: 'hunt',
         goal: 'hunt',
@@ -2037,6 +2157,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3aa2,
         name: 'Neopteron Pest Control',
+        region: 'City',
+        rank: 'High',
         client: 'Cattle Rancher',
         type: 'slay',
         goal: 'slay',
@@ -2067,6 +2189,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3aa3,
         name: "A Ludroth Lickin'",
+        region: 'City',
+        rank: 'High',
         client: 'Ex-Caravan Sentry',
         type: 'slay',
         goal: 'slay',
@@ -2096,6 +2220,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3aa4,
         name: 'Fine Kettle of Fish',
+        region: 'City',
+        rank: 'High',
         client: 'Fish Fanboy',
         type: 'gather',
         goal: 'gathering',
@@ -2125,6 +2251,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3aa5,
         name: "The Fisherman's Tale",
+        region: 'City',
+        rank: 'High',
         client: 'Middle-aged Fisherman',
         type: 'capture',
         goal: 'capture',
@@ -2162,6 +2290,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3aa6,
         name: 'Grab a Gobul',
+        region: 'City',
+        rank: 'High',
         client: 'Trader',
         type: 'hunt',
         goal: 'hunt',
@@ -2198,6 +2328,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3a7,
         name: '[Advanced] Fearsome Twosome',
+        region: 'City',
+        rank: 'High',
         client: 'Head Village Guard',
         type: 'multihunt',
         goal: 'hunt',
@@ -2241,6 +2373,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3aa8,
         name: '[Advanced] Barroth Buster',
+        region: 'City',
+        rank: 'High',
         client: 'Wounded Hunter',
         type: 'hunt',
         goal: 'hunt',
@@ -2281,6 +2415,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3aa9,
         name: '[Advanced] Grab a Gobul',
+        region: 'City',
+        rank: 'High',
         client: 'Seafaring Trader',
         type: 'hunt',
         goal: 'hunt',
@@ -2317,6 +2453,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3aaa,
         name: '[Advanced] The Jaggia Menace',
+        region: 'City',
+        rank: 'High',
         client: 'Female Farmer',
         type: 'slay',
         goal: 'slay',
@@ -2345,6 +2483,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3e81,
         name: 'Rumble in the Great Desert',
+        region: 'City',
+        rank: 'High',
         client: 'Guildmaster',
         type: 'slay',
         goal: 'hunt',
@@ -2382,6 +2522,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3aca,
         name: 'Rathalos Research',
+        region: 'City',
+        rank: 'High',
         client: 'Wyvern Researcher',
         type: 'capture',
         goal: 'capture',
@@ -2420,6 +2562,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3acb,
         name: 'Into the Danger Zone',
+        region: 'City',
+        rank: 'High',
         client: 'City Security Chief',
         type: 'hunt',
         goal: 'hunt',
@@ -2458,6 +2602,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3acc,
         name: 'Harvest Tour: Flooded Forest',
+        region: 'City',
+        rank: 'High',
         client: 'Felyne Tour Guide',
         type: 'harvest',
         goal: 'gathering',
@@ -2484,6 +2630,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3acd,
         name: 'Rotten Fish',
+        region: 'City',
+        rank: 'High',
         client: 'Frontier Baron',
         type: 'capture',
         goal: 'capture',
@@ -2522,6 +2670,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3ace,
         name: 'Harvest Tour: Tundra',
+        region: 'City',
+        rank: 'High',
         client: 'Felyne Tour Guide',
         type: 'harvest',
         goal: 'gathering',
@@ -2548,6 +2698,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3acf,
         name: 'Leader of the Icepack',
+        region: 'City',
+        rank: 'High',
         client: 'Tundra-expedition Leader',
         type: 'hunt',
         goal: 'hunt',
@@ -2586,6 +2738,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3ad0,
         name: 'The Creeping Venom',
+        region: 'City',
+        rank: 'High',
         client: 'Cocky Hunter',
         type: 'hunt',
         goal: 'hunt',
@@ -2626,6 +2780,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3ad1,
         name: 'Gigginox RX',
+        region: 'City',
+        rank: 'High',
         client: 'Researcher of Medicine',
         type: 'capture',
         goal: 'capture',
@@ -2664,6 +2820,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3ad2,
         name: 'The Lost Expedition',
+        region: 'City',
+        rank: 'High',
         client: 'Female Geologist',
         type: 'hunt',
         goal: 'hunt',
@@ -2704,6 +2862,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3ad3,
         name: 'Roll the Uroktor',
+        region: 'City',
+        rank: 'High',
         client: 'Caravan Leader',
         type: 'slay',
         goal: 'slay',
@@ -2734,6 +2894,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3ad4,
         name: 'Run Down a Rathalos',
+        region: 'City',
+        rank: 'High',
         client: 'Princess of a Ruined Land',
         type: 'hunt',
         goal: 'hunt',
@@ -2773,6 +2935,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3ad5,
         name: 'The Thrill of the Hunt',
+        region: 'City',
+        rank: 'High',
         client: 'Scarred Hunter',
         type: 'hunt',
         goal: 'hunt',
@@ -2812,6 +2976,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3ad6,
         name: 'The Molten Monstrosity',
+        region: 'City',
+        rank: 'High',
         client: 'Fire Country Chieftain',
         type: 'hunt',
         goal: 'hunt',
@@ -2852,6 +3018,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3ad7,
         name: 'Agnaktor Alert',
+        region: 'City',
+        rank: 'High',
         client: 'Guild Observation Post',
         type: 'capture',
         goal: 'capture',
@@ -2890,6 +3058,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3ad8,
         name: '[Advanced] Run Down Rathalos',
+        region: 'City',
+        rank: 'High',
         client: 'Princess of a Ruined Land',
         type: 'hunt',
         goal: 'hunt',
@@ -2929,6 +3099,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3ad9,
         name: '[Advanced] Lick a Lagiacrus',
+        region: 'City',
+        rank: 'High',
         client: 'Frontier Baron',
         type: 'hunt',
         goal: 'hunt',
@@ -2968,6 +3140,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3ada,
         name: '[Advanced] Bump Off Barioth',
+        region: 'City',
+        rank: 'High',
         client: 'Spoiled Princess',
         type: 'hunt',
         goal: 'hunt',
@@ -3003,6 +3177,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3adb,
         name: '[Advanced] Heroes Wanted',
+        region: 'City',
+        rank: 'High',
         client: 'Fire Country Princess',
         type: 'multihunt',
         goal: 'hunt',
@@ -3046,6 +3222,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x4a38,
         name: 'Double Trouble',
+        region: 'City',
+        rank: 'High',
         client: 'Head of Island Guard',
         type: 'multihunt',
         goal: 'hunt',
@@ -3091,6 +3269,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3afc,
         name: 'Deep-six a Deviljho',
+        region: 'City',
+        rank: 'High',
         client: 'Ex-Hunter Merchant',
         type: 'hunt',
         goal: 'hunt',
@@ -3125,6 +3305,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3afd,
         name: 'Bedevil a Deviljho',
+        region: 'City',
+        rank: 'High',
         client: 'Borderlands Sentry',
         type: 'hunt',
         goal: 'hunt',
@@ -3160,6 +3342,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3afe,
         name: 'Into the Fire',
+        region: 'City',
+        rank: 'High',
         client: 'Fire Country Chieftain',
         type: 'hunt',
         goal: 'hunt',
@@ -3195,6 +3379,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3aff,
         name: 'Double Trouble',
+        region: 'City',
+        rank: 'High',
         client: 'Head of Island Guard',
         type: 'multihunt',
         goal: 'hunt',
@@ -3239,6 +3425,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3b01,
         name: "The Princess's Pride",
+        region: 'City',
+        rank: 'High',
         client: 'Spoiled Princess',
         type: 'multihunt',
         goal: 'hunt',
@@ -3282,6 +3470,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3b01,
         name: 'A Sea of Dragons',
+        region: 'City',
+        rank: 'High',
         client: 'City Guild Representative',
         type: 'multihunt',
         goal: 'hunt',
@@ -3326,6 +3516,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3b03,
         name: 'Tragedy on the Tundra',
+        region: 'City',
+        rank: 'High',
         client: 'Troop Captain',
         type: 'multihunt',
         goal: 'hunt',
@@ -3370,6 +3562,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x3b04,
         name: 'A Burnt Offering',
+        region: 'City',
+        rank: 'High',
         client: 'Fire Country Princess',
         type: 'multihunt',
         goal: 'hunt',
@@ -3414,6 +3608,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
       {
         id: 0x4a39,
         name: 'The Brilliant Darkness',
+        region: 'City',
+        rank: 'High',
         client: 'Desert Mayor',
         type: 'slay',
         goal: 'hunt',
@@ -3455,6 +3651,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
     {
       id: 0xea61,
       name: 'Grudge Match: Royal Ludroth',
+      region: 'City',
+      rank: 'Low',
       client: 'Announcer/Receptionist',
       type: 'slay',
       goal: 'hunt',
@@ -3474,6 +3672,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
     {
       id: 0xea62,
       name: 'Grudge Match: Rathian',
+      region: 'City',
+      rank: 'Low',
       client: 'Announcer/Receptionist',
       type: 'slay',
       goal: 'hunt',
@@ -3493,6 +3693,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
     {
       id: 0xea64,
       name: 'Grudge Match: Uragaan',
+      region: 'City',
+      rank: 'Low',
       client: 'Announcer/Receptionist',
       type: 'slay',
       goal: 'hunt',
@@ -3512,6 +3714,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
     {
       id: 0xea66,
       name: 'Grudge Match: Bird and Brute',
+      region: 'City',
+      rank: 'Low',
       client: 'Announcer/Receptionist',
       type: 'slay',
       goal: 'hunt',
@@ -3539,6 +3743,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
     {
       id: 0xea69,
       name: 'Grudge Match: Ice and Fire',
+      region: 'City',
+      rank: 'High',
       client: 'Announcer/Receptionist',
       type: 'slay',
       goal: 'hunt',
@@ -3571,6 +3777,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
     {
       id: 0xee49,
       name: 'Jump Four Jaggi',
+      region: 'City',
+      rank: 'Low',
       client: 'Guild Subcontractor',
       type: 'hunt',
       goal: 'hunt',
@@ -3597,6 +3805,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
     {
       id: 0xee50,
       name: 'Blood Sport',
+      region: 'City',
+      rank: 'Low',
       client: 'Spoiled Princess',
       type: 'multihunt',
       goal: 'hunt',
@@ -3633,6 +3843,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
     {
       id: 0xee55,
       name: 'Marine Warfare',
+      region: 'City',
+      rank: 'Low',
       client: 'Guild Weapons Development',
       type: 'multihunt',
       goal: 'hunt',
@@ -3675,6 +3887,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
     {
       id: 0xee57,
       name: 'Hot Deal',
+      region: 'City',
+      rank: 'High',
       client: 'Shady Merchant',
       type: 'hunt',
       goal: 'hunt',
@@ -3712,6 +3926,8 @@ export const CityQuestData = Object.freeze<QuestRegion>({
     {
       id: 0xee5c, // TODO: This is likely wrong, but its ID is not listed on the JP analysis site
       name: 'Fiery Skies, Frozen Fields',
+      region: 'City',
+      rank: 'High',
       client: 'Deserted Island Maiden',
       type: 'multihunt',
       goal: 'hunt',

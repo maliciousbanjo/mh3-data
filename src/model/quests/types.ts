@@ -3,6 +3,9 @@ import type { ItemTypes } from '../items';
 import type { MonsterTypes } from '../monsters';
 import { MapLocation, StarLevel } from './enum';
 
+export type QuestRegion = 'Village' | 'City';
+export type QuestRank = 'Low' | 'High';
+
 export type QuestType =
   | 'gather'
   | 'hunt'
@@ -42,17 +45,18 @@ interface BossInfo {
 
 /**
  * Base quest type
- *
- * It looks like different questTypes have different properties
- * 'target' points to differnt ids. Gather quests have IDs for items. Hunt/capture likely
- * have IDs for monsters, but the monsters themselves don't seem to have IDs.
  */
 export interface Quest {
   id: number;
   name: string;
-  client: string;
+  /** Village or City */
+  region: QuestRegion;
+  /** Low or High rank */
+  rank: QuestRank;
+  /** Gather, hunt, capture, repel, etc */
   type: QuestType;
   goal: QuestGoal;
+  client: string;
   /** Cost to initiate quest in zenny */
   contract: number;
   /** Maximum quest time in minutes */
@@ -134,8 +138,8 @@ export interface RepelQuest extends Quest {
   bosses: BossInfo[];
 }
 
-export interface QuestRegion {
-  name: 'Village' | 'City';
+export interface QuestMode {
+  region: QuestRegion;
   starLevels: {
     [StarLevel.OneStar]: Quest[];
     [StarLevel.TwoStar]: Quest[];
