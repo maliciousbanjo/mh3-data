@@ -1,5 +1,11 @@
 # mh3-data
 
+## 0.9.5
+
+### Patch Changes
+
+- 01cde30: Update MonsterLevelMultiplier getter functions to account for elder dragons
+
 ## 0.9.4
 
 ### Patch Changes
