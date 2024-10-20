@@ -1,5 +1,14 @@
 # mh3-data
 
+## 0.9.6
+
+### Patch Changes
+
+- bd25458: Updated Quests
+
+  - Added region and rank to quest type
+  - Added functions for fetching quests by arena, event, or star level
+
 ## 0.9.5
 
 ### Patch Changes
