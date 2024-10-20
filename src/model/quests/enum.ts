@@ -14,14 +14,17 @@ export enum MapLocation {
   WATER_ARENA = 'Water Arena'
 }
 
+/** Possible ingame quest star levels */
+export type StarLevel = 1 | 2 | 3 | 4 | 5 | 6;
+
 /**
- * Quest star levels
+ * Quest star levels as enums, used for keying objects
  */
-export enum StarLevel {
-  OneStar = '1 Star',
-  TwoStar = '2 Star',
-  ThreeStar = '3 Star',
-  FourStar = '4 Star',
-  FiveStar = '5 Star',
-  SixStar = '6 Star'
+export enum StarLevelEnum {
+  OneStar = 1,
+  TwoStar = 2,
+  ThreeStar = 3,
+  FourStar = 4,
+  FiveStar = 5,
+  SixStar = 6
 }

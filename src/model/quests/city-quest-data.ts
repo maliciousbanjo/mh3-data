@@ -1,10 +1,10 @@
 import type { QuestMode } from './types';
-import { StarLevel, MapLocation } from './enum';
+import { StarLevelEnum, MapLocation } from './enum';
 
 export const CityQuestData = Object.freeze<QuestMode>({
   region: 'City',
   starLevels: {
-    [StarLevel.OneStar]: [
+    [StarLevelEnum.OneStar]: [
       {
         id: 0x2710,
         name: "Harvest 'Shroom",
@@ -484,7 +484,7 @@ export const CityQuestData = Object.freeze<QuestMode>({
         ]
       }
     ],
-    [StarLevel.TwoStar]: [
+    [StarLevelEnum.TwoStar]: [
       {
         id: 0x2742,
         name: 'Harvest Tour: Deserted Isle',
@@ -1035,7 +1035,7 @@ export const CityQuestData = Object.freeze<QuestMode>({
         ]
       }
     ],
-    [StarLevel.ThreeStar]: [
+    [StarLevelEnum.ThreeStar]: [
       {
         id: 0x2774,
         name: 'Harvest Tour: Flooded Forest',
@@ -1782,7 +1782,7 @@ export const CityQuestData = Object.freeze<QuestMode>({
         ]
       }
     ],
-    [StarLevel.FourStar]: [
+    [StarLevelEnum.FourStar]: [
       {
         id: 0x3a98,
         name: 'Harvest Tour: Deserted Isle',
@@ -2518,7 +2518,7 @@ export const CityQuestData = Object.freeze<QuestMode>({
         ]
       }
     ],
-    [StarLevel.FiveStar]: [
+    [StarLevelEnum.FiveStar]: [
       {
         id: 0x3aca,
         name: 'Rathalos Research',
@@ -3265,7 +3265,7 @@ export const CityQuestData = Object.freeze<QuestMode>({
         ]
       }
     ],
-    [StarLevel.SixStar]: [
+    [StarLevelEnum.SixStar]: [
       {
         id: 0x3afc,
         name: 'Deep-six a Deviljho',

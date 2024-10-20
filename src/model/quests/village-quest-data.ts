@@ -1,10 +1,10 @@
 import type { QuestMode } from './types';
-import { StarLevel, MapLocation } from './enum';
+import { StarLevelEnum, MapLocation } from './enum';
 
 export const VillageQuestData = Object.freeze<QuestMode>({
   region: 'Village',
   starLevels: {
-    [StarLevel.OneStar]: [
+    [StarLevelEnum.OneStar]: [
       {
         id: 0x03e8,
         name: "Harvest 'Shroom",
@@ -187,7 +187,7 @@ export const VillageQuestData = Object.freeze<QuestMode>({
         bosses: []
       }
     ],
-    [StarLevel.TwoStar]: [
+    [StarLevelEnum.TwoStar]: [
       {
         id: 0x03f2,
         name: 'Bug Hunt',
@@ -381,7 +381,7 @@ export const VillageQuestData = Object.freeze<QuestMode>({
         bosses: []
       }
     ],
-    [StarLevel.ThreeStar]: [
+    [StarLevelEnum.ThreeStar]: [
       {
         id: 0x03fc,
         name: 'Rhenoplos Rampage!',
@@ -731,7 +731,7 @@ export const VillageQuestData = Object.freeze<QuestMode>({
         bosses: []
       }
     ],
-    [StarLevel.FourStar]: [
+    [StarLevelEnum.FourStar]: [
       {
         id: 0x0406,
         name: 'Lost in Blue',
@@ -1126,7 +1126,7 @@ export const VillageQuestData = Object.freeze<QuestMode>({
         ]
       }
     ],
-    [StarLevel.FiveStar]: [
+    [StarLevelEnum.FiveStar]: [
       {
         id: 0x0410,
         name: 'Best the Lava Beasts!',
@@ -1614,7 +1614,7 @@ export const VillageQuestData = Object.freeze<QuestMode>({
         ]
       }
     ],
-    [StarLevel.SixStar]: [
+    [StarLevelEnum.SixStar]: [
       {
         id: 0x0424,
         name: 'Mating Season',

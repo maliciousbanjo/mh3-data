@@ -1,7 +1,7 @@
 import type { MonsterLevelTypes } from '../monster-levels';
 import type { ItemTypes } from '../items';
 import type { MonsterTypes } from '../monsters';
-import { MapLocation, StarLevel } from './enum';
+import { MapLocation, StarLevelEnum } from './enum';
 
 export type QuestRegion = 'Village' | 'City';
 export type QuestRank = 'Low' | 'High';
@@ -141,12 +141,12 @@ export interface RepelQuest extends Quest {
 export interface QuestMode {
   region: QuestRegion;
   starLevels: {
-    [StarLevel.OneStar]: Quest[];
-    [StarLevel.TwoStar]: Quest[];
-    [StarLevel.ThreeStar]: Quest[];
-    [StarLevel.FourStar]: Quest[];
-    [StarLevel.FiveStar]: Quest[];
-    [StarLevel.SixStar]: Quest[];
+    [StarLevelEnum.OneStar]: Quest[];
+    [StarLevelEnum.TwoStar]: Quest[];
+    [StarLevelEnum.ThreeStar]: Quest[];
+    [StarLevelEnum.FourStar]: Quest[];
+    [StarLevelEnum.FiveStar]: Quest[];
+    [StarLevelEnum.SixStar]: Quest[];
   };
   arena: SlayQuest[];
   events: Quest[];

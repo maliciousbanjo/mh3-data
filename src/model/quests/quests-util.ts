@@ -1,5 +1,6 @@
 import { type MonsterTypes } from '../monsters';
 import { CityQuestData } from './city-quest-data';
+import type { StarLevel } from './enum';
 import type {
   CaptureQuest,
   EscortQuest,
@@ -8,7 +9,7 @@ import type {
   HuntQuest,
   MultiHuntQuest,
   Quest,
-  QuestMode,
+  QuestRegion,
   RepelQuest,
   SlayQuest
 } from './types';
@@ -77,7 +78,7 @@ export function isHarvestQuest(quest: Quest): quest is HarvestQuest {
  */
 export function getQuestsWithLargeMonster(
   id: MonsterTypes.LargeMonster['id'],
-  region: QuestMode['region'] | 'Both'
+  region: QuestRegion | 'Both'
 ): Quest[] {
   const cityQuests = Object.values(CityQuestData.starLevels)
     .flat()
@@ -104,6 +105,50 @@ export function getQuestsWithLargeMonster(
   return quests.filter(quest =>
     quest.bosses.some(bossInfo => bossInfo.monsterId === id)
   );
+}
+
+/**
+ * @region Village or City
+ * @starLevel 1 star, 4 star, etc
+ * @returns all quests corresponding to the provided region and star level
+ */
+export function getQuestByStarLevel(region: QuestRegion, starLevel: StarLevel) {
+  switch (region) {
+    case 'Village':
+      return Object.values(VillageQuestData.starLevels[starLevel]);
+    case 'City':
+      return Object.values(CityQuestData.starLevels[starLevel]);
+    default:
+      throw new Error(`Invalid quest region ${region}`);
+  }
+}
+
+/**
+ * @returns all arena quests from a particular region
+ */
+export function getArenaQuests(region: QuestRegion): SlayQuest[] {
+  switch (region) {
+    case 'Village':
+      return Object.values(VillageQuestData.arena);
+    case 'City':
+      return Object.values(CityQuestData.arena);
+    default:
+      throw new Error(`Invalid quest region ${region}`);
+  }
+}
+
+/**
+ * @returns all event quests from a particular region
+ */
+export function getEventQuests(region: QuestRegion): Quest[] {
+  switch (region) {
+    case 'Village':
+      return Object.values(VillageQuestData.events);
+    case 'City':
+      return Object.values(CityQuestData.events);
+    default:
+      throw new Error(`Invalid quest region ${region}`);
+  }
 }
 
 /**
