@@ -1,12 +1,14 @@
 import type { MonsterLevelTypes, QuestTypes } from '../model';
 import type { MonsterTypes } from '../model/monsters';
 import type {
+  GreatSwordTypes,
+  HammerTypes,
+  LanceTypes,
   LongswordTypes,
   Sharpness,
   SwitchAxeTypes,
   SwordAndShieldTypes,
-  WeaponClass,
-  WeaponTypes
+  WeaponClass
 } from '../model/weapons/';
 import {
   ARMOR_SKILL_MULTIPLIERS,
@@ -22,6 +24,50 @@ export interface LongswordSpecialMultiplierArgs {
   middleOfBlade: boolean;
   fullSpiritGauge: boolean;
   spiritGaugeColor: LongswordTypes.SpiritGaugeColors;
+}
+
+interface BaseDamageArgs {
+  weaponId: number;
+  /** Current weapon sharpness */
+  sharpness: Sharpness;
+  /**
+   * Multipliers specific to the weapon class eg; middle of blade, spirit guage color, etc
+   */
+  weaponMultipliers: Partial<WeaponMultipliers>;
+}
+
+export interface GreatSwordDamageArgs extends BaseDamageArgs {
+  weaponClass: WeaponClass.GREAT_SWORD;
+  attackName: GreatSwordTypes.GreatSwordAttack;
+  weaponMultipliers: Pick<WeaponMultipliers, 'middleOfBlade'>;
+}
+
+export interface HammerDamageArgs extends BaseDamageArgs {
+  weaponClass: WeaponClass.HAMMER;
+  attackName: HammerTypes.HammerAttack;
+}
+
+export interface LanceDamageArgs extends BaseDamageArgs {
+  weaponClass: WeaponClass.LANCE;
+  attackName: LanceTypes.LanceAttack;
+}
+
+export interface LongswordDamageArgs extends BaseDamageArgs {
+  weaponClass: WeaponClass.LONGSWORD;
+  attackName: LongswordTypes.LongswordAttack;
+  weaponMultipliers: Pick<WeaponMultipliers, 'middleOfBlade' | 'longsword'>;
+}
+
+export interface SwitchAxeDamageArgs extends BaseDamageArgs {
+  weaponClass: WeaponClass.SWITCH_AXE;
+  attackName: SwitchAxeTypes.SwitchAxeAttack;
+  weaponMultipliers: Pick<WeaponMultipliers, 'switchAxeMode'>;
+}
+
+export interface SwordAndShieldDamageArgs extends BaseDamageArgs {
+  weaponClass: WeaponClass.SWORD_AND_SHIELD;
+  attackName: SwordAndShieldTypes.SwordAndShieldAttack;
+  weaponMultipliers: Pick<WeaponMultipliers, 'swordAndShieldMode'>;
 }
 
 /**
@@ -41,18 +87,13 @@ export interface WeaponMultipliers {
 /**
  * Weapon-related parameters used in damage calculation
  */
-export interface WeaponArgs {
-  weaponClass: WeaponClass;
-  weaponId: number;
-  /** Attack being performed by weapon */
-  attackName: WeaponTypes.Attack['name'];
-  /** Current weapon sharpness */
-  sharpness: Sharpness;
-  /**
-   * Multipliers specific to the weapon class eg; middle of blade, spirit guage color, etc
-   */
-  weaponMultipliers: Partial<WeaponMultipliers>;
-}
+export type WeaponArgs =
+  | GreatSwordDamageArgs
+  | HammerDamageArgs
+  | LanceDamageArgs
+  | LongswordDamageArgs
+  | SwitchAxeDamageArgs
+  | SwordAndShieldDamageArgs;
 
 /**
  * Monster-related parameters used in damage calculation

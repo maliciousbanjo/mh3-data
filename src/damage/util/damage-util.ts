@@ -203,12 +203,40 @@ export function getRawMultiplier(
 }
 
 /**
- * ELEMENTAL DAMAGE FORMULA
+ * Handles decimal logic when applying the defense multiplier.
+ * The damage decimal is always dropped before being put against a defense multiplier.
+ * The result then has its decimal dropped again.
+ */
+export function applyDefenseMultiplier(
+  damage: number,
+  defenseMultiplier: MonsterLevelTypes.MonsterLevelMultipliers['defense']
+) {
+  return Math.floor(Math.floor(damage) * defenseMultiplier);
+}
+
+interface ElementalDamageArgs {
+  weapon: WeaponTypes.Weapon<WeaponTypes.ValidWeaponClasses>;
+  /** Current sharpness of weapon */
+  sharpness: Sharpness;
+  /** Derived from Monster hitzone */
+  hitzoneValues: MonsterTypes.HitzoneValues;
+  elementArgs?: DamageBuffArgs['elementArgs'];
+}
+
+/**
+ * This should be used for calculating elemental damage as part of the overall damage formula.
+ *
+ * @see {@link calculateIsolatedElementalDamage} for calculating elemental damage standalone.
  *
  * Taken from Lord Grahf's [Monster Hunter Tri Damage Formula FAQ](https://gamefaqs.gamespot.com/wii/943655-monster-hunter-tri/faqs/59207)
  * - Section 1c. Elemental Damage Formula (EFMLA)
  *
  * [ELEMENT x ESHARP x ELMZONE] / [DIVIDER] = Elemental Damage
+ *
+ * @param weapon
+ * @param sharpness
+ * @param hitzoneValues
+ * @param elementArgs Optional, default all `false`
  *
  * @example
  * [ELEMENT]:  250    // (250 thunder element)
@@ -220,15 +248,12 @@ export function getRawMultiplier(
  * [ELEMENT x ESHARP x ELMZONE] / [DIVIDER] = Elemental Damage [X DEFENSE]
  *    250   x  1.0   x   .20    /     10    =      5 (Added Thunder Damage)
  */
-export function calculateElementalDamage(
-  weapon: WeaponTypes.Weapon<WeaponTypes.ValidWeaponClasses>,
-  /** Current sharpness of weapon */
-  sharpness: Sharpness,
-  /** Derived from Monster hitzone */
-  hitzoneValues: MonsterTypes.HitzoneValues,
-  levelMultipliers: MonsterLevelTypes.MonsterLevelMultipliers,
-  elementArgs: DamageBuffArgs['elementArgs'] = defaultElementArgs
-): number {
+export function calculateElementalDamage({
+  weapon,
+  sharpness,
+  hitzoneValues,
+  elementArgs = defaultElementArgs
+}: ElementalDamageArgs): number {
   const { awaken, elementAttack } = elementArgs;
   const sharpnessMultiplier = getSharpnessElementalMultiplier(sharpness);
   const elementalHitzoneMultiplier = getHitzoneForWeaponElement(
@@ -246,8 +271,33 @@ export function calculateElementalDamage(
   return (
     (secondaryAttackWithBuffs *
       sharpnessMultiplier *
-      elementalHitzoneMultiplier *
-      levelMultipliers.defense) /
+      elementalHitzoneMultiplier) /
     ELEMENTAL_DAMAGE_DIVIDER
+  );
+}
+
+/**
+ * Use this for calculation elemental damage in isolation, meaning it's assumed the result
+ * will not be used as part of an overall damage calculation that includes raw.
+ *
+ * @see {@link calculateElementalDamage} for calculating elemental damage as part of the overall damage
+ */
+export function calculateIsolatedElementalDamage({
+  weapon,
+  sharpness,
+  hitzoneValues,
+  elementArgs = defaultElementArgs,
+  defenseMultiplier
+}: ElementalDamageArgs & {
+  defenseMultiplier: MonsterLevelTypes.MonsterLevelMultipliers['defense'];
+}) {
+  return applyDefenseMultiplier(
+    calculateElementalDamage({
+      weapon,
+      sharpness,
+      hitzoneValues,
+      elementArgs
+    }),
+    defenseMultiplier
   );
 }

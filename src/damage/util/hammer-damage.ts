@@ -7,14 +7,15 @@ import {
 import type {
   Damage,
   DamageBuffArgs,
-  MonsterMultipliers,
-  WeaponArgs
+  HammerDamageArgs,
+  MonsterMultipliers
 } from '../types';
 import {
+  applyDefenseMultiplier,
   calculateElementalDamage,
-  getWeaponClassMultiplier,
   getRawMultiplier,
   getSharpnessRawMultiplier,
+  getWeaponClassMultiplier,
   validateWeaponSharpness
 } from './damage-util';
 
@@ -48,7 +49,7 @@ function validateHammer(
  * Calculates damage for a {@link HammerTypes.Hammer}
  */
 export function calculateHammerDamage(
-  weaponArgs: WeaponArgs,
+  weaponArgs: HammerDamageArgs,
   monsterMultipliers: MonsterMultipliers,
   damageBuffArgs: Partial<DamageBuffArgs>
 ) {
@@ -73,7 +74,6 @@ export function calculateHammerDamage(
 
   const attackWithBuffs = hammer.attack + attackBuffMultiplier * classModifier;
 
-  // TODO: This should probably get lifted into a shared function that all weapons can use
   return attack.hits.map<Damage>(hit => {
     const isCut = Weapons.isCutHit(hit);
     const hitzoneMultiplier = isCut ? hitzoneValues.cut : hitzoneValues.impact;
@@ -84,24 +84,34 @@ export function calculateHammerDamage(
         rawMultiplier *
         sharpnessMultiplier *
         hitzoneMultiplier *
-        1 * // Hammer does not have a [SpecialVar], but this is here for consistency
-        levelMultipliers.defense) /
+        1) / // Hammer does not have a [SpecialVar], but this is here for consistency
       classModifier;
 
-    const elementalDamage = calculateElementalDamage(
-      hammer,
+    const elementalDamage = calculateElementalDamage({
+      weapon: hammer,
       sharpness,
       hitzoneValues,
-      levelMultipliers,
       elementArgs
+    });
+
+    // Decimal is dropped
+    const totalDamage = applyDefenseMultiplier(
+      rawDamage + elementalDamage,
+      levelMultipliers.defense
     );
 
-    const koDamage = !isCut ? hit.ko * sharpnessMultiplier : undefined;
+    // KO is always rounded down
+    const koDamage = !isCut
+      ? Math.floor(hit.ko * sharpnessMultiplier)
+      : undefined;
 
     return {
-      rawDamage,
-      elementalDamage,
-      totalDamage: Math.floor(rawDamage + elementalDamage),
+      rawDamage: applyDefenseMultiplier(rawDamage, levelMultipliers.defense),
+      elementalDamage: applyDefenseMultiplier(
+        elementalDamage,
+        levelMultipliers.defense
+      ),
+      totalDamage,
       koDamage
     };
   });

@@ -3,10 +3,10 @@
 exports[`Damage calculateDamage Great Sword 1`] = `
 [
   {
-    "elementalDamage": 0.675,
+    "elementalDamage": 0,
     "koDamage": undefined,
-    "rawDamage": 144.78750000000002,
-    "totalDamage": 145,
+    "rawDamage": 144,
+    "totalDamage": 144,
   },
 ]
 `;
@@ -14,16 +14,16 @@ exports[`Damage calculateDamage Great Sword 1`] = `
 exports[`Damage calculateDamage Hammer 1`] = `
 [
   {
-    "elementalDamage": 0.675,
+    "elementalDamage": 0,
     "koDamage": 0,
-    "rawDamage": 22.5,
-    "totalDamage": 23,
+    "rawDamage": 22,
+    "totalDamage": 22,
   },
   {
-    "elementalDamage": 0.675,
+    "elementalDamage": 0,
     "koDamage": 72,
-    "rawDamage": 85.49999999999999,
-    "totalDamage": 86,
+    "rawDamage": 84,
+    "totalDamage": 85,
   },
 ]
 `;
@@ -31,21 +31,21 @@ exports[`Damage calculateDamage Hammer 1`] = `
 exports[`Damage calculateDamage Lance Cut hitzone 1`] = `
 [
   {
-    "elementalDamage": 2.025,
+    "elementalDamage": 1,
     "koDamage": undefined,
-    "rawDamage": 25.515000000000004,
+    "rawDamage": 25,
     "totalDamage": 27,
   },
   {
-    "elementalDamage": 2.025,
+    "elementalDamage": 1,
     "koDamage": undefined,
-    "rawDamage": 25.515000000000004,
+    "rawDamage": 25,
     "totalDamage": 27,
   },
   {
-    "elementalDamage": 2.025,
+    "elementalDamage": 1,
     "koDamage": undefined,
-    "rawDamage": 27.337500000000002,
+    "rawDamage": 27,
     "totalDamage": 29,
   },
 ]
@@ -54,21 +54,21 @@ exports[`Damage calculateDamage Lance Cut hitzone 1`] = `
 exports[`Damage calculateDamage Lance Modified impact hitzone 1`] = `
 [
   {
-    "elementalDamage": 2.7,
+    "elementalDamage": 2,
     "koDamage": undefined,
-    "rawDamage": 47.17440000000001,
+    "rawDamage": 47,
     "totalDamage": 49,
   },
   {
-    "elementalDamage": 2.7,
+    "elementalDamage": 2,
     "koDamage": undefined,
-    "rawDamage": 47.17440000000001,
+    "rawDamage": 47,
     "totalDamage": 49,
   },
   {
-    "elementalDamage": 2.7,
+    "elementalDamage": 2,
     "koDamage": undefined,
-    "rawDamage": 50.54400000000001,
+    "rawDamage": 50,
     "totalDamage": 53,
   },
 ]
@@ -77,9 +77,9 @@ exports[`Damage calculateDamage Lance Modified impact hitzone 1`] = `
 exports[`Damage calculateDamage Longsword Deviljho Spirit Gauge RED 1`] = `
 [
   {
-    "elementalDamage": 14.804999999999998,
+    "elementalDamage": 14,
     "koDamage": undefined,
-    "rawDamage": 66.63384,
+    "rawDamage": 66,
     "totalDamage": 81,
   },
 ]
@@ -88,9 +88,9 @@ exports[`Damage calculateDamage Longsword Deviljho Spirit Gauge RED 1`] = `
 exports[`Damage calculateDamage Longsword Spirit Gauge NONE 1`] = `
 [
   {
-    "elementalDamage": 2.115,
+    "elementalDamage": 1,
     "koDamage": undefined,
-    "rawDamage": 37.06965,
+    "rawDamage": 36,
     "totalDamage": 39,
   },
 ]
@@ -99,9 +99,9 @@ exports[`Damage calculateDamage Longsword Spirit Gauge NONE 1`] = `
 exports[`Damage calculateDamage Longsword Spirit Gauge RED 1`] = `
 [
   {
-    "elementalDamage": 2.115,
+    "elementalDamage": 1,
     "koDamage": undefined,
-    "rawDamage": 48.190545,
+    "rawDamage": 48,
     "totalDamage": 50,
   },
 ]
@@ -110,10 +110,10 @@ exports[`Damage calculateDamage Longsword Spirit Gauge RED 1`] = `
 exports[`Damage calculateDamage Longsword Spirit Gauge WHITE 1`] = `
 [
   {
-    "elementalDamage": 2.115,
+    "elementalDamage": 1,
     "koDamage": undefined,
-    "rawDamage": 38.9231325,
-    "totalDamage": 41,
+    "rawDamage": 38,
+    "totalDamage": 40,
   },
 ]
 `;
@@ -121,9 +121,9 @@ exports[`Damage calculateDamage Longsword Spirit Gauge WHITE 1`] = `
 exports[`Damage calculateDamage Longsword Spirit Gauge YELLOW 1`] = `
 [
   {
-    "elementalDamage": 2.115,
+    "elementalDamage": 1,
     "koDamage": undefined,
-    "rawDamage": 40.776615,
+    "rawDamage": 40,
     "totalDamage": 42,
   },
 ]
@@ -132,9 +132,9 @@ exports[`Damage calculateDamage Longsword Spirit Gauge YELLOW 1`] = `
 exports[`Damage calculateDamage Switch Axe Element phial 1`] = `
 [
   {
-    "elementalDamage": 2.0250000000000004,
+    "elementalDamage": 1,
     "koDamage": undefined,
-    "rawDamage": 30.982499999999998,
+    "rawDamage": 30,
     "totalDamage": 33,
   },
 ]
@@ -143,9 +143,9 @@ exports[`Damage calculateDamage Switch Axe Element phial 1`] = `
 exports[`Damage calculateDamage Switch Axe Power phial 1`] = `
 [
   {
-    "elementalDamage": 3.54375,
+    "elementalDamage": 3,
     "koDamage": undefined,
-    "rawDamage": 35.974125,
+    "rawDamage": 35,
     "totalDamage": 39,
   },
 ]
@@ -154,10 +154,10 @@ exports[`Damage calculateDamage Switch Axe Power phial 1`] = `
 exports[`Damage calculateDamage Sword and Shield Cut attack 1`] = `
 [
   {
-    "elementalDamage": 1.6650000000000003,
+    "elementalDamage": 1,
     "koDamage": undefined,
-    "rawDamage": 15.4548,
-    "totalDamage": 17,
+    "rawDamage": 15,
+    "totalDamage": 16,
   },
 ]
 `;
@@ -166,14 +166,14 @@ exports[`Damage calculateDamage Sword and Shield Impact attack 1`] = `
 [
   {
     "elementalDamage": 0,
-    "koDamage": 22.5,
-    "rawDamage": 8.1,
-    "totalDamage": 8,
+    "koDamage": 22,
+    "rawDamage": 7,
+    "totalDamage": 7,
   },
   {
     "elementalDamage": 0,
-    "koDamage": 22.5,
-    "rawDamage": 12.149999999999999,
+    "koDamage": 22,
+    "rawDamage": 12,
     "totalDamage": 12,
   },
 ]

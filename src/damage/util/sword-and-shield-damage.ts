@@ -8,14 +8,15 @@ import type {
   Damage,
   DamageBuffArgs,
   MonsterMultipliers,
-  WeaponArgs
+  SwordAndShieldDamageArgs
 } from '../types';
 import { assertSwordAndShieldWeaponMultipliers } from './assertions';
 import {
+  applyDefenseMultiplier,
   calculateElementalDamage,
-  getWeaponClassMultiplier,
   getRawMultiplier,
   getSharpnessRawMultiplier,
+  getWeaponClassMultiplier,
   validateWeaponSharpness
 } from './damage-util';
 
@@ -59,7 +60,7 @@ function validateSwordAndShield(
  * Calculates damage for a {@link SwordAndShieldTypes.SwordAndShield}.
  */
 export function calculateSwordAndShieldDamage(
-  weaponArgs: WeaponArgs,
+  weaponArgs: SwordAndShieldDamageArgs,
   monsterMultipliers: MonsterMultipliers,
   damageBuffArgs: Partial<DamageBuffArgs>
 ) {
@@ -90,7 +91,6 @@ export function calculateSwordAndShieldDamage(
   const attackWithBuffs =
     swordAndShield.attack + attackBuffMultiplier * classModifier;
 
-  // TODO: This should probably get lifted into a shared function that all weapons can use
   return attack.hits.map<Damage>(hit => {
     const isCut = Weapons.isCutHit(hit);
 
@@ -103,27 +103,37 @@ export function calculateSwordAndShieldDamage(
         sharpnessMultiplier *
         hitzoneMultiplier *
         // SnS cut damage receives a 1.06 multiplier
-        (isCut ? SWORD_AND_SHIELD_CUT_MULTIPLIER : 1) *
-        levelMultipliers.defense) /
+        (isCut ? SWORD_AND_SHIELD_CUT_MULTIPLIER : 1)) /
       classModifier;
 
     // Shield attacks do not deal element damage
     const elementalDamage = isCut
-      ? calculateElementalDamage(
-          swordAndShield,
+      ? calculateElementalDamage({
+          weapon: swordAndShield,
           sharpness,
           hitzoneValues,
-          levelMultipliers,
           elementArgs
-        )
+        })
       : 0;
 
-    const koDamage = !isCut ? hit.ko * sharpnessMultiplier : undefined;
+    // Decimal is dropped
+    const totalDamage = applyDefenseMultiplier(
+      rawDamage + elementalDamage,
+      levelMultipliers.defense
+    );
+
+    // KO is always rounded down
+    const koDamage = !isCut
+      ? Math.floor(hit.ko * sharpnessMultiplier)
+      : undefined;
 
     return {
-      rawDamage,
-      elementalDamage,
-      totalDamage: Math.floor(rawDamage + elementalDamage),
+      rawDamage: applyDefenseMultiplier(rawDamage, levelMultipliers.defense),
+      elementalDamage: applyDefenseMultiplier(
+        elementalDamage,
+        levelMultipliers.defense
+      ),
+      totalDamage,
       koDamage
     };
   });

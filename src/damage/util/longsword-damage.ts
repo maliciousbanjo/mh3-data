@@ -8,16 +8,17 @@ import {
 import type {
   Damage,
   DamageBuffArgs,
+  LongswordDamageArgs,
   LongswordSpecialMultiplierArgs,
-  MonsterMultipliers,
-  WeaponArgs
+  MonsterMultipliers
 } from '../types';
 import { assertLongswordWeaponMultipliers } from './assertions';
 import {
+  applyDefenseMultiplier,
   calculateElementalDamage,
-  getWeaponClassMultiplier,
   getRawMultiplier,
   getSharpnessRawMultiplier,
+  getWeaponClassMultiplier,
   validateWeaponSharpness
 } from './damage-util';
 
@@ -76,7 +77,7 @@ function validateLongsword(
  * Calculates damage for a {@link LongswordTypes.Longsword}.
  */
 export function calculateLongswordDamage(
-  weaponArgs: WeaponArgs,
+  weaponArgs: LongswordDamageArgs,
   monsterMultipliers: MonsterMultipliers,
   damageBuffArgs: Partial<DamageBuffArgs>
 ) {
@@ -109,7 +110,6 @@ export function calculateLongswordDamage(
   const attackWithBuffs =
     longsword.attack + attackBuffMultiplier * classModifier;
 
-  // TODO: This should probably get lifted into a shared function that all weapons can use
   return attack.hits.map<Damage>(hit => {
     const isCut = Weapons.isCutHit(hit);
     const hitzoneMultiplier = isCut ? hitzoneValues.cut : hitzoneValues.impact;
@@ -120,24 +120,34 @@ export function calculateLongswordDamage(
         rawMultiplier *
         sharpnessMultiplier *
         hitzoneMultiplier *
-        specialVarMultiplier *
-        levelMultipliers.defense) /
+        specialVarMultiplier) /
       classModifier;
 
-    const elementalDamage = calculateElementalDamage(
-      longsword,
+    const elementalDamage = calculateElementalDamage({
+      weapon: longsword,
       sharpness,
       hitzoneValues,
-      levelMultipliers,
       elementArgs
+    });
+
+    // Decimal is dropped
+    const totalDamage = applyDefenseMultiplier(
+      rawDamage + elementalDamage,
+      levelMultipliers.defense
     );
 
-    const koDamage = !isCut ? hit.ko * sharpnessMultiplier : undefined;
+    // KO is always rounded down
+    const koDamage = !isCut
+      ? Math.floor(hit.ko * sharpnessMultiplier)
+      : undefined;
 
     return {
-      rawDamage,
-      elementalDamage,
-      totalDamage: Math.floor(rawDamage + elementalDamage),
+      rawDamage: applyDefenseMultiplier(rawDamage, levelMultipliers.defense),
+      elementalDamage: applyDefenseMultiplier(
+        elementalDamage,
+        levelMultipliers.defense
+      ),
+      totalDamage,
       koDamage
     };
   });
