@@ -12,6 +12,7 @@ import type {
 } from '../types';
 import { assertSwordAndShieldWeaponMultipliers } from './assertions';
 import {
+  applyDefenseMultiplier,
   calculateElementalDamage,
   getRawMultiplier,
   getSharpnessRawMultiplier,
@@ -103,8 +104,7 @@ export function calculateSwordAndShieldDamage(
         sharpnessMultiplier *
         hitzoneMultiplier *
         // SnS cut damage receives a 1.06 multiplier
-        (isCut ? SWORD_AND_SHIELD_CUT_MULTIPLIER : 1) *
-        levelMultipliers.defense) /
+        (isCut ? SWORD_AND_SHIELD_CUT_MULTIPLIER : 1)) /
       classModifier;
 
     // Shield attacks do not deal element damage
@@ -117,15 +117,24 @@ export function calculateSwordAndShieldDamage(
         })
       : 0;
 
+    // Decimal is dropped
+    const totalDamage = applyDefenseMultiplier(
+      rawDamage + elementalDamage,
+      levelMultipliers.defense
+    );
+
     // KO is always rounded down
     const koDamage = !isCut
       ? Math.floor(hit.ko * sharpnessMultiplier)
       : undefined;
 
     return {
-      rawDamage,
-      elementalDamage,
-      totalDamage: Math.floor(rawDamage + elementalDamage),
+      rawDamage: applyDefenseMultiplier(rawDamage, levelMultipliers.defense),
+      elementalDamage: applyDefenseMultiplier(
+        elementalDamage,
+        levelMultipliers.defense
+      ),
+      totalDamage,
       koDamage
     };
   });

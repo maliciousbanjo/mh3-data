@@ -14,6 +14,7 @@ import type {
 } from '../types';
 import { assertLongswordWeaponMultipliers } from './assertions';
 import {
+  applyDefenseMultiplier,
   calculateElementalDamage,
   getRawMultiplier,
   getSharpnessRawMultiplier,
@@ -120,8 +121,7 @@ export function calculateLongswordDamage(
         rawMultiplier *
         sharpnessMultiplier *
         hitzoneMultiplier *
-        specialVarMultiplier *
-        levelMultipliers.defense) /
+        specialVarMultiplier) /
       classModifier;
 
     const elementalDamage = calculateElementalDamage({
@@ -130,15 +130,25 @@ export function calculateLongswordDamage(
       hitzoneValues,
       elementArgs
     });
+
+    // Decimal is dropped
+    const totalDamage = applyDefenseMultiplier(
+      rawDamage + elementalDamage,
+      levelMultipliers.defense
+    );
+
     // KO is always rounded down
     const koDamage = !isCut
       ? Math.floor(hit.ko * sharpnessMultiplier)
       : undefined;
 
     return {
-      rawDamage,
-      elementalDamage,
-      totalDamage: Math.floor(rawDamage + elementalDamage),
+      rawDamage: applyDefenseMultiplier(rawDamage, levelMultipliers.defense),
+      elementalDamage: applyDefenseMultiplier(
+        elementalDamage,
+        levelMultipliers.defense
+      ),
+      totalDamage,
       koDamage
     };
   });

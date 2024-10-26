@@ -12,6 +12,7 @@ import type {
 } from '../types';
 import { assertSwitchAxeWeaponMultipliers } from './assertions';
 import {
+  applyDefenseMultiplier,
   calculateElementalDamage,
   getRawMultiplier,
   getSharpnessRawMultiplier,
@@ -125,8 +126,7 @@ export function calculateSwitchAxeDamage(
         rawMultiplier *
         sharpnessMultiplier *
         hitzoneMultiplier *
-        rawSpecialVarMultiplier *
-        levelMultipliers.defense) /
+        rawSpecialVarMultiplier) /
       classModifier;
 
     const elementalDamage =
@@ -137,15 +137,24 @@ export function calculateSwitchAxeDamage(
         elementArgs
       }) * elementSpecialVarMultiplier;
 
+    // Decimal is dropped
+    const totalDamage = applyDefenseMultiplier(
+      rawDamage + elementalDamage,
+      levelMultipliers.defense
+    );
+
     // KO is always rounded down
     const koDamage = !isCut
       ? Math.floor(hit.ko * sharpnessMultiplier)
       : undefined;
 
     return {
-      rawDamage,
-      elementalDamage,
-      totalDamage: Math.floor(rawDamage + elementalDamage),
+      rawDamage: applyDefenseMultiplier(rawDamage, levelMultipliers.defense),
+      elementalDamage: applyDefenseMultiplier(
+        elementalDamage,
+        levelMultipliers.defense
+      ),
+      totalDamage,
       koDamage
     };
   });

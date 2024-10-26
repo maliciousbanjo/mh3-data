@@ -13,6 +13,7 @@ import type {
   MonsterMultipliers
 } from '../types';
 import {
+  applyDefenseMultiplier,
   calculateElementalDamage,
   getRawMultiplier,
   getSharpnessRawMultiplier,
@@ -101,8 +102,7 @@ export function calculateLanceDamage(
         rawMultiplier *
         sharpnessMultiplier *
         hitzoneMultiplier *
-        1 * // Lance does not have a [SpecialVar], but this is here for consistency
-        levelMultipliers.defense) /
+        1) / // Lance does not have a [SpecialVar], but this is here for consistency
       classModifier;
 
     const baseElementalDamage = calculateElementalDamage({
@@ -117,15 +117,24 @@ export function calculateLanceDamage(
         ? baseElementalDamage * LANCE_CHARGE_ELEMENTAL_MULTIPLIER
         : baseElementalDamage;
 
+    // Decimal is dropped
+    const totalDamage = applyDefenseMultiplier(
+      rawDamage + elementalDamage,
+      levelMultipliers.defense
+    );
+
     // KO is always rounded down
     const koDamage = !isCutHit(hit)
       ? Math.floor(hit.ko * sharpnessMultiplier)
       : undefined;
 
     return {
-      rawDamage,
-      elementalDamage,
-      totalDamage: Math.floor(rawDamage + elementalDamage),
+      rawDamage: applyDefenseMultiplier(rawDamage, levelMultipliers.defense),
+      elementalDamage: applyDefenseMultiplier(
+        elementalDamage,
+        levelMultipliers.defense
+      ),
+      totalDamage,
       koDamage
     };
   });

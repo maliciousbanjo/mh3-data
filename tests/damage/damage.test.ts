@@ -7,6 +7,7 @@ import {
 import { Sharpness, WeaponClass } from '../../src/model/weapons';
 import type { DamageTypes } from '../../src/damage';
 import {
+  LongswordDamageArgs,
   SwitchAxeDamageArgs,
   SwordAndShieldDamageArgs
 } from '../../src/damage/types';
@@ -145,13 +146,7 @@ describe('Damage', () => {
               weaponId: 19, // Dark Claw Demise
               attackName: 'Spirit Finisher',
               sharpness: Sharpness.PURPLE,
-              weaponMultipliers: {
-                middleOfBlade: false,
-                longsword: {
-                  fullSpiritGauge: false,
-                  spiritGaugeColor: 'NONE'
-                }
-              }
+              weaponMultipliers: {} as LongswordDamageArgs['weaponMultipliers']
             },
             alatreonMonsterArgs,
             {
