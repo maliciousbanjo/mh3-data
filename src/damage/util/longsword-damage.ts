@@ -110,7 +110,6 @@ export function calculateLongswordDamage(
   const attackWithBuffs =
     longsword.attack + attackBuffMultiplier * classModifier;
 
-  // TODO: This should probably get lifted into a shared function that all weapons can use
   return attack.hits.map<Damage>(hit => {
     const isCut = Weapons.isCutHit(hit);
     const hitzoneMultiplier = isCut ? hitzoneValues.cut : hitzoneValues.impact;
