@@ -8,14 +8,14 @@ import type {
   Damage,
   DamageBuffArgs,
   MonsterMultipliers,
-  WeaponArgs
+  SwordAndShieldDamageArgs
 } from '../types';
 import { assertSwordAndShieldWeaponMultipliers } from './assertions';
 import {
   calculateElementalDamage,
-  getWeaponClassMultiplier,
   getRawMultiplier,
   getSharpnessRawMultiplier,
+  getWeaponClassMultiplier,
   validateWeaponSharpness
 } from './damage-util';
 
@@ -59,7 +59,7 @@ function validateSwordAndShield(
  * Calculates damage for a {@link SwordAndShieldTypes.SwordAndShield}.
  */
 export function calculateSwordAndShieldDamage(
-  weaponArgs: WeaponArgs,
+  weaponArgs: SwordAndShieldDamageArgs,
   monsterMultipliers: MonsterMultipliers,
   damageBuffArgs: Partial<DamageBuffArgs>
 ) {
@@ -109,16 +109,18 @@ export function calculateSwordAndShieldDamage(
 
     // Shield attacks do not deal element damage
     const elementalDamage = isCut
-      ? calculateElementalDamage(
-          swordAndShield,
+      ? calculateElementalDamage({
+          weapon: swordAndShield,
           sharpness,
           hitzoneValues,
-          levelMultipliers,
           elementArgs
-        )
+        })
       : 0;
 
-    const koDamage = !isCut ? hit.ko * sharpnessMultiplier : undefined;
+    // KO is always rounded down
+    const koDamage = !isCut
+      ? Math.floor(hit.ko * sharpnessMultiplier)
+      : undefined;
 
     return {
       rawDamage,

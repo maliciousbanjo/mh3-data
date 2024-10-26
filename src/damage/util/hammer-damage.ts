@@ -7,14 +7,14 @@ import {
 import type {
   Damage,
   DamageBuffArgs,
-  MonsterMultipliers,
-  WeaponArgs
+  HammerDamageArgs,
+  MonsterMultipliers
 } from '../types';
 import {
   calculateElementalDamage,
-  getWeaponClassMultiplier,
   getRawMultiplier,
   getSharpnessRawMultiplier,
+  getWeaponClassMultiplier,
   validateWeaponSharpness
 } from './damage-util';
 
@@ -48,7 +48,7 @@ function validateHammer(
  * Calculates damage for a {@link HammerTypes.Hammer}
  */
 export function calculateHammerDamage(
-  weaponArgs: WeaponArgs,
+  weaponArgs: HammerDamageArgs,
   monsterMultipliers: MonsterMultipliers,
   damageBuffArgs: Partial<DamageBuffArgs>
 ) {
@@ -88,15 +88,17 @@ export function calculateHammerDamage(
         levelMultipliers.defense) /
       classModifier;
 
-    const elementalDamage = calculateElementalDamage(
-      hammer,
+    const elementalDamage = calculateElementalDamage({
+      weapon: hammer,
       sharpness,
       hitzoneValues,
-      levelMultipliers,
       elementArgs
-    );
+    });
 
-    const koDamage = !isCut ? hit.ko * sharpnessMultiplier : undefined;
+    // KO is always rounded down
+    const koDamage = !isCut
+      ? Math.floor(hit.ko * sharpnessMultiplier)
+      : undefined;
 
     return {
       rawDamage,

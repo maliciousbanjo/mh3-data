@@ -8,14 +8,14 @@ import type {
   Damage,
   DamageBuffArgs,
   MonsterMultipliers,
-  WeaponArgs
+  SwitchAxeDamageArgs
 } from '../types';
 import { assertSwitchAxeWeaponMultipliers } from './assertions';
 import {
   calculateElementalDamage,
-  getWeaponClassMultiplier,
   getRawMultiplier,
   getSharpnessRawMultiplier,
+  getWeaponClassMultiplier,
   validateWeaponSharpness
 } from './damage-util';
 
@@ -84,7 +84,7 @@ function validateSwitchAxe(
  * Calculates damage for a {@link SwitchAxeTypes.SwitchAxe}.
  */
 export function calculateSwitchAxeDamage(
-  weaponArgs: WeaponArgs,
+  weaponArgs: SwitchAxeDamageArgs,
   monsterMultipliers: MonsterMultipliers,
   damageBuffArgs: Partial<DamageBuffArgs>
 ) {
@@ -130,15 +130,17 @@ export function calculateSwitchAxeDamage(
       classModifier;
 
     const elementalDamage =
-      calculateElementalDamage(
-        switchAxe,
+      calculateElementalDamage({
+        weapon: switchAxe,
         sharpness,
         hitzoneValues,
-        levelMultipliers,
         elementArgs
-      ) * elementSpecialVarMultiplier;
+      }) * elementSpecialVarMultiplier;
 
-    const koDamage = !isCut ? hit.ko * sharpnessMultiplier : undefined;
+    // KO is always rounded down
+    const koDamage = !isCut
+      ? Math.floor(hit.ko * sharpnessMultiplier)
+      : undefined;
 
     return {
       rawDamage,

@@ -6,6 +6,10 @@ import {
 } from '../../src/model/monsters/large-monster-data';
 import { Sharpness, WeaponClass } from '../../src/model/weapons';
 import type { DamageTypes } from '../../src/damage';
+import {
+  SwitchAxeDamageArgs,
+  SwordAndShieldDamageArgs
+} from '../../src/damage/types';
 
 describe('Damage', () => {
   describe('calculateDamage', () => {
@@ -25,7 +29,9 @@ describe('Damage', () => {
             weaponId: 1, // Iron Blade
             attackName: 'L3 Charge',
             sharpness: Sharpness.PURPLE,
-            weaponMultipliers: {}
+            weaponMultipliers: {
+              middleOfBlade: false
+            }
           },
           alatreonMonsterArgs,
           {
@@ -139,7 +145,13 @@ describe('Damage', () => {
               weaponId: 19, // Dark Claw Demise
               attackName: 'Spirit Finisher',
               sharpness: Sharpness.PURPLE,
-              weaponMultipliers: {}
+              weaponMultipliers: {
+                middleOfBlade: false,
+                longsword: {
+                  fullSpiritGauge: false,
+                  spiritGaugeColor: 'NONE'
+                }
+              }
             },
             alatreonMonsterArgs,
             {
@@ -159,6 +171,7 @@ describe('Damage', () => {
             attackName: 'Spirit Finisher',
             sharpness: Sharpness.PURPLE,
             weaponMultipliers: {
+              middleOfBlade: false,
               longsword: {
                 fullSpiritGauge: true,
                 spiritGaugeColor: 'NONE'
@@ -183,6 +196,7 @@ describe('Damage', () => {
             attackName: 'Spirit Finisher',
             sharpness: Sharpness.PURPLE,
             weaponMultipliers: {
+              middleOfBlade: false,
               longsword: {
                 fullSpiritGauge: true,
                 spiritGaugeColor: 'WHITE'
@@ -207,6 +221,7 @@ describe('Damage', () => {
             attackName: 'Spirit Finisher',
             sharpness: Sharpness.PURPLE,
             weaponMultipliers: {
+              middleOfBlade: false,
               longsword: {
                 fullSpiritGauge: true,
                 spiritGaugeColor: 'YELLOW'
@@ -231,6 +246,7 @@ describe('Damage', () => {
             attackName: 'Spirit Finisher',
             sharpness: Sharpness.PURPLE,
             weaponMultipliers: {
+              middleOfBlade: false,
               longsword: {
                 fullSpiritGauge: true,
                 spiritGaugeColor: 'RED'
@@ -258,6 +274,7 @@ describe('Damage', () => {
             attackName: 'Step Slash',
             sharpness: Sharpness.PURPLE,
             weaponMultipliers: {
+              middleOfBlade: false,
               longsword: {
                 fullSpiritGauge: true,
                 spiritGaugeColor: 'RED'
@@ -290,7 +307,7 @@ describe('Damage', () => {
               weaponId: 22, // Great Inceadeus
               attackName: 'Overhead Slash',
               sharpness: Sharpness.WHITE,
-              weaponMultipliers: {}
+              weaponMultipliers: {} as SwitchAxeDamageArgs['weaponMultipliers']
             },
             {
               monsterName: Alatreon.name,
@@ -404,7 +421,8 @@ describe('Damage', () => {
               weaponId: 55, // Alatreon Star
               attackName: 'Jumping Slash',
               sharpness: Sharpness.PURPLE,
-              weaponMultipliers: {}
+              weaponMultipliers:
+                {} as SwordAndShieldDamageArgs['weaponMultipliers']
             },
             alatreonMonsterArgs,
             {

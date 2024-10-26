@@ -9,14 +9,14 @@ import { isCutHit } from '../../model/weapons/weapon-util';
 import type {
   Damage,
   DamageBuffArgs,
-  MonsterMultipliers,
-  WeaponArgs
+  LanceDamageArgs,
+  MonsterMultipliers
 } from '../types';
 import {
   calculateElementalDamage,
-  getWeaponClassMultiplier,
   getRawMultiplier,
   getSharpnessRawMultiplier,
+  getWeaponClassMultiplier,
   validateWeaponSharpness
 } from './damage-util';
 
@@ -67,7 +67,7 @@ function validateLance(
  * Calculates damage for a {@link LanceTypes.Lance}.
  */
 export function calculateLanceDamage(
-  weaponArgs: WeaponArgs,
+  weaponArgs: LanceDamageArgs,
   monsterMultipliers: MonsterMultipliers,
   damageBuffArgs: Partial<DamageBuffArgs>
 ) {
@@ -105,20 +105,22 @@ export function calculateLanceDamage(
         levelMultipliers.defense) /
       classModifier;
 
-    const baseElementalDamage = calculateElementalDamage(
-      lance,
+    const baseElementalDamage = calculateElementalDamage({
+      weapon: lance,
       sharpness,
       hitzoneValues,
-      levelMultipliers,
       elementArgs
-    );
+    });
     // Lance charge elemental damage is cut by 75%
     const elementalDamage =
       attack.name === 'Charge'
         ? baseElementalDamage * LANCE_CHARGE_ELEMENTAL_MULTIPLIER
         : baseElementalDamage;
 
-    const koDamage = !isCutHit(hit) ? hit.ko * sharpnessMultiplier : undefined;
+    // KO is always rounded down
+    const koDamage = !isCutHit(hit)
+      ? Math.floor(hit.ko * sharpnessMultiplier)
+      : undefined;
 
     return {
       rawDamage,

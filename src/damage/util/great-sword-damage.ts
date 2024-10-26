@@ -7,14 +7,15 @@ import {
 import type {
   Damage,
   DamageBuffArgs,
-  MonsterMultipliers,
-  WeaponArgs
+  GreatSwordDamageArgs,
+  MonsterMultipliers
 } from '../types';
 import {
+  applyDefenseMultiplier,
   calculateElementalDamage,
-  getWeaponClassMultiplier,
   getRawMultiplier,
   getSharpnessRawMultiplier,
+  getWeaponClassMultiplier,
   validateWeaponSharpness
 } from './damage-util';
 
@@ -80,7 +81,7 @@ function validateGreatSword(
  * Calculates damage for a {@link GreatSwordTypes.GreatSword}
  */
 export function calculateGreatSwordDamage(
-  weaponArgs: WeaponArgs,
+  weaponArgs: GreatSwordDamageArgs,
   monsterMultipliers: MonsterMultipliers,
   damageBuffArgs: Partial<DamageBuffArgs>
 ) {
@@ -125,24 +126,34 @@ export function calculateGreatSwordDamage(
         rawMultiplier *
         sharpnessMultiplier *
         hitzoneMultiplier *
-        specialVarMultiplier *
-        levelMultipliers.defense) /
+        specialVarMultiplier) /
       classModifier;
 
-    const elementalDamage = calculateElementalDamage(
-      greatSword,
+    const elementalDamage = calculateElementalDamage({
+      weapon: greatSword,
       sharpness,
       hitzoneValues,
-      levelMultipliers,
       elementArgs
+    });
+
+    // Decimal is dropped
+    const totalDamage = applyDefenseMultiplier(
+      rawDamage + elementalDamage,
+      levelMultipliers.defense
     );
 
-    const koDamage = !isCut ? hit.ko * sharpnessMultiplier : undefined;
+    // KO is always rounded down
+    const koDamage = !isCut
+      ? Math.floor(hit.ko * sharpnessMultiplier)
+      : undefined;
 
     return {
-      rawDamage,
-      elementalDamage,
-      totalDamage: Math.floor(rawDamage + elementalDamage),
+      rawDamage: applyDefenseMultiplier(rawDamage, levelMultipliers.defense),
+      elementalDamage: applyDefenseMultiplier(
+        elementalDamage,
+        levelMultipliers.defense
+      ),
+      totalDamage,
       koDamage
     };
   });

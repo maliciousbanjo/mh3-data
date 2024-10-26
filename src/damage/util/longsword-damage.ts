@@ -8,16 +8,16 @@ import {
 import type {
   Damage,
   DamageBuffArgs,
+  LongswordDamageArgs,
   LongswordSpecialMultiplierArgs,
-  MonsterMultipliers,
-  WeaponArgs
+  MonsterMultipliers
 } from '../types';
 import { assertLongswordWeaponMultipliers } from './assertions';
 import {
   calculateElementalDamage,
-  getWeaponClassMultiplier,
   getRawMultiplier,
   getSharpnessRawMultiplier,
+  getWeaponClassMultiplier,
   validateWeaponSharpness
 } from './damage-util';
 
@@ -76,7 +76,7 @@ function validateLongsword(
  * Calculates damage for a {@link LongswordTypes.Longsword}.
  */
 export function calculateLongswordDamage(
-  weaponArgs: WeaponArgs,
+  weaponArgs: LongswordDamageArgs,
   monsterMultipliers: MonsterMultipliers,
   damageBuffArgs: Partial<DamageBuffArgs>
 ) {
@@ -124,15 +124,16 @@ export function calculateLongswordDamage(
         levelMultipliers.defense) /
       classModifier;
 
-    const elementalDamage = calculateElementalDamage(
-      longsword,
+    const elementalDamage = calculateElementalDamage({
+      weapon: longsword,
       sharpness,
       hitzoneValues,
-      levelMultipliers,
       elementArgs
-    );
-
-    const koDamage = !isCut ? hit.ko * sharpnessMultiplier : undefined;
+    });
+    // KO is always rounded down
+    const koDamage = !isCut
+      ? Math.floor(hit.ko * sharpnessMultiplier)
+      : undefined;
 
     return {
       rawDamage,
