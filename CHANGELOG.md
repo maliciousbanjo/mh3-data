@@ -1,5 +1,11 @@
 # mh3-data
 
+## 0.9.8
+
+### Patch Changes
+
+- b1a7902: Decimal rounding according to the damage formula
+
 ## 0.9.7
 
 ### Patch Changes
