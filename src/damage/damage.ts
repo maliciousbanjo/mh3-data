@@ -1,8 +1,14 @@
 import { MonsterLevels, Monsters, Weapons, type MonsterTypes } from '../model';
 import type {
   DamageBuffArgs,
+  GreatSwordDamageArgs,
+  HammerDamageArgs,
+  LanceDamageArgs,
+  LongswordDamageArgs,
   MonsterArgs,
   MonsterMultipliers,
+  SwitchAxeDamageArgs,
+  SwordAndShieldDamageArgs,
   WeaponArgs
 } from './types';
 import { calculateGreatSwordDamage } from './util/great-sword-damage';
@@ -62,42 +68,42 @@ export function calculateDamage(
   switch (weaponClass) {
     case Weapons.WeaponClass.GREAT_SWORD: {
       return calculateGreatSwordDamage(
-        weaponArgs,
+        weaponArgs as GreatSwordDamageArgs,
         monsterMultipliers,
         damageBuffArgs
       );
     }
     case Weapons.WeaponClass.HAMMER: {
       return calculateHammerDamage(
-        weaponArgs,
+        weaponArgs as HammerDamageArgs,
         monsterMultipliers,
         damageBuffArgs
       );
     }
     case Weapons.WeaponClass.LANCE: {
       return calculateLanceDamage(
-        weaponArgs,
+        weaponArgs as LanceDamageArgs,
         monsterMultipliers,
         damageBuffArgs
       );
     }
     case Weapons.WeaponClass.LONGSWORD: {
       return calculateLongswordDamage(
-        weaponArgs,
+        weaponArgs as LongswordDamageArgs,
         monsterMultipliers,
         damageBuffArgs
       );
     }
     case Weapons.WeaponClass.SWITCH_AXE: {
       return calculateSwitchAxeDamage(
-        weaponArgs,
+        weaponArgs as SwitchAxeDamageArgs,
         monsterMultipliers,
         damageBuffArgs
       );
     }
     case Weapons.WeaponClass.SWORD_AND_SHIELD: {
       return calculateSwordAndShieldDamage(
-        weaponArgs,
+        weaponArgs as SwordAndShieldDamageArgs,
         monsterMultipliers,
         damageBuffArgs
       );

@@ -26,45 +26,47 @@ export interface LongswordSpecialMultiplierArgs {
   spiritGaugeColor: LongswordTypes.SpiritGaugeColors;
 }
 
-interface BaseDamageArgs {
+interface DamageArgs {
+  weaponClass: WeaponClass;
   weaponId: number;
   /** Current weapon sharpness */
   sharpness: Sharpness;
+  attackName: string;
   /**
    * Multipliers specific to the weapon class eg; middle of blade, spirit guage color, etc
    */
   weaponMultipliers: Partial<WeaponMultipliers>;
 }
 
-export interface GreatSwordDamageArgs extends BaseDamageArgs {
+export interface GreatSwordDamageArgs extends DamageArgs {
   weaponClass: WeaponClass.GREAT_SWORD;
   attackName: GreatSwordTypes.GreatSwordAttack;
   weaponMultipliers: Pick<WeaponMultipliers, 'middleOfBlade'>;
 }
 
-export interface HammerDamageArgs extends BaseDamageArgs {
+export interface HammerDamageArgs extends DamageArgs {
   weaponClass: WeaponClass.HAMMER;
   attackName: HammerTypes.HammerAttack;
 }
 
-export interface LanceDamageArgs extends BaseDamageArgs {
+export interface LanceDamageArgs extends DamageArgs {
   weaponClass: WeaponClass.LANCE;
   attackName: LanceTypes.LanceAttack;
 }
 
-export interface LongswordDamageArgs extends BaseDamageArgs {
+export interface LongswordDamageArgs extends DamageArgs {
   weaponClass: WeaponClass.LONGSWORD;
   attackName: LongswordTypes.LongswordAttack;
   weaponMultipliers: Pick<WeaponMultipliers, 'middleOfBlade' | 'longsword'>;
 }
 
-export interface SwitchAxeDamageArgs extends BaseDamageArgs {
+export interface SwitchAxeDamageArgs extends DamageArgs {
   weaponClass: WeaponClass.SWITCH_AXE;
   attackName: SwitchAxeTypes.SwitchAxeAttack;
   weaponMultipliers: Pick<WeaponMultipliers, 'switchAxeMode'>;
 }
 
-export interface SwordAndShieldDamageArgs extends BaseDamageArgs {
+export interface SwordAndShieldDamageArgs extends DamageArgs {
   weaponClass: WeaponClass.SWORD_AND_SHIELD;
   attackName: SwordAndShieldTypes.SwordAndShieldAttack;
   weaponMultipliers: Pick<WeaponMultipliers, 'swordAndShieldMode'>;
@@ -88,6 +90,7 @@ export interface WeaponMultipliers {
  * Weapon-related parameters used in damage calculation
  */
 export type WeaponArgs =
+  | DamageArgs
   | GreatSwordDamageArgs
   | HammerDamageArgs
   | LanceDamageArgs
