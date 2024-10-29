@@ -1,6 +1,6 @@
 {
   "name": "mh3-data",
-  "version": "0.9.6",
+  "version": "0.9.7",
   "description": "Monster Hunter Tri data for monsters, quests, and weapons",
   "type": "module",
   "types": "dist/index.d.ts",
