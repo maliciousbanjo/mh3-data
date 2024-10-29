@@ -4,12 +4,6 @@
 
 ### Patch Changes
 
-- d1519cd: Decimal rounding according to the damage formula
-
-## 0.9.7
-
-### Patch Changes
-
 - 5c70ac2: Applying decimal dropping according to the damage formula documentation
 
 ## 0.9.6
