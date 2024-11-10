@@ -1,7 +1,7 @@
-import { Sharpness, WeaponClass, type WeaponTypes } from '../../model/weapons';
 import { Weapons } from '../../model';
-import type { MonsterTypes } from '../../model/monsters';
 import type { MonsterLevelTypes } from '../../model/monster-levels';
+import type { MonsterTypes } from '../../model/monsters';
+import { Sharpness, type WeaponTypes } from '../../model/weapons';
 import type { DamageBuffArgs } from '../types';
 import {
   ARMOR_SKILL_MULTIPLIERS,
@@ -51,7 +51,7 @@ const defaultElementArgs = Object.freeze<DamageBuffArgs['elementArgs']>({
  * @throws Error if weapon does not have provided sharpness level
  */
 export function validateWeaponSharpness(
-  weapon: WeaponTypes.Weapon<WeaponClass>,
+  weapon: WeaponTypes.Weapon,
   sharpness: Sharpness
 ): true {
   const validSharpness = sharpness <= weapon.sharpnessUp.length - 1;
@@ -117,7 +117,7 @@ export function getSharpnessElementalMultiplier(sharpness: Sharpness): number {
  */
 function getHitzoneForWeaponElement(
   hitzoneValues: MonsterTypes.HitzoneValues,
-  weaponElement: WeaponTypes.Weapon<WeaponClass>['secondaryDamageType']
+  weaponElement: WeaponTypes.Weapon['secondaryDamageType']
 ) {
   if (
     weaponElement === 'sleep' ||
@@ -215,7 +215,7 @@ export function applyDefenseMultiplier(
 }
 
 interface ElementalDamageArgs {
-  weapon: WeaponTypes.Weapon<WeaponTypes.ValidWeaponClasses>;
+  weapon: WeaponTypes.Weapon;
   /** Current sharpness of weapon */
   sharpness: Sharpness;
   /** Derived from Monster hitzone */

@@ -17,4 +17,6 @@ export type GreatSwordAttack =
   | 'L3 Smash Charge'
   | 'Smash Overcharge';
 
-export type GreatSword = Weapon<WeaponClass.GREAT_SWORD>;
+export interface GreatSword extends Weapon {
+  type: WeaponClass.GREAT_SWORD;
+}

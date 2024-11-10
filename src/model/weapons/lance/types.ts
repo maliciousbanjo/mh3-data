@@ -13,4 +13,6 @@ export type LanceAttack =
   | 'Guard Attack'
   | 'Shield Bash';
 
-export type Lance = Weapon<WeaponClass.LANCE>;
+export interface Lance extends Weapon {
+  type: WeaponClass.LANCE;
+}

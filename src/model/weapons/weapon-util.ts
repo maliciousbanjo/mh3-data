@@ -21,7 +21,7 @@ export function isCutHit(object: Hit): object is CutHit {
  * Callback for {@link Array.find} to find a weapon
  * @param weaponId Weapon to find
  */
-const findWeapon = (weaponId: number) => (weapon: Weapon<WeaponClass>) => {
+const findWeapon = (weaponId: number) => (weapon: Weapon) => {
   return weapon.id === weaponId;
 };
 
@@ -31,11 +31,8 @@ const findWeapon = (weaponId: number) => (weapon: Weapon<WeaponClass>) => {
  *
  * @returns instance of a {@link Weapon}
  */
-export function getWeapon(
-  weaponClass: WeaponClass,
-  weaponId: number
-): Weapon<WeaponClass> {
-  let weapon: Weapon<WeaponClass> | undefined = undefined;
+export function getWeapon(weaponClass: WeaponClass, weaponId: number): Weapon {
+  let weapon: Weapon | undefined = undefined;
 
   switch (weaponClass) {
     case WeaponClass.GREAT_SWORD: {

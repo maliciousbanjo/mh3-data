@@ -86,9 +86,9 @@ export type SecondaryDamageType =
 /**
  * Properties of a weapon
  */
-export interface Weapon<T extends ValidWeaponClasses> {
+export interface Weapon {
   id: number;
-  type: T;
+  type: WeaponClass;
   name: string;
   description: string;
   attack: number;
@@ -110,11 +110,11 @@ export interface Weapon<T extends ValidWeaponClasses> {
   defense?: number;
   /** ID of previous weapon in path and what is required to upgrade it */
   upgradesFrom?: {
-    weaponId: Weapon<T>['id'][];
+    weaponId: Weapon['id'][];
     materials: ItemTypes.ItemRequirement[];
   };
   /** ID of next weapon in upgrade path */
-  upgradesTo?: Weapon<T>['id'][];
+  upgradesTo?: Weapon['id'][];
   /** List of required items to create this weapon */
   create?: ItemTypes.ItemRequirement[];
 }

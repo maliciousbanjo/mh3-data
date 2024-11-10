@@ -57,7 +57,7 @@ function getLanceHitzoneMultiplier(
 }
 
 function validateLance(
-  weapon: WeaponTypes.Weapon<WeaponClass>
+  weapon: WeaponTypes.Weapon
 ): asserts weapon is LanceTypes.Lance {
   if (weapon.type !== WeaponClass.LANCE) {
     throw new Error(`${weapon.name} is not a ${WeaponClass.LANCE}`);

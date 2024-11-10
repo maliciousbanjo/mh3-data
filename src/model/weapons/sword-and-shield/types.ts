@@ -29,4 +29,6 @@ export interface SwordAndShieldSpecialMultiplierArgs {
   mode: SwordAndShieldAttackMode;
 }
 
-export type SwordAndShield = Weapon<WeaponClass.SWORD_AND_SHIELD>;
+export type SwordAndShield = Weapon & {
+  type: WeaponClass.SWORD_AND_SHIELD;
+};

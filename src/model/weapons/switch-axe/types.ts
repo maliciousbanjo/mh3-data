@@ -28,7 +28,8 @@ export interface SwitchAxeSpecialMultiplierArgs {
   mode: SwitchAxeAttackMode;
 }
 
-export interface SwitchAxe extends Weapon<WeaponClass.SWITCH_AXE> {
+export interface SwitchAxe extends Weapon {
+  type: WeaponClass.SWITCH_AXE;
   /** Unique property for switch axes */
   phial: SwitchAxePhial;
 }

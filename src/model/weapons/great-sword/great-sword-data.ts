@@ -72,10 +72,62 @@ export const GreatSwordDamageProperties = Object.freeze<
   ]
 });
 
+function deepFreeze<T extends object>(obj: T): Readonly<T> {
+  Object.keys(obj).forEach(prop => {
+    const value = obj[prop as keyof T];
+    if (value != null && typeof value === 'object' && !Object.isFrozen(value)) {
+      deepFreeze(value);
+    }
+  });
+  return Object.freeze(obj);
+}
+
+const ironSword = deepFreeze<GreatSword>({
+  id: 0,
+  type: WeaponClass.GREAT_SWORD,
+  name: 'Iron Sword',
+  description:
+    'A weapon that even novice hunters can use. Charge up for a more powerful slash.',
+  attack: 288,
+  secondaryDamageType: 'ice',
+  secondaryAttack: 50,
+  awaken: true,
+  sharpness: [7, 3, 5],
+  sharpnessUp: [7, 3, 10],
+  affinity: 0,
+  slots: 0,
+  rarity: 1,
+  price: 500,
+  create: [{ itemId: 97, amount: 3 }],
+  upgradesTo: [1]
+});
+
+const ironSwordPlus = Object.freeze<GreatSword>({
+  id: 1,
+  type: WeaponClass.GREAT_SWORD,
+  name: 'Iron Sword+',
+  description:
+    'A weapon that even novice hunters can use. Charge up for a more powerful slash.',
+  attack: 336,
+  secondaryDamageType: 'ice',
+  secondaryAttack: 80,
+  awaken: true,
+  sharpness: [5, 3, 7],
+  sharpnessUp: [5, 3, 9, 3],
+  affinity: 0,
+  slots: 0,
+  rarity: 1,
+  price: 1950,
+  upgradesFrom: { weaponId: [0], materials: [{ itemId: 97, amount: 5 }] },
+  upgradesTo: [2, 11]
+});
+
+export const GSList = deepFreeze([ironSword, ironSwordPlus]);
+
 /**
  * List of all available {@link GreatSword}s
  */
-export const GreatSwords = Object.freeze<GreatSword[]>([
+export const GreatSwords = deepFreeze<Readonly<GreatSword>[]>([
   {
     id: 0,
     type: WeaponClass.GREAT_SWORD,

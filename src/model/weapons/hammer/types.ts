@@ -13,4 +13,6 @@ export type HammerAttack =
   | 'Spin Golfswing'
   | 'Spin Finisher';
 
-export type Hammer = Weapon<WeaponClass.HAMMER>;
+export interface Hammer extends Weapon {
+  type: WeaponClass.HAMMER;
+}

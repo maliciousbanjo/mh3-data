@@ -71,7 +71,7 @@ function getSwitchAxeSpecialVarMultiplier(
 }
 
 function validateSwitchAxe(
-  weapon: WeaponTypes.Weapon<WeaponClass>
+  weapon: WeaponTypes.Weapon
 ): asserts weapon is SwitchAxeTypes.SwitchAxe {
   if (
     weapon.type !== WeaponClass.SWITCH_AXE ||
