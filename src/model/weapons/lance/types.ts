@@ -14,5 +14,5 @@ export type LanceAttack =
   | 'Shield Bash';
 
 export interface Lance extends Weapon {
-  type: WeaponClass.LANCE;
+  readonly type: WeaponClass.LANCE;
 }

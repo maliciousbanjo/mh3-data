@@ -25,11 +25,11 @@ export type SwitchAxeAttackMode = 'axe' | 'sword';
 export type SwitchAxePhial = 'element' | 'power' | 'dragon' | 'paralysis';
 
 export interface SwitchAxeSpecialMultiplierArgs {
-  mode: SwitchAxeAttackMode;
+  readonly mode: SwitchAxeAttackMode;
 }
 
 export interface SwitchAxe extends Weapon {
-  type: WeaponClass.SWITCH_AXE;
+  readonly type: WeaponClass.SWITCH_AXE;
   /** Unique property for switch axes */
-  phial: SwitchAxePhial;
+  readonly phial: SwitchAxePhial;
 }

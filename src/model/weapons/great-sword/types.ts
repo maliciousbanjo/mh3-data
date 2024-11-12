@@ -18,5 +18,5 @@ export type GreatSwordAttack =
   | 'Smash Overcharge';
 
 export interface GreatSword extends Weapon {
-  type: WeaponClass.GREAT_SWORD;
+  readonly type: WeaponClass.GREAT_SWORD;
 }

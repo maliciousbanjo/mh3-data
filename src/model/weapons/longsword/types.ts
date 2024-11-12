@@ -16,7 +16,7 @@ export type LongswordAttack =
   | 'Spirit Finisher';
 
 export interface Longsword extends Weapon {
-  type: WeaponClass.LONGSWORD;
+  readonly type: WeaponClass.LONGSWORD;
 }
 
 export type SpiritGaugeColors = keyof typeof SpiritGaugeMultipliers;

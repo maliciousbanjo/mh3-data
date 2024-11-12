@@ -1,8 +1,9 @@
+import { deepFreeze } from '../../../utils';
 import { WeaponClass } from '../enum';
 import type { WeaponDamageProperties } from '../types';
 import type { Longsword, LongswordAttack } from './types';
 
-export const LongswordDamageProperties = Object.freeze<
+export const LongswordDamageProperties = deepFreeze<
   WeaponDamageProperties<WeaponClass.LONGSWORD, LongswordAttack>
 >({
   type: WeaponClass.LONGSWORD,
@@ -37,8 +38,8 @@ export const LongswordDamageProperties = Object.freeze<
 /**
  * List of all available {@link Longsword}s
  */
-export const Longswords = Object.freeze<Longsword[]>([
-  {
+export const Longswords = [
+  Object.freeze<Longsword>({
     id: 0,
     type: WeaponClass.LONGSWORD,
     name: 'Thunderclap',
@@ -60,8 +61,8 @@ export const Longswords = Object.freeze<Longsword[]>([
       { itemId: 115, amount: 10 }
     ],
     upgradesTo: [1]
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 1,
     type: WeaponClass.LONGSWORD,
     name: 'Thunderclap+',
@@ -86,8 +87,8 @@ export const Longswords = Object.freeze<Longsword[]>([
       ]
     },
     upgradesTo: [2, 3]
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 2,
     type: WeaponClass.LONGSWORD,
     name: "Heaven's Thunder (R)",
@@ -111,8 +112,8 @@ export const Longswords = Object.freeze<Longsword[]>([
         { itemId: 474, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 3,
     type: WeaponClass.LONGSWORD,
     name: "Heaven's Thunder (Y)",
@@ -136,8 +137,8 @@ export const Longswords = Object.freeze<Longsword[]>([
         { itemId: 467, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 4,
     type: WeaponClass.LONGSWORD,
     name: 'Ananta Boneblade',
@@ -159,8 +160,8 @@ export const Longswords = Object.freeze<Longsword[]>([
       { itemId: 99, amount: 10 }
     ],
     upgradesTo: [5, 8]
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 5,
     type: WeaponClass.LONGSWORD,
     name: 'Ananta Boneblade+',
@@ -185,8 +186,8 @@ export const Longswords = Object.freeze<Longsword[]>([
       ]
     },
     upgradesTo: [6, 7]
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 6,
     type: WeaponClass.LONGSWORD,
     name: 'Shadowbinder (P)',
@@ -210,8 +211,8 @@ export const Longswords = Object.freeze<Longsword[]>([
         { itemId: 520, amount: 8 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 7,
     type: WeaponClass.LONGSWORD,
     name: 'Shadowbinder (G)',
@@ -235,8 +236,8 @@ export const Longswords = Object.freeze<Longsword[]>([
         { itemId: 522, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 8,
     type: WeaponClass.LONGSWORD,
     name: 'Dancing Flames',
@@ -261,8 +262,8 @@ export const Longswords = Object.freeze<Longsword[]>([
       ]
     },
     upgradesTo: [9]
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 9,
     type: WeaponClass.LONGSWORD,
     name: 'Dancing Hellfire',
@@ -286,8 +287,8 @@ export const Longswords = Object.freeze<Longsword[]>([
         { itemId: 475, amount: 5 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 10,
     type: WeaponClass.LONGSWORD,
     name: 'Wyvern Blade "FIRE"',
@@ -309,8 +310,8 @@ export const Longswords = Object.freeze<Longsword[]>([
       { itemId: 252, amount: 3 }
     ],
     upgradesTo: [11]
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 11,
     type: WeaponClass.LONGSWORD,
     name: 'Wyvern Blade "Flame"',
@@ -335,8 +336,8 @@ export const Longswords = Object.freeze<Longsword[]>([
       ]
     },
     upgradesTo: [12]
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 12,
     type: WeaponClass.LONGSWORD,
     name: 'Wyvern Blade "Flare"',
@@ -360,8 +361,8 @@ export const Longswords = Object.freeze<Longsword[]>([
         { itemId: 158, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 13,
     type: WeaponClass.LONGSWORD,
     name: 'Guan Dao',
@@ -384,8 +385,8 @@ export const Longswords = Object.freeze<Longsword[]>([
       { itemId: 432, amount: 1 }
     ],
     upgradesTo: [14, 15]
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 14,
     type: WeaponClass.LONGSWORD,
     name: 'Yan Yue Dao (P)',
@@ -410,8 +411,8 @@ export const Longswords = Object.freeze<Longsword[]>([
         { itemId: 448, amount: 7 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 15,
     type: WeaponClass.LONGSWORD,
     name: 'Yan Yue Dao (G)',
@@ -436,8 +437,8 @@ export const Longswords = Object.freeze<Longsword[]>([
         { itemId: 448, amount: 7 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 16,
     type: WeaponClass.LONGSWORD,
     name: 'Reaver "Cruelty"',
@@ -459,8 +460,8 @@ export const Longswords = Object.freeze<Longsword[]>([
       { itemId: 449, amount: 3 }
     ],
     upgradesTo: [17]
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 17,
     type: WeaponClass.LONGSWORD,
     name: 'Reaver "Calamity"',
@@ -484,8 +485,8 @@ export const Longswords = Object.freeze<Longsword[]>([
         { itemId: 453, amount: 1 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 18,
     type: WeaponClass.LONGSWORD,
     name: 'Dark Claw',
@@ -506,8 +507,8 @@ export const Longswords = Object.freeze<Longsword[]>([
       { itemId: 432, amount: 3 }
     ],
     upgradesTo: [19]
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 19,
     type: WeaponClass.LONGSWORD,
     name: 'Dark Claw "Demise"',
@@ -531,8 +532,8 @@ export const Longswords = Object.freeze<Longsword[]>([
         { itemId: 404, amount: 1 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 20,
     type: WeaponClass.LONGSWORD,
     name: 'Tenebra',
@@ -554,8 +555,8 @@ export const Longswords = Object.freeze<Longsword[]>([
       { itemId: 374, amount: 3 }
     ],
     upgradesTo: [21]
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 21,
     type: WeaponClass.LONGSWORD,
     name: 'Tenebra D',
@@ -579,8 +580,8 @@ export const Longswords = Object.freeze<Longsword[]>([
         { itemId: 419, amount: 4 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 22,
     type: WeaponClass.LONGSWORD,
     name: 'Rising Soul',
@@ -601,8 +602,8 @@ export const Longswords = Object.freeze<Longsword[]>([
       { itemId: 106, amount: 10 },
       { itemId: 286, amount: 8 }
     ]
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 23,
     type: WeaponClass.LONGSWORD,
     name: 'Barbarian Blade',
@@ -619,8 +620,8 @@ export const Longswords = Object.freeze<Longsword[]>([
     rarity: 3,
     price: 0,
     upgradesTo: [24]
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 24,
     type: WeaponClass.LONGSWORD,
     name: 'Barbarian Blade+',
@@ -645,8 +646,8 @@ export const Longswords = Object.freeze<Longsword[]>([
       ]
     },
     upgradesTo: [25]
-  },
-  {
+  }),
+  Object.freeze<Longsword>({
     id: 25,
     type: WeaponClass.LONGSWORD,
     name: 'Barbarian "Sharq" (P)',
@@ -670,5 +671,5 @@ export const Longswords = Object.freeze<Longsword[]>([
         { itemId: 430, amount: 2 }
       ]
     }
-  }
-]);
+  })
+];

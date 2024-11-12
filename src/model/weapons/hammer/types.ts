@@ -14,5 +14,5 @@ export type HammerAttack =
   | 'Spin Finisher';
 
 export interface Hammer extends Weapon {
-  type: WeaponClass.HAMMER;
+  readonly type: WeaponClass.HAMMER;
 }
