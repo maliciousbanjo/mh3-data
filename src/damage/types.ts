@@ -21,55 +21,58 @@ import {
 } from './util/attack-multipliers';
 
 export interface LongswordSpecialMultiplierArgs {
-  middleOfBlade: boolean;
-  fullSpiritGauge: boolean;
-  spiritGaugeColor: LongswordTypes.SpiritGaugeColors;
+  readonly middleOfBlade: boolean;
+  readonly fullSpiritGauge: boolean;
+  readonly spiritGaugeColor: LongswordTypes.SpiritGaugeColors;
 }
 
 interface DamageArgs {
-  weaponClass: WeaponClass;
-  weaponId: number;
+  readonly weaponClass: WeaponClass;
+  readonly weaponId: number;
   /** Current weapon sharpness */
-  sharpness: Sharpness;
-  attackName: string;
+  readonly sharpness: Sharpness;
+  readonly attackName: string;
   /**
    * Multipliers specific to the weapon class eg; middle of blade, spirit guage color, etc
    */
-  weaponMultipliers: Partial<WeaponMultipliers>;
+  readonly weaponMultipliers: Partial<WeaponMultipliers>;
 }
 
 export interface GreatSwordDamageArgs extends DamageArgs {
-  weaponClass: WeaponClass.GREAT_SWORD;
-  attackName: GreatSwordTypes.GreatSwordAttack;
-  weaponMultipliers: Pick<WeaponMultipliers, 'middleOfBlade'>;
+  readonly weaponClass: WeaponClass.GREAT_SWORD;
+  readonly attackName: GreatSwordTypes.GreatSwordAttack;
+  readonly weaponMultipliers: Pick<WeaponMultipliers, 'middleOfBlade'>;
 }
 
 export interface HammerDamageArgs extends DamageArgs {
-  weaponClass: WeaponClass.HAMMER;
-  attackName: HammerTypes.HammerAttack;
+  readonly weaponClass: WeaponClass.HAMMER;
+  readonly attackName: HammerTypes.HammerAttack;
 }
 
 export interface LanceDamageArgs extends DamageArgs {
-  weaponClass: WeaponClass.LANCE;
-  attackName: LanceTypes.LanceAttack;
+  readonly weaponClass: WeaponClass.LANCE;
+  readonly attackName: LanceTypes.LanceAttack;
 }
 
 export interface LongswordDamageArgs extends DamageArgs {
-  weaponClass: WeaponClass.LONGSWORD;
-  attackName: LongswordTypes.LongswordAttack;
-  weaponMultipliers: Pick<WeaponMultipliers, 'middleOfBlade' | 'longsword'>;
+  readonly weaponClass: WeaponClass.LONGSWORD;
+  readonly attackName: LongswordTypes.LongswordAttack;
+  readonly weaponMultipliers: Pick<
+    WeaponMultipliers,
+    'middleOfBlade' | 'longsword'
+  >;
 }
 
 export interface SwitchAxeDamageArgs extends DamageArgs {
-  weaponClass: WeaponClass.SWITCH_AXE;
-  attackName: SwitchAxeTypes.SwitchAxeAttack;
-  weaponMultipliers: Pick<WeaponMultipliers, 'switchAxeMode'>;
+  readonly weaponClass: WeaponClass.SWITCH_AXE;
+  readonly attackName: SwitchAxeTypes.SwitchAxeAttack;
+  readonly weaponMultipliers: Pick<WeaponMultipliers, 'switchAxeMode'>;
 }
 
 export interface SwordAndShieldDamageArgs extends DamageArgs {
-  weaponClass: WeaponClass.SWORD_AND_SHIELD;
-  attackName: SwordAndShieldTypes.SwordAndShieldAttack;
-  weaponMultipliers: Pick<WeaponMultipliers, 'swordAndShieldMode'>;
+  readonly weaponClass: WeaponClass.SWORD_AND_SHIELD;
+  readonly attackName: SwordAndShieldTypes.SwordAndShieldAttack;
+  readonly weaponMultipliers: Pick<WeaponMultipliers, 'swordAndShieldMode'>;
 }
 
 /**
@@ -78,12 +81,12 @@ export interface SwordAndShieldDamageArgs extends DamageArgs {
  */
 export interface WeaponMultipliers {
   /** Great Sword, Longsword only */
-  middleOfBlade: boolean;
+  readonly middleOfBlade: boolean;
   /** Sword and Shield only */
-  swordAndShieldMode: SwordAndShieldTypes.SwordAndShieldAttackMode;
+  readonly swordAndShieldMode: SwordAndShieldTypes.SwordAndShieldAttackMode;
   /** Switch Axe only */
-  switchAxeMode: SwitchAxeTypes.SwitchAxeAttackMode;
-  longsword: Omit<LongswordSpecialMultiplierArgs, 'middleOfBlade'>;
+  readonly switchAxeMode: SwitchAxeTypes.SwitchAxeAttackMode;
+  readonly longsword: Omit<LongswordSpecialMultiplierArgs, 'middleOfBlade'>;
 }
 
 /**
@@ -102,13 +105,13 @@ export type WeaponArgs =
  * Monster-related parameters used in damage calculation
  */
 export interface MonsterArgs {
-  monsterName: MonsterTypes.MonsterName;
+  readonly monsterName: MonsterTypes.MonsterName;
   /** Quest featuring this monster */
-  questId: QuestTypes.Quest['id'] | undefined;
+  readonly questId: QuestTypes.Quest['id'] | undefined;
   /** Must be valid monster state for this monsters */
-  monsterStateIndex: number;
+  readonly monsterStateIndex: number;
   /** Must be valid index for the provided monsterStateIndex */
-  hitzoneIndex: number;
+  readonly hitzoneIndex: number;
 }
 
 /**
@@ -117,9 +120,9 @@ export interface MonsterArgs {
  */
 export interface MonsterMultipliers {
   /** Derived from Monster hitzone */
-  hitzoneValues: MonsterTypes.HitzoneValues;
+  readonly hitzoneValues: MonsterTypes.HitzoneValues;
   /** Derived from Monster level set by Quest */
-  levelMultipliers: MonsterLevelTypes.MonsterLevelMultipliers;
+  readonly levelMultipliers: MonsterLevelTypes.MonsterLevelMultipliers;
 }
 
 /**
@@ -128,24 +131,24 @@ export interface MonsterMultipliers {
  */
 export interface DamageBuffArgs {
   /** Multiplied against {@link WeaponTypes.Weapon['attack']} */
-  rawArgs: {
+  rawArgs: Readonly<{
     criticalHit: keyof typeof CRITICAL_HIT_MULTIPLIERS;
     lowHealthSkill: keyof typeof LOW_HEALTH_SKILL_MULTIPLIERS;
     fortify: keyof typeof FORTIFY_MULTIPLIERS;
-  };
+  }>;
   /** Multiplied against {@link WeaponTypes.Weapon['secondaryAttack']} */
-  elementArgs: {
+  readonly elementArgs: Readonly<{
     awaken: boolean;
     elementAttack: keyof typeof ELEMENT_ATTACK_MULTIPLIERS;
-  };
+  }>;
   /** Multiplied against {@link WeaponTypes.WeaponDamageProperties['classModifier']} */
-  weaponClassArgs: {
+  readonly weaponClassArgs: Readonly<{
     powercharm: boolean;
     powertalon: boolean;
     demondrug: keyof typeof DEMONDRUG_MULTIPLIERS;
     might: keyof typeof MIGHT_MULTIPLIERS;
     armor: keyof typeof ARMOR_SKILL_MULTIPLIERS;
-  };
+  }>;
 }
 
 /**
@@ -153,13 +156,13 @@ export interface DamageBuffArgs {
  */
 export interface Damage {
   /** Decimal is dropped after raw+elemental are totaled */
-  rawDamage: number;
+  readonly rawDamage: number;
   /** Decimal is dropped after raw+elemental are totaled */
-  elementalDamage: number;
+  readonly elementalDamage: number;
   /**
    * This should ALWAYS be the total of raw + elemental.
    */
-  totalDamage: number;
+  readonly totalDamage: number;
   /** Amount of knockout damage, only present for impact type attacks */
-  koDamage?: number;
+  readonly koDamage?: number;
 }

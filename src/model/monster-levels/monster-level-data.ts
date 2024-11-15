@@ -1,3 +1,4 @@
+import { deepFreeze } from '../../utils';
 import type { MonsterLevelRecord } from './types';
 
 /**
@@ -12,7 +13,7 @@ import type { MonsterLevelRecord } from './types';
  *
  * Defense and stagger multpliers DO appear to be accurate.
  */
-export const MonsterLevelData = Object.freeze<MonsterLevelRecord>({
+export const MonsterLevelData = deepFreeze<MonsterLevelRecord>({
   0: { health: [1], defense: 1, stagger: 1 }, // DEFAULT
   3: { health: [0.35, 0.38, 0.4, 0.43, 0.45], defense: 1, stagger: 1 },
   5: { health: [0.4, 0.43, 0.45, 0.48, 0.5], defense: 1, stagger: 1 },
