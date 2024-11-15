@@ -54,23 +54,23 @@ export type MonsterName = SmallMonsterName | LargeMonsterName;
  * Used by {@link Hitzone} to match against a particular monster part
  */
 export interface HitzoneValues {
-  cut: number;
-  impact: number;
-  gun: number;
-  fire: number;
-  water: number;
-  thunder: number;
-  ice: number;
-  dragon: number;
-  stagger: number;
+  readonly cut: number;
+  readonly impact: number;
+  readonly gun: number;
+  readonly fire: number;
+  readonly water: number;
+  readonly thunder: number;
+  readonly ice: number;
+  readonly dragon: number;
+  readonly stagger: number;
 }
 
 /**
  * Unique area on a monster that takes damage
  */
 export interface Hitzone {
-  name: string;
-  values: HitzoneValues;
+  readonly name: string;
+  readonly values: HitzoneValues;
 }
 
 /**
@@ -78,19 +78,19 @@ export interface Hitzone {
  * based on a monster's status eg; enraged, flying, etc
  */
 export interface MonsterState {
-  name: string;
-  hitzones: Hitzone[];
+  readonly name: string;
+  readonly hitzones: Hitzone[];
 }
 
 /**
  * Monster part that can be broken
  */
 export interface Breakable {
-  name: string;
+  readonly name: string;
   /** Low rank break rewards */
-  low?: ItemTypes.QuestReward[];
+  readonly low?: ItemTypes.QuestReward[];
   /** High rank break rewards */
-  high?: ItemTypes.QuestReward[];
+  readonly high?: ItemTypes.QuestReward[];
 }
 
 /**
@@ -98,11 +98,11 @@ export interface Breakable {
  */
 export interface CaptureInfo {
   /** Health percentage threshold for a monster to be capture-ready */
-  health: number;
+  readonly health: number;
   /** Low rank capture rewards */
-  low?: ItemTypes.ItemResult[];
+  readonly low?: ItemTypes.ItemResult[];
   /** High rank capture rewards */
-  high?: ItemTypes.ItemResult[];
+  readonly high?: ItemTypes.ItemResult[];
 }
 
 /**
@@ -110,43 +110,43 @@ export interface CaptureInfo {
  */
 export interface StatusValues {
   /** Duration of status effect in seconds */
-  duration: number;
+  readonly duration: number;
   /** Resistance/buildup of status damage until effect activates */
-  tolerance: {
+  readonly tolerance: Readonly<{
     /** Value required for the first status effect */
     initial: number;
     /** Maximum resistance */
     max: number;
-  };
+  }>;
   /** Amount of status damage recovered per interval */
-  recovery: {
+  readonly recovery: Readonly<{
     /** Damage recovered */
     amount: number;
     /** Interval of recovery in seconds */
     wait: number;
-  };
+  }>;
 }
 
 /**
  * Monster part that can be carved
  */
 export interface CarveZone {
-  name: string;
+  readonly name: string;
   /** Number of possible carves */
-  count: number;
+  readonly count: number;
   /** Low rank carve */
-  low?: ItemTypes.ItemResult[];
+  readonly low?: ItemTypes.ItemResult[];
   /** High rank carve */
-  high?: ItemTypes.ItemResult[];
+  readonly high?: ItemTypes.ItemResult[];
 }
 
 /**
  * Extra unique data for a particular monster
  */
 export interface Variant {
-  name: string;
-  carves?: CarveZone[];
-  shiny?: ShinyDrop;
+  readonly name: string;
+  readonly carves?: CarveZone[];
+  readonly shiny?: ShinyDrop;
 }
 
 /**
@@ -154,33 +154,33 @@ export interface Variant {
  */
 export interface ShinyDrop {
   /** Action required to cause the shiny to drop */
-  action: string;
+  readonly action: string;
   /** Low rank result */
-  low?: ItemTypes.ItemResult[];
+  readonly low?: ItemTypes.ItemResult[];
   /** High rank result */
-  high?: ItemTypes.ItemResult[];
+  readonly high?: ItemTypes.ItemResult[];
 }
 
 /**
  * Base properties for any monster
  */
 export interface Monster {
-  id: number;
-  name: SmallMonsterName | LargeMonsterName;
-  description: string;
-  type: MonsterType;
-  threat: number;
+  readonly id: number;
+  readonly name: SmallMonsterName | LargeMonsterName;
+  readonly description: string;
+  readonly type: MonsterType;
+  readonly threat: number;
   /**
    * List of hitzones. Will either contain a "default" hitzone group
    * or multiple based on different monster states eg; flying, enraged, etc
    */
-  monsterStates: MonsterState[];
+  readonly monsterStates: MonsterState[];
   /** If undefined this monster should have a 'variant' property */
-  shiny?: ShinyDrop;
+  readonly shiny?: ShinyDrop;
   /** If undefined this monster should have a 'variant' property */
-  carves?: CarveZone[];
+  readonly carves?: CarveZone[];
   /** Optional support for varying shines or carves */
-  variants?: Variant[];
+  readonly variants?: Variant[];
 }
 
 /**
@@ -188,9 +188,9 @@ export interface Monster {
  */
 export interface LargeMonster
   extends Omit<Monster, 'name' | 'carves' | 'type' | 'variants'> {
-  name: LargeMonsterName;
-  hp: number;
-  type:
+  readonly name: LargeMonsterName;
+  readonly hp: number;
+  readonly type:
     | MonsterType.BrdWyv
     | MonsterType.FlyWyv
     | MonsterType.Levthn
@@ -198,10 +198,10 @@ export interface LargeMonster
     | MonsterType.EldDrg;
   /** Quests that include this monster */
   // TODO: quest type. Will be closely tied to the quest data.
-  quests: object;
-  carves: CarveZone[];
-  breakables: Breakable[];
-  status?: {
+  readonly quests: object;
+  readonly carves: CarveZone[];
+  readonly breakables: Breakable[];
+  readonly status?: {
     [StatusType.POISON]: StatusValues & {
       /** Damage taken by poison per interval */
       damage: {
@@ -215,5 +215,5 @@ export interface LargeMonster
     [StatusType.EXHAUST]?: Omit<StatusValues, 'duration'>;
   };
   /** {@link MonsterType.EldDrg} cannot be captured */
-  capture?: CaptureInfo;
+  readonly capture?: CaptureInfo;
 }

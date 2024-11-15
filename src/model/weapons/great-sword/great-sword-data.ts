@@ -77,8 +77,8 @@ export const GreatSwordDamageProperties = deepFreeze<
 /**
  * List of all available {@link GreatSword}s
  */
-export const GreatSwords = [
-  Object.freeze<GreatSword>({
+export const GreatSwords = deepFreeze<GreatSword[]>([
+  {
     id: 0,
     type: WeaponClass.GREAT_SWORD,
     name: 'Iron Sword',
@@ -96,8 +96,8 @@ export const GreatSwords = [
     price: 500,
     create: [{ itemId: 97, amount: 3 }],
     upgradesTo: [1]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 1,
     type: WeaponClass.GREAT_SWORD,
     name: 'Iron Sword+',
@@ -115,8 +115,8 @@ export const GreatSwords = [
     price: 1950,
     upgradesFrom: { weaponId: [0], materials: [{ itemId: 97, amount: 5 }] },
     upgradesTo: [2, 11]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 2,
     type: WeaponClass.GREAT_SWORD,
     name: 'Buster Sword',
@@ -141,8 +141,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [3]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 3,
     type: WeaponClass.GREAT_SWORD,
     name: 'Buster Sword+',
@@ -167,8 +167,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [4]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 4,
     type: WeaponClass.GREAT_SWORD,
     name: 'Buster Blade',
@@ -193,8 +193,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [5]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 5,
     type: WeaponClass.GREAT_SWORD,
     name: 'Ravager Blade',
@@ -220,8 +220,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [6]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 6,
     type: WeaponClass.GREAT_SWORD,
     name: 'Ravager Blade+',
@@ -247,8 +247,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [7, 9]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 7,
     type: WeaponClass.GREAT_SWORD,
     name: 'Lacerator Blade',
@@ -274,8 +274,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [8]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 8,
     type: WeaponClass.GREAT_SWORD,
     name: 'Mutilator Blade',
@@ -300,8 +300,8 @@ export const GreatSwords = [
         { itemId: 420, amount: 2 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 9,
     type: WeaponClass.GREAT_SWORD,
     name: 'Brazenwall',
@@ -327,8 +327,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [10]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 10,
     type: WeaponClass.GREAT_SWORD,
     name: 'Crimsonwall',
@@ -353,8 +353,8 @@ export const GreatSwords = [
         { itemId: 475, amount: 5 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 11,
     type: WeaponClass.GREAT_SWORD,
     name: 'Rugged Great Sword',
@@ -384,8 +384,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [12, 21]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 12,
     type: WeaponClass.GREAT_SWORD,
     name: "Chieftain's Grt Swd",
@@ -410,8 +410,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [13, 14]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 13,
     type: WeaponClass.GREAT_SWORD,
     name: "High Chief's Grt Swd",
@@ -435,8 +435,8 @@ export const GreatSwords = [
         { itemId: 522, amount: 5 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 14,
     type: WeaponClass.GREAT_SWORD,
     name: 'Lagiacrus Blade',
@@ -461,8 +461,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [15, 17, 19]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 15,
     type: WeaponClass.GREAT_SWORD,
     name: 'Lagia Lightning (R)',
@@ -487,8 +487,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [16]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 16,
     type: WeaponClass.GREAT_SWORD,
     name: 'Lagia Bluebolt (P)',
@@ -512,8 +512,8 @@ export const GreatSwords = [
         { itemId: 466, amount: 7 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 17,
     type: WeaponClass.GREAT_SWORD,
     name: 'Lagia Lightning (Y)',
@@ -538,8 +538,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [18]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 18,
     type: WeaponClass.GREAT_SWORD,
     name: 'Lagia Bluebolt (G)',
@@ -563,8 +563,8 @@ export const GreatSwords = [
         { itemId: 465, amount: 7 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 19,
     type: WeaponClass.GREAT_SWORD,
     name: 'High Lagia Blade',
@@ -589,8 +589,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [20]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 20,
     type: WeaponClass.GREAT_SWORD,
     name: 'Lagia Wildfire (P)',
@@ -614,8 +614,8 @@ export const GreatSwords = [
         { itemId: 469, amount: 1 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 21,
     type: WeaponClass.GREAT_SWORD,
     name: 'Carapace Sword',
@@ -640,8 +640,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [22]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 22,
     type: WeaponClass.GREAT_SWORD,
     name: 'Carapace Blade',
@@ -666,8 +666,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [23]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 23,
     type: WeaponClass.GREAT_SWORD,
     name: 'Barroth Wedge',
@@ -692,8 +692,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [24]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 24,
     type: WeaponClass.GREAT_SWORD,
     name: 'Barroth Smasher',
@@ -717,8 +717,8 @@ export const GreatSwords = [
         { itemId: 447, amount: 1 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 25,
     type: WeaponClass.GREAT_SWORD,
     name: 'Bone Blade',
@@ -736,8 +736,8 @@ export const GreatSwords = [
     price: 480,
     create: [{ itemId: 149, amount: 2 }],
     upgradesTo: [26]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 26,
     type: WeaponClass.GREAT_SWORD,
     name: 'Bone Blade+',
@@ -761,8 +761,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [27, 44]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 27,
     type: WeaponClass.GREAT_SWORD,
     name: 'Jawblade',
@@ -787,8 +787,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [28]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 28,
     type: WeaponClass.GREAT_SWORD,
     name: 'Giant Jawblade',
@@ -818,8 +818,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [29, 38, 41]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 29,
     type: WeaponClass.GREAT_SWORD,
     name: 'Golem Blade',
@@ -844,8 +844,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [30, 32]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 30,
     type: WeaponClass.GREAT_SWORD,
     name: 'Golem Blade+',
@@ -870,8 +870,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [31]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 31,
     type: WeaponClass.GREAT_SWORD,
     name: 'Blade of Talos',
@@ -895,8 +895,8 @@ export const GreatSwords = [
         { itemId: 561, amount: 5 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 32,
     type: WeaponClass.GREAT_SWORD,
     name: 'Valkyrie Blade',
@@ -921,8 +921,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [33, 36]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 33,
     type: WeaponClass.GREAT_SWORD,
     name: 'Sieglinde',
@@ -947,8 +947,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [34, 35]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 34,
     type: WeaponClass.GREAT_SWORD,
     name: 'High Sieglinde (P)',
@@ -972,8 +972,8 @@ export const GreatSwords = [
         { itemId: 156, amount: 5 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 35,
     type: WeaponClass.GREAT_SWORD,
     name: 'High Sieglinde (G)',
@@ -997,8 +997,8 @@ export const GreatSwords = [
         { itemId: 157, amount: 5 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 36,
     type: WeaponClass.GREAT_SWORD,
     name: 'Siegmund',
@@ -1023,8 +1023,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [37]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 37,
     type: WeaponClass.GREAT_SWORD,
     name: 'High Siegmund',
@@ -1048,8 +1048,8 @@ export const GreatSwords = [
         { itemId: 423, amount: 3 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 38,
     type: WeaponClass.GREAT_SWORD,
     name: 'Red Wing',
@@ -1074,8 +1074,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [39]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 39,
     type: WeaponClass.GREAT_SWORD,
     name: 'Rathalos Firesword',
@@ -1100,8 +1100,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [40]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 40,
     type: WeaponClass.GREAT_SWORD,
     name: 'Rathalos Flamesword',
@@ -1125,8 +1125,8 @@ export const GreatSwords = [
         { itemId: 475, amount: 5 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 41,
     type: WeaponClass.GREAT_SWORD,
     name: 'Wyvern Jawblade',
@@ -1151,8 +1151,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [42]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 42,
     type: WeaponClass.GREAT_SWORD,
     name: 'Quarrel Hornsword',
@@ -1177,8 +1177,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [43]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 43,
     type: WeaponClass.GREAT_SWORD,
     name: 'Diablos Hornsword',
@@ -1203,8 +1203,8 @@ export const GreatSwords = [
         { itemId: 421, amount: 5 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 44,
     type: WeaponClass.GREAT_SWORD,
     name: 'Ludroth Bone Sword',
@@ -1229,8 +1229,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [45]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 45,
     type: WeaponClass.GREAT_SWORD,
     name: 'Ludroth Bone Sword+',
@@ -1255,8 +1255,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [46]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 46,
     type: WeaponClass.GREAT_SWORD,
     name: 'Cataclysm Sword',
@@ -1281,8 +1281,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [47]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 47,
     type: WeaponClass.GREAT_SWORD,
     name: 'Cataclysm Blade',
@@ -1306,8 +1306,8 @@ export const GreatSwords = [
         { itemId: 460, amount: 2 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 48,
     type: WeaponClass.GREAT_SWORD,
     name: 'Vulcanis',
@@ -1329,8 +1329,8 @@ export const GreatSwords = [
       { itemId: 146, amount: 1 }
     ],
     upgradesTo: [49, 51, 53]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 49,
     type: WeaponClass.GREAT_SWORD,
     name: 'Vulcanvil (R)',
@@ -1355,8 +1355,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [50]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 50,
     type: WeaponClass.GREAT_SWORD,
     name: 'Vulcamagnon (P)',
@@ -1380,8 +1380,8 @@ export const GreatSwords = [
         { itemId: 169, amount: 3 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 51,
     type: WeaponClass.GREAT_SWORD,
     name: 'Vulcanvil (B)',
@@ -1406,8 +1406,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [50, 52]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 52,
     type: WeaponClass.GREAT_SWORD,
     name: 'Vulcamagnon (G)',
@@ -1431,8 +1431,8 @@ export const GreatSwords = [
         { itemId: 169, amount: 2 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 53,
     type: WeaponClass.GREAT_SWORD,
     name: 'Vulcanvil (Y)',
@@ -1457,8 +1457,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [52]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 54,
     type: WeaponClass.GREAT_SWORD,
     name: 'Viking Hornsword',
@@ -1480,8 +1480,8 @@ export const GreatSwords = [
       { itemId: 429, amount: 2 }
     ],
     upgradesTo: [55]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 55,
     type: WeaponClass.GREAT_SWORD,
     name: 'Ancharius Sword',
@@ -1505,8 +1505,8 @@ export const GreatSwords = [
         { itemId: 467, amount: 4 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 56,
     type: WeaponClass.GREAT_SWORD,
     name: 'Berserker Sword',
@@ -1528,8 +1528,8 @@ export const GreatSwords = [
       { itemId: 455, amount: 3 }
     ],
     upgradesTo: [57, 58]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 57,
     type: WeaponClass.GREAT_SWORD,
     name: 'Anguish (P)',
@@ -1552,8 +1552,8 @@ export const GreatSwords = [
         { itemId: 453, amount: 2 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 58,
     type: WeaponClass.GREAT_SWORD,
     name: 'Anguish (G)',
@@ -1576,8 +1576,8 @@ export const GreatSwords = [
         { itemId: 453, amount: 2 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 59,
     type: WeaponClass.GREAT_SWORD,
     name: 'Alatreon Great Sword',
@@ -1599,8 +1599,8 @@ export const GreatSwords = [
       { itemId: 432, amount: 3 }
     ],
     upgradesTo: [60]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 60,
     type: WeaponClass.GREAT_SWORD,
     name: 'Alatreon Revolution',
@@ -1624,8 +1624,8 @@ export const GreatSwords = [
         { itemId: 404, amount: 1 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 61,
     type: WeaponClass.GREAT_SWORD,
     name: 'Proto Razor',
@@ -1647,8 +1647,8 @@ export const GreatSwords = [
       { itemId: 104, amount: 5 }
     ],
     upgradesTo: [62]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 62,
     type: WeaponClass.GREAT_SWORD,
     name: 'Chrome Razor',
@@ -1672,8 +1672,8 @@ export const GreatSwords = [
         { itemId: 159, amount: 3 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 63,
     type: WeaponClass.GREAT_SWORD,
     name: "Lion's Bane",
@@ -1694,8 +1694,8 @@ export const GreatSwords = [
       { itemId: 101, amount: 15 },
       { itemId: 452, amount: 3 }
     ]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 64,
     type: WeaponClass.GREAT_SWORD,
     name: 'Rusted Great Sword',
@@ -1713,8 +1713,8 @@ export const GreatSwords = [
     price: 0,
     create: [{ itemId: 108, amount: 1 }],
     upgradesTo: [65]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 65,
     type: WeaponClass.GREAT_SWORD,
     name: 'Tarnished Great Swd',
@@ -1739,8 +1739,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [66]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 66,
     type: WeaponClass.GREAT_SWORD,
     name: 'Ancient Blade',
@@ -1765,8 +1765,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [67]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 67,
     type: WeaponClass.GREAT_SWORD,
     name: 'Elder Monument',
@@ -1790,8 +1790,8 @@ export const GreatSwords = [
         { itemId: 160, amount: 1 }
       ]
     }
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 68,
     type: WeaponClass.GREAT_SWORD,
     name: 'Worn Great Sword',
@@ -1809,8 +1809,8 @@ export const GreatSwords = [
     price: 0,
     create: [{ itemId: 109, amount: 1 }],
     upgradesTo: [69]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 69,
     type: WeaponClass.GREAT_SWORD,
     name: 'Weathered Grt Sword',
@@ -1835,8 +1835,8 @@ export const GreatSwords = [
       ]
     },
     upgradesTo: [70]
-  }),
-  Object.freeze<GreatSword>({
+  },
+  {
     id: 70,
     type: WeaponClass.GREAT_SWORD,
     name: 'Epitaph Blade',
@@ -1860,5 +1860,5 @@ export const GreatSwords = [
         { itemId: 469, amount: 1 }
       ]
     }
-  })
-];
+  }
+]);

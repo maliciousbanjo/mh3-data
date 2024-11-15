@@ -215,12 +215,12 @@ export function applyDefenseMultiplier(
 }
 
 interface ElementalDamageArgs {
-  weapon: WeaponTypes.Weapon;
+  readonly weapon: WeaponTypes.Weapon;
   /** Current sharpness of weapon */
-  sharpness: Sharpness;
+  readonly sharpness: Sharpness;
   /** Derived from Monster hitzone */
-  hitzoneValues: MonsterTypes.HitzoneValues;
-  elementArgs?: DamageBuffArgs['elementArgs'];
+  readonly hitzoneValues: MonsterTypes.HitzoneValues;
+  readonly elementArgs?: DamageBuffArgs['elementArgs'];
 }
 
 /**

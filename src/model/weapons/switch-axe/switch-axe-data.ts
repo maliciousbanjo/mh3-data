@@ -56,8 +56,8 @@ export const SwitchAxeDamageProperties = deepFreeze<
 /**
  * List of all available {@link SwitchAxe}s
  */
-export const SwitchAxes = [
-  Object.freeze<SwitchAxe>({
+export const SwitchAxes = deepFreeze<SwitchAxe[]>([
+  {
     id: 0,
     type: WeaponClass.SWITCH_AXE,
     name: 'Bone Axe',
@@ -80,8 +80,8 @@ export const SwitchAxes = [
       { itemId: 314, amount: 2 }
     ],
     upgradesTo: [1]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 1,
     type: WeaponClass.SWITCH_AXE,
     name: 'Bone Axe+',
@@ -107,8 +107,8 @@ export const SwitchAxes = [
       ]
     },
     upgradesTo: [2, 7]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 2,
     type: WeaponClass.SWITCH_AXE,
     name: 'Assault Axe',
@@ -134,8 +134,8 @@ export const SwitchAxes = [
       ]
     },
     upgradesTo: [3]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 3,
     type: WeaponClass.SWITCH_AXE,
     name: 'Assault Axe+',
@@ -161,8 +161,8 @@ export const SwitchAxes = [
       ]
     },
     upgradesTo: [4, 6]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 4,
     type: WeaponClass.SWITCH_AXE,
     name: 'Blitzkrieg (R)',
@@ -188,8 +188,8 @@ export const SwitchAxes = [
       ]
     },
     upgradesTo: [5]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 5,
     type: WeaponClass.SWITCH_AXE,
     name: 'Bastion Blitz (P)',
@@ -214,8 +214,8 @@ export const SwitchAxes = [
         { itemId: 444, amount: 8 }
       ]
     }
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 6,
     type: WeaponClass.SWITCH_AXE,
     name: 'Blitzkrieg (B)',
@@ -241,8 +241,8 @@ export const SwitchAxes = [
       ]
     },
     upgradesTo: [5]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 7,
     type: WeaponClass.SWITCH_AXE,
     name: 'Bolt Axe',
@@ -273,8 +273,8 @@ export const SwitchAxes = [
       ]
     },
     upgradesTo: [8, 10, 12]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 8,
     type: WeaponClass.SWITCH_AXE,
     name: 'Volt Axe (R)',
@@ -300,8 +300,8 @@ export const SwitchAxes = [
       ]
     },
     upgradesTo: [9]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 9,
     type: WeaponClass.SWITCH_AXE,
     name: 'Megavolt Axe (P)',
@@ -326,8 +326,8 @@ export const SwitchAxes = [
         { itemId: 270, amount: 4 }
       ]
     }
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 10,
     type: WeaponClass.SWITCH_AXE,
     name: 'Volt Axe (Y)',
@@ -353,8 +353,8 @@ export const SwitchAxes = [
       ]
     },
     upgradesTo: [11]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 11,
     type: WeaponClass.SWITCH_AXE,
     name: 'Megavolt Axe (G)',
@@ -379,8 +379,8 @@ export const SwitchAxes = [
         { itemId: 422, amount: 4 }
       ]
     }
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 12,
     type: WeaponClass.SWITCH_AXE,
     name: 'High Bolt Axe',
@@ -406,8 +406,8 @@ export const SwitchAxes = [
       ]
     },
     upgradesTo: [13, 14]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 13,
     type: WeaponClass.SWITCH_AXE,
     name: 'Thunderstrike (P)',
@@ -432,8 +432,8 @@ export const SwitchAxes = [
         { itemId: 469, amount: 2 }
       ]
     }
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 14,
     type: WeaponClass.SWITCH_AXE,
     name: 'Thunderstrike (G)',
@@ -458,8 +458,8 @@ export const SwitchAxes = [
         { itemId: 288, amount: 5 }
       ]
     }
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 15,
     type: WeaponClass.SWITCH_AXE,
     name: 'Fire Tempest',
@@ -482,8 +482,8 @@ export const SwitchAxes = [
       { itemId: 470, amount: 3 }
     ],
     upgradesTo: [16]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 16,
     type: WeaponClass.SWITCH_AXE,
     name: 'Flame Tempest',
@@ -508,8 +508,8 @@ export const SwitchAxes = [
         { itemId: 447, amount: 1 }
       ]
     }
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 17,
     type: WeaponClass.SWITCH_AXE,
     name: 'Amber Slash',
@@ -532,8 +532,8 @@ export const SwitchAxes = [
       { itemId: 376, amount: 3 }
     ],
     upgradesTo: [18]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 18,
     type: WeaponClass.SWITCH_AXE,
     name: 'Amber Slash+',
@@ -559,8 +559,8 @@ export const SwitchAxes = [
       ]
     },
     upgradesTo: [19]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 19,
     type: WeaponClass.SWITCH_AXE,
     name: 'Amber Hoarfrost',
@@ -585,8 +585,8 @@ export const SwitchAxes = [
         { itemId: 170, amount: 3 }
       ]
     }
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 20,
     type: WeaponClass.SWITCH_AXE,
     name: 'Inceadeus',
@@ -609,8 +609,8 @@ export const SwitchAxes = [
       { itemId: 429, amount: 2 }
     ],
     upgradesTo: [21]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 21,
     type: WeaponClass.SWITCH_AXE,
     name: 'Inceadeus+',
@@ -636,8 +636,8 @@ export const SwitchAxes = [
       ]
     },
     upgradesTo: [22]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 22,
     type: WeaponClass.SWITCH_AXE,
     name: 'Great Inceadeus',
@@ -662,8 +662,8 @@ export const SwitchAxes = [
         { itemId: 469, amount: 2 }
       ]
     }
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 23,
     type: WeaponClass.SWITCH_AXE,
     name: 'Demonbind',
@@ -687,8 +687,8 @@ export const SwitchAxes = [
       { itemId: 433, amount: 6 }
     ],
     upgradesTo: [24, 25]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 24,
     type: WeaponClass.SWITCH_AXE,
     name: 'Great Demonbind (P)',
@@ -714,8 +714,8 @@ export const SwitchAxes = [
         { itemId: 424, amount: 2 }
       ]
     }
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 25,
     type: WeaponClass.SWITCH_AXE,
     name: 'Great Demonbind (G)',
@@ -741,8 +741,8 @@ export const SwitchAxes = [
         { itemId: 424, amount: 2 }
       ]
     }
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 26,
     type: WeaponClass.SWITCH_AXE,
     name: 'Rough Edge',
@@ -765,8 +765,8 @@ export const SwitchAxes = [
       { itemId: 146, amount: 1 }
     ],
     upgradesTo: [27, 29, 31]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 27,
     type: WeaponClass.SWITCH_AXE,
     name: 'Tough Break (R)',
@@ -792,8 +792,8 @@ export const SwitchAxes = [
       ]
     },
     upgradesTo: [28]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 28,
     type: WeaponClass.SWITCH_AXE,
     name: 'Soulbreaker (P)',
@@ -818,8 +818,8 @@ export const SwitchAxes = [
         { itemId: 169, amount: 4 }
       ]
     }
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 29,
     type: WeaponClass.SWITCH_AXE,
     name: 'Tough Break (B)',
@@ -845,8 +845,8 @@ export const SwitchAxes = [
       ]
     },
     upgradesTo: [28, 30]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 30,
     type: WeaponClass.SWITCH_AXE,
     name: 'Soulbreaker (G)',
@@ -871,8 +871,8 @@ export const SwitchAxes = [
         { itemId: 169, amount: 3 }
       ]
     }
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 31,
     type: WeaponClass.SWITCH_AXE,
     name: 'Tough Break (Y)',
@@ -898,8 +898,8 @@ export const SwitchAxes = [
       ]
     },
     upgradesTo: [30]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 32,
     type: WeaponClass.SWITCH_AXE,
     name: 'Dark Switch Axe',
@@ -922,8 +922,8 @@ export const SwitchAxes = [
       { itemId: 432, amount: 3 }
     ],
     upgradesTo: [33]
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 33,
     type: WeaponClass.SWITCH_AXE,
     name: 'Black Harvest',
@@ -948,8 +948,8 @@ export const SwitchAxes = [
         { itemId: 404, amount: 1 }
       ]
     }
-  }),
-  Object.freeze<SwitchAxe>({
+  },
+  {
     id: 34,
     type: WeaponClass.SWITCH_AXE,
     name: 'Sinister Saints',
@@ -971,5 +971,5 @@ export const SwitchAxes = [
       { itemId: 103, amount: 10 },
       { itemId: 169, amount: 4 }
     ]
-  })
-];
+  }
+]);

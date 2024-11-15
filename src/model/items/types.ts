@@ -6,34 +6,32 @@ export interface Item {
   readonly name: string;
 }
 
-export type ItemRecord = Record<Item['id'], Item>;
-
 /**
  * Result of gathering/carving/quest reward
  *
  * Key:Value pair of an {@link Item} id and a percentage chance.
  */
 export interface ItemResult {
-  itemId: Item['id'];
+  readonly itemId: Item['id'];
   /** Percentage */
-  chance: number;
+  readonly chance: number;
 }
 
 /**
  * Quest reward item
  */
 export interface QuestReward {
-  itemId: Item['id'];
+  readonly itemId: Item['id'];
   /** Percentage */
-  chance: number;
+  readonly chance: number;
   /** Amount received */
-  count: number;
+  readonly count: number;
 }
 
 /**
  * Amount needed of a particular item for crafting, trading, etc
  */
 export interface ItemRequirement {
-  itemId: Item['id'];
-  amount: number;
+  readonly itemId: Item['id'];
+  readonly amount: number;
 }

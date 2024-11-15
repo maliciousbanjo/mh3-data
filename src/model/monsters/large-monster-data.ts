@@ -1,7 +1,8 @@
+import { deepFreeze } from '../../utils';
 import { MonsterType } from './enum';
 import type { LargeMonster } from './types';
 
-export const GreatJaggi = Object.freeze<LargeMonster>({
+export const GreatJaggi = deepFreeze<LargeMonster>({
   id: 17,
   name: 'Great Jaggi',
   type: MonsterType.BrdWyv,
@@ -251,7 +252,7 @@ export const GreatJaggi = Object.freeze<LargeMonster>({
     ]
   }
 });
-export const GreatBaggi = Object.freeze<LargeMonster>({
+export const GreatBaggi = deepFreeze<LargeMonster>({
   id: 18,
   name: 'Great Baggi',
   type: MonsterType.BrdWyv,
@@ -504,7 +505,7 @@ export const GreatBaggi = Object.freeze<LargeMonster>({
     ]
   }
 });
-export const Barroth = Object.freeze<LargeMonster>({
+export const Barroth = deepFreeze<LargeMonster>({
   id: 19,
   name: 'Barroth',
   type: MonsterType.BrtWyv,
@@ -983,7 +984,7 @@ export const Barroth = Object.freeze<LargeMonster>({
     ]
   }
 });
-export const Uragaan = Object.freeze<LargeMonster>({
+export const Uragaan = deepFreeze<LargeMonster>({
   id: 20,
   name: 'Uragaan',
   type: MonsterType.BrtWyv,
@@ -1415,7 +1416,7 @@ export const Uragaan = Object.freeze<LargeMonster>({
     ]
   }
 });
-export const Qurupeco = Object.freeze<LargeMonster>({
+export const Qurupeco = deepFreeze<LargeMonster>({
   id: 21,
   name: 'Qurupeco',
   type: MonsterType.BrdWyv,
@@ -1795,7 +1796,7 @@ export const Qurupeco = Object.freeze<LargeMonster>({
     ]
   }
 });
-export const Rathian = Object.freeze<LargeMonster>({
+export const Rathian = deepFreeze<LargeMonster>({
   id: 22,
   name: 'Rathian',
   type: MonsterType.FlyWyv,
@@ -2244,7 +2245,7 @@ export const Rathian = Object.freeze<LargeMonster>({
     ]
   }
 });
-export const Rathalos = Object.freeze<LargeMonster>({
+export const Rathalos = deepFreeze<LargeMonster>({
   id: 23,
   name: 'Rathalos',
   type: MonsterType.FlyWyv,
@@ -2687,7 +2688,7 @@ export const Rathalos = Object.freeze<LargeMonster>({
     ]
   }
 });
-export const Diablos = Object.freeze<LargeMonster>({
+export const Diablos = deepFreeze<LargeMonster>({
   id: 24,
   name: 'Diablos',
   type: MonsterType.FlyWyv,
@@ -3078,7 +3079,7 @@ export const Diablos = Object.freeze<LargeMonster>({
     ]
   }
 });
-export const Gigginox = Object.freeze<LargeMonster>({
+export const Gigginox = deepFreeze<LargeMonster>({
   id: 25,
   name: 'Gigginox',
   type: MonsterType.FlyWyv,
@@ -3487,7 +3488,7 @@ export const Gigginox = Object.freeze<LargeMonster>({
     ]
   }
 });
-export const Barioth = Object.freeze<LargeMonster>({
+export const Barioth = deepFreeze<LargeMonster>({
   id: 26,
   name: 'Barioth',
   type: MonsterType.FlyWyv,
@@ -3914,7 +3915,7 @@ export const Barioth = Object.freeze<LargeMonster>({
     ]
   }
 });
-export const RoyalLudroth = Object.freeze<LargeMonster>({
+export const RoyalLudroth = deepFreeze<LargeMonster>({
   id: 27,
   name: 'Royal Ludroth',
   type: MonsterType.Levthn,
@@ -4332,7 +4333,7 @@ export const RoyalLudroth = Object.freeze<LargeMonster>({
     ]
   }
 });
-export const Gobul = Object.freeze<LargeMonster>({
+export const Gobul = deepFreeze<LargeMonster>({
   id: 28,
   name: 'Gobul',
   type: MonsterType.Levthn,
@@ -4730,7 +4731,7 @@ export const Gobul = Object.freeze<LargeMonster>({
     ]
   }
 });
-export const Lagiacrus = Object.freeze<LargeMonster>({
+export const Lagiacrus = deepFreeze<LargeMonster>({
   id: 29,
   name: 'Lagiacrus',
   type: MonsterType.Levthn,
@@ -5214,7 +5215,7 @@ export const Lagiacrus = Object.freeze<LargeMonster>({
     ]
   }
 });
-export const Agnaktor = Object.freeze<LargeMonster>({
+export const Agnaktor = deepFreeze<LargeMonster>({
   id: 30,
   name: 'Agnaktor',
   type: MonsterType.Levthn,
@@ -5869,7 +5870,7 @@ export const Agnaktor = Object.freeze<LargeMonster>({
     ]
   }
 });
-export const Ceadeus = Object.freeze<LargeMonster>({
+export const Ceadeus = deepFreeze<LargeMonster>({
   id: 31,
   name: 'Ceadeus',
   type: MonsterType.EldDrg,
@@ -6083,7 +6084,7 @@ export const Ceadeus = Object.freeze<LargeMonster>({
     }
   ]
 });
-export const Deviljho = Object.freeze<LargeMonster>({
+export const Deviljho = deepFreeze<LargeMonster>({
   id: 32,
   name: 'Deviljho',
   type: MonsterType.BrtWyv,
@@ -6469,7 +6470,7 @@ export const Deviljho = Object.freeze<LargeMonster>({
     ]
   }
 });
-export const JhenMohran = Object.freeze<LargeMonster>({
+export const JhenMohran = deepFreeze<LargeMonster>({
   id: 33,
   name: 'Jhen Mohran',
   type: MonsterType.EldDrg,
@@ -6818,7 +6819,7 @@ export const JhenMohran = Object.freeze<LargeMonster>({
     }
   ]
 });
-export const Alatreon = Object.freeze<LargeMonster>({
+export const Alatreon = deepFreeze<LargeMonster>({
   id: 34,
   name: 'Alatreon',
   type: MonsterType.EldDrg,

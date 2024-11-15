@@ -1,8 +1,9 @@
 import type { SkillTree } from './types';
 import { SkillGroup } from './enum';
+import { deepFreeze } from '../../utils';
 
-export const SkillTreesData = Object.freeze<SkillTree[]>([
-  {
+export const SkillTreesData = [
+  deepFreeze<SkillTree>({
     name: 'Sharpness',
     description:
       'Doubles or halves the rate at which your weapon loses Sharpness.',
@@ -20,8 +21,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
           'Doubles the rate at which your weapon loses Sharpness'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Handicraft',
     description: "Increases your weapon's Sharpness Level.",
     group: SkillGroup.A,
@@ -31,8 +32,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Sharpness +1'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Fencing',
     description: 'Prevents your attacks from being deflected.',
     group: SkillGroup.A,
@@ -42,8 +43,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: "Mind's Eye"
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Recoil',
     description: 'Bowgun recoil is reduced or increased.',
     group: SkillGroup.A,
@@ -79,8 +80,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Bowgun recoil is increased even greater.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'NormalS Up',
     description: 'Increases the damage of Normal S.',
     group: SkillGroup.A,
@@ -90,8 +91,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Normal S Boost'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'PierceS Up',
     description: 'Increases the damage of Pierce S.',
     group: SkillGroup.A,
@@ -101,8 +102,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Pierce S Boost'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'PelletS Up',
     description: 'Increases the damage of Pellet S.',
     group: SkillGroup.A,
@@ -112,8 +113,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Pellet S Boost'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Normal S+',
     description: 'Allows a bowgun to fire all Normal S levels.',
     group: SkillGroup.A,
@@ -123,8 +124,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Normal S All Up'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Pierce S+',
     description: 'Allows a bowgun to fire all or Lv1 Pierce S.',
     group: SkillGroup.A,
@@ -140,8 +141,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Allows a bowgun to fire all Pierce S level.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Status',
     description:
       'Increases or decreases the potency of Abnormal Status attacks.',
@@ -158,8 +159,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Decreases the potency of Abnormal Status attacks.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Elemental',
     description: 'Increases or decreases the power of Elemental attacks.',
     group: SkillGroup.A,
@@ -175,8 +176,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Decreases the power of Elemental attacks.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Hearing',
     description: 'Unaffected by some or all monster roars.',
     group: SkillGroup.A,
@@ -193,8 +194,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Unaffected by all monster roars.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Fate',
     description:
       'Chance of increasing or decreasing the number of Reward Items received at the end of a Quest.',
@@ -225,8 +226,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
           'Often decreases the number of Reward Items received at the end of a Quest.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Stamina',
     description:
       'Slows down or Speeds up stamina depletion for actions other than evasion and blocking.',
@@ -245,14 +246,14 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
           'Speeds up Stamina depletion for actions other than evasion and blocking.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Loading',
     description: 'Increases the loadable amount of all usable ammo by one.',
     group: SkillGroup.A,
     armorSkills: [{ pointThreshold: 15, skillName: 'Load Up' }]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Carving',
     description:
       'Prevents knockbacks from everything other than Wind Pressure while carving.  Higher levels sometimes boosts number of carving chances.',
@@ -271,8 +272,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
           'Grants Carving Pro effects and sometimes boosts number of carving chances.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Evade Dist',
     description: 'Increases evasion distance.',
     group: SkillGroup.A,
@@ -282,8 +283,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Evasion Up'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Tranquilzr',
     description:
       'Rewards an additional Capture Reward Item for capturing a monster (no additional item for capturing more monsters of the same type).',
@@ -294,8 +295,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Capture Expert'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'FastCharge',
     description:
       'Decreases or increases charging time for charge attacks (Greatswords and Hammers) and gauges (Long Swords  and Switch Axes).',
@@ -314,8 +315,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
           'Increases charging time for charge attacks charge attacks (Greatswords and Hammers) and gauges (Long Swords and Switch Axes).'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'PunishDraw',
     description: 'Grants the ability to stun (KO) monsters with draw attacks.',
     group: SkillGroup.A,
@@ -325,15 +326,15 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Punishing Draw'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'FreeElemnt',
     description:
       "Releases the latent elemental properties in weapons that don't have elements.",
     group: SkillGroup.A,
     armorSkills: [{ pointThreshold: 15, skillName: 'Awaken' }]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Rapid Fire',
     description: 'Allows one extra shot to be fired while rapid firing.',
     group: SkillGroup.A,
@@ -343,8 +344,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Bonus Shot'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Poison',
     description: 'Prevents or doubles the damage received from poison.',
     group: SkillGroup.B,
@@ -360,8 +361,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Doubles the damage received from poison.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Health',
     description: 'Increases or decreases maximum Health.',
     group: SkillGroup.B,
@@ -387,8 +388,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Decreases maximum Health by 30.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Rec Speed',
     description:
       'Increases or decreases recovery speed from temporary damage (the red portion of the Health Gauge).',
@@ -419,8 +420,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
           'Greatly slows recovery from temporary damage (the red portion of the Health Gauge).'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Expert',
     description:
       'Increases or decreases Affinity (chance to deal either 25% more or 25% less damage with a weapon attack).',
@@ -457,8 +458,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Decreases Affinity by 15% (-3.75% effective damage).'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Sharpener',
     description: 'Weapons are sharpened much faster or much longer.',
     group: SkillGroup.B,
@@ -474,8 +475,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Weapons take longer to sharpen.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Guard',
     description:
       'Decrease or increases knockback when blocking attacks, and decreases or increases stamina loss (and damage taken) when blocking heavier attacks.',
@@ -500,8 +501,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
           'Increases knockback when blocking attacks, and increases stamina loss when blocking heavier attacks.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Guard Up',
     description:
       "Causes previously unblockable attacks to become blockable: Gobul's Water Vortex, Gigginox's Poison Body Slam, Uragaan's Sleep Cloud, Laguiacrus' Massive Electric Discharge, Agnaktor's Firebeam, Ceadeus' Water Blast and Alatreon's Fireball.",
@@ -512,8 +513,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Guard Boost'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Reload Spd',
     description: 'Increases or decreases Bowgun reloading speed.',
     group: SkillGroup.B,
@@ -549,8 +550,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Bowgun reloading speed decreases 3 levels.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Pellet S+',
     description: 'Allows a bowgun to fire all or Lv1 Pellet S.',
     group: SkillGroup.B,
@@ -566,8 +567,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Allows a bowgun to fire all Pellet S levels.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Crag S+',
     description: 'Allows a bowgun to fire all or Lv1 Crag S.',
     group: SkillGroup.B,
@@ -583,8 +584,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Allows a bowgun to fire all Crag S levels.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Clust S+',
     description: 'Allows a bowgun to fire all or Lv1 Clust S.',
     group: SkillGroup.B,
@@ -600,8 +601,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Allows a bowgun to fire all Clust S levels.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Bomb Boost',
     description: 'Bomb damage is increased. Bomb Combinations are 100%.',
     group: SkillGroup.B,
@@ -611,8 +612,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Bombardier'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Hunger',
     description:
       'Negates, halves or increases maximum Stamina depletion speed.',
@@ -639,8 +640,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Greatly increases maximum Stamina depletion speed.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Attack',
     description: 'Increases or decreases Attack.',
     group: SkillGroup.B,
@@ -676,8 +677,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Greatly decreases Attack.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Defense',
     description: 'Increases or decreases Defense.',
     group: SkillGroup.B,
@@ -713,8 +714,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Greatly decreases Defense.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Protection',
     description: '25% chance of attacks doing 30% less or more damage.',
     group: SkillGroup.B,
@@ -730,8 +731,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: '25% chance of attacks doing 30% more damage.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Wide-Range',
     description: 'Health & status Items used also affect nearby party members.',
     group: SkillGroup.B,
@@ -749,8 +750,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
           'Health & status Items used also affect nearby party members.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Wind Res',
     description: 'Negates all or a certain amount of Wind Pressure.',
     group: SkillGroup.B,
@@ -766,8 +767,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Negates all Wind Pressure.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Gathering',
     description: 'Chance to gather more or less resources in a single spot.',
     group: SkillGroup.B,
@@ -789,8 +790,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Chance to gather less resources in a single spot.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Spd Gather',
     description: 'Gathering speed is increased.',
     group: SkillGroup.B,
@@ -800,8 +801,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Speed Gatherer'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Psychic',
     description:
       'Marked monsters display additional information on the map, such as species and rage.  Higher levels automatically marks monster for the hunter.',
@@ -819,8 +820,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Activates Detect without having to mark the monster.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Rec Level',
     description:
       'Increases or decreases the efficiency of Health recovery items.',
@@ -837,8 +838,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Decreases the efficiency of Health recovery items.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Evasion',
     description: 'Extends the invulnerability period when evading.',
     group: SkillGroup.B,
@@ -852,8 +853,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Evasion +2'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Potential',
     description:
       'Increases or decreases Defense when Health is below 40%.  Higher levels increases attack power when Health is below 40%.',
@@ -877,8 +878,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
           'Decreases Defense and Attack power when Health is below 40%.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Eating',
     description:
       'Increases or decreases meat-eating speed.  Higher levels increase item consuming speed as well.',
@@ -900,8 +901,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Decreases meat-eating speed.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Tremor Res',
     description: 'Prevents staggering from tremors created by large monsters.',
     group: SkillGroup.B,
@@ -911,8 +912,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Tremor-Proof'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Crit Draw',
     description: 'Guarantees all draw attacks will be critical.',
     group: SkillGroup.B,
@@ -922,8 +923,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Critical Draw'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Constitutn',
     description:
       'Slows down or speeds up Stamina depletion while evading and blocking.',
@@ -954,8 +955,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
           'Greatly speeds up Stamina depletion while evading and blocking.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Swimming',
     description: 'Increases or descreases your movement speed in water.',
     group: SkillGroup.B,
@@ -971,8 +972,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Decreases your movement speed in water.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Dungmaster',
     description:
       'Increases Dung Bomb efficiency, and raises their Combo success rate to 100%.',
@@ -983,8 +984,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Dung Bomb Expert'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Flame Aura',
     description:
       "Causes monsters to react as if you are carrying a Torch, even when you aren't.",
@@ -995,8 +996,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Flaming Aura'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Paralysis',
     description: 'Prevents or doubles the duration of paralysis.',
     group: SkillGroup.C,
@@ -1012,8 +1013,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Doubles the duration of paralysis.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Sleep',
     description: 'Prevents or doubles the duration of sleep.',
     group: SkillGroup.C,
@@ -1029,8 +1030,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Doubles the duration of sleep.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Stun',
     description:
       'Prevents or reduces the likelihood of being stunned or make it harder to recover from being stunned.',
@@ -1052,8 +1053,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Makes it harder to recover from being stunned.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Mud/Snow',
     description: 'Prevents Snowman and Muddy conditions.',
     group: SkillGroup.C,
@@ -1063,8 +1064,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Negate Mud/Snow'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Sense',
     description:
       'Monsters are less likely or more likely to target you in a group.',
@@ -1081,8 +1082,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Monsters are more likely to target you in a group.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Gluttony',
     description: 'Increases efficiency of items that raise maximum Stamina.',
     group: SkillGroup.C,
@@ -1100,8 +1101,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
           'Increases efficiency of items that raise maximum Stamina.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Anti-Theft',
     description: 'Prevents item theft.',
     group: SkillGroup.C,
@@ -1111,8 +1112,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Anti-Theft'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Transportr',
     description: 'Travel faster while carrying eggs or powderstones.',
     group: SkillGroup.C,
@@ -1122,8 +1123,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Pro Transporter'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Fire Res',
     description: 'Increases or decreases Fire resistance.',
     group: SkillGroup.C,
@@ -1154,8 +1155,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Decreases Fire resistance by 15.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Water Res',
     description: 'Increases or decreases Water resistance.',
     group: SkillGroup.C,
@@ -1186,8 +1187,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Decreases Water resistance by 15.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'ThunderRes',
     description: 'Increases or decreases Thunder resistance.',
     group: SkillGroup.C,
@@ -1218,8 +1219,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Decreases Thunder resistance by 15.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Ice Res',
     description: 'Increases or decreases Ice resistance.',
     group: SkillGroup.C,
@@ -1250,8 +1251,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Decreases Ice resistance by 15.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Dragon Res',
     description: 'Increases or decreases Dragon resistance.',
     group: SkillGroup.C,
@@ -1282,8 +1283,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Decreases Dragon resistance by 15.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Heat Res',
     description:
       'Negates or increases damage caused by heat.  Higher levels negates damage received from lava.',
@@ -1311,8 +1312,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Greatly increases damage incurred from heat.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Cold Res',
     description:
       'Negates or all or a certain amount of cold.  Negative levels increases the speed at which your maximum Stamina depletes from cold.',
@@ -1341,8 +1342,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
           'Greatly increases the speed at which your maximum Stamina depletes from cold.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Map',
     description: 'Map is automatically available or never shown.',
     group: SkillGroup.C,
@@ -1358,8 +1359,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Map is never shown.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Whim',
     description:
       'Chance of bugnets/pickaxes/horns breaking is reduced or increased.',
@@ -1390,8 +1391,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
           'Chance of bugnets/pickaxes/horns breaking is greatly increased.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Fishing',
     description:
       'Causes fish to always bite on the first cast. Raises the efficiency of bait items.',
@@ -1402,8 +1403,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Fishing Expert'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Combo Rate',
     description: 'Increases or decreases your Combination success rate.',
     group: SkillGroup.C,
@@ -1439,8 +1440,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Decreases your Combination success rate by 15%.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Combo Plus',
     description:
       'Guarantees maximum possible Combination results with items such as Bowgun ammo.',
@@ -1451,8 +1452,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Combination Pro'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'LastingPwr',
     description: 'Increases or decreases the effect time of certain items.',
     group: SkillGroup.C,
@@ -1468,8 +1469,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Decreases the effect time of certain items.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Precision',
     description: 'Decreases or increases Deviation while aiming.',
     group: SkillGroup.C,
@@ -1490,8 +1491,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Increases Deviation while aiming.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'BBQ',
     description:
       'Grants the ability to swiftly and easily roast Well-done Steaks.',
@@ -1502,8 +1503,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'BBQ Expert'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'SpeedSetup',
     description:
       'Speeds up trap and bomb setting time. Raises Trap Combinations to 100%.',
@@ -1514,8 +1515,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Trap Master'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Perception',
     description:
       'Monster icon on the map blinks when monsters are ready to be captured.',
@@ -1526,8 +1527,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Capture Guru'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Oxygen',
     description: 'Slows down or speeds up depletion of the Oxygen Gauge.',
     group: SkillGroup.C,
@@ -1543,8 +1544,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Speeds up depletion of the Oxygen Gauge.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'CurrentRes',
     description: 'Negates all or some water currents created by large monster.',
     group: SkillGroup.C,
@@ -1561,15 +1562,15 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillDescription: 'Negates the water currents created by large monster.'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Survivor',
     description: 'Increases your Attack every time you fall in battle.',
     restricted: true,
     group: SkillGroup.A,
     armorSkills: [{ pointThreshold: 10, skillName: 'Fortify' }]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Blight Res',
     description:
       'Negates all elemental Blights (Fire, Water, Thunder, Ice, and Dragon).',
@@ -1581,8 +1582,8 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Blightproof'
       }
     ]
-  },
-  {
+  }),
+  deepFreeze<SkillTree>({
     name: 'Auto-Guard',
     description:
       'Enables ability to automatically block attacks (when blocking is possible).',
@@ -1594,5 +1595,5 @@ export const SkillTreesData = Object.freeze<SkillTree[]>([
         skillName: 'Auto-Guard'
       }
     ]
-  }
-]);
+  })
+];

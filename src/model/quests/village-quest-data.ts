@@ -1,7 +1,8 @@
 import type { QuestMode } from './types';
 import { StarLevelEnum, MapLocation } from './enum';
+import { deepFreeze } from '../../utils';
 
-export const VillageQuestData = Object.freeze<QuestMode>({
+export const VillageQuestData = deepFreeze<QuestMode>({
   region: 'Village',
   starLevels: {
     [StarLevelEnum.OneStar]: [

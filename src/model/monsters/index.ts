@@ -42,7 +42,7 @@ import {
 /**
  * List of all small monsters
  */
-export const SmallMonsterData = Object.freeze<MonsterTypes.Monster[]>([
+export const SmallMonsterData = [
   Aptonoth,
   Kelbi,
   Epioth,
@@ -60,12 +60,12 @@ export const SmallMonsterData = Object.freeze<MonsterTypes.Monster[]>([
   Uroktor,
   Delex,
   Rhenoplos
-]);
+];
 
 /**
  * List of all large monsters
  */
-export const LargeMonsterData = Object.freeze<MonsterTypes.LargeMonster[]>([
+export const LargeMonsterData = [
   GreatJaggi,
   GreatBaggi,
   Barroth,
@@ -84,7 +84,7 @@ export const LargeMonsterData = Object.freeze<MonsterTypes.LargeMonster[]>([
   Deviljho,
   JhenMohran,
   Alatreon
-]);
+];
 
 export type { MonsterTypes };
 export * from './enum';
