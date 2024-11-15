@@ -1,5 +1,11 @@
 # mh3-data
 
+## 0.9.9
+
+### Patch Changes
+
+- 6c0ecfe: Data immutability via TypeScript and runtime
+
 ## 0.9.8
 
 ### Patch Changes
