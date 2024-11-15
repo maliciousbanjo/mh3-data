@@ -1,8 +1,9 @@
+import { deepFreeze } from '../../../utils';
 import { WeaponClass } from '../enum';
 import type { WeaponDamageProperties } from '../types';
 import type { SwordAndShield, SwordAndShieldAttack } from './types';
 
-export const SwordAndShieldDamageProperties = Object.freeze<
+export const SwordAndShieldDamageProperties = deepFreeze<
   WeaponDamageProperties<WeaponClass.SWORD_AND_SHIELD, SwordAndShieldAttack>
 >({
   type: WeaponClass.SWORD_AND_SHIELD,
@@ -65,8 +66,8 @@ export const SwordAndShieldDamageProperties = Object.freeze<
 /**
  * List of all available {@link SwordAndShield}s
  */
-export const SwordAndShields = Object.freeze<SwordAndShield[]>([
-  {
+export const SwordAndShields = [
+  Object.freeze<SwordAndShield>({
     id: 0,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: "Hunter's Knife",
@@ -84,8 +85,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
     price: 480,
     create: [{ itemId: 97, amount: 3 }],
     upgradesTo: [1]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 1,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: "Hunter's Knife+",
@@ -103,8 +104,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
     price: 1560,
     upgradesFrom: { weaponId: [0], materials: [{ itemId: 97, amount: 2 }] },
     upgradesTo: [2, 10]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 2,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: "Hunter's Dagger",
@@ -128,8 +129,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [3]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 3,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: "Assassin's Dagger",
@@ -159,8 +160,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [4, 7]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 4,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Shadow Saber',
@@ -185,8 +186,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [5]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 5,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Shadow Saber+',
@@ -211,8 +212,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [6]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 6,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Toxic Fang',
@@ -236,8 +237,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 168, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 7,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Icicle Spike',
@@ -262,8 +263,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [8]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 8,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Icicle Spike+',
@@ -288,8 +289,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [9]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 9,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Nardebosche',
@@ -313,8 +314,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 170, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 10,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: "Soldier's Dagger",
@@ -339,8 +340,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [11]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 11,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: "Commander's Dagger",
@@ -365,8 +366,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [12, 16]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 12,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Hydra Knife',
@@ -391,8 +392,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [13, 14]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 13,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Deadly Knife',
@@ -416,8 +417,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 100, amount: 10 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 14,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Hypnos Knife',
@@ -442,8 +443,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [15]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 15,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Morpheus Knife',
@@ -467,8 +468,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 522, amount: 5 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 16,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Azi Dahaka',
@@ -493,8 +494,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [17]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 17,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Azi Dahaka+',
@@ -519,8 +520,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [18]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 18,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Almighty Dahaka (P)',
@@ -544,8 +545,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 390, amount: 5 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 19,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Bone Kris',
@@ -563,8 +564,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
     price: 430,
     create: [{ itemId: 149, amount: 3 }],
     upgradesTo: [20]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 20,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Bone Kris+',
@@ -582,8 +583,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
     price: 1310,
     upgradesFrom: { weaponId: [19], materials: [{ itemId: 149, amount: 2 }] },
     upgradesTo: [21, 32]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 21,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: "Ludroth's Nail",
@@ -613,8 +614,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [22, 25, 30]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 22,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Royal Claw',
@@ -639,8 +640,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [23]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 23,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Royal Claw+',
@@ -665,8 +666,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [24]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 24,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Royal Ludroth Claw',
@@ -690,8 +691,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 460, amount: 2 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 25,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Carapace Mace',
@@ -716,8 +717,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [26]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 26,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Carapace Mace+',
@@ -742,8 +743,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [27, 28]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 27,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Barroth Club',
@@ -767,8 +768,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 169, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 28,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Gigas Club',
@@ -794,8 +795,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [29]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 29,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Gigas Crusher',
@@ -819,8 +820,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 447, amount: 1 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 30,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Blood Tabar',
@@ -845,8 +846,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [31]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 31,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Plague Tabar',
@@ -870,8 +871,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 514, amount: 10 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 32,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Bone Tomahawk',
@@ -901,8 +902,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [33, 36]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 33,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Qurupeco Chopper',
@@ -927,8 +928,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [34]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 34,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Djinn',
@@ -953,8 +954,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [35]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 35,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Blazing Falchion',
@@ -978,8 +979,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 161, amount: 1 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 36,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Lagia Sword',
@@ -1004,8 +1005,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [37, 39, 41]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 37,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Storm Sword (R)',
@@ -1030,8 +1031,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [38]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 38,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Maelstrom Sword (P)',
@@ -1055,8 +1056,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 468, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 39,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Storm Sword (Y)',
@@ -1081,8 +1082,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [40]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 40,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Maelstrom Sword (G)',
@@ -1106,8 +1107,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 286, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 41,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'High Lagia Sword',
@@ -1132,8 +1133,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [42]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 42,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Takemikazuchi (G)',
@@ -1157,8 +1158,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 469, amount: 1 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 43,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Tusk Gear',
@@ -1180,8 +1181,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       { itemId: 146, amount: 1 }
     ],
     upgradesTo: [44, 46, 48]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 44,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Fossil Gear (R)',
@@ -1206,8 +1207,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [45]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 45,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: "Skull's Wrath (P)",
@@ -1231,8 +1232,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 169, amount: 2 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 46,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Fossil Gear (B)',
@@ -1257,8 +1258,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [45, 47]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 47,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: "Skull's Wrath (G)",
@@ -1282,8 +1283,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 169, amount: 1 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 48,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Fossil Gear (Y)',
@@ -1308,8 +1309,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [47]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 49,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Sea Striker',
@@ -1331,8 +1332,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       { itemId: 429, amount: 1 }
     ],
     upgradesTo: [50]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 50,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Abyssal Striker',
@@ -1356,8 +1357,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 469, amount: 2 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 51,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Jhen Kodachi',
@@ -1379,8 +1380,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       { itemId: 434, amount: 2 }
     ],
     upgradesTo: [52, 53]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 52,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Calm Sands (P)',
@@ -1404,8 +1405,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 454, amount: 2 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 53,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Calm Sands (G)',
@@ -1429,8 +1430,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 452, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 54,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Alatreon Sword',
@@ -1452,8 +1453,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       { itemId: 432, amount: 3 }
     ],
     upgradesTo: [55]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 55,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Alatreon Star',
@@ -1477,8 +1478,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 404, amount: 1 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 56,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: "Warrior's Sword",
@@ -1500,8 +1501,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       { itemId: 118, amount: 5 }
     ],
     upgradesTo: [57]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 57,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Odyssey',
@@ -1525,8 +1526,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 169, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 58,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Chak Chak',
@@ -1549,8 +1550,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       { itemId: 233, amount: 6 }
     ],
     upgradesTo: [59]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 59,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Chak Chak+',
@@ -1575,8 +1576,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [60]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 60,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Wagga Wagga',
@@ -1600,8 +1601,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 514, amount: 9 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 61,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Rusted Sword',
@@ -1619,8 +1620,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
     price: 0,
     create: [{ itemId: 108, amount: 1 }],
     upgradesTo: [62]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 62,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Tarnished Sword',
@@ -1645,8 +1646,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [63]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 63,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Eternal Strife',
@@ -1671,8 +1672,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [64]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 64,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Eternal Hate',
@@ -1696,8 +1697,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 161, amount: 1 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 65,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Worn Sword',
@@ -1715,8 +1716,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
     price: 0,
     create: [{ itemId: 109, amount: 1 }],
     upgradesTo: [66]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 66,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Weathered Sword',
@@ -1741,8 +1742,8 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
       ]
     },
     upgradesTo: [67]
-  },
-  {
+  }),
+  Object.freeze<SwordAndShield>({
     id: 67,
     type: WeaponClass.SWORD_AND_SHIELD,
     name: 'Divine Exodus',
@@ -1766,5 +1767,5 @@ export const SwordAndShields = Object.freeze<SwordAndShield[]>([
         { itemId: 453, amount: 1 }
       ]
     }
-  }
-]);
+  })
+];

@@ -49,7 +49,7 @@ function getSwordAndShieldAttack(
 }
 
 function validateSwordAndShield(
-  weapon: WeaponTypes.Weapon<WeaponClass>
+  weapon: WeaponTypes.Weapon
 ): asserts weapon is SwordAndShieldTypes.SwordAndShield {
   if (weapon.type !== WeaponClass.SWORD_AND_SHIELD) {
     throw new Error(`${weapon.name} is not a ${WeaponClass.SWORD_AND_SHIELD}`);

@@ -66,7 +66,7 @@ function getLongswordSpecialVarMultiplier({
 }
 
 function validateLongsword(
-  weapon: WeaponTypes.Weapon<WeaponClass>
+  weapon: WeaponTypes.Weapon
 ): asserts weapon is LongswordTypes.Longsword {
   if (weapon.type !== WeaponClass.LONGSWORD) {
     throw new Error(`${weapon.name} is not a ${WeaponClass.LONGSWORD}`);

@@ -17,20 +17,20 @@ export type ValidWeaponClasses =
  * Properties specific to a hit with damage type 'cut'
  */
 export interface CutHit {
-  type: 'cut';
+  readonly type: 'cut';
   /** Multiplier used in damage calculations */
-  power: number;
+  readonly power: number;
 }
 
 /**
  * Properties specific to a hit with damage type 'impact'
  */
 export interface ImpactHit {
-  type: 'impact';
+  readonly type: 'impact';
   /** Multiplier used in damage calculations */
-  power: number;
+  readonly power: number;
   /** Amount of KO damage dealt */
-  ko: number;
+  readonly ko: number;
 }
 
 export type Hit = CutHit | ImpactHit;
@@ -42,8 +42,8 @@ export type Hit = CutHit | ImpactHit;
  */
 export interface Attack<N = string> {
   /** Human-readable attack name */
-  name: N;
-  hits: Hit[];
+  readonly name: N;
+  readonly hits: Hit[];
 }
 
 /**
@@ -53,8 +53,8 @@ export interface Attack<N = string> {
  */
 export interface AttackMode<N = string> {
   /** Usage scenario @example default, underwater, axe mode */
-  name: string;
-  attacks: Attack<N>[];
+  readonly name: string;
+  readonly attacks: Attack<N>[];
 }
 
 /**
@@ -67,10 +67,10 @@ export interface WeaponDamageProperties<
   T extends ValidWeaponClasses,
   N = string
 > {
-  type: T;
+  readonly type: T;
   /** Used in the damage/item buff calculations */
-  classModifier: number;
-  attackModes: AttackMode<N>[];
+  readonly classModifier: number;
+  readonly attackModes: AttackMode<N>[];
 }
 
 export type SecondaryDamageType =
@@ -86,35 +86,35 @@ export type SecondaryDamageType =
 /**
  * Properties of a weapon
  */
-export interface Weapon<T extends ValidWeaponClasses> {
-  id: number;
-  type: T;
-  name: string;
-  description: string;
-  attack: number;
+export interface Weapon {
+  readonly id: number;
+  readonly type: WeaponClass;
+  readonly name: string;
+  readonly description: string;
+  readonly attack: number;
   /** Element or status damage */
-  secondaryDamageType: SecondaryDamageType;
-  secondaryAttack: number;
+  readonly secondaryDamageType: SecondaryDamageType;
+  readonly secondaryAttack: number;
   /** If true requires armor skill 'Awaken' for element properties to take effect */
-  awaken: boolean;
+  readonly awaken: boolean;
   /** Sharpness levels */
-  sharpness: number[];
+  readonly sharpness: number[];
   /** Sharpness levels with armor skill 'Sharpness+1' */
-  sharpnessUp: number[];
-  affinity: number;
-  slots: CommonTypes.Slots;
-  rarity: CommonTypes.Rarity;
+  readonly sharpnessUp: number[];
+  readonly affinity: number;
+  readonly slots: CommonTypes.Slots;
+  readonly rarity: CommonTypes.Rarity;
   /** In zenny */
-  price: number;
+  readonly price: number;
   /** Optionally improves hunter defense */
-  defense?: number;
+  readonly defense?: number;
   /** ID of previous weapon in path and what is required to upgrade it */
-  upgradesFrom?: {
-    weaponId: Weapon<T>['id'][];
-    materials: ItemTypes.ItemRequirement[];
+  readonly upgradesFrom?: {
+    readonly weaponId: Weapon['id'][];
+    readonly materials: ItemTypes.ItemRequirement[];
   };
   /** ID of next weapon in upgrade path */
-  upgradesTo?: Weapon<T>['id'][];
+  readonly upgradesTo?: Weapon['id'][];
   /** List of required items to create this weapon */
-  create?: ItemTypes.ItemRequirement[];
+  readonly create?: ItemTypes.ItemRequirement[];
 }

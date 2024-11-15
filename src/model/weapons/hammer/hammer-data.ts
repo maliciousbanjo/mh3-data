@@ -1,8 +1,9 @@
+import { deepFreeze } from '../../../utils';
 import { WeaponClass } from '../enum';
 import type { WeaponDamageProperties } from '../types';
 import type { Hammer, HammerAttack } from './types';
 
-export const HammerDamageProperties = Object.freeze<
+export const HammerDamageProperties = deepFreeze<
   WeaponDamageProperties<WeaponClass.HAMMER, HammerAttack>
 >({
   type: WeaponClass.HAMMER,
@@ -70,8 +71,8 @@ export const HammerDamageProperties = Object.freeze<
 /**
  * List of all available {@link Hammer}s
  */
-export const Hammers = Object.freeze<Hammer[]>([
-  {
+export const Hammers = [
+  Object.freeze<Hammer>({
     id: 0,
     type: WeaponClass.HAMMER,
     name: 'Iron Hammer',
@@ -89,8 +90,8 @@ export const Hammers = Object.freeze<Hammer[]>([
     price: 530,
     create: [{ itemId: 97, amount: 2 }],
     upgradesTo: [1]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 1,
     type: WeaponClass.HAMMER,
     name: 'Iron Hammer+',
@@ -114,8 +115,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [2]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 2,
     type: WeaponClass.HAMMER,
     name: 'War Hammer',
@@ -140,8 +141,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [3]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 3,
     type: WeaponClass.HAMMER,
     name: 'War Hammer+',
@@ -166,8 +167,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [4]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 4,
     type: WeaponClass.HAMMER,
     name: 'War Mace',
@@ -197,8 +198,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [5, 7, 10]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 5,
     type: WeaponClass.HAMMER,
     name: 'Iron Striker',
@@ -223,8 +224,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [6]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 6,
     type: WeaponClass.HAMMER,
     name: 'Iron Impact',
@@ -248,8 +249,8 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 97, amount: 99 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 7,
     type: WeaponClass.HAMMER,
     name: 'Gun Hammer',
@@ -274,8 +275,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [8]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 8,
     type: WeaponClass.HAMMER,
     name: 'Gun Hammer+',
@@ -300,8 +301,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [9]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 9,
     type: WeaponClass.HAMMER,
     name: 'Deadeye Revolver',
@@ -325,8 +326,8 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 158, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 10,
     type: WeaponClass.HAMMER,
     name: 'Vortex Hammer',
@@ -351,8 +352,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [11, 13, 15]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 11,
     type: WeaponClass.HAMMER,
     name: 'Vortical Hammer (R)',
@@ -377,8 +378,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [12]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 12,
     type: WeaponClass.HAMMER,
     name: 'Vortiginous Hmr (P)',
@@ -402,8 +403,8 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 473, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 13,
     type: WeaponClass.HAMMER,
     name: 'Vortical Hammer (Y)',
@@ -428,8 +429,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [14]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 14,
     type: WeaponClass.HAMMER,
     name: 'Vortiginous Hmr (G)',
@@ -453,8 +454,8 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 474, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 15,
     type: WeaponClass.HAMMER,
     name: 'High Vortex Hammer',
@@ -479,8 +480,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [16]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 16,
     type: WeaponClass.HAMMER,
     name: 'Vortastrophe (G)',
@@ -504,8 +505,8 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 288, amount: 5 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 17,
     type: WeaponClass.HAMMER,
     name: 'Bone Hammer',
@@ -526,8 +527,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       { itemId: 182, amount: 2 }
     ],
     upgradesTo: [18]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 18,
     type: WeaponClass.HAMMER,
     name: 'Bone Hammer+',
@@ -545,8 +546,8 @@ export const Hammers = Object.freeze<Hammer[]>([
     price: 1710,
     upgradesFrom: { weaponId: [17], materials: [{ itemId: 149, amount: 5 }] },
     upgradesTo: [19, 21]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 19,
     type: WeaponClass.HAMMER,
     name: 'Bone Bludgeon',
@@ -571,8 +572,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [20]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 20,
     type: WeaponClass.HAMMER,
     name: 'Bone Bludgeon+',
@@ -596,8 +597,8 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 521, amount: 2 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 21,
     type: WeaponClass.HAMMER,
     name: 'Ludroth Bone Mace',
@@ -622,8 +623,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [22]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 22,
     type: WeaponClass.HAMMER,
     name: 'Ludroth Bone Maul',
@@ -653,8 +654,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [23, 28]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 23,
     type: WeaponClass.HAMMER,
     name: 'Ludroth Splashhammer',
@@ -679,8 +680,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [24]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 24,
     type: WeaponClass.HAMMER,
     name: 'Vodyanoy Hammer',
@@ -705,8 +706,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [25]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 25,
     type: WeaponClass.HAMMER,
     name: 'Fang Hammer "Echo"',
@@ -731,8 +732,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [26]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 26,
     type: WeaponClass.HAMMER,
     name: 'Fang Hammer "Ruin"',
@@ -757,8 +758,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [27]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 27,
     type: WeaponClass.HAMMER,
     name: 'Jhen Mohran Hammer',
@@ -782,8 +783,8 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 437, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 28,
     type: WeaponClass.HAMMER,
     name: 'Carapace Hammer',
@@ -809,8 +810,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [29, 31]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 29,
     type: WeaponClass.HAMMER,
     name: 'Carapace Hammer+',
@@ -836,8 +837,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [30]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 30,
     type: WeaponClass.HAMMER,
     name: 'Barroth Hammer',
@@ -862,8 +863,8 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 444, amount: 4 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 31,
     type: WeaponClass.HAMMER,
     name: 'Brazenclout',
@@ -888,8 +889,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [32]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 32,
     type: WeaponClass.HAMMER,
     name: 'Crimsonclout',
@@ -914,8 +915,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [33]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 33,
     type: WeaponClass.HAMMER,
     name: 'Gigas Hammer',
@@ -939,8 +940,8 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 447, amount: 2 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 34,
     type: WeaponClass.HAMMER,
     name: 'Plume Flint',
@@ -962,8 +963,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       { itemId: 150, amount: 5 }
     ],
     upgradesTo: [35, 39]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 35,
     type: WeaponClass.HAMMER,
     name: 'Peco Flint',
@@ -988,8 +989,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [36]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 36,
     type: WeaponClass.HAMMER,
     name: 'Red Bludgeon',
@@ -1014,8 +1015,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [37]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 37,
     type: WeaponClass.HAMMER,
     name: 'Red Bludgeon+',
@@ -1040,8 +1041,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [38]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 38,
     type: WeaponClass.HAMMER,
     name: 'Huracan Hammer (P)',
@@ -1065,8 +1066,8 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 161, amount: 1 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 39,
     type: WeaponClass.HAMMER,
     name: 'Numbingbird',
@@ -1091,8 +1092,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [40]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 40,
     type: WeaponClass.HAMMER,
     name: 'Paralykeet',
@@ -1117,8 +1118,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [41]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 41,
     type: WeaponClass.HAMMER,
     name: 'Alluring Lotus',
@@ -1142,8 +1143,8 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 463, amount: 2 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 42,
     type: WeaponClass.HAMMER,
     name: 'Gaiasp',
@@ -1165,8 +1166,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       { itemId: 146, amount: 1 }
     ],
     upgradesTo: [43, 45, 47]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 43,
     type: WeaponClass.HAMMER,
     name: 'Gaiarch (R)',
@@ -1191,8 +1192,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [44]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 44,
     type: WeaponClass.HAMMER,
     name: 'Great Gaiarch (P)',
@@ -1216,8 +1217,8 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 169, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 45,
     type: WeaponClass.HAMMER,
     name: 'Gaiarch (B)',
@@ -1242,8 +1243,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [44, 46]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 46,
     type: WeaponClass.HAMMER,
     name: 'Great Gaiarch (G)',
@@ -1267,8 +1268,8 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 169, amount: 2 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 47,
     type: WeaponClass.HAMMER,
     name: 'Gaiarch (Y)',
@@ -1293,8 +1294,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [46]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 48,
     type: WeaponClass.HAMMER,
     name: "Devil's Due",
@@ -1316,8 +1317,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       { itemId: 449, amount: 4 }
     ],
     upgradesTo: [49, 50]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 49,
     type: WeaponClass.HAMMER,
     name: "Devil's Crush (P)",
@@ -1341,8 +1342,8 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 453, amount: 1 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 50,
     type: WeaponClass.HAMMER,
     name: "Devil's Crush (G)",
@@ -1366,8 +1367,8 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 453, amount: 1 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 51,
     type: WeaponClass.HAMMER,
     name: 'Alatreon Hammer',
@@ -1389,8 +1390,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       { itemId: 432, amount: 3 }
     ],
     upgradesTo: [52]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 52,
     type: WeaponClass.HAMMER,
     name: 'Alatreon Metamorph',
@@ -1414,8 +1415,8 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 404, amount: 1 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 53,
     type: WeaponClass.HAMMER,
     name: 'Kurogane',
@@ -1437,8 +1438,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       { itemId: 381, amount: 2 }
     ],
     upgradesTo: [54]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 54,
     type: WeaponClass.HAMMER,
     name: 'Iron Devil',
@@ -1462,8 +1463,8 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 461, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 55,
     type: WeaponClass.HAMMER,
     name: 'Rusted Hammer',
@@ -1481,8 +1482,8 @@ export const Hammers = Object.freeze<Hammer[]>([
     price: 0,
     create: [{ itemId: 108, amount: 1 }],
     upgradesTo: [56]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 56,
     type: WeaponClass.HAMMER,
     name: 'Tarnished Hammer',
@@ -1507,8 +1508,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [57]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 57,
     type: WeaponClass.HAMMER,
     name: 'Breath Core Hammer',
@@ -1533,8 +1534,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [58]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 58,
     type: WeaponClass.HAMMER,
     name: 'Lava Core Hammer',
@@ -1558,8 +1559,8 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 160, amount: 1 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 59,
     type: WeaponClass.HAMMER,
     name: 'Worn Hammer',
@@ -1577,8 +1578,8 @@ export const Hammers = Object.freeze<Hammer[]>([
     price: 0,
     create: [{ itemId: 109, amount: 1 }],
     upgradesTo: [60]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 60,
     type: WeaponClass.HAMMER,
     name: 'Weathered Hammer',
@@ -1603,8 +1604,8 @@ export const Hammers = Object.freeze<Hammer[]>([
       ]
     },
     upgradesTo: [61]
-  },
-  {
+  }),
+  Object.freeze<Hammer>({
     id: 61,
     type: WeaponClass.HAMMER,
     name: 'Pulsating Core',
@@ -1628,5 +1629,5 @@ export const Hammers = Object.freeze<Hammer[]>([
         { itemId: 447, amount: 1 }
       ]
     }
-  }
-]);
+  })
+];

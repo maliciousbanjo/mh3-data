@@ -70,7 +70,7 @@ function getGreatSwordSpecialVarMultiplier(
 }
 
 function validateGreatSword(
-  weapon: WeaponTypes.Weapon<WeaponClass>
+  weapon: WeaponTypes.Weapon
 ): asserts weapon is GreatSwordTypes.GreatSword {
   if (weapon.type !== WeaponClass.GREAT_SWORD) {
     throw new Error(`${weapon.name} is not a ${WeaponClass.GREAT_SWORD}`);

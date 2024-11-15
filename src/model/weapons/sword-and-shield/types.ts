@@ -26,7 +26,9 @@ export type SwordAndShieldAttack =
 export type SwordAndShieldAttackMode = 'land' | 'water';
 
 export interface SwordAndShieldSpecialMultiplierArgs {
-  mode: SwordAndShieldAttackMode;
+  readonly mode: SwordAndShieldAttackMode;
 }
 
-export type SwordAndShield = Weapon<WeaponClass.SWORD_AND_SHIELD>;
+export type SwordAndShield = Weapon & {
+  readonly type: WeaponClass.SWORD_AND_SHIELD;
+};

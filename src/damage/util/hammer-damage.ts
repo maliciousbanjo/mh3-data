@@ -38,7 +38,7 @@ function getHammerAttack(
 }
 
 function validateHammer(
-  weapon: WeaponTypes.Weapon<WeaponClass>
+  weapon: WeaponTypes.Weapon
 ): asserts weapon is HammerTypes.Hammer {
   if (weapon.type !== WeaponClass.HAMMER) {
     throw new Error(`${weapon.name} is not a ${WeaponClass.HAMMER}`);

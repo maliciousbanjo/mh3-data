@@ -1,8 +1,9 @@
+import { deepFreeze } from '../../../utils';
 import { WeaponClass } from '../enum';
 import type { WeaponDamageProperties } from '../types';
 import type { Lance, LanceAttack } from './types';
 
-export const LanceDamageProperties = Object.freeze<
+export const LanceDamageProperties = deepFreeze<
   WeaponDamageProperties<WeaponClass.LANCE, LanceAttack>
 >({
   type: WeaponClass.LANCE,
@@ -49,8 +50,8 @@ export const LanceDamageProperties = Object.freeze<
 /**
  * List of all available {@link Lance}s
  */
-export const Lances = Object.freeze<Lance[]>([
-  {
+export const Lances = [
+  Object.freeze<Lance>({
     id: 0,
     type: WeaponClass.LANCE,
     name: 'Iron Lance',
@@ -68,8 +69,8 @@ export const Lances = Object.freeze<Lance[]>([
     price: 550,
     create: [{ itemId: 97, amount: 3 }],
     upgradesTo: [1]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 1,
     type: WeaponClass.LANCE,
     name: 'Iron Lance+',
@@ -87,8 +88,8 @@ export const Lances = Object.freeze<Lance[]>([
     price: 2010,
     upgradesFrom: { weaponId: [0], materials: [{ itemId: 97, amount: 5 }] },
     upgradesTo: [2]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 2,
     type: WeaponClass.LANCE,
     name: 'Thane Lance',
@@ -113,8 +114,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [3]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 3,
     type: WeaponClass.LANCE,
     name: 'Knight Lance',
@@ -144,8 +145,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [4, 12]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 4,
     type: WeaponClass.LANCE,
     name: 'Rampart',
@@ -170,8 +171,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [5, 9]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 5,
     type: WeaponClass.LANCE,
     name: 'Rampart+',
@@ -197,8 +198,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [6]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 6,
     type: WeaponClass.LANCE,
     name: 'Babel Spear',
@@ -224,8 +225,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [7]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 7,
     type: WeaponClass.LANCE,
     name: 'Babel Spear+',
@@ -251,8 +252,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [8]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 8,
     type: WeaponClass.LANCE,
     name: 'Elder Babel Spr (R)',
@@ -277,8 +278,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 475, amount: 5 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 9,
     type: WeaponClass.LANCE,
     name: 'Tusk Lance',
@@ -303,8 +304,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [10]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 10,
     type: WeaponClass.LANCE,
     name: 'Tusk Lance+',
@@ -329,8 +330,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [11]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 11,
     type: WeaponClass.LANCE,
     name: 'Sabertooth (G)',
@@ -354,8 +355,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 420, amount: 2 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 12,
     type: WeaponClass.LANCE,
     name: 'Acrus Lance',
@@ -380,8 +381,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [13, 15, 17]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 13,
     type: WeaponClass.LANCE,
     name: 'Doris Spear (R)',
@@ -406,8 +407,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [14]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 14,
     type: WeaponClass.LANCE,
     name: 'Doris Fellspear (P)',
@@ -431,8 +432,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 164, amount: 5 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 15,
     type: WeaponClass.LANCE,
     name: 'Doris Spear (Y)',
@@ -457,8 +458,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [16]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 16,
     type: WeaponClass.LANCE,
     name: 'Doris Fellspear (G)',
@@ -482,8 +483,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 163, amount: 5 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 17,
     type: WeaponClass.LANCE,
     name: 'High Acrus Lance',
@@ -508,8 +509,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [18]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 18,
     type: WeaponClass.LANCE,
     name: 'Amphitrite (P)',
@@ -533,8 +534,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 288, amount: 5 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 19,
     type: WeaponClass.LANCE,
     name: 'Bone Lance',
@@ -555,8 +556,8 @@ export const Lances = Object.freeze<Lance[]>([
       { itemId: 182, amount: 2 }
     ],
     upgradesTo: [20]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 20,
     type: WeaponClass.LANCE,
     name: 'Bone Lance+',
@@ -580,8 +581,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [21]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 21,
     type: WeaponClass.LANCE,
     name: 'Ploshasta',
@@ -606,8 +607,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [22, 35]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 22,
     type: WeaponClass.LANCE,
     name: 'Rhenohasta',
@@ -637,8 +638,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [23, 26, 32]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 23,
     type: WeaponClass.LANCE,
     name: 'Azure Crest',
@@ -663,8 +664,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [24]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 24,
     type: WeaponClass.LANCE,
     name: 'Azure Crest+',
@@ -689,8 +690,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [25]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 25,
     type: WeaponClass.LANCE,
     name: 'Great Azure',
@@ -714,8 +715,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 522, amount: 5 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 26,
     type: WeaponClass.LANCE,
     name: 'Rugged Lance',
@@ -740,8 +741,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [27, 28, 30]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 27,
     type: WeaponClass.LANCE,
     name: 'Rugged Lance+',
@@ -765,8 +766,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 355, amount: 1 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 28,
     type: WeaponClass.LANCE,
     name: 'Diablos Lance',
@@ -791,8 +792,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [29]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 29,
     type: WeaponClass.LANCE,
     name: 'Diablos Spear',
@@ -816,8 +817,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 421, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 30,
     type: WeaponClass.LANCE,
     name: 'Spiral Heat',
@@ -842,8 +843,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [31]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 31,
     type: WeaponClass.LANCE,
     name: 'Agnaktor Firelance',
@@ -867,8 +868,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 473, amount: 5 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 32,
     type: WeaponClass.LANCE,
     name: 'Gobulu Muruka',
@@ -893,8 +894,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [33]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 33,
     type: WeaponClass.LANCE,
     name: 'Gobulu Muruka+',
@@ -919,8 +920,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [34]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 34,
     type: WeaponClass.LANCE,
     name: 'Gobulu Muraaka',
@@ -944,8 +945,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 103, amount: 10 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 35,
     type: WeaponClass.LANCE,
     name: 'Ludroth Bone Spear',
@@ -970,8 +971,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [36]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 36,
     type: WeaponClass.LANCE,
     name: 'Spiral Lance',
@@ -1001,8 +1002,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [37, 40]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 37,
     type: WeaponClass.LANCE,
     name: 'Spiral Lance+',
@@ -1027,8 +1028,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [38, 39]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 38,
     type: WeaponClass.LANCE,
     name: 'Spiral Splash (B)',
@@ -1052,8 +1053,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 459, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 39,
     type: WeaponClass.LANCE,
     name: 'Spiral Splash (G)',
@@ -1077,8 +1078,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 467, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 40,
     type: WeaponClass.LANCE,
     name: 'Shadow Javelin',
@@ -1103,8 +1104,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [41]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 41,
     type: WeaponClass.LANCE,
     name: 'Toxic Javelin',
@@ -1128,8 +1129,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 174, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 42,
     type: WeaponClass.LANCE,
     name: 'Blue Crater',
@@ -1151,8 +1152,8 @@ export const Lances = Object.freeze<Lance[]>([
       { itemId: 146, amount: 1 }
     ],
     upgradesTo: [43, 45, 47]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 43,
     type: WeaponClass.LANCE,
     name: 'Smalt Crater (R)',
@@ -1177,8 +1178,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [44]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 44,
     type: WeaponClass.LANCE,
     name: 'Doom Crown (P)',
@@ -1202,8 +1203,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 169, amount: 3 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 45,
     type: WeaponClass.LANCE,
     name: 'Smalt Crater (B)',
@@ -1228,8 +1229,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [44, 46]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 46,
     type: WeaponClass.LANCE,
     name: 'Doom Crown (G)',
@@ -1253,8 +1254,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 169, amount: 2 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 47,
     type: WeaponClass.LANCE,
     name: 'Smalt Crater (Y)',
@@ -1279,8 +1280,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [46]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 48,
     type: WeaponClass.LANCE,
     name: 'Grief Lance',
@@ -1302,8 +1303,8 @@ export const Lances = Object.freeze<Lance[]>([
       { itemId: 450, amount: 8 }
     ],
     upgradesTo: [49, 50]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 49,
     type: WeaponClass.LANCE,
     name: 'Fiendish Tower (P)',
@@ -1327,8 +1328,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 453, amount: 1 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 50,
     type: WeaponClass.LANCE,
     name: 'Fiendish Tower (G)',
@@ -1352,8 +1353,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 453, amount: 1 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 51,
     type: WeaponClass.LANCE,
     name: 'Alatreon Lance',
@@ -1363,8 +1364,8 @@ export const Lances = Object.freeze<Lance[]>([
     secondaryDamageType: 'dragon',
     secondaryAttack: 400,
     awaken: false,
-    sharpness: [7, 3, 15, 5, 5],
-    sharpnessUp: [7, 3, 15, 5, 5, 5],
+    sharpness: [7, 3, 15, 5, 4],
+    sharpnessUp: [7, 3, 15, 5, 5, 4],
     affinity: 0,
     slots: 1,
     rarity: 6,
@@ -1375,8 +1376,8 @@ export const Lances = Object.freeze<Lance[]>([
       { itemId: 432, amount: 3 }
     ],
     upgradesTo: [52]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 52,
     type: WeaponClass.LANCE,
     name: 'Alatreon Gleam',
@@ -1386,8 +1387,8 @@ export const Lances = Object.freeze<Lance[]>([
     secondaryDamageType: 'dragon',
     secondaryAttack: 450,
     awaken: false,
-    sharpness: [7, 3, 15, 5, 5],
-    sharpnessUp: [7, 3, 15, 5, 5, 6, 4],
+    sharpness: [7, 3, 15, 5, 5, 4],
+    sharpnessUp: [7, 3, 15, 5, 5, 5, 4],
     affinity: 0,
     slots: 1,
     rarity: 7,
@@ -1400,8 +1401,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 404, amount: 1 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 53,
     type: WeaponClass.LANCE,
     name: "Warrior's Lance",
@@ -1423,8 +1424,8 @@ export const Lances = Object.freeze<Lance[]>([
       { itemId: 104, amount: 5 }
     ],
     upgradesTo: [54]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 54,
     type: WeaponClass.LANCE,
     name: 'Millennium',
@@ -1448,8 +1449,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 168, amount: 2 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 55,
     type: WeaponClass.LANCE,
     name: 'Sharq Attack',
@@ -1470,8 +1471,8 @@ export const Lances = Object.freeze<Lance[]>([
       { itemId: 575, amount: 5 },
       { itemId: 102, amount: 20 }
     ]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 56,
     type: WeaponClass.LANCE,
     name: 'ML001: Baltzenger',
@@ -1493,8 +1494,8 @@ export const Lances = Object.freeze<Lance[]>([
       { itemId: 257, amount: 2 }
     ],
     upgradesTo: [57]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 57,
     type: WeaponClass.LANCE,
     name: 'Banderlance "Byakko"',
@@ -1518,8 +1519,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 158, amount: 2 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 58,
     type: WeaponClass.LANCE,
     name: 'Rusted Lance',
@@ -1537,8 +1538,8 @@ export const Lances = Object.freeze<Lance[]>([
     price: 0,
     create: [{ itemId: 108, amount: 1 }],
     upgradesTo: [59]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 59,
     type: WeaponClass.LANCE,
     name: 'Tarnished Lance',
@@ -1563,8 +1564,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [60]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 60,
     type: WeaponClass.LANCE,
     name: 'Undertaker',
@@ -1589,8 +1590,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [61]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 61,
     type: WeaponClass.LANCE,
     name: 'High Undertaker',
@@ -1614,8 +1615,8 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 463, amount: 2 }
       ]
     }
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 62,
     type: WeaponClass.LANCE,
     name: 'Worn Spear',
@@ -1633,8 +1634,8 @@ export const Lances = Object.freeze<Lance[]>([
     price: 0,
     create: [{ itemId: 109, amount: 1 }],
     upgradesTo: [63]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 63,
     type: WeaponClass.LANCE,
     name: 'Weathered Spear',
@@ -1659,8 +1660,8 @@ export const Lances = Object.freeze<Lance[]>([
       ]
     },
     upgradesTo: [64]
-  },
-  {
+  }),
+  Object.freeze<Lance>({
     id: 64,
     type: WeaponClass.LANCE,
     name: 'Skyscraper',
@@ -1684,5 +1685,5 @@ export const Lances = Object.freeze<Lance[]>([
         { itemId: 469, amount: 1 }
       ]
     }
-  }
-]);
+  })
+];
