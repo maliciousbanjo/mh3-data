@@ -33,121 +33,121 @@ export type QuestGoal =
  * The values are incorrect/flawed. ZeSpyro
  */
 interface BossInfo {
-  monsterId: MonsterTypes.Monster['id'];
-  startingArea: 0 | 1 | 2;
-  level: MonsterLevelTypes.MonsterLevel;
-  size: number;
+  readonly monsterId: MonsterTypes.Monster['id'];
+  readonly startingArea: 0 | 1 | 2;
+  readonly level: MonsterLevelTypes.MonsterLevel;
+  readonly size: number;
   /** controls random distribution of monster's level */
-  min: number;
+  readonly min: number;
   /** controls random distribution of monster's size */
-  max: number;
+  readonly max: number;
 }
 
 /**
  * Base quest type
  */
 export interface Quest {
-  id: number;
-  name: string;
+  readonly id: number;
+  readonly name: string;
   /** Village or City */
-  region: QuestRegion;
+  readonly region: QuestRegion;
   /** Low or High rank */
-  rank: QuestRank;
+  readonly rank: QuestRank;
   /** Gather, hunt, capture, repel, etc */
-  type: QuestType;
-  goal: QuestGoal;
-  client: string;
+  readonly type: QuestType;
+  readonly goal: QuestGoal;
+  readonly client: string;
   /** Cost to initiate quest in zenny */
-  contract: number;
+  readonly contract: number;
   /** Maximum quest time in minutes */
-  time: number;
-  location: MapLocation;
+  readonly time: number;
+  readonly location: MapLocation;
   /** If true, hunter will spawn in random location */
-  randomspawn: boolean;
+  readonly randomspawn: boolean;
   /** Quest completion reward in zenny */
-  reward: number;
+  readonly reward: number;
   /** Amount of zenny taken from reward per faint */
-  ko: number;
+  readonly ko: number;
   /** Hunter Rank Points received for quest completion */
-  hrp: number;
-  secondaryRewards: ItemTypes.QuestReward[];
+  readonly hrp: number;
+  readonly secondaryRewards: ItemTypes.QuestReward[];
   /** Key will be an ID for an item or monster depending on the {@link QuestType} */
-  targets: Record<number, number>;
+  readonly targets: Record<number, number>;
   /** Large monsters that can spawn in this quest */
-  bosses: BossInfo[];
+  readonly bosses: BossInfo[];
   // TODO: Will need to create different subquests types with different target properties
-  subquests?: object;
+  readonly subquests?: object;
 }
 
 type NumberRequired = number;
 
 export interface GatheringQuest extends Quest {
-  type: 'gather';
-  goal: 'gathering';
-  targets: Record<ItemTypes.Item['id'], NumberRequired>;
+  readonly type: 'gather';
+  readonly goal: 'gathering';
+  readonly targets: Record<ItemTypes.Item['id'], NumberRequired>;
 }
 
 export interface HarvestQuest extends Quest {
-  type: 'harvest';
-  goal: 'gathering';
+  readonly type: 'harvest';
+  readonly goal: 'gathering';
   /** Harvest Ticket */
-  targets: {
+  targets: Readonly<{
     396: 1;
-  };
+  }>;
 }
 
 export interface HuntQuest extends Quest {
-  type: 'hunt';
-  goal: 'hunt' | 'slay';
-  targets: Record<MonsterTypes.Monster['id'], NumberRequired>;
-  bosses: BossInfo[];
+  readonly type: 'hunt';
+  readonly goal: 'hunt' | 'slay';
+  readonly targets: Record<MonsterTypes.Monster['id'], NumberRequired>;
+  readonly bosses: BossInfo[];
 }
 
 export interface MultiHuntQuest extends Quest {
-  type: 'multihunt';
-  goal: 'hunt';
-  targets: Record<MonsterTypes.Monster['id'], NumberRequired>;
+  readonly type: 'multihunt';
+  readonly goal: 'hunt';
+  readonly targets: Record<MonsterTypes.Monster['id'], NumberRequired>;
 }
 
 export interface CaptureQuest extends Quest {
-  type: 'capture';
-  goal: 'capture';
-  targets: Record<MonsterTypes.Monster['id'], NumberRequired>;
-  bosses: BossInfo[];
+  readonly type: 'capture';
+  readonly goal: 'capture';
+  readonly targets: Record<MonsterTypes.Monster['id'], NumberRequired>;
+  readonly bosses: BossInfo[];
 }
 
 export interface EscortQuest extends Quest {
-  type: 'escort';
-  goal: 'slay';
-  targets: Record<MonsterTypes.Monster['id'], NumberRequired>;
+  readonly type: 'escort';
+  readonly goal: 'slay';
+  readonly targets: Record<MonsterTypes.Monster['id'], NumberRequired>;
 }
 
 /**
  * Typically used for Arena and Elder Dragon quests
  */
 export interface SlayQuest extends Quest {
-  type: 'slay';
-  goal: 'hunt';
-  targets: Record<MonsterTypes.Monster['id'], NumberRequired>;
-  bosses: BossInfo[];
+  readonly type: 'slay';
+  readonly goal: 'hunt';
+  readonly targets: Record<MonsterTypes.Monster['id'], NumberRequired>;
+  readonly bosses: BossInfo[];
 }
 
 export interface RepelQuest extends Quest {
-  type: 'repel';
-  goal: 'repel' | 'other';
-  bosses: BossInfo[];
+  readonly type: 'repel';
+  readonly goal: 'repel' | 'other';
+  readonly bosses: BossInfo[];
 }
 
 export interface QuestMode {
-  region: QuestRegion;
-  starLevels: {
+  readonly region: QuestRegion;
+  readonly starLevels: Readonly<{
     [StarLevelEnum.OneStar]: Quest[];
     [StarLevelEnum.TwoStar]: Quest[];
     [StarLevelEnum.ThreeStar]: Quest[];
     [StarLevelEnum.FourStar]: Quest[];
     [StarLevelEnum.FiveStar]: Quest[];
     [StarLevelEnum.SixStar]: Quest[];
-  };
-  arena: SlayQuest[];
-  events: Quest[];
+  }>;
+  readonly arena: SlayQuest[];
+  readonly events: Quest[];
 }
