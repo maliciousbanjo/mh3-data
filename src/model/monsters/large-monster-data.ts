@@ -2766,7 +2766,7 @@ export const Diablos = deepFreeze<LargeMonster>({
             thunder: 0.1,
             ice: 0.2,
             dragon: 0.1,
-            stagger: 150
+            stagger: 350
           }
         },
         {
