@@ -1,5 +1,11 @@
 # mh3-data
 
+## 0.9.10
+
+### Patch Changes
+
+- 4e00e78: Corrected Diablos stomach stagger limit to 350HP as verified with ingame testing
+
 ## 0.9.8
 
 ### Patch Changes

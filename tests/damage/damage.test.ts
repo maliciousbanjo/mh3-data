@@ -2,11 +2,13 @@ import { calculateDamage } from '../../src/damage/damage';
 import {
   Alatreon,
   Deviljho,
+  Rathian,
   RoyalLudroth
 } from '../../src/model/monsters/large-monster-data';
 import { Sharpness, WeaponClass } from '../../src/model/weapons';
 import type { DamageTypes } from '../../src/damage';
 import {
+  DamageBuffArgs,
   LongswordDamageArgs,
   SwitchAxeDamageArgs,
   SwordAndShieldDamageArgs
@@ -404,6 +406,187 @@ describe('Damage', () => {
           }
         );
         expect(damage).toMatchSnapshot();
+      });
+
+      describe('Dragon Phial behavior', () => {
+        const soulbreaker = {
+          weaponClass: WeaponClass.SWITCH_AXE,
+          weaponId: 28, // Soulbreaker (P)
+          attackName: 'Overhead Slash',
+          sharpness: Sharpness.BLUE
+        };
+
+        const weaponClassArgs: DamageBuffArgs['weaponClassArgs'] = {
+          powertalon: true,
+          powercharm: true,
+          demondrug: 'none',
+          armor: 'none',
+          might: 'none'
+        };
+
+        const rathianMonsterArgs: DamageTypes.MonsterArgs = {
+          monsterName: Rathian.name,
+          questId: 0x040e, // A Royal Rumble
+          monsterStateIndex: 0,
+          hitzoneIndex: 0 // Head
+        };
+        it('No Awaken, No Element Attack Up', () => {
+          const expectedAxeDmg = 119;
+          const expectedSwordDmg = 85;
+          const axe = calculateDamage(
+            {
+              ...soulbreaker,
+              weaponMultipliers: {
+                switchAxeMode: 'axe'
+              }
+            },
+            rathianMonsterArgs,
+            {
+              weaponClassArgs,
+              elementArgs: {
+                awaken: false,
+                elementAttack: 'none'
+              }
+            }
+          );
+          const sword = calculateDamage(
+            {
+              ...soulbreaker,
+              weaponMultipliers: {
+                switchAxeMode: 'sword'
+              }
+            },
+            rathianMonsterArgs,
+            {
+              weaponClassArgs,
+              elementArgs: {
+                awaken: false,
+                elementAttack: 'none'
+              }
+            }
+          );
+
+          expect(axe[0].totalDamage).toBe(expectedAxeDmg);
+          expect(sword[0].totalDamage).toBe(expectedSwordDmg);
+        });
+
+        it('No Awaken, Element Attack Up', () => {
+          const expectedAxeDmg = 119;
+          const expectedSwordDmg = 87;
+          const axe = calculateDamage(
+            {
+              ...soulbreaker,
+              weaponMultipliers: {
+                switchAxeMode: 'axe'
+              }
+            },
+            rathianMonsterArgs,
+            {
+              weaponClassArgs,
+              elementArgs: {
+                awaken: false,
+                elementAttack: 'up'
+              }
+            }
+          );
+          const sword = calculateDamage(
+            {
+              ...soulbreaker,
+              weaponMultipliers: {
+                switchAxeMode: 'sword'
+              }
+            },
+            rathianMonsterArgs,
+            {
+              weaponClassArgs,
+              elementArgs: {
+                awaken: false,
+                elementAttack: 'up'
+              }
+            }
+          );
+
+          expect(axe[0].totalDamage).toBe(expectedAxeDmg);
+          expect(sword[0].totalDamage).toBe(expectedSwordDmg);
+        });
+        it('Awaken, No Element Attack Up', () => {
+          const expectedAxeDmg = 129;
+          const expectedSwordDmg = 85;
+          const axe = calculateDamage(
+            {
+              ...soulbreaker,
+              weaponMultipliers: {
+                switchAxeMode: 'axe'
+              }
+            },
+            rathianMonsterArgs,
+            {
+              weaponClassArgs,
+              elementArgs: {
+                awaken: true,
+                elementAttack: 'none'
+              }
+            }
+          );
+          const sword = calculateDamage(
+            {
+              ...soulbreaker,
+              weaponMultipliers: {
+                switchAxeMode: 'sword'
+              }
+            },
+            rathianMonsterArgs,
+            {
+              weaponClassArgs,
+              elementArgs: {
+                awaken: true,
+                elementAttack: 'none'
+              }
+            }
+          );
+
+          expect(axe[0].totalDamage).toBe(expectedAxeDmg);
+          expect(sword[0].totalDamage).toBe(expectedSwordDmg);
+        });
+        it('Awaken, Element Attack Up', () => {
+          const expectedAxeDmg = 132;
+          const expectedSwordDmg = 87;
+          const axe = calculateDamage(
+            {
+              ...soulbreaker,
+              weaponMultipliers: {
+                switchAxeMode: 'axe'
+              }
+            },
+            rathianMonsterArgs,
+            {
+              weaponClassArgs,
+              elementArgs: {
+                awaken: true,
+                elementAttack: 'up'
+              }
+            }
+          );
+          const sword = calculateDamage(
+            {
+              ...soulbreaker,
+              weaponMultipliers: {
+                switchAxeMode: 'sword'
+              }
+            },
+            rathianMonsterArgs,
+            {
+              weaponClassArgs,
+              elementArgs: {
+                awaken: true,
+                elementAttack: 'up'
+              }
+            }
+          );
+
+          expect(axe[0].totalDamage).toBe(expectedAxeDmg);
+          expect(sword[0].totalDamage).toBe(expectedSwordDmg);
+        });
       });
     });
 
