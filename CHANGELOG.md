@@ -1,5 +1,14 @@
 # mh3-data
 
+## 1.0.0
+
+### Major Changes
+
+- b6d96fd: First major release of mh3-data
+
+  - Resolved all known/reported issues with damage calculation
+    - Switch Axe dragon phial behavior has been adjusted according to findings from ingame research
+
 ## 0.9.10
 
 ### Patch Changes
