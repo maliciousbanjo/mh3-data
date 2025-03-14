@@ -70,6 +70,28 @@ function getSwitchAxeSpecialVarMultiplier(
   return { rawSpecialVarMultiplier, elementSpecialVarMultiplier };
 }
 
+/**
+ * Special-case function for Dragon Phial switch axes
+ * @returns
+ */
+function dragonPhialElementArgs(
+  switchAxe: SwitchAxeTypes.SwitchAxe,
+  switchAxeMode: SwitchAxeTypes.SwitchAxeAttackMode,
+  elementArgs: DamageBuffArgs['elementArgs'] | undefined
+) {
+  if (!elementArgs || switchAxe.phial !== 'dragon' || switchAxeMode === 'axe')
+    return elementArgs;
+  // Ensures the phial type is 'dragon'
+
+  if (switchAxeMode === 'sword') {
+    // Dragon phial draws from secondaryAttack value as if it were awakened
+    return {
+      ...elementArgs,
+      awaken: true
+    };
+  }
+}
+
 function validateSwitchAxe(
   weapon: WeaponTypes.Weapon
 ): asserts weapon is SwitchAxeTypes.SwitchAxe {
@@ -133,7 +155,11 @@ export function calculateSwitchAxeDamage(
         weapon: switchAxe,
         sharpness,
         hitzoneValues,
-        elementArgs
+        elementArgs: dragonPhialElementArgs(
+          switchAxe,
+          switchAxeMode,
+          elementArgs
+        )
       }) * elementSpecialVarMultiplier;
 
     // Decimal is dropped
