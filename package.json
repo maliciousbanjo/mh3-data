@@ -8,6 +8,7 @@
     ".": "./dist/index.js",
     "./damage": "./dist/damage/index.js",
     "./armorSkills": "./dist/model/armor-skills/index.js",
+    "./armor": "./dist/model/armors/index.js",
     "./common": "./dist/model/common/index.js",
     "./items": "./dist/model/items/index.js",
     "./monsterLevels": "./dist/model/monster-levels/index.js",

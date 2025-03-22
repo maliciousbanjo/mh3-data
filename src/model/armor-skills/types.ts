@@ -8,6 +8,7 @@ export interface ArmorSkill {
 }
 
 export interface SkillTree {
+  readonly id: number;
   readonly name: string;
   readonly description: string;
   readonly group: SkillGroup;
