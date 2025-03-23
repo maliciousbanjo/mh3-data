@@ -207,7 +207,8 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -1,
     slots: 0,
     rarity: 1,
-    skillPoints: [{ skillId: 83, points: 0 }],
+    skillPoints: [],
+    torsoUp: true,
     price: 1000,
     maxDefense: 8,
     maxLowRankDefense: 22
@@ -226,7 +227,8 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -1,
     slots: 0,
     rarity: 1,
-    skillPoints: [{ skillId: 83, points: 0 }],
+    skillPoints: [],
+    torsoUp: true,
     price: 1000,
     maxDefense: 4,
     maxLowRankDefense: 11
@@ -679,7 +681,8 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 3,
-    skillPoints: [{ skillId: 83, points: 0 }],
+    skillPoints: [],
+    torsoUp: true,
     price: 10000,
     maxDefense: 15,
     maxLowRankDefense: 27
@@ -698,7 +701,8 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 3,
-    skillPoints: [{ skillId: 83, points: 0 }],
+    skillPoints: [],
+    torsoUp: true,
     price: 10000,
     maxDefense: 8,
     maxLowRankDefense: 14
@@ -1005,7 +1009,8 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -2,
     slots: 0,
     rarity: 3,
-    skillPoints: [{ skillId: 83, points: 0 }],
+    skillPoints: [],
+    torsoUp: true,
     price: 6300,
     maxDefense: 22,
     maxLowRankDefense: 30
@@ -1024,7 +1029,8 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -2,
     slots: 0,
     rarity: 3,
-    skillPoints: [{ skillId: 83, points: 0 }],
+    skillPoints: [],
+    torsoUp: true,
     price: 6300,
     maxDefense: 11,
     maxLowRankDefense: 15
@@ -1453,7 +1459,8 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -1,
     slots: 0,
     rarity: 4,
-    skillPoints: [{ skillId: 83, points: 0 }],
+    skillPoints: [],
+    torsoUp: true,
     price: 7100,
     maxDefense: 34
   }),
@@ -1471,7 +1478,8 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -1,
     slots: 0,
     rarity: 4,
-    skillPoints: [{ skillId: 83, points: 0 }],
+    skillPoints: [],
+    torsoUp: true,
     price: 7100,
     maxDefense: 20
   }),
@@ -1857,7 +1865,8 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 6,
-    skillPoints: [{ skillId: 83, points: 0 }],
+    skillPoints: [],
+    torsoUp: true,
     price: 25000,
     maxDefense: 36
   }),
@@ -1875,7 +1884,8 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 6,
-    skillPoints: [{ skillId: 83, points: 0 }],
+    skillPoints: [],
+    torsoUp: true,
     price: 25000,
     maxDefense: 22
   }),

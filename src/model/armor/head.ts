@@ -2542,7 +2542,8 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 3,
     slots: 0,
     rarity: 3,
-    skillPoints: [{ skillId: 83, points: 0 }],
+    skillPoints: [],
+    torsoUp: true,
     price: 5000,
     maxDefense: 7,
     maxLowRankDefense: 13

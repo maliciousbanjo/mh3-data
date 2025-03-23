@@ -2398,7 +2398,8 @@ export const WaistArmors: WaistArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 7,
-    skillPoints: [{ skillId: 83, points: 0 }],
+    skillPoints: [],
+    torsoUp: true,
     price: 41500,
     maxDefense: 64
   }),
@@ -2416,7 +2417,8 @@ export const WaistArmors: WaistArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 7,
-    skillPoints: [{ skillId: 83, points: 0 }],
+    skillPoints: [],
+    torsoUp: true,
     price: 41500,
     maxDefense: 38
   }),

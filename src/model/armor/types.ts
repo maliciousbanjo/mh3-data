@@ -3,58 +3,60 @@ import type { ArmorSkillTypes } from '../armor-skills';
 export type ArmorType = 'head' | 'chest' | 'arms' | 'waist' | 'legs';
 
 export interface ArmorPiece {
-  id: number;
-  type: ArmorType;
-  name: string;
+  readonly id: number;
+  readonly type: ArmorType;
+  readonly name: string;
   /** Can be worn with blade weapons if true */
-  blade: boolean;
+  readonly blade: boolean;
   /** Can be worn with gunner weapons if true */
-  gunner: boolean;
+  readonly gunner: boolean;
   /** Physical defense */
-  defense: number;
+  readonly defense: number;
   /** Resistance to fire element */
-  fireRes: number;
+  readonly fireRes: number;
   /** Resistance to water element */
-  waterRes: number;
+  readonly waterRes: number;
   /** Resistance to ice element */
-  iceRes: number;
+  readonly iceRes: number;
   /** Resistance to thunder element */
-  thunderRes: number;
+  readonly thunderRes: number;
   /** Resistance to dragon element */
-  dragonRes: number;
-  slots: CommonTypes.Slots;
-  rarity: CommonTypes.Rarity;
+  readonly dragonRes: number;
+  readonly slots: CommonTypes.Slots;
+  readonly rarity: CommonTypes.Rarity;
   /**
    * Collection of skill IDs with a count of points that this armor piece provides
    */
-  skillPoints: {
-    skillId: ArmorSkillTypes.SkillTree['id'];
-    points: number;
+  readonly skillPoints: {
+    readonly skillId: ArmorSkillTypes.SkillTree['id'];
+    readonly points: number;
   }[];
   /** In zenny */
-  price: number;
+  readonly price: number;
   /** Maximum possible defense */
-  maxDefense: number;
+  readonly maxDefense: number;
   /** Maximum low rank defense (before overforging) */
-  maxLowRankDefense?: number;
+  readonly maxLowRankDefense?: number;
+  /** If true then this armor piece has the unique 'Torso Up' armor skill */
+  readonly torsoUp?: boolean;
 }
 
 export interface HeadArmor extends ArmorPiece {
-  type: 'head';
+  readonly type: 'head';
 }
 
 export interface ChestArmor extends ArmorPiece {
-  type: 'chest';
+  readonly type: 'chest';
 }
 
 export interface ArmArmor extends ArmorPiece {
-  type: 'arms';
+  readonly type: 'arms';
 }
 
 export interface WaistArmor extends ArmorPiece {
-  type: 'waist';
+  readonly type: 'waist';
 }
 
 export interface LegArmor extends ArmorPiece {
-  type: 'legs';
+  readonly type: 'legs';
 }
