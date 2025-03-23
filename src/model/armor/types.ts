@@ -1,5 +1,5 @@
+import { SkillPointRecord } from '../armor-skills/types';
 import type { CommonTypes } from '../common';
-import type { ArmorSkillTypes } from '../armor-skills';
 export type ArmorType = 'head' | 'chest' | 'arms' | 'waist' | 'legs';
 
 export interface ArmorPiece {
@@ -27,10 +27,7 @@ export interface ArmorPiece {
   /**
    * Collection of skill IDs with a count of points that this armor piece provides
    */
-  readonly skillPoints: {
-    readonly skillId: ArmorSkillTypes.SkillTree['id'];
-    readonly points: number;
-  }[];
+  readonly skillPoints: SkillPointRecord;
   /** In zenny */
   readonly price: number;
   /** Maximum possible defense */

@@ -16,15 +16,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 35, points: 1 },
-      { skillId: 40, points: 2 },
-      { skillId: 41, points: 2 },
-      { skillId: 69, points: 3 }
-    ],
     price: 150,
     maxDefense: 1,
-    maxLowRankDefense: 9
+    maxLowRankDefense: 9,
+    skillPoints: { attack: 1, gathering: 2, spd_gather: 2, whim: 3 }
   }),
   deepFreeze<HeadArmor>({
     id: 1,
@@ -40,13 +35,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 1,
-    skillPoints: [
-      { skillId: 78, points: 10 },
-      { skillId: 79, points: 1 }
-    ],
     price: 300,
     maxDefense: 3,
-    maxLowRankDefense: 9
+    maxLowRankDefense: 9,
+    skillPoints: { oxygen: 10, currentres: 1 }
   }),
   deepFreeze<HeadArmor>({
     id: 2,
@@ -62,15 +54,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 23, points: 1 },
-      { skillId: 70, points: 1 },
-      { skillId: 71, points: 6 },
-      { skillId: 72, points: 1 }
-    ],
     price: 200,
     maxDefense: 2,
-    maxLowRankDefense: 9
+    maxLowRankDefense: 9,
+    skillPoints: {
+      health: 1,
+      fishing: 1,
+      combo_rate: 6,
+      combo_plus: 1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 3,
@@ -86,15 +78,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -1,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 42, points: 4 },
-      { skillId: 62, points: -2 },
-      { skillId: 68, points: 2 },
-      { skillId: 75, points: 1 }
-    ],
     price: 500,
     maxDefense: 6,
-    maxLowRankDefense: 20
+    maxLowRankDefense: 20,
+    skillPoints: { psychic: 4, water_res: -2, map: 2, bbq: 1 }
   }),
   deepFreeze<HeadArmor>({
     id: 4,
@@ -110,15 +97,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 4,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 42, points: 5 },
-      { skillId: 62, points: -1 },
-      { skillId: 68, points: 1 },
-      { skillId: 75, points: 2 }
-    ],
     price: 500,
     maxDefense: 3,
-    maxLowRankDefense: 10
+    maxLowRankDefense: 10,
+    skillPoints: { psychic: 5, water_res: -1, map: 1, bbq: 2 }
   }),
   deepFreeze<HeadArmor>({
     id: 5,
@@ -134,15 +116,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 3,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 34, points: 4 },
-      { skillId: 54, points: -2 },
-      { skillId: 73, points: 1 },
-      { skillId: 77, points: 2 }
-    ],
     price: 750,
     maxDefense: 8,
-    maxLowRankDefense: 22
+    maxLowRankDefense: 22,
+    skillPoints: {
+      hunger: 4,
+      sleep: -2,
+      lastingpwr: 1,
+      perception: 2
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 6,
@@ -158,15 +140,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 3,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 34, points: 5 },
-      { skillId: 54, points: -1 },
-      { skillId: 73, points: 2 },
-      { skillId: 77, points: 1 }
-    ],
     price: 750,
     maxDefense: 4,
-    maxLowRankDefense: 11
+    maxLowRankDefense: 11,
+    skillPoints: {
+      hunger: 5,
+      sleep: -1,
+      lastingpwr: 2,
+      perception: 1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 7,
@@ -182,15 +164,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -1,
     slots: 2,
     rarity: 1,
-    skillPoints: [
-      { skillId: 25, points: 1 },
-      { skillId: 26, points: 3 },
-      { skillId: 76, points: 1 },
-      { skillId: 78, points: -2 }
-    ],
     price: 1000,
     maxDefense: 8,
-    maxLowRankDefense: 22
+    maxLowRankDefense: 22,
+    skillPoints: {
+      expert: 1,
+      sharpener: 3,
+      speedsetup: 1,
+      oxygen: -2
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 8,
@@ -206,15 +188,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -1,
     slots: 2,
     rarity: 1,
-    skillPoints: [
-      { skillId: 7, points: 3 },
-      { skillId: 25, points: 1 },
-      { skillId: 76, points: 2 },
-      { skillId: 78, points: -1 }
-    ],
     price: 1000,
     maxDefense: 4,
-    maxLowRankDefense: 11
+    maxLowRankDefense: 11,
+    skillPoints: {
+      'normal_s+': 3,
+      expert: 1,
+      speedsetup: 2,
+      oxygen: -1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 9,
@@ -230,15 +212,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 35, points: 3 },
-      { skillId: 55, points: 2 },
-      { skillId: 58, points: 2 },
-      { skillId: 67, points: -2 }
-    ],
     price: 1200,
     maxDefense: 10,
-    maxLowRankDefense: 24
+    maxLowRankDefense: 24,
+    skillPoints: { attack: 3, stun: 2, gluttony: 2, cold_res: -2 }
   }),
   deepFreeze<HeadArmor>({
     id: 10,
@@ -254,15 +231,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 6,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 35, points: 4 },
-      { skillId: 55, points: 1 },
-      { skillId: 58, points: 3 },
-      { skillId: 67, points: -1 }
-    ],
     price: 1200,
     maxDefense: 5,
-    maxLowRankDefense: 12
+    maxLowRankDefense: 12,
+    skillPoints: { attack: 4, stun: 1, gluttony: 3, cold_res: -1 }
   }),
   deepFreeze<HeadArmor>({
     id: 11,
@@ -278,16 +250,16 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 35, points: 1 },
-      { skillId: 39, points: 3 },
-      { skillId: 46, points: 1 },
-      { skillId: 56, points: 2 },
-      { skillId: 63, points: -2 }
-    ],
     price: 1400,
     maxDefense: 12,
-    maxLowRankDefense: 24
+    maxLowRankDefense: 24,
+    skillPoints: {
+      attack: 1,
+      wind_res: 3,
+      eating: 1,
+      'mud/snow': 2,
+      thunderres: -2
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 12,
@@ -303,16 +275,16 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 3, points: 3 },
-      { skillId: 31, points: 3 },
-      { skillId: 35, points: 1 },
-      { skillId: 46, points: 1 },
-      { skillId: 63, points: -1 }
-    ],
     price: 1400,
     maxDefense: 6,
-    maxLowRankDefense: 12
+    maxLowRankDefense: 12,
+    skillPoints: {
+      recoil: 3,
+      'crag_s+': 3,
+      attack: 1,
+      eating: 1,
+      thunderres: -1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 13,
@@ -328,15 +300,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 36, points: 4 },
-      { skillId: 43, points: 1 },
-      { skillId: 44, points: 1 },
-      { skillId: 64, points: -3 }
-    ],
     price: 1700,
     maxDefense: 12,
-    maxLowRankDefense: 24
+    maxLowRankDefense: 24,
+    skillPoints: {
+      defense: 4,
+      rec_level: 1,
+      evasion: 1,
+      ice_res: -3
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 14,
@@ -352,15 +324,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 36, points: 3 },
-      { skillId: 43, points: 3 },
-      { skillId: 44, points: 2 },
-      { skillId: 64, points: -1 }
-    ],
     price: 1700,
     maxDefense: 6,
-    maxLowRankDefense: 12
+    maxLowRankDefense: 12,
+    skillPoints: {
+      defense: 3,
+      rec_level: 3,
+      evasion: 2,
+      ice_res: -1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 15,
@@ -376,15 +348,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 37, points: 1 },
-      { skillId: 49, points: 3 },
-      { skillId: 61, points: -4 },
-      { skillId: 79, points: 1 }
-    ],
     price: 2200,
     maxDefense: 13,
-    maxLowRankDefense: 25
+    maxLowRankDefense: 25,
+    skillPoints: {
+      protection: 1,
+      constitutn: 3,
+      fire_res: -4,
+      currentres: 1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 16,
@@ -400,15 +372,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 30, points: 2 },
-      { skillId: 37, points: 2 },
-      { skillId: 49, points: 3 },
-      { skillId: 61, points: -2 }
-    ],
     price: 2200,
     maxDefense: 7,
-    maxLowRankDefense: 13
+    maxLowRankDefense: 13,
+    skillPoints: {
+      'pellet_s+': 2,
+      protection: 2,
+      constitutn: 3,
+      fire_res: -2
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 17,
@@ -424,16 +396,16 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 1,
     slots: 0,
     rarity: 2,
-    skillPoints: [
-      { skillId: 17, points: 4 },
-      { skillId: 18, points: 2 },
-      { skillId: 35, points: 1 },
-      { skillId: 55, points: -2 },
-      { skillId: 64, points: 2 }
-    ],
     price: 2400,
     maxDefense: 13,
-    maxLowRankDefense: 25
+    maxLowRankDefense: 25,
+    skillPoints: {
+      tranquilzr: 4,
+      fastcharge: 2,
+      attack: 1,
+      stun: -2,
+      ice_res: 2
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 18,
@@ -449,16 +421,16 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 1,
     slots: 0,
     rarity: 2,
-    skillPoints: [
-      { skillId: 6, points: 3 },
-      { skillId: 17, points: 2 },
-      { skillId: 35, points: 1 },
-      { skillId: 55, points: -2 },
-      { skillId: 64, points: 3 }
-    ],
     price: 2400,
     maxDefense: 7,
-    maxLowRankDefense: 13
+    maxLowRankDefense: 13,
+    skillPoints: {
+      pellets_up: 3,
+      tranquilzr: 2,
+      attack: 1,
+      stun: -2,
+      ice_res: 3
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 19,
@@ -474,15 +446,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 13, points: 2 },
-      { skillId: 25, points: -2 },
-      { skillId: 35, points: 4 },
-      { skillId: 45, points: 1 }
-    ],
     price: 3200,
     maxDefense: 15,
-    maxLowRankDefense: 27
+    maxLowRankDefense: 27,
+    skillPoints: { stamina: 2, expert: -2, attack: 4, potential: 1 }
   }),
   deepFreeze<HeadArmor>({
     id: 20,
@@ -498,15 +465,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 13, points: 2 },
-      { skillId: 25, points: -2 },
-      { skillId: 35, points: 4 },
-      { skillId: 45, points: 1 }
-    ],
     price: 3200,
     maxDefense: 8,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: { stamina: 2, expert: -2, attack: 4, potential: 1 }
   }),
   deepFreeze<HeadArmor>({
     id: 21,
@@ -522,15 +484,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 2,
     slots: 2,
     rarity: 2,
-    skillPoints: [
-      { skillId: 24, points: -2 },
-      { skillId: 46, points: 3 },
-      { skillId: 55, points: 1 },
-      { skillId: 62, points: 1 }
-    ],
     price: 3600,
     maxDefense: 16,
-    maxLowRankDefense: 28
+    maxLowRankDefense: 28,
+    skillPoints: { rec_speed: -2, eating: 3, stun: 1, water_res: 1 }
   }),
   deepFreeze<HeadArmor>({
     id: 22,
@@ -546,15 +503,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 2,
     slots: 2,
     rarity: 2,
-    skillPoints: [
-      { skillId: 24, points: -1 },
-      { skillId: 46, points: 4 },
-      { skillId: 55, points: 1 },
-      { skillId: 62, points: 1 }
-    ],
     price: 3600,
     maxDefense: 8,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: { rec_speed: -1, eating: 4, stun: 1, water_res: 1 }
   }),
   deepFreeze<HeadArmor>({
     id: 23,
@@ -570,15 +522,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 12, points: -3 },
-      { skillId: 15, points: 2 },
-      { skillId: 38, points: 5 },
-      { skillId: 41, points: 2 }
-    ],
     price: 10000,
     maxDefense: 15,
-    maxLowRankDefense: 27
+    maxLowRankDefense: 27,
+    skillPoints: {
+      fate: -3,
+      carving: 2,
+      'wide-range': 5,
+      spd_gather: 2
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 24,
@@ -594,15 +546,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 10,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 12, points: -1 },
-      { skillId: 15, points: 4 },
-      { skillId: 38, points: 5 },
-      { skillId: 41, points: 2 }
-    ],
     price: 10000,
     maxDefense: 8,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: {
+      fate: -1,
+      carving: 4,
+      'wide-range': 5,
+      spd_gather: 2
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 25,
@@ -618,15 +570,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 12, points: 2 },
-      { skillId: 42, points: 2 },
-      { skillId: 44, points: 4 },
-      { skillId: 57, points: -3 }
-    ],
     price: 10000,
     maxDefense: 15,
-    maxLowRankDefense: 27
+    maxLowRankDefense: 27,
+    skillPoints: { fate: 2, psychic: 2, evasion: 4, sense: -3 }
   }),
   deepFreeze<HeadArmor>({
     id: 26,
@@ -642,15 +589,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 10,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 12, points: 3 },
-      { skillId: 42, points: 3 },
-      { skillId: 44, points: 4 },
-      { skillId: 57, points: -1 }
-    ],
     price: 10000,
     maxDefense: 8,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: { fate: 3, psychic: 3, evasion: 4, sense: -1 }
   }),
   deepFreeze<HeadArmor>({
     id: 27,
@@ -666,15 +608,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -4,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 11, points: 1 },
-      { skillId: 23, points: 2 },
-      { skillId: 37, points: -2 },
-      { skillId: 61, points: 4 }
-    ],
     price: 3600,
     maxDefense: 16,
-    maxLowRankDefense: 28
+    maxLowRankDefense: 28,
+    skillPoints: {
+      hearing: 1,
+      health: 2,
+      protection: -2,
+      fire_res: 4
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 28,
@@ -690,15 +632,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -4,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 11, points: 1 },
-      { skillId: 23, points: 2 },
-      { skillId: 37, points: -1 },
-      { skillId: 61, points: 5 }
-    ],
     price: 3600,
     maxDefense: 8,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: {
+      hearing: 1,
+      health: 2,
+      protection: -1,
+      fire_res: 5
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 29,
@@ -714,15 +656,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 9, points: 2 },
-      { skillId: 22, points: 2 },
-      { skillId: 23, points: -2 },
-      { skillId: 49, points: 3 }
-    ],
     price: 4100,
     maxDefense: 18,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: { status: 2, poison: 2, health: -2, constitutn: 3 }
   }),
   deepFreeze<HeadArmor>({
     id: 30,
@@ -738,15 +675,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 9, points: 2 },
-      { skillId: 22, points: 2 },
-      { skillId: 23, points: -1 },
-      { skillId: 49, points: 4 }
-    ],
     price: 4100,
     maxDefense: 9,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: { status: 2, poison: 2, health: -1, constitutn: 4 }
   }),
   deepFreeze<HeadArmor>({
     id: 31,
@@ -762,15 +694,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 26, points: -2 },
-      { skillId: 28, points: 2 },
-      { skillId: 39, points: 4 },
-      { skillId: 63, points: 1 }
-    ],
     price: 5000,
     maxDefense: 18,
-    maxLowRankDefense: 28
+    maxLowRankDefense: 28,
+    skillPoints: {
+      sharpener: -2,
+      guard_up: 2,
+      wind_res: 4,
+      thunderres: 1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 32,
@@ -786,15 +718,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 6,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 3, points: 4 },
-      { skillId: 28, points: 2 },
-      { skillId: 29, points: -2 },
-      { skillId: 63, points: 1 }
-    ],
     price: 5000,
     maxDefense: 9,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: {
+      recoil: 4,
+      guard_up: 2,
+      reload_spd: -2,
+      thunderres: 1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 33,
@@ -810,15 +742,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -2,
     slots: 2,
     rarity: 3,
-    skillPoints: [
-      { skillId: 0, points: 2 },
-      { skillId: 9, points: -2 },
-      { skillId: 10, points: 1 },
-      { skillId: 50, points: 3 }
-    ],
     price: 5600,
     maxDefense: 20,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: {
+      sharpness: 2,
+      status: -2,
+      elemental: 1,
+      swimming: 3
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 34,
@@ -834,15 +766,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -2,
     slots: 2,
     rarity: 3,
-    skillPoints: [
-      { skillId: 4, points: 2 },
-      { skillId: 9, points: -2 },
-      { skillId: 10, points: 1 },
-      { skillId: 50, points: 3 }
-    ],
     price: 5600,
     maxDefense: 10,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: {
+      normals_up: 2,
+      status: -2,
+      elemental: 1,
+      swimming: 3
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 35,
@@ -858,15 +790,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -4,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 25, points: 2 },
-      { skillId: 35, points: 1 },
-      { skillId: 36, points: -4 },
-      { skillId: 66, points: 2 }
-    ],
     price: 5600,
     maxDefense: 20,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: { expert: 2, attack: 1, defense: -4, heat_res: 2 }
   }),
   deepFreeze<HeadArmor>({
     id: 36,
@@ -882,15 +809,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -4,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 25, points: 2 },
-      { skillId: 35, points: 2 },
-      { skillId: 36, points: -2 },
-      { skillId: 66, points: 3 }
-    ],
     price: 5600,
     maxDefense: 10,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: { expert: 2, attack: 2, defense: -2, heat_res: 3 }
   }),
   deepFreeze<HeadArmor>({
     id: 37,
@@ -906,15 +828,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 13, points: 1 },
-      { skillId: 44, points: 3 },
-      { skillId: 66, points: -4 },
-      { skillId: 67, points: 1 }
-    ],
     price: 5600,
     maxDefense: 20,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: {
+      stamina: 1,
+      evasion: 3,
+      heat_res: -4,
+      cold_res: 1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 38,
@@ -930,15 +852,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 13, points: 1 },
-      { skillId: 44, points: 1 },
-      { skillId: 66, points: -2 },
-      { skillId: 67, points: 5 }
-    ],
     price: 5600,
     maxDefense: 10,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: {
+      stamina: 1,
+      evasion: 1,
+      heat_res: -2,
+      cold_res: 5
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 39,
@@ -954,14 +876,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -1,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 10, points: -3 },
-      { skillId: 47, points: 4 },
-      { skillId: 48, points: 2 }
-    ],
     price: 6300,
     maxDefense: 22,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: { elemental: -3, tremor_res: 4, crit_draw: 2 }
   }),
   deepFreeze<HeadArmor>({
     id: 40,
@@ -977,14 +895,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 5, points: 4 },
-      { skillId: 8, points: 2 },
-      { skillId: 10, points: -3 }
-    ],
     price: 6300,
     maxDefense: 11,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: { pierces_up: 4, 'pierce_s+': 2, elemental: -3 }
   }),
   deepFreeze<HeadArmor>({
     id: 41,
@@ -1000,15 +914,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -2,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 19, points: 2 },
-      { skillId: 33, points: 2 },
-      { skillId: 36, points: 2 },
-      { skillId: 46, points: -3 }
-    ],
     price: 6300,
     maxDefense: 22,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: {
+      punishdraw: 2,
+      bomb_boost: 2,
+      defense: 2,
+      eating: -3
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 42,
@@ -1024,15 +938,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -2,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 3, points: 3 },
-      { skillId: 33, points: 2 },
-      { skillId: 36, points: 3 },
-      { skillId: 46, points: -1 }
-    ],
     price: 6300,
     maxDefense: 11,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: {
+      recoil: 3,
+      bomb_boost: 2,
+      defense: 3,
+      eating: -1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 43,
@@ -1048,15 +962,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 13, points: -3 },
-      { skillId: 27, points: 3 },
-      { skillId: 28, points: 2 },
-      { skillId: 52, points: 3 }
-    ],
     price: 7200,
     maxDefense: 22,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: {
+      stamina: -3,
+      guard: 3,
+      guard_up: 2,
+      flame_aura: 3
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 44,
@@ -1072,15 +986,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 13, points: -1 },
-      { skillId: 28, points: 3 },
-      { skillId: 29, points: 4 },
-      { skillId: 52, points: 3 }
-    ],
     price: 7200,
     maxDefense: 11,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: {
+      stamina: -1,
+      guard_up: 3,
+      reload_spd: 4,
+      flame_aura: 3
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 45,
@@ -1096,15 +1010,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 0, points: -2 },
-      { skillId: 1, points: 2 },
-      { skillId: 11, points: 3 },
-      { skillId: 37, points: -4 }
-    ],
     price: 11000,
     maxDefense: 24,
-    maxLowRankDefense: 32
+    maxLowRankDefense: 32,
+    skillPoints: {
+      sharpness: -2,
+      handicraft: 2,
+      hearing: 3,
+      protection: -4
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 46,
@@ -1120,15 +1034,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 3, points: -2 },
-      { skillId: 11, points: 3 },
-      { skillId: 14, points: 2 },
-      { skillId: 37, points: -4 }
-    ],
     price: 11000,
     maxDefense: 12,
-    maxLowRankDefense: 16
+    maxLowRankDefense: 16,
+    skillPoints: {
+      recoil: -2,
+      hearing: 3,
+      loading: 2,
+      protection: -4
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 47,
@@ -1144,15 +1058,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -3,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 0, points: 1 },
-      { skillId: 18, points: 1 },
-      { skillId: 24, points: 2 },
-      { skillId: 71, points: -5 }
-    ],
     price: 12000,
     maxDefense: 24,
-    maxLowRankDefense: 32
+    maxLowRankDefense: 32,
+    skillPoints: {
+      sharpness: 1,
+      fastcharge: 1,
+      rec_speed: 2,
+      combo_rate: -5
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 48,
@@ -1168,15 +1082,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -3,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 3, points: 1 },
-      { skillId: 24, points: 2 },
-      { skillId: 32, points: 3 },
-      { skillId: 71, points: -3 }
-    ],
     price: 12000,
     maxDefense: 12,
-    maxLowRankDefense: 16
+    maxLowRankDefense: 16,
+    skillPoints: {
+      recoil: 1,
+      rec_speed: 2,
+      'clust_s+': 3,
+      combo_rate: -3
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 49,
@@ -1192,13 +1106,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 2,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 40, points: 2 },
-      { skillId: 41, points: 2 },
-      { skillId: 69, points: 4 }
-    ],
     price: 4600,
-    maxDefense: 26
+    maxDefense: 26,
+    skillPoints: { gathering: 2, spd_gather: 2, whim: 4 }
   }),
   deepFreeze<HeadArmor>({
     id: 50,
@@ -1214,13 +1124,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 2,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 40, points: 1 },
-      { skillId: 41, points: 1 },
-      { skillId: 69, points: 6 }
-    ],
     price: 4600,
-    maxDefense: 15
+    maxDefense: 15,
+    skillPoints: { gathering: 1, spd_gather: 1, whim: 6 }
   }),
   deepFreeze<HeadArmor>({
     id: 51,
@@ -1236,12 +1142,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 4,
-    skillPoints: [
-      { skillId: 78, points: 10 },
-      { skillId: 79, points: 1 }
-    ],
     price: 4700,
-    maxDefense: 26
+    maxDefense: 26,
+    skillPoints: { oxygen: 10, currentres: 1 }
   }),
   deepFreeze<HeadArmor>({
     id: 52,
@@ -1257,12 +1160,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 4,
-    skillPoints: [
-      { skillId: 78, points: 10 },
-      { skillId: 79, points: 3 }
-    ],
     price: 4700,
-    maxDefense: 15
+    maxDefense: 15,
+    skillPoints: { oxygen: 10, currentres: 3 }
   }),
   deepFreeze<HeadArmor>({
     id: 53,
@@ -1278,13 +1178,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 1,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 23, points: 2 },
-      { skillId: 71, points: 4 },
-      { skillId: 72, points: 3 }
-    ],
     price: 5400,
-    maxDefense: 30
+    maxDefense: 30,
+    skillPoints: { health: 2, combo_rate: 4, combo_plus: 3 }
   }),
   deepFreeze<HeadArmor>({
     id: 54,
@@ -1300,13 +1196,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 1,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 23, points: 3 },
-      { skillId: 71, points: 4 },
-      { skillId: 72, points: 2 }
-    ],
     price: 5400,
-    maxDefense: 18
+    maxDefense: 18,
+    skillPoints: { health: 3, combo_rate: 4, combo_plus: 2 }
   }),
   deepFreeze<HeadArmor>({
     id: 55,
@@ -1322,14 +1214,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 42, points: 3 },
-      { skillId: 44, points: 1 },
-      { skillId: 62, points: -3 },
-      { skillId: 68, points: 2 }
-    ],
     price: 5400,
-    maxDefense: 30
+    maxDefense: 30,
+    skillPoints: { psychic: 3, evasion: 1, water_res: -3, map: 2 }
   }),
   deepFreeze<HeadArmor>({
     id: 56,
@@ -1345,14 +1232,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 5,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 42, points: 4 },
-      { skillId: 44, points: 2 },
-      { skillId: 62, points: -1 },
-      { skillId: 68, points: 2 }
-    ],
     price: 5400,
-    maxDefense: 18
+    maxDefense: 18,
+    skillPoints: { psychic: 4, evasion: 2, water_res: -1, map: 2 }
   }),
   deepFreeze<HeadArmor>({
     id: 57,
@@ -1368,15 +1250,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 3,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 13, points: 1 },
-      { skillId: 25, points: 2 },
-      { skillId: 34, points: 3 },
-      { skillId: 54, points: -2 },
-      { skillId: 77, points: 1 }
-    ],
     price: 6400,
-    maxDefense: 34
+    maxDefense: 34,
+    skillPoints: {
+      stamina: 1,
+      expert: 2,
+      hunger: 3,
+      sleep: -2,
+      perception: 1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 58,
@@ -1392,15 +1274,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 3,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 13, points: 1 },
-      { skillId: 25, points: 2 },
-      { skillId: 34, points: 3 },
-      { skillId: 54, points: -1 },
-      { skillId: 77, points: 2 }
-    ],
     price: 6400,
-    maxDefense: 20
+    maxDefense: 20,
+    skillPoints: {
+      stamina: 1,
+      expert: 2,
+      hunger: 3,
+      sleep: -1,
+      perception: 2
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 59,
@@ -1416,14 +1298,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -1,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 25, points: 3 },
-      { skillId: 26, points: 2 },
-      { skillId: 76, points: 3 },
-      { skillId: 78, points: -1 }
-    ],
     price: 7100,
-    maxDefense: 34
+    maxDefense: 34,
+    skillPoints: {
+      expert: 3,
+      sharpener: 2,
+      speedsetup: 3,
+      oxygen: -1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 60,
@@ -1439,14 +1321,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -1,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 7, points: 2 },
-      { skillId: 25, points: 3 },
-      { skillId: 76, points: 3 },
-      { skillId: 78, points: -1 }
-    ],
     price: 7100,
-    maxDefense: 20
+    maxDefense: 20,
+    skillPoints: {
+      'normal_s+': 2,
+      expert: 3,
+      speedsetup: 3,
+      oxygen: -1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 61,
@@ -1462,14 +1344,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 35, points: 4 },
-      { skillId: 55, points: 2 },
-      { skillId: 58, points: 2 },
-      { skillId: 67, points: -3 }
-    ],
     price: 8000,
-    maxDefense: 38
+    maxDefense: 38,
+    skillPoints: { attack: 4, stun: 2, gluttony: 2, cold_res: -3 }
   }),
   deepFreeze<HeadArmor>({
     id: 62,
@@ -1485,14 +1362,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 7,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 35, points: 5 },
-      { skillId: 55, points: 3 },
-      { skillId: 58, points: 2 },
-      { skillId: 67, points: -1 }
-    ],
     price: 8000,
-    maxDefense: 22
+    maxDefense: 22,
+    skillPoints: { attack: 5, stun: 3, gluttony: 2, cold_res: -1 }
   }),
   deepFreeze<HeadArmor>({
     id: 63,
@@ -1508,15 +1380,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 2,
     slots: 2,
     rarity: 5,
-    skillPoints: [
-      { skillId: 25, points: 1 },
-      { skillId: 39, points: 3 },
-      { skillId: 46, points: 1 },
-      { skillId: 56, points: 2 },
-      { skillId: 63, points: -2 }
-    ],
     price: 8500,
-    maxDefense: 38
+    maxDefense: 38,
+    skillPoints: {
+      expert: 1,
+      wind_res: 3,
+      eating: 1,
+      'mud/snow': 2,
+      thunderres: -2
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 64,
@@ -1532,15 +1404,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 2,
     slots: 2,
     rarity: 5,
-    skillPoints: [
-      { skillId: 3, points: 1 },
-      { skillId: 25, points: 1 },
-      { skillId: 31, points: 3 },
-      { skillId: 46, points: 3 },
-      { skillId: 63, points: -1 }
-    ],
     price: 8500,
-    maxDefense: 22
+    maxDefense: 22,
+    skillPoints: {
+      recoil: 1,
+      expert: 1,
+      'crag_s+': 3,
+      eating: 3,
+      thunderres: -1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 65,
@@ -1556,15 +1428,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 25, points: 1 },
-      { skillId: 36, points: 2 },
-      { skillId: 38, points: 3 },
-      { skillId: 43, points: 3 },
-      { skillId: 64, points: -2 }
-    ],
     price: 10000,
-    maxDefense: 42
+    maxDefense: 42,
+    skillPoints: {
+      expert: 1,
+      defense: 2,
+      'wide-range': 3,
+      rec_level: 3,
+      ice_res: -2
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 66,
@@ -1580,15 +1452,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 25, points: 1 },
-      { skillId: 36, points: 1 },
-      { skillId: 38, points: 5 },
-      { skillId: 43, points: 3 },
-      { skillId: 64, points: -1 }
-    ],
     price: 10000,
-    maxDefense: 25
+    maxDefense: 25,
+    skillPoints: {
+      expert: 1,
+      defense: 1,
+      'wide-range': 5,
+      rec_level: 3,
+      ice_res: -1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 67,
@@ -1604,15 +1476,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 25, points: 1 },
-      { skillId: 34, points: -2 },
-      { skillId: 37, points: 2 },
-      { skillId: 49, points: 4 },
-      { skillId: 79, points: 2 }
-    ],
     price: 11800,
-    maxDefense: 44
+    maxDefense: 44,
+    skillPoints: {
+      expert: 1,
+      hunger: -2,
+      protection: 2,
+      constitutn: 4,
+      currentres: 2
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 68,
@@ -1628,15 +1500,15 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 25, points: 1 },
-      { skillId: 30, points: 4 },
-      { skillId: 34, points: -1 },
-      { skillId: 37, points: 1 },
-      { skillId: 49, points: 4 }
-    ],
     price: 11800,
-    maxDefense: 26
+    maxDefense: 26,
+    skillPoints: {
+      expert: 1,
+      'pellet_s+': 4,
+      hunger: -1,
+      protection: 1,
+      constitutn: 4
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 69,
@@ -1652,14 +1524,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 1,
     slots: 3,
     rarity: 5,
-    skillPoints: [
-      { skillId: 17, points: 1 },
-      { skillId: 18, points: 2 },
-      { skillId: 55, points: -3 },
-      { skillId: 64, points: 1 }
-    ],
     price: 12300,
-    maxDefense: 44
+    maxDefense: 44,
+    skillPoints: {
+      tranquilzr: 1,
+      fastcharge: 2,
+      stun: -3,
+      ice_res: 1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 70,
@@ -1675,14 +1547,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 1,
     slots: 3,
     rarity: 5,
-    skillPoints: [
-      { skillId: 6, points: 2 },
-      { skillId: 17, points: 2 },
-      { skillId: 55, points: -2 },
-      { skillId: 64, points: 1 }
-    ],
     price: 12300,
-    maxDefense: 26
+    maxDefense: 26,
+    skillPoints: {
+      pellets_up: 2,
+      tranquilzr: 2,
+      stun: -2,
+      ice_res: 1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 71,
@@ -1698,14 +1570,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 2,
     rarity: 5,
-    skillPoints: [
-      { skillId: 13, points: 1 },
-      { skillId: 25, points: -3 },
-      { skillId: 35, points: 3 },
-      { skillId: 45, points: 2 }
-    ],
     price: 13800,
-    maxDefense: 48
+    maxDefense: 48,
+    skillPoints: { stamina: 1, expert: -3, attack: 3, potential: 2 }
   }),
   deepFreeze<HeadArmor>({
     id: 72,
@@ -1721,14 +1588,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 2,
     rarity: 5,
-    skillPoints: [
-      { skillId: 13, points: 1 },
-      { skillId: 25, points: -1 },
-      { skillId: 35, points: 4 },
-      { skillId: 45, points: 3 }
-    ],
     price: 13800,
-    maxDefense: 28
+    maxDefense: 28,
+    skillPoints: { stamina: 1, expert: -1, attack: 4, potential: 3 }
   }),
   deepFreeze<HeadArmor>({
     id: 73,
@@ -1744,14 +1606,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 24, points: -2 },
-      { skillId: 25, points: 3 },
-      { skillId: 46, points: 3 },
-      { skillId: 55, points: 3 }
-    ],
     price: 14800,
-    maxDefense: 50
+    maxDefense: 50,
+    skillPoints: { rec_speed: -2, expert: 3, eating: 3, stun: 3 }
   }),
   deepFreeze<HeadArmor>({
     id: 74,
@@ -1767,14 +1624,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 25, points: 3 },
-      { skillId: 43, points: -1 },
-      { skillId: 46, points: 3 },
-      { skillId: 55, points: 4 }
-    ],
     price: 14800,
-    maxDefense: 30
+    maxDefense: 30,
+    skillPoints: { expert: 3, rec_level: -1, eating: 3, stun: 4 }
   }),
   deepFreeze<HeadArmor>({
     id: 75,
@@ -1790,14 +1642,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 12, points: 1 },
-      { skillId: 15, points: 1 },
-      { skillId: 17, points: 4 },
-      { skillId: 37, points: -5 }
-    ],
     price: 25000,
-    maxDefense: 36
+    maxDefense: 36,
+    skillPoints: {
+      fate: 1,
+      carving: 1,
+      tranquilzr: 4,
+      protection: -5
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 76,
@@ -1813,14 +1665,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 10,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 12, points: 2 },
-      { skillId: 15, points: 2 },
-      { skillId: 17, points: 2 },
-      { skillId: 37, points: -5 }
-    ],
     price: 25000,
-    maxDefense: 22
+    maxDefense: 22,
+    skillPoints: {
+      fate: 2,
+      carving: 2,
+      tranquilzr: 2,
+      protection: -5
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 77,
@@ -1836,14 +1688,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -4,
     slots: 3,
     rarity: 5,
-    skillPoints: [
-      { skillId: 11, points: 1 },
-      { skillId: 23, points: 1 },
-      { skillId: 37, points: -3 },
-      { skillId: 61, points: 2 }
-    ],
     price: 14800,
-    maxDefense: 50
+    maxDefense: 50,
+    skillPoints: {
+      hearing: 1,
+      health: 1,
+      protection: -3,
+      fire_res: 2
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 78,
@@ -1859,14 +1711,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -4,
     slots: 3,
     rarity: 5,
-    skillPoints: [
-      { skillId: 11, points: 2 },
-      { skillId: 23, points: 2 },
-      { skillId: 37, points: -2 },
-      { skillId: 61, points: 1 }
-    ],
     price: 14800,
-    maxDefense: 30
+    maxDefense: 30,
+    skillPoints: {
+      hearing: 2,
+      health: 2,
+      protection: -2,
+      fire_res: 1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 79,
@@ -1882,14 +1734,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 9, points: 2 },
-      { skillId: 22, points: 3 },
-      { skillId: 23, points: -3 },
-      { skillId: 49, points: 3 }
-    ],
     price: 15800,
-    maxDefense: 54
+    maxDefense: 54,
+    skillPoints: { status: 2, poison: 3, health: -3, constitutn: 3 }
   }),
   deepFreeze<HeadArmor>({
     id: 80,
@@ -1905,14 +1752,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 9, points: 3 },
-      { skillId: 22, points: 3 },
-      { skillId: 23, points: -1 },
-      { skillId: 49, points: 4 }
-    ],
     price: 15800,
-    maxDefense: 32
+    maxDefense: 32,
+    skillPoints: { status: 3, poison: 3, health: -1, constitutn: 4 }
   }),
   deepFreeze<HeadArmor>({
     id: 81,
@@ -1928,14 +1770,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 26, points: -1 },
-      { skillId: 28, points: 3 },
-      { skillId: 39, points: 3 },
-      { skillId: 63, points: 4 }
-    ],
     price: 17500,
-    maxDefense: 54
+    maxDefense: 54,
+    skillPoints: {
+      sharpener: -1,
+      guard_up: 3,
+      wind_res: 3,
+      thunderres: 4
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 82,
@@ -1951,14 +1793,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 7,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 3, points: 3 },
-      { skillId: 28, points: 3 },
-      { skillId: 29, points: -1 },
-      { skillId: 63, points: 4 }
-    ],
     price: 17500,
-    maxDefense: 32
+    maxDefense: 32,
+    skillPoints: {
+      recoil: 3,
+      guard_up: 3,
+      reload_spd: -1,
+      thunderres: 4
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 83,
@@ -1974,14 +1816,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 5,
     slots: 3,
     rarity: 6,
-    skillPoints: [
-      { skillId: 13, points: 2 },
-      { skillId: 45, points: -3 },
-      { skillId: 48, points: 1 },
-      { skillId: 65, points: 1 }
-    ],
     price: 19000,
-    maxDefense: 58
+    maxDefense: 58,
+    skillPoints: {
+      stamina: 2,
+      potential: -3,
+      crit_draw: 1,
+      dragon_res: 1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 84,
@@ -1997,14 +1839,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 10,
     slots: 3,
     rarity: 6,
-    skillPoints: [
-      { skillId: 6, points: 2 },
-      { skillId: 30, points: 2 },
-      { skillId: 45, points: -2 },
-      { skillId: 65, points: 1 }
-    ],
     price: 19000,
-    maxDefense: 34
+    maxDefense: 34,
+    skillPoints: {
+      pellets_up: 2,
+      'pellet_s+': 2,
+      potential: -2,
+      dragon_res: 1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 85,
@@ -2020,14 +1862,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -2,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 9, points: -3 },
-      { skillId: 10, points: 2 },
-      { skillId: 20, points: 3 },
-      { skillId: 50, points: 3 }
-    ],
     price: 18000,
-    maxDefense: 58
+    maxDefense: 58,
+    skillPoints: {
+      status: -3,
+      elemental: 2,
+      freeelemnt: 3,
+      swimming: 3
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 86,
@@ -2043,14 +1885,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -2,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 9, points: -2 },
-      { skillId: 10, points: 2 },
-      { skillId: 21, points: 2 },
-      { skillId: 50, points: 5 }
-    ],
     price: 18000,
-    maxDefense: 34
+    maxDefense: 34,
+    skillPoints: {
+      status: -2,
+      elemental: 2,
+      rapid_fire: 2,
+      swimming: 5
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 87,
@@ -2066,14 +1908,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -4,
     slots: 3,
     rarity: 6,
-    skillPoints: [
-      { skillId: 2, points: 1 },
-      { skillId: 25, points: 2 },
-      { skillId: 36, points: -3 },
-      { skillId: 66, points: 1 }
-    ],
     price: 18000,
-    maxDefense: 58
+    maxDefense: 58,
+    skillPoints: { fencing: 1, expert: 2, defense: -3, heat_res: 1 }
   }),
   deepFreeze<HeadArmor>({
     id: 88,
@@ -2089,14 +1926,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -4,
     slots: 3,
     rarity: 6,
-    skillPoints: [
-      { skillId: 4, points: 1 },
-      { skillId: 25, points: 3 },
-      { skillId: 36, points: -2 },
-      { skillId: 66, points: 1 }
-    ],
     price: 18000,
-    maxDefense: 34
+    maxDefense: 34,
+    skillPoints: {
+      normals_up: 1,
+      expert: 3,
+      defense: -2,
+      heat_res: 1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 89,
@@ -2112,14 +1949,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 16, points: 3 },
-      { skillId: 44, points: 2 },
-      { skillId: 66, points: -3 },
-      { skillId: 67, points: 3 }
-    ],
     price: 18000,
-    maxDefense: 58
+    maxDefense: 58,
+    skillPoints: {
+      evade_dist: 3,
+      evasion: 2,
+      heat_res: -3,
+      cold_res: 3
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 90,
@@ -2135,14 +1972,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 16, points: 4 },
-      { skillId: 44, points: 2 },
-      { skillId: 66, points: -1 },
-      { skillId: 67, points: 4 }
-    ],
     price: 18000,
-    maxDefense: 34
+    maxDefense: 34,
+    skillPoints: {
+      evade_dist: 4,
+      evasion: 2,
+      heat_res: -1,
+      cold_res: 4
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 91,
@@ -2158,13 +1995,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -1,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 10, points: -3 },
-      { skillId: 47, points: 5 },
-      { skillId: 48, points: 5 }
-    ],
     price: 18800,
-    maxDefense: 62
+    maxDefense: 62,
+    skillPoints: { elemental: -3, tremor_res: 5, crit_draw: 5 }
   }),
   deepFreeze<HeadArmor>({
     id: 92,
@@ -2180,13 +2013,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 2,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 5, points: 5 },
-      { skillId: 8, points: 5 },
-      { skillId: 10, points: -3 }
-    ],
     price: 18800,
-    maxDefense: 37
+    maxDefense: 37,
+    skillPoints: { pierces_up: 5, 'pierce_s+': 5, elemental: -3 }
   }),
   deepFreeze<HeadArmor>({
     id: 93,
@@ -2202,14 +2031,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -2,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 19, points: 2 },
-      { skillId: 33, points: 2 },
-      { skillId: 36, points: 4 },
-      { skillId: 46, points: -3 }
-    ],
     price: 18800,
-    maxDefense: 62
+    maxDefense: 62,
+    skillPoints: {
+      punishdraw: 2,
+      bomb_boost: 2,
+      defense: 4,
+      eating: -3
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 94,
@@ -2225,14 +2054,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -2,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 3, points: 6 },
-      { skillId: 33, points: 1 },
-      { skillId: 36, points: 3 },
-      { skillId: 46, points: -1 }
-    ],
     price: 18800,
-    maxDefense: 37
+    maxDefense: 37,
+    skillPoints: {
+      recoil: 6,
+      bomb_boost: 1,
+      defense: 3,
+      eating: -1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 95,
@@ -2248,14 +2077,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 0, points: 3 },
-      { skillId: 13, points: -2 },
-      { skillId: 27, points: 5 },
-      { skillId: 52, points: 3 }
-    ],
     price: 19800,
-    maxDefense: 62
+    maxDefense: 62,
+    skillPoints: {
+      sharpness: 3,
+      stamina: -2,
+      guard: 5,
+      flame_aura: 3
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 96,
@@ -2271,14 +2100,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 4, points: 4 },
-      { skillId: 7, points: 4 },
-      { skillId: 13, points: -1 },
-      { skillId: 52, points: 4 }
-    ],
     price: 19800,
-    maxDefense: 37
+    maxDefense: 37,
+    skillPoints: {
+      normals_up: 4,
+      'normal_s+': 4,
+      stamina: -1,
+      flame_aura: 4
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 97,
@@ -2294,14 +2123,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 7,
-    skillPoints: [
-      { skillId: 1, points: 4 },
-      { skillId: 34, points: -2 },
-      { skillId: 35, points: 3 },
-      { skillId: 42, points: 4 }
-    ],
     price: 41500,
-    maxDefense: 64
+    maxDefense: 64,
+    skillPoints: {
+      handicraft: 4,
+      hunger: -2,
+      attack: 3,
+      psychic: 4
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 98,
@@ -2317,14 +2146,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 7,
-    skillPoints: [
-      { skillId: 14, points: 5 },
-      { skillId: 34, points: -1 },
-      { skillId: 35, points: 2 },
-      { skillId: 42, points: 5 }
-    ],
     price: 41500,
-    maxDefense: 38
+    maxDefense: 38,
+    skillPoints: { loading: 5, hunger: -1, attack: 2, psychic: 5 }
   }),
   deepFreeze<HeadArmor>({
     id: 99,
@@ -2340,14 +2164,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 3,
     slots: 3,
     rarity: 6,
-    skillPoints: [
-      { skillId: 13, points: -3 },
-      { skillId: 19, points: 2 },
-      { skillId: 23, points: 1 },
-      { skillId: 28, points: 1 }
-    ],
     price: 32300,
-    maxDefense: 62
+    maxDefense: 62,
+    skillPoints: {
+      stamina: -3,
+      punishdraw: 2,
+      health: 1,
+      guard_up: 1
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 100,
@@ -2363,14 +2187,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 8,
     slots: 3,
     rarity: 6,
-    skillPoints: [
-      { skillId: 13, points: -3 },
-      { skillId: 23, points: 1 },
-      { skillId: 28, points: 1 },
-      { skillId: 29, points: 2 }
-    ],
     price: 32300,
-    maxDefense: 37
+    maxDefense: 37,
+    skillPoints: {
+      stamina: -3,
+      health: 1,
+      guard_up: 1,
+      reload_spd: 2
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 101,
@@ -2386,14 +2210,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -4,
     slots: 3,
     rarity: 6,
-    skillPoints: [
-      { skillId: 0, points: -1 },
-      { skillId: 1, points: 1 },
-      { skillId: 11, points: 2 },
-      { skillId: 37, points: -3 }
-    ],
     price: 26200,
-    maxDefense: 66
+    maxDefense: 66,
+    skillPoints: {
+      sharpness: -1,
+      handicraft: 1,
+      hearing: 2,
+      protection: -3
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 102,
@@ -2409,14 +2233,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -4,
     slots: 3,
     rarity: 6,
-    skillPoints: [
-      { skillId: 3, points: -1 },
-      { skillId: 11, points: 2 },
-      { skillId: 14, points: 1 },
-      { skillId: 37, points: -3 }
-    ],
     price: 26200,
-    maxDefense: 39
+    maxDefense: 39,
+    skillPoints: {
+      recoil: -1,
+      hearing: 2,
+      loading: 1,
+      protection: -3
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 103,
@@ -2432,14 +2256,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -4,
     slots: 3,
     rarity: 6,
-    skillPoints: [
-      { skillId: 0, points: 1 },
-      { skillId: 18, points: 1 },
-      { skillId: 24, points: 2 },
-      { skillId: 71, points: -3 }
-    ],
     price: 27500,
-    maxDefense: 66
+    maxDefense: 66,
+    skillPoints: {
+      sharpness: 1,
+      fastcharge: 1,
+      rec_speed: 2,
+      combo_rate: -3
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 104,
@@ -2455,14 +2279,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -4,
     slots: 3,
     rarity: 6,
-    skillPoints: [
-      { skillId: 3, points: 1 },
-      { skillId: 24, points: 1 },
-      { skillId: 32, points: 2 },
-      { skillId: 71, points: -3 }
-    ],
     price: 27500,
-    maxDefense: 39
+    maxDefense: 39,
+    skillPoints: {
+      recoil: 1,
+      rec_speed: 1,
+      'clust_s+': 2,
+      combo_rate: -3
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 105,
@@ -2478,14 +2302,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -5,
     slots: 2,
     rarity: 7,
-    skillPoints: [
-      { skillId: 16, points: 2 },
-      { skillId: 20, points: 1 },
-      { skillId: 43, points: -3 },
-      { skillId: 81, points: 3 }
-    ],
     price: 66666,
-    maxDefense: 70
+    maxDefense: 70,
+    skillPoints: {
+      evade_dist: 2,
+      freeelemnt: 1,
+      rec_level: -3,
+      blight_res: 3
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 106,
@@ -2501,14 +2325,14 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -5,
     slots: 2,
     rarity: 7,
-    skillPoints: [
-      { skillId: 16, points: 2 },
-      { skillId: 21, points: 1 },
-      { skillId: 43, points: -3 },
-      { skillId: 81, points: 3 }
-    ],
     price: 66666,
-    maxDefense: 42
+    maxDefense: 42,
+    skillPoints: {
+      evade_dist: 2,
+      rapid_fire: 1,
+      rec_level: -3,
+      blight_res: 3
+    }
   }),
   deepFreeze<HeadArmor>({
     id: 107,
@@ -2524,9 +2348,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 10,
     slots: 3,
     rarity: 7,
-    skillPoints: [],
     price: 33333,
-    maxDefense: 18
+    maxDefense: 18,
+    skillPoints: {}
   }),
   deepFreeze<HeadArmor>({
     id: 108,
@@ -2542,11 +2366,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 3,
     slots: 0,
     rarity: 3,
-    skillPoints: [],
-    torsoUp: true,
     price: 5000,
     maxDefense: 7,
-    maxLowRankDefense: 13
+    maxLowRankDefense: 13,
+    skillPoints: {}
   }),
   deepFreeze<HeadArmor>({
     id: 109,
@@ -2562,10 +2385,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: -1,
     slots: 0,
     rarity: 3,
-    skillPoints: [{ skillId: 12, points: 10 }],
     price: 30000,
     maxDefense: 5,
-    maxLowRankDefense: 12
+    maxLowRankDefense: 12,
+    skillPoints: { fate: 10 }
   }),
   deepFreeze<HeadArmor>({
     id: 110,
@@ -2581,10 +2404,10 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 2,
     slots: 3,
     rarity: 3,
-    skillPoints: [],
     price: 10000,
     maxDefense: 8,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: {}
   }),
   deepFreeze<HeadArmor>({
     id: 111,
@@ -2600,9 +2423,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 2,
     slots: 3,
     rarity: 6,
-    skillPoints: [{ skillId: 55, points: 7 }],
     price: 15000,
-    maxDefense: 28
+    maxDefense: 28,
+    skillPoints: { stun: 7 }
   }),
   deepFreeze<HeadArmor>({
     id: 112,
@@ -2618,9 +2441,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 2,
-    skillPoints: [{ skillId: 33, points: 10 }],
     price: 5000,
-    maxDefense: 10
+    maxDefense: 10,
+    skillPoints: { bomb_boost: 10 }
   }),
   deepFreeze<HeadArmor>({
     id: 113,
@@ -2636,9 +2459,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 3,
-    skillPoints: [{ skillId: 71, points: 20 }],
     price: 10000,
-    maxDefense: 10
+    maxDefense: 10,
+    skillPoints: { combo_rate: 20 }
   }),
   deepFreeze<HeadArmor>({
     id: 114,
@@ -2654,9 +2477,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 4,
-    skillPoints: [{ skillId: 42, points: 15 }],
     price: 15000,
-    maxDefense: 10
+    maxDefense: 10,
+    skillPoints: { psychic: 15 }
   }),
   deepFreeze<HeadArmor>({
     id: 115,
@@ -2672,9 +2495,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 5,
-    skillPoints: [{ skillId: 38, points: 20 }],
     price: 20000,
-    maxDefense: 10
+    maxDefense: 10,
+    skillPoints: { 'wide-range': 20 }
   }),
   deepFreeze<HeadArmor>({
     id: 116,
@@ -2690,9 +2513,9 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 6,
-    skillPoints: [{ skillId: 2, points: 10 }],
     price: 25000,
-    maxDefense: 10
+    maxDefense: 10,
+    skillPoints: { fencing: 10 }
   }),
   deepFreeze<HeadArmor>({
     id: 117,
@@ -2708,8 +2531,8 @@ export const HeadArmors: HeadArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 7,
-    skillPoints: [{ skillId: 14, points: 15 }],
     price: 30000,
-    maxDefense: 10
+    maxDefense: 10,
+    skillPoints: { loading: 15 }
   })
 ];

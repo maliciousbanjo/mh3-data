@@ -1,4 +1,19 @@
 /**
+ * Denotes the color of the ingame icon for an item
+ */
+export type ItemIconColor =
+  | 'purple'
+  | 'blue'
+  | 'green'
+  | 'orange'
+  | 'red'
+  | 'yellow'
+  | 'cyan'
+  | 'pink'
+  | 'white'
+  | 'gray';
+
+/**
  * Ingame item eg; Mega Potion, Raw Meat, etc
  */
 export interface Item {

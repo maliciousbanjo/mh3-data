@@ -16,15 +16,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 35, points: 1 },
-      { skillId: 40, points: 3 },
-      { skillId: 41, points: 1 },
-      { skillId: 69, points: 3 }
-    ],
     price: 150,
     maxDefense: 1,
-    maxLowRankDefense: 9
+    maxLowRankDefense: 9,
+    skillPoints: { attack: 1, gathering: 3, spd_gather: 1, whim: 3 }
   }),
   deepFreeze<LegArmor>({
     id: 1,
@@ -40,13 +35,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 50, points: 8 },
-      { skillId: 79, points: 1 }
-    ],
     price: 300,
     maxDefense: 3,
-    maxLowRankDefense: 11
+    maxLowRankDefense: 11,
+    skillPoints: { swimming: 8, currentres: 1 }
   }),
   deepFreeze<LegArmor>({
     id: 2,
@@ -62,15 +54,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 23, points: 2 },
-      { skillId: 70, points: 4 },
-      { skillId: 71, points: 1 },
-      { skillId: 72, points: 2 }
-    ],
     price: 200,
     maxDefense: 2,
-    maxLowRankDefense: 9
+    maxLowRankDefense: 9,
+    skillPoints: {
+      health: 2,
+      fishing: 4,
+      combo_rate: 1,
+      combo_plus: 2
+    }
   }),
   deepFreeze<LegArmor>({
     id: 3,
@@ -86,14 +78,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 1,
-    skillPoints: [
-      { skillId: 24, points: 3 },
-      { skillId: 60, points: 5 },
-      { skillId: 66, points: 3 }
-    ],
     price: 500,
     maxDefense: 4,
-    maxLowRankDefense: 11
+    maxLowRankDefense: 11,
+    skillPoints: { rec_speed: 3, transportr: 5, heat_res: 3 }
   }),
   deepFreeze<LegArmor>({
     id: 4,
@@ -109,15 +97,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -1,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 42, points: 2 },
-      { skillId: 62, points: -1 },
-      { skillId: 68, points: 4 },
-      { skillId: 75, points: 2 }
-    ],
     price: 500,
     maxDefense: 6,
-    maxLowRankDefense: 20
+    maxLowRankDefense: 20,
+    skillPoints: { psychic: 2, water_res: -1, map: 4, bbq: 2 }
   }),
   deepFreeze<LegArmor>({
     id: 5,
@@ -133,15 +116,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -1,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 42, points: 2 },
-      { skillId: 62, points: -1 },
-      { skillId: 68, points: 4 },
-      { skillId: 75, points: 2 }
-    ],
     price: 500,
     maxDefense: 3,
-    maxLowRankDefense: 10
+    maxLowRankDefense: 10,
+    skillPoints: { psychic: 2, water_res: -1, map: 4, bbq: 2 }
   }),
   deepFreeze<LegArmor>({
     id: 6,
@@ -157,16 +135,16 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 3,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 34, points: 1 },
-      { skillId: 35, points: 1 },
-      { skillId: 54, points: -1 },
-      { skillId: 73, points: 2 },
-      { skillId: 77, points: 4 }
-    ],
     price: 750,
     maxDefense: 8,
-    maxLowRankDefense: 22
+    maxLowRankDefense: 22,
+    skillPoints: {
+      hunger: 1,
+      attack: 1,
+      sleep: -1,
+      lastingpwr: 2,
+      perception: 4
+    }
   }),
   deepFreeze<LegArmor>({
     id: 7,
@@ -182,16 +160,16 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 3,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 34, points: 1 },
-      { skillId: 35, points: 1 },
-      { skillId: 54, points: -1 },
-      { skillId: 73, points: 2 },
-      { skillId: 77, points: 4 }
-    ],
     price: 750,
     maxDefense: 4,
-    maxLowRankDefense: 11
+    maxLowRankDefense: 11,
+    skillPoints: {
+      hunger: 1,
+      attack: 1,
+      sleep: -1,
+      lastingpwr: 2,
+      perception: 4
+    }
   }),
   deepFreeze<LegArmor>({
     id: 8,
@@ -207,11 +185,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -1,
     slots: 0,
     rarity: 1,
-    skillPoints: [],
-    torsoUp: true,
     price: 1000,
     maxDefense: 8,
-    maxLowRankDefense: 22
+    maxLowRankDefense: 22,
+    skillPoints: {}
   }),
   deepFreeze<LegArmor>({
     id: 9,
@@ -227,11 +204,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -1,
     slots: 0,
     rarity: 1,
-    skillPoints: [],
-    torsoUp: true,
     price: 1000,
     maxDefense: 4,
-    maxLowRankDefense: 11
+    maxLowRankDefense: 11,
+    skillPoints: {}
   }),
   deepFreeze<LegArmor>({
     id: 10,
@@ -247,15 +223,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 35, points: 3 },
-      { skillId: 55, points: 2 },
-      { skillId: 58, points: 2 },
-      { skillId: 67, points: -2 }
-    ],
     price: 1200,
     maxDefense: 10,
-    maxLowRankDefense: 24
+    maxLowRankDefense: 24,
+    skillPoints: { attack: 3, stun: 2, gluttony: 2, cold_res: -2 }
   }),
   deepFreeze<LegArmor>({
     id: 11,
@@ -271,15 +242,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 35, points: 3 },
-      { skillId: 55, points: 3 },
-      { skillId: 58, points: 1 },
-      { skillId: 67, points: -2 }
-    ],
     price: 1200,
     maxDefense: 5,
-    maxLowRankDefense: 12
+    maxLowRankDefense: 12,
+    skillPoints: { attack: 3, stun: 3, gluttony: 1, cold_res: -2 }
   }),
   deepFreeze<LegArmor>({
     id: 12,
@@ -295,14 +261,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 5,
     slots: 0,
     rarity: 2,
-    skillPoints: [
-      { skillId: 0, points: 4 },
-      { skillId: 9, points: 4 },
-      { skillId: 22, points: -3 }
-    ],
     price: 1800,
     maxDefense: 10,
-    maxLowRankDefense: 24
+    maxLowRankDefense: 24,
+    skillPoints: { sharpness: 4, status: 4, poison: -3 }
   }),
   deepFreeze<LegArmor>({
     id: 13,
@@ -318,14 +280,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 5,
     slots: 0,
     rarity: 2,
-    skillPoints: [
-      { skillId: 9, points: 4 },
-      { skillId: 22, points: -3 },
-      { skillId: 29, points: 4 }
-    ],
     price: 1800,
     maxDefense: 5,
-    maxLowRankDefense: 12
+    maxLowRankDefense: 12,
+    skillPoints: { status: 4, poison: -3, reload_spd: 4 }
   }),
   deepFreeze<LegArmor>({
     id: 14,
@@ -341,15 +299,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 39, points: 3 },
-      { skillId: 46, points: 2 },
-      { skillId: 56, points: 3 },
-      { skillId: 63, points: -1 }
-    ],
     price: 1400,
     maxDefense: 12,
-    maxLowRankDefense: 24
+    maxLowRankDefense: 24,
+    skillPoints: {
+      wind_res: 3,
+      eating: 2,
+      'mud/snow': 3,
+      thunderres: -1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 15,
@@ -365,15 +323,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 3, points: 1 },
-      { skillId: 31, points: 2 },
-      { skillId: 46, points: 4 },
-      { skillId: 63, points: -2 }
-    ],
     price: 1400,
     maxDefense: 6,
-    maxLowRankDefense: 12
+    maxLowRankDefense: 12,
+    skillPoints: {
+      recoil: 1,
+      'crag_s+': 2,
+      eating: 4,
+      thunderres: -2
+    }
   }),
   deepFreeze<LegArmor>({
     id: 16,
@@ -389,15 +347,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 36, points: 1 },
-      { skillId: 43, points: 4 },
-      { skillId: 44, points: 3 },
-      { skillId: 64, points: -1 }
-    ],
     price: 1700,
     maxDefense: 12,
-    maxLowRankDefense: 24
+    maxLowRankDefense: 24,
+    skillPoints: {
+      defense: 1,
+      rec_level: 4,
+      evasion: 3,
+      ice_res: -1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 17,
@@ -413,15 +371,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 36, points: 4 },
-      { skillId: 43, points: 2 },
-      { skillId: 44, points: 2 },
-      { skillId: 64, points: -1 }
-    ],
     price: 1700,
     maxDefense: 6,
-    maxLowRankDefense: 12
+    maxLowRankDefense: 12,
+    skillPoints: {
+      defense: 4,
+      rec_level: 2,
+      evasion: 2,
+      ice_res: -1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 18,
@@ -437,16 +395,16 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 35, points: 2 },
-      { skillId: 37, points: 2 },
-      { skillId: 49, points: 2 },
-      { skillId: 61, points: -1 },
-      { skillId: 79, points: 2 }
-    ],
     price: 2200,
     maxDefense: 13,
-    maxLowRankDefense: 25
+    maxLowRankDefense: 25,
+    skillPoints: {
+      attack: 2,
+      protection: 2,
+      constitutn: 2,
+      fire_res: -1,
+      currentres: 2
+    }
   }),
   deepFreeze<LegArmor>({
     id: 19,
@@ -462,16 +420,16 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 30, points: 2 },
-      { skillId: 35, points: 2 },
-      { skillId: 37, points: 2 },
-      { skillId: 49, points: 2 },
-      { skillId: 61, points: -1 }
-    ],
     price: 2200,
     maxDefense: 7,
-    maxLowRankDefense: 13
+    maxLowRankDefense: 13,
+    skillPoints: {
+      'pellet_s+': 2,
+      attack: 2,
+      protection: 2,
+      constitutn: 2,
+      fire_res: -1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 20,
@@ -487,15 +445,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 17, points: 4 },
-      { skillId: 18, points: 3 },
-      { skillId: 55, points: -1 },
-      { skillId: 64, points: 1 }
-    ],
     price: 2400,
     maxDefense: 13,
-    maxLowRankDefense: 25
+    maxLowRankDefense: 25,
+    skillPoints: {
+      tranquilzr: 4,
+      fastcharge: 3,
+      stun: -1,
+      ice_res: 1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 21,
@@ -511,15 +469,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 6, points: 2 },
-      { skillId: 17, points: 4 },
-      { skillId: 55, points: -1 },
-      { skillId: 64, points: 2 }
-    ],
     price: 2400,
     maxDefense: 7,
-    maxLowRankDefense: 13
+    maxLowRankDefense: 13,
+    skillPoints: {
+      pellets_up: 2,
+      tranquilzr: 4,
+      stun: -1,
+      ice_res: 2
+    }
   }),
   deepFreeze<LegArmor>({
     id: 22,
@@ -535,15 +493,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 13, points: 4 },
-      { skillId: 25, points: -2 },
-      { skillId: 35, points: 1 },
-      { skillId: 45, points: 2 }
-    ],
     price: 3200,
     maxDefense: 15,
-    maxLowRankDefense: 27
+    maxLowRankDefense: 27,
+    skillPoints: { stamina: 4, expert: -2, attack: 1, potential: 2 }
   }),
   deepFreeze<LegArmor>({
     id: 23,
@@ -559,15 +512,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 13, points: 4 },
-      { skillId: 25, points: -2 },
-      { skillId: 35, points: 1 },
-      { skillId: 45, points: 2 }
-    ],
     price: 3200,
     maxDefense: 8,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: { stamina: 4, expert: -2, attack: 1, potential: 2 }
   }),
   deepFreeze<LegArmor>({
     id: 24,
@@ -583,16 +531,16 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 24, points: -1 },
-      { skillId: 35, points: 1 },
-      { skillId: 46, points: 4 },
-      { skillId: 55, points: 2 },
-      { skillId: 62, points: 1 }
-    ],
     price: 3600,
     maxDefense: 16,
-    maxLowRankDefense: 28
+    maxLowRankDefense: 28,
+    skillPoints: {
+      rec_speed: -1,
+      attack: 1,
+      eating: 4,
+      stun: 2,
+      water_res: 1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 25,
@@ -608,16 +556,16 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 24, points: -1 },
-      { skillId: 35, points: 1 },
-      { skillId: 46, points: 3 },
-      { skillId: 55, points: 3 },
-      { skillId: 62, points: 1 }
-    ],
     price: 3600,
     maxDefense: 8,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: {
+      rec_speed: -1,
+      attack: 1,
+      eating: 3,
+      stun: 3,
+      water_res: 1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 26,
@@ -633,15 +581,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 12, points: -3 },
-      { skillId: 15, points: 3 },
-      { skillId: 38, points: 3 },
-      { skillId: 41, points: 1 }
-    ],
     price: 10000,
     maxDefense: 15,
-    maxLowRankDefense: 27
+    maxLowRankDefense: 27,
+    skillPoints: {
+      fate: -3,
+      carving: 3,
+      'wide-range': 3,
+      spd_gather: 1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 27,
@@ -657,15 +605,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 12, points: -3 },
-      { skillId: 15, points: 3 },
-      { skillId: 38, points: 3 },
-      { skillId: 41, points: 1 }
-    ],
     price: 10000,
     maxDefense: 8,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: {
+      fate: -3,
+      carving: 3,
+      'wide-range': 3,
+      spd_gather: 1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 28,
@@ -681,11 +629,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 3,
-    skillPoints: [],
-    torsoUp: true,
     price: 10000,
     maxDefense: 15,
-    maxLowRankDefense: 27
+    maxLowRankDefense: 27,
+    skillPoints: {}
   }),
   deepFreeze<LegArmor>({
     id: 29,
@@ -701,11 +648,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 3,
-    skillPoints: [],
-    torsoUp: true,
     price: 10000,
     maxDefense: 8,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: {}
   }),
   deepFreeze<LegArmor>({
     id: 30,
@@ -721,15 +667,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -4,
     slots: 2,
     rarity: 2,
-    skillPoints: [
-      { skillId: 11, points: 2 },
-      { skillId: 23, points: 2 },
-      { skillId: 37, points: -1 },
-      { skillId: 61, points: 2 }
-    ],
     price: 3600,
     maxDefense: 16,
-    maxLowRankDefense: 28
+    maxLowRankDefense: 28,
+    skillPoints: {
+      hearing: 2,
+      health: 2,
+      protection: -1,
+      fire_res: 2
+    }
   }),
   deepFreeze<LegArmor>({
     id: 31,
@@ -745,15 +691,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -4,
     slots: 2,
     rarity: 2,
-    skillPoints: [
-      { skillId: 11, points: 2 },
-      { skillId: 23, points: 1 },
-      { skillId: 37, points: -1 },
-      { skillId: 61, points: 3 }
-    ],
     price: 3600,
     maxDefense: 8,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: {
+      hearing: 2,
+      health: 1,
+      protection: -1,
+      fire_res: 3
+    }
   }),
   deepFreeze<LegArmor>({
     id: 32,
@@ -769,15 +715,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 9, points: 4 },
-      { skillId: 22, points: 2 },
-      { skillId: 23, points: -1 },
-      { skillId: 49, points: 2 }
-    ],
     price: 4100,
     maxDefense: 18,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: { status: 4, poison: 2, health: -1, constitutn: 2 }
   }),
   deepFreeze<LegArmor>({
     id: 33,
@@ -793,15 +734,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 9, points: 3 },
-      { skillId: 22, points: 3 },
-      { skillId: 23, points: -1 },
-      { skillId: 49, points: 2 }
-    ],
     price: 4100,
     maxDefense: 9,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: { status: 3, poison: 3, health: -1, constitutn: 2 }
   }),
   deepFreeze<LegArmor>({
     id: 34,
@@ -817,15 +753,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 26, points: -1 },
-      { skillId: 28, points: 3 },
-      { skillId: 39, points: 2 },
-      { skillId: 63, points: 3 }
-    ],
     price: 5000,
     maxDefense: 18,
-    maxLowRankDefense: 28
+    maxLowRankDefense: 28,
+    skillPoints: {
+      sharpener: -1,
+      guard_up: 3,
+      wind_res: 2,
+      thunderres: 3
+    }
   }),
   deepFreeze<LegArmor>({
     id: 35,
@@ -841,15 +777,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 3, points: 2 },
-      { skillId: 28, points: 3 },
-      { skillId: 29, points: -1 },
-      { skillId: 63, points: 3 }
-    ],
     price: 5000,
     maxDefense: 9,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: {
+      recoil: 2,
+      guard_up: 3,
+      reload_spd: -1,
+      thunderres: 3
+    }
   }),
   deepFreeze<LegArmor>({
     id: 36,
@@ -865,15 +801,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -2,
     slots: 2,
     rarity: 3,
-    skillPoints: [
-      { skillId: 0, points: 2 },
-      { skillId: 9, points: -2 },
-      { skillId: 10, points: 3 },
-      { skillId: 50, points: 1 }
-    ],
     price: 5600,
     maxDefense: 20,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: {
+      sharpness: 2,
+      status: -2,
+      elemental: 3,
+      swimming: 1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 37,
@@ -889,15 +825,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -2,
     slots: 2,
     rarity: 3,
-    skillPoints: [
-      { skillId: 4, points: 2 },
-      { skillId: 9, points: -2 },
-      { skillId: 10, points: 3 },
-      { skillId: 50, points: 1 }
-    ],
     price: 5600,
     maxDefense: 10,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: {
+      normals_up: 2,
+      status: -2,
+      elemental: 3,
+      swimming: 1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 38,
@@ -913,15 +849,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -4,
     slots: 2,
     rarity: 3,
-    skillPoints: [
-      { skillId: 25, points: 2 },
-      { skillId: 35, points: 2 },
-      { skillId: 36, points: -1 },
-      { skillId: 66, points: 2 }
-    ],
     price: 5600,
     maxDefense: 20,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: { expert: 2, attack: 2, defense: -1, heat_res: 2 }
   }),
   deepFreeze<LegArmor>({
     id: 39,
@@ -937,15 +868,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -4,
     slots: 2,
     rarity: 3,
-    skillPoints: [
-      { skillId: 25, points: 2 },
-      { skillId: 35, points: 2 },
-      { skillId: 36, points: -1 },
-      { skillId: 66, points: 2 }
-    ],
     price: 5600,
     maxDefense: 10,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: { expert: 2, attack: 2, defense: -1, heat_res: 2 }
   }),
   deepFreeze<LegArmor>({
     id: 40,
@@ -961,15 +887,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 2,
     rarity: 3,
-    skillPoints: [
-      { skillId: 13, points: 1 },
-      { skillId: 44, points: 3 },
-      { skillId: 66, points: -1 },
-      { skillId: 67, points: 2 }
-    ],
     price: 5600,
     maxDefense: 20,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: {
+      stamina: 1,
+      evasion: 3,
+      heat_res: -1,
+      cold_res: 2
+    }
   }),
   deepFreeze<LegArmor>({
     id: 41,
@@ -985,15 +911,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 2,
     rarity: 3,
-    skillPoints: [
-      { skillId: 13, points: 1 },
-      { skillId: 44, points: 2 },
-      { skillId: 66, points: -2 },
-      { skillId: 67, points: 2 }
-    ],
     price: 5600,
     maxDefense: 10,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: {
+      stamina: 1,
+      evasion: 2,
+      heat_res: -2,
+      cold_res: 2
+    }
   }),
   deepFreeze<LegArmor>({
     id: 42,
@@ -1009,11 +935,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -2,
     slots: 0,
     rarity: 3,
-    skillPoints: [],
-    torsoUp: true,
     price: 6300,
     maxDefense: 22,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: {}
   }),
   deepFreeze<LegArmor>({
     id: 43,
@@ -1029,11 +954,10 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -2,
     slots: 0,
     rarity: 3,
-    skillPoints: [],
-    torsoUp: true,
     price: 6300,
     maxDefense: 11,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: {}
   }),
   deepFreeze<LegArmor>({
     id: 44,
@@ -1049,15 +973,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 13, points: -2 },
-      { skillId: 27, points: 5 },
-      { skillId: 28, points: 2 },
-      { skillId: 52, points: 2 }
-    ],
     price: 7200,
     maxDefense: 22,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: {
+      stamina: -2,
+      guard: 5,
+      guard_up: 2,
+      flame_aura: 2
+    }
   }),
   deepFreeze<LegArmor>({
     id: 45,
@@ -1073,15 +997,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 13, points: -2 },
-      { skillId: 28, points: 2 },
-      { skillId: 29, points: 4 },
-      { skillId: 52, points: 3 }
-    ],
     price: 7200,
     maxDefense: 11,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: {
+      stamina: -2,
+      guard_up: 2,
+      reload_spd: 4,
+      flame_aura: 3
+    }
   }),
   deepFreeze<LegArmor>({
     id: 46,
@@ -1097,15 +1021,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 0, points: -1 },
-      { skillId: 1, points: 5 },
-      { skillId: 11, points: 3 },
-      { skillId: 37, points: -2 }
-    ],
     price: 11000,
     maxDefense: 24,
-    maxLowRankDefense: 32
+    maxLowRankDefense: 32,
+    skillPoints: {
+      sharpness: -1,
+      handicraft: 5,
+      hearing: 3,
+      protection: -2
+    }
   }),
   deepFreeze<LegArmor>({
     id: 47,
@@ -1121,15 +1045,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 3, points: -1 },
-      { skillId: 11, points: 3 },
-      { skillId: 14, points: 5 },
-      { skillId: 37, points: -2 }
-    ],
     price: 11000,
     maxDefense: 12,
-    maxLowRankDefense: 16
+    maxLowRankDefense: 16,
+    skillPoints: {
+      recoil: -1,
+      hearing: 3,
+      loading: 5,
+      protection: -2
+    }
   }),
   deepFreeze<LegArmor>({
     id: 48,
@@ -1145,15 +1069,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -3,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 0, points: 3 },
-      { skillId: 18, points: 3 },
-      { skillId: 24, points: 2 },
-      { skillId: 71, points: -1 }
-    ],
     price: 12000,
     maxDefense: 24,
-    maxLowRankDefense: 32
+    maxLowRankDefense: 32,
+    skillPoints: {
+      sharpness: 3,
+      fastcharge: 3,
+      rec_speed: 2,
+      combo_rate: -1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 49,
@@ -1169,15 +1093,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -3,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 3, points: 3 },
-      { skillId: 24, points: 3 },
-      { skillId: 32, points: 2 },
-      { skillId: 71, points: -1 }
-    ],
     price: 12000,
     maxDefense: 12,
-    maxLowRankDefense: 16
+    maxLowRankDefense: 16,
+    skillPoints: {
+      recoil: 3,
+      rec_speed: 3,
+      'clust_s+': 2,
+      combo_rate: -1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 50,
@@ -1193,13 +1117,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 2,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 40, points: 3 },
-      { skillId: 41, points: 3 },
-      { skillId: 69, points: 2 }
-    ],
     price: 4600,
-    maxDefense: 26
+    maxDefense: 26,
+    skillPoints: { gathering: 3, spd_gather: 3, whim: 2 }
   }),
   deepFreeze<LegArmor>({
     id: 51,
@@ -1215,13 +1135,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 2,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 40, points: 3 },
-      { skillId: 41, points: 3 },
-      { skillId: 69, points: 2 }
-    ],
     price: 4600,
-    maxDefense: 15
+    maxDefense: 15,
+    skillPoints: { gathering: 3, spd_gather: 3, whim: 2 }
   }),
   deepFreeze<LegArmor>({
     id: 52,
@@ -1237,12 +1153,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 4,
-    skillPoints: [
-      { skillId: 50, points: 10 },
-      { skillId: 79, points: 1 }
-    ],
     price: 4700,
-    maxDefense: 26
+    maxDefense: 26,
+    skillPoints: { swimming: 10, currentres: 1 }
   }),
   deepFreeze<LegArmor>({
     id: 53,
@@ -1258,12 +1171,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 4,
-    skillPoints: [
-      { skillId: 50, points: 10 },
-      { skillId: 79, points: 1 }
-    ],
     price: 4700,
-    maxDefense: 15
+    maxDefense: 15,
+    skillPoints: { swimming: 10, currentres: 1 }
   }),
   deepFreeze<LegArmor>({
     id: 54,
@@ -1279,13 +1189,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 23, points: 3 },
-      { skillId: 71, points: 4 },
-      { skillId: 72, points: 1 }
-    ],
     price: 5400,
-    maxDefense: 30
+    maxDefense: 30,
+    skillPoints: { health: 3, combo_rate: 4, combo_plus: 1 }
   }),
   deepFreeze<LegArmor>({
     id: 55,
@@ -1301,13 +1207,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 23, points: 2 },
-      { skillId: 71, points: 4 },
-      { skillId: 72, points: 2 }
-    ],
     price: 5400,
-    maxDefense: 18
+    maxDefense: 18,
+    skillPoints: { health: 2, combo_rate: 4, combo_plus: 2 }
   }),
   deepFreeze<LegArmor>({
     id: 56,
@@ -1323,13 +1225,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 4,
-    skillPoints: [
-      { skillId: 24, points: 2 },
-      { skillId: 60, points: 5 },
-      { skillId: 66, points: 4 }
-    ],
     price: 5400,
-    maxDefense: 30
+    maxDefense: 30,
+    skillPoints: { rec_speed: 2, transportr: 5, heat_res: 4 }
   }),
   deepFreeze<LegArmor>({
     id: 57,
@@ -1345,13 +1243,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 4,
-    skillPoints: [
-      { skillId: 24, points: 2 },
-      { skillId: 60, points: 5 },
-      { skillId: 66, points: 4 }
-    ],
     price: 5400,
-    maxDefense: 18
+    maxDefense: 18,
+    skillPoints: { rec_speed: 2, transportr: 5, heat_res: 4 }
   }),
   deepFreeze<LegArmor>({
     id: 58,
@@ -1367,14 +1261,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 42, points: 1 },
-      { skillId: 44, points: 2 },
-      { skillId: 62, points: -1 },
-      { skillId: 68, points: 5 }
-    ],
     price: 5400,
-    maxDefense: 30
+    maxDefense: 30,
+    skillPoints: { psychic: 1, evasion: 2, water_res: -1, map: 5 }
   }),
   deepFreeze<LegArmor>({
     id: 59,
@@ -1390,14 +1279,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 42, points: 1 },
-      { skillId: 44, points: 3 },
-      { skillId: 62, points: -2 },
-      { skillId: 68, points: 3 }
-    ],
     price: 5400,
-    maxDefense: 18
+    maxDefense: 18,
+    skillPoints: { psychic: 1, evasion: 3, water_res: -2, map: 3 }
   }),
   deepFreeze<LegArmor>({
     id: 60,
@@ -1413,14 +1297,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 3,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 13, points: 3 },
-      { skillId: 34, points: 2 },
-      { skillId: 54, points: -1 },
-      { skillId: 77, points: 3 }
-    ],
     price: 6400,
-    maxDefense: 34
+    maxDefense: 34,
+    skillPoints: { stamina: 3, hunger: 2, sleep: -1, perception: 3 }
   }),
   deepFreeze<LegArmor>({
     id: 61,
@@ -1436,14 +1315,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 3,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 13, points: 3 },
-      { skillId: 34, points: 2 },
-      { skillId: 54, points: -2 },
-      { skillId: 77, points: 2 }
-    ],
     price: 6400,
-    maxDefense: 20
+    maxDefense: 20,
+    skillPoints: { stamina: 3, hunger: 2, sleep: -2, perception: 2 }
   }),
   deepFreeze<LegArmor>({
     id: 62,
@@ -1459,10 +1333,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -1,
     slots: 0,
     rarity: 4,
-    skillPoints: [],
-    torsoUp: true,
     price: 7100,
-    maxDefense: 34
+    maxDefense: 34,
+    skillPoints: {}
   }),
   deepFreeze<LegArmor>({
     id: 63,
@@ -1478,10 +1351,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -1,
     slots: 0,
     rarity: 4,
-    skillPoints: [],
-    torsoUp: true,
     price: 7100,
-    maxDefense: 20
+    maxDefense: 20,
+    skillPoints: {}
   }),
   deepFreeze<LegArmor>({
     id: 64,
@@ -1497,15 +1369,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 2,
     slots: 2,
     rarity: 5,
-    skillPoints: [
-      { skillId: 25, points: 2 },
-      { skillId: 35, points: 2 },
-      { skillId: 55, points: 3 },
-      { skillId: 58, points: 1 },
-      { skillId: 67, points: -1 }
-    ],
     price: 8000,
-    maxDefense: 38
+    maxDefense: 38,
+    skillPoints: {
+      expert: 2,
+      attack: 2,
+      stun: 3,
+      gluttony: 1,
+      cold_res: -1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 65,
@@ -1521,15 +1393,15 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 2,
     slots: 2,
     rarity: 5,
-    skillPoints: [
-      { skillId: 25, points: 2 },
-      { skillId: 35, points: 2 },
-      { skillId: 55, points: 2 },
-      { skillId: 58, points: 2 },
-      { skillId: 67, points: -1 }
-    ],
     price: 8000,
-    maxDefense: 22
+    maxDefense: 22,
+    skillPoints: {
+      expert: 2,
+      attack: 2,
+      stun: 2,
+      gluttony: 2,
+      cold_res: -1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 66,
@@ -1545,13 +1417,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 6,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 0, points: 6 },
-      { skillId: 9, points: 2 },
-      { skillId: 22, points: -3 }
-    ],
     price: 10500,
-    maxDefense: 38
+    maxDefense: 38,
+    skillPoints: { sharpness: 6, status: 2, poison: -3 }
   }),
   deepFreeze<LegArmor>({
     id: 67,
@@ -1567,13 +1435,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 6,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 9, points: 2 },
-      { skillId: 22, points: -3 },
-      { skillId: 29, points: 6 }
-    ],
     price: 10500,
-    maxDefense: 22
+    maxDefense: 22,
+    skillPoints: { status: 2, poison: -3, reload_spd: 6 }
   }),
   deepFreeze<LegArmor>({
     id: 68,
@@ -1589,14 +1453,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 2,
     slots: 2,
     rarity: 5,
-    skillPoints: [
-      { skillId: 39, points: 1 },
-      { skillId: 46, points: 2 },
-      { skillId: 56, points: 5 },
-      { skillId: 63, points: -1 }
-    ],
     price: 8500,
-    maxDefense: 38
+    maxDefense: 38,
+    skillPoints: {
+      wind_res: 1,
+      eating: 2,
+      'mud/snow': 5,
+      thunderres: -1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 69,
@@ -1612,14 +1476,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 2,
     slots: 2,
     rarity: 5,
-    skillPoints: [
-      { skillId: 3, points: 3 },
-      { skillId: 31, points: 3 },
-      { skillId: 46, points: 2 },
-      { skillId: 63, points: -1 }
-    ],
     price: 8500,
-    maxDefense: 22
+    maxDefense: 22,
+    skillPoints: {
+      recoil: 3,
+      'crag_s+': 3,
+      eating: 2,
+      thunderres: -1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 70,
@@ -1635,14 +1499,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 3,
     rarity: 5,
-    skillPoints: [
-      { skillId: 36, points: 1 },
-      { skillId: 38, points: 2 },
-      { skillId: 43, points: 1 },
-      { skillId: 64, points: -3 }
-    ],
     price: 10000,
-    maxDefense: 42
+    maxDefense: 42,
+    skillPoints: {
+      defense: 1,
+      'wide-range': 2,
+      rec_level: 1,
+      ice_res: -3
+    }
   }),
   deepFreeze<LegArmor>({
     id: 71,
@@ -1658,14 +1522,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 3,
     rarity: 5,
-    skillPoints: [
-      { skillId: 36, points: 2 },
-      { skillId: 38, points: 1 },
-      { skillId: 43, points: 1 },
-      { skillId: 64, points: -3 }
-    ],
     price: 10000,
-    maxDefense: 25
+    maxDefense: 25,
+    skillPoints: {
+      defense: 2,
+      'wide-range': 1,
+      rec_level: 1,
+      ice_res: -3
+    }
   }),
   deepFreeze<LegArmor>({
     id: 72,
@@ -1681,14 +1545,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 2,
     rarity: 5,
-    skillPoints: [
-      { skillId: 34, points: -1 },
-      { skillId: 37, points: 2 },
-      { skillId: 49, points: 3 },
-      { skillId: 79, points: 3 }
-    ],
     price: 11800,
-    maxDefense: 44
+    maxDefense: 44,
+    skillPoints: {
+      hunger: -1,
+      protection: 2,
+      constitutn: 3,
+      currentres: 3
+    }
   }),
   deepFreeze<LegArmor>({
     id: 73,
@@ -1704,14 +1568,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 2,
     rarity: 5,
-    skillPoints: [
-      { skillId: 30, points: 3 },
-      { skillId: 34, points: -1 },
-      { skillId: 37, points: 3 },
-      { skillId: 49, points: 2 }
-    ],
     price: 11800,
-    maxDefense: 26
+    maxDefense: 26,
+    skillPoints: {
+      'pellet_s+': 3,
+      hunger: -1,
+      protection: 3,
+      constitutn: 2
+    }
   }),
   deepFreeze<LegArmor>({
     id: 74,
@@ -1727,14 +1591,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 0,
     rarity: 5,
-    skillPoints: [
-      { skillId: 17, points: 3 },
-      { skillId: 18, points: 2 },
-      { skillId: 55, points: -1 },
-      { skillId: 64, points: 7 }
-    ],
     price: 12300,
-    maxDefense: 44
+    maxDefense: 44,
+    skillPoints: {
+      tranquilzr: 3,
+      fastcharge: 2,
+      stun: -1,
+      ice_res: 7
+    }
   }),
   deepFreeze<LegArmor>({
     id: 75,
@@ -1750,14 +1614,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 1,
     slots: 0,
     rarity: 5,
-    skillPoints: [
-      { skillId: 6, points: 2 },
-      { skillId: 17, points: 3 },
-      { skillId: 55, points: -2 },
-      { skillId: 64, points: 6 }
-    ],
     price: 12300,
-    maxDefense: 26
+    maxDefense: 26,
+    skillPoints: {
+      pellets_up: 2,
+      tranquilzr: 3,
+      stun: -2,
+      ice_res: 6
+    }
   }),
   deepFreeze<LegArmor>({
     id: 76,
@@ -1773,14 +1637,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 13, points: 4 },
-      { skillId: 25, points: -2 },
-      { skillId: 35, points: 1 },
-      { skillId: 45, points: 4 }
-    ],
     price: 13800,
-    maxDefense: 48
+    maxDefense: 48,
+    skillPoints: { stamina: 4, expert: -2, attack: 1, potential: 4 }
   }),
   deepFreeze<LegArmor>({
     id: 77,
@@ -1796,14 +1655,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 13, points: 4 },
-      { skillId: 25, points: -2 },
-      { skillId: 35, points: 1 },
-      { skillId: 45, points: 4 }
-    ],
     price: 13800,
-    maxDefense: 28
+    maxDefense: 28,
+    skillPoints: { stamina: 4, expert: -2, attack: 1, potential: 4 }
   }),
   deepFreeze<LegArmor>({
     id: 78,
@@ -1819,14 +1673,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 2,
     slots: 3,
     rarity: 5,
-    skillPoints: [
-      { skillId: 24, points: -2 },
-      { skillId: 25, points: 2 },
-      { skillId: 46, points: 1 },
-      { skillId: 55, points: 2 }
-    ],
     price: 14800,
-    maxDefense: 50
+    maxDefense: 50,
+    skillPoints: { rec_speed: -2, expert: 2, eating: 1, stun: 2 }
   }),
   deepFreeze<LegArmor>({
     id: 79,
@@ -1842,14 +1691,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 2,
     slots: 3,
     rarity: 5,
-    skillPoints: [
-      { skillId: 24, points: -3 },
-      { skillId: 25, points: 2 },
-      { skillId: 46, points: 1 },
-      { skillId: 55, points: 1 }
-    ],
     price: 14800,
-    maxDefense: 30
+    maxDefense: 30,
+    skillPoints: { rec_speed: -3, expert: 2, eating: 1, stun: 1 }
   }),
   deepFreeze<LegArmor>({
     id: 80,
@@ -1865,10 +1709,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 6,
-    skillPoints: [],
-    torsoUp: true,
     price: 25000,
-    maxDefense: 36
+    maxDefense: 36,
+    skillPoints: {}
   }),
   deepFreeze<LegArmor>({
     id: 81,
@@ -1884,10 +1727,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 6,
-    skillPoints: [],
-    torsoUp: true,
     price: 25000,
-    maxDefense: 22
+    maxDefense: 22,
+    skillPoints: {}
   }),
   deepFreeze<LegArmor>({
     id: 82,
@@ -1903,14 +1745,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -4,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 11, points: 2 },
-      { skillId: 23, points: 3 },
-      { skillId: 37, points: -3 },
-      { skillId: 61, points: 3 }
-    ],
     price: 14800,
-    maxDefense: 50
+    maxDefense: 50,
+    skillPoints: {
+      hearing: 2,
+      health: 3,
+      protection: -3,
+      fire_res: 3
+    }
   }),
   deepFreeze<LegArmor>({
     id: 83,
@@ -1926,14 +1768,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -4,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 11, points: 2 },
-      { skillId: 23, points: 2 },
-      { skillId: 37, points: -3 },
-      { skillId: 61, points: 4 }
-    ],
     price: 14800,
-    maxDefense: 30
+    maxDefense: 30,
+    skillPoints: {
+      hearing: 2,
+      health: 2,
+      protection: -3,
+      fire_res: 4
+    }
   }),
   deepFreeze<LegArmor>({
     id: 84,
@@ -1949,14 +1791,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 3,
     rarity: 5,
-    skillPoints: [
-      { skillId: 9, points: 2 },
-      { skillId: 22, points: 1 },
-      { skillId: 23, points: -2 },
-      { skillId: 49, points: 2 }
-    ],
     price: 15800,
-    maxDefense: 54
+    maxDefense: 54,
+    skillPoints: { status: 2, poison: 1, health: -2, constitutn: 2 }
   }),
   deepFreeze<LegArmor>({
     id: 85,
@@ -1972,14 +1809,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 3,
     rarity: 5,
-    skillPoints: [
-      { skillId: 9, points: 2 },
-      { skillId: 22, points: 1 },
-      { skillId: 23, points: -3 },
-      { skillId: 49, points: 1 }
-    ],
     price: 15800,
-    maxDefense: 32
+    maxDefense: 32,
+    skillPoints: { status: 2, poison: 1, health: -3, constitutn: 1 }
   }),
   deepFreeze<LegArmor>({
     id: 86,
@@ -1995,14 +1827,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 26, points: -1 },
-      { skillId: 28, points: 2 },
-      { skillId: 39, points: 5 },
-      { skillId: 63, points: 3 }
-    ],
     price: 17500,
-    maxDefense: 54
+    maxDefense: 54,
+    skillPoints: {
+      sharpener: -1,
+      guard_up: 2,
+      wind_res: 5,
+      thunderres: 3
+    }
   }),
   deepFreeze<LegArmor>({
     id: 87,
@@ -2018,14 +1850,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 3, points: 5 },
-      { skillId: 28, points: 2 },
-      { skillId: 29, points: -1 },
-      { skillId: 63, points: 3 }
-    ],
     price: 17500,
-    maxDefense: 32
+    maxDefense: 32,
+    skillPoints: {
+      recoil: 5,
+      guard_up: 2,
+      reload_spd: -1,
+      thunderres: 3
+    }
   }),
   deepFreeze<LegArmor>({
     id: 88,
@@ -2041,14 +1873,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 5,
     slots: 3,
     rarity: 6,
-    skillPoints: [
-      { skillId: 13, points: 1 },
-      { skillId: 45, points: -3 },
-      { skillId: 48, points: 1 },
-      { skillId: 65, points: 2 }
-    ],
     price: 19000,
-    maxDefense: 58
+    maxDefense: 58,
+    skillPoints: {
+      stamina: 1,
+      potential: -3,
+      crit_draw: 1,
+      dragon_res: 2
+    }
   }),
   deepFreeze<LegArmor>({
     id: 89,
@@ -2064,14 +1896,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 5,
     slots: 3,
     rarity: 6,
-    skillPoints: [
-      { skillId: 6, points: 1 },
-      { skillId: 30, points: 2 },
-      { skillId: 45, points: -3 },
-      { skillId: 65, points: 1 }
-    ],
     price: 19000,
-    maxDefense: 34
+    maxDefense: 34,
+    skillPoints: {
+      pellets_up: 1,
+      'pellet_s+': 2,
+      potential: -3,
+      dragon_res: 1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 90,
@@ -2087,14 +1919,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -2,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 9, points: -2 },
-      { skillId: 10, points: 3 },
-      { skillId: 20, points: 4 },
-      { skillId: 50, points: 2 }
-    ],
     price: 18000,
-    maxDefense: 58
+    maxDefense: 58,
+    skillPoints: {
+      status: -2,
+      elemental: 3,
+      freeelemnt: 4,
+      swimming: 2
+    }
   }),
   deepFreeze<LegArmor>({
     id: 91,
@@ -2110,14 +1942,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -2,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 9, points: -2 },
-      { skillId: 10, points: 3 },
-      { skillId: 21, points: 3 },
-      { skillId: 50, points: 3 }
-    ],
     price: 18000,
-    maxDefense: 34
+    maxDefense: 34,
+    skillPoints: {
+      status: -2,
+      elemental: 3,
+      rapid_fire: 3,
+      swimming: 3
+    }
   }),
   deepFreeze<LegArmor>({
     id: 92,
@@ -2133,14 +1965,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 2, points: 3 },
-      { skillId: 25, points: 3 },
-      { skillId: 36, points: -2 },
-      { skillId: 66, points: 5 }
-    ],
     price: 18000,
-    maxDefense: 58
+    maxDefense: 58,
+    skillPoints: { fencing: 3, expert: 3, defense: -2, heat_res: 5 }
   }),
   deepFreeze<LegArmor>({
     id: 93,
@@ -2156,14 +1983,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 4, points: 2 },
-      { skillId: 25, points: 3 },
-      { skillId: 36, points: -2 },
-      { skillId: 66, points: 6 }
-    ],
     price: 18000,
-    maxDefense: 34
+    maxDefense: 34,
+    skillPoints: {
+      normals_up: 2,
+      expert: 3,
+      defense: -2,
+      heat_res: 6
+    }
   }),
   deepFreeze<LegArmor>({
     id: 94,
@@ -2179,14 +2006,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 16, points: 4 },
-      { skillId: 44, points: 3 },
-      { skillId: 66, points: -2 },
-      { skillId: 67, points: 4 }
-    ],
     price: 18000,
-    maxDefense: 58
+    maxDefense: 58,
+    skillPoints: {
+      evade_dist: 4,
+      evasion: 3,
+      heat_res: -2,
+      cold_res: 4
+    }
   }),
   deepFreeze<LegArmor>({
     id: 95,
@@ -2202,14 +2029,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 16, points: 4 },
-      { skillId: 44, points: 3 },
-      { skillId: 66, points: -2 },
-      { skillId: 67, points: 4 }
-    ],
     price: 18000,
-    maxDefense: 34
+    maxDefense: 34,
+    skillPoints: {
+      evade_dist: 4,
+      evasion: 3,
+      heat_res: -2,
+      cold_res: 4
+    }
   }),
   deepFreeze<LegArmor>({
     id: 96,
@@ -2225,14 +2052,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -2,
     slots: 3,
     rarity: 6,
-    skillPoints: [
-      { skillId: 19, points: 2 },
-      { skillId: 33, points: 1 },
-      { skillId: 36, points: 1 },
-      { skillId: 46, points: -3 }
-    ],
     price: 18800,
-    maxDefense: 62
+    maxDefense: 62,
+    skillPoints: {
+      punishdraw: 2,
+      bomb_boost: 1,
+      defense: 1,
+      eating: -3
+    }
   }),
   deepFreeze<LegArmor>({
     id: 97,
@@ -2248,14 +2075,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -2,
     slots: 3,
     rarity: 6,
-    skillPoints: [
-      { skillId: 3, points: 1 },
-      { skillId: 33, points: 1 },
-      { skillId: 36, points: 2 },
-      { skillId: 46, points: -3 }
-    ],
     price: 18800,
-    maxDefense: 37
+    maxDefense: 37,
+    skillPoints: {
+      recoil: 1,
+      bomb_boost: 1,
+      defense: 2,
+      eating: -3
+    }
   }),
   deepFreeze<LegArmor>({
     id: 98,
@@ -2271,14 +2098,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 2,
     rarity: 6,
-    skillPoints: [
-      { skillId: 0, points: 2 },
-      { skillId: 13, points: -1 },
-      { skillId: 27, points: 2 },
-      { skillId: 52, points: 4 }
-    ],
     price: 19800,
-    maxDefense: 62
+    maxDefense: 62,
+    skillPoints: {
+      sharpness: 2,
+      stamina: -1,
+      guard: 2,
+      flame_aura: 4
+    }
   }),
   deepFreeze<LegArmor>({
     id: 99,
@@ -2294,14 +2121,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 2,
     rarity: 6,
-    skillPoints: [
-      { skillId: 4, points: 2 },
-      { skillId: 7, points: 1 },
-      { skillId: 13, points: -2 },
-      { skillId: 52, points: 4 }
-    ],
     price: 19800,
-    maxDefense: 37
+    maxDefense: 37,
+    skillPoints: {
+      normals_up: 2,
+      'normal_s+': 1,
+      stamina: -2,
+      flame_aura: 4
+    }
   }),
   deepFreeze<LegArmor>({
     id: 100,
@@ -2317,14 +2144,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -4,
     slots: 3,
     rarity: 7,
-    skillPoints: [
-      { skillId: 1, points: 2 },
-      { skillId: 34, points: -3 },
-      { skillId: 35, points: 1 },
-      { skillId: 42, points: 1 }
-    ],
     price: 41500,
-    maxDefense: 64
+    maxDefense: 64,
+    skillPoints: {
+      handicraft: 2,
+      hunger: -3,
+      attack: 1,
+      psychic: 1
+    }
   }),
   deepFreeze<LegArmor>({
     id: 101,
@@ -2340,14 +2167,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -4,
     slots: 3,
     rarity: 7,
-    skillPoints: [
-      { skillId: 14, points: 2 },
-      { skillId: 34, points: -3 },
-      { skillId: 35, points: 1 },
-      { skillId: 42, points: 1 }
-    ],
     price: 41500,
-    maxDefense: 38
+    maxDefense: 38,
+    skillPoints: { loading: 2, hunger: -3, attack: 1, psychic: 1 }
   }),
   deepFreeze<LegArmor>({
     id: 102,
@@ -2363,14 +2185,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 3,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 13, points: -1 },
-      { skillId: 19, points: 2 },
-      { skillId: 23, points: 5 },
-      { skillId: 28, points: 3 }
-    ],
     price: 32300,
-    maxDefense: 62
+    maxDefense: 62,
+    skillPoints: {
+      stamina: -1,
+      punishdraw: 2,
+      health: 5,
+      guard_up: 3
+    }
   }),
   deepFreeze<LegArmor>({
     id: 103,
@@ -2386,14 +2208,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 3,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 13, points: -1 },
-      { skillId: 23, points: 6 },
-      { skillId: 28, points: 2 },
-      { skillId: 29, points: 4 }
-    ],
     price: 32300,
-    maxDefense: 37
+    maxDefense: 37,
+    skillPoints: {
+      stamina: -1,
+      health: 6,
+      guard_up: 2,
+      reload_spd: 4
+    }
   }),
   deepFreeze<LegArmor>({
     id: 104,
@@ -2409,14 +2231,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 0, points: -3 },
-      { skillId: 1, points: 4 },
-      { skillId: 11, points: 4 },
-      { skillId: 37, points: -2 }
-    ],
     price: 26200,
-    maxDefense: 66
+    maxDefense: 66,
+    skillPoints: {
+      sharpness: -3,
+      handicraft: 4,
+      hearing: 4,
+      protection: -2
+    }
   }),
   deepFreeze<LegArmor>({
     id: 105,
@@ -2432,14 +2254,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 3, points: -3 },
-      { skillId: 11, points: 4 },
-      { skillId: 14, points: 4 },
-      { skillId: 37, points: -2 }
-    ],
     price: 26200,
-    maxDefense: 39
+    maxDefense: 39,
+    skillPoints: {
+      recoil: -3,
+      hearing: 4,
+      loading: 4,
+      protection: -2
+    }
   }),
   deepFreeze<LegArmor>({
     id: 106,
@@ -2455,14 +2277,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 0, points: 2 },
-      { skillId: 18, points: 3 },
-      { skillId: 24, points: 5 },
-      { skillId: 71, points: -3 }
-    ],
     price: 27500,
-    maxDefense: 66
+    maxDefense: 66,
+    skillPoints: {
+      sharpness: 2,
+      fastcharge: 3,
+      rec_speed: 5,
+      combo_rate: -3
+    }
   }),
   deepFreeze<LegArmor>({
     id: 107,
@@ -2478,14 +2300,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 3, points: 3 },
-      { skillId: 24, points: 4 },
-      { skillId: 32, points: 4 },
-      { skillId: 71, points: -2 }
-    ],
     price: 27500,
-    maxDefense: 39
+    maxDefense: 39,
+    skillPoints: {
+      recoil: 3,
+      rec_speed: 4,
+      'clust_s+': 4,
+      combo_rate: -2
+    }
   }),
   deepFreeze<LegArmor>({
     id: 108,
@@ -2501,14 +2323,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -5,
     slots: 0,
     rarity: 7,
-    skillPoints: [
-      { skillId: 16, points: 4 },
-      { skillId: 20, points: 5 },
-      { skillId: 43, points: -2 },
-      { skillId: 81, points: 2 }
-    ],
     price: 66666,
-    maxDefense: 70
+    maxDefense: 70,
+    skillPoints: {
+      evade_dist: 4,
+      freeelemnt: 5,
+      rec_level: -2,
+      blight_res: 2
+    }
   }),
   deepFreeze<LegArmor>({
     id: 109,
@@ -2524,14 +2346,14 @@ export const LegArmors: LegArmor[] = [
     dragonRes: -5,
     slots: 1,
     rarity: 7,
-    skillPoints: [
-      { skillId: 16, points: 4 },
-      { skillId: 21, points: 3 },
-      { skillId: 43, points: -2 },
-      { skillId: 81, points: 2 }
-    ],
     price: 66666,
-    maxDefense: 42
+    maxDefense: 42,
+    skillPoints: {
+      evade_dist: 4,
+      rapid_fire: 3,
+      rec_level: -2,
+      blight_res: 2
+    }
   }),
   deepFreeze<LegArmor>({
     id: 110,
@@ -2547,9 +2369,9 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 0,
     slots: 3,
     rarity: 7,
-    skillPoints: [],
     price: 33333,
-    maxDefense: 18
+    maxDefense: 18,
+    skillPoints: {}
   }),
   deepFreeze<LegArmor>({
     id: 111,
@@ -2565,8 +2387,8 @@ export const LegArmors: LegArmor[] = [
     dragonRes: 2,
     slots: 0,
     rarity: 6,
-    skillPoints: [{ skillId: 45, points: 13 }],
     price: 15000,
-    maxDefense: 28
+    maxDefense: 28,
+    skillPoints: { potential: 13 }
   })
 ];

@@ -16,14 +16,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 40, points: 2 },
-      { skillId: 41, points: 3 },
-      { skillId: 69, points: 2 }
-    ],
     price: 150,
     maxDefense: 1,
-    maxLowRankDefense: 9
+    maxLowRankDefense: 9,
+    skillPoints: { gathering: 2, spd_gather: 3, whim: 2 }
   }),
   deepFreeze<ChestArmor>({
     id: 1,
@@ -39,15 +35,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 0,
     rarity: 1,
-    skillPoints: [
-      { skillId: 23, points: 3 },
-      { skillId: 70, points: 1 },
-      { skillId: 71, points: 4 },
-      { skillId: 72, points: 1 }
-    ],
     price: 200,
     maxDefense: 2,
-    maxLowRankDefense: 9
+    maxLowRankDefense: 9,
+    skillPoints: {
+      health: 3,
+      fishing: 1,
+      combo_rate: 4,
+      combo_plus: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 2,
@@ -63,14 +59,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 1,
-    skillPoints: [
-      { skillId: 24, points: 2 },
-      { skillId: 60, points: 2 },
-      { skillId: 66, points: 5 }
-    ],
     price: 500,
     maxDefense: 4,
-    maxLowRankDefense: 11
+    maxLowRankDefense: 11,
+    skillPoints: { rec_speed: 2, transportr: 2, heat_res: 5 }
   }),
   deepFreeze<ChestArmor>({
     id: 3,
@@ -86,16 +78,16 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -1,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 35, points: 1 },
-      { skillId: 42, points: 3 },
-      { skillId: 62, points: -1 },
-      { skillId: 68, points: 1 },
-      { skillId: 75, points: 1 }
-    ],
     price: 500,
     maxDefense: 6,
-    maxLowRankDefense: 20
+    maxLowRankDefense: 20,
+    skillPoints: {
+      attack: 1,
+      psychic: 3,
+      water_res: -1,
+      map: 1,
+      bbq: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 4,
@@ -111,16 +103,16 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -1,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 35, points: 1 },
-      { skillId: 42, points: 3 },
-      { skillId: 62, points: -1 },
-      { skillId: 68, points: 1 },
-      { skillId: 75, points: 1 }
-    ],
     price: 500,
     maxDefense: 3,
-    maxLowRankDefense: 10
+    maxLowRankDefense: 10,
+    skillPoints: {
+      attack: 1,
+      psychic: 3,
+      water_res: -1,
+      map: 1,
+      bbq: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 5,
@@ -136,15 +128,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 3,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 34, points: 4 },
-      { skillId: 54, points: -1 },
-      { skillId: 73, points: 1 },
-      { skillId: 77, points: 1 }
-    ],
     price: 750,
     maxDefense: 8,
-    maxLowRankDefense: 22
+    maxLowRankDefense: 22,
+    skillPoints: {
+      hunger: 4,
+      sleep: -1,
+      lastingpwr: 1,
+      perception: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 6,
@@ -160,15 +152,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 3,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 34, points: 3 },
-      { skillId: 54, points: -2 },
-      { skillId: 73, points: 1 },
-      { skillId: 77, points: 1 }
-    ],
     price: 750,
     maxDefense: 4,
-    maxLowRankDefense: 11
+    maxLowRankDefense: 11,
+    skillPoints: {
+      hunger: 3,
+      sleep: -2,
+      lastingpwr: 1,
+      perception: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 7,
@@ -184,15 +176,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -1,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 25, points: 3 },
-      { skillId: 26, points: 2 },
-      { skillId: 76, points: 1 },
-      { skillId: 78, points: -1 }
-    ],
     price: 1000,
     maxDefense: 8,
-    maxLowRankDefense: 22
+    maxLowRankDefense: 22,
+    skillPoints: {
+      expert: 3,
+      sharpener: 2,
+      speedsetup: 1,
+      oxygen: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 8,
@@ -208,15 +200,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -1,
     slots: 1,
     rarity: 1,
-    skillPoints: [
-      { skillId: 7, points: 2 },
-      { skillId: 25, points: 3 },
-      { skillId: 76, points: 1 },
-      { skillId: 78, points: -1 }
-    ],
     price: 1000,
     maxDefense: 4,
-    maxLowRankDefense: 11
+    maxLowRankDefense: 11,
+    skillPoints: {
+      'normal_s+': 2,
+      expert: 3,
+      speedsetup: 1,
+      oxygen: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 9,
@@ -232,15 +224,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 35, points: 2 },
-      { skillId: 55, points: 1 },
-      { skillId: 58, points: 1 },
-      { skillId: 67, points: -3 }
-    ],
     price: 1200,
     maxDefense: 10,
-    maxLowRankDefense: 24
+    maxLowRankDefense: 24,
+    skillPoints: { attack: 2, stun: 1, gluttony: 1, cold_res: -3 }
   }),
   deepFreeze<ChestArmor>({
     id: 10,
@@ -256,15 +243,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 35, points: 2 },
-      { skillId: 55, points: 2 },
-      { skillId: 58, points: 1 },
-      { skillId: 67, points: -2 }
-    ],
     price: 1200,
     maxDefense: 5,
-    maxLowRankDefense: 12
+    maxLowRankDefense: 12,
+    skillPoints: { attack: 2, stun: 2, gluttony: 1, cold_res: -2 }
   }),
   deepFreeze<ChestArmor>({
     id: 11,
@@ -280,14 +262,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 5,
     slots: 0,
     rarity: 2,
-    skillPoints: [
-      { skillId: 0, points: 3 },
-      { skillId: 9, points: 4 },
-      { skillId: 22, points: -2 }
-    ],
     price: 1800,
     maxDefense: 10,
-    maxLowRankDefense: 24
+    maxLowRankDefense: 24,
+    skillPoints: { sharpness: 3, status: 4, poison: -2 }
   }),
   deepFreeze<ChestArmor>({
     id: 12,
@@ -303,14 +281,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 5,
     slots: 0,
     rarity: 2,
-    skillPoints: [
-      { skillId: 9, points: 4 },
-      { skillId: 22, points: -2 },
-      { skillId: 29, points: 3 }
-    ],
     price: 1800,
     maxDefense: 5,
-    maxLowRankDefense: 12
+    maxLowRankDefense: 12,
+    skillPoints: { status: 4, poison: -2, reload_spd: 3 }
   }),
   deepFreeze<ChestArmor>({
     id: 13,
@@ -326,16 +300,16 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 35, points: 1 },
-      { skillId: 39, points: 2 },
-      { skillId: 46, points: 2 },
-      { skillId: 56, points: 1 },
-      { skillId: 63, points: -1 }
-    ],
     price: 1400,
     maxDefense: 12,
-    maxLowRankDefense: 24
+    maxLowRankDefense: 24,
+    skillPoints: {
+      attack: 1,
+      wind_res: 2,
+      eating: 2,
+      'mud/snow': 1,
+      thunderres: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 14,
@@ -351,16 +325,16 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 3, points: 2 },
-      { skillId: 31, points: 1 },
-      { skillId: 35, points: 1 },
-      { skillId: 46, points: 2 },
-      { skillId: 63, points: -1 }
-    ],
     price: 1400,
     maxDefense: 6,
-    maxLowRankDefense: 12
+    maxLowRankDefense: 12,
+    skillPoints: {
+      recoil: 2,
+      'crag_s+': 1,
+      attack: 1,
+      eating: 2,
+      thunderres: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 15,
@@ -376,15 +350,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 36, points: 2 },
-      { skillId: 43, points: 2 },
-      { skillId: 44, points: 2 },
-      { skillId: 64, points: -1 }
-    ],
     price: 1700,
     maxDefense: 12,
-    maxLowRankDefense: 24
+    maxLowRankDefense: 24,
+    skillPoints: {
+      defense: 2,
+      rec_level: 2,
+      evasion: 2,
+      ice_res: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 16,
@@ -400,15 +374,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 36, points: 1 },
-      { skillId: 43, points: 2 },
-      { skillId: 44, points: 2 },
-      { skillId: 64, points: -2 }
-    ],
     price: 1700,
     maxDefense: 6,
-    maxLowRankDefense: 12
+    maxLowRankDefense: 12,
+    skillPoints: {
+      defense: 1,
+      rec_level: 2,
+      evasion: 2,
+      ice_res: -2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 17,
@@ -424,16 +398,16 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 35, points: 2 },
-      { skillId: 37, points: 2 },
-      { skillId: 49, points: 1 },
-      { skillId: 61, points: -1 },
-      { skillId: 79, points: 1 }
-    ],
     price: 2200,
     maxDefense: 13,
-    maxLowRankDefense: 25
+    maxLowRankDefense: 25,
+    skillPoints: {
+      attack: 2,
+      protection: 2,
+      constitutn: 1,
+      fire_res: -1,
+      currentres: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 18,
@@ -449,16 +423,16 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 30, points: 1 },
-      { skillId: 35, points: 2 },
-      { skillId: 37, points: 2 },
-      { skillId: 49, points: 1 },
-      { skillId: 61, points: -1 }
-    ],
     price: 2200,
     maxDefense: 7,
-    maxLowRankDefense: 13
+    maxLowRankDefense: 13,
+    skillPoints: {
+      'pellet_s+': 1,
+      attack: 2,
+      protection: 2,
+      constitutn: 1,
+      fire_res: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 19,
@@ -474,14 +448,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 2,
-    skillPoints: [
-      { skillId: 26, points: 3 },
-      { skillId: 27, points: 4 },
-      { skillId: 50, points: -3 }
-    ],
     price: 2000,
     maxDefense: 12,
-    maxLowRankDefense: 24
+    maxLowRankDefense: 24,
+    skillPoints: { sharpener: 3, guard: 4, swimming: -3 }
   }),
   deepFreeze<ChestArmor>({
     id: 20,
@@ -497,16 +467,16 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 2,
     rarity: 2,
-    skillPoints: [
-      { skillId: 17, points: 1 },
-      { skillId: 18, points: 1 },
-      { skillId: 35, points: 1 },
-      { skillId: 55, points: -1 },
-      { skillId: 64, points: 1 }
-    ],
     price: 2400,
     maxDefense: 13,
-    maxLowRankDefense: 25
+    maxLowRankDefense: 25,
+    skillPoints: {
+      tranquilzr: 1,
+      fastcharge: 1,
+      attack: 1,
+      stun: -1,
+      ice_res: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 21,
@@ -522,16 +492,16 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 2,
     rarity: 2,
-    skillPoints: [
-      { skillId: 6, points: 1 },
-      { skillId: 17, points: 1 },
-      { skillId: 35, points: 1 },
-      { skillId: 55, points: -1 },
-      { skillId: 64, points: 1 }
-    ],
     price: 2400,
     maxDefense: 7,
-    maxLowRankDefense: 13
+    maxLowRankDefense: 13,
+    skillPoints: {
+      pellets_up: 1,
+      tranquilzr: 1,
+      attack: 1,
+      stun: -1,
+      ice_res: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 22,
@@ -547,15 +517,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 2,
-    skillPoints: [
-      { skillId: 13, points: 1 },
-      { skillId: 25, points: -3 },
-      { skillId: 35, points: 3 },
-      { skillId: 45, points: 2 }
-    ],
     price: 3200,
     maxDefense: 15,
-    maxLowRankDefense: 27
+    maxLowRankDefense: 27,
+    skillPoints: { stamina: 1, expert: -3, attack: 3, potential: 2 }
   }),
   deepFreeze<ChestArmor>({
     id: 23,
@@ -571,15 +536,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 2,
-    skillPoints: [
-      { skillId: 13, points: 1 },
-      { skillId: 25, points: -3 },
-      { skillId: 35, points: 3 },
-      { skillId: 45, points: 2 }
-    ],
     price: 3200,
     maxDefense: 8,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: { stamina: 1, expert: -3, attack: 3, potential: 2 }
   }),
   deepFreeze<ChestArmor>({
     id: 24,
@@ -595,16 +555,16 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 0,
     rarity: 2,
-    skillPoints: [
-      { skillId: 24, points: -1 },
-      { skillId: 35, points: 1 },
-      { skillId: 46, points: 2 },
-      { skillId: 55, points: 2 },
-      { skillId: 62, points: 3 }
-    ],
     price: 3600,
     maxDefense: 16,
-    maxLowRankDefense: 28
+    maxLowRankDefense: 28,
+    skillPoints: {
+      rec_speed: -1,
+      attack: 1,
+      eating: 2,
+      stun: 2,
+      water_res: 3
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 25,
@@ -620,16 +580,16 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 0,
     rarity: 2,
-    skillPoints: [
-      { skillId: 24, points: -2 },
-      { skillId: 35, points: 1 },
-      { skillId: 46, points: 2 },
-      { skillId: 55, points: 1 },
-      { skillId: 62, points: 3 }
-    ],
     price: 3600,
     maxDefense: 8,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: {
+      rec_speed: -2,
+      attack: 1,
+      eating: 2,
+      stun: 1,
+      water_res: 3
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 26,
@@ -645,15 +605,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 12, points: -3 },
-      { skillId: 15, points: 1 },
-      { skillId: 38, points: 2 },
-      { skillId: 41, points: 4 }
-    ],
     price: 10000,
     maxDefense: 15,
-    maxLowRankDefense: 27
+    maxLowRankDefense: 27,
+    skillPoints: {
+      fate: -3,
+      carving: 1,
+      'wide-range': 2,
+      spd_gather: 4
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 27,
@@ -669,15 +629,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 12, points: -3 },
-      { skillId: 15, points: 1 },
-      { skillId: 38, points: 2 },
-      { skillId: 41, points: 4 }
-    ],
     price: 10000,
     maxDefense: 8,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: {
+      fate: -3,
+      carving: 1,
+      'wide-range': 2,
+      spd_gather: 4
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 28,
@@ -693,15 +653,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 12, points: 1 },
-      { skillId: 42, points: 2 },
-      { skillId: 44, points: 3 },
-      { skillId: 57, points: -3 }
-    ],
     price: 10000,
     maxDefense: 15,
-    maxLowRankDefense: 27
+    maxLowRankDefense: 27,
+    skillPoints: { fate: 1, psychic: 2, evasion: 3, sense: -3 }
   }),
   deepFreeze<ChestArmor>({
     id: 29,
@@ -717,15 +672,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 12, points: 2 },
-      { skillId: 42, points: 2 },
-      { skillId: 44, points: 3 },
-      { skillId: 57, points: -2 }
-    ],
     price: 10000,
     maxDefense: 8,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: { fate: 2, psychic: 2, evasion: 3, sense: -2 }
   }),
   deepFreeze<ChestArmor>({
     id: 30,
@@ -741,15 +691,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -4,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 11, points: 1 },
-      { skillId: 23, points: 2 },
-      { skillId: 37, points: -2 },
-      { skillId: 61, points: 2 }
-    ],
     price: 3600,
     maxDefense: 16,
-    maxLowRankDefense: 28
+    maxLowRankDefense: 28,
+    skillPoints: {
+      hearing: 1,
+      health: 2,
+      protection: -2,
+      fire_res: 2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 31,
@@ -765,15 +715,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -4,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 11, points: 1 },
-      { skillId: 23, points: 2 },
-      { skillId: 37, points: -2 },
-      { skillId: 61, points: 2 }
-    ],
     price: 3600,
     maxDefense: 8,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: {
+      hearing: 1,
+      health: 2,
+      protection: -2,
+      fire_res: 2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 32,
@@ -789,15 +739,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -1,
     slots: 0,
     rarity: 2,
-    skillPoints: [
-      { skillId: 9, points: 1 },
-      { skillId: 22, points: 2 },
-      { skillId: 23, points: -2 },
-      { skillId: 49, points: 4 }
-    ],
     price: 4100,
     maxDefense: 18,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: { status: 1, poison: 2, health: -2, constitutn: 4 }
   }),
   deepFreeze<ChestArmor>({
     id: 33,
@@ -813,15 +758,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -1,
     slots: 0,
     rarity: 2,
-    skillPoints: [
-      { skillId: 9, points: 1 },
-      { skillId: 22, points: 3 },
-      { skillId: 23, points: -2 },
-      { skillId: 49, points: 3 }
-    ],
     price: 4100,
     maxDefense: 9,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: { status: 1, poison: 3, health: -2, constitutn: 3 }
   }),
   deepFreeze<ChestArmor>({
     id: 34,
@@ -837,15 +777,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 26, points: -2 },
-      { skillId: 28, points: 1 },
-      { skillId: 39, points: 3 },
-      { skillId: 63, points: 1 }
-    ],
     price: 5000,
     maxDefense: 18,
-    maxLowRankDefense: 28
+    maxLowRankDefense: 28,
+    skillPoints: {
+      sharpener: -2,
+      guard_up: 1,
+      wind_res: 3,
+      thunderres: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 35,
@@ -861,15 +801,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 2,
-    skillPoints: [
-      { skillId: 3, points: 3 },
-      { skillId: 28, points: 1 },
-      { skillId: 29, points: -2 },
-      { skillId: 63, points: 1 }
-    ],
     price: 5000,
     maxDefense: 9,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: {
+      recoil: 3,
+      guard_up: 1,
+      reload_spd: -2,
+      thunderres: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 36,
@@ -885,15 +825,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -2,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 0, points: 1 },
-      { skillId: 9, points: -3 },
-      { skillId: 10, points: 3 },
-      { skillId: 50, points: 1 }
-    ],
     price: 5600,
     maxDefense: 20,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: {
+      sharpness: 1,
+      status: -3,
+      elemental: 3,
+      swimming: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 37,
@@ -909,15 +849,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -2,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 4, points: 1 },
-      { skillId: 9, points: -3 },
-      { skillId: 10, points: 3 },
-      { skillId: 50, points: 1 }
-    ],
     price: 5600,
     maxDefense: 10,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: {
+      normals_up: 1,
+      status: -3,
+      elemental: 3,
+      swimming: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 38,
@@ -933,15 +873,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -4,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 25, points: 1 },
-      { skillId: 35, points: 2 },
-      { skillId: 36, points: -2 },
-      { skillId: 66, points: 2 }
-    ],
     price: 5600,
     maxDefense: 20,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: { expert: 1, attack: 2, defense: -2, heat_res: 2 }
   }),
   deepFreeze<ChestArmor>({
     id: 39,
@@ -957,15 +892,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -4,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 25, points: 1 },
-      { skillId: 35, points: 2 },
-      { skillId: 36, points: -2 },
-      { skillId: 66, points: 2 }
-    ],
     price: 5600,
     maxDefense: 10,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: { expert: 1, attack: 2, defense: -2, heat_res: 2 }
   }),
   deepFreeze<ChestArmor>({
     id: 40,
@@ -981,15 +911,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 13, points: 2 },
-      { skillId: 44, points: 2 },
-      { skillId: 66, points: -2 },
-      { skillId: 67, points: 1 }
-    ],
     price: 5600,
     maxDefense: 20,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: {
+      stamina: 2,
+      evasion: 2,
+      heat_res: -2,
+      cold_res: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 41,
@@ -1005,15 +935,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 13, points: 2 },
-      { skillId: 44, points: 2 },
-      { skillId: 66, points: -2 },
-      { skillId: 67, points: 1 }
-    ],
     price: 5600,
     maxDefense: 10,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: {
+      stamina: 2,
+      evasion: 2,
+      heat_res: -2,
+      cold_res: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 42,
@@ -1029,14 +959,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -1,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 10, points: -4 },
-      { skillId: 47, points: 3 },
-      { skillId: 48, points: 3 }
-    ],
     price: 6300,
     maxDefense: 22,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: { elemental: -4, tremor_res: 3, crit_draw: 3 }
   }),
   deepFreeze<ChestArmor>({
     id: 43,
@@ -1052,14 +978,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -1,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 5, points: 3 },
-      { skillId: 8, points: 3 },
-      { skillId: 10, points: -4 }
-    ],
     price: 6300,
     maxDefense: 11,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: { pierces_up: 3, 'pierce_s+': 3, elemental: -4 }
   }),
   deepFreeze<ChestArmor>({
     id: 44,
@@ -1075,15 +997,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -2,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 19, points: 3 },
-      { skillId: 33, points: 2 },
-      { skillId: 36, points: 3 },
-      { skillId: 46, points: -1 }
-    ],
     price: 6300,
     maxDefense: 22,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: {
+      punishdraw: 3,
+      bomb_boost: 2,
+      defense: 3,
+      eating: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 45,
@@ -1099,15 +1021,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -2,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 3, points: 4 },
-      { skillId: 33, points: 2 },
-      { skillId: 36, points: 2 },
-      { skillId: 46, points: -1 }
-    ],
     price: 6300,
     maxDefense: 11,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: {
+      recoil: 4,
+      bomb_boost: 2,
+      defense: 2,
+      eating: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 46,
@@ -1123,15 +1045,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 13, points: -2 },
-      { skillId: 27, points: 3 },
-      { skillId: 28, points: 1 },
-      { skillId: 52, points: 1 }
-    ],
     price: 7200,
     maxDefense: 22,
-    maxLowRankDefense: 30
+    maxLowRankDefense: 30,
+    skillPoints: {
+      stamina: -2,
+      guard: 3,
+      guard_up: 1,
+      flame_aura: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 47,
@@ -1147,15 +1069,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 13, points: -2 },
-      { skillId: 28, points: 1 },
-      { skillId: 29, points: 3 },
-      { skillId: 52, points: 1 }
-    ],
     price: 7200,
     maxDefense: 11,
-    maxLowRankDefense: 15
+    maxLowRankDefense: 15,
+    skillPoints: {
+      stamina: -2,
+      guard_up: 1,
+      reload_spd: 3,
+      flame_aura: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 48,
@@ -1171,15 +1093,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 0, points: -2 },
-      { skillId: 1, points: 2 },
-      { skillId: 11, points: 2 },
-      { skillId: 37, points: -2 }
-    ],
     price: 11000,
     maxDefense: 24,
-    maxLowRankDefense: 32
+    maxLowRankDefense: 32,
+    skillPoints: {
+      sharpness: -2,
+      handicraft: 2,
+      hearing: 2,
+      protection: -2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 49,
@@ -1195,15 +1117,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 3,
-    skillPoints: [
-      { skillId: 3, points: -3 },
-      { skillId: 11, points: 2 },
-      { skillId: 14, points: 2 },
-      { skillId: 37, points: -2 }
-    ],
     price: 11000,
     maxDefense: 12,
-    maxLowRankDefense: 16
+    maxLowRankDefense: 16,
+    skillPoints: {
+      recoil: -3,
+      hearing: 2,
+      loading: 2,
+      protection: -2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 50,
@@ -1219,15 +1141,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -3,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 0, points: 1 },
-      { skillId: 18, points: 2 },
-      { skillId: 24, points: 3 },
-      { skillId: 71, points: -1 }
-    ],
     price: 12000,
     maxDefense: 24,
-    maxLowRankDefense: 32
+    maxLowRankDefense: 32,
+    skillPoints: {
+      sharpness: 1,
+      fastcharge: 2,
+      rec_speed: 3,
+      combo_rate: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 51,
@@ -1243,15 +1165,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -3,
     slots: 1,
     rarity: 3,
-    skillPoints: [
-      { skillId: 3, points: 1 },
-      { skillId: 24, points: 3 },
-      { skillId: 32, points: 1 },
-      { skillId: 71, points: -2 }
-    ],
     price: 12000,
     maxDefense: 12,
-    maxLowRankDefense: 16
+    maxLowRankDefense: 16,
+    skillPoints: {
+      recoil: 1,
+      rec_speed: 3,
+      'clust_s+': 1,
+      combo_rate: -2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 52,
@@ -1267,13 +1189,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 4,
-    skillPoints: [
-      { skillId: 40, points: 5 },
-      { skillId: 41, points: 1 },
-      { skillId: 69, points: 2 }
-    ],
     price: 4600,
-    maxDefense: 26
+    maxDefense: 26,
+    skillPoints: { gathering: 5, spd_gather: 1, whim: 2 }
   }),
   deepFreeze<ChestArmor>({
     id: 53,
@@ -1289,13 +1207,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 4,
-    skillPoints: [
-      { skillId: 40, points: 5 },
-      { skillId: 41, points: 2 },
-      { skillId: 69, points: 1 }
-    ],
     price: 4600,
-    maxDefense: 15
+    maxDefense: 15,
+    skillPoints: { gathering: 5, spd_gather: 2, whim: 1 }
   }),
   deepFreeze<ChestArmor>({
     id: 54,
@@ -1311,13 +1225,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 23, points: 5 },
-      { skillId: 71, points: 1 },
-      { skillId: 72, points: 1 }
-    ],
     price: 5400,
-    maxDefense: 30
+    maxDefense: 30,
+    skillPoints: { health: 5, combo_rate: 1, combo_plus: 1 }
   }),
   deepFreeze<ChestArmor>({
     id: 55,
@@ -1333,13 +1243,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 23, points: 2 },
-      { skillId: 71, points: 4 },
-      { skillId: 72, points: 1 }
-    ],
     price: 5400,
-    maxDefense: 18
+    maxDefense: 18,
+    skillPoints: { health: 2, combo_rate: 4, combo_plus: 1 }
   }),
   deepFreeze<ChestArmor>({
     id: 56,
@@ -1355,13 +1261,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 4,
-    skillPoints: [
-      { skillId: 24, points: 2 },
-      { skillId: 60, points: 3 },
-      { skillId: 66, points: 6 }
-    ],
     price: 5400,
-    maxDefense: 30
+    maxDefense: 30,
+    skillPoints: { rec_speed: 2, transportr: 3, heat_res: 6 }
   }),
   deepFreeze<ChestArmor>({
     id: 57,
@@ -1377,13 +1279,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 4,
-    skillPoints: [
-      { skillId: 24, points: 2 },
-      { skillId: 60, points: 3 },
-      { skillId: 66, points: 6 }
-    ],
     price: 5400,
-    maxDefense: 18
+    maxDefense: 18,
+    skillPoints: { rec_speed: 2, transportr: 3, heat_res: 6 }
   }),
   deepFreeze<ChestArmor>({
     id: 58,
@@ -1399,15 +1297,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 4,
-    skillPoints: [
-      { skillId: 25, points: 1 },
-      { skillId: 42, points: 5 },
-      { skillId: 44, points: 1 },
-      { skillId: 62, points: -1 },
-      { skillId: 68, points: 1 }
-    ],
     price: 5400,
-    maxDefense: 30
+    maxDefense: 30,
+    skillPoints: {
+      expert: 1,
+      psychic: 5,
+      evasion: 1,
+      water_res: -1,
+      map: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 59,
@@ -1423,15 +1321,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 4,
-    skillPoints: [
-      { skillId: 25, points: 1 },
-      { skillId: 42, points: 5 },
-      { skillId: 44, points: 1 },
-      { skillId: 62, points: -1 },
-      { skillId: 68, points: 1 }
-    ],
     price: 5400,
-    maxDefense: 18
+    maxDefense: 18,
+    skillPoints: {
+      expert: 1,
+      psychic: 5,
+      evasion: 1,
+      water_res: -1,
+      map: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 60,
@@ -1447,15 +1345,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 3,
     slots: 1,
     rarity: 4,
-    skillPoints: [
-      { skillId: 13, points: 1 },
-      { skillId: 25, points: 2 },
-      { skillId: 34, points: 1 },
-      { skillId: 54, points: -1 },
-      { skillId: 77, points: 4 }
-    ],
     price: 6400,
-    maxDefense: 34
+    maxDefense: 34,
+    skillPoints: {
+      stamina: 1,
+      expert: 2,
+      hunger: 1,
+      sleep: -1,
+      perception: 4
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 61,
@@ -1471,15 +1369,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 3,
     slots: 1,
     rarity: 4,
-    skillPoints: [
-      { skillId: 13, points: 2 },
-      { skillId: 25, points: 2 },
-      { skillId: 34, points: 2 },
-      { skillId: 54, points: -1 },
-      { skillId: 77, points: 2 }
-    ],
     price: 6400,
-    maxDefense: 20
+    maxDefense: 20,
+    skillPoints: {
+      stamina: 2,
+      expert: 2,
+      hunger: 2,
+      sleep: -1,
+      perception: 2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 62,
@@ -1495,14 +1393,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -1,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 25, points: 3 },
-      { skillId: 26, points: 2 },
-      { skillId: 76, points: 1 },
-      { skillId: 78, points: -1 }
-    ],
     price: 7100,
-    maxDefense: 34
+    maxDefense: 34,
+    skillPoints: {
+      expert: 3,
+      sharpener: 2,
+      speedsetup: 1,
+      oxygen: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 63,
@@ -1518,14 +1416,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -1,
     slots: 2,
     rarity: 4,
-    skillPoints: [
-      { skillId: 7, points: 2 },
-      { skillId: 25, points: 3 },
-      { skillId: 76, points: 1 },
-      { skillId: 78, points: -1 }
-    ],
     price: 7100,
-    maxDefense: 20
+    maxDefense: 20,
+    skillPoints: {
+      'normal_s+': 2,
+      expert: 3,
+      speedsetup: 1,
+      oxygen: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 64,
@@ -1541,15 +1439,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 0,
     rarity: 5,
-    skillPoints: [
-      { skillId: 25, points: 2 },
-      { skillId: 35, points: 4 },
-      { skillId: 55, points: 3 },
-      { skillId: 58, points: 1 },
-      { skillId: 67, points: -1 }
-    ],
     price: 8000,
-    maxDefense: 38
+    maxDefense: 38,
+    skillPoints: {
+      expert: 2,
+      attack: 4,
+      stun: 3,
+      gluttony: 1,
+      cold_res: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 65,
@@ -1565,15 +1463,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 0,
     rarity: 5,
-    skillPoints: [
-      { skillId: 25, points: 2 },
-      { skillId: 35, points: 5 },
-      { skillId: 55, points: 1 },
-      { skillId: 58, points: 2 },
-      { skillId: 67, points: -1 }
-    ],
     price: 8000,
-    maxDefense: 22
+    maxDefense: 22,
+    skillPoints: {
+      expert: 2,
+      attack: 5,
+      stun: 1,
+      gluttony: 2,
+      cold_res: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 66,
@@ -1589,13 +1487,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 6,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 0, points: 1 },
-      { skillId: 9, points: 3 },
-      { skillId: 22, points: -5 }
-    ],
     price: 10500,
-    maxDefense: 38
+    maxDefense: 38,
+    skillPoints: { sharpness: 1, status: 3, poison: -5 }
   }),
   deepFreeze<ChestArmor>({
     id: 67,
@@ -1611,13 +1505,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 6,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 9, points: 3 },
-      { skillId: 22, points: -5 },
-      { skillId: 29, points: 1 }
-    ],
     price: 10500,
-    maxDefense: 22
+    maxDefense: 22,
+    skillPoints: { status: 3, poison: -5, reload_spd: 1 }
   }),
   deepFreeze<ChestArmor>({
     id: 68,
@@ -1633,15 +1523,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 25, points: 2 },
-      { skillId: 39, points: 4 },
-      { skillId: 46, points: 1 },
-      { skillId: 56, points: 1 },
-      { skillId: 63, points: -1 }
-    ],
     price: 8500,
-    maxDefense: 38
+    maxDefense: 38,
+    skillPoints: {
+      expert: 2,
+      wind_res: 4,
+      eating: 1,
+      'mud/snow': 1,
+      thunderres: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 69,
@@ -1657,15 +1547,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 3, points: 4 },
-      { skillId: 25, points: 2 },
-      { skillId: 31, points: 1 },
-      { skillId: 46, points: 1 },
-      { skillId: 63, points: -1 }
-    ],
     price: 8500,
-    maxDefense: 22
+    maxDefense: 22,
+    skillPoints: {
+      recoil: 4,
+      expert: 2,
+      'crag_s+': 1,
+      eating: 1,
+      thunderres: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 70,
@@ -1681,15 +1571,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 25, points: 1 },
-      { skillId: 36, points: 2 },
-      { skillId: 38, points: 4 },
-      { skillId: 43, points: 1 },
-      { skillId: 64, points: -1 }
-    ],
     price: 10000,
-    maxDefense: 42
+    maxDefense: 42,
+    skillPoints: {
+      expert: 1,
+      defense: 2,
+      'wide-range': 4,
+      rec_level: 1,
+      ice_res: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 71,
@@ -1705,15 +1595,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 25, points: 1 },
-      { skillId: 36, points: 1 },
-      { skillId: 38, points: 4 },
-      { skillId: 43, points: 1 },
-      { skillId: 64, points: -2 }
-    ],
     price: 10000,
-    maxDefense: 25
+    maxDefense: 25,
+    skillPoints: {
+      expert: 1,
+      defense: 1,
+      'wide-range': 4,
+      rec_level: 1,
+      ice_res: -2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 72,
@@ -1729,15 +1619,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 25, points: 1 },
-      { skillId: 34, points: -1 },
-      { skillId: 37, points: 1 },
-      { skillId: 49, points: 4 },
-      { skillId: 79, points: 2 }
-    ],
     price: 11800,
-    maxDefense: 44
+    maxDefense: 44,
+    skillPoints: {
+      expert: 1,
+      hunger: -1,
+      protection: 1,
+      constitutn: 4,
+      currentres: 2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 73,
@@ -1753,15 +1643,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 25, points: 1 },
-      { skillId: 30, points: 1 },
-      { skillId: 34, points: -2 },
-      { skillId: 37, points: 1 },
-      { skillId: 49, points: 4 }
-    ],
     price: 11800,
-    maxDefense: 26
+    maxDefense: 26,
+    skillPoints: {
+      expert: 1,
+      'pellet_s+': 1,
+      hunger: -2,
+      protection: 1,
+      constitutn: 4
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 74,
@@ -1777,13 +1667,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 26, points: 2 },
-      { skillId: 27, points: 2 },
-      { skillId: 50, points: -5 }
-    ],
     price: 11000,
-    maxDefense: 42
+    maxDefense: 42,
+    skillPoints: { sharpener: 2, guard: 2, swimming: -5 }
   }),
   deepFreeze<ChestArmor>({
     id: 75,
@@ -1799,15 +1685,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 0,
     rarity: 5,
-    skillPoints: [
-      { skillId: 17, points: 2 },
-      { skillId: 18, points: 1 },
-      { skillId: 25, points: 2 },
-      { skillId: 55, points: -2 },
-      { skillId: 64, points: 4 }
-    ],
     price: 12300,
-    maxDefense: 44
+    maxDefense: 44,
+    skillPoints: {
+      tranquilzr: 2,
+      fastcharge: 1,
+      expert: 2,
+      stun: -2,
+      ice_res: 4
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 76,
@@ -1823,15 +1709,15 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 1,
     slots: 0,
     rarity: 5,
-    skillPoints: [
-      { skillId: 6, points: 1 },
-      { skillId: 17, points: 2 },
-      { skillId: 25, points: 2 },
-      { skillId: 55, points: -2 },
-      { skillId: 64, points: 4 }
-    ],
     price: 12300,
-    maxDefense: 26
+    maxDefense: 26,
+    skillPoints: {
+      pellets_up: 1,
+      tranquilzr: 2,
+      expert: 2,
+      stun: -2,
+      ice_res: 4
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 77,
@@ -1847,14 +1733,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 5,
-    skillPoints: [
-      { skillId: 13, points: 1 },
-      { skillId: 25, points: -2 },
-      { skillId: 35, points: 6 },
-      { skillId: 45, points: 2 }
-    ],
     price: 13800,
-    maxDefense: 48
+    maxDefense: 48,
+    skillPoints: { stamina: 1, expert: -2, attack: 6, potential: 2 }
   }),
   deepFreeze<ChestArmor>({
     id: 78,
@@ -1870,14 +1751,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 5,
-    skillPoints: [
-      { skillId: 13, points: 1 },
-      { skillId: 25, points: -3 },
-      { skillId: 35, points: 5 },
-      { skillId: 45, points: 2 }
-    ],
     price: 13800,
-    maxDefense: 28
+    maxDefense: 28,
+    skillPoints: { stamina: 1, expert: -3, attack: 5, potential: 2 }
   }),
   deepFreeze<ChestArmor>({
     id: 79,
@@ -1893,14 +1769,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 24, points: -2 },
-      { skillId: 25, points: 3 },
-      { skillId: 46, points: 2 },
-      { skillId: 55, points: 2 }
-    ],
     price: 14800,
-    maxDefense: 50
+    maxDefense: 50,
+    skillPoints: { rec_speed: -2, expert: 3, eating: 2, stun: 2 }
   }),
   deepFreeze<ChestArmor>({
     id: 80,
@@ -1916,14 +1787,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 24, points: -2 },
-      { skillId: 25, points: 3 },
-      { skillId: 46, points: 2 },
-      { skillId: 55, points: 2 }
-    ],
     price: 14800,
-    maxDefense: 30
+    maxDefense: 30,
+    skillPoints: { rec_speed: -2, expert: 3, eating: 2, stun: 2 }
   }),
   deepFreeze<ChestArmor>({
     id: 81,
@@ -1939,14 +1805,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 12, points: 3 },
-      { skillId: 15, points: 2 },
-      { skillId: 17, points: 2 },
-      { skillId: 37, points: -4 }
-    ],
     price: 25000,
-    maxDefense: 36
+    maxDefense: 36,
+    skillPoints: {
+      fate: 3,
+      carving: 2,
+      tranquilzr: 2,
+      protection: -4
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 82,
@@ -1962,14 +1828,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 12, points: 3 },
-      { skillId: 15, points: 2 },
-      { skillId: 17, points: 2 },
-      { skillId: 37, points: -4 }
-    ],
     price: 25000,
-    maxDefense: 22
+    maxDefense: 22,
+    skillPoints: {
+      fate: 3,
+      carving: 2,
+      tranquilzr: 2,
+      protection: -4
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 83,
@@ -1985,14 +1851,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -4,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 11, points: 2 },
-      { skillId: 23, points: 3 },
-      { skillId: 37, points: -3 },
-      { skillId: 61, points: 1 }
-    ],
     price: 14800,
-    maxDefense: 50
+    maxDefense: 50,
+    skillPoints: {
+      hearing: 2,
+      health: 3,
+      protection: -3,
+      fire_res: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 84,
@@ -2008,14 +1874,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -4,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 11, points: 1 },
-      { skillId: 23, points: 3 },
-      { skillId: 37, points: -3 },
-      { skillId: 61, points: 2 }
-    ],
     price: 14800,
-    maxDefense: 30
+    maxDefense: 30,
+    skillPoints: {
+      hearing: 1,
+      health: 3,
+      protection: -3,
+      fire_res: 2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 85,
@@ -2031,14 +1897,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 9, points: 2 },
-      { skillId: 22, points: 2 },
-      { skillId: 23, points: -1 },
-      { skillId: 49, points: 4 }
-    ],
     price: 15800,
-    maxDefense: 54
+    maxDefense: 54,
+    skillPoints: { status: 2, poison: 2, health: -1, constitutn: 4 }
   }),
   deepFreeze<ChestArmor>({
     id: 86,
@@ -2054,14 +1915,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 9, points: 1 },
-      { skillId: 22, points: 1 },
-      { skillId: 23, points: -2 },
-      { skillId: 49, points: 5 }
-    ],
     price: 15800,
-    maxDefense: 32
+    maxDefense: 32,
+    skillPoints: { status: 1, poison: 1, health: -2, constitutn: 5 }
   }),
   deepFreeze<ChestArmor>({
     id: 87,
@@ -2077,14 +1933,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 26, points: -1 },
-      { skillId: 28, points: 2 },
-      { skillId: 39, points: 4 },
-      { skillId: 63, points: 2 }
-    ],
     price: 17500,
-    maxDefense: 54
+    maxDefense: 54,
+    skillPoints: {
+      sharpener: -1,
+      guard_up: 2,
+      wind_res: 4,
+      thunderres: 2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 88,
@@ -2100,14 +1956,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 1,
     rarity: 5,
-    skillPoints: [
-      { skillId: 3, points: 4 },
-      { skillId: 28, points: 2 },
-      { skillId: 29, points: -1 },
-      { skillId: 63, points: 2 }
-    ],
     price: 17500,
-    maxDefense: 32
+    maxDefense: 32,
+    skillPoints: {
+      recoil: 4,
+      guard_up: 2,
+      reload_spd: -1,
+      thunderres: 2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 89,
@@ -2123,14 +1979,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 5,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 13, points: 2 },
-      { skillId: 45, points: -1 },
-      { skillId: 48, points: 4 },
-      { skillId: 65, points: 2 }
-    ],
     price: 19000,
-    maxDefense: 58
+    maxDefense: 58,
+    skillPoints: {
+      stamina: 2,
+      potential: -1,
+      crit_draw: 4,
+      dragon_res: 2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 90,
@@ -2146,14 +2002,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 5,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 6, points: 3 },
-      { skillId: 30, points: 3 },
-      { skillId: 45, points: -1 },
-      { skillId: 65, points: 2 }
-    ],
     price: 19000,
-    maxDefense: 34
+    maxDefense: 34,
+    skillPoints: {
+      pellets_up: 3,
+      'pellet_s+': 3,
+      potential: -1,
+      dragon_res: 2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 91,
@@ -2169,14 +2025,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -2,
     slots: 3,
     rarity: 6,
-    skillPoints: [
-      { skillId: 9, points: -2 },
-      { skillId: 10, points: 1 },
-      { skillId: 20, points: 1 },
-      { skillId: 50, points: 1 }
-    ],
     price: 18000,
-    maxDefense: 58
+    maxDefense: 58,
+    skillPoints: {
+      status: -2,
+      elemental: 1,
+      freeelemnt: 1,
+      swimming: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 92,
@@ -2192,14 +2048,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -2,
     slots: 3,
     rarity: 6,
-    skillPoints: [
-      { skillId: 9, points: -2 },
-      { skillId: 10, points: 1 },
-      { skillId: 21, points: 1 },
-      { skillId: 50, points: 1 }
-    ],
     price: 18000,
-    maxDefense: 34
+    maxDefense: 34,
+    skillPoints: {
+      status: -2,
+      elemental: 1,
+      rapid_fire: 1,
+      swimming: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 93,
@@ -2215,14 +2071,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -4,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 2, points: 3 },
-      { skillId: 25, points: 2 },
-      { skillId: 36, points: -3 },
-      { skillId: 66, points: 1 }
-    ],
     price: 18000,
-    maxDefense: 58
+    maxDefense: 58,
+    skillPoints: { fencing: 3, expert: 2, defense: -3, heat_res: 1 }
   }),
   deepFreeze<ChestArmor>({
     id: 94,
@@ -2238,14 +2089,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -4,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 4, points: 3 },
-      { skillId: 25, points: 2 },
-      { skillId: 36, points: -3 },
-      { skillId: 66, points: 1 }
-    ],
     price: 18000,
-    maxDefense: 34
+    maxDefense: 34,
+    skillPoints: {
+      normals_up: 3,
+      expert: 2,
+      defense: -3,
+      heat_res: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 95,
@@ -2261,14 +2112,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 16, points: 3 },
-      { skillId: 44, points: 4 },
-      { skillId: 66, points: -2 },
-      { skillId: 67, points: 2 }
-    ],
     price: 18000,
-    maxDefense: 58
+    maxDefense: 58,
+    skillPoints: {
+      evade_dist: 3,
+      evasion: 4,
+      heat_res: -2,
+      cold_res: 2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 96,
@@ -2284,14 +2135,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 16, points: 2 },
-      { skillId: 44, points: 4 },
-      { skillId: 66, points: -3 },
-      { skillId: 67, points: 2 }
-    ],
     price: 18000,
-    maxDefense: 34
+    maxDefense: 34,
+    skillPoints: {
+      evade_dist: 2,
+      evasion: 4,
+      heat_res: -3,
+      cold_res: 2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 97,
@@ -2307,13 +2158,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -1,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 10, points: -4 },
-      { skillId: 47, points: 4 },
-      { skillId: 48, points: 3 }
-    ],
     price: 18800,
-    maxDefense: 62
+    maxDefense: 62,
+    skillPoints: { elemental: -4, tremor_res: 4, crit_draw: 3 }
   }),
   deepFreeze<ChestArmor>({
     id: 98,
@@ -2329,13 +2176,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -1,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 5, points: 4 },
-      { skillId: 8, points: 3 },
-      { skillId: 10, points: -4 }
-    ],
     price: 18800,
-    maxDefense: 37
+    maxDefense: 37,
+    skillPoints: { pierces_up: 4, 'pierce_s+': 3, elemental: -4 }
   }),
   deepFreeze<ChestArmor>({
     id: 99,
@@ -2351,14 +2194,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -2,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 19, points: 3 },
-      { skillId: 33, points: 3 },
-      { skillId: 36, points: 2 },
-      { skillId: 46, points: -1 }
-    ],
     price: 18800,
-    maxDefense: 62
+    maxDefense: 62,
+    skillPoints: {
+      punishdraw: 3,
+      bomb_boost: 3,
+      defense: 2,
+      eating: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 100,
@@ -2374,14 +2217,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -2,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 3, points: 1 },
-      { skillId: 33, points: 4 },
-      { skillId: 36, points: 2 },
-      { skillId: 46, points: -2 }
-    ],
     price: 18800,
-    maxDefense: 37
+    maxDefense: 37,
+    skillPoints: {
+      recoil: 1,
+      bomb_boost: 4,
+      defense: 2,
+      eating: -2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 101,
@@ -2397,14 +2240,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 0, points: 2 },
-      { skillId: 13, points: -1 },
-      { skillId: 27, points: 5 },
-      { skillId: 52, points: 1 }
-    ],
     price: 19800,
-    maxDefense: 62
+    maxDefense: 62,
+    skillPoints: {
+      sharpness: 2,
+      stamina: -1,
+      guard: 5,
+      flame_aura: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 102,
@@ -2420,14 +2263,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 4, points: 3 },
-      { skillId: 7, points: 3 },
-      { skillId: 13, points: -2 },
-      { skillId: 52, points: 1 }
-    ],
     price: 19800,
-    maxDefense: 37
+    maxDefense: 37,
+    skillPoints: {
+      normals_up: 3,
+      'normal_s+': 3,
+      stamina: -2,
+      flame_aura: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 103,
@@ -2443,14 +2286,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 7,
-    skillPoints: [
-      { skillId: 1, points: 3 },
-      { skillId: 34, points: -2 },
-      { skillId: 35, points: 3 },
-      { skillId: 42, points: 3 }
-    ],
     price: 41500,
-    maxDefense: 64
+    maxDefense: 64,
+    skillPoints: {
+      handicraft: 3,
+      hunger: -2,
+      attack: 3,
+      psychic: 3
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 104,
@@ -2466,14 +2309,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 7,
-    skillPoints: [
-      { skillId: 14, points: 3 },
-      { skillId: 34, points: -2 },
-      { skillId: 35, points: 3 },
-      { skillId: 42, points: 3 }
-    ],
     price: 41500,
-    maxDefense: 38
+    maxDefense: 38,
+    skillPoints: { loading: 3, hunger: -2, attack: 3, psychic: 3 }
   }),
   deepFreeze<ChestArmor>({
     id: 105,
@@ -2489,14 +2327,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 3,
     slots: 3,
     rarity: 6,
-    skillPoints: [
-      { skillId: 13, points: -2 },
-      { skillId: 19, points: 1 },
-      { skillId: 23, points: 1 },
-      { skillId: 28, points: 1 }
-    ],
     price: 32300,
-    maxDefense: 62
+    maxDefense: 62,
+    skillPoints: {
+      stamina: -2,
+      punishdraw: 1,
+      health: 1,
+      guard_up: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 106,
@@ -2512,14 +2350,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 3,
     slots: 3,
     rarity: 6,
-    skillPoints: [
-      { skillId: 13, points: -2 },
-      { skillId: 23, points: 1 },
-      { skillId: 28, points: 1 },
-      { skillId: 29, points: 1 }
-    ],
     price: 32300,
-    maxDefense: 37
+    maxDefense: 37,
+    skillPoints: {
+      stamina: -2,
+      health: 1,
+      guard_up: 1,
+      reload_spd: 1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 107,
@@ -2535,14 +2373,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 0, points: -2 },
-      { skillId: 1, points: 5 },
-      { skillId: 11, points: 3 },
-      { skillId: 37, points: -1 }
-    ],
     price: 26200,
-    maxDefense: 66
+    maxDefense: 66,
+    skillPoints: {
+      sharpness: -2,
+      handicraft: 5,
+      hearing: 3,
+      protection: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 108,
@@ -2558,14 +2396,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -4,
     slots: 0,
     rarity: 6,
-    skillPoints: [
-      { skillId: 3, points: -2 },
-      { skillId: 11, points: 3 },
-      { skillId: 14, points: 5 },
-      { skillId: 37, points: -1 }
-    ],
     price: 26200,
-    maxDefense: 39
+    maxDefense: 39,
+    skillPoints: {
+      recoil: -2,
+      hearing: 3,
+      loading: 5,
+      protection: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 109,
@@ -2581,14 +2419,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -4,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 0, points: 1 },
-      { skillId: 18, points: 2 },
-      { skillId: 24, points: 4 },
-      { skillId: 71, points: -2 }
-    ],
     price: 27500,
-    maxDefense: 66
+    maxDefense: 66,
+    skillPoints: {
+      sharpness: 1,
+      fastcharge: 2,
+      rec_speed: 4,
+      combo_rate: -2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 110,
@@ -2604,14 +2442,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -4,
     slots: 1,
     rarity: 6,
-    skillPoints: [
-      { skillId: 3, points: 2 },
-      { skillId: 24, points: 2 },
-      { skillId: 32, points: 4 },
-      { skillId: 71, points: -1 }
-    ],
     price: 27500,
-    maxDefense: 39
+    maxDefense: 39,
+    skillPoints: {
+      recoil: 2,
+      rec_speed: 2,
+      'clust_s+': 4,
+      combo_rate: -1
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 111,
@@ -2627,14 +2465,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -5,
     slots: 2,
     rarity: 7,
-    skillPoints: [
-      { skillId: 16, points: 2 },
-      { skillId: 20, points: 2 },
-      { skillId: 43, points: -1 },
-      { skillId: 81, points: 2 }
-    ],
     price: 66666,
-    maxDefense: 70
+    maxDefense: 70,
+    skillPoints: {
+      evade_dist: 2,
+      freeelemnt: 2,
+      rec_level: -1,
+      blight_res: 2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 112,
@@ -2650,14 +2488,14 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: -5,
     slots: 2,
     rarity: 7,
-    skillPoints: [
-      { skillId: 16, points: 2 },
-      { skillId: 21, points: 2 },
-      { skillId: 43, points: -1 },
-      { skillId: 81, points: 2 }
-    ],
     price: 66666,
-    maxDefense: 42
+    maxDefense: 42,
+    skillPoints: {
+      evade_dist: 2,
+      rapid_fire: 2,
+      rec_level: -1,
+      blight_res: 2
+    }
   }),
   deepFreeze<ChestArmor>({
     id: 113,
@@ -2673,9 +2511,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 0,
     slots: 3,
     rarity: 7,
-    skillPoints: [],
     price: 33333,
-    maxDefense: 18
+    maxDefense: 18,
+    skillPoints: {}
   }),
   deepFreeze<ChestArmor>({
     id: 114,
@@ -2691,10 +2529,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 3,
     rarity: 3,
-    skillPoints: [{ skillId: 80, points: 5 }],
     price: 10000,
     maxDefense: 15,
-    maxLowRankDefense: 27
+    maxLowRankDefense: 27,
+    skillPoints: { survivor: 5 }
   }),
   deepFreeze<ChestArmor>({
     id: 115,
@@ -2710,10 +2548,10 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 3,
     rarity: 3,
-    skillPoints: [{ skillId: 80, points: 5 }],
     price: 10000,
     maxDefense: 8,
-    maxLowRankDefense: 14
+    maxLowRankDefense: 14,
+    skillPoints: { survivor: 5 }
   }),
   deepFreeze<ChestArmor>({
     id: 116,
@@ -2729,9 +2567,9 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 0,
     rarity: 6,
-    skillPoints: [{ skillId: 80, points: 10 }],
     price: 15000,
-    maxDefense: 48
+    maxDefense: 48,
+    skillPoints: { survivor: 10 }
   }),
   deepFreeze<ChestArmor>({
     id: 117,
@@ -2747,8 +2585,8 @@ export const ChestArmors: ChestArmor[] = [
     dragonRes: 2,
     slots: 0,
     rarity: 6,
-    skillPoints: [{ skillId: 80, points: 10 }],
     price: 15000,
-    maxDefense: 28
+    maxDefense: 28,
+    skillPoints: { survivor: 10 }
   })
 ];

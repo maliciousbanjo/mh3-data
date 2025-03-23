@@ -6,13 +6,14 @@
   "types": "dist/index.d.ts",
   "exports": {
     ".": "./dist/index.js",
-    "./damage": "./dist/damage/index.js",
-    "./armorSkills": "./dist/model/armor-skills/index.js",
     "./armor": "./dist/model/armors/index.js",
+    "./armorSkills": "./dist/model/armor-skills/index.js",
     "./common": "./dist/model/common/index.js",
+    "./damage": "./dist/damage/index.js",
+    "./decorations": "./dist/decorations/index.js",
     "./items": "./dist/model/items/index.js",
-    "./monsterLevels": "./dist/model/monster-levels/index.js",
     "./monsters": "./dist/model/monsters/index.js",
+    "./monsterLevels": "./dist/model/monster-levels/index.js",
     "./quests": "./dist/model/quests/index.js",
     "./weapons": "./dist/model/weapons/index.js"
   },
