@@ -106,7 +106,6 @@ export interface ArmorSkill {
  * can be activated.
  */
 export interface SkillTree {
-  readonly id: number; // TODO: Remove
   /** Used to uniquely identify skill */
   readonly key: SkillIdentifiers;
   readonly name: string;

@@ -4,7 +4,6 @@ import type { SkillTree } from './types';
 
 export const SkillTreesData = [
   deepFreeze<SkillTree>({
-    id: 0,
     key: 'sharpness',
     name: 'Sharpness',
     description:
@@ -25,7 +24,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 1,
     key: 'handicraft',
     name: 'Handicraft',
     description: "Increases your weapon's Sharpness Level.",
@@ -33,7 +31,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Sharpness +1', pointThreshold: 15 }]
   }),
   deepFreeze<SkillTree>({
-    id: 2,
     key: 'fencing',
     name: 'Fencing',
     description: 'Prevents your attacks from being deflected.',
@@ -41,7 +38,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: "Mind's Eye", pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 3,
     key: 'recoil',
     name: 'Recoil',
     description: 'Bowgun recoil is reduced or increased.',
@@ -80,7 +76,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 4,
     key: 'normals_up',
     name: 'NormalS Up',
     description: 'Increases the damage of Normal S.',
@@ -88,7 +83,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Normal S Boost', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 5,
     key: 'pierces_up',
     name: 'PierceS Up',
     description: 'Increases the damage of Pierce S.',
@@ -96,7 +90,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Pierce S Boost', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 6,
     key: 'pellets_up',
     name: 'PelletS Up',
     description: 'Increases the damage of Pellet S.',
@@ -104,7 +97,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Pellet S Boost', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 7,
     key: 'normal_s+',
     name: 'Normal S+',
     description: 'Allows a bowgun to fire all Normal S levels.',
@@ -112,7 +104,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Normal S All Up', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 8,
     key: 'pierce_s+',
     name: 'Pierce S+',
     description: 'Allows a bowgun to fire all or Lv1 Pierce S.',
@@ -131,7 +122,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 9,
     key: 'status',
     name: 'Status',
     description:
@@ -151,7 +141,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 10,
     key: 'elemental',
     name: 'Elemental',
     description: 'Increases or decreases the power of Elemental attacks.',
@@ -170,7 +159,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 11,
     key: 'hearing',
     name: 'Hearing',
     description: 'Unaffected by some or all monster roars.',
@@ -190,7 +178,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 12,
     key: 'fate',
     name: 'Fate',
     description:
@@ -224,7 +211,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 13,
     key: 'stamina',
     name: 'Stamina',
     description:
@@ -246,7 +232,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 14,
     key: 'loading',
     name: 'Loading',
     description: 'Increases the loadable amount of all usable ammo by one.',
@@ -254,7 +239,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Load Up', pointThreshold: 15 }]
   }),
   deepFreeze<SkillTree>({
-    id: 15,
     key: 'carving',
     name: 'Carving',
     description:
@@ -276,7 +260,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 16,
     key: 'evade_dist',
     name: 'Evade Dist',
     description: 'Increases evasion distance.',
@@ -284,7 +267,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Evasion Up', pointThreshold: 15 }]
   }),
   deepFreeze<SkillTree>({
-    id: 17,
     key: 'tranquilzr',
     name: 'Tranquilzr',
     description:
@@ -293,7 +275,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Capture Expert', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 18,
     key: 'fastcharge',
     name: 'FastCharge',
     description:
@@ -315,7 +296,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 19,
     key: 'punishdraw',
     name: 'PunishDraw',
     description: 'Grants the ability to stun (KO) monsters with draw attacks.',
@@ -323,7 +303,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Punishing Draw', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 20,
     key: 'freeelemnt',
     name: 'FreeElemnt',
     description:
@@ -332,7 +311,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Awaken', pointThreshold: 15 }]
   }),
   deepFreeze<SkillTree>({
-    id: 21,
     key: 'rapid_fire',
     name: 'Rapid Fire',
     description: 'Allows one extra shot to be fired while rapid firing.',
@@ -340,7 +318,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Bonus Shot', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 22,
     key: 'poison',
     name: 'Poison',
     description: 'Prevents or doubles the damage received from poison.',
@@ -359,7 +336,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 23,
     key: 'health',
     name: 'Health',
     description: 'Increases or decreases maximum Health.',
@@ -388,7 +364,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 24,
     key: 'rec_speed',
     name: 'Rec Speed',
     description:
@@ -422,7 +397,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 25,
     key: 'expert',
     name: 'Expert',
     description:
@@ -462,7 +436,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 26,
     key: 'sharpener',
     name: 'Sharpener',
     description: 'Weapons are sharpened much faster or much longer.',
@@ -481,7 +454,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 27,
     key: 'guard',
     name: 'Guard',
     description:
@@ -509,7 +481,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 28,
     key: 'guard_up',
     name: 'Guard Up',
     description:
@@ -518,7 +489,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Guard Boost', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 29,
     key: 'reload_spd',
     name: 'Reload Spd',
     description: 'Increases or decreases Bowgun reloading speed.',
@@ -557,7 +527,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 30,
     key: 'pellet_s+',
     name: 'Pellet S+',
     description: 'Allows a bowgun to fire all or Lv1 Pellet S.',
@@ -576,7 +545,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 31,
     key: 'crag_s+',
     name: 'Crag S+',
     description: 'Allows a bowgun to fire all or Lv1 Crag S.',
@@ -595,7 +563,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 32,
     key: 'clust_s+',
     name: 'Clust S+',
     description: 'Allows a bowgun to fire all or Lv1 Clust S.',
@@ -614,7 +581,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 33,
     key: 'bomb_boost',
     name: 'Bomb Boost',
     description: 'Bomb damage is increased. Bomb Combinations are 100%.',
@@ -622,7 +588,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Bombardier', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 34,
     key: 'hunger',
     name: 'Hunger',
     description:
@@ -652,7 +617,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 35,
     key: 'attack',
     name: 'Attack',
     description: 'Increases or decreases Attack.',
@@ -691,7 +655,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 36,
     key: 'defense',
     name: 'Defense',
     description: 'Increases or decreases Defense.',
@@ -730,7 +693,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 37,
     key: 'protection',
     name: 'Protection',
     description: '25% chance of attacks doing 30% less or more damage.',
@@ -749,7 +711,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 38,
     key: 'wide-range',
     name: 'Wide-Range',
     description: 'Health & status Items used also affect nearby party members.',
@@ -770,7 +731,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 39,
     key: 'wind_res',
     name: 'Wind Res',
     description: 'Negates all or a certain amount of Wind Pressure.',
@@ -789,7 +749,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 40,
     key: 'gathering',
     name: 'Gathering',
     description: 'Chance to gather more or less resources in a single spot.',
@@ -814,7 +773,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 41,
     key: 'spd_gather',
     name: 'Spd Gather',
     description: 'Gathering speed is increased.',
@@ -822,7 +780,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Speed Gatherer', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 42,
     key: 'psychic',
     name: 'Psychic',
     description:
@@ -843,7 +800,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 43,
     key: 'rec_level',
     name: 'Rec Level',
     description:
@@ -863,7 +819,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 44,
     key: 'evasion',
     name: 'Evasion',
     description: 'Extends the invulnerability period when evading.',
@@ -874,7 +829,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 45,
     key: 'potential',
     name: 'Potential',
     description:
@@ -901,7 +855,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 46,
     key: 'eating',
     name: 'Eating',
     description:
@@ -926,7 +879,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 47,
     key: 'tremor_res',
     name: 'Tremor Res',
     description: 'Prevents staggering from tremors created by large monsters.',
@@ -934,7 +886,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Tremor-Proof', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 48,
     key: 'crit_draw',
     name: 'Crit Draw',
     description: 'Guarantees all draw attacks will be critical.',
@@ -942,7 +893,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Critical Draw', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 49,
     key: 'constitutn',
     name: 'Constitutn',
     description:
@@ -976,7 +926,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 50,
     key: 'swimming',
     name: 'Swimming',
     description: 'Increases or descreases your movement speed in water.',
@@ -995,7 +944,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 51,
     key: 'dungmaster',
     name: 'Dungmaster',
     description:
@@ -1004,7 +952,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Dung Bomb Expert', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 52,
     key: 'flame_aura',
     name: 'Flame Aura',
     description:
@@ -1013,7 +960,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Flaming Aura', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 53,
     key: 'paralysis',
     name: 'Paralysis',
     description: 'Prevents or doubles the duration of paralysis.',
@@ -1032,7 +978,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 54,
     key: 'sleep',
     name: 'Sleep',
     description: 'Prevents or doubles the duration of sleep.',
@@ -1051,7 +996,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 55,
     key: 'stun',
     name: 'Stun',
     description:
@@ -1076,7 +1020,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 56,
     key: 'mud/snow',
     name: 'Mud/Snow',
     description: 'Prevents Snowman and Muddy conditions.',
@@ -1084,7 +1027,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Negate Mud/Snow', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 57,
     key: 'sense',
     name: 'Sense',
     description:
@@ -1104,7 +1046,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 58,
     key: 'gluttony',
     name: 'Gluttony',
     description: 'Increases efficiency of items that raise maximum Stamina.',
@@ -1125,7 +1066,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 59,
     key: 'anti-theft',
     name: 'Anti-Theft',
     description: 'Prevents item theft.',
@@ -1133,7 +1073,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Anti-Theft', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 60,
     key: 'transportr',
     name: 'Transportr',
     description: 'Travel faster while carrying eggs or powderstones.',
@@ -1141,7 +1080,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Pro Transporter', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 61,
     key: 'fire_res',
     name: 'Fire Res',
     description: 'Increases or decreases Fire resistance.',
@@ -1175,7 +1113,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 62,
     key: 'water_res',
     name: 'Water Res',
     description: 'Increases or decreases Water resistance.',
@@ -1209,7 +1146,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 63,
     key: 'thunderres',
     name: 'ThunderRes',
     description: 'Increases or decreases Thunder resistance.',
@@ -1243,7 +1179,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 64,
     key: 'ice_res',
     name: 'Ice Res',
     description: 'Increases or decreases Ice resistance.',
@@ -1277,7 +1212,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 65,
     key: 'dragon_res',
     name: 'Dragon Res',
     description: 'Increases or decreases Dragon resistance.',
@@ -1311,7 +1245,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 66,
     key: 'heat_res',
     name: 'Heat Res',
     description:
@@ -1342,7 +1275,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 67,
     key: 'cold_res',
     name: 'Cold Res',
     description:
@@ -1374,7 +1306,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 68,
     key: 'map',
     name: 'Map',
     description: 'Map is automatically available or never shown.',
@@ -1393,7 +1324,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 69,
     key: 'whim',
     name: 'Whim',
     description:
@@ -1427,7 +1357,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 70,
     key: 'fishing',
     name: 'Fishing',
     description:
@@ -1436,7 +1365,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Fishing Expert', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 71,
     key: 'combo_rate',
     name: 'Combo Rate',
     description: 'Increases or decreases your Combination success rate.',
@@ -1475,7 +1403,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 72,
     key: 'combo_plus',
     name: 'Combo Plus',
     description:
@@ -1484,7 +1411,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Combination Pro', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 73,
     key: 'lastingpwr',
     name: 'LastingPwr',
     description: 'Increases or decreases the effect time of certain items.',
@@ -1503,7 +1429,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 74,
     key: 'precision',
     name: 'Precision',
     description: 'Decreases or increases Deviation while aiming.',
@@ -1527,7 +1452,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 75,
     key: 'bbq',
     name: 'BBQ',
     description:
@@ -1536,7 +1460,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'BBQ Expert', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 76,
     key: 'speedsetup',
     name: 'SpeedSetup',
     description:
@@ -1545,7 +1468,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Trap Master', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 77,
     key: 'perception',
     name: 'Perception',
     description:
@@ -1554,7 +1476,6 @@ export const SkillTreesData = [
     armorSkills: [{ skillName: 'Capture Guru', pointThreshold: 10 }]
   }),
   deepFreeze<SkillTree>({
-    id: 78,
     key: 'oxygen',
     name: 'Oxygen',
     description: 'Slows down or speeds up depletion of the Oxygen Gauge.',
@@ -1573,7 +1494,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 79,
     key: 'currentres',
     name: 'CurrentRes',
     description: 'Negates all or some water currents created by large monster.',
@@ -1593,7 +1513,6 @@ export const SkillTreesData = [
     ]
   }),
   deepFreeze<SkillTree>({
-    id: 80,
     key: 'survivor',
     name: 'Survivor',
     description: 'Increases your Attack every time you fall in battle.',
@@ -1602,7 +1521,6 @@ export const SkillTreesData = [
     restricted: true
   }),
   deepFreeze<SkillTree>({
-    id: 81,
     key: 'blight_res',
     name: 'Blight Res',
     description:
@@ -1612,7 +1530,6 @@ export const SkillTreesData = [
     restricted: true
   }),
   deepFreeze<SkillTree>({
-    id: 82,
     key: 'auto-guard',
     name: 'Auto-Guard',
     description:
