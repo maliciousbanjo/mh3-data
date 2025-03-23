@@ -51,10 +51,12 @@ The original site is no longer available, but was partially recovered thanks to 
 </details>
 
 <details>
-  <summary>Items</summary>
+  <summary>Armors</summary>
 
-- Names
-
+- Defense
+- Resistances,
+- Slots
+- Skill points
 </details>
 
 <details>
@@ -65,6 +67,20 @@ The original site is no longer available, but was partially recovered thanks to 
   - Point threshold
   - Description
 - Categorized by A, B, C skill groups
+</details>
+
+<details>
+  <summary>Decorations</summary>
+
+- Slots
+- Skill points
+</details>
+
+<details>
+  <summary>Items</summary>
+
+- Names
+
 </details>
 
 ## Util Functions
