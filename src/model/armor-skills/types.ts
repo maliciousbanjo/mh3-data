@@ -89,7 +89,7 @@ export const skillIdentifiers = [
   'auto-guard'
 ] as const;
 
-export type SkillIdentifiers = (typeof skillIdentifiers)[number];
+export type SkillIdentifier = (typeof skillIdentifiers)[number];
 
 /**
  * Defines an active armor skill and the number of points required
@@ -107,7 +107,7 @@ export interface ArmorSkill {
  */
 export interface SkillTree {
   /** Used to uniquely identify skill */
-  readonly key: SkillIdentifiers;
+  readonly key: SkillIdentifier;
   readonly name: string;
   readonly description: string;
   readonly group: SkillGroup;
@@ -127,5 +127,5 @@ export interface SkillTree {
  * Skill ID mapped to a count of points
  */
 export type SkillPointRecord = {
-  [x in SkillIdentifiers]?: number;
+  [x in SkillIdentifier]?: number;
 };

@@ -1,7 +1,7 @@
-import type { ArmorTypes } from './armor';
-import type { ArmorSkillTypes } from './armor-skills';
+import type * as ArmorTypes from './armor/types';
+import type * as ArmorSkillTypes from './armor-skills/types';
 import type { CommonTypes } from './common';
-import type { DecorationTypes } from './decorations';
+import type * as DecorationTypes from './decorations/types';
 import type { ItemTypes } from './items';
 import type { MonsterLevelTypes } from './monster-levels';
 import type { MonsterTypes } from './monsters';

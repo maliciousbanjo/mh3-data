@@ -1,2 +1,2 @@
-export type * as DecorationTypes from './decorations';
+export type * from './decorations';
 export { Decorations } from './decorations';

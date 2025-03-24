@@ -1,5 +1,5 @@
 import type { SkillPointRecord } from '../armor-skills/types';
-import { Rarity, Slots } from '../common/types';
+import type { Rarity, Slots } from '../common/types';
 import type { ItemTypes } from '../index';
 
 /**
