@@ -1,7 +1,9 @@
 import type { DamageTypes } from './damage';
 import type {
+  ArmorTypes,
   ArmorSkillTypes,
   CommonTypes,
+  DecorationTypes,
   ItemTypes,
   MonsterLevelTypes,
   MonsterTypes,
@@ -17,8 +19,10 @@ import type {
 
 import { Damage } from './damage';
 import {
+  Armor,
   ArmorSkills,
   Common,
+  Decoration,
   Items,
   MonsterLevels,
   Monsters,
@@ -28,9 +32,11 @@ import {
 
 /** Type exports */
 export type {
+  ArmorTypes,
   ArmorSkillTypes,
   CommonTypes,
   DamageTypes,
+  DecorationTypes,
   ItemTypes,
   MonsterLevelTypes,
   MonsterTypes,
@@ -46,9 +52,11 @@ export type {
 
 /** Exports */
 export {
+  Armor,
   ArmorSkills,
   Common,
   Damage,
+  Decoration,
   Items,
   MonsterLevels,
   Monsters,

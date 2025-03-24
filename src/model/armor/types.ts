@@ -1,4 +1,4 @@
-import { SkillPointRecord } from '../armor-skills/types';
+import type { SkillPointRecord } from '../armor-skills/types';
 import type { CommonTypes } from '../common';
 export type ArmorType = 'head' | 'chest' | 'arms' | 'waist' | 'legs';
 

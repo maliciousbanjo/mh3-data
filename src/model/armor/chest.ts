@@ -1,5 +1,5 @@
 import { deepFreeze } from '../../utils';
-import { ChestArmor } from './types';
+import type { ChestArmor } from './types';
 
 export const ChestArmors: ChestArmor[] = [
   deepFreeze<ChestArmor>({

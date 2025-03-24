@@ -1,6 +1,6 @@
-import { SkillPointRecord } from '../armor-skills/types';
-import { CommonTypes } from '../common';
-import { ItemTypes } from '../index';
+import type { SkillPointRecord } from '../armor-skills/types';
+import type { CommonTypes } from '../common';
+import type { ItemTypes } from '../index';
 
 /**
  * Can be added to an armor piece slot to increase skill points

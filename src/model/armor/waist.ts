@@ -1,5 +1,5 @@
 import { deepFreeze } from '../../utils';
-import { WaistArmor } from './types';
+import type { WaistArmor } from './types';
 
 export const WaistArmors: WaistArmor[] = [
   deepFreeze<WaistArmor>({
