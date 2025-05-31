@@ -188,7 +188,8 @@ export const LegArmors: LegArmor[] = [
     price: 1000,
     maxDefense: 8,
     maxLowRankDefense: 22,
-    skillPoints: {}
+    skillPoints: {},
+    torsoUp: true
   }),
   deepFreeze<LegArmor>({
     id: 9,
@@ -207,7 +208,8 @@ export const LegArmors: LegArmor[] = [
     price: 1000,
     maxDefense: 4,
     maxLowRankDefense: 11,
-    skillPoints: {}
+    skillPoints: {},
+    torsoUp: true
   }),
   deepFreeze<LegArmor>({
     id: 10,
@@ -632,7 +634,8 @@ export const LegArmors: LegArmor[] = [
     price: 10000,
     maxDefense: 15,
     maxLowRankDefense: 27,
-    skillPoints: {}
+    skillPoints: {},
+    torsoUp: true
   }),
   deepFreeze<LegArmor>({
     id: 29,
@@ -651,7 +654,8 @@ export const LegArmors: LegArmor[] = [
     price: 10000,
     maxDefense: 8,
     maxLowRankDefense: 14,
-    skillPoints: {}
+    skillPoints: {},
+    torsoUp: true
   }),
   deepFreeze<LegArmor>({
     id: 30,
@@ -938,7 +942,8 @@ export const LegArmors: LegArmor[] = [
     price: 6300,
     maxDefense: 22,
     maxLowRankDefense: 30,
-    skillPoints: {}
+    skillPoints: {},
+    torsoUp: true
   }),
   deepFreeze<LegArmor>({
     id: 43,
@@ -957,7 +962,8 @@ export const LegArmors: LegArmor[] = [
     price: 6300,
     maxDefense: 11,
     maxLowRankDefense: 15,
-    skillPoints: {}
+    skillPoints: {},
+    torsoUp: true
   }),
   deepFreeze<LegArmor>({
     id: 44,
@@ -1335,7 +1341,8 @@ export const LegArmors: LegArmor[] = [
     rarity: 4,
     price: 7100,
     maxDefense: 34,
-    skillPoints: {}
+    skillPoints: {},
+    torsoUp: true
   }),
   deepFreeze<LegArmor>({
     id: 63,
@@ -1353,7 +1360,8 @@ export const LegArmors: LegArmor[] = [
     rarity: 4,
     price: 7100,
     maxDefense: 20,
-    skillPoints: {}
+    skillPoints: {},
+    torsoUp: true
   }),
   deepFreeze<LegArmor>({
     id: 64,
@@ -1711,7 +1719,8 @@ export const LegArmors: LegArmor[] = [
     rarity: 6,
     price: 25000,
     maxDefense: 36,
-    skillPoints: {}
+    skillPoints: {},
+    torsoUp: true
   }),
   deepFreeze<LegArmor>({
     id: 81,
@@ -1729,7 +1738,8 @@ export const LegArmors: LegArmor[] = [
     rarity: 6,
     price: 25000,
     maxDefense: 22,
-    skillPoints: {}
+    skillPoints: {},
+    torsoUp: true
   }),
   deepFreeze<LegArmor>({
     id: 82,

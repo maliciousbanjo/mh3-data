@@ -1,6 +1,13 @@
 import type { SkillPointRecord } from '../armor-skills/types';
 import type { CommonTypes } from '../common';
-export type ArmorType = 'head' | 'chest' | 'arms' | 'waist' | 'legs';
+export const AllArmorTypes = [
+  'head',
+  'chest',
+  'arms',
+  'waist',
+  'legs'
+] as const;
+export type ArmorType = (typeof AllArmorTypes)[number];
 
 export interface ArmorPiece {
   readonly id: number;

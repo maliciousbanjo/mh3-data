@@ -2215,7 +2215,8 @@ export const WaistArmors: WaistArmor[] = [
     rarity: 7,
     price: 41500,
     maxDefense: 64,
-    skillPoints: {}
+    skillPoints: {},
+    torsoUp: true
   }),
   deepFreeze<WaistArmor>({
     id: 103,
@@ -2233,7 +2234,8 @@ export const WaistArmors: WaistArmor[] = [
     rarity: 7,
     price: 41500,
     maxDefense: 38,
-    skillPoints: {}
+    skillPoints: {},
+    torsoUp: true
   }),
   deepFreeze<WaistArmor>({
     id: 104,

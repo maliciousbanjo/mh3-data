@@ -2369,7 +2369,8 @@ export const HeadArmors: HeadArmor[] = [
     price: 5000,
     maxDefense: 7,
     maxLowRankDefense: 13,
-    skillPoints: {}
+    skillPoints: {},
+    torsoUp: true
   }),
   deepFreeze<HeadArmor>({
     id: 109,

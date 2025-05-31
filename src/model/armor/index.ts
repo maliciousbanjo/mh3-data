@@ -5,7 +5,7 @@ import { LegArmors } from './legs';
 import type { ArmorPiece, ArmorType } from './types';
 import { WaistArmors } from './waist';
 
-export type * from './types';
+export * from './types';
 
 export { HeadArmors } from './head';
 export { ChestArmors } from './chest';
