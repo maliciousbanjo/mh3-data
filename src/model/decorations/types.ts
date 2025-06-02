@@ -8,10 +8,11 @@ import type { ItemTypes } from '../index';
 export interface Decoration {
   name: string;
   /** Number of slots this decoration will occupy */
-  slots: Slots;
+  slotUsage: Slots;
   rarity: Rarity;
   /** In zenny */
   price: number;
+  /** Decorations often have a positive skill and a negative skill */
   skillPoints: SkillPointRecord;
   color: ItemTypes.ItemIconColor;
 }

@@ -1,25 +1,9 @@
-import type { SkillPointRecord } from '../armor-skills/types';
-import type { CommonTypes } from '../common';
-import type { ItemTypes } from '../index';
+import type { Decoration } from './types';
 
-/**
- * Can be added to an armor piece slot to increase skill points
- */
-export interface Decoration {
-  name: string;
-  /** Number of slots this decoration will occupy */
-  slots: CommonTypes.Slots;
-  rarity: CommonTypes.Rarity;
-  /** In zenny */
-  price: number;
-  skillPoints: SkillPointRecord;
-  color: ItemTypes.ItemIconColor;
-}
-
-export const Decorations: Decoration[] = [
+export const DecorationsData: Decoration[] = [
   {
     name: 'Antidote Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'purple',
@@ -27,7 +11,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Antidote Jewel+',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'purple',
@@ -35,7 +19,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Paralysis Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'yellow',
@@ -43,7 +27,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Paralysis Jewel+',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'yellow',
@@ -51,7 +35,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Pep Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'cyan',
@@ -59,7 +43,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Pep Jewel+',
-    slots: 2,
+    slotUsage: 2,
     rarity: 5,
     price: 250,
     color: 'cyan',
@@ -67,7 +51,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Steadfast Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'blue',
@@ -75,7 +59,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Steadfast Jewel+',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'blue',
@@ -83,7 +67,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Weather Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'gray',
@@ -91,7 +75,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Weather Jewel+',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'gray',
@@ -99,7 +83,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Ninja Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'purple',
@@ -107,7 +91,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Vitality Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'red',
@@ -115,7 +99,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Recovery Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'green',
@@ -123,7 +107,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Resurgence Jewel',
-    slots: 2,
+    slotUsage: 2,
     rarity: 5,
     price: 250,
     color: 'green',
@@ -131,7 +115,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Razor Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'gray',
@@ -139,7 +123,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Cutter Jewel',
-    slots: 3,
+    slotUsage: 3,
     rarity: 6,
     price: 300,
     color: 'gray',
@@ -147,7 +131,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Handicraft Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'purple',
@@ -155,7 +139,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Architect Jewel',
-    slots: 3,
+    slotUsage: 3,
     rarity: 7,
     price: 350,
     color: 'purple',
@@ -163,7 +147,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Fencer Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 6,
     price: 300,
     color: 'cyan',
@@ -171,7 +155,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Swordsman Jewel',
-    slots: 3,
+    slotUsage: 3,
     rarity: 7,
     price: 350,
     color: 'cyan',
@@ -179,7 +163,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Expert Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'blue',
@@ -187,7 +171,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Master Jewel',
-    slots: 2,
+    slotUsage: 2,
     rarity: 5,
     price: 250,
     color: 'blue',
@@ -195,7 +179,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Hermit Jewel',
-    slots: 3,
+    slotUsage: 3,
     rarity: 6,
     price: 300,
     color: 'blue',
@@ -203,7 +187,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Grinder Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'yellow',
@@ -211,7 +195,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Stone Wall Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'gray',
@@ -219,7 +203,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Iron Wall Jewel',
-    slots: 2,
+    slotUsage: 2,
     rarity: 6,
     price: 300,
     color: 'gray',
@@ -227,7 +211,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Shield Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'gray',
@@ -235,7 +219,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Aegis Jewel',
-    slots: 2,
+    slotUsage: 2,
     rarity: 6,
     price: 300,
     color: 'gray',
@@ -243,7 +227,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Quickload Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'cyan',
@@ -251,7 +235,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Flashload Jewel',
-    slots: 2,
+    slotUsage: 2,
     rarity: 6,
     price: 300,
     color: 'cyan',
@@ -259,7 +243,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Absorber Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'gray',
@@ -267,7 +251,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'FlinchFree Jewel',
-    slots: 3,
+    slotUsage: 3,
     rarity: 6,
     price: 300,
     color: 'gray',
@@ -275,7 +259,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Forceshot Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'white',
@@ -283,7 +267,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Forceshot Jewel+',
-    slots: 3,
+    slotUsage: 3,
     rarity: 7,
     price: 350,
     color: 'white',
@@ -291,7 +275,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Pierce Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'white',
@@ -299,7 +283,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Pierce Jewel+',
-    slots: 3,
+    slotUsage: 3,
     rarity: 7,
     price: 350,
     color: 'white',
@@ -307,7 +291,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Pellet Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'white',
@@ -315,7 +299,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Pellet Jewel+',
-    slots: 3,
+    slotUsage: 3,
     rarity: 6,
     price: 300,
     color: 'white',
@@ -323,7 +307,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'ShotPlus Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'orange',
@@ -331,7 +315,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'ShotPlus Jewel+',
-    slots: 2,
+    slotUsage: 2,
     rarity: 6,
     price: 300,
     color: 'orange',
@@ -339,7 +323,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'PiercPlus Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'orange',
@@ -347,7 +331,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'PiercPlus Jewel+',
-    slots: 2,
+    slotUsage: 2,
     rarity: 7,
     price: 350,
     color: 'orange',
@@ -355,7 +339,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'PelletPlus Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'orange',
@@ -363,7 +347,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'CragPlus Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'orange',
@@ -371,7 +355,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'ClustPlus Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'orange',
@@ -379,7 +363,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Disabler Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'pink',
@@ -387,7 +371,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Disabler Jewel+',
-    slots: 2,
+    slotUsage: 2,
     rarity: 7,
     price: 350,
     color: 'pink',
@@ -395,7 +379,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Element Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'pink',
@@ -403,7 +387,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Element Jewel+',
-    slots: 3,
+    slotUsage: 3,
     rarity: 7,
     price: 350,
     color: 'pink',
@@ -411,7 +395,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Bombardier Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'red',
@@ -419,7 +403,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Lite Eater Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'white',
@@ -427,7 +411,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Hungerless Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'white',
@@ -435,7 +419,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Metabolism Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'orange',
@@ -443,7 +427,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Attack Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'red',
@@ -451,7 +435,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Assault Jewel',
-    slots: 2,
+    slotUsage: 2,
     rarity: 5,
     price: 250,
     color: 'red',
@@ -459,7 +443,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Onslaught Jewel',
-    slots: 3,
+    slotUsage: 3,
     rarity: 6,
     price: 300,
     color: 'red',
@@ -467,7 +451,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Defense Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'blue',
@@ -475,7 +459,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Turtle Jewel',
-    slots: 2,
+    slotUsage: 2,
     rarity: 5,
     price: 250,
     color: 'blue',
@@ -483,7 +467,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Protection Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'yellow',
@@ -491,7 +475,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Asylum Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 6,
     price: 300,
     color: 'yellow',
@@ -499,7 +483,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Earplug Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'gray',
@@ -507,7 +491,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Silencer Jewel',
-    slots: 3,
+    slotUsage: 3,
     rarity: 7,
     price: 350,
     color: 'gray',
@@ -515,7 +499,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Alarm Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'gray',
@@ -523,7 +507,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Friendship Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'pink',
@@ -531,7 +515,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Alliance Jewel',
-    slots: 2,
+    slotUsage: 2,
     rarity: 6,
     price: 300,
     color: 'pink',
@@ -539,7 +523,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Transportr Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'cyan',
@@ -547,7 +531,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Crimson Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'red',
@@ -555,7 +539,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Torrent Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'cyan',
@@ -563,7 +547,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Storm Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'yellow',
@@ -571,7 +555,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Glacier Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'blue',
@@ -579,7 +563,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Dragonbane Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 6,
     price: 300,
     color: 'purple',
@@ -587,7 +571,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Breeze Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'cyan',
@@ -595,7 +579,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Warmth Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'orange',
@@ -603,7 +587,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Sandbag Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'gray',
@@ -611,7 +595,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Anchor Jewel',
-    slots: 2,
+    slotUsage: 2,
     rarity: 6,
     price: 300,
     color: 'gray',
@@ -619,7 +603,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Map Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'white',
@@ -627,7 +611,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Gathering Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'green',
@@ -635,7 +619,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Spree Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'green',
@@ -643,7 +627,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Blessing Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'pink',
@@ -651,7 +635,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Fate Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 6,
     price: 300,
     color: 'red',
@@ -659,7 +643,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Destiny Jewel',
-    slots: 3,
+    slotUsage: 3,
     rarity: 7,
     price: 350,
     color: 'red',
@@ -667,7 +651,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Fisher Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'cyan',
@@ -675,7 +659,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Psychic Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'orange',
@@ -683,7 +667,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Medicine Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'green',
@@ -691,7 +675,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Panacea Jewel',
-    slots: 2,
+    slotUsage: 2,
     rarity: 6,
     price: 300,
     color: 'green',
@@ -699,7 +683,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Professor Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'purple',
@@ -707,7 +691,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Factory Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'white',
@@ -715,7 +699,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Evade Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'cyan',
@@ -723,7 +707,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Lightfoot Jewel',
-    slots: 2,
+    slotUsage: 2,
     rarity: 7,
     price: 350,
     color: 'cyan',
@@ -731,7 +715,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Crisis Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'red',
@@ -739,7 +723,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Peril Jewel',
-    slots: 2,
+    slotUsage: 2,
     rarity: 6,
     price: 300,
     color: 'red',
@@ -747,7 +731,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Enduring Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'blue',
@@ -755,7 +739,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Sprinter Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'yellow',
@@ -763,7 +747,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Marathon Jewel',
-    slots: 3,
+    slotUsage: 3,
     rarity: 7,
     price: 350,
     color: 'yellow',
@@ -771,7 +755,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Chamber Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'gray',
@@ -779,7 +763,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Magazine Jewel',
-    slots: 3,
+    slotUsage: 3,
     rarity: 7,
     price: 350,
     color: 'gray',
@@ -787,7 +771,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Sniper Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'white',
@@ -795,7 +779,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Gobbler Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'yellow',
@@ -803,7 +787,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Voracious Jewel',
-    slots: 3,
+    slotUsage: 3,
     rarity: 7,
     price: 350,
     color: 'yellow',
@@ -811,7 +795,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Carver Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 6,
     price: 300,
     color: 'orange',
@@ -819,7 +803,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Looter Jewel',
-    slots: 3,
+    slotUsage: 3,
     rarity: 7,
     price: 350,
     color: 'orange',
@@ -827,7 +811,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Footing Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'purple',
@@ -835,7 +819,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Tectonic Jewel',
-    slots: 2,
+    slotUsage: 2,
     rarity: 6,
     price: 300,
     color: 'purple',
@@ -843,7 +827,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'BBQ Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'orange',
@@ -851,7 +835,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Jumping Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 6,
     price: 300,
     color: 'blue',
@@ -859,7 +843,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Leaping Jewel',
-    slots: 3,
+    slotUsage: 3,
     rarity: 7,
     price: 350,
     color: 'blue',
@@ -867,7 +851,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Draw Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'red',
@@ -875,7 +859,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Critical Jewel',
-    slots: 2,
+    slotUsage: 2,
     rarity: 7,
     price: 350,
     color: 'red',
@@ -883,7 +867,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'TrapMaster Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'cyan',
@@ -891,7 +875,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Workout Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'white',
@@ -899,7 +883,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Physique Jewel',
-    slots: 2,
+    slotUsage: 2,
     rarity: 6,
     price: 300,
     color: 'white',
@@ -907,7 +891,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Tranq Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 6,
     price: 300,
     color: 'green',
@@ -915,7 +899,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Capture Jewel',
-    slots: 3,
+    slotUsage: 3,
     rarity: 7,
     price: 350,
     color: 'green',
@@ -923,7 +907,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Perception Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'yellow',
@@ -931,7 +915,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Charger Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'orange',
@@ -939,7 +923,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Dynamo Jewel',
-    slots: 3,
+    slotUsage: 3,
     rarity: 7,
     price: 350,
     color: 'orange',
@@ -947,7 +931,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Fresh Air Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'cyan',
@@ -955,7 +939,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Upstream Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'blue',
@@ -963,7 +947,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Swimmer Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'white',
@@ -971,7 +955,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Diver Jewel',
-    slots: 2,
+    slotUsage: 2,
     rarity: 6,
     price: 300,
     color: 'white',
@@ -979,7 +963,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Gambit Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'orange',
@@ -987,7 +971,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Checkmate Jewel',
-    slots: 3,
+    slotUsage: 3,
     rarity: 7,
     price: 350,
     color: 'orange',
@@ -995,7 +979,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Resistor Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 7,
     price: 350,
     color: 'green',
@@ -1003,7 +987,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Release Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 6,
     price: 300,
     color: 'red',
@@ -1011,7 +995,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Catalyst Jewel',
-    slots: 3,
+    slotUsage: 3,
     rarity: 7,
     price: 350,
     color: 'red',
@@ -1019,7 +1003,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Guts Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'pink',
@@ -1027,7 +1011,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Fortitude Jewel',
-    slots: 2,
+    slotUsage: 2,
     rarity: 7,
     price: 350,
     color: 'pink',
@@ -1035,7 +1019,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Salvo Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 6,
     price: 300,
     color: 'cyan',
@@ -1043,7 +1027,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Fusillade Jewel',
-    slots: 3,
+    slotUsage: 3,
     rarity: 7,
     price: 350,
     color: 'cyan',
@@ -1051,7 +1035,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Dung Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 4,
     price: 200,
     color: 'yellow',
@@ -1059,7 +1043,7 @@ export const Decorations: Decoration[] = [
   },
   {
     name: 'Torchlight Jewel',
-    slots: 1,
+    slotUsage: 1,
     rarity: 5,
     price: 250,
     color: 'red',

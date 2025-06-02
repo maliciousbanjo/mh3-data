@@ -96,6 +96,8 @@ export type SkillIdentifier = (typeof skillIdentifiers)[number];
  * for the skill to be active.
  */
 export interface ArmorSkill {
+  /** Used to uniquely identify skill */
+  readonly key: SkillIdentifier;
   readonly skillName: string;
   readonly pointThreshold: PointThreshold;
   readonly skillDescription?: string;

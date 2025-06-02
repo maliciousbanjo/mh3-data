@@ -11,11 +11,13 @@ export const SkillTreesData = [
     group: SkillGroup.A,
     armorSkills: [
       {
+        key: 'sharpness',
         skillName: 'Razor Sharp',
         pointThreshold: 10,
         skillDescription: 'Halves the rate at which your weapon loses Sharpness'
       },
       {
+        key: 'sharpness',
         skillName: 'Blunt Edge',
         pointThreshold: -10,
         skillDescription:
@@ -28,14 +30,26 @@ export const SkillTreesData = [
     name: 'Handicraft',
     description: "Increases your weapon's Sharpness Level.",
     group: SkillGroup.A,
-    armorSkills: [{ skillName: 'Sharpness +1', pointThreshold: 15 }]
+    armorSkills: [
+      {
+        key: 'handicraft',
+        skillName: 'Sharpness +1',
+        pointThreshold: 15
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'fencing',
     name: 'Fencing',
     description: 'Prevents your attacks from being deflected.',
     group: SkillGroup.A,
-    armorSkills: [{ skillName: "Mind's Eye", pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'fencing',
+        skillName: "Mind's Eye",
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'recoil',
@@ -44,31 +58,37 @@ export const SkillTreesData = [
     group: SkillGroup.A,
     armorSkills: [
       {
+        key: 'recoil',
         skillName: 'Recoil Down +1',
         pointThreshold: 10,
         skillDescription: 'Bowgun recoil is reduced.'
       },
       {
+        key: 'recoil',
         skillName: 'Recoil Down +2',
         pointThreshold: 15,
         skillDescription: 'Bowgun recoil is reduced further.'
       },
       {
+        key: 'recoil',
         skillName: 'Recoil Down +3',
         pointThreshold: 20,
         skillDescription: 'Bowgun recoil is reduced even greater.'
       },
       {
+        key: 'recoil',
         skillName: 'Recoil Down -1',
         pointThreshold: -10,
         skillDescription: 'Bowgun recoil is increased.'
       },
       {
+        key: 'recoil',
         skillName: 'Recoil Down -2',
         pointThreshold: -15,
         skillDescription: 'Bowgun recoil is increased further.'
       },
       {
+        key: 'recoil',
         skillName: 'Recoil Down -3',
         pointThreshold: -20,
         skillDescription: 'Bowgun recoil is increased even greater.'
@@ -80,28 +100,52 @@ export const SkillTreesData = [
     name: 'NormalS Up',
     description: 'Increases the damage of Normal S.',
     group: SkillGroup.A,
-    armorSkills: [{ skillName: 'Normal S Boost', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'normals_up',
+        skillName: 'Normal S Boost',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'pierces_up',
     name: 'PierceS Up',
     description: 'Increases the damage of Pierce S.',
     group: SkillGroup.A,
-    armorSkills: [{ skillName: 'Pierce S Boost', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'pierces_up',
+        skillName: 'Pierce S Boost',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'pellets_up',
     name: 'PelletS Up',
     description: 'Increases the damage of Pellet S.',
     group: SkillGroup.A,
-    armorSkills: [{ skillName: 'Pellet S Boost', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'pellets_up',
+        skillName: 'Pellet S Boost',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'normal_s+',
     name: 'Normal S+',
     description: 'Allows a bowgun to fire all Normal S levels.',
     group: SkillGroup.A,
-    armorSkills: [{ skillName: 'Normal S All Up', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'normal_s+',
+        skillName: 'Normal S All Up',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'pierce_s+',
@@ -110,11 +154,13 @@ export const SkillTreesData = [
     group: SkillGroup.A,
     armorSkills: [
       {
+        key: 'pierce_s+',
         skillName: 'Pierce S Lv1 Up',
         pointThreshold: 10,
         skillDescription: 'Allows a bowgun to fire Pierce S Lv1.'
       },
       {
+        key: 'pierce_s+',
         skillName: 'Pierce S All Up',
         pointThreshold: 15,
         skillDescription: 'Allows a bowgun to fire all Pierce S level.'
@@ -129,11 +175,13 @@ export const SkillTreesData = [
     group: SkillGroup.A,
     armorSkills: [
       {
+        key: 'status',
         skillName: 'Status Atk Up',
         pointThreshold: 10,
         skillDescription: 'Increases the potency of Abnormal Status attacks.'
       },
       {
+        key: 'status',
         skillName: 'Status Atk Down',
         pointThreshold: -10,
         skillDescription: 'Decreases the potency of Abnormal Status attacks.'
@@ -147,11 +195,13 @@ export const SkillTreesData = [
     group: SkillGroup.A,
     armorSkills: [
       {
+        key: 'elemental',
         skillName: 'Element Atk Up',
         pointThreshold: 10,
         skillDescription: 'Increases the power of Elemental attacks.'
       },
       {
+        key: 'elemental',
         skillName: 'Element Atk Down',
         pointThreshold: -10,
         skillDescription: 'Decreases the power of Elemental attacks.'
@@ -165,12 +215,14 @@ export const SkillTreesData = [
     group: SkillGroup.A,
     armorSkills: [
       {
+        key: 'hearing',
         skillName: 'Earplugs',
         pointThreshold: 10,
         skillDescription:
           'Unaffected by some monster roars (anything besides Elder Dragons, Gigginox, Deviljho, and Diablos).'
       },
       {
+        key: 'hearing',
         skillName: 'HG Earplugs',
         pointThreshold: 15,
         skillDescription: 'Unaffected by all monster roars.'
@@ -185,24 +237,28 @@ export const SkillTreesData = [
     group: SkillGroup.A,
     armorSkills: [
       {
+        key: 'fate',
         skillName: 'Good Luck',
         pointThreshold: 10,
         skillDescription:
           'Sometimes increases the number of Reward Items received at the end of a Quest.'
       },
       {
+        key: 'fate',
         skillName: 'Great Luck',
         pointThreshold: 15,
         skillDescription:
           'Often increases the number of Reward Items received at the end of a Quest.'
       },
       {
+        key: 'fate',
         skillName: 'Bad Luck',
         pointThreshold: -10,
         skillDescription:
           'Sometimes decreases the number of Reward Items received at the end of a Quest.'
       },
       {
+        key: 'fate',
         skillName: 'Horrible Luck',
         pointThreshold: -15,
         skillDescription:
@@ -218,12 +274,14 @@ export const SkillTreesData = [
     group: SkillGroup.A,
     armorSkills: [
       {
+        key: 'stamina',
         skillName: 'Marathon Runner',
         pointThreshold: 10,
         skillDescription:
           'Slows down Stamina depletion for actions other than evasion and blocking.'
       },
       {
+        key: 'stamina',
         skillName: 'Short Sprinter',
         pointThreshold: -10,
         skillDescription:
@@ -236,7 +294,13 @@ export const SkillTreesData = [
     name: 'Loading',
     description: 'Increases the loadable amount of all usable ammo by one.',
     group: SkillGroup.A,
-    armorSkills: [{ skillName: 'Load Up', pointThreshold: 15 }]
+    armorSkills: [
+      {
+        key: 'loading',
+        skillName: 'Load Up',
+        pointThreshold: 15
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'carving',
@@ -246,12 +310,14 @@ export const SkillTreesData = [
     group: SkillGroup.A,
     armorSkills: [
       {
+        key: 'carving',
         skillName: 'Carving Pro',
         pointThreshold: 10,
         skillDescription:
           'Prevents knockbacks from everything other than Wind Pressure while carving.'
       },
       {
+        key: 'carving',
         skillName: 'Carving Master',
         pointThreshold: 15,
         skillDescription:
@@ -264,7 +330,13 @@ export const SkillTreesData = [
     name: 'Evade Dist',
     description: 'Increases evasion distance.',
     group: SkillGroup.A,
-    armorSkills: [{ skillName: 'Evasion Up', pointThreshold: 15 }]
+    armorSkills: [
+      {
+        key: 'evade_dist',
+        skillName: 'Evasion Up',
+        pointThreshold: 15
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'tranquilzr',
@@ -272,7 +344,13 @@ export const SkillTreesData = [
     description:
       'Rewards an additional Capture Reward Item for capturing a monster (no additional item for capturing more monsters of the same type).',
     group: SkillGroup.A,
-    armorSkills: [{ skillName: 'Capture Expert', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'tranquilzr',
+        skillName: 'Capture Expert',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'fastcharge',
@@ -282,12 +360,16 @@ export const SkillTreesData = [
     group: SkillGroup.A,
     armorSkills: [
       {
+        key: 'fastcharge',
+
         skillName: 'Focus',
         pointThreshold: 10,
         skillDescription:
           'Decreases charging time for charge attacks (Greatswords and Hammers) and gauges (Long Swords and Switch Axes).'
       },
       {
+        key: 'fastcharge',
+
         skillName: 'Distraction',
         pointThreshold: -10,
         skillDescription:
@@ -300,7 +382,13 @@ export const SkillTreesData = [
     name: 'PunishDraw',
     description: 'Grants the ability to stun (KO) monsters with draw attacks.',
     group: SkillGroup.A,
-    armorSkills: [{ skillName: 'Punishing Draw', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'punishdraw',
+        skillName: 'Punishing Draw',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'freeelemnt',
@@ -308,14 +396,26 @@ export const SkillTreesData = [
     description:
       "Releases the latent elemental properties in weapons that don't have elements.",
     group: SkillGroup.A,
-    armorSkills: [{ skillName: 'Awaken', pointThreshold: 15 }]
+    armorSkills: [
+      {
+        key: 'freeelemnt',
+        skillName: 'Awaken',
+        pointThreshold: 15
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'rapid_fire',
     name: 'Rapid Fire',
     description: 'Allows one extra shot to be fired while rapid firing.',
     group: SkillGroup.A,
-    armorSkills: [{ skillName: 'Bonus Shot', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'rapid_fire',
+        skillName: 'Bonus Shot',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'poison',
@@ -324,11 +424,13 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'poison',
         skillName: 'Negate Poison',
         pointThreshold: 10,
         skillDescription: 'Prevents poison.'
       },
       {
+        key: 'poison',
         skillName: 'Double Poison',
         pointThreshold: -10,
         skillDescription: 'Doubles the damage received from poison.'
@@ -342,21 +444,25 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'health',
         skillName: 'Health +20',
         pointThreshold: 10,
         skillDescription: 'Increases maximum Health by 20.'
       },
       {
+        key: 'health',
         skillName: 'Health +50',
         pointThreshold: 15,
         skillDescription: 'Increases maximum Health by 50.'
       },
       {
+        key: 'health',
         skillName: 'Health -10',
         pointThreshold: -10,
         skillDescription: 'Decreases maximum Health by 10.'
       },
       {
+        key: 'health',
         skillName: 'Health -30',
         pointThreshold: -15,
         skillDescription: 'Decreases maximum Health by 30.'
@@ -371,24 +477,28 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'rec_speed',
         skillName: 'Recovery Spd +1',
         pointThreshold: 10,
         skillDescription:
           'Speeds recovery from temporary damage (the red part of the Health Gauge).'
       },
       {
+        key: 'rec_speed',
         skillName: 'Recovery Spd +2',
         pointThreshold: 15,
         skillDescription:
           'Greatly speeds recovery from temporary damage (the red portion of the Health Gauge).'
       },
       {
+        key: 'rec_speed',
         skillName: 'Recovery Spd -1',
         pointThreshold: -10,
         skillDescription:
           'Slows recovery from temporary damage (the red portion of the Health Gauge).'
       },
       {
+        key: 'rec_speed',
         skillName: 'Recovery Spd -2',
         pointThreshold: -15,
         skillDescription:
@@ -404,31 +514,37 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'expert',
         skillName: 'Critical Eye +1',
         pointThreshold: 10,
         skillDescription: 'Increases Affinity by 10% (2.5% effective damage).'
       },
       {
+        key: 'expert',
         skillName: 'Critical Eye +2',
         pointThreshold: 15,
         skillDescription: 'Increases Affinity by 20% (5% effective damage).'
       },
       {
+        key: 'expert',
         skillName: 'Critical Eye +3',
         pointThreshold: 20,
         skillDescription: 'Increases Affinity by 30% (7.5% effective damage).'
       },
       {
+        key: 'expert',
         skillName: 'Critical Eye -1',
         pointThreshold: -10,
         skillDescription: 'Decreases Affinity by 5% (-1.25% effective damage).'
       },
       {
+        key: 'expert',
         skillName: 'Critical Eye -2',
         pointThreshold: -15,
         skillDescription: 'Decreases Affinity by 10% (-2.5% effective damage).'
       },
       {
+        key: 'expert',
         skillName: 'Critical Eye -3',
         pointThreshold: -20,
         skillDescription: 'Decreases Affinity by 15% (-3.75% effective damage).'
@@ -442,11 +558,13 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'sharpener',
         skillName: 'Speed Sharpening',
         pointThreshold: 10,
         skillDescription: 'Weapons are sharpened much faster.'
       },
       {
+        key: 'sharpener',
         skillName: 'Slow Sharpening',
         pointThreshold: -10,
         skillDescription: 'Weapons take longer to sharpen.'
@@ -461,18 +579,21 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'guard',
         skillName: 'Guard +1',
         pointThreshold: 10,
         skillDescription:
           'Decreases knockback when blocking attacks, and decreases stamina loss (and damage taken) when blocking heavier attacks.'
       },
       {
+        key: 'guard',
         skillName: 'Guard +2',
         pointThreshold: 15,
         skillDescription:
           'Greatly decreases knockback when blocking attacks, and greatly decreases stamina loss (and damage taken) when blocking heavier attacks.'
       },
       {
+        key: 'guard',
         skillName: 'Guard -1',
         pointThreshold: -10,
         skillDescription:
@@ -486,7 +607,13 @@ export const SkillTreesData = [
     description:
       "Causes previously unblockable attacks to become blockable: Gobul's Water Vortex, Gigginox's Poison Body Slam, Uragaan's Sleep Cloud, Laguiacrus' Massive Electric Discharge, Agnaktor's Firebeam, Ceadeus' Water Blast and Alatreon's Fireball.",
     group: SkillGroup.B,
-    armorSkills: [{ skillName: 'Guard Boost', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'guard_up',
+        skillName: 'Guard Boost',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'reload_spd',
@@ -495,31 +622,37 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'reload_spd',
         skillName: 'Reload Speed +1',
         pointThreshold: 10,
         skillDescription: 'Bowgun reloading speed increases 1 level.'
       },
       {
+        key: 'reload_spd',
         skillName: 'Reload Speed +2',
         pointThreshold: 15,
         skillDescription: 'Bowgun reloading speed increases 2 levels.'
       },
       {
+        key: 'reload_spd',
         skillName: 'Reload Speed +3',
         pointThreshold: 20,
         skillDescription: 'Bowgun reloading speed increases 3 levels.'
       },
       {
+        key: 'reload_spd',
         skillName: 'Reload Speed -1',
         pointThreshold: -10,
         skillDescription: 'Bowgun reloading speed decreases 1 level.'
       },
       {
+        key: 'reload_spd',
         skillName: 'Reload Speed -2',
         pointThreshold: -15,
         skillDescription: 'Bowgun reloading speed decreases 2 levels.'
       },
       {
+        key: 'reload_spd',
         skillName: 'Reload Speed -3',
         pointThreshold: -20,
         skillDescription: 'Bowgun reloading speed decreases 3 levels.'
@@ -533,11 +666,13 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'pellet_s+',
         skillName: 'Pellet S Lv1 Up',
         pointThreshold: 10,
         skillDescription: 'Allows a bowgun to fire Pellet S Lv1.'
       },
       {
+        key: 'pellet_s+',
         skillName: 'Pellet S All Up',
         pointThreshold: 15,
         skillDescription: 'Allows a bowgun to fire all Pellet S levels.'
@@ -551,11 +686,13 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'crag_s+',
         skillName: 'Crag S Lv1 Up',
         pointThreshold: 10,
         skillDescription: 'Allows a bowgun to fire Crag S Lv1.'
       },
       {
+        key: 'crag_s+',
         skillName: 'Crag S All Up',
         pointThreshold: 15,
         skillDescription: 'Allows a bowgun to fire all Crag S levels.'
@@ -569,11 +706,13 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'clust_s+',
         skillName: 'Clust S Lv1 Up',
         pointThreshold: 10,
         skillDescription: 'Allows a bowgun to fire Clust S Lv1.'
       },
       {
+        key: 'clust_s+',
         skillName: 'Clust S All Up',
         pointThreshold: 15,
         skillDescription: 'Allows a bowgun to fire all Clust S levels.'
@@ -585,7 +724,13 @@ export const SkillTreesData = [
     name: 'Bomb Boost',
     description: 'Bomb damage is increased. Bomb Combinations are 100%.',
     group: SkillGroup.B,
-    armorSkills: [{ skillName: 'Bombardier', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'bomb_boost',
+        skillName: 'Bombardier',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'hunger',
@@ -595,21 +740,25 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'hunger',
         skillName: 'Halve Hunger',
         pointThreshold: 10,
         skillDescription: 'Halves maximum Stamina depletion speed.'
       },
       {
+        key: 'hunger',
         skillName: 'Negate Hunger',
         pointThreshold: 15,
         skillDescription: 'Negates maximum Stamina depletion.'
       },
       {
+        key: 'hunger',
         skillName: 'Raise Hunger',
         pointThreshold: -10,
         skillDescription: 'Increases maximum Stamina depletion speed.'
       },
       {
+        key: 'hunger',
         skillName: 'Double Hunger',
         pointThreshold: -15,
         skillDescription: 'Greatly increases maximum Stamina depletion speed.'
@@ -623,31 +772,37 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'attack',
         skillName: 'Attack Up (S)',
         pointThreshold: 10,
         skillDescription: 'Slightly increases Attack.'
       },
       {
+        key: 'attack',
         skillName: 'Attack Up (M)',
         pointThreshold: 15,
         skillDescription: 'Increases Attack.'
       },
       {
+        key: 'attack',
         skillName: 'Attack Up (L)',
         pointThreshold: 20,
         skillDescription: 'Greatly increases Attack.'
       },
       {
+        key: 'attack',
         skillName: 'Attack Down (S)',
         pointThreshold: -10,
         skillDescription: 'Slightly decreases Attack.'
       },
       {
+        key: 'attack',
         skillName: 'Attack Down (M)',
         pointThreshold: -15,
         skillDescription: 'Decreases Attack.'
       },
       {
+        key: 'attack',
         skillName: 'Attack Down (L)',
         pointThreshold: -20,
         skillDescription: 'Greatly decreases Attack.'
@@ -661,31 +816,37 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'defense',
         skillName: 'Defense Up (S)',
         pointThreshold: 10,
         skillDescription: 'Slightly increases Defense.'
       },
       {
+        key: 'defense',
         skillName: 'Defense Up (M)',
         pointThreshold: 15,
         skillDescription: 'Increases Defense.'
       },
       {
+        key: 'defense',
         skillName: 'Defense Up (L)',
         pointThreshold: 20,
         skillDescription: 'Greatly increases Defense.'
       },
       {
+        key: 'defense',
         skillName: 'Defense Down (S)',
         pointThreshold: -10,
         skillDescription: 'Slightly decreases Defense.'
       },
       {
+        key: 'defense',
         skillName: 'Defense Down (M)',
         pointThreshold: -15,
         skillDescription: 'Decreases Defense.'
       },
       {
+        key: 'defense',
         skillName: 'Defense Down (L)',
         pointThreshold: -20,
         skillDescription: 'Greatly decreases Defense.'
@@ -699,11 +860,13 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'protection',
         skillName: 'Divine Blessing',
         pointThreshold: 10,
         skillDescription: '25% chance of attacks doing 30% less damage.'
       },
       {
+        key: 'protection',
         skillName: 'Demonic Blessing',
         pointThreshold: -10,
         skillDescription: '25% chance of attacks doing 30% more damage.'
@@ -717,12 +880,14 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'wide-range',
         skillName: 'Wide-Range +1',
         pointThreshold: 10,
         skillDescription:
           'Health & status Items used also affect nearby party members by a small amount.'
       },
       {
+        key: 'wide-range',
         skillName: 'Wide-Range +2',
         pointThreshold: 20,
         skillDescription:
@@ -737,11 +902,13 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'wind_res',
         skillName: 'Windproof (Lo)',
         pointThreshold: 10,
         skillDescription: 'Negates a certain amount of Wind Pressure.'
       },
       {
+        key: 'wind_res',
         skillName: 'Windproof (Hi)',
         pointThreshold: 15,
         skillDescription: 'Negates all Wind Pressure.'
@@ -755,17 +922,20 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'gathering',
         skillName: 'Gathering +1',
         pointThreshold: 10,
         skillDescription: 'Chance to gather more resources in a single spot.'
       },
       {
+        key: 'gathering',
         skillName: 'Gathering +2',
         pointThreshold: 15,
         skillDescription:
           'Higher chance to gather more resources in a single spot.'
       },
       {
+        key: 'gathering',
         skillName: 'Gathering -1',
         pointThreshold: -10,
         skillDescription: 'Chance to gather less resources in a single spot.'
@@ -777,7 +947,13 @@ export const SkillTreesData = [
     name: 'Spd Gather',
     description: 'Gathering speed is increased.',
     group: SkillGroup.B,
-    armorSkills: [{ skillName: 'Speed Gatherer', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'spd_gather',
+        skillName: 'Speed Gatherer',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'psychic',
@@ -787,12 +963,14 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'psychic',
         skillName: 'Detect',
         pointThreshold: 10,
         skillDescription:
           'Marked monsters display additional information on the map, such as species and rage.'
       },
       {
+        key: 'psychic',
         skillName: 'Autotracker',
         pointThreshold: 15,
         skillDescription: 'Activates Detect without having to mark the monster.'
@@ -807,11 +985,13 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'rec_level',
         skillName: 'Recovery Up',
         pointThreshold: 10,
         skillDescription: 'Increases the efficiency of Health recovery items.'
       },
       {
+        key: 'rec_level',
         skillName: 'Recovery Down',
         pointThreshold: -10,
         skillDescription: 'Decreases the efficiency of Health recovery items.'
@@ -824,8 +1004,16 @@ export const SkillTreesData = [
     description: 'Extends the invulnerability period when evading.',
     group: SkillGroup.B,
     armorSkills: [
-      { skillName: 'Evasion +1', pointThreshold: 10 },
-      { skillName: 'Evasion +2', pointThreshold: 15 }
+      {
+        key: 'evasion',
+        skillName: 'Evasion +1',
+        pointThreshold: 10
+      },
+      {
+        key: 'evasion',
+        skillName: 'Evasion +2',
+        pointThreshold: 15
+      }
     ]
   }),
   deepFreeze<SkillTree>({
@@ -836,17 +1024,20 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'potential',
         skillName: 'Adrenaline +1',
         pointThreshold: 10,
         skillDescription: 'Greatly increases Defense when Health is below 40%.'
       },
       {
+        key: 'potential',
         skillName: 'Adrenaline +2',
         pointThreshold: 15,
         skillDescription:
           'Greatly increases Attack and Defense when Health is below 40%.'
       },
       {
+        key: 'potential',
         skillName: 'Worrywart',
         pointThreshold: -10,
         skillDescription:
@@ -862,16 +1053,19 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'eating',
         skillName: 'Speed Eating +1',
         pointThreshold: 10,
         skillDescription: 'Increases meat-eating speed.'
       },
       {
+        key: 'eating',
         skillName: 'Speed Eating +2',
         pointThreshold: 15,
         skillDescription: 'Increases meat and item consuming speed.'
       },
       {
+        key: 'eating',
         skillName: 'Slow Eater',
         pointThreshold: -10,
         skillDescription: 'Decreases meat-eating speed.'
@@ -883,14 +1077,26 @@ export const SkillTreesData = [
     name: 'Tremor Res',
     description: 'Prevents staggering from tremors created by large monsters.',
     group: SkillGroup.B,
-    armorSkills: [{ skillName: 'Tremor-Proof', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'tremor_res',
+        skillName: 'Tremor-Proof',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'crit_draw',
     name: 'Crit Draw',
     description: 'Guarantees all draw attacks will be critical.',
     group: SkillGroup.B,
-    armorSkills: [{ skillName: 'Critical Draw', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'crit_draw',
+        skillName: 'Critical Draw',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'constitutn',
@@ -900,24 +1106,28 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'constitutn',
         skillName: 'Constitution +1',
         pointThreshold: 10,
         skillDescription:
           'Slows down Stamina depletion while evading and blocking.'
       },
       {
+        key: 'constitutn',
         skillName: 'Constitution +2',
         pointThreshold: 15,
         skillDescription:
           'Greatly slows down Stamina depletion while evading and blocking.'
       },
       {
+        key: 'constitutn',
         skillName: 'Constitution -1',
         pointThreshold: -10,
         skillDescription:
           'Speeds up Stamina depletion while evading and blocking.'
       },
       {
+        key: 'constitutn',
         skillName: 'Constitution -2',
         pointThreshold: -15,
         skillDescription:
@@ -932,11 +1142,13 @@ export const SkillTreesData = [
     group: SkillGroup.B,
     armorSkills: [
       {
+        key: 'swimming',
         skillName: 'Olympic Swimmer',
         pointThreshold: 10,
         skillDescription: 'Increases your movement speed in water.'
       },
       {
+        key: 'swimming',
         skillName: 'Doggy Paddler',
         pointThreshold: -10,
         skillDescription: 'Decreases your movement speed in water.'
@@ -949,7 +1161,13 @@ export const SkillTreesData = [
     description:
       'Increases Dung Bomb efficiency, and raises their Combo success rate to 100%.',
     group: SkillGroup.B,
-    armorSkills: [{ skillName: 'Dung Bomb Expert', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'dungmaster',
+        skillName: 'Dung Bomb Expert',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'flame_aura',
@@ -957,7 +1175,13 @@ export const SkillTreesData = [
     description:
       "Causes monsters to react as if you are carrying a Torch, even when you aren't.",
     group: SkillGroup.B,
-    armorSkills: [{ skillName: 'Flaming Aura', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'flame_aura',
+        skillName: 'Flaming Aura',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'paralysis',
@@ -966,11 +1190,13 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'paralysis',
         skillName: 'Negate Paralysis',
         pointThreshold: 10,
         skillDescription: 'Prevents paralysis.'
       },
       {
+        key: 'paralysis',
         skillName: 'Double Paralysis',
         pointThreshold: -10,
         skillDescription: 'Doubles the duration of paralysis.'
@@ -984,11 +1210,13 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'sleep',
         skillName: 'Negate Sleep',
         pointThreshold: 10,
         skillDescription: 'Prevents sleep.'
       },
       {
+        key: 'sleep',
         skillName: 'Double Sleep',
         pointThreshold: -10,
         skillDescription: 'Doubles the duration of sleep.'
@@ -1003,16 +1231,19 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'stun',
         skillName: 'Halve Stun',
         pointThreshold: 10,
         skillDescription: 'Reduces the likelihood of being stunned by 50%.'
       },
       {
+        key: 'stun',
         skillName: 'Negate Stun',
         pointThreshold: 15,
         skillDescription: 'Prevents stun.'
       },
       {
+        key: 'stun',
         skillName: 'Double Stun',
         pointThreshold: -10,
         skillDescription: 'Makes it harder to recover from being stunned.'
@@ -1024,7 +1255,13 @@ export const SkillTreesData = [
     name: 'Mud/Snow',
     description: 'Prevents Snowman and Muddy conditions.',
     group: SkillGroup.C,
-    armorSkills: [{ skillName: 'Negate Mud/Snow', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'mud/snow',
+        skillName: 'Negate Mud/Snow',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'sense',
@@ -1034,11 +1271,13 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'sense',
         skillName: 'Sneak',
         pointThreshold: 10,
         skillDescription: 'Monsters are less likely to target you in a group.'
       },
       {
+        key: 'sense',
         skillName: 'Taunt',
         pointThreshold: -10,
         skillDescription: 'Monsters are more likely to target you in a group.'
@@ -1052,12 +1291,14 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'gluttony',
         skillName: 'Gourmand',
         pointThreshold: 10,
         skillDescription:
           'Sometimes increases the effeciency of items that raise maximum Stamina.'
       },
       {
+        key: 'gluttony',
         skillName: 'Scavenger',
         pointThreshold: 15,
         skillDescription:
@@ -1070,14 +1311,26 @@ export const SkillTreesData = [
     name: 'Anti-Theft',
     description: 'Prevents item theft.',
     group: SkillGroup.C,
-    armorSkills: [{ skillName: 'Anti-Theft', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'anti-theft',
+        skillName: 'Anti-Theft',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'transportr',
     name: 'Transportr',
     description: 'Travel faster while carrying eggs or powderstones.',
     group: SkillGroup.C,
-    armorSkills: [{ skillName: 'Pro Transporter', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'transportr',
+        skillName: 'Pro Transporter',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'fire_res',
@@ -1086,26 +1339,31 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'fire_res',
         skillName: 'Fire Res +10',
         pointThreshold: 10,
         skillDescription: 'Increases Fire resistance by 10.'
       },
       {
+        key: 'fire_res',
         skillName: 'Fire Res +15',
         pointThreshold: 15,
         skillDescription: 'Increases Fire resistance by 15.'
       },
       {
+        key: 'fire_res',
         skillName: 'Fire Res +20',
         pointThreshold: 20,
         skillDescription: 'Increases Fire resistance by 20.'
       },
       {
+        key: 'fire_res',
         skillName: 'Fire Res -10',
         pointThreshold: -10,
         skillDescription: 'Decreases Fire resistance by 10.'
       },
       {
+        key: 'fire_res',
         skillName: 'Fire Res -15',
         pointThreshold: -15,
         skillDescription: 'Decreases Fire resistance by 15.'
@@ -1119,26 +1377,31 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'water_res',
         skillName: 'Water Res +10',
         pointThreshold: 10,
         skillDescription: 'Increases Water resistance by 10.'
       },
       {
+        key: 'water_res',
         skillName: 'Water Res +15',
         pointThreshold: 15,
         skillDescription: 'Increases Water resistance by 15.'
       },
       {
+        key: 'water_res',
         skillName: 'Water Res +20',
         pointThreshold: 20,
         skillDescription: 'Increases Water resistance by 20.'
       },
       {
+        key: 'water_res',
         skillName: 'Water Res -10',
         pointThreshold: -10,
         skillDescription: 'Decreases Water resistance by 10.'
       },
       {
+        key: 'water_res',
         skillName: 'Water Res -15',
         pointThreshold: -15,
         skillDescription: 'Decreases Water resistance by 15.'
@@ -1152,26 +1415,31 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'thunderres',
         skillName: 'Thunder Res +10',
         pointThreshold: 10,
         skillDescription: 'Increases Thunder resistance by 10.'
       },
       {
+        key: 'thunderres',
         skillName: 'Thunder Res +15',
         pointThreshold: 15,
         skillDescription: 'Increases Thunder resistance by 15.'
       },
       {
+        key: 'thunderres',
         skillName: 'Thunder Res +20',
         pointThreshold: 20,
         skillDescription: 'Increases Thunder resistance by 20.'
       },
       {
+        key: 'thunderres',
         skillName: 'Thunder Res -10',
         pointThreshold: -10,
         skillDescription: 'Decreases Thunder resistance by 10.'
       },
       {
+        key: 'thunderres',
         skillName: 'Thunder Res -15',
         pointThreshold: -15,
         skillDescription: 'Decreases Thunder resistance by 15.'
@@ -1185,26 +1453,31 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'ice_res',
         skillName: 'Ice Res +10',
         pointThreshold: 10,
         skillDescription: 'Increases Ice resistance by 10.'
       },
       {
+        key: 'ice_res',
         skillName: 'Ice Res +15',
         pointThreshold: 15,
         skillDescription: 'Increases Ice resistance by 15.'
       },
       {
+        key: 'ice_res',
         skillName: 'Ice Res +20',
         pointThreshold: 20,
         skillDescription: 'Increases Ice resistance by 20.'
       },
       {
+        key: 'ice_res',
         skillName: 'Ice Res -10',
         pointThreshold: -10,
         skillDescription: 'Decreases Ice resistance by 10.'
       },
       {
+        key: 'ice_res',
         skillName: 'Ice Res -15',
         pointThreshold: -15,
         skillDescription: 'Decreases Ice resistance by 15.'
@@ -1218,26 +1491,31 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'dragon_res',
         skillName: 'Dragon Res +10',
         pointThreshold: 10,
         skillDescription: 'Increases Dragon resistance by 10.'
       },
       {
+        key: 'dragon_res',
         skillName: 'Dragon Res +15',
         pointThreshold: 15,
         skillDescription: 'Increases Dragon resistance by 15.'
       },
       {
+        key: 'dragon_res',
         skillName: 'Dragon Res +20',
         pointThreshold: 20,
         skillDescription: 'Increases Dragon resistance by 20.'
       },
       {
+        key: 'dragon_res',
         skillName: 'Dragon Res -10',
         pointThreshold: -10,
         skillDescription: 'Decreases Dragon resistance by 10.'
       },
       {
+        key: 'dragon_res',
         skillName: 'Dragon Res -15',
         pointThreshold: -15,
         skillDescription: 'Decreases Dragon resistance by 15.'
@@ -1252,22 +1530,26 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'heat_res',
         skillName: 'Heat Cancel (Lo)',
         pointThreshold: 10,
         skillDescription: 'Negates a certain amount of heat.'
       },
       {
+        key: 'heat_res',
         skillName: 'Heat Cancel (Hi)',
         pointThreshold: 15,
         skillDescription:
           'Negates all heat, as well as damage received from lava.'
       },
       {
+        key: 'heat_res',
         skillName: 'Heat Surge (Lo)',
         pointThreshold: -10,
         skillDescription: 'Increases damage incurred from heat.'
       },
       {
+        key: 'heat_res',
         skillName: 'Heat Surge (Hi)',
         pointThreshold: -15,
         skillDescription: 'Greatly increases damage incurred from heat.'
@@ -1282,22 +1564,26 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'cold_res',
         skillName: 'Cold Cancel (Lo)',
         pointThreshold: 10,
         skillDescription: 'Negates a certain amount of cold.'
       },
       {
+        key: 'cold_res',
         skillName: 'Cold Cancel (Hi)',
         pointThreshold: 15,
         skillDescription: 'Negates all cold.'
       },
       {
+        key: 'cold_res',
         skillName: 'Cold Surge (Lo)',
         pointThreshold: -10,
         skillDescription:
           'Increases the speed at which your maximum Stamina depletes from cold.'
       },
       {
+        key: 'cold_res',
         skillName: 'Cold Surge (Hi)',
         pointThreshold: -15,
         skillDescription:
@@ -1312,11 +1598,13 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'map',
         skillName: 'Farsight',
         pointThreshold: 10,
         skillDescription: 'Map is automatically available.'
       },
       {
+        key: 'map',
         skillName: 'Nearsight',
         pointThreshold: -10,
         skillDescription: 'Map is never shown.'
@@ -1331,24 +1619,28 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'whim',
         skillName: "Spirit's Whim",
         pointThreshold: 10,
         skillDescription:
           'Chance of bugnets/pickaxes/horns breaking is reduced.'
       },
       {
+        key: 'whim',
         skillName: 'Divine Whim',
         pointThreshold: 15,
         skillDescription:
           'Chance of bugnets/pickaxes/horns breaking is greatly reduced.'
       },
       {
+        key: 'whim',
         skillName: "Spectre's Whim",
         pointThreshold: -10,
         skillDescription:
           'Chance of bugnets/pickaxes/horns breaking is increased.'
       },
       {
+        key: 'whim',
         skillName: "Devil's Whim",
         pointThreshold: -15,
         skillDescription:
@@ -1362,7 +1654,13 @@ export const SkillTreesData = [
     description:
       'Causes fish to always bite on the first cast. Raises the efficiency of bait items.',
     group: SkillGroup.C,
-    armorSkills: [{ skillName: 'Fishing Expert', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'fishing',
+        skillName: 'Fishing Expert',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'combo_rate',
@@ -1371,31 +1669,37 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'combo_rate',
         skillName: 'Combination +15%',
         pointThreshold: 10,
         skillDescription: 'Increases your Combination success rate by 15%.'
       },
       {
+        key: 'combo_rate',
         skillName: 'Combination +25%',
         pointThreshold: 15,
         skillDescription: 'Increases your Combination success rate by 25%.'
       },
       {
+        key: 'combo_rate',
         skillName: 'Combination +45%',
         pointThreshold: 20,
         skillDescription: 'Increases your Combination success rate by 45%.'
       },
       {
+        key: 'combo_rate',
         skillName: 'Combination -5%',
         pointThreshold: -10,
         skillDescription: 'Decreases your Combination success rate by 5%.'
       },
       {
+        key: 'combo_rate',
         skillName: 'Combination -10%',
         pointThreshold: -15,
         skillDescription: 'Decreases your Combination success rate by 10%.'
       },
       {
+        key: 'combo_rate',
         skillName: 'Combination -15%',
         pointThreshold: -20,
         skillDescription: 'Decreases your Combination success rate by 15%.'
@@ -1408,7 +1712,13 @@ export const SkillTreesData = [
     description:
       'Guarantees maximum possible Combination results with items such as Bowgun ammo.',
     group: SkillGroup.C,
-    armorSkills: [{ skillName: 'Combination Pro', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'combo_plus',
+        skillName: 'Combination Pro',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'lastingpwr',
@@ -1417,11 +1727,13 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'lastingpwr',
         skillName: 'Item Use Up',
         pointThreshold: 10,
         skillDescription: 'Increases the effect time of certain items.'
       },
       {
+        key: 'lastingpwr',
         skillName: 'Item Use Down',
         pointThreshold: -10,
         skillDescription: 'Decreases the effect time of certain items.'
@@ -1435,16 +1747,19 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'precision',
         skillName: 'Steadiness +1',
         pointThreshold: 10,
         skillDescription: 'Decreases Deviation while aiming.'
       },
       {
+        key: 'precision',
         skillName: 'Steadiness +2',
         pointThreshold: 15,
         skillDescription: 'Greatly decreases Deviation while aiming.'
       },
       {
+        key: 'precision',
         skillName: 'Steadiness -1',
         pointThreshold: -10,
         skillDescription: 'Increases Deviation while aiming.'
@@ -1457,7 +1772,13 @@ export const SkillTreesData = [
     description:
       'Grants the ability to swiftly and easily roast Well-done Steaks.',
     group: SkillGroup.C,
-    armorSkills: [{ skillName: 'BBQ Expert', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'bbq',
+        skillName: 'BBQ Expert',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'speedsetup',
@@ -1465,7 +1786,13 @@ export const SkillTreesData = [
     description:
       'Speeds up trap and bomb setting time. Raises Trap Combinations to 100%.',
     group: SkillGroup.C,
-    armorSkills: [{ skillName: 'Trap Master', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'speedsetup',
+        skillName: 'Trap Master',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'perception',
@@ -1473,7 +1800,13 @@ export const SkillTreesData = [
     description:
       'Monster icon on the map blinks when monsters are ready to be captured.',
     group: SkillGroup.C,
-    armorSkills: [{ skillName: 'Capture Guru', pointThreshold: 10 }]
+    armorSkills: [
+      {
+        key: 'perception',
+        skillName: 'Capture Guru',
+        pointThreshold: 10
+      }
+    ]
   }),
   deepFreeze<SkillTree>({
     key: 'oxygen',
@@ -1482,11 +1815,13 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'oxygen',
         skillName: 'Oxygen Up',
         pointThreshold: 10,
         skillDescription: 'Slows down depletion of the Oxygen Gauge.'
       },
       {
+        key: 'oxygen',
         skillName: 'Oxygen Down',
         pointThreshold: -10,
         skillDescription: 'Speeds up depletion of the Oxygen Gauge.'
@@ -1500,12 +1835,14 @@ export const SkillTreesData = [
     group: SkillGroup.C,
     armorSkills: [
       {
+        key: 'currentres',
         skillName: 'Current Res (Lo)',
         pointThreshold: 10,
         skillDescription:
           'Negates some of the water currents created by large monsters.'
       },
       {
+        key: 'currentres',
         skillName: 'Current Res (Hi)',
         pointThreshold: 15,
         skillDescription: 'Negates the water currents created by large monster.'
@@ -1517,7 +1854,13 @@ export const SkillTreesData = [
     name: 'Survivor',
     description: 'Increases your Attack every time you fall in battle.',
     group: SkillGroup.A,
-    armorSkills: [{ skillName: 'Fortify', pointThreshold: 10 }],
+    armorSkills: [
+      {
+        key: 'survivor',
+        skillName: 'Fortify',
+        pointThreshold: 10
+      }
+    ],
     restricted: true
   }),
   deepFreeze<SkillTree>({
@@ -1526,7 +1869,13 @@ export const SkillTreesData = [
     description:
       'Negates all elemental Blights (Fire, Water, Thunder, Ice, and Dragon).',
     group: SkillGroup.B,
-    armorSkills: [{ skillName: 'Blightproof', pointThreshold: 10 }],
+    armorSkills: [
+      {
+        key: 'blight_res',
+        skillName: 'Blightproof',
+        pointThreshold: 10
+      }
+    ],
     restricted: true
   }),
   deepFreeze<SkillTree>({
@@ -1535,7 +1884,13 @@ export const SkillTreesData = [
     description:
       'Enables ability to automatically block attacks (when blocking is possible).',
     group: SkillGroup.C,
-    armorSkills: [{ skillName: 'Auto-Guard', pointThreshold: 10 }],
+    armorSkills: [
+      {
+        key: 'auto-guard',
+        skillName: 'Auto-Guard',
+        pointThreshold: 10
+      }
+    ],
     restricted: true
   })
 ];
