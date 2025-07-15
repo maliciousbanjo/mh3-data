@@ -1,5 +1,15 @@
 # mh3-data
 
+## 1.1.0
+
+### Minor Changes
+
+- 6ec3f32: Armor data added
+
+  - Armor piece data organized by head, chest, arms, waist, and legs
+  - Includes reference to armor skills
+  - Armor skill type shape updated to include a key
+
 ## 1.0.0
 
 ### Major Changes
