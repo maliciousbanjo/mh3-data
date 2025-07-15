@@ -1,7 +1,8 @@
 import type { MonsterLevelTypes } from '../monster-levels';
 import type { ItemTypes } from '../items';
 import type { MonsterTypes } from '../monsters';
-import { MapLocation, StarLevelEnum } from './enum';
+import { BossLevelModifiers, MapLocation, StarLevelEnum } from './enum';
+import type { NumericRange } from '../../lib';
 
 export type QuestRegion = 'Village' | 'City';
 export type QuestRank = 'Low' | 'High';
@@ -38,9 +39,9 @@ interface BossInfo {
   readonly level: MonsterLevelTypes.MonsterLevel;
   readonly size: number;
   /** controls random distribution of monster's level */
-  readonly min: number;
+  readonly levelModifier: BossLevelModifiers;
   /** controls random distribution of monster's size */
-  readonly max: number;
+  readonly sizeModifier: NumericRange<0, 14>;
 }
 
 /**

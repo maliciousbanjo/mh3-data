@@ -17,7 +17,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 141: 14 },
         contract: 0,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: false,
         reward: 1000,
         ko: 340,
@@ -48,7 +48,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 398: 15 },
         contract: 100,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: false,
         reward: 1200,
         ko: 400,
@@ -79,7 +79,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 310: 5 },
         contract: 100,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: false,
         reward: 1000,
         ko: 340,
@@ -109,7 +109,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 11: 8 },
         contract: 150,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: false,
         reward: 1600,
         ko: 540,
@@ -139,7 +139,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 17: 1 },
         contract: 200,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: false,
         reward: 2000,
         ko: 670,
@@ -150,8 +150,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 23,
             size: 100,
-            min: 1,
-            max: 3
+            levelModifier: 1,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -179,7 +179,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 21: 1 },
         contract: 350,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: false,
         reward: 3600,
         ko: 1200,
@@ -190,8 +190,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 23,
             size: 100,
-            min: 1,
-            max: 3
+            levelModifier: 1,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -219,7 +219,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 27: 1 },
         contract: 400,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: false,
         reward: 5500,
         ko: 1840,
@@ -230,8 +230,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 23,
             size: 100,
-            min: 1,
-            max: 3
+            levelModifier: 1,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -256,7 +256,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 364: 14 },
         contract: 100,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: false,
         reward: 1400,
         ko: 470,
@@ -286,7 +286,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 397: 10 },
         contract: 150,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: false,
         reward: 1500,
         ko: 500,
@@ -316,7 +316,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 17: 1 },
         contract: 200,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: false,
         reward: 3000,
         ko: 1000,
@@ -327,8 +327,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 23,
             size: 100,
-            min: 1,
-            max: 3
+            levelModifier: 1,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -356,7 +356,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 21: 1 },
         contract: 350,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: false,
         reward: 5100,
         ko: 1700,
@@ -367,8 +367,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 23,
             size: 100,
-            min: 1,
-            max: 3
+            levelModifier: 1,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -396,7 +396,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 203: 6 },
         contract: 350,
         time: 50,
-        location: MapLocation.FLOODED_FOREST,
+        location: MapLocation.FloodedForest,
         randomspawn: false,
         reward: 3600,
         ko: 1200,
@@ -427,7 +427,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 13: 10 },
         contract: 150,
         time: 50,
-        location: MapLocation.FLOODED_FOREST,
+        location: MapLocation.FloodedForest,
         randomspawn: false,
         reward: 1800,
         ko: 600,
@@ -455,7 +455,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 27: 1 },
         contract: 400,
         time: 50,
-        location: MapLocation.FLOODED_FOREST,
+        location: MapLocation.FloodedForest,
         randomspawn: false,
         reward: 4000,
         ko: 1340,
@@ -466,8 +466,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 23,
             size: 100,
-            min: 1,
-            max: 3
+            levelModifier: 1,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -497,7 +497,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 396: 1 },
         contract: 0,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: false,
         reward: 20,
         ko: 7,
@@ -524,7 +524,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 5: 15 },
         contract: 100,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: false,
         reward: 1200,
         ko: 400,
@@ -555,7 +555,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 136: 3 },
         contract: 600,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: false,
         reward: 6000,
         ko: 2000,
@@ -586,7 +586,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 22: 1 },
         contract: 500,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: false,
         reward: 7200,
         ko: 2400,
@@ -597,8 +597,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 27,
             size: 100,
-            min: 1,
-            max: 3
+            levelModifier: 1,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -626,7 +626,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 396: 1 },
         contract: 0,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: false,
         reward: 20,
         ko: 7,
@@ -653,7 +653,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 16: 13 },
         contract: 1500,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: false,
         reward: 1800,
         ko: 600,
@@ -681,7 +681,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 363: 3 },
         contract: 400,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: false,
         reward: 4000,
         ko: 1340,
@@ -712,7 +712,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 19: 1 },
         contract: 500,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: false,
         reward: 7200,
         ko: 2400,
@@ -723,8 +723,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 25,
             size: 100,
-            min: 1,
-            max: 3
+            levelModifier: 1,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -750,7 +750,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 4: 20 },
         contract: 150,
         time: 50,
-        location: MapLocation.FLOODED_FOREST,
+        location: MapLocation.FloodedForest,
         randomspawn: false,
         reward: 1600,
         ko: 540,
@@ -780,7 +780,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 28: 1 },
         contract: 550,
         time: 50,
-        location: MapLocation.FLOODED_FOREST,
+        location: MapLocation.FloodedForest,
         randomspawn: false,
         reward: 5600,
         ko: 1870,
@@ -791,8 +791,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 27,
             size: 100,
-            min: 1,
-            max: 3
+            levelModifier: 1,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -817,7 +817,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 28: 1 },
         contract: 550,
         time: 50,
-        location: MapLocation.FLOODED_FOREST,
+        location: MapLocation.FloodedForest,
         randomspawn: false,
         reward: 7600,
         ko: 2540,
@@ -828,8 +828,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 27,
             size: 100,
-            min: 1,
-            max: 3
+            levelModifier: 1,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -857,7 +857,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 22: 1 },
         contract: 500,
         time: 50,
-        location: MapLocation.FLOODED_FOREST,
+        location: MapLocation.FloodedForest,
         randomspawn: false,
         reward: 5200,
         ko: 1740,
@@ -868,8 +868,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 27,
             size: 100,
-            min: 1,
-            max: 3
+            levelModifier: 1,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -897,7 +897,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 395: 13 },
         contract: 150,
         time: 50,
-        location: MapLocation.TUNDRA,
+        location: MapLocation.Tundra,
         randomspawn: false,
         reward: 1800,
         ko: 600,
@@ -928,7 +928,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 18: 1 },
         contract: 250,
         time: 50,
-        location: MapLocation.TUNDRA,
+        location: MapLocation.Tundra,
         randomspawn: false,
         reward: 2800,
         ko: 940,
@@ -939,8 +939,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 25,
             size: 100,
-            min: 1,
-            max: 5
+            levelModifier: 1,
+            sizeModifier: 5
           }
         ],
         secondaryRewards: [
@@ -967,7 +967,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 18: 1 },
         contract: 250,
         time: 50,
-        location: MapLocation.TUNDRA,
+        location: MapLocation.Tundra,
         randomspawn: false,
         reward: 3800,
         ko: 1270,
@@ -978,8 +978,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 25,
             size: 100,
-            min: 1,
-            max: 5
+            levelModifier: 1,
+            sizeModifier: 5
           }
         ],
         secondaryRewards: [
@@ -1006,7 +1006,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 19: 1 },
         contract: 500,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: false,
         reward: 5200,
         ko: 1740,
@@ -1017,8 +1017,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 25,
             size: 100,
-            min: 0,
-            max: 3
+            levelModifier: 0,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -1048,7 +1048,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 396: 1 },
         contract: 0,
         time: 50,
-        location: MapLocation.FLOODED_FOREST,
+        location: MapLocation.FloodedForest,
         randomspawn: false,
         reward: 20,
         ko: 7,
@@ -1075,7 +1075,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 396: 1 },
         contract: 0,
         time: 50,
-        location: MapLocation.TUNDRA,
+        location: MapLocation.Tundra,
         randomspawn: false,
         reward: 20,
         ko: 7,
@@ -1102,7 +1102,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 23: 1 },
         contract: 800,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: false,
         reward: 8000,
         ko: 2670,
@@ -1113,8 +1113,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 29,
             size: 100,
-            min: 1,
-            max: 3
+            levelModifier: 1,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -1143,7 +1143,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 24: 1 },
         contract: 850,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: false,
         reward: 8800,
         ko: 2940,
@@ -1154,8 +1154,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 29,
             size: 100,
-            min: 1,
-            max: 3
+            levelModifier: 1,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -1182,7 +1182,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 24: 1 },
         contract: 850,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: false,
         reward: 12800,
         ko: 4270,
@@ -1193,8 +1193,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 29,
             size: 100,
-            min: 1,
-            max: 3
+            levelModifier: 1,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -1220,7 +1220,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 29: 1 },
         contract: 750,
         time: 50,
-        location: MapLocation.FLOODED_FOREST,
+        location: MapLocation.FloodedForest,
         randomspawn: false,
         reward: 10600,
         ko: 3540,
@@ -1231,8 +1231,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 29,
             size: 100,
-            min: 1,
-            max: 3
+            levelModifier: 1,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -1258,7 +1258,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 25: 1 },
         contract: 600,
         time: 50,
-        location: MapLocation.TUNDRA,
+        location: MapLocation.Tundra,
         randomspawn: false,
         reward: 6000,
         ko: 2000,
@@ -1269,8 +1269,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 27,
             size: 100,
-            min: 1,
-            max: 4
+            levelModifier: 1,
+            sizeModifier: 4
           }
         ],
         secondaryRewards: [
@@ -1298,7 +1298,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 26: 1 },
         contract: 800,
         time: 50,
-        location: MapLocation.TUNDRA,
+        location: MapLocation.Tundra,
         randomspawn: false,
         reward: 8000,
         ko: 2670,
@@ -1309,8 +1309,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 29,
             size: 100,
-            min: 1,
-            max: 4
+            levelModifier: 1,
+            sizeModifier: 4
           }
         ],
         secondaryRewards: [
@@ -1341,7 +1341,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 26: 1 },
         contract: 800,
         time: 50,
-        location: MapLocation.TUNDRA,
+        location: MapLocation.Tundra,
         randomspawn: false,
         reward: 11100,
         ko: 3700,
@@ -1352,8 +1352,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 29,
             size: 100,
-            min: 1,
-            max: 4
+            levelModifier: 1,
+            sizeModifier: 4
           }
         ],
         secondaryRewards: [
@@ -1379,7 +1379,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 14: 15 },
         contract: 150,
         time: 50,
-        location: MapLocation.VOLCANO,
+        location: MapLocation.Volcano,
         randomspawn: false,
         reward: 1900,
         ko: 640,
@@ -1410,7 +1410,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 350: 3 },
         contract: 800,
         time: 50,
-        location: MapLocation.VOLCANO,
+        location: MapLocation.Volcano,
         randomspawn: false,
         reward: 8000,
         ko: 2670,
@@ -1441,7 +1441,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 20: 1 },
         contract: 850,
         time: 50,
-        location: MapLocation.VOLCANO,
+        location: MapLocation.Volcano,
         randomspawn: false,
         reward: 8800,
         ko: 2940,
@@ -1452,8 +1452,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 29,
             size: 100,
-            min: 1,
-            max: 3
+            levelModifier: 1,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -1480,7 +1480,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 20: 1 },
         contract: 850,
         time: 50,
-        location: MapLocation.VOLCANO,
+        location: MapLocation.Volcano,
         randomspawn: false,
         reward: 12800,
         ko: 4270,
@@ -1491,8 +1491,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 29,
             size: 100,
-            min: 1,
-            max: 3
+            levelModifier: 1,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -1518,7 +1518,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 22: 1, 23: 1 },
         contract: 1550,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: false,
         reward: 15700,
         ko: 5240,
@@ -1529,16 +1529,16 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 40,
             size: 100,
-            min: 0,
-            max: 3
+            levelModifier: 0,
+            sizeModifier: 3
           },
           {
             monsterId: 23,
             startingArea: 1,
             level: 40,
             size: 100,
-            min: 0,
-            max: 3
+            levelModifier: 0,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -1562,7 +1562,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 25: 1 },
         contract: 700,
         time: 50,
-        location: MapLocation.TUNDRA,
+        location: MapLocation.Tundra,
         randomspawn: false,
         reward: 10200,
         ko: 3400,
@@ -1573,8 +1573,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 32,
             size: 100,
-            min: 2,
-            max: 4
+            levelModifier: 2,
+            sizeModifier: 4
           }
         ],
         secondaryRewards: [
@@ -1601,7 +1601,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 23: 1 },
         contract: 850,
         time: 50,
-        location: MapLocation.VOLCANO,
+        location: MapLocation.Volcano,
         randomspawn: false,
         reward: 11600,
         ko: 3870,
@@ -1612,8 +1612,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 32,
             size: 100,
-            min: 2,
-            max: 3
+            levelModifier: 2,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -1640,7 +1640,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 30: 1 },
         contract: 1100,
         time: 50,
-        location: MapLocation.VOLCANO,
+        location: MapLocation.Volcano,
         randomspawn: false,
         reward: 11000,
         ko: 3670,
@@ -1651,8 +1651,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 32,
             size: 100,
-            min: 2,
-            max: 3
+            levelModifier: 2,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -1681,7 +1681,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 29: 1 },
         contract: 750,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: false,
         reward: 7600,
         ko: 2540,
@@ -1692,8 +1692,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 27,
             size: 100,
-            min: 0,
-            max: 3
+            levelModifier: 0,
+            sizeModifier: 3
           }
         ],
         secondaryRewards: [
@@ -1722,7 +1722,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 33: 1 },
         contract: 1500,
         time: 30,
-        location: MapLocation.GREAT_DESERT,
+        location: MapLocation.GreatDesert,
         randomspawn: false,
         reward: 15000,
         ko: 5000,
@@ -1733,8 +1733,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 30,
             size: 100,
-            min: 0,
-            max: 0
+            levelModifier: 0,
+            sizeModifier: 0
           }
         ],
         secondaryRewards: [
@@ -1756,7 +1756,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 33: 60 },
         contract: 750,
         time: 30,
-        location: MapLocation.GREAT_DESERT,
+        location: MapLocation.GreatDesert,
         randomspawn: false,
         reward: 7500,
         ko: 2500,
@@ -1767,8 +1767,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 27,
             size: 100,
-            min: 0,
-            max: 0
+            levelModifier: 0,
+            sizeModifier: 0
           }
         ],
         secondaryRewards: [
@@ -1795,7 +1795,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 396: 1 },
         contract: 0,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: false,
         reward: 20,
         ko: 7,
@@ -1822,7 +1822,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 17: 1 },
         contract: 300,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: true,
         reward: 3000,
         ko: 1000,
@@ -1833,8 +1833,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 45,
             size: 100,
-            min: 1,
-            max: 10
+            levelModifier: 1,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -1861,7 +1861,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 21: 1 },
         contract: 500,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: true,
         reward: 5400,
         ko: 1800,
@@ -1872,8 +1872,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 45,
             size: 100,
-            min: 1,
-            max: 10
+            levelModifier: 1,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -1902,7 +1902,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 22: 1 },
         contract: 750,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: true,
         reward: 7800,
         ko: 2600,
@@ -1913,8 +1913,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 45,
             size: 100,
-            min: 1,
-            max: 10
+            levelModifier: 1,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -1941,7 +1941,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 396: 1 },
         contract: 0,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: false,
         reward: 20,
         ko: 7,
@@ -1968,7 +1968,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 397: 10 },
         contract: 200,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: true,
         reward: 2400,
         ko: 800,
@@ -1999,7 +1999,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 17: 2 },
         contract: 600,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: true,
         reward: 6000,
         ko: 2000,
@@ -2010,16 +2010,16 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 45,
             size: 100,
-            min: 1,
-            max: 10
+            levelModifier: 1,
+            sizeModifier: 10
           },
           {
             monsterId: 17,
             startingArea: 1,
             level: 45,
             size: 100,
-            min: 1,
-            max: 10
+            levelModifier: 1,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -2043,7 +2043,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 21: 1 },
         contract: 500,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: true,
         reward: 7900,
         ko: 2640,
@@ -2054,8 +2054,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 45,
             size: 100,
-            min: 1,
-            max: 10
+            levelModifier: 1,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -2083,7 +2083,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 22: 1 },
         contract: 750,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: true,
         reward: 10800,
         ko: 3600,
@@ -2094,8 +2094,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 45,
             size: 100,
-            min: 1,
-            max: 10
+            levelModifier: 1,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -2125,7 +2125,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 19: 1 },
         contract: 750,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: true,
         reward: 7800,
         ko: 2600,
@@ -2136,8 +2136,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 45,
             size: 100,
-            min: 1,
-            max: 10
+            levelModifier: 1,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -2166,7 +2166,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 4: 20 },
         contract: 200,
         time: 50,
-        location: MapLocation.FLOODED_FOREST,
+        location: MapLocation.FloodedForest,
         randomspawn: true,
         reward: 2400,
         ko: 800,
@@ -2198,7 +2198,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 13: 10 },
         contract: 250,
         time: 50,
-        location: MapLocation.FLOODED_FOREST,
+        location: MapLocation.FloodedForest,
         randomspawn: true,
         reward: 2700,
         ko: 900,
@@ -2229,7 +2229,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 203: 6 },
         contract: 400,
         time: 50,
-        location: MapLocation.FLOODED_FOREST,
+        location: MapLocation.FloodedForest,
         randomspawn: true,
         reward: 4200,
         ko: 1400,
@@ -2260,7 +2260,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 27: 1 },
         contract: 600,
         time: 50,
-        location: MapLocation.FLOODED_FOREST,
+        location: MapLocation.FloodedForest,
         randomspawn: true,
         reward: 8500,
         ko: 2840,
@@ -2271,8 +2271,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 45,
             size: 100,
-            min: 1,
-            max: 10
+            levelModifier: 1,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -2299,7 +2299,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 28: 1 },
         contract: 800,
         time: 50,
-        location: MapLocation.FLOODED_FOREST,
+        location: MapLocation.FloodedForest,
         randomspawn: true,
         reward: 8400,
         ko: 2800,
@@ -2310,8 +2310,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 45,
             size: 100,
-            min: 1,
-            max: 10
+            levelModifier: 1,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -2337,7 +2337,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 27: 2 },
         contract: 1200,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: true,
         reward: 12000,
         ko: 4000,
@@ -2348,16 +2348,16 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 44,
             size: 100,
-            min: 2,
-            max: 10
+            levelModifier: 2,
+            sizeModifier: 10
           },
           {
             monsterId: 27,
             startingArea: 1,
             level: 44,
             size: 100,
-            min: 2,
-            max: 10
+            levelModifier: 2,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -2382,7 +2382,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 19: 1 },
         contract: 900,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: true,
         reward: 9400,
         ko: 3140,
@@ -2393,8 +2393,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 48,
             size: 100,
-            min: 2,
-            max: 10
+            levelModifier: 2,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -2424,7 +2424,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 28: 1 },
         contract: 1000,
         time: 50,
-        location: MapLocation.FLOODED_FOREST,
+        location: MapLocation.FloodedForest,
         randomspawn: true,
         reward: 10000,
         ko: 3340,
@@ -2435,8 +2435,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 48,
             size: 100,
-            min: 2,
-            max: 10
+            levelModifier: 2,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -2462,7 +2462,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 11: 25 },
         contract: 600,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: true,
         reward: 6000,
         ko: 2000,
@@ -2492,7 +2492,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 33: 1 },
         contract: 3600,
         time: 30,
-        location: MapLocation.GREAT_DESERT,
+        location: MapLocation.GreatDesert,
         randomspawn: false,
         reward: 36000,
         ko: 12000,
@@ -2503,8 +2503,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 52,
             size: 100,
-            min: 0,
-            max: 0
+            levelModifier: 0,
+            sizeModifier: 0
           }
         ],
         secondaryRewards: [
@@ -2531,7 +2531,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 23: 1 },
         contract: 1200,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: true,
         reward: 16000,
         ko: 5340,
@@ -2542,8 +2542,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 48,
             size: 100,
-            min: 2,
-            max: 10
+            levelModifier: 2,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -2571,7 +2571,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 24: 1 },
         contract: 1300,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: true,
         reward: 13200,
         ko: 4400,
@@ -2582,8 +2582,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 48,
             size: 100,
-            min: 2,
-            max: 10
+            levelModifier: 2,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -2611,7 +2611,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 396: 1 },
         contract: 0,
         time: 50,
-        location: MapLocation.FLOODED_FOREST,
+        location: MapLocation.FloodedForest,
         randomspawn: false,
         reward: 20,
         ko: 7,
@@ -2639,7 +2639,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 29: 1 },
         contract: 1100,
         time: 50,
-        location: MapLocation.FLOODED_FOREST,
+        location: MapLocation.FloodedForest,
         randomspawn: true,
         reward: 14900,
         ko: 4970,
@@ -2650,8 +2650,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 48,
             size: 100,
-            min: 2,
-            max: 10
+            levelModifier: 2,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -2679,7 +2679,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 396: 1 },
         contract: 0,
         time: 50,
-        location: MapLocation.TUNDRA,
+        location: MapLocation.Tundra,
         randomspawn: false,
         reward: 20,
         ko: 7,
@@ -2707,7 +2707,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 18: 1 },
         contract: 400,
         time: 50,
-        location: MapLocation.TUNDRA,
+        location: MapLocation.Tundra,
         randomspawn: true,
         reward: 4200,
         ko: 1400,
@@ -2718,8 +2718,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 45,
             size: 100,
-            min: 1,
-            max: 12
+            levelModifier: 1,
+            sizeModifier: 12
           }
         ],
         secondaryRewards: [
@@ -2747,7 +2747,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 25: 1 },
         contract: 900,
         time: 50,
-        location: MapLocation.TUNDRA,
+        location: MapLocation.Tundra,
         randomspawn: true,
         reward: 9000,
         ko: 3000,
@@ -2758,8 +2758,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 48,
             size: 100,
-            min: 2,
-            max: 11
+            levelModifier: 2,
+            sizeModifier: 11
           }
         ],
         secondaryRewards: [
@@ -2789,7 +2789,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 25: 1 },
         contract: 900,
         time: 50,
-        location: MapLocation.TUNDRA,
+        location: MapLocation.Tundra,
         randomspawn: true,
         reward: 12500,
         ko: 4170,
@@ -2800,8 +2800,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 48,
             size: 100,
-            min: 2,
-            max: 11
+            levelModifier: 2,
+            sizeModifier: 11
           }
         ],
         secondaryRewards: [
@@ -2829,7 +2829,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 26: 1 },
         contract: 1200,
         time: 50,
-        location: MapLocation.TUNDRA,
+        location: MapLocation.Tundra,
         randomspawn: true,
         reward: 12000,
         ko: 4000,
@@ -2840,8 +2840,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 48,
             size: 100,
-            min: 2,
-            max: 11
+            levelModifier: 2,
+            sizeModifier: 11
           }
         ],
         secondaryRewards: [
@@ -2871,7 +2871,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 14: 20 },
         contract: 250,
         time: 50,
-        location: MapLocation.VOLCANO,
+        location: MapLocation.Volcano,
         randomspawn: true,
         reward: 2800,
         ko: 940,
@@ -2903,7 +2903,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 23: 1 },
         contract: 1200,
         time: 50,
-        location: MapLocation.VOLCANO,
+        location: MapLocation.Volcano,
         randomspawn: true,
         reward: 12000,
         ko: 4000,
@@ -2914,8 +2914,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 48,
             size: 100,
-            min: 2,
-            max: 10
+            levelModifier: 2,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -2944,7 +2944,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 20: 1 },
         contract: 1300,
         time: 50,
-        location: MapLocation.VOLCANO,
+        location: MapLocation.Volcano,
         randomspawn: true,
         reward: 13200,
         ko: 4400,
@@ -2955,8 +2955,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 48,
             size: 100,
-            min: 2,
-            max: 10
+            levelModifier: 2,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -2985,7 +2985,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 30: 1 },
         contract: 1350,
         time: 50,
-        location: MapLocation.VOLCANO,
+        location: MapLocation.Volcano,
         randomspawn: true,
         reward: 13800,
         ko: 4600,
@@ -2996,8 +2996,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 48,
             size: 100,
-            min: 2,
-            max: 10
+            levelModifier: 2,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -3027,7 +3027,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 30: 1 },
         contract: 1350,
         time: 50,
-        location: MapLocation.VOLCANO,
+        location: MapLocation.Volcano,
         randomspawn: true,
         reward: 17800,
         ko: 5940,
@@ -3038,8 +3038,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 48,
             size: 100,
-            min: 2,
-            max: 10
+            levelModifier: 2,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -3067,7 +3067,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 23: 1 },
         contract: 1400,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: true,
         reward: 14000,
         ko: 4670,
@@ -3078,8 +3078,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 50,
             size: 100,
-            min: 2,
-            max: 10
+            levelModifier: 2,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -3108,7 +3108,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 29: 1 },
         contract: 1300,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: true,
         reward: 13150,
         ko: 4390,
@@ -3119,8 +3119,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 50,
             size: 100,
-            min: 2,
-            max: 10
+            levelModifier: 2,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -3149,7 +3149,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 26: 1 },
         contract: 1400,
         time: 50,
-        location: MapLocation.TUNDRA,
+        location: MapLocation.Tundra,
         randomspawn: true,
         reward: 14000,
         ko: 4670,
@@ -3160,8 +3160,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 50,
             size: 100,
-            min: 2,
-            max: 11
+            levelModifier: 2,
+            sizeModifier: 11
           }
         ],
         secondaryRewards: [
@@ -3186,7 +3186,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 20: 2 },
         contract: 3000,
         time: 50,
-        location: MapLocation.VOLCANO,
+        location: MapLocation.Volcano,
         randomspawn: true,
         reward: 30000,
         ko: 10000,
@@ -3197,16 +3197,16 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 1,
             level: 58,
             size: 100,
-            min: 0,
-            max: 10
+            levelModifier: 0,
+            sizeModifier: 10
           },
           {
             monsterId: 20,
             startingArea: 2,
             level: 58,
             size: 100,
-            min: 0,
-            max: 10
+            levelModifier: 0,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -3231,7 +3231,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 22: 1, 23: 1 },
         contract: 1950,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: true,
         reward: 19800,
         ko: 6600,
@@ -3242,16 +3242,16 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 54,
             size: 100,
-            min: 0,
-            max: 10
+            levelModifier: 0,
+            sizeModifier: 10
           },
           {
             monsterId: 23,
             startingArea: 1,
             level: 54,
             size: 100,
-            min: 0,
-            max: 10
+            levelModifier: 0,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -3278,7 +3278,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 32: 1 },
         contract: 1800,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: true,
         reward: 18000,
         ko: 6000,
@@ -3289,8 +3289,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 52,
             size: 100,
-            min: 0,
-            max: 13
+            levelModifier: 0,
+            sizeModifier: 13
           }
         ],
         secondaryRewards: [
@@ -3314,7 +3314,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 32: 1 },
         contract: 1800,
         time: 50,
-        location: MapLocation.TUNDRA,
+        location: MapLocation.Tundra,
         randomspawn: true,
         reward: 18000,
         ko: 6000,
@@ -3325,8 +3325,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 52,
             size: 100,
-            min: 0,
-            max: 13
+            levelModifier: 0,
+            sizeModifier: 13
           }
         ],
         secondaryRewards: [
@@ -3351,7 +3351,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 32: 1 },
         contract: 1800,
         time: 50,
-        location: MapLocation.VOLCANO,
+        location: MapLocation.Volcano,
         randomspawn: true,
         reward: 18000,
         ko: 6000,
@@ -3362,8 +3362,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 52,
             size: 100,
-            min: 0,
-            max: 13
+            levelModifier: 0,
+            sizeModifier: 13
           }
         ],
         secondaryRewards: [
@@ -3388,7 +3388,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 22: 1, 23: 1 },
         contract: 2200,
         time: 50,
-        location: MapLocation.DESERTED_ISLAND,
+        location: MapLocation.DesertedIsland,
         randomspawn: true,
         reward: 22000,
         ko: 7340,
@@ -3399,16 +3399,16 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 53,
             size: 100,
-            min: 0,
-            max: 10
+            levelModifier: 0,
+            sizeModifier: 10
           },
           {
             monsterId: 23,
             startingArea: 1,
             level: 53,
             size: 100,
-            min: 0,
-            max: 10
+            levelModifier: 0,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -3434,7 +3434,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 24: 2 },
         contract: 2600,
         time: 50,
-        location: MapLocation.SANDY_PLAINS,
+        location: MapLocation.SandyPlains,
         randomspawn: true,
         reward: 26000,
         ko: 8670,
@@ -3445,16 +3445,16 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 53,
             size: 100,
-            min: 0,
-            max: 10
+            levelModifier: 0,
+            sizeModifier: 10
           },
           {
             monsterId: 24,
             startingArea: 1,
             level: 53,
             size: 100,
-            min: 0,
-            max: 10
+            levelModifier: 0,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -3479,7 +3479,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 29: 1, 28: 1 },
         contract: 1950,
         time: 50,
-        location: MapLocation.FLOODED_FOREST,
+        location: MapLocation.FloodedForest,
         randomspawn: true,
         reward: 19800,
         ko: 6600,
@@ -3490,16 +3490,16 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 1,
             level: 53,
             size: 100,
-            min: 0,
-            max: 10
+            levelModifier: 0,
+            sizeModifier: 10
           },
           {
             monsterId: 28,
             startingArea: 1,
             level: 53,
             size: 100,
-            min: 0,
-            max: 10
+            levelModifier: 0,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -3525,7 +3525,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 26: 2 },
         contract: 2400,
         time: 50,
-        location: MapLocation.TUNDRA,
+        location: MapLocation.Tundra,
         randomspawn: true,
         reward: 24000,
         ko: 8000,
@@ -3536,16 +3536,16 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 1,
             level: 53,
             size: 100,
-            min: 0,
-            max: 11
+            levelModifier: 0,
+            sizeModifier: 11
           },
           {
             monsterId: 26,
             startingArea: 2,
             level: 53,
             size: 100,
-            min: 0,
-            max: 11
+            levelModifier: 0,
+            sizeModifier: 11
           }
         ],
         secondaryRewards: [
@@ -3571,7 +3571,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 30: 1, 20: 1 },
         contract: 2700,
         time: 50,
-        location: MapLocation.VOLCANO,
+        location: MapLocation.Volcano,
         randomspawn: true,
         reward: 27000,
         ko: 9000,
@@ -3582,16 +3582,16 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 53,
             size: 100,
-            min: 0,
-            max: 10
+            levelModifier: 0,
+            sizeModifier: 10
           },
           {
             monsterId: 20,
             startingArea: 1,
             level: 53,
             size: 100,
-            min: 0,
-            max: 10
+            levelModifier: 0,
+            sizeModifier: 10
           }
         ],
         secondaryRewards: [
@@ -3617,7 +3617,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         targets: { 34: 1 },
         contract: 3600,
         time: 50,
-        location: MapLocation.SACRED_LAND,
+        location: MapLocation.SacredLand,
         randomspawn: true,
         reward: 36000,
         ko: 12000,
@@ -3628,8 +3628,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
             startingArea: 0,
             level: 52,
             size: 100,
-            min: 0,
-            max: 0
+            levelModifier: 0,
+            sizeModifier: 0
           }
         ],
         secondaryRewards: [
@@ -3660,13 +3660,20 @@ export const CityQuestData = deepFreeze<QuestMode>({
       targets: { 27: 1 },
       contract: 0,
       time: 50,
-      location: MapLocation.WATER_ARENA,
+      location: MapLocation.WaterArena,
       randomspawn: false,
       reward: 1000,
       ko: 200,
       hrp: 0,
       bosses: [
-        { monsterId: 27, startingArea: 0, level: 23, size: 100, min: 0, max: 0 }
+        {
+          monsterId: 27,
+          startingArea: 0,
+          level: 23,
+          size: 100,
+          levelModifier: 0,
+          sizeModifier: 0
+        }
       ],
       secondaryRewards: []
     },
@@ -3681,13 +3688,20 @@ export const CityQuestData = deepFreeze<QuestMode>({
       targets: { 22: 1 },
       contract: 0,
       time: 50,
-      location: MapLocation.LAND_ARENA,
+      location: MapLocation.LandArena,
       randomspawn: false,
       reward: 1000,
       ko: 200,
       hrp: 0,
       bosses: [
-        { monsterId: 22, startingArea: 0, level: 26, size: 100, min: 0, max: 0 }
+        {
+          monsterId: 22,
+          startingArea: 0,
+          level: 26,
+          size: 100,
+          levelModifier: 0,
+          sizeModifier: 0
+        }
       ],
       secondaryRewards: []
     },
@@ -3702,13 +3716,20 @@ export const CityQuestData = deepFreeze<QuestMode>({
       targets: { 20: 1 },
       contract: 0,
       time: 50,
-      location: MapLocation.LAND_ARENA,
+      location: MapLocation.LandArena,
       randomspawn: false,
       reward: 1500,
       ko: 220,
       hrp: 0,
       bosses: [
-        { monsterId: 20, startingArea: 0, level: 23, size: 100, min: 0, max: 0 }
+        {
+          monsterId: 20,
+          startingArea: 0,
+          level: 23,
+          size: 100,
+          levelModifier: 0,
+          sizeModifier: 0
+        }
       ],
       secondaryRewards: []
     },
@@ -3723,7 +3744,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
       targets: { 21: 1, 19: 1 },
       contract: 0,
       time: 50,
-      location: MapLocation.LAND_ARENA,
+      location: MapLocation.LandArena,
       randomspawn: false,
       reward: 1000,
       ko: 200,
@@ -3734,10 +3755,17 @@ export const CityQuestData = deepFreeze<QuestMode>({
           startingArea: 0,
           level: 55,
           size: 100,
-          min: 0,
-          max: 0
+          levelModifier: 0,
+          sizeModifier: 0
         },
-        { monsterId: 19, startingArea: 0, level: 55, size: 100, min: 0, max: 0 }
+        {
+          monsterId: 19,
+          startingArea: 0,
+          level: 55,
+          size: 100,
+          levelModifier: 0,
+          sizeModifier: 0
+        }
       ],
       secondaryRewards: []
     },
@@ -3752,7 +3780,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
       targets: { 26: 1, 30: 1 },
       contract: 0,
       time: 50,
-      location: MapLocation.LAND_ARENA,
+      location: MapLocation.LandArena,
       randomspawn: false,
       reward: 1500,
       ko: 220,
@@ -3763,10 +3791,17 @@ export const CityQuestData = deepFreeze<QuestMode>({
           startingArea: 0,
           level: 55,
           size: 100,
-          min: 0,
-          max: 0
+          levelModifier: 0,
+          sizeModifier: 0
         },
-        { monsterId: 30, startingArea: 0, level: 55, size: 100, min: 0, max: 0 }
+        {
+          monsterId: 30,
+          startingArea: 0,
+          level: 55,
+          size: 100,
+          levelModifier: 0,
+          sizeModifier: 0
+        }
       ],
       secondaryRewards: []
     }
@@ -3786,13 +3821,20 @@ export const CityQuestData = deepFreeze<QuestMode>({
       targets: { 17: 4 },
       contract: 400,
       time: 50,
-      location: MapLocation.SANDY_PLAINS,
+      location: MapLocation.SandyPlains,
       randomspawn: false,
       reward: 4000,
       ko: 1340,
       hrp: 440,
       bosses: [
-        { monsterId: 17, startingArea: 0, level: 23, size: 100, min: 1, max: 3 }
+        {
+          monsterId: 17,
+          startingArea: 0,
+          level: 23,
+          size: 100,
+          levelModifier: 1,
+          sizeModifier: 3
+        }
       ],
       secondaryRewards: [
         { itemId: 406, count: 1, chance: 35 },
@@ -3814,7 +3856,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
       targets: { 24: 1, 20: 1 },
       contract: 1750,
       time: 50,
-      location: MapLocation.LAND_ARENA,
+      location: MapLocation.LandArena,
       randomspawn: false,
       reward: 17600,
       ko: 5870,
@@ -3825,10 +3867,17 @@ export const CityQuestData = deepFreeze<QuestMode>({
           startingArea: 0,
           level: 40,
           size: 100,
-          min: 0,
-          max: 9
+          levelModifier: 0,
+          sizeModifier: 9
         },
-        { monsterId: 20, startingArea: 0, level: 40, size: 100, min: 0, max: 9 }
+        {
+          monsterId: 20,
+          startingArea: 0,
+          level: 40,
+          size: 100,
+          levelModifier: 0,
+          sizeModifier: 9
+        }
       ],
       secondaryRewards: [
         { itemId: 558, count: 1, chance: 25 },
@@ -3852,7 +3901,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
       targets: { 28: 2 },
       contract: 1650,
       time: 50,
-      location: MapLocation.WATER_ARENA,
+      location: MapLocation.WaterArena,
       randomspawn: false,
       reward: 16800,
       ko: 5600,
@@ -3863,16 +3912,16 @@ export const CityQuestData = deepFreeze<QuestMode>({
           startingArea: 0,
           level: 54,
           size: 100,
-          min: 0,
-          max: 10
+          levelModifier: 0,
+          sizeModifier: 10
         },
         {
           monsterId: 28,
           startingArea: 1,
           level: 54,
           size: 100,
-          min: 0,
-          max: 10
+          levelModifier: 0,
+          sizeModifier: 10
         }
       ],
       secondaryRewards: [
@@ -3896,7 +3945,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
       targets: { 30: 2 },
       contract: 2750,
       time: 50,
-      location: MapLocation.VOLCANO,
+      location: MapLocation.Volcano,
       randomspawn: true,
       reward: 13800,
       ko: 4600,
@@ -3907,8 +3956,8 @@ export const CityQuestData = deepFreeze<QuestMode>({
           startingArea: 0,
           level: 57,
           size: 100,
-          min: 0,
-          max: 10
+          levelModifier: 0,
+          sizeModifier: 10
         }
       ],
       secondaryRewards: [
@@ -3935,7 +3984,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
       targets: { 26: 1, 23: 1 },
       contract: 4200,
       time: 50,
-      location: MapLocation.LAND_ARENA,
+      location: MapLocation.LandArena,
       randomspawn: false,
       reward: 42000,
       ko: 14000,
@@ -3946,16 +3995,16 @@ export const CityQuestData = deepFreeze<QuestMode>({
           startingArea: 0,
           level: 60,
           size: 100,
-          min: 0,
-          max: 11
+          levelModifier: 0,
+          sizeModifier: 11
         },
         {
           monsterId: 23,
           startingArea: 0,
           level: 59,
           size: 100,
-          min: 0,
-          max: 10
+          levelModifier: 0,
+          sizeModifier: 10
         }
       ],
       secondaryRewards: [

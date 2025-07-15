@@ -122,7 +122,7 @@ export interface MonsterMultipliers {
   /** Derived from Monster hitzone */
   readonly hitzoneValues: MonsterTypes.HitzoneValues;
   /** Derived from Monster level set by Quest */
-  readonly levelMultipliers: MonsterLevelTypes.MonsterLevelMultipliers;
+  readonly levelMultipliers: MonsterLevelTypes.MonsterStatMultipliers;
 }
 
 /**

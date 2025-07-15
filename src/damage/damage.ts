@@ -61,7 +61,7 @@ export function calculateDamage(
     hitzoneValues: maybeHitzone.values,
     levelMultipliers:
       questId === undefined
-        ? MonsterLevels.getMonsterLevelMultipliers(monsterName, 0)
+        ? MonsterLevels.getMonsterStatMultipliers(monsterName, 0)
         : MonsterLevels.getMonsterMultipliersForQuest(monsterName, questId)
   };
 

@@ -209,7 +209,7 @@ export function getRawMultiplier(
  */
 export function applyDefenseMultiplier(
   damage: number,
-  defenseMultiplier: MonsterLevelTypes.MonsterLevelMultipliers['defense']
+  defenseMultiplier: MonsterLevelTypes.MonsterStatMultipliers['defense']
 ) {
   return Math.floor(Math.floor(damage) * defenseMultiplier);
 }
@@ -289,7 +289,7 @@ export function calculateIsolatedElementalDamage({
   elementArgs = defaultElementArgs,
   defenseMultiplier
 }: ElementalDamageArgs & {
-  defenseMultiplier: MonsterLevelTypes.MonsterLevelMultipliers['defense'];
+  defenseMultiplier: MonsterLevelTypes.MonsterStatMultipliers['defense'];
 }) {
   return applyDefenseMultiplier(
     calculateElementalDamage({
