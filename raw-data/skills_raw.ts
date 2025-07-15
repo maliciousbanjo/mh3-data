@@ -4,7 +4,7 @@
  * http://web.archive.org/web/20130407144759/http://mhtri.stilltruth.com/
  */
 
-const Skills = [
+export const Skills = [
   {
     name: 'Sharpness',
     desc: 'Doubles or halves the rate at which your weapon loses Sharpness.',
@@ -894,18 +894,21 @@ const Skills = [
   {
     name: 'Survivor',
     desc: 'Increases your Attack every time you fall in battle.',
+    group: 0,
     bounds: { '10': 'Fortify' }
   },
   {
     name: 'Blight Res',
     desc: 'Negates all elemental Blights (Fire, Water, Thunder, Ice, and Dragon).',
+    group: 1,
     bounds: { '10': 'Blightproof' }
   },
   {
     name: 'Auto-Guard',
     desc: 'Enables ability to automatically block attacks (when blocking is possible).',
-    group: 3,
+    group: 2,
     bounds: { '10': 'Auto-Guard' }
-  },
-  { name: 'Torso Up', copy: 'plt' }
+  }
+  //! Torso Up
+  // { name: 'Torso Up', copy: 'plt' }
 ];
