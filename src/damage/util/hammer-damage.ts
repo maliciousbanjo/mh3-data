@@ -31,7 +31,7 @@ function getHammerAttack(
   const result = hammerAttacks.attacks.find(atk => atk.name === attackName);
   if (!result) {
     throw new Error(
-      `${attackName} is not a valid ${WeaponClass.HAMMER} attack`
+      `'${attackName}' is not a valid '${WeaponClass.HAMMER}' attack`
     );
   }
   return result as WeaponTypes.Attack<HammerTypes.HammerAttack>;
@@ -41,7 +41,7 @@ function validateHammer(
   weapon: WeaponTypes.Weapon
 ): asserts weapon is HammerTypes.Hammer {
   if (weapon.type !== WeaponClass.HAMMER) {
-    throw new Error(`${weapon.name} is not a ${WeaponClass.HAMMER}`);
+    throw new Error(`'${weapon.name}' is not a '${WeaponClass.HAMMER}'`);
   }
 }
 

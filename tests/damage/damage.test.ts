@@ -6,7 +6,10 @@ import {
   SwitchAxeDamageArgs,
   SwordAndShieldDamageArgs
 } from '../../src/damage/types';
-import { getMonsterMultipliersForQuest } from '../../src/model/monster-levels';
+import {
+  getMonsterLevelsForQuest,
+  getMonsterStatMultipliers
+} from '../../src/model/monster-levels';
 import {
   Alatreon,
   Deviljho,
@@ -18,14 +21,19 @@ import { Sharpness, WeaponClass } from '../../src/model/weapons';
 describe('Damage', () => {
   describe('calculateDamage', () => {
     const theBrilliantDarknessId = 0x4a39;
-    const brilliantDarknessModifiers = getMonsterMultipliersForQuest(
+    const alatreonLevels = getMonsterLevelsForQuest(
       Alatreon.name,
       theBrilliantDarknessId
     );
 
+    const brilliantDarknessModifiers = getMonsterStatMultipliers(
+      Alatreon.name,
+      alatreonLevels[0]
+    );
+
     const alatreonMonsterArgs: DamageTypes.MonsterArgs = {
       monsterName: Alatreon.name,
-      monsterStatMultipliers: brilliantDarknessModifiers[0],
+      monsterStatMultipliers: brilliantDarknessModifiers,
       monsterStateIndex: 0,
       hitzoneIndex: 0
     };
@@ -119,10 +127,17 @@ describe('Damage', () => {
 
       it('Modified impact hitzone', () => {
         const saveOurBoatId = 0x0402;
-        const saveOurBoatModifiers = getMonsterMultipliersForQuest(
+
+        const royalLudrothLevels = getMonsterLevelsForQuest(
           RoyalLudroth.name,
           saveOurBoatId
         );
+
+        const saveOurBoatModifiers = getMonsterStatMultipliers(
+          RoyalLudroth.name,
+          royalLudrothLevels[0]
+        );
+
         const damage = calculateDamage(
           {
             weaponClass: WeaponClass.LANCE,
@@ -133,7 +148,7 @@ describe('Damage', () => {
           },
           {
             monsterName: RoyalLudroth.name,
-            monsterStatMultipliers: saveOurBoatModifiers[0],
+            monsterStatMultipliers: saveOurBoatModifiers,
             monsterStateIndex: 0,
             hitzoneIndex: 0
           },
@@ -273,9 +288,15 @@ describe('Damage', () => {
 
       it('Deviljho Spirit Gauge RED', () => {
         const bedevilADeviljhoId = 0x3afd;
-        const bedevilADeviljhoMultipliers = getMonsterMultipliersForQuest(
+
+        const deviljhoLevels = getMonsterLevelsForQuest(
           Deviljho.name,
           bedevilADeviljhoId
+        );
+
+        const bedevilADeviljhoMultipliers = getMonsterStatMultipliers(
+          Deviljho.name,
+          deviljhoLevels[0]
         );
 
         const damage = calculateDamage(
@@ -294,7 +315,7 @@ describe('Damage', () => {
           },
           {
             monsterName: Deviljho.name,
-            monsterStatMultipliers: bedevilADeviljhoMultipliers[0],
+            monsterStatMultipliers: bedevilADeviljhoMultipliers,
             monsterStateIndex: 1, // rage
             hitzoneIndex: 1 // Stomach
           },
@@ -433,14 +454,19 @@ describe('Damage', () => {
           might: 'none'
         };
 
-        const royalRumbleMultipliers = getMonsterMultipliersForQuest(
+        const rathianLevels = getMonsterLevelsForQuest(
           Rathian.name,
           0x040e // A Royal Rumble
         );
 
+        const royalRumbleMultipliers = getMonsterStatMultipliers(
+          Rathian.name,
+          rathianLevels[0]
+        );
+
         const rathianMonsterArgs: DamageTypes.MonsterArgs = {
           monsterName: Rathian.name,
-          monsterStatMultipliers: royalRumbleMultipliers[0],
+          monsterStatMultipliers: royalRumbleMultipliers,
           monsterStateIndex: 0,
           hitzoneIndex: 0 // Head
         };

@@ -98,7 +98,7 @@ export function getQuestsWithLargeMonster(
       quests = villageQuests.concat(cityQuests);
       break;
     default:
-      throw new Error(`Invalid quest region ${region}`);
+      throw new Error(`Invalid quest region '${region}'`);
   }
 
   // Filter down quests that contain this large monster ID
@@ -119,7 +119,7 @@ export function getQuestByStarLevel(region: QuestRegion, starLevel: StarLevel) {
     case 'City':
       return Object.values(CityQuestData.starLevels[starLevel]);
     default:
-      throw new Error(`Invalid quest region ${region}`);
+      throw new Error(`Invalid quest region '${region}'`);
   }
 }
 
@@ -133,7 +133,7 @@ export function getArenaQuests(region: QuestRegion): SlayQuest[] {
     case 'City':
       return Object.values(CityQuestData.arena);
     default:
-      throw new Error(`Invalid quest region ${region}`);
+      throw new Error(`Invalid quest region '${region}'`);
   }
 }
 
@@ -147,7 +147,7 @@ export function getEventQuests(region: QuestRegion): Quest[] {
     case 'City':
       return Object.values(CityQuestData.events);
     default:
-      throw new Error(`Invalid quest region ${region}`);
+      throw new Error(`Invalid quest region '${region}'`);
   }
 }
 
@@ -171,7 +171,7 @@ export function getQuestById(questId: Quest['id']): Quest {
 
   quest = cityQuests.find(quest => quest.id === questId);
 
-  if (!quest) throw new Error(`Could not find quest with ID ${questId}`);
+  if (!quest) throw new Error(`Could not find quest with ID '${questId}'`);
 
   return quest;
 }

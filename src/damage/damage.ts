@@ -58,7 +58,7 @@ export function calculateDamage(
     ?.hitzones.at(hitzoneIndex);
   if (!maybeHitzone) {
     throw new Error(
-      `${monsterName}, monsterStateIndex ${monsterStateIndex} does not have a hitzone at index ${hitzoneIndex}`
+      `'${monsterName}', monsterStateIndex '${monsterStateIndex}' does not have a hitzone at index '${hitzoneIndex}'`
     );
   }
 
@@ -111,7 +111,7 @@ export function calculateDamage(
       );
     }
     default: {
-      throw new Error(`${weaponClass} is not a valid weapon type`);
+      throw new Error(`'${weaponClass}' is not a valid weapon type`);
     }
   }
 }

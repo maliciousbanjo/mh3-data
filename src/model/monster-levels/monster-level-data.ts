@@ -1,5 +1,5 @@
 import { deepFreeze } from '../../utils';
-import type { MonsterLevelRecord } from './types';
+import type { MonsterLevel, MonsterStatMultipliers } from './types';
 
 /**
  * !Defense multipliers may not be 100% accurate for some levels
@@ -9,7 +9,9 @@ import type { MonsterLevelRecord } from './types';
  * - The lowest "real" low rank quest is level `23` (but it appears it can go down to `19`)
  * - The lowest "real" high rank quest is level `44` (but it appears it can go down to `41`)
  */
-export const MonsterLevelData = deepFreeze<MonsterLevelRecord>({
+export const MonsterLevelData = deepFreeze<
+  Record<MonsterLevel, MonsterStatMultipliers>
+>({
   0: { health: 1, defense: 1, stagger: 1 }, // DEFAULT
   1: { health: 0.35, defense: 1, stagger: 1 },
   2: { health: 0.38, defense: 1, stagger: 1 },
