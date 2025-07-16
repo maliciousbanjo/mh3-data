@@ -1,4 +1,4 @@
-import { MonsterLevels, Monsters, Weapons, type MonsterTypes } from '../model';
+import { Monsters, Weapons, type MonsterTypes } from '../model';
 import type {
   DamageBuffArgs,
   GreatSwordDamageArgs,
@@ -44,7 +44,12 @@ export function calculateDamage(
   damageBuffArgs: Partial<DamageBuffArgs>
 ) {
   const { weaponClass } = weaponArgs;
-  const { monsterName, questId, monsterStateIndex, hitzoneIndex } = monsterArgs;
+  const {
+    monsterName,
+    monsterStatMultipliers,
+    monsterStateIndex,
+    hitzoneIndex
+  } = monsterArgs;
   const monster = Monsters.getMonster(monsterName);
 
   // Validate parameters
@@ -53,16 +58,13 @@ export function calculateDamage(
     ?.hitzones.at(hitzoneIndex);
   if (!maybeHitzone) {
     throw new Error(
-      `${monsterName}, monsterStateIndex ${monsterStateIndex} does not have a hitzone at index ${hitzoneIndex}`
+      `'${monsterName}', monsterStateIndex '${monsterStateIndex}' does not have a hitzone at index '${hitzoneIndex}'`
     );
   }
 
   const monsterMultipliers: MonsterMultipliers = {
     hitzoneValues: maybeHitzone.values,
-    levelMultipliers:
-      questId === undefined
-        ? MonsterLevels.getMonsterLevelMultipliers(monsterName, 0)
-        : MonsterLevels.getMonsterMultipliersForQuest(monsterName, questId)
+    statMultipliers: monsterStatMultipliers
   };
 
   switch (weaponClass) {
@@ -109,7 +111,7 @@ export function calculateDamage(
       );
     }
     default: {
-      throw new Error(`${weaponClass} is not a valid weapon type`);
+      throw new Error(`'${weaponClass}' is not a valid weapon type`);
     }
   }
 }

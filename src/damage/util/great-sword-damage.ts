@@ -36,7 +36,7 @@ function getGreatSwordAttack(
   const result = gsAttacks.attacks.find(atk => atk.name === attackName);
   if (!result) {
     throw new Error(
-      `${attackName} is not a valid ${WeaponClass.GREAT_SWORD} attack`
+      `'${attackName}' is not a valid '${WeaponClass.GREAT_SWORD}' attack`
     );
   }
   return result as WeaponTypes.Attack<GreatSwordTypes.GreatSwordAttack>;
@@ -73,7 +73,7 @@ function validateGreatSword(
   weapon: WeaponTypes.Weapon
 ): asserts weapon is GreatSwordTypes.GreatSword {
   if (weapon.type !== WeaponClass.GREAT_SWORD) {
-    throw new Error(`${weapon.name} is not a ${WeaponClass.GREAT_SWORD}`);
+    throw new Error(`'${weapon.name}' is not a '${WeaponClass.GREAT_SWORD}'`);
   }
 }
 
@@ -86,7 +86,8 @@ export function calculateGreatSwordDamage(
   damageBuffArgs: Partial<DamageBuffArgs>
 ) {
   const { weaponId, attackName, sharpness, weaponMultipliers } = weaponArgs;
-  const { hitzoneValues, levelMultipliers } = monsterMultipliers;
+  const { hitzoneValues, statMultipliers: levelMultipliers } =
+    monsterMultipliers;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const greatSword = Weapons.getWeapon(

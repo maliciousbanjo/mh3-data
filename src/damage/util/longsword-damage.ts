@@ -36,7 +36,7 @@ function getLongwordAttack(
 
   const result = lsAttack.attacks.find(atk => atk.name === attackName);
   if (!result) {
-    throw new Error(`${attackName} is not valid Longsword attack`);
+    throw new Error(`'${attackName}' is not valid Longsword attack`);
   }
   return result as WeaponTypes.Attack<LongswordTypes.LongswordAttack>;
 }
@@ -69,7 +69,7 @@ function validateLongsword(
   weapon: WeaponTypes.Weapon
 ): asserts weapon is LongswordTypes.Longsword {
   if (weapon.type !== WeaponClass.LONGSWORD) {
-    throw new Error(`${weapon.name} is not a ${WeaponClass.LONGSWORD}`);
+    throw new Error(`'${weapon.name}' is not a '${WeaponClass.LONGSWORD}'`);
   }
 }
 
@@ -83,7 +83,8 @@ export function calculateLongswordDamage(
 ) {
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { longsword: longswordArgs } = weaponArgs.weaponMultipliers;
-  const { hitzoneValues, levelMultipliers } = monsterMultipliers;
+  const { hitzoneValues, statMultipliers: levelMultipliers } =
+    monsterMultipliers;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const longsword = Weapons.getWeapon(Weapons.WeaponClass.LONGSWORD, weaponId);

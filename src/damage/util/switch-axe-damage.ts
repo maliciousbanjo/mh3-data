@@ -34,12 +34,12 @@ function getSwitchAxeAttack(
   ).attackModes.find(atkGroup => atkGroup.name === switchAxeMode);
 
   if (!switchAxeAttacks) {
-    throw new Error(`${switchAxeMode} is not a valid switch axe mode`);
+    throw new Error(`'${switchAxeMode}' is not a valid switch axe mode`);
   }
   const result = switchAxeAttacks.attacks.find(atk => atk.name === attackName);
   if (!result) {
     throw new Error(
-      `${attackName} is not a valid Switch Axe attack for ${switchAxeMode} mode`
+      `'${attackName}' is not a valid Switch Axe attack for '${switchAxeMode}' mode`
     );
   }
   return result as WeaponTypes.Attack<SwitchAxeTypes.SwitchAxeAttack>;
@@ -99,7 +99,7 @@ function validateSwitchAxe(
     weapon.type !== WeaponClass.SWITCH_AXE ||
     (weapon as SwitchAxeTypes.SwitchAxe).phial === undefined
   ) {
-    throw new Error(`${weapon.name} is not a ${WeaponClass.SWITCH_AXE}`);
+    throw new Error(`'${weapon.name}' is not a '${WeaponClass.SWITCH_AXE}'`);
   }
 }
 
@@ -113,7 +113,8 @@ export function calculateSwitchAxeDamage(
 ) {
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { switchAxeMode } = weaponArgs.weaponMultipliers;
-  const { hitzoneValues, levelMultipliers } = monsterMultipliers;
+  const { hitzoneValues, statMultipliers: levelMultipliers } =
+    monsterMultipliers;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const switchAxe = Weapons.getWeapon(Weapons.WeaponClass.SWITCH_AXE, weaponId);

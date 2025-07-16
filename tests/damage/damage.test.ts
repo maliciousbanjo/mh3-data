@@ -1,4 +1,15 @@
+import type { DamageTypes } from '../../src/damage';
 import { calculateDamage } from '../../src/damage/damage';
+import {
+  DamageBuffArgs,
+  LongswordDamageArgs,
+  SwitchAxeDamageArgs,
+  SwordAndShieldDamageArgs
+} from '../../src/damage/types';
+import {
+  getMonsterLevelsForQuest,
+  getMonsterStatMultipliers
+} from '../../src/model/monster-levels';
 import {
   Alatreon,
   Deviljho,
@@ -6,20 +17,23 @@ import {
   RoyalLudroth
 } from '../../src/model/monsters/large-monster-data';
 import { Sharpness, WeaponClass } from '../../src/model/weapons';
-import type { DamageTypes } from '../../src/damage';
-import {
-  DamageBuffArgs,
-  LongswordDamageArgs,
-  SwitchAxeDamageArgs,
-  SwordAndShieldDamageArgs
-} from '../../src/damage/types';
 
 describe('Damage', () => {
   describe('calculateDamage', () => {
     const theBrilliantDarknessId = 0x4a39;
+    const alatreonLevels = getMonsterLevelsForQuest(
+      Alatreon.name,
+      theBrilliantDarknessId
+    );
+
+    const brilliantDarknessModifiers = getMonsterStatMultipliers(
+      Alatreon.name,
+      alatreonLevels[0]
+    );
+
     const alatreonMonsterArgs: DamageTypes.MonsterArgs = {
       monsterName: Alatreon.name,
-      questId: theBrilliantDarknessId,
+      monsterStatMultipliers: brilliantDarknessModifiers,
       monsterStateIndex: 0,
       hitzoneIndex: 0
     };
@@ -113,6 +127,17 @@ describe('Damage', () => {
 
       it('Modified impact hitzone', () => {
         const saveOurBoatId = 0x0402;
+
+        const royalLudrothLevels = getMonsterLevelsForQuest(
+          RoyalLudroth.name,
+          saveOurBoatId
+        );
+
+        const saveOurBoatModifiers = getMonsterStatMultipliers(
+          RoyalLudroth.name,
+          royalLudrothLevels[0]
+        );
+
         const damage = calculateDamage(
           {
             weaponClass: WeaponClass.LANCE,
@@ -123,7 +148,7 @@ describe('Damage', () => {
           },
           {
             monsterName: RoyalLudroth.name,
-            questId: saveOurBoatId,
+            monsterStatMultipliers: saveOurBoatModifiers,
             monsterStateIndex: 0,
             hitzoneIndex: 0
           },
@@ -264,6 +289,16 @@ describe('Damage', () => {
       it('Deviljho Spirit Gauge RED', () => {
         const bedevilADeviljhoId = 0x3afd;
 
+        const deviljhoLevels = getMonsterLevelsForQuest(
+          Deviljho.name,
+          bedevilADeviljhoId
+        );
+
+        const bedevilADeviljhoMultipliers = getMonsterStatMultipliers(
+          Deviljho.name,
+          deviljhoLevels[0]
+        );
+
         const damage = calculateDamage(
           {
             weaponClass: WeaponClass.LONGSWORD,
@@ -280,7 +315,7 @@ describe('Damage', () => {
           },
           {
             monsterName: Deviljho.name,
-            questId: bedevilADeviljhoId,
+            monsterStatMultipliers: bedevilADeviljhoMultipliers,
             monsterStateIndex: 1, // rage
             hitzoneIndex: 1 // Stomach
           },
@@ -306,12 +341,7 @@ describe('Damage', () => {
               sharpness: Sharpness.WHITE,
               weaponMultipliers: {} as SwitchAxeDamageArgs['weaponMultipliers']
             },
-            {
-              monsterName: Alatreon.name,
-              questId: theBrilliantDarknessId,
-              monsterStateIndex: 0,
-              hitzoneIndex: 0
-            },
+            alatreonMonsterArgs,
             {
               elementArgs: {
                 awaken: false,
@@ -424,9 +454,19 @@ describe('Damage', () => {
           might: 'none'
         };
 
+        const rathianLevels = getMonsterLevelsForQuest(
+          Rathian.name,
+          0x040e // A Royal Rumble
+        );
+
+        const royalRumbleMultipliers = getMonsterStatMultipliers(
+          Rathian.name,
+          rathianLevels[0]
+        );
+
         const rathianMonsterArgs: DamageTypes.MonsterArgs = {
           monsterName: Rathian.name,
-          questId: 0x040e, // A Royal Rumble
+          monsterStatMultipliers: royalRumbleMultipliers,
           monsterStateIndex: 0,
           hitzoneIndex: 0 // Head
         };

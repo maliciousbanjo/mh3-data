@@ -34,7 +34,7 @@ function getSwordAndShieldAttack(
   ).attackModes.find(atkGroup => atkGroup.name === swordAndShieldMode);
   if (!swordAndShieldAttacks) {
     throw new Error(
-      `${swordAndShieldMode} is not a valid sword and shield attack mode`
+      `'${swordAndShieldMode}' is not a valid sword and shield attack mode`
     );
   }
   const result = swordAndShieldAttacks.attacks.find(
@@ -42,7 +42,7 @@ function getSwordAndShieldAttack(
   );
   if (!result) {
     throw new Error(
-      `${attackName} is not a valid sword and shield attack for ${swordAndShieldMode} mode`
+      `'${attackName}' is not a valid sword and shield attack for '${swordAndShieldMode}' mode`
     );
   }
   return result as WeaponTypes.Attack<SwordAndShieldTypes.SwordAndShieldAttack>;
@@ -52,7 +52,9 @@ function validateSwordAndShield(
   weapon: WeaponTypes.Weapon
 ): asserts weapon is SwordAndShieldTypes.SwordAndShield {
   if (weapon.type !== WeaponClass.SWORD_AND_SHIELD) {
-    throw new Error(`${weapon.name} is not a ${WeaponClass.SWORD_AND_SHIELD}`);
+    throw new Error(
+      `'${weapon.name}' is not a '${WeaponClass.SWORD_AND_SHIELD}'`
+    );
   }
 }
 
@@ -66,7 +68,8 @@ export function calculateSwordAndShieldDamage(
 ) {
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { swordAndShieldMode } = weaponArgs.weaponMultipliers;
-  const { hitzoneValues, levelMultipliers } = monsterMultipliers;
+  const { hitzoneValues, statMultipliers: levelMultipliers } =
+    monsterMultipliers;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const swordAndShield = Weapons.getWeapon(

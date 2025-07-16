@@ -1,4 +1,4 @@
-import type { MonsterLevelTypes, QuestTypes } from '../model';
+import type { MonsterLevelTypes } from '../model';
 import type { MonsterTypes } from '../model/monsters';
 import type {
   GreatSwordTypes,
@@ -106,8 +106,8 @@ export type WeaponArgs =
  */
 export interface MonsterArgs {
   readonly monsterName: MonsterTypes.MonsterName;
-  /** Quest featuring this monster */
-  readonly questId: QuestTypes.Quest['id'] | undefined;
+  /** Contains multipliers for monster health, defense, and stagger limit */
+  readonly monsterStatMultipliers: MonsterLevelTypes.MonsterStatMultipliers;
   /** Must be valid monster state for this monsters */
   readonly monsterStateIndex: number;
   /** Must be valid index for the provided monsterStateIndex */
@@ -122,7 +122,7 @@ export interface MonsterMultipliers {
   /** Derived from Monster hitzone */
   readonly hitzoneValues: MonsterTypes.HitzoneValues;
   /** Derived from Monster level set by Quest */
-  readonly levelMultipliers: MonsterLevelTypes.MonsterLevelMultipliers;
+  readonly statMultipliers: MonsterLevelTypes.MonsterStatMultipliers;
 }
 
 /**

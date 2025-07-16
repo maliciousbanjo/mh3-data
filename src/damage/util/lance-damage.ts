@@ -35,7 +35,7 @@ function getLanceAttack(
 
   const result = lanceAttacks.attacks.find(atk => atk.name === attackName);
   if (!result) {
-    throw new Error(`${attackName} is not a valid Lance attack`);
+    throw new Error(`'${attackName}' is not a valid Lance attack`);
   }
   return result as WeaponTypes.Attack<LanceTypes.LanceAttack>;
 }
@@ -60,7 +60,7 @@ function validateLance(
   weapon: WeaponTypes.Weapon
 ): asserts weapon is LanceTypes.Lance {
   if (weapon.type !== WeaponClass.LANCE) {
-    throw new Error(`${weapon.name} is not a ${WeaponClass.LANCE}`);
+    throw new Error(`'${weapon.name}' is not a '${WeaponClass.LANCE}'`);
   }
 }
 
@@ -73,7 +73,8 @@ export function calculateLanceDamage(
   damageBuffArgs: Partial<DamageBuffArgs>
 ) {
   const { weaponId, attackName, sharpness } = weaponArgs;
-  const { hitzoneValues, levelMultipliers } = monsterMultipliers;
+  const { hitzoneValues, statMultipliers: levelMultipliers } =
+    monsterMultipliers;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const lance = Weapons.getWeapon(Weapons.WeaponClass.LANCE, weaponId);

@@ -12,7 +12,7 @@ import { SmallMonsterData, LargeMonsterData } from '.';
 export function getSmallMonster(name: SmallMonsterName): Monster {
   const smMonster = SmallMonsterData.find(smMon => smMon.name === name);
 
-  if (!smMonster) throw new Error(`Could not find small monster ${name}`);
+  if (!smMonster) throw new Error(`Could not find small monster '${name}'`);
   return smMonster;
 }
 
@@ -22,7 +22,7 @@ export function getSmallMonster(name: SmallMonsterName): Monster {
 export function getLargeMonster(name: LargeMonsterName): LargeMonster {
   const lgMonster = LargeMonsterData.find(lgMon => lgMon.name === name);
 
-  if (!lgMonster) throw new Error(`Could not find large monster ${name}`);
+  if (!lgMonster) throw new Error(`Could not find large monster '${name}'`);
   return lgMonster;
 }
 
@@ -34,6 +34,13 @@ export function getMonster(name: SmallMonsterName | LargeMonsterName) {
     mon => mon.name === name
   );
 
-  if (!monster) throw new Error(`Could not find monster ${name}`);
+  if (!monster) throw new Error(`Could not find monster '${name}'`);
   return monster;
+}
+
+/**
+ * Type-guard for a large monster
+ */
+export function isLargeMonster(monster: Monster): monster is LargeMonster {
+  return (monster as LargeMonster).hp !== undefined;
 }

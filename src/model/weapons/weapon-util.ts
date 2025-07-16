@@ -60,12 +60,12 @@ export function getWeapon(weaponClass: WeaponClass, weaponId: number): Weapon {
       break;
     }
     default: {
-      throw new Error(`${weaponClass} is not a valid weapon type`);
+      throw new Error(`'${weaponClass}' is not a valid weapon type`);
     }
   }
   if (!weapon)
     throw new Error(
-      `Could not find weapon of type '${weaponClass}' with id: ${weaponId}`
+      `Could not find weapon of type ''${weaponClass}'' with id: '${weaponId}'`
     );
   return weapon;
 }
@@ -120,6 +120,6 @@ export function sharpnessAsString(sharpness: Sharpness) {
     case Sharpness.PURPLE:
       return 'purple';
     default:
-      throw new Error(`Invalid sharpness value ${sharpness}`);
+      throw new Error(`Invalid sharpness value '${sharpness}'`);
   }
 }

@@ -179,7 +179,7 @@ export interface Monster {
   readonly shiny?: ShinyDrop;
   /** If undefined this monster should have a 'variant' property */
   readonly carves?: CarveZone[];
-  /** Optional support for varying shines or carves */
+  /** Optional support for varying shinies or carves */
   readonly variants?: Variant[];
 }
 

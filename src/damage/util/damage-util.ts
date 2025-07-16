@@ -57,7 +57,7 @@ export function validateWeaponSharpness(
   const validSharpness = sharpness <= weapon.sharpnessUp.length - 1;
   if (!validSharpness) {
     throw new Error(
-      `${weapon.name} cannot have ${Weapons.sharpnessAsString(sharpness)} sharpness`
+      `'${weapon.name}' cannot have '${Weapons.sharpnessAsString(sharpness)}' sharpness`
     );
   }
   return validSharpness;
@@ -83,7 +83,7 @@ export function getSharpnessRawMultiplier(sharpness: Sharpness): number {
     case Sharpness.PURPLE:
       return 1.5;
     default:
-      throw new Error(`Invalid sharpness value ${sharpness}`);
+      throw new Error(`Invalid sharpness value '${sharpness}'`);
   }
 }
 
@@ -107,7 +107,7 @@ export function getSharpnessElementalMultiplier(sharpness: Sharpness): number {
     case Sharpness.PURPLE:
       return 1.2;
     default:
-      throw new Error(`Invalid sharpness value ${sharpness}`);
+      throw new Error(`Invalid sharpness value '${sharpness}'`);
   }
 }
 
@@ -138,7 +138,7 @@ function getHitzoneForWeaponElement(
     case 'dragon':
       return hitzoneValues.dragon;
     default:
-      throw new Error(`Invalid hitzone type ${weaponElement}`);
+      throw new Error(`Invalid hitzone type '${weaponElement}'`);
   }
 }
 
@@ -209,7 +209,7 @@ export function getRawMultiplier(
  */
 export function applyDefenseMultiplier(
   damage: number,
-  defenseMultiplier: MonsterLevelTypes.MonsterLevelMultipliers['defense']
+  defenseMultiplier: MonsterLevelTypes.MonsterStatMultipliers['defense']
 ) {
   return Math.floor(Math.floor(damage) * defenseMultiplier);
 }
@@ -289,7 +289,7 @@ export function calculateIsolatedElementalDamage({
   elementArgs = defaultElementArgs,
   defenseMultiplier
 }: ElementalDamageArgs & {
-  defenseMultiplier: MonsterLevelTypes.MonsterLevelMultipliers['defense'];
+  defenseMultiplier: MonsterLevelTypes.MonsterStatMultipliers['defense'];
 }) {
   return applyDefenseMultiplier(
     calculateElementalDamage({
