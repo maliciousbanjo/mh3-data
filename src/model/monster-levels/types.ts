@@ -1,6 +1,7 @@
 import type { NumericRange } from '../../lib';
+
 /**
- * Contains multipliers against different base monster stats.
+ * Contains multipliers for monster health, defense, and stagger limit.
  */
 export interface MonsterStatMultipliers {
   readonly health: number;

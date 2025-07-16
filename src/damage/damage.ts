@@ -1,4 +1,4 @@
-import { MonsterLevels, Monsters, Weapons, type MonsterTypes } from '../model';
+import { Monsters, Weapons, type MonsterTypes } from '../model';
 import type {
   DamageBuffArgs,
   GreatSwordDamageArgs,
@@ -44,7 +44,12 @@ export function calculateDamage(
   damageBuffArgs: Partial<DamageBuffArgs>
 ) {
   const { weaponClass } = weaponArgs;
-  const { monsterName, questId, monsterStateIndex, hitzoneIndex } = monsterArgs;
+  const {
+    monsterName,
+    monsterStatMultipliers,
+    monsterStateIndex,
+    hitzoneIndex
+  } = monsterArgs;
   const monster = Monsters.getMonster(monsterName);
 
   // Validate parameters
@@ -59,10 +64,7 @@ export function calculateDamage(
 
   const monsterMultipliers: MonsterMultipliers = {
     hitzoneValues: maybeHitzone.values,
-    levelMultipliers:
-      questId === undefined
-        ? MonsterLevels.getMonsterStatMultipliers(monsterName, 0)
-        : MonsterLevels.getMonsterMultipliersForQuest(monsterName, questId)
+    statMultipliers: monsterStatMultipliers
   };
 
   switch (weaponClass) {

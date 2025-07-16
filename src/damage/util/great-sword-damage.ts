@@ -86,7 +86,8 @@ export function calculateGreatSwordDamage(
   damageBuffArgs: Partial<DamageBuffArgs>
 ) {
   const { weaponId, attackName, sharpness, weaponMultipliers } = weaponArgs;
-  const { hitzoneValues, levelMultipliers } = monsterMultipliers;
+  const { hitzoneValues, statMultipliers: levelMultipliers } =
+    monsterMultipliers;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const greatSword = Weapons.getWeapon(

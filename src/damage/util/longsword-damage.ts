@@ -83,7 +83,8 @@ export function calculateLongswordDamage(
 ) {
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { longsword: longswordArgs } = weaponArgs.weaponMultipliers;
-  const { hitzoneValues, levelMultipliers } = monsterMultipliers;
+  const { hitzoneValues, statMultipliers: levelMultipliers } =
+    monsterMultipliers;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const longsword = Weapons.getWeapon(Weapons.WeaponClass.LONGSWORD, weaponId);

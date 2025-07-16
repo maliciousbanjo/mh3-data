@@ -113,7 +113,8 @@ export function calculateSwitchAxeDamage(
 ) {
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { switchAxeMode } = weaponArgs.weaponMultipliers;
-  const { hitzoneValues, levelMultipliers } = monsterMultipliers;
+  const { hitzoneValues, statMultipliers: levelMultipliers } =
+    monsterMultipliers;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const switchAxe = Weapons.getWeapon(Weapons.WeaponClass.SWITCH_AXE, weaponId);

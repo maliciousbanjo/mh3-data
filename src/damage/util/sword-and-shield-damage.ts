@@ -66,7 +66,8 @@ export function calculateSwordAndShieldDamage(
 ) {
   const { weaponId, attackName, sharpness } = weaponArgs;
   const { swordAndShieldMode } = weaponArgs.weaponMultipliers;
-  const { hitzoneValues, levelMultipliers } = monsterMultipliers;
+  const { hitzoneValues, statMultipliers: levelMultipliers } =
+    monsterMultipliers;
   const { rawArgs, elementArgs, weaponClassArgs } = damageBuffArgs;
 
   const swordAndShield = Weapons.getWeapon(
