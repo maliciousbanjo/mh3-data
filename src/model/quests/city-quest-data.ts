@@ -3469,7 +3469,7 @@ export const CityQuestData = deepFreeze<QuestMode>({
         ]
       },
       {
-        id: 0x3b01,
+        id: 0x3b02,
         name: 'A Sea of Dragons',
         region: 'City',
         rank: 'High',
