@@ -1,5 +1,11 @@
 # mh3-data
 
+## 2.0.1
+
+### Patch Changes
+
+- 2faea62: Resolve an issue where two city quests had the same ID, crashing the lookup functions for monster level"
+
 ## 2.0.0
 
 ### Major Changes
