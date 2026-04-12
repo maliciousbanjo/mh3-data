@@ -1,5 +1,11 @@
 # mh3-data
 
+## 2.1.0
+
+### Minor Changes
+
+- 8b96455: Package updates
+
 ## 2.0.1
 
 ### Patch Changes
