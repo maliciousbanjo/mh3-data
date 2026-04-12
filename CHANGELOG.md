@@ -1,5 +1,11 @@
 # mh3-data
 
+## 2.0.2
+
+### Patch Changes
+
+- 534fe19: Package updates
+
 ## 2.0.1
 
 ### Patch Changes
